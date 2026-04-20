@@ -30,7 +30,7 @@ export default function ShanghaiWhereToEatPage() {
             </div>
             
             <div className="border rounded-lg p-4">
-              <h3 className="font-semibold">Shengjianbao (生煎包) - Pan-Fried Buns</div>
+              <h3 className="font-semibold">Shengjianbao (生煎包) - Pan-Fried Buns</h3>
               <p className="text-gray-700">Crispy bottom, fluffy top, filled with pork and soup. Breakfast favorite.</p>
               <p className="text-sm text-gray-600 mt-2">📍 Best at: Yang's Fry Dumpling, Xiaoyang Shengjian</p>
             </div>
