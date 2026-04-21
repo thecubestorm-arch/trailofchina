@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { NextIntlClientProvider } from 'next-intl'
+import { defaultLocale } from '../i18n'
 import './globals.css'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
@@ -13,6 +15,8 @@ export const metadata: Metadata = {
   keywords: 'China travel guide,first trip to China,China itinerary,China travel planning,travel China first time',
 }
 
+export const dynamic = 'force-static'
+
 export default function RootLayout({
   children,
 }: {
@@ -21,11 +25,13 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className="antialiased" style={{ backgroundColor: '#f5f1ea' }}>
-        <div className="relative min-h-screen" style={{ backgroundColor: '#f5f1ea' }}>
-          <Navigation />
-          <main style={{ backgroundColor: '#f5f1ea' }}>{children}</main>
-          <Footer />
-        </div>
+        <NextIntlClientProvider locale={defaultLocale}>
+          <div className="relative min-h-screen" style={{ backgroundColor: '#f5f1ea' }}>
+            <Navigation />
+            <main style={{ backgroundColor: '#f5f1ea' }}>{children}</main>
+            <Footer />
+          </div>
+        </NextIntlClientProvider>
       </body>
     </html>
   )
