@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body className="antialiased" style={{ backgroundColor: '#f5f1ea' }}>
         <div className="relative min-h-screen" style={{ backgroundColor: '#f5f1ea' }}>
           <Navigation />

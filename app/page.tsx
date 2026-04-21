@@ -3,6 +3,8 @@ import Link from 'next/link'
 import FeatureCard from '@/components/FeatureCard'
 import FaqCard from '@/components/FaqCard'
 import SectionIntro from '@/components/SectionIntro'
+import FadeIn from '@/components/FadeIn'
+import StaggerContainer from '@/components/StaggerContainer'
 
 export const metadata: Metadata = {
   title: 'Travel China Without Confusion',
@@ -94,84 +96,100 @@ export default function HomePage() {
   return (
     <div className="min-h-screen py-8 sm:py-10" style={{ backgroundColor: '#f5f1ea' }}>
       <div className="container-px mx-auto w-full max-w-7xl space-y-16 sm:space-y-20" style={{ backgroundColor: '#f5f1ea' }}>
-        <section className="relative overflow-hidden rounded-[1.75rem] border border-[var(--line)] bg-[linear-gradient(135deg,rgba(255,250,243,0.96),rgba(235,228,216,0.94))] px-5 py-10 shadow-[var(--shadow-soft)] sm:rounded-[2rem] sm:px-10 sm:py-14 lg:px-14 lg:py-20">
-          <div className="absolute right-0 top-0 h-56 w-56 rounded-full bg-[rgba(175,93,50,0.11)] blur-3xl" />
-          <div className="absolute bottom-0 left-0 h-48 w-48 rounded-full bg-[rgba(255,252,247,0.76)] blur-3xl" />
+        <FadeIn>
+          <section className="relative overflow-hidden rounded-[1.75rem] border border-[var(--line)] bg-[linear-gradient(135deg,rgba(255,250,243,0.96),rgba(235,228,216,0.94))] px-5 py-10 shadow-[var(--shadow-soft)] sm:rounded-[2rem] sm:px-10 sm:py-14 lg:px-14 lg:py-20">
+            <div className="absolute right-0 top-0 h-56 w-56 rounded-full bg-[rgba(175,93,50,0.11)] blur-3xl" />
+            <div className="absolute bottom-0 left-0 h-48 w-48 rounded-full bg-[rgba(255,252,247,0.76)] blur-3xl" />
 
-          <div className="relative max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[#af5d32]">Trail of China</p>
-            <h1 className="mt-5 font-serif text-4xl leading-[1.02] text-[var(--foreground)] sm:mt-6 sm:text-6xl lg:text-7xl">
-              Travel China Without Confusion
-            </h1>
-            <p className="mt-5 max-w-2xl text-base leading-7 text-[var(--muted)] sm:mt-6 sm:text-xl sm:leading-8">
-              Practical guides and itineraries for first-time travelers who want clearer decisions, smoother arrival
-              days, and a smarter first route through China.
-            </p>
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <Link href="/china-basics" className="accent-ring inline-flex min-h-12 items-center justify-center rounded-full bg-[#af5d32] px-6 py-3 text-sm font-semibold text-white hover:-translate-y-0.5 hover:bg-[#8f431c]">
-                China Basics
-              </Link>
-              <Link href="/destinations" className="inline-flex min-h-12 items-center justify-center rounded-full border border-[var(--line)] bg-[rgba(255,252,247,0.86)] px-6 py-3 text-sm font-semibold text-[var(--foreground)] hover:-translate-y-0.5 hover:bg-[var(--surface-strong)]">
-                Explore Destinations
-              </Link>
+            <div className="relative max-w-3xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[#af5d32]">Trail of China</p>
+              <h1 className="mt-5 font-serif text-4xl leading-[1.02] text-[var(--foreground)] sm:mt-6 sm:text-6xl lg:text-7xl">
+                Travel China Without Confusion
+              </h1>
+              <p className="mt-5 max-w-2xl text-base leading-7 text-[var(--muted)] sm:mt-6 sm:text-xl sm:leading-8">
+                Practical guides and itineraries for first-time travelers who want clearer decisions, smoother arrival
+                days, and a smarter first route through China.
+              </p>
+              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+                <Link
+                  href="/china-basics"
+                  className="accent-ring inline-flex min-h-12 items-center justify-center rounded-full bg-[#af5d32] px-6 py-3 text-sm font-semibold text-white transition-transform duration-150 hover:-translate-y-0.5 hover:bg-[#8f431c] active:scale-[0.98]"
+                >
+                  China Basics
+                </Link>
+                <Link
+                  href="/destinations"
+                  className="inline-flex min-h-12 items-center justify-center rounded-full border border-[var(--line)] bg-[rgba(255,252,247,0.86)] px-6 py-3 text-sm font-semibold text-[var(--foreground)] transition-transform duration-150 hover:-translate-y-0.5 hover:bg-[var(--surface-strong)] active:scale-[0.98]"
+                >
+                  Explore Destinations
+                </Link>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </FadeIn>
 
-        <section className="space-y-8">
-          <SectionIntro
-            eyebrow="Top 5 Destinations"
-            title="The cities that define a first China trip"
-            description="These are the destinations that come up most often for first-time visitors - each offering a different side of China's scale and character."
-            href="/destinations"
-          />
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-            {destinations.map((destination) => (
-              <FeatureCard
-                key={destination.title}
-                eyebrow="Top Destination"
-                title={destination.title}
-                description={destination.description}
-                href={destination.href}
-              />
-            ))}
-          </div>
-        </section>
+        <FadeIn delay={0.08}>
+          <section className="space-y-8">
+            <SectionIntro
+              eyebrow="Top 5 Destinations"
+              title="The cities that define a first China trip"
+              description="These are the destinations that come up most often for first-time visitors - each offering a different side of China's scale and character."
+              href="/destinations"
+            />
+            <StaggerContainer className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+              {destinations.map((destination) => (
+                <FeatureCard
+                  key={destination.title}
+                  eyebrow="Top Destination"
+                  title={destination.title}
+                  description={destination.description}
+                  href={destination.href}
+                  image={destination.title}
+                />
+              ))}
+            </StaggerContainer>
+          </section>
+        </FadeIn>
 
-        <section className="space-y-8">
-          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }} />
-          <SectionIntro
-            eyebrow="Common Questions"
-            title="What first-time travelers usually need answered early"
-            description="These are the practical questions that often decide whether a first China trip feels smooth or stressful."
-            href="/china-basics"
-          />
-          <div className="grid gap-4">
-            {faqs.map((faq) => (
-              <FaqCard key={faq.question} question={faq.question} answer={faq.answer} href={faq.href} />
-            ))}
-          </div>
-        </section>
+        <FadeIn delay={0.14}>
+          <section className="space-y-8">
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }} />
+            <SectionIntro
+              eyebrow="Common Questions"
+              title="What first-time travelers usually need answered early"
+              description="These are the practical questions that often decide whether a first China trip feels smooth or stressful."
+              href="/china-basics"
+            />
+            <StaggerContainer className="grid gap-4">
+              {faqs.map((faq) => (
+                <FaqCard key={faq.question} question={faq.question} answer={faq.answer} href={faq.href} />
+              ))}
+            </StaggerContainer>
+          </section>
+        </FadeIn>
 
-        <section className="space-y-8">
-          <SectionIntro
-            eyebrow="Before You Go"
-            title="The practical prep that makes the biggest difference"
-            description="Sorting out apps, internet access, and payment options before departure turns a potentially stressful arrival day into a confident one."
-            href="/china-basics"
-          />
-          <div className="grid gap-6 sm:grid-cols-2">
-            {beforeYouGo.map((item) => (
-              <FeatureCard
-                key={item.title}
-                eyebrow="Before You Go"
-                title={item.title}
-                description={item.description}
-                href={item.href}
-              />
-            ))}
-          </div>
-        </section>
+        <FadeIn delay={0.2}>
+          <section className="space-y-8">
+            <SectionIntro
+              eyebrow="Before You Go"
+              title="The practical prep that makes the biggest difference"
+              description="Sorting out apps, internet access, and payment options before departure turns a potentially stressful arrival day into a confident one."
+              href="/china-basics"
+            />
+            <StaggerContainer className="grid gap-6 sm:grid-cols-2">
+              {beforeYouGo.map((item) => (
+                <FeatureCard
+                  key={item.title}
+                  eyebrow="Before You Go"
+                  title={item.title}
+                  description={item.description}
+                  href={item.href}
+                  image={item.title}
+                />
+              ))}
+            </StaggerContainer>
+          </section>
+        </FadeIn>
       </div>
     </div>
   )
