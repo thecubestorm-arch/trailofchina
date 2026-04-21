@@ -4,6 +4,7 @@ import { defaultLocale } from '../i18n'
 import './globals.css'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
+import CookieConsent from '@/components/CookieConsent'
 
 export const metadata: Metadata = {
   title: {
@@ -30,6 +31,7 @@ export default function RootLayout({
             <Navigation />
             <main style={{ backgroundColor: '#f5f1ea' }}>{children}</main>
             <Footer />
+            <CookieConsent />
           </div>
         </NextIntlClientProvider>
       </body>

@@ -23,7 +23,7 @@ export function RelatedArticleCard({
   return (
     <Link
       href={href}
-      className="group flex gap-4 rounded-xl p-4 transition-colors duration-300 hover:bg-[#fffaf3]"
+      className="group flex h-full gap-4 rounded-xl p-4 transition-colors duration-300 hover:bg-[#fffaf3]"
     >
       <motion.div
         whileHover={{ scale: 1.03 }}
