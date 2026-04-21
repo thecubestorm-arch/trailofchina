@@ -1,10 +1,31 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Metadata } from 'next'
+import { FeatureCard } from '@/components/FeatureCard'
 
 export const metadata: Metadata = {
   title: 'Plan Your Trip | Trail of China',
   description: 'Plan your China trip with pre-made itineraries and custom travel planning tools.',
-};
+}
+
+const cards = [
+  {
+    title: 'Preplanned Trips',
+    description: 'Ready-made routes for first-time travelers who want a proven structure',
+    icon: '🗺️',
+    href: '/plan-your-trip/preplanned-trips',
+  },
+  {
+    title: 'Travel Planner',
+    description: 'Build your own route based on pace, interests, and trip length',
+    icon: '✏️',
+    href: '/plan-your-trip/travel-planner',
+  },
+  {
+    title: 'Interactive Map',
+    description: 'See destination relationships and plan transfers visually',
+    icon: '🧭',
+    href: '/interactive-map',
+  },
+]
 
 export default function PlanYourTripPage() {
   return (
@@ -14,36 +35,16 @@ export default function PlanYourTripPage() {
 
         <section className="mb-8">
           <p className="text-lg text-gray-700 leading-relaxed">
-            Ready to visit China? Use our pre-made itineraries or plan your own custom adventure.
+            Ready to visit China? Choose a preplanned route, customize your own itinerary, or explore the map view to build a practical trip.
           </p>
         </section>
 
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
-          <Link href="/plan-your-trip/preplanned-trips" className="block group h-full">
-            <div className="h-full border-2 border-gray-200 rounded-xl p-6 transition-all hover:-translate-y-1 hover:border-[var(--accent)] hover:shadow-lg">
-              <div className="text-4xl mb-4">🗺️</div>
-              <h2 className="text-2xl font-semibold mb-2">Pre-planned Trips</h2>
-              <p className="text-gray-600">Ready-made itineraries for 7, 10, and 14 days.</p>
-              <span className="text-[var(--accent)] font-medium mt-4 inline-flex items-center gap-1">
-                <span className="group-hover:underline">Read More</span>
-                <span className="transition-transform group-hover:translate-x-1">→</span>
-              </span>
-            </div>
-          </Link>
-
-          <Link href="/plan-your-trip/travel-planner" className="block group h-full">
-            <div className="h-full border-2 border-gray-200 rounded-xl p-6 transition-all hover:-translate-y-1 hover:border-[var(--accent)] hover:shadow-lg">
-              <div className="text-4xl mb-4">✏️</div>
-              <h2 className="text-2xl font-semibold mb-2">Custom Planner</h2>
-              <p className="text-gray-600">Coming soon: Build your own itinerary.</p>
-              <span className="text-[var(--accent)] font-medium mt-4 inline-flex items-center gap-1">
-                <span className="group-hover:underline">Read More</span>
-                <span className="transition-transform group-hover:translate-x-1">→</span>
-              </span>
-            </div>
-          </Link>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {cards.map((card) => (
+            <FeatureCard key={card.href} {...card} />
+          ))}
         </div>
       </main>
     </div>
-  );
+  )
 }
