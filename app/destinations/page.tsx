@@ -21,6 +21,27 @@ const cards = [
     href: '/destinations/beijing',
     category: 'Destination',
   },
+  {
+    title: "Xi'an",
+    description: 'Home of the Terracotta Warriors and ancient city wall.',
+    icon: '⚔️',
+    href: '/destinations/xian',
+    category: 'Destination',
+  },
+  {
+    title: 'Chengdu',
+    description: 'Giant pandas, teahouses, and the spiciest food.',
+    icon: '🐼',
+    href: '/destinations/chengdu',
+    category: 'Destination',
+  },
+  {
+    title: 'Chongqing',
+    description: 'Mountain city famous for hotpot and river views.',
+    icon: '🌶️',
+    href: '/destinations/chongqing',
+    category: 'Destination',
+  },
 ]
 
 export default function DestinationsHub() {
@@ -45,9 +66,9 @@ export default function DestinationsHub() {
         </section>
 
         <div className="border-l-4 border-amber-400 bg-amber-50 p-4">
-          <h3 className="mb-2 font-semibold text-amber-800">💡 Coming Soon</h3>
+          <h3 className="mb-2 font-semibold text-amber-800">💡 More Coming Soon</h3>
           <p className="text-amber-900">
-            More destinations guides are being added: Xi'an (Terracotta Warriors), Chengdu (Pandas), Guilin (Karst mountains), and Hong Kong.
+            Guilin (Karst mountains), Hong Kong, Shenzhen, and more destinations.
           </p>
         </div>
       </main>
