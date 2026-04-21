@@ -7,6 +7,7 @@ import FaqCard from '@/components/FaqCard'
 import SectionIntro from '@/components/SectionIntro'
 import FadeIn from '@/components/FadeIn'
 import StaggerContainer from '@/components/StaggerContainer'
+import ChecklistDownload from '@/components/ChecklistDownload'
 
 const destinations = [
   {
@@ -173,6 +174,10 @@ export default function HomePage() {
               ))}
             </StaggerContainer>
           </section>
+        </FadeIn>
+
+        <FadeIn delay={0.26}>
+          <ChecklistDownload />
         </FadeIn>
       </div>
     </div>
