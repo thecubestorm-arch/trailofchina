@@ -6,6 +6,68 @@
       "description": "Praktische Reiseleitfäden und Reiserouten für Erstbesucher, die klarere Entscheidungen, reibungslose Ankunftstage und eine klügere erste Route durch China möchten.",
       "cta1": "China-Grundlagen",
       "cta2": "Reiseziele entdecken"
+    },
+    "destinations": {
+      "eyebrow": "Top 5 Reiseziele",
+      "title": "Die Städte, die eine erste Chinareise prägen",
+      "description": "Diese Reiseziele werden Erstbesuchern am häufigsten empfohlen - jedes zeigt eine andere Seite von Chinas Größe und Charakter.",
+      "cardsEyebrow": "Top-Reiseziel",
+      "cities": {
+        "shanghai": {
+          "title": "Shanghai",
+          "description": "Chinas internationalste Stadt - einfache Anreise, erstklassiges Essen und eine Skyline, die sofort Eindruck macht."
+        },
+        "beijing": {
+          "title": "Peking",
+          "description": "Die Hauptstadt, die Große Mauer, die Hutongs. Ein Muss für Erstbesucher, die die ganze Tiefe chinesischer Geschichte erleben wollen."
+        },
+        "chongqing": {
+          "title": "Chongqing",
+          "description": "Eine markante Hügel- und Flussmetropole, bekannt für feurigen Hotpot, dramatische Skyline-Blicke und einzigartiges Stadtgelände."
+        },
+        "xian": {
+          "title": "Xi'an",
+          "description": "Heimat der Terrakotta-Armee und antiker Stadtmauern - die beste Basis für Chinas Frühgeschichte."
+        },
+        "chengdu": {
+          "title": "Chengdu",
+          "description": "Pandas, Teehäuser und das beste Sichuan-Essen der Welt. Eine entspannte Stadt mit enormer Anziehungskraft."
+        }
+      }
+    },
+    "faqs": {
+      "eyebrow": "Häufige Fragen",
+      "title": "Was Erstbesucher frühzeitig geklärt haben sollten",
+      "description": "Diese praktischen Fragen entscheiden oft darüber, ob sich eine erste Chinareise reibungslos oder stressig anfühlt.",
+      "items": {
+        "prepareFirst": {
+          "question": "Was sollte ich vor einer Chinareise zuerst vorbereiten?",
+          "answer": "Beginne mit den Grundlagen, die deine ersten 48 Stunden bestimmen: eine funktionierende eSIM oder SIM-Karte, eingerichtetes Alipay oder WeChat Pay, ein auf dem Gerät installiertes VPN und die Hoteladresse offline gespeichert. Erledige das vor der Abreise - am Ankunftstag ist es deutlich schwerer zu lösen."
+        },
+        "cityCount": {
+          "question": "Wie viele Städte sollte ich bei der ersten Chinareise einplanen?",
+          "answer": "Für die meisten Erstbesucher sind zwei bis vier Hauptstopps sinnvoller. So bleibt die Transferzeit im Rahmen und du hast genug Energie, jedes Reiseziel wirklich zu genießen. Zwei Wochen mit drei gut geplanten Städten sind besser als zwei Wochen mit sechs gehetzten Stopps."
+        },
+        "vpn": {
+          "question": "Brauche ich in China ein VPN?",
+          "answer": "Wenn du Google, Instagram, WhatsApp oder die meisten westlichen Apps nutzt: ja - und es muss vor der Einreise installiert sein. Die Websites vieler VPN-Anbieter sind in China blockiert, wodurch Last-Minute-Downloads unmöglich werden."
+        }
+      }
+    },
+    "beforeYouGo": {
+      "eyebrow": "Vor der Abreise",
+      "title": "Die Vorbereitung, die den größten Unterschied macht",
+      "description": "Wenn du Apps, Internetzugang und Zahlungsoptionen vor der Abreise regelst, wird aus einem potenziell stressigen Ankunftstag ein souveräner Start.",
+      "cards": {
+        "chinaBasics": {
+          "title": "China-Grundlagen",
+          "description": "Alles, was du vor der Landung wissen musst: Apps, Internet, Bezahlen und Fortbewegung."
+        },
+        "whatApps": {
+          "title": "Welche Apps du brauchst",
+          "description": "Richte Karten, Messaging, Übersetzung und Ride-Hailing vor dem Flug ein, damit dein Handy ab Tag eins bereit ist."
+        }
+      }
     }
   }
 }

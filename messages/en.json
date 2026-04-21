@@ -6,6 +6,68 @@
       "description": "Practical guides and itineraries for first-time travelers who want clearer decisions, smoother arrival days, and a smarter first route through China.",
       "cta1": "China Basics",
       "cta2": "Explore Destinations"
+    },
+    "destinations": {
+      "eyebrow": "Top 5 Destinations",
+      "title": "The cities that define a first China trip",
+      "description": "These are the destinations that come up most often for first-time visitors - each offering a different side of China's scale and character.",
+      "cardsEyebrow": "Top Destination",
+      "cities": {
+        "shanghai": {
+          "title": "Shanghai",
+          "description": "China's most international city - easy arrivals, world-class food, and a skyline that announces what's coming."
+        },
+        "beijing": {
+          "title": "Beijing",
+          "description": "The capital, the Great Wall, the hutongs. A must for first-timers who want to feel the full weight of Chinese history."
+        },
+        "chongqing": {
+          "title": "Chongqing",
+          "description": "A bold, hilly river city known for fiery hotpot, dramatic skyline views, and unique urban terrain."
+        },
+        "xian": {
+          "title": "Xi'an",
+          "description": "Home to the Terracotta Army and ancient city walls - the best base for China's ancient history."
+        },
+        "chengdu": {
+          "title": "Chengdu",
+          "description": "Pandas, teahouses, and the best Sichuan food in the world. A relaxed city with enormous appeal."
+        }
+      }
+    },
+    "faqs": {
+      "eyebrow": "Common Questions",
+      "title": "What first-time travelers usually need answered early",
+      "description": "These are the practical questions that often decide whether a first China trip feels smooth or stressful.",
+      "items": {
+        "prepareFirst": {
+          "question": "What should I prepare first before traveling to China?",
+          "answer": "Start with the basics that affect your first 48 hours: a working eSIM or SIM card, Alipay or WeChat Pay set up, a VPN installed on your device, and your hotel address saved offline. Handle these before departure - they're much harder to fix on arrival day."
+        },
+        "cityCount": {
+          "question": "How many cities should I include on a first China trip?",
+          "answer": "Most first-time travelers are better served by two to four core stops. That keeps transfer time under control and leaves enough energy to actually enjoy each destination. Two weeks with three cities done well beats two weeks with six cities done rushed."
+        },
+        "vpn": {
+          "question": "Do I need a VPN in China?",
+          "answer": "If you use Google, Instagram, WhatsApp, or most Western apps, yes - and it must be installed before you enter China. VPN providers' websites are blocked inside China, making last-minute downloads impossible."
+        }
+      }
+    },
+    "beforeYouGo": {
+      "eyebrow": "Before You Go",
+      "title": "The practical prep that makes the biggest difference",
+      "description": "Sorting out apps, internet access, and payment options before departure turns a potentially stressful arrival day into a confident one.",
+      "cards": {
+        "chinaBasics": {
+          "title": "China Basics",
+          "description": "Everything you need to know before landing: apps, internet, how payments work, and how to get around."
+        },
+        "whatApps": {
+          "title": "What Apps to Use",
+          "description": "Set up maps, messaging, translation, and ride-hailing before your flight so your phone is ready from day one."
+        }
+      }
     }
   }
 }
