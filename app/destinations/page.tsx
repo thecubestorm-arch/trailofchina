@@ -80,42 +80,45 @@ export default function DestinationsHub() {
 
         <section>
           {sections.map((section, index) => (
-            <article
+            <Link
               key={section.href}
-              className={`py-8 md:py-10 ${index < sections.length - 1 ? 'border-b border-[#ebe4d8]' : ''}`}
+              href={section.href}
+              className={`block cursor-pointer rounded-lg transition-colors duration-200 hover:bg-[#fdf8f3] ${index < sections.length - 1 ? 'border-b border-[#ebe4d8]' : ''}`}
             >
-              <div className="grid gap-5 md:grid-cols-[280px_1fr] md:items-start">
-                <div className="overflow-hidden rounded-2xl shadow-sm">
-                  <Image
-                    src={section.imageSrc}
-                    alt={section.imageAlt}
-                    width={560}
-                    height={360}
-                    className="h-52 w-full object-cover md:h-full"
-                  />
-                </div>
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-widest text-[#af5d32]">{section.category}</p>
-                  <h2 className="mt-3 text-2xl font-bold text-[#1f2933] md:text-3xl">
-                    {section.icon} {section.title}
-                  </h2>
-                  <p className="mt-3 text-base leading-relaxed text-[#4a5568] md:text-lg">{section.preview}</p>
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {section.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="inline-flex items-center gap-1.5 rounded-full bg-[#f5f1ea] px-3 py-1 text-sm text-[#1f2933]"
-                      >
-                        {tag}
-                      </span>
-                    ))}
+              <article className="py-8 px-6 -mx-6 md:py-10">
+                <div className="grid gap-5 md:grid-cols-[280px_1fr] md:items-start">
+                  <div className="overflow-hidden rounded-2xl shadow-sm">
+                    <Image
+                      src={section.imageSrc}
+                      alt={section.imageAlt}
+                      width={560}
+                      height={360}
+                      className="h-52 w-full object-cover md:h-full"
+                    />
                   </div>
-                  <Link href={section.href} className="mt-4 inline-flex items-center gap-1 font-semibold text-[#af5d32] hover:underline">
-                    Explore →
-                  </Link>
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-widest text-[#af5d32]">{section.category}</p>
+                    <h2 className="mt-3 text-2xl font-bold text-[#1f2933] md:text-3xl">
+                      {section.icon} {section.title}
+                    </h2>
+                    <p className="mt-3 text-base leading-relaxed text-[#4a5568] md:text-lg">{section.preview}</p>
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {section.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="inline-flex items-center gap-1.5 rounded-full bg-[#f5f1ea] px-3 py-1 text-sm text-[#1f2933]"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <span className="mt-4 inline-flex items-center gap-1 font-semibold text-[#af5d32]">
+                      Explore →
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </article>
+              </article>
+            </Link>
           ))}
         </section>
 

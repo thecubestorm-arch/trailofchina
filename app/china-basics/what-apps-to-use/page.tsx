@@ -70,10 +70,12 @@ export default function WhatAppsToUsePage() {
 
         <section>
           {sections.map((section, index) => (
-            <article
+            <Link
               key={section.href}
-              className={`py-8 md:py-10 ${index < sections.length - 1 ? 'border-b border-[#ebe4d8]' : ''}`}
+              href={section.href}
+              className={`block cursor-pointer rounded-lg transition-colors duration-200 hover:bg-[#fdf8f3] ${index < sections.length - 1 ? 'border-b border-[#ebe4d8]' : ''}`}
             >
+              <article className="py-8 px-6 -mx-6 md:py-10">
               <p className="text-xs font-semibold uppercase tracking-widest text-[#af5d32]">{section.category}</p>
               <h2 className="mt-3 text-2xl font-bold text-[#1f2933] md:text-3xl">
                 {section.icon} {section.title}
@@ -89,10 +91,10 @@ export default function WhatAppsToUsePage() {
                   </span>
                 ))}
               </div>
-              <Link href={section.href} className="mt-4 inline-flex items-center gap-1 font-semibold text-[#af5d32] hover:underline">
-                Read full guide →
-              </Link>
+              <span className="mt-4 inline-flex items-center gap-1 font-semibold text-[#af5d32]">
+                Read full guide →</span>
             </article>
+            </Link>
           ))}
         </section>
 

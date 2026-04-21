@@ -59,7 +59,8 @@ export default function ChongqingPage() {
 
         <section>
           {sections.map((section, index) => (
-            <article key={section.href} className={index < sections.length - 1 ? 'border-b border-[#ebe4d8] pb-8 mb-8' : ''}>
+            <Link key={section.href} href={section.href} className={`block cursor-pointer rounded-lg transition-colors duration-200 hover:bg-[#fdf8f3] ${index < sections.length - 1 ? 'border-b border-[#ebe4d8] pb-8 mb-8' : ''}`}>
+              <article className="py-8 px-6 -mx-6 md:py-10">
               <p className="text-xs font-semibold uppercase tracking-widest text-[#af5d32]">{section.category}</p>
               <h2 className="text-2xl md:text-3xl font-bold text-[#1f2933] mt-3">{section.title}</h2>
               <p className="text-base md:text-lg text-[#4a5568] leading-relaxed mt-3">{section.preview}</p>
@@ -73,10 +74,10 @@ export default function ChongqingPage() {
                   </span>
                 ))}
               </div>
-              <Link href={section.href} className="inline-flex items-center gap-1 text-[#af5d32] font-semibold mt-4 hover:underline">
-                Read guide →
-              </Link>
+              <span className="mt-4 inline-flex items-center gap-1 font-semibold text-[#af5d32]">
+                Read guide →</span>
             </article>
+            </Link>
           ))}
         </section>
 
