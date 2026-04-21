@@ -34,12 +34,12 @@ const destinations = [
   {
     title: "Xi'an",
     description: "Home to the Terracotta Army and ancient city walls - the best base for China's ancient history.",
-    href: '/destinations',
+    href: '/destinations/xian',
   },
   {
     title: 'Chengdu',
     description: 'Pandas, teahouses, and the best Sichuan food in the world. A relaxed city with enormous appeal.',
-    href: '/destinations',
+    href: '/destinations/chengdu',
   },
 ]
 
