@@ -1,109 +1,140 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
+import type { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'How to Get Around in China | Trail of China',
   description: 'Complete guide to transportation in China: trains, planes, taxis, metro, DiDi, buses, bikes, and car rentals.',
-};
+}
+
+const sections = [
+  {
+    category: 'China Basics',
+    icon: '🚅',
+    title: 'Train',
+    preview:
+      'High-speed rail is often the most efficient way to travel between major Chinese cities, with frequent departures and central stations. Booking early gives you better seat choices and smoother departure times. For most first-time visitors, trains offer the best balance of speed, comfort, and reliability.',
+    tags: ['⚡ High-Speed Rail', '🎫 Seat Booking', '🏙️ City-to-City', '✅ Reliable'],
+    href: '/china-basics/how-to-get-around/train',
+  },
+  {
+    category: 'China Basics',
+    icon: '✈️',
+    title: 'Plane',
+    preview:
+      'Domestic flights become useful for long distances, remote regions, or routes where rail takes too many hours. Build in buffer time for airport security and occasional weather-related delays. Air travel is practical when itinerary compression matters more than downtown station access.',
+    tags: ['🛫 Long Distance', '⏱️ Time Savings', '🧳 Airport Logistics', '🌦️ Delay Buffer'],
+    href: '/china-basics/how-to-get-around/plane',
+  },
+  {
+    category: 'China Basics',
+    icon: '🚕',
+    title: 'Taxi',
+    preview:
+      'Street taxis still work well for straightforward trips, especially late at night or in areas with lighter app coverage. Keep your destination written in Chinese to reduce route confusion. Metered fares are usually reasonable in major cities when traffic is manageable.',
+    tags: ['📍 Chinese Address', '🕒 Late Night', '💴 Metered Fare', '🚦 Traffic Aware'],
+    href: '/china-basics/how-to-get-around/taxi',
+  },
+  {
+    category: 'China Basics',
+    icon: '🚇',
+    title: 'Metro',
+    preview:
+      'Metro systems are fast, frequent, and usually the easiest way to move across large cities without traffic stress. Station signage is often bilingual, but planning your exit in advance saves time at street level. For daily urban travel, metro lines are typically the most predictable option.',
+    tags: ['🧭 Fast Routing', '💰 Low Cost', '🏙️ Urban Core', '🚪 Exit Planning'],
+    href: '/china-basics/how-to-get-around/metro-subway',
+  },
+  {
+    category: 'China Basics',
+    icon: '🚗',
+    title: 'DiDi',
+    preview:
+      'DiDi is the default ride-hailing option in many cities and works well for door-to-door transport. In-app pickup points and destination pins reduce language friction compared with street hailing. It is especially useful when carrying luggage or traveling outside metro hours.',
+    tags: ['📱 Ride Hailing', '🧳 Luggage Friendly', '🌙 Off-Hours', '📌 Pinned Pickup'],
+    href: '/china-basics/how-to-get-around/didi',
+  },
+  {
+    category: 'China Basics',
+    icon: '🚌',
+    title: 'Bus',
+    preview:
+      'Buses cover dense local routes and smaller districts that metro lines do not always reach directly. They are inexpensive but can be harder to decode without Chinese-language route familiarity. Use map apps actively to confirm stops, direction, and transfer points in real time.',
+    tags: ['💸 Budget Option', '🗺️ Local Coverage', '🔄 Transfers', '📲 Live Route Check'],
+    href: '/china-basics/how-to-get-around/bus',
+  },
+  {
+    category: 'China Basics',
+    icon: '🚲',
+    title: 'Bicycle',
+    preview:
+      'Shared bikes are excellent for short urban distances, riverside rides, and first/last-mile connections to metro stations. Unlocking is app-based, so payment setup should be completed in advance. Always check designated parking zones to avoid penalties and account issues.',
+    tags: ['📏 Short Trips', '🚉 Last Mile', '📱 App Unlock', '🅿️ Parking Zones'],
+    href: '/china-basics/how-to-get-around/bicycle',
+  },
+  {
+    category: 'China Basics',
+    icon: '🚙',
+    title: 'Car',
+    preview:
+      'Car use is mostly relevant for remote scenic regions or flexible multi-stop day plans outside major city centers. Driving rules, license requirements, and urban restrictions can be complex for foreign visitors. For most itineraries, a hired driver is simpler than self-driving logistics.',
+    tags: ['🏞️ Remote Areas', '🪪 License Rules', '🧭 Flexible Route', '👨‍✈️ Driver Option'],
+    href: '/china-basics/how-to-get-around/car',
+  },
+]
 
 export default function HowToGetAroundHub() {
   return (
     <div className="min-h-screen bg-white">
-      <main className="max-w-4xl mx-auto px-4 py-12">
-        <h1 className="text-4xl font-bold mb-6 text-gray-900">How to Get Around</h1>
-        
+      <main className="mx-auto max-w-4xl px-4 py-12">
+        <h1 className="mb-6 text-4xl font-bold text-gray-900">How to Get Around</h1>
+
         <section className="mb-8">
-          <p className="text-lg text-gray-700 leading-relaxed">
-            China has one of the world's best transportation networks. From bullet trains 
-            that reach 350 km/h to ubiquitous ride-hailing apps, getting around is efficient 
-            and surprisingly affordable.
+          <p className="text-lg leading-relaxed text-gray-700">
+            China has one of the world&apos;s most comprehensive transportation networks. Choose each mode based on
+            distance, schedule pressure, and how much flexibility you need.
           </p>
         </section>
 
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
-          <Link href="/china-basics/how-to-get-around/train" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all">
-              <div className="text-4xl mb-4">🚄</div>
-              <h2 className="text-2xl font-semibold mb-2">High-Speed Train</h2>
-              <p className="text-gray-600">Fast, comfortable, and the best way to travel between cities.</p>
-              <span className="text-[var(--accent)] font-medium mt-4 inline-block">Learn more →</span>
-            </div>
-          </Link>
+        <section>
+          {sections.map((section, index) => (
+            <article
+              key={section.href}
+              className={`py-8 md:py-10 ${index < sections.length - 1 ? 'border-b border-[#ebe4d8]' : ''}`}
+            >
+              <p className="text-xs font-semibold uppercase tracking-widest text-[#af5d32]">{section.category}</p>
+              <h2 className="mt-3 text-2xl font-bold text-[#1f2933] md:text-3xl">
+                {section.icon} {section.title}
+              </h2>
+              <p className="mt-3 text-base leading-relaxed text-[#4a5568] md:text-lg">{section.preview}</p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {section.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="inline-flex items-center gap-1.5 rounded-full bg-[#f5f1ea] px-3 py-1 text-sm text-[#1f2933]"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <Link href={section.href} className="mt-4 inline-flex items-center gap-1 font-semibold text-[#af5d32] hover:underline">
+                Read full guide →
+              </Link>
+            </article>
+          ))}
+        </section>
 
-          <Link href="/china-basics/how-to-get-around/plane" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all">
-              <div className="text-4xl mb-4">✈️</div>
-              <h2 className="text-2xl font-semibold mb-2">Domestic Flights</h2>
-              <p className="text-gray-600">Best for long distances and remote destinations.</p>
-              <span className="text-[var(--accent)] font-medium mt-4 inline-block">Learn more →</span>
-            </div>
-          </Link>
-
-          <Link href="/china-basics/how-to-get-around/taxi" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all">
-              <div className="text-4xl mb-4">🚕</div>
-              <h2 className="text-2xl font-semibold mb-2">Traditional Taxis</h2>
-              <p className="text-gray-600">Still reliable, though apps are more convenient.</p>
-              <span className="text-[var(--accent)] font-medium mt-4 inline-block">Learn more →</span>
-            </div>
-          </Link>
-
-          <Link href="/china-basics/how-to-get-around/metro-subway" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all">
-              <div className="text-4xl mb-4">🚇</div>
-              <h2 className="text-2xl font-semibold mb-2">Metro & Subway</h2>
-              <p className="text-gray-600">Fast, cheap, and avoids traffic in major cities.</p>
-              <span className="text-[var(--accent)] font-medium mt-4 inline-block">Learn more →</span>
-            </div>
-          </Link>
-
-          <Link href="/china-basics/how-to-get-around/didi" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all">
-              <div className="text-4xl mb-4">📱</div>
-              <h2 className="text-2xl font-semibold mb-2">DiDi Ride-Hailing</h2>
-              <p className="text-gray-600">China's Uber - essential app for getting around.</p>
-              <span className="text-[var(--accent)] font-medium mt-4 inline-block">Learn more →</span>
-            </div>
-          </Link>
-
-          <Link href="/china-basics/how-to-get-around/bus" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all">
-              <div className="text-4xl mb-4">🚌</div>
-              <h2 className="text-2xl font-semibold mb-2">Public Buses</h2>
-              <p className="text-gray-600">Cheapest option, but can be confusing for tourists.</p>
-              <span className="text-[var(--accent)] font-medium mt-4 inline-block">Learn more →</span>
-            </div>
-          </Link>
-
-          <Link href="/china-basics/how-to-get-around/bicycle" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all">
-              <div className="text-4xl mb-4">🚲</div>
-              <h2 className="text-2xl font-semibold mb-2">Shared Bicycles</h2>
-              <p className="text-gray-600">Cheap and fun for short trips in cities.</p>
-              <span className="text-[var(--accent)] font-medium mt-4 inline-block">Learn more →</span>
-            </div>
-          </Link>
-
-          <Link href="/china-basics/how-to-get-around/car" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all">
-              <div className="text-4xl mb-4">🚗</div>
-              <h2 className="text-2xl font-semibold mb-2">Car Rental</h2>
-              <p className="text-gray-600">For remote areas and maximum flexibility.</p>
-              <span className="text-[var(--accent)] font-medium mt-4 inline-block">Learn more →</span>
-            </div>
-          </Link>
-        </div>
-
-        <div className="bg-amber-50 border-l-4 border-amber-400 p-4">
-          <h3 className="font-semibold text-amber-800 mb-2">💡 Quick Recommendation</h3>
+        <div className="border-l-4 border-amber-400 bg-amber-50 p-4">
+          <h3 className="mb-2 font-semibold text-amber-800">💡 Quick Recommendation</h3>
           <p className="text-amber-900">
-            <strong>For city-to-city:</strong> High-speed train (G-trains)<br/>
-            <strong>For within cities:</strong> Metro + DiDi combo<br/>
-            <strong>For long distances:</strong> Domestic flights<br/>
+            <strong>For city-to-city:</strong> High-speed train (G-trains)
+            <br />
+            <strong>For within cities:</strong> Metro + DiDi combo
+            <br />
+            <strong>For long distances:</strong> Domestic flights
+            <br />
             <strong>For budget travel:</strong> Overnight trains and buses
           </p>
         </div>
       </main>
     </div>
-  );
+  )
 }

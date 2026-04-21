@@ -7,6 +7,41 @@ export const metadata: Metadata = {
     'Complete guide to Chongqing: top attractions, spicy food, best neighborhoods, and practical local tips for China\'s 3D mountain megacity.',
 };
 
+const sections = [
+  {
+    category: 'Guide Section',
+    title: '📍 What to Do',
+    preview:
+      'Chongqing highlights include Hongyadong at night, old lanes in Ciqikou, and sweeping river views from the Yangtze cable car. This city is visual and vertical, so plan by district and elevation instead of straight-line distance.',
+    tags: ['Hongyadong', 'Ciqikou', 'Yangtze Cable Car', 'Night Views'],
+    href: '/destinations/chongqing/what-to-do',
+  },
+  {
+    category: 'Guide Section',
+    title: '🍜 Where to Eat',
+    preview:
+      'The food identity here is intense: bubbling Chongqing hotpot, punchy xiaomian breakfasts, and late-night street stalls. Spread spicy meals across the day and keep simple sides on hand to pace the heat.',
+    tags: ['Chongqing Hotpot', 'Xiaomian', 'Street Stalls', 'Spice Strategy'],
+    href: '/destinations/chongqing/where-to-eat',
+  },
+  {
+    category: 'Guide Section',
+    title: '🏨 Where to Stay',
+    preview:
+      'Jiefangbei is the most practical base for transit, food streets, and quick access to major viewpoints. It works especially well for first-time visitors trying to navigate multiple levels of roads, stations, and pedestrian decks.',
+    tags: ['Jiefangbei', 'Central Hotels', 'Transit Access', 'First Visit'],
+    href: '/destinations/chongqing/where-to-stay',
+  },
+  {
+    category: 'Guide Section',
+    title: '💡 Local Tips',
+    preview:
+      'Navigation in Chongqing is genuinely 3D, so include floor and exit details whenever you route between places. Do not trust flat maps alone; verify landmarks and elevation to avoid long detours through the wrong level.',
+    tags: ['3D Navigation', 'Map Pitfalls', 'Exit Planning', 'Route Checks'],
+    href: '/destinations/chongqing/local-tips',
+  },
+];
+
 export default function ChongqingPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -22,65 +57,28 @@ export default function ChongqingPage() {
           </p>
         </section>
 
-        <section className="mb-10">
-          <h2 className="text-2xl font-semibold mb-4">Plan Your Chongqing Trip</h2>
-          <p className="text-gray-700 leading-relaxed">
-            Use this guide to break your trip into four practical parts: attractions,
-            food, accommodation, and local know-how. The city is stunning but logistically
-            different from flatter destinations, so planning by neighborhood and elevation
-            will save you hours.
-          </p>
+        <section>
+          {sections.map((section, index) => (
+            <article key={section.href} className={index < sections.length - 1 ? 'border-b border-[#ebe4d8] pb-8 mb-8' : ''}>
+              <p className="text-xs font-semibold uppercase tracking-widest text-[#af5d32]">{section.category}</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#1f2933] mt-3">{section.title}</h2>
+              <p className="text-base md:text-lg text-[#4a5568] leading-relaxed mt-3">{section.preview}</p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {section.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#f5f1ea] text-sm text-[#1f2933]"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <Link href={section.href} className="inline-flex items-center gap-1 text-[#af5d32] font-semibold mt-4 hover:underline">
+                Read guide →
+              </Link>
+            </article>
+          ))}
         </section>
-
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
-          <Link href="/destinations/chongqing/what-to-do" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all">
-              <div className="text-4xl mb-4">🎯</div>
-              <h2 className="text-2xl font-semibold mb-2">What to Do</h2>
-              <p className="text-gray-600">
-                Hongyadong, cable cars, old town lanes, museum history, and skyline viewpoints.
-              </p>
-              <span className="text-[var(--accent)] font-medium mt-4 inline-block">
-                See attractions →
-              </span>
-            </div>
-          </Link>
-
-          <Link href="/destinations/chongqing/where-to-eat" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all">
-              <div className="text-4xl mb-4">🍜</div>
-              <h2 className="text-2xl font-semibold mb-2">Where to Eat</h2>
-              <p className="text-gray-600">
-                Chongqing hotpot, xiaomian breakfasts, grilled fish, and Bayi Road snacks.
-              </p>
-              <span className="text-[var(--accent)] font-medium mt-4 inline-block">Food guide →</span>
-            </div>
-          </Link>
-
-          <Link href="/destinations/chongqing/where-to-stay" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all">
-              <div className="text-4xl mb-4">🏨</div>
-              <h2 className="text-2xl font-semibold mb-2">Where to Stay</h2>
-              <p className="text-gray-600">
-                Jiefangbei convenience, Nanbin Road views, and Hongyadong atmosphere.
-              </p>
-              <span className="text-[var(--accent)] font-medium mt-4 inline-block">
-                Accommodation →
-              </span>
-            </div>
-          </Link>
-
-          <Link href="/destinations/chongqing/local-tips" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all">
-              <div className="text-4xl mb-4">💡</div>
-              <h2 className="text-2xl font-semibold mb-2">Local Tips</h2>
-              <p className="text-gray-600">
-                3D navigation strategies, transport tricks, and spice survival advice.
-              </p>
-              <span className="text-[var(--accent)] font-medium mt-4 inline-block">Insider tips →</span>
-            </div>
-          </Link>
-        </div>
 
         <div className="bg-amber-50 border-l-4 border-amber-400 p-4 mb-8">
           <h3 className="font-semibold text-amber-800 mb-2">💡 Quick Tips for Chongqing</h3>

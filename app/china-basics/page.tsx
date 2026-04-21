@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -51,6 +52,16 @@ export default function ChinaBasicsPage() {
     <div className="min-h-screen bg-white">
       <main className="mx-auto max-w-4xl px-4 py-12">
         <h1 className="mb-6 text-4xl font-bold text-gray-900">China Basics</h1>
+
+        <section className="mb-8 overflow-hidden rounded-2xl shadow-sm">
+          <Image
+            src="/images/general/chinese-food.jpg"
+            alt="Chinese dining table with regional dishes"
+            width={1200}
+            height={500}
+            className="h-48 w-full object-cover md:h-60"
+          />
+        </section>
 
         <section className="mb-8">
           <p className="text-lg leading-relaxed text-gray-700">

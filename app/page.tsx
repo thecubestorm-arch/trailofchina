@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import FeatureCard from '@/components/FeatureCard'
@@ -13,22 +14,32 @@ const destinations = [
   {
     key: 'shanghai',
     href: '/destinations/shanghai',
+    imageSrc: '/images/shanghai/modern-skyline.jpg',
+    imageAlt: 'Shanghai skyline with modern skyscrapers',
   },
   {
     key: 'beijing',
     href: '/destinations/beijing',
+    imageSrc: '/images/beijing/forbidden-city.jpg',
+    imageAlt: 'Traditional architecture in Beijing',
   },
   {
     key: 'chongqing',
     href: '/destinations/chongqing',
+    imageSrc: '/images/chongqing/river-view.jpg',
+    imageAlt: 'Chongqing cityscape by the river',
   },
   {
     key: 'xian',
     href: '/destinations/xian',
+    imageSrc: '/images/xian/city-wall.jpg',
+    imageAlt: "Xi'an ancient city wall",
   },
   {
     key: 'chengdu',
     href: '/destinations/chengdu',
+    imageSrc: '/images/chengdu/hotpot.jpg',
+    imageAlt: 'Sichuan hotpot in Chengdu',
   },
 ]
 
@@ -82,27 +93,40 @@ export default function HomePage() {
             <div className="absolute right-0 top-0 h-56 w-56 rounded-full bg-[rgba(175,93,50,0.11)] blur-3xl" />
             <div className="absolute bottom-0 left-0 h-48 w-48 rounded-full bg-[rgba(255,252,247,0.76)] blur-3xl" />
 
-            <div className="relative max-w-3xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[#af5d32]">{t('home.hero.eyebrow')}</p>
-              <h1 className="mt-5 font-serif text-4xl leading-[1.02] text-[var(--foreground)] sm:mt-6 sm:text-6xl lg:text-7xl">
-                {t('home.hero.title')}
-              </h1>
-              <p className="mt-5 max-w-2xl text-base leading-7 text-[var(--muted)] sm:mt-6 sm:text-xl sm:leading-8">
-                {t('home.hero.description')}
-              </p>
-              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-                <Link
-                  href="/china-basics"
-                  className="accent-ring inline-flex min-h-12 items-center justify-center rounded-full bg-[#af5d32] px-6 py-3 text-sm font-semibold text-white transition-transform duration-150 hover:-translate-y-0.5 hover:bg-[#8f431c] active:scale-[0.98]"
-                >
-                  {t('home.hero.cta1')}
-                </Link>
-                <Link
-                  href="/destinations"
-                  className="inline-flex min-h-12 items-center justify-center rounded-full border border-[var(--line)] bg-[rgba(255,252,247,0.86)] px-6 py-3 text-sm font-semibold text-[var(--foreground)] transition-transform duration-150 hover:-translate-y-0.5 hover:bg-[var(--surface-strong)] active:scale-[0.98]"
-                >
-                  {t('home.hero.cta2')}
-                </Link>
+            <div className="relative grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+              <div className="max-w-3xl">
+                <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[#af5d32]">{t('home.hero.eyebrow')}</p>
+                <h1 className="mt-5 font-serif text-4xl leading-[1.02] text-[var(--foreground)] sm:mt-6 sm:text-6xl lg:text-7xl">
+                  {t('home.hero.title')}
+                </h1>
+                <p className="mt-5 max-w-2xl text-base leading-7 text-[var(--muted)] sm:mt-6 sm:text-xl sm:leading-8">
+                  {t('home.hero.description')}
+                </p>
+                <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+                  <Link
+                    href="/china-basics"
+                    className="accent-ring inline-flex min-h-12 items-center justify-center rounded-full bg-[#af5d32] px-6 py-3 text-sm font-semibold text-white transition-transform duration-150 hover:-translate-y-0.5 hover:bg-[#8f431c] active:scale-[0.98]"
+                  >
+                    {t('home.hero.cta1')}
+                  </Link>
+                  <Link
+                    href="/destinations"
+                    className="inline-flex min-h-12 items-center justify-center rounded-full border border-[var(--line)] bg-[rgba(255,252,247,0.86)] px-6 py-3 text-sm font-semibold text-[var(--foreground)] transition-transform duration-150 hover:-translate-y-0.5 hover:bg-[var(--surface-strong)] active:scale-[0.98]"
+                  >
+                    {t('home.hero.cta2')}
+                  </Link>
+                </div>
+              </div>
+
+              <div className="relative mx-auto w-full max-w-xl overflow-hidden rounded-2xl shadow-md">
+                <Image
+                  src="/images/hero/china-hero.jpg"
+                  alt="China travel hero image"
+                  width={1200}
+                  height={800}
+                  className="h-64 w-full object-cover sm:h-72 lg:h-80"
+                  priority
+                />
               </div>
             </div>
           </section>
@@ -124,7 +148,15 @@ export default function HomePage() {
                   title={t(`home.destinations.cities.${destination.key}.title`)}
                   description={t(`home.destinations.cities.${destination.key}.description`)}
                   href={destination.href}
-                  image={t(`home.destinations.cities.${destination.key}.title`)}
+                  image={
+                    <Image
+                      src={destination.imageSrc}
+                      alt={destination.imageAlt}
+                      width={640}
+                      height={360}
+                      className="h-full w-full object-cover"
+                    />
+                  }
                 />
               ))}
             </StaggerContainer>

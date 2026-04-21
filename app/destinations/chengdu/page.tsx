@@ -7,6 +7,41 @@ export const metadata: Metadata = {
     'Plan your Chengdu trip with neighborhood picks, food highlights, panda timing tips, and practical local advice.',
 };
 
+const sections = [
+  {
+    category: 'Guide Section',
+    title: '📍 What to Do',
+    preview:
+      'Plan around a panda base morning, then slow down with park teahouses and a Jinli Street stroll later in the day. Chengdu works best when you mix a few headline attractions with long, unhurried breaks between them.',
+    tags: ['Panda Base', 'Teahouses', 'Jinli Street', 'Sichuan Culture'],
+    href: '/destinations/chengdu/what-to-do',
+  },
+  {
+    category: 'Guide Section',
+    title: '🍜 Where to Eat',
+    preview:
+      'Chengdu is built for spice lovers, with hotpot, mapo tofu, and noodle shops filling nearly every district. Alternate heavier meals with snack stops so you can try more regional dishes without burning out your palate.',
+    tags: ['Hotpot', 'Mapo Tofu', 'Noodle Shops', 'Sichuan Spice'],
+    href: '/destinations/chengdu/where-to-eat',
+  },
+  {
+    category: 'Guide Section',
+    title: '🏨 Where to Stay',
+    preview:
+      'Staying near Chunxi Road gives you strong transport links, late-night food options, and easy access to central attractions. It is a reliable base for first-time visitors who want convenience without sacrificing local atmosphere.',
+    tags: ['Chunxi Road', 'Central Hotels', 'Shopping Access', 'Metro Links'],
+    href: '/destinations/chengdu/where-to-stay',
+  },
+  {
+    category: 'Guide Section',
+    title: '💡 Local Tips',
+    preview:
+      'If you are not used to málà heat, order mild first and add chili gradually instead of starting full spice. Panda entry slots can sell out quickly, so book tickets as soon as your travel dates are fixed.',
+    tags: ['Spice Warning', 'Panda Tickets', 'Booking Timing', 'First-Timer Advice'],
+    href: '/destinations/chengdu/local-tips',
+  },
+];
+
 export default function ChengduPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -21,51 +56,28 @@ export default function ChengduPage() {
           </p>
         </section>
 
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
-          <Link href="/destinations/chengdu/what-to-do" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all h-full">
-              <div className="text-4xl mb-4">🎯</div>
-              <h2 className="text-2xl font-semibold mb-2">What to Do</h2>
-              <p className="text-gray-600">
-                Pandas at sunrise, temple visits, teahouses, old streets, and Sichuan Opera face-changing.
-              </p>
-              <span className="text-[var(--accent)] font-medium mt-4 inline-block">Explore attractions →</span>
-            </div>
-          </Link>
-
-          <Link href="/destinations/chengdu/where-to-eat" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all h-full">
-              <div className="text-4xl mb-4">🍜</div>
-              <h2 className="text-2xl font-semibold mb-2">Where to Eat</h2>
-              <p className="text-gray-600">
-                Hotpot, mapo tofu, dan dan noodles, and the best neighborhoods for classic Chengdu bites.
-              </p>
-              <span className="text-[var(--accent)] font-medium mt-4 inline-block">Open food guide →</span>
-            </div>
-          </Link>
-
-          <Link href="/destinations/chengdu/where-to-stay" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all h-full">
-              <div className="text-4xl mb-4">🏨</div>
-              <h2 className="text-2xl font-semibold mb-2">Where to Stay</h2>
-              <p className="text-gray-600">
-                Compare Chunxi Road, Wuhou Temple zone, and the Tibetan Quarter by vibe and convenience.
-              </p>
-              <span className="text-[var(--accent)] font-medium mt-4 inline-block">Pick your area →</span>
-            </div>
-          </Link>
-
-          <Link href="/destinations/chengdu/local-tips" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all h-full">
-              <div className="text-4xl mb-4">💡</div>
-              <h2 className="text-2xl font-semibold mb-2">Local Tips</h2>
-              <p className="text-gray-600">
-                Panda timing, DiDi strategy, massage etiquette, and practical mistakes first-timers make.
-              </p>
-              <span className="text-[var(--accent)] font-medium mt-4 inline-block">Read insider tips →</span>
-            </div>
-          </Link>
-        </div>
+        <section>
+          {sections.map((section, index) => (
+            <article key={section.href} className={index < sections.length - 1 ? 'border-b border-[#ebe4d8] pb-8 mb-8' : ''}>
+              <p className="text-xs font-semibold uppercase tracking-widest text-[#af5d32]">{section.category}</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#1f2933] mt-3">{section.title}</h2>
+              <p className="text-base md:text-lg text-[#4a5568] leading-relaxed mt-3">{section.preview}</p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {section.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#f5f1ea] text-sm text-[#1f2933]"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <Link href={section.href} className="inline-flex items-center gap-1 text-[#af5d32] font-semibold mt-4 hover:underline">
+                Read guide →
+              </Link>
+            </article>
+          ))}
+        </section>
 
         <div className="bg-amber-50 border-l-4 border-amber-400 p-4 mb-8">
           <h3 className="font-semibold text-amber-800 mb-2">💡 Quick Tips for Chengdu</h3>

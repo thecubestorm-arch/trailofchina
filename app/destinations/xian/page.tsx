@@ -7,6 +7,41 @@ export const metadata: Metadata = {
     "Plan a complete Xi'an trip with this city guide covering Terracotta Warriors, food streets, best neighborhoods, and practical local tips for first-time visitors.",
 };
 
+const sections = [
+  {
+    category: 'Guide Section',
+    title: '📍 What to Do',
+    preview:
+      'Xi\'an is anchored by the Terracotta Warriors, but the city wall and Muslim Quarter are just as essential for first-time visitors. Pair a morning history stop with sunset cycling on the wall and an evening food walk through old lanes.',
+    tags: ['Terracotta Warriors', 'City Wall', 'Muslim Quarter', 'Historic Core'],
+    href: '/destinations/xian/what-to-do',
+  },
+  {
+    category: 'Guide Section',
+    title: '🍜 Where to Eat',
+    preview:
+      'Build your food list around biang biang noodles, roujiamo, and other Shaanxi staples served in simple, fast-moving local spots. The best meals are often near busy markets where turnover is high and flavors stay bold.',
+    tags: ['Biang Biang Noodles', 'Roujiamo', 'Shaanxi Classics', 'Market Eats'],
+    href: '/destinations/xian/where-to-eat',
+  },
+  {
+    category: 'Guide Section',
+    title: '🏨 Where to Stay',
+    preview:
+      'Staying near the Bell Tower keeps most key sights, transit links, and dining zones within easy reach. It is the most practical base if you want to mix sightseeing days with evening walks and quick food stops.',
+    tags: ['Bell Tower', 'Central Base', 'Walkability', 'Transit Links'],
+    href: '/destinations/xian/where-to-stay',
+  },
+  {
+    category: 'Guide Section',
+    title: '💡 Local Tips',
+    preview:
+      'Reserve Terracotta Warriors tickets in advance whenever possible, especially on weekends and public holidays. Go earlier in the day for smoother entry and more time back in the city for wall views and dinner.',
+    tags: ['Advance Booking', 'Warriors Entry', 'Morning Visits', 'Crowd Control'],
+    href: '/destinations/xian/local-tips',
+  },
+];
+
 export default function XianPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -21,43 +56,28 @@ export default function XianPage() {
           </p>
         </section>
 
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
-          <Link href="/destinations/xian/what-to-do" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all h-full">
-              <div className="text-4xl mb-4">🏺</div>
-              <h2 className="text-2xl font-semibold mb-2">What to Do</h2>
-              <p className="text-gray-600">Terracotta Warriors, City Wall cycling, pagodas, museums, and night markets.</p>
-              <span className="text-[var(--accent)] font-medium mt-4 inline-block">See attractions →</span>
-            </div>
-          </Link>
-
-          <Link href="/destinations/xian/where-to-eat" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all h-full">
-              <div className="text-4xl mb-4">🥟</div>
-              <h2 className="text-2xl font-semibold mb-2">Where to Eat</h2>
-              <p className="text-gray-600">Yangroupaomo, roujiamo, biangbiang noodles, and reliable local restaurants.</p>
-              <span className="text-[var(--accent)] font-medium mt-4 inline-block">Food guide →</span>
-            </div>
-          </Link>
-
-          <Link href="/destinations/xian/where-to-stay" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all h-full">
-              <div className="text-4xl mb-4">🏨</div>
-              <h2 className="text-2xl font-semibold mb-2">Where to Stay</h2>
-              <p className="text-gray-600">Bell Tower, Muslim Quarter, Yanta, and station-area base options by budget.</p>
-              <span className="text-[var(--accent)] font-medium mt-4 inline-block">Accommodation →</span>
-            </div>
-          </Link>
-
-          <Link href="/destinations/xian/local-tips" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all h-full">
-              <div className="text-4xl mb-4">💡</div>
-              <h2 className="text-2xl font-semibold mb-2">Local Tips</h2>
-              <p className="text-gray-600">Bus 306 strategy, timing advice, and common scam warnings before you go.</p>
-              <span className="text-[var(--accent)] font-medium mt-4 inline-block">Insider tips →</span>
-            </div>
-          </Link>
-        </div>
+        <section>
+          {sections.map((section, index) => (
+            <article key={section.href} className={index < sections.length - 1 ? 'border-b border-[#ebe4d8] pb-8 mb-8' : ''}>
+              <p className="text-xs font-semibold uppercase tracking-widest text-[#af5d32]">{section.category}</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#1f2933] mt-3">{section.title}</h2>
+              <p className="text-base md:text-lg text-[#4a5568] leading-relaxed mt-3">{section.preview}</p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {section.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#f5f1ea] text-sm text-[#1f2933]"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <Link href={section.href} className="inline-flex items-center gap-1 text-[#af5d32] font-semibold mt-4 hover:underline">
+                Read guide →
+              </Link>
+            </article>
+          ))}
+        </section>
 
         <div className="bg-amber-50 border-l-4 border-amber-400 p-4 mb-8">
           <h3 className="font-semibold text-amber-800 mb-2">💡 Quick Tips for Xi&apos;an</h3>
