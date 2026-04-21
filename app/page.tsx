@@ -123,6 +123,7 @@ export default function HomePage() {
             eyebrow="Top 5 Destinations"
             title="The cities that define a first China trip"
             description="These are the destinations that come up most often for first-time visitors - each offering a different side of China's scale and character."
+            href="/destinations"
           />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {destinations.map((destination) => (
@@ -143,6 +144,7 @@ export default function HomePage() {
             eyebrow="Common Questions"
             title="What first-time travelers usually need answered early"
             description="These are the practical questions that often decide whether a first China trip feels smooth or stressful."
+            href="/china-basics"
           />
           <div className="grid gap-4">
             {faqs.map((faq) => (
@@ -156,6 +158,7 @@ export default function HomePage() {
             eyebrow="Before You Go"
             title="The practical prep that makes the biggest difference"
             description="Sorting out apps, internet access, and payment options before departure turns a potentially stressful arrival day into a confident one."
+            href="/china-basics"
           />
           <div className="grid gap-6 sm:grid-cols-2">
             {beforeYouGo.map((item) => (
