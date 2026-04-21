@@ -46,16 +46,19 @@ const faqs = [
     question: 'What should I prepare first before traveling to China?',
     answer:
       "Start with the basics that affect your first 48 hours: a working eSIM or SIM card, Alipay or WeChat Pay set up, a VPN installed on your device, and your hotel address saved offline. Handle these before departure - they're much harder to fix on arrival day.",
+    href: '/china-basics',
   },
   {
     question: 'How many cities should I include on a first China trip?',
     answer:
       'Most first-time travelers are better served by two to four core stops. That keeps transfer time under control and leaves enough energy to actually enjoy each destination. Two weeks with three cities done well beats two weeks with six cities done rushed.',
+    href: '/plan-your-trip/preplanned-trips',
   },
   {
     question: 'Do I need a VPN in China?',
     answer:
       "If you use Google, Instagram, WhatsApp, or most Western apps, yes - and it must be installed before you enter China. VPN providers' websites are blocked inside China, making last-minute downloads impossible.",
+    href: '/china-basics/what-apps-to-use',
   },
 ]
 
@@ -143,7 +146,7 @@ export default function HomePage() {
           />
           <div className="grid gap-4">
             {faqs.map((faq) => (
-              <FaqCard key={faq.question} question={faq.question} answer={faq.answer} />
+              <FaqCard key={faq.question} question={faq.question} answer={faq.answer} href={faq.href} />
             ))}
           </div>
         </section>
