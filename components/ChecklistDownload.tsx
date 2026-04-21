@@ -6,6 +6,8 @@ import ChinaChecklistPdf from '@/components/ChinaChecklistPdf'
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const STORAGE_KEY = 'trail_of_china_checklist_emails'
+const GOOGLE_SHEETS_WEBHOOK_URL =
+  'https://script.google.com/macros/s/AKfycbwF8BMqJvlTOzi8RvaZt4IavOOfrTQLTbDSc0qqoY87vi4NHJTNsVQh44cCDwfPF0-zIA/exec'
 
 export default function ChecklistDownload() {
   const [email, setEmail] = useState('')
@@ -37,6 +39,19 @@ export default function ChecklistDownload() {
       return
     }
 
+    try {
+      fetch(GOOGLE_SHEETS_WEBHOOK_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: normalizedEmail,
+          date: new Date().toISOString(),
+          source: 'checklist-pdf',
+        }),
+      })
+    } catch {}
+
     setIsSubmitting(true)
 
     try {
@@ -50,7 +65,6 @@ export default function ChecklistDownload() {
       link.remove()
       URL.revokeObjectURL(url)
 
-      // TODO: replace localStorage capture with server-side marketing endpoint integration.
       saveEmailForMarketing(normalizedEmail)
 
       setSuccess('Your checklist is downloading! Check your inbox for more China travel tips.')
