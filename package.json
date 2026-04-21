@@ -9,8 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@babel/runtime": "^7.29.2",
     "@react-pdf/renderer": "^4.5.1",
     "framer-motion": "^12.38.0",
+    "html2canvas-pro": "^2.0.2",
+    "jspdf": "^4.2.1",
     "next": "^15.5.15",
     "next-intl": "^4.9.1",
     "react": "^19.2.5",
