@@ -1,156 +1,172 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import Hero from '@/components/Hero'
+import FeatureCard from '@/components/FeatureCard'
+import FaqCard from '@/components/FaqCard'
+import SectionIntro from '@/components/SectionIntro'
 
 export const metadata: Metadata = {
-  title: 'China Visa-Free 2025: Your Ultimate Travel Guide',
+  title: 'Travel China Without Confusion',
   description:
-    'Start your first China trip with confidence. Explore visa-free updates, top destinations, practical essentials, and step-by-step planning support.',
+    'Start planning your first China trip with practical prep guides, destination overviews, and realistic itinerary ideas for international travelers.',
+  keywords: 'China travel guide,first trip to China,China itinerary,China travel planning,travel China first time',
 }
 
 const destinations = [
   {
-    name: 'Shanghai',
-    highlight: 'Skyline, day trips, modern China',
-    summary: 'Best for first-time arrivals, food neighborhoods, and smooth transit.',
+    title: 'Shanghai',
+    description:
+      "China's most international city - easy arrivals, world-class food, and a skyline that announces what's coming.",
     href: '/destinations/shanghai',
   },
   {
-    name: 'Beijing',
-    highlight: 'History, hutongs, Great Wall access',
-    summary: 'Imperial landmarks plus vibrant local streets and cultural depth.',
+    title: 'Beijing',
+    description:
+      'The capital, the Great Wall, the hutongs. A must for first-timers who want to feel the full weight of Chinese history.',
     href: '/destinations/beijing',
   },
   {
-    name: "Xi'an",
-    highlight: 'Terracotta Army and old city walls',
-    summary: 'A compact city mixing deep history with a strong food scene.',
+    title: 'Chongqing',
+    description: 'A bold, hilly river city known for fiery hotpot, dramatic skyline views, and unique urban terrain.',
+    href: '/destinations/chongqing',
+  },
+  {
+    title: "Xi'an",
+    description: "Home to the Terracotta Army and ancient city walls - the best base for China's ancient history.",
     href: '/destinations',
   },
   {
-    name: 'Guilin',
-    highlight: 'Karst mountains and river views',
-    summary: 'Scenic base for nature-focused travelers and relaxed pacing.',
-    href: '/destinations',
-  },
-  {
-    name: 'Chengdu',
-    highlight: 'Pandas, tea houses, Sichuan cuisine',
-    summary: 'Ideal for slower days, spicy food, and nearby mountain escapes.',
+    title: 'Chengdu',
+    description: 'Pandas, teahouses, and the best Sichuan food in the world. A relaxed city with enormous appeal.',
     href: '/destinations',
   },
 ]
 
 const faqs = [
   {
-    question: 'Can I really enter China visa-free in 2025?',
+    question: 'What should I prepare first before traveling to China?',
     answer:
-      'Many countries now have visa-free or transit-without-visa options. Always confirm your exact passport policy and entry duration before booking.',
+      "Start with the basics that affect your first 48 hours: a working eSIM or SIM card, Alipay or WeChat Pay set up, a VPN installed on your device, and your hotel address saved offline. Handle these before departure - they're much harder to fix on arrival day.",
   },
   {
-    question: 'Can I use my normal apps and cards in China?',
+    question: 'How many cities should I include on a first China trip?',
     answer:
-      'You can, but setup matters. Install key apps before flying, add backup payment options, and prepare an internet plan for uninterrupted access.',
+      'Most first-time travelers are better served by two to four core stops. That keeps transfer time under control and leaves enough energy to actually enjoy each destination. Two weeks with three cities done well beats two weeks with six cities done rushed.',
   },
   {
-    question: 'Is China friendly for first-time solo travelers?',
+    question: 'Do I need a VPN in China?',
     answer:
-      'Yes, especially in major cities. Transport is efficient, cities are generally safe, and translation apps make day-to-day navigation easier.',
-  },
-  {
-    question: 'How many days should my first trip be?',
-    answer:
-      'Most first-time visitors do best with 10-14 days, combining two major cities with one slower destination.',
+      "If you use Google, Instagram, WhatsApp, or most Western apps, yes - and it must be installed before you enter China. VPN providers' websites are blocked inside China, making last-minute downloads impossible.",
   },
 ]
 
+const beforeYouGo = [
+  {
+    title: 'China Basics',
+    description:
+      'Everything you need to know before landing: apps, internet, how payments work, and how to get around.',
+    href: '/china-basics',
+  },
+  {
+    title: 'What Apps to Use',
+    description:
+      'Set up maps, messaging, translation, and ride-hailing before your flight so your phone is ready from day one.',
+    href: '/china-basics/what-apps-to-use',
+  },
+]
+
+const faqStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+}
+
 export default function HomePage() {
   return (
-    <>
-      <Hero
-        badge="Visa-Free Update 2025"
-        title="China Visa-Free 2025: Your Ultimate Travel Guide"
-        description="Everything a first-time visitor needs: entry basics, essential apps, payment setup, transport tactics, trusted city guides, and practical itineraries."
-        primaryCta={{ label: 'Start With China Basics', href: '/china-basics' }}
-        secondaryCta={{ label: 'Plan My Trip', href: '/plan-your-trip' }}
-      />
+    <div className="py-8 sm:py-10">
+      <div className="container-px mx-auto w-full max-w-7xl space-y-16 sm:space-y-20">
+        <section className="relative overflow-hidden rounded-[1.75rem] border border-[var(--line)] bg-[linear-gradient(135deg,rgba(255,250,243,0.96),rgba(235,228,216,0.94))] px-5 py-10 shadow-[var(--shadow-soft)] sm:rounded-[2rem] sm:px-10 sm:py-14 lg:px-14 lg:py-20">
+          <div className="absolute right-0 top-0 h-56 w-56 rounded-full bg-[rgba(175,93,50,0.11)] blur-3xl" />
+          <div className="absolute bottom-0 left-0 h-48 w-48 rounded-full bg-white/70 blur-3xl" />
 
-      <section className="container-px mx-auto max-w-6xl">
-        <div className="rounded-2xl border border-emerald-200 bg-emerald-50 px-5 py-4 text-sm font-semibold text-emerald-900 md:px-7 md:py-5 md:text-base">
-          Trusted by 50,000+ travelers planning their first China trip.
-        </div>
-      </section>
-
-      <section className="container-px mx-auto mt-14 max-w-6xl">
-        <div className="flex items-end justify-between gap-4">
-          <div>
-            <h2 className="section-title">Top 5 Destinations To Start With</h2>
-            <p className="section-subtitle">Built for first-time visitors who want a balanced, low-stress route.</p>
+          <div className="relative max-w-3xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[var(--accent)]">Trail of China</p>
+            <h1 className="mt-5 font-serif text-4xl leading-[1.02] text-[var(--foreground)] sm:mt-6 sm:text-6xl lg:text-7xl">
+              Travel China Without Confusion
+            </h1>
+            <p className="mt-5 max-w-2xl text-base leading-7 text-[var(--muted)] sm:mt-6 sm:text-xl sm:leading-8">
+              Practical guides and itineraries for first-time travelers who want clearer decisions, smoother arrival
+              days, and a smarter first route through China.
+            </p>
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              <Link href="/china-basics" className="accent-ring inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--accent)] px-6 py-3 text-sm font-semibold text-white hover:-translate-y-0.5 hover:bg-[var(--accent-strong)]">
+                China Basics
+              </Link>
+              <Link href="/destinations" className="inline-flex min-h-12 items-center justify-center rounded-full border border-[var(--line)] bg-white/65 px-6 py-3 text-sm font-semibold text-[var(--foreground)] hover:-translate-y-0.5 hover:bg-white">
+                Explore Destinations
+              </Link>
+            </div>
           </div>
-          <Link href="/destinations" className="hidden text-sm font-bold text-china-red md:inline-flex">
-            View all destinations →
-          </Link>
-        </div>
-        <div className="mt-7 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {destinations.map((city) => (
-            <Link key={city.name} href={city.href} className="card-base block h-full">
-              <p className="text-xs font-bold uppercase tracking-wide text-china-red">{city.highlight}</p>
-              <h3 className="mt-2 text-2xl font-extrabold text-slate-900">{city.name}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-slate-600">{city.summary}</p>
-              <p className="mt-5 text-sm font-semibold text-china-red">Explore city guide →</p>
-            </Link>
-          ))}
-        </div>
-      </section>
+        </section>
 
-      <section className="container-px mx-auto mt-16 max-w-4xl">
-        <h2 className="section-title">Frequently Asked Questions</h2>
-        <p className="section-subtitle">Quick answers to the questions most first-time visitors ask first.</p>
-        <div className="mt-7 space-y-3">
-          {faqs.map((faq) => (
-            <details key={faq.question} className="card-base group">
-              <summary className="cursor-pointer list-none text-base font-bold text-slate-900 marker:hidden md:text-lg">
-                {faq.question}
-              </summary>
-              <p className="mt-4 text-sm leading-relaxed text-slate-600 md:text-base">{faq.answer}</p>
-            </details>
-          ))}
-        </div>
-      </section>
-
-      <section className="container-px mx-auto mt-16 max-w-6xl">
-        <div className="rounded-3xl bg-slate-900 px-6 py-10 text-white md:px-10 md:py-12">
-          <p className="text-xs font-bold uppercase tracking-[0.18em] text-amber-300">Before You Go</p>
-          <h2 className="mt-3 text-3xl font-black tracking-tight md:text-4xl">Set up your phone, payments, and transport in 30 minutes.</h2>
-          <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-200 md:text-base">
-            Follow our practical checklists so your first day in China feels smooth instead of stressful.
-          </p>
-          <div className="mt-7">
-            <Link href="/china-basics" className="btn-secondary">
-              Open The Before-You-Go Checklist
-            </Link>
+        <section className="space-y-8">
+          <SectionIntro
+            eyebrow="Top 5 Destinations"
+            title="The cities that define a first China trip"
+            description="These are the destinations that come up most often for first-time visitors - each offering a different side of China's scale and character."
+          />
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+            {destinations.map((destination) => (
+              <FeatureCard
+                key={destination.title}
+                eyebrow="Top Destination"
+                title={destination.title}
+                description={destination.description}
+                href={destination.href}
+              />
+            ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="container-px mx-auto mt-16 max-w-6xl pb-8">
-        <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft md:p-8">
-          <h2 className="text-2xl font-black tracking-tight text-slate-900 md:text-3xl">Get Weekly China Travel Updates</h2>
-          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate-600 md:text-base">
-            Visa updates, route ideas, and practical travel tips. No spam, just useful guidance.
-          </p>
-          <form className="mt-6 flex flex-col gap-3 md:flex-row" aria-label="Newsletter signup">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="h-12 flex-1 rounded-xl border border-slate-300 px-4 text-sm text-slate-900 outline-none ring-china-red/30 transition focus:ring-2"
-            />
-            <button type="button" className="btn-primary h-12">
-              Subscribe
-            </button>
-          </form>
-        </div>
-      </section>
-    </>
+        <section className="space-y-8">
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }} />
+          <SectionIntro
+            eyebrow="Common Questions"
+            title="What first-time travelers usually need answered early"
+            description="These are the practical questions that often decide whether a first China trip feels smooth or stressful."
+          />
+          <div className="grid gap-4">
+            {faqs.map((faq) => (
+              <FaqCard key={faq.question} question={faq.question} answer={faq.answer} />
+            ))}
+          </div>
+        </section>
+
+        <section className="space-y-8">
+          <SectionIntro
+            eyebrow="Before You Go"
+            title="The practical prep that makes the biggest difference"
+            description="Sorting out apps, internet access, and payment options before departure turns a potentially stressful arrival day into a confident one."
+          />
+          <div className="grid gap-6 sm:grid-cols-2">
+            {beforeYouGo.map((item) => (
+              <FeatureCard
+                key={item.title}
+                eyebrow="Before You Go"
+                title={item.title}
+                description={item.description}
+                href={item.href}
+              />
+            ))}
+          </div>
+        </section>
+      </div>
+    </div>
   )
 }

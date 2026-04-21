@@ -5,13 +5,12 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Trail of China | Premium China Travel Guide for First-Time Visitors',
+    default: 'Travel China Without Confusion',
     template: '%s | Trail of China',
   },
   description:
-    'Complete China travel guide for Western travelers. Visa-free updates, city guides, transport, apps, and practical tips for your first China trip.',
-  keywords:
-    'China travel, China visa free 2025, Shanghai guide, Beijing travel, China tourism',
+    'Start planning your first China trip with practical prep guides, destination overviews, and realistic itinerary ideas for international travelers.',
+  keywords: 'China travel guide,first trip to China,China itinerary,China travel planning,travel China first time',
 }
 
 export default function RootLayout({
@@ -21,10 +20,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen flex flex-col bg-white text-china-dark antialiased">
-        <Navigation />
-        <main className="flex-grow">{children}</main>
-        <Footer />
+      <body className="antialiased">
+        <div className="relative min-h-screen">
+          <Navigation />
+          <main>{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   )
