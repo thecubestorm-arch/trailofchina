@@ -1,46 +1,56 @@
-import { Metadata } from 'next'
-import { RelatedArticleCard } from '@/components/RelatedArticleCard'
+import type { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Destinations | Trail of China',
   description: 'Explore the best destinations in China. Detailed guides for Shanghai, Beijing, and more cities.',
 }
 
-const cards = [
+const sections = [
   {
-    title: 'Shanghai',
-    description: "China's futuristic financial hub with colonial charm.",
+    category: 'Destination',
     icon: '🏙️',
+    title: 'Shanghai',
+    preview:
+      "China's futuristic financial hub where colonial-era architecture meets glittering skyscrapers. Walk the Bund, explore hidden alleyways, and eat your way through the city's incredible food scene.",
+    tags: ['📍 What to do', '🍜 Where to eat', '🏨 Where to stay', '💡 Local tips'],
     href: '/destinations/shanghai',
-    category: 'Destination',
   },
   {
-    title: 'Beijing',
-    description: 'Ancient capital with the Great Wall and Forbidden City.',
+    category: 'Destination',
     icon: '🏛️',
+    title: 'Beijing',
+    preview:
+      'The ancient capital with 3,000 years of history. Home to the Great Wall, Forbidden City, and some of the best street food on the planet.',
+    tags: ['📍 What to do', '🍜 Where to eat', '🏨 Where to stay', '💡 Local tips'],
     href: '/destinations/beijing',
-    category: 'Destination',
   },
   {
-    title: "Xi'an",
-    description: 'Home of the Terracotta Warriors and ancient city wall.',
+    category: 'Destination',
     icon: '⚔️',
+    title: "Xi'an",
+    preview:
+      'The gateway to the Silk Road and the legendary Terracotta Warriors. Walk the ancient city wall, explore Muslim Quarter street food, and discover a city where history lives.',
+    tags: ['📍 What to do', '🍜 Where to eat', '🏨 Where to stay', '💡 Local tips'],
     href: '/destinations/xian',
-    category: 'Destination',
   },
   {
-    title: 'Chengdu',
-    description: 'Giant pandas, teahouses, and the spiciest food.',
+    category: 'Destination',
     icon: '🐼',
+    title: 'Chengdu',
+    preview:
+      'Home of the giant pandas, fiery Sichuan hotpot, and the most relaxed vibe of any Chinese megacity. Spend days in teahouses, nights in spice markets.',
+    tags: ['📍 What to do', '🍜 Where to eat', '🏨 Where to stay', '💡 Local tips'],
     href: '/destinations/chengdu',
-    category: 'Destination',
   },
   {
-    title: 'Chongqing',
-    description: 'Mountain city famous for hotpot and river views.',
-    icon: '🌶️',
-    href: '/destinations/chongqing',
     category: 'Destination',
+    icon: '🌶️',
+    title: 'Chongqing',
+    preview:
+      'The mountain city built on cliffs above the Yangtze River. Famous for the hottest hotpot in China, vertical streets, and a cyberpunk skyline.',
+    tags: ['📍 What to do', '🍜 Where to eat', '🏨 Where to stay', '💡 Local tips'],
+    href: '/destinations/chongqing',
   },
 ]
 
@@ -52,24 +62,42 @@ export default function DestinationsHub() {
 
         <section className="mb-8">
           <p className="text-lg leading-relaxed text-gray-700">
-            China is vast and diverse, from ultra-modern megacities to ancient historical sites. Each destination offers a unique glimpse into different facets of Chinese culture, history, and daily life.
+            China is vast and diverse, from ultra-modern megacities to ancient historical sites. Each destination
+            offers a unique glimpse into different facets of Chinese culture, history, and daily life.
           </p>
         </section>
 
-        <section className="mb-12">
-          <h2 className="mb-6 text-2xl font-serif font-semibold text-[#1f2933]">Related Pages</h2>
-          <div className="grid gap-4 md:grid-cols-2">
-            {cards.map((card) => (
-              <RelatedArticleCard key={card.href} {...card} />
-            ))}
-          </div>
+        <section>
+          {sections.map((section, index) => (
+            <article
+              key={section.href}
+              className={`py-8 md:py-10 ${index < sections.length - 1 ? 'border-b border-[#ebe4d8]' : ''}`}
+            >
+              <p className="text-xs font-semibold uppercase tracking-widest text-[#af5d32]">{section.category}</p>
+              <h2 className="mt-3 text-2xl font-bold text-[#1f2933] md:text-3xl">
+                {section.icon} {section.title}
+              </h2>
+              <p className="mt-3 text-base leading-relaxed text-[#4a5568] md:text-lg">{section.preview}</p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {section.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="inline-flex items-center gap-1.5 rounded-full bg-[#f5f1ea] px-3 py-1 text-sm text-[#1f2933]"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <Link href={section.href} className="mt-4 inline-flex items-center gap-1 font-semibold text-[#af5d32] hover:underline">
+                Explore →
+              </Link>
+            </article>
+          ))}
         </section>
 
         <div className="border-l-4 border-amber-400 bg-amber-50 p-4">
           <h3 className="mb-2 font-semibold text-amber-800">💡 More Coming Soon</h3>
-          <p className="text-amber-900">
-            Guilin (Karst mountains), Hong Kong, Shenzhen, and more destinations.
-          </p>
+          <p className="text-amber-900">Guilin (Karst mountains), Hong Kong, Shenzhen, and more destinations.</p>
         </div>
       </main>
     </div>
