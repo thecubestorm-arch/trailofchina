@@ -1,40 +1,107 @@
+import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Xi'an: Local Tips | Trail of China",
-  description: "Insider tips for Xi'an - scams, transport, and advice.",
+  title: "Xi'an Local Tips | Transport, Scams, and Smart Visiting Advice",
+  description:
+    "Local Xi'an travel tips covering Bus 306 for Terracotta Warriors, early starts, common scams, haggling etiquette, and city wall bike rental advice.",
 };
 
-export default function XianLocalTips() {
+export default function XianLocalTipsPage() {
   return (
-    <div className="min-h-screen" style={{backgroundColor: '#f5f1ea'}}>
+    <div className="min-h-screen bg-white">
       <main className="max-w-4xl mx-auto px-4 py-12">
-        <h1 className="text-4xl font-bold mb-6 text-[#1f2933]">Xi'an Local Tips</h1>
+        <h1 className="text-4xl font-bold mb-6 text-gray-900">Xi&apos;an Local Tips</h1>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-serif font-semibold mb-4 text-[#1f2933]">Terracotta Warriors</h2>
-          <ul className="space-y-2 text-[#5d6a73]">
-            <li>• Bus 306 from Xi'an Railway Station (1 hour)</li>
-            <li>• Go EARLY (8am) - tour groups arrive 9am</li>
-            <li>• Allow 3-4 hours minimum</li>
-            <li>• Visit pits in order: 1, 3, 2 (1 is largest)</li>
-          </ul>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            Xi&apos;an is straightforward once you know timing and common sales tactics. These tips help
+            you avoid crowd bottlenecks and the most common visitor scams.
+          </p>
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-serif font-semibold mb-4 text-[#1f2933]">Scams to Avoid</h2>
-          <div className="bg-red-50 border-l-4 border-red-400 p-4 rounded-r-lg">
-            <ul className="text-red-900 space-y-2">
-              <li>• "Free" tours to Terracotta Warriors with shopping stops</li>
-              <li>• Fake jade and "antiques" at tourist sites</li>
-              <li>• Tea ceremony scams in Muslim Quarter</li>
-            </ul>
+          <h2 className="text-2xl font-semibold mb-4">Terracotta Warriors Logistics</h2>
+          <div className="border rounded-lg p-6 mb-4">
+            <h3 className="text-xl font-semibold mb-2">Bus 306 (Tourist Line) from Xi&apos;an Railway Station</h3>
+            <p className="text-gray-700">
+              Public transport is usually the best value. The 306 line is the standard budget route
+              used by independent travelers heading to the Terracotta Warriors site.
+            </p>
+            <p className="text-sm text-gray-600 mt-3">🕐 Leave early: target first departures around opening hours</p>
+            <p className="text-sm text-gray-600">💰 Cost: Much cheaper than private car hires</p>
+            <p className="text-sm text-gray-600">📍 Start point: Xi&apos;an Railway Station transport area</p>
+          </div>
+
+          <div className="border rounded-lg p-6">
+            <h3 className="text-xl font-semibold mb-2">Go EARLY</h3>
+            <p className="text-gray-700">
+              Arriving early avoids the biggest tour-group wave, improves museum-floor visibility,
+              and makes photos easier in Pit 1.
+            </p>
+            <p className="text-sm text-gray-600 mt-3">🕐 Target arrival: right at opening if possible</p>
+            <p className="text-sm text-gray-600">💰 Benefit: Better value from your ticket with fewer delays</p>
+            <p className="text-sm text-gray-600">📍 Priority route: Enter, then head straight to main viewing areas</p>
           </div>
         </section>
 
-        <div className="mt-12">
-          <a href="/destinations/xian" className="text-[#af5d32] hover:underline">← Back to Xi'an Guide</a>
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold mb-4">Street-Smart City Advice</h2>
+          <div className="space-y-4">
+            <div className="border rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-2">City Wall Bike Rental</h3>
+              <p className="text-gray-700">
+                Riding the wall is one of Xi&apos;an&apos;s best experiences. Check bike condition first and
+                avoid midday heat in summer.
+              </p>
+              <p className="text-sm text-gray-600 mt-3">🕐 Best time: Morning or late afternoon</p>
+              <p className="text-sm text-gray-600">💰 Cost: Rental plus small deposit depending on operator</p>
+              <p className="text-sm text-gray-600">📍 Entry gates: South Gate is the easiest starting point</p>
+            </div>
+
+            <div className="border rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-2">Haggling Basics</h3>
+              <p className="text-gray-700">
+                Bargaining is expected in souvenir markets, not in restaurants or chain stores.
+                Stay polite, set your max price first, and walk away if needed.
+              </p>
+              <p className="text-sm text-gray-600 mt-3">🕐 Best moment: Late day when sellers are more flexible</p>
+              <p className="text-sm text-gray-600">💰 Rule of thumb: Start below first quote and meet in the middle</p>
+              <p className="text-sm text-gray-600">📍 Where: Tourist souvenir lanes and market stalls</p>
+            </div>
+          </div>
+        </section>
+
+        <div className="bg-emerald-50 rounded-lg p-4 mb-8">
+          <h3 className="font-semibold text-emerald-900 mb-2">Hidden Gems</h3>
+          <ul className="text-emerald-900 space-y-2">
+            <li>• Quieter city wall segments if you enter from less-trafficked gates</li>
+            <li>• Early morning parks with local dance and tai chi groups</li>
+            <li>• Smaller museum rooms often skipped by large tour groups</li>
+          </ul>
         </div>
+
+        <div className="bg-amber-50 border-l-4 border-amber-400 p-4 mb-8">
+          <h3 className="font-semibold text-amber-800 mb-2">Pro Tips</h3>
+          <ul className="text-amber-900 space-y-2">
+            <li>• Keep your hotel name in Chinese on your phone for taxi rides</li>
+            <li>• Carry tissues and water for long attraction queues</li>
+            <li>• Pair Terracotta Warriors with fewer downtown sights that same day</li>
+          </ul>
+        </div>
+
+        <div className="bg-red-50 border-l-4 border-red-400 p-4 mb-10">
+          <h3 className="font-semibold text-red-800 mb-2">Tourist Traps</h3>
+          <ul className="text-red-900 space-y-2">
+            <li>• Fake jade sold near major attractions as “museum quality”</li>
+            <li>• Tea ceremony invitations that end with inflated bills</li>
+            <li>• Unofficial tours with forced shopping stops and inflated pricing</li>
+          </ul>
+        </div>
+
+        <Link href="/destinations/xian" className="text-[var(--accent-strong)] hover:underline">
+          ← Back to Xi&apos;an Guide
+        </Link>
       </main>
     </div>
   );

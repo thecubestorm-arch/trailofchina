@@ -1,48 +1,112 @@
+import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Chengdu: Local Tips | Trail of China',
-  description: 'Insider tips for Chengdu - scams, transport, and local advice.',
+  title: 'Chengdu Local Tips | Trail of China',
+  description:
+    'Practical Chengdu insider tips: panda timing, transport, weather planning, opera bookings, and what to skip.',
 };
 
-export default function ChengduLocalTips() {
+export default function ChengduLocalTipsPage() {
   return (
-    <div className="min-h-screen" style={{backgroundColor: '#f5f1ea'}}>
+    <div className="min-h-screen bg-white">
       <main className="max-w-4xl mx-auto px-4 py-12">
-        <h1 className="text-4xl font-bold mb-6 text-[#1f2933]">Chengdu Local Tips</h1>
+        <h1 className="text-4xl font-bold mb-6 text-gray-900">Chengdu Local Tips</h1>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-serif font-semibold mb-4 text-[#1f2933]">Getting Around</h2>
-          <ul className="space-y-2 text-[#5d6a73]">
-            <li>• Metro covers most tourist areas</li>
-            <li>• DiDi works well for taxis</li>
-            <li>• Panda Base is 30 min from center by metro + bus</li>
-          </ul>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            Chengdu rewards travelers who slow down. Use these local strategies to avoid crowds,
+            move around efficiently, and spend your time on the experiences that matter.
+          </p>
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-serif font-semibold mb-4 text-[#1f2933]">Scams to Avoid</h2>
-          <div className="bg-red-50 border-l-4 border-red-400 p-4 rounded-r-lg">
-            <ul className="text-red-900 space-y-2">
-              <li>• "Panda research donation" - fake collectors near base</li>
-              <li>• Teahouse scams in People's Park - check prices first</li>
-              <li>• Fake monks asking for donations</li>
+          <h2 className="text-2xl font-semibold mb-4">Essential Local Advice</h2>
+
+          <div className="space-y-6">
+            <div className="border rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-2">🐼 Giant Panda Base Timing</h3>
+              <p className="text-gray-700 mb-3">
+                Arrive at opening time for active pandas. Most pandas nap once the day warms up,
+                and crowd density rises sharply by mid-morning.
+              </p>
+              <p className="text-sm text-gray-600">🕐 Go at: 8:00 AM (crowds build by around 10:00 AM)</p>
+              <p className="text-sm text-gray-600">💰 Budget: extra for shuttle carts inside the base</p>
+              <p className="text-sm text-gray-600">📍 Access: combine metro + bus/taxi depending on your hotel</p>
+            </div>
+
+            <div className="border rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-2">🫖 Chengdu Pace Is Slow</h3>
+              <p className="text-gray-700 mb-3">
+                Don&apos;t over-schedule. Tea houses, park walks, and long meals are part of the city&apos;s culture.
+                Plan fewer sights per day than you would in Shanghai or Beijing.
+              </p>
+              <p className="text-sm text-gray-600">🕐 Rhythm: leave buffer time every afternoon</p>
+              <p className="text-sm text-gray-600">💰 Budget: tea house sessions can be low-cost and long</p>
+              <p className="text-sm text-gray-600">📍 Best spots: People&apos;s Park, riverside neighborhoods</p>
+            </div>
+
+            <div className="border rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-2">💆 Massage Culture and Blind Masseurs</h3>
+              <p className="text-gray-700 mb-3">
+                Massage is mainstream in Chengdu, and many respected clinics employ blind masseurs
+                with strong reputations for therapeutic treatment.
+              </p>
+              <p className="text-sm text-gray-600">🕐 Typical session: 60-90 minutes</p>
+              <p className="text-sm text-gray-600">💰 Typical cost: ¥80-260 depending on venue</p>
+              <p className="text-sm text-gray-600">📍 Tip: ask hotel staff for trusted local clinics</p>
+            </div>
+
+            <div className="border rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-2">🚕 DiDi vs Taxi + Weather + Night Shows</h3>
+              <p className="text-gray-700 mb-3">
+                DiDi is usually simpler than street taxis for non-Chinese speakers. Rain can slow traffic,
+                so build buffer time and pre-book Sichuan Opera seats in high season.
+              </p>
+              <p className="text-sm text-gray-600">🕐 Book opera: at least 1 day ahead, 2-3 days on weekends</p>
+              <p className="text-sm text-gray-600">💰 Ride cost: DiDi often comparable to metered taxis</p>
+              <p className="text-sm text-gray-600">📍 Compare: Jinli is lively-touristy, Kuanzhai is polished-historic</p>
+            </div>
+          </div>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold mb-4">Hidden Gems</h2>
+          <div className="bg-emerald-50 rounded-lg p-4">
+            <ul className="text-gray-700 space-y-2">
+              <li>• Early mornings in local parks show dance groups, calligraphy water writing, and tai chi.</li>
+              <li>• Smaller opera houses can feel more intimate than the best-known venues.</li>
+              <li>• Rainy-day tea houses are often the most atmospheric part of a Chengdu trip.</li>
             </ul>
           </div>
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-serif font-semibold mb-4 text-[#1f2933]">Local Customs</h2>
-          <ul className="space-y-2 text-[#5d6a73]">
-            <li>• "Shuǎ là" (shua la) = relaxed lifestyle - embrace it</li>
-            <li>• Tea houses are for socializing, not just drinking</li>
-            <li>• Spicy tolerance builds - don't show off day 1</li>
-          </ul>
+          <div className="bg-amber-50 border-l-4 border-amber-400 p-4 rounded-r-lg">
+            <h3 className="font-semibold text-amber-800 mb-2">💡 Pro Tips</h3>
+            <ul className="text-amber-900 space-y-2">
+              <li>• Start panda day very early, then keep the rest of the day light.</li>
+              <li>• Carry a compact umbrella from spring through summer.</li>
+              <li>• Save Jinli for atmosphere and snacks, Kuanzhai for architecture and cafés.</li>
+              <li>• If taxis refuse short rides in rain, switch to DiDi immediately.</li>
+            </ul>
+          </div>
         </section>
 
-        <div className="mt-12">
-          <a href="/destinations/chengdu" className="text-[#af5d32] hover:underline">← Back to Chengdu Guide</a>
-        </div>
+        <section className="mb-10">
+          <div className="bg-red-50 border-l-4 border-red-400 p-4 rounded-r-lg">
+            <h3 className="font-semibold text-red-800 mb-2">⚠️ Tourist Traps</h3>
+            <ul className="text-red-900 space-y-2">
+              <li>• Paying premium rates for late-morning panda entry when most pandas are inactive.</li>
+              <li>• Unofficial drivers near attractions quoting fixed prices well above DiDi.</li>
+              <li>• Last-minute opera tickets from street sellers with unclear seat locations.</li>
+            </ul>
+          </div>
+        </section>
+
+        <Link href="/destinations/chengdu" className="text-amber-700 hover:text-amber-800 hover:underline">
+          ← Back to Chengdu Guide
+        </Link>
       </main>
     </div>
   );
