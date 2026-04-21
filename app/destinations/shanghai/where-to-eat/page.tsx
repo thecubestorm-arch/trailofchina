@@ -85,9 +85,9 @@ export default function ShanghaiWhereToEatPage() {
           </ul>
         </div>
 
-        <div className="bg-red-50 border-l-4 border-red-400 p-4">
-          <h3 className="font-semibold text-red-800 mb-2">⚠️ What to Avoid</h3>
-          <ul className="text-red-900 space-y-2">
+        <div className="bg-[var(--accent-soft)] border-l-4 border-[var(--accent)] p-4">
+          <h3 className="font-semibold text-[var(--accent-strong)] mb-2">⚠️ What to Avoid</h3>
+          <ul className="text-[var(--foreground)] space-y-2">
             <li>• Tourist trap restaurants on the Bund (overpriced, mediocre)</li>
             <li>• "Tea ceremony" invitations (scam)</li>
             <li>• Menus without prices</li>

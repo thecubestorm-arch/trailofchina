@@ -82,9 +82,9 @@ export default function PassportRulesPage() {
           </ul>
         </div>
 
-        <div className="bg-red-50 border-l-4 border-red-400 p-4">
-          <h3 className="font-semibold text-red-800 mb-2">⚠️ Important</h3>
-          <p className="text-red-900">
+        <div className="bg-[var(--accent-soft)] border-l-4 border-[var(--accent)] p-4">
+          <h3 className="font-semibold text-[var(--accent-strong)] mb-2">⚠️ Important</h3>
+          <p className="text-[var(--foreground)]">
             Failure to register or carry your passport can result in fines (¥2,000+) 
             or detention. Always comply with police requests politely.
           </p>

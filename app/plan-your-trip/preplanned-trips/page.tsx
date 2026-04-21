@@ -21,7 +21,7 @@ export default function PreplannedTripsPage() {
 
         <div className="grid md:grid-cols-3 gap-6 mb-10">
           <Link href="/plan-your-trip/preplanned-trips/7-day-route" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-red-500 hover:shadow-lg transition-all h-full">
+            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all h-full">
               <div className="text-4xl mb-4">🧭</div>
               <h2 className="text-2xl font-semibold mb-2">7-Day Route</h2>
               <p className="text-gray-600 mb-4">Beijing, Xi&apos;an, and Shanghai in one efficient week.</p>
@@ -30,12 +30,12 @@ export default function PreplannedTripsPage() {
                 <li>• Best for first visit, limited vacation days</li>
                 <li>• Mid-range total: ~¥8,500-11,500</li>
               </ul>
-              <span className="text-red-600 font-medium mt-4 inline-block">View itinerary →</span>
+              <span className="text-[var(--accent)] font-medium mt-4 inline-block">View itinerary →</span>
             </div>
           </Link>
 
           <Link href="/plan-your-trip/preplanned-trips/10-day-route" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-red-500 hover:shadow-lg transition-all h-full">
+            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all h-full">
               <div className="text-4xl mb-4">🐼</div>
               <h2 className="text-2xl font-semibold mb-2">10-Day Route</h2>
               <p className="text-gray-600 mb-4">Adds Chengdu pandas and Yangshuo karst scenery.</p>
@@ -44,12 +44,12 @@ export default function PreplannedTripsPage() {
                 <li>• Culture, food, and nature balance</li>
                 <li>• Mid-range total: ~¥12,500-16,500</li>
               </ul>
-              <span className="text-red-600 font-medium mt-4 inline-block">View itinerary →</span>
+              <span className="text-[var(--accent)] font-medium mt-4 inline-block">View itinerary →</span>
             </div>
           </Link>
 
           <Link href="/plan-your-trip/preplanned-trips/14-day-route" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-red-500 hover:shadow-lg transition-all h-full">
+            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all h-full">
               <div className="text-4xl mb-4">🏯</div>
               <h2 className="text-2xl font-semibold mb-2">14-Day Route</h2>
               <p className="text-gray-600 mb-4">Grand loop with extra rest days and deeper city time.</p>
@@ -58,7 +58,7 @@ export default function PreplannedTripsPage() {
                 <li>• Better for photographers and families</li>
                 <li>• Mid-range total: ~¥17,500-23,000</li>
               </ul>
-              <span className="text-red-600 font-medium mt-4 inline-block">View itinerary →</span>
+              <span className="text-[var(--accent)] font-medium mt-4 inline-block">View itinerary →</span>
             </div>
           </Link>
         </div>

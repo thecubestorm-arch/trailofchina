@@ -20,7 +20,7 @@ export default function PlanYourTripPage() {
 
         <div className="grid md:grid-cols-2 gap-6 mb-12">
           <Link href="/plan-your-trip/preplanned-trips" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-red-500 hover:shadow-lg transition-all">
+            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all">
               <div className="text-4xl mb-4">🗺️</div>
               <h2 className="text-2xl font-semibold mb-2">Pre-planned Trips</h2>
               <p className="text-gray-600">Ready-made itineraries for 7, 10, and 14 days.</p>

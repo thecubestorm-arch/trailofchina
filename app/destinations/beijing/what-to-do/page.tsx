@@ -88,9 +88,9 @@ export default function BeijingWhatToDoPage() {
           </ul>
         </div>
 
-        <div className="bg-red-50 border-l-4 border-red-400 p-4">
-          <h3 className="font-semibold text-red-800 mb-2">⚠️ Avoid These Mistakes</h3>
-          <ul className="text-red-900 space-y-2">
+        <div className="bg-[var(--accent-soft)] border-l-4 border-[var(--accent)] p-4">
+          <h3 className="font-semibold text-[var(--accent-strong)] mb-2">⚠️ Avoid These Mistakes</h3>
+          <ul className="text-[var(--foreground)] space-y-2">
             <li>• Don't visit Forbidden City without pre-booked tickets</li>
             <li>• Skip Wangfujing Snack Street - overpriced tourist trap</li>
             <li>• Don't take black taxis from tourist sites</li>

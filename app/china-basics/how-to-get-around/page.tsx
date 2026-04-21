@@ -22,74 +22,74 @@ export default function HowToGetAroundHub() {
 
         <div className="grid md:grid-cols-2 gap-6 mb-12">
           <Link href="/china-basics/how-to-get-around/train" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-red-500 hover:shadow-lg transition-all">
+            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all">
               <div className="text-4xl mb-4">🚄</div>
               <h2 className="text-2xl font-semibold mb-2">High-Speed Train</h2>
               <p className="text-gray-600">Fast, comfortable, and the best way to travel between cities.</p>
-              <span className="text-red-600 font-medium mt-4 inline-block">Learn more →</span>
+              <span className="text-[var(--accent)] font-medium mt-4 inline-block">Learn more →</span>
             </div>
           </Link>
 
           <Link href="/china-basics/how-to-get-around/plane" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-red-500 hover:shadow-lg transition-all">
+            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all">
               <div className="text-4xl mb-4">✈️</div>
               <h2 className="text-2xl font-semibold mb-2">Domestic Flights</h2>
               <p className="text-gray-600">Best for long distances and remote destinations.</p>
-              <span className="text-red-600 font-medium mt-4 inline-block">Learn more →</span>
+              <span className="text-[var(--accent)] font-medium mt-4 inline-block">Learn more →</span>
             </div>
           </Link>
 
           <Link href="/china-basics/how-to-get-around/taxi" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-red-500 hover:shadow-lg transition-all">
+            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all">
               <div className="text-4xl mb-4">🚕</div>
               <h2 className="text-2xl font-semibold mb-2">Traditional Taxis</h2>
               <p className="text-gray-600">Still reliable, though apps are more convenient.</p>
-              <span className="text-red-600 font-medium mt-4 inline-block">Learn more →</span>
+              <span className="text-[var(--accent)] font-medium mt-4 inline-block">Learn more →</span>
             </div>
           </Link>
 
           <Link href="/china-basics/how-to-get-around/metro-subway" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-red-500 hover:shadow-lg transition-all">
+            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all">
               <div className="text-4xl mb-4">🚇</div>
               <h2 className="text-2xl font-semibold mb-2">Metro & Subway</h2>
               <p className="text-gray-600">Fast, cheap, and avoids traffic in major cities.</p>
-              <span className="text-red-600 font-medium mt-4 inline-block">Learn more →</span>
+              <span className="text-[var(--accent)] font-medium mt-4 inline-block">Learn more →</span>
             </div>
           </Link>
 
           <Link href="/china-basics/how-to-get-around/didi" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-red-500 hover:shadow-lg transition-all">
+            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all">
               <div className="text-4xl mb-4">📱</div>
               <h2 className="text-2xl font-semibold mb-2">DiDi Ride-Hailing</h2>
               <p className="text-gray-600">China's Uber - essential app for getting around.</p>
-              <span className="text-red-600 font-medium mt-4 inline-block">Learn more →</span>
+              <span className="text-[var(--accent)] font-medium mt-4 inline-block">Learn more →</span>
             </div>
           </Link>
 
           <Link href="/china-basics/how-to-get-around/bus" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-red-500 hover:shadow-lg transition-all">
+            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all">
               <div className="text-4xl mb-4">🚌</div>
               <h2 className="text-2xl font-semibold mb-2">Public Buses</h2>
               <p className="text-gray-600">Cheapest option, but can be confusing for tourists.</p>
-              <span className="text-red-600 font-medium mt-4 inline-block">Learn more →</span>
+              <span className="text-[var(--accent)] font-medium mt-4 inline-block">Learn more →</span>
             </div>
           </Link>
 
           <Link href="/china-basics/how-to-get-around/bicycle" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-red-500 hover:shadow-lg transition-all">
+            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all">
               <div className="text-4xl mb-4">🚲</div>
               <h2 className="text-2xl font-semibold mb-2">Shared Bicycles</h2>
               <p className="text-gray-600">Cheap and fun for short trips in cities.</p>
-              <span className="text-red-600 font-medium mt-4 inline-block">Learn more →</span>
+              <span className="text-[var(--accent)] font-medium mt-4 inline-block">Learn more →</span>
             </div>
           </Link>
 
           <Link href="/china-basics/how-to-get-around/car" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-red-500 hover:shadow-lg transition-all">
+            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all">
               <div className="text-4xl mb-4">🚗</div>
               <h2 className="text-2xl font-semibold mb-2">Car Rental</h2>
               <p className="text-gray-600">For remote areas and maximum flexibility.</p>
-              <span className="text-red-600 font-medium mt-4 inline-block">Learn more →</span>
+              <span className="text-[var(--accent)] font-medium mt-4 inline-block">Learn more →</span>
             </div>
           </Link>
         </div>

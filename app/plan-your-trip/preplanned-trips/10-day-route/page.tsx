@@ -30,23 +30,23 @@ export default function TenDayRoutePage() {
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">Itinerary</h2>
           <div className="space-y-6">
-            <div className="border-l-4 border-red-500 pl-4">
+            <div className="border-l-4 border-[var(--accent)] pl-4">
               <h3 className="font-semibold text-lg">Days 1-3: Beijing</h3>
               <p className="text-gray-700">Forbidden City, Great Wall, Temple of Heaven</p>
             </div>
-            <div className="border-l-4 border-red-500 pl-4">
+            <div className="border-l-4 border-[var(--accent)] pl-4">
               <h3 className="font-semibold text-lg">Days 4-5: Xi&apos;an</h3>
               <p className="text-gray-700">Terracotta Warriors, City Wall, Muslim Quarter</p>
             </div>
-            <div className="border-l-4 border-red-500 pl-4">
+            <div className="border-l-4 border-[var(--accent)] pl-4">
               <h3 className="font-semibold text-lg">Days 6-7: Chengdu</h3>
               <p className="text-gray-700">Panda Base, spicy Sichuan food, People&apos;s Park</p>
             </div>
-            <div className="border-l-4 border-red-500 pl-4">
+            <div className="border-l-4 border-[var(--accent)] pl-4">
               <h3 className="font-semibold text-lg">Days 8-9: Yangshuo</h3>
               <p className="text-gray-700">Li River cruise, karst peaks, countryside biking</p>
             </div>
-            <div className="border-l-4 border-red-500 pl-4">
+            <div className="border-l-4 border-[var(--accent)] pl-4">
               <h3 className="font-semibold text-lg">Day 10: Shanghai</h3>
               <p className="text-gray-700">The Bund, departure</p>
             </div>

@@ -68,7 +68,7 @@ export default function TravelPlannerPage() {
             <div className="pt-4">
               <button 
                 type="submit" 
-                className="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition"
+                className="bg-[var(--accent)] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[var(--accent-strong)] transition"
               >
                 Generate My Itinerary
               </button>
@@ -80,7 +80,7 @@ export default function TravelPlannerPage() {
           <h3 className="font-semibold mb-2">Note</h3>
           <p className="text-gray-600">
             This is a demo form. Full functionality with personalized itinerary generation coming soon. 
-            For now, check our <a href="/plan-your-trip/preplanned-trips" className="text-red-600 underline">pre-planned trips</a>.
+            For now, check our <a href="/plan-your-trip/preplanned-trips" className="text-[var(--accent)] underline">pre-planned trips</a>.
           </p>
         </div>
       </main>

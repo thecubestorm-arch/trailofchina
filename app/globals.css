@@ -5,8 +5,10 @@
 :root {
   --background: #f5f1ea;
   --background-strong: #ebe4d8;
-  --surface: #fffcf7db;
+  --surface: rgba(255, 252, 247, 0.86);
   --surface-strong: #fffaf3;
+  --primary: #af5d32;
+  --primary-hover: #8f431c;
   --foreground: #1f2933;
   --muted: #5d6a73;
   --line: #1f29331a;
@@ -78,7 +80,7 @@ a {
   .section-shell {
     border: 1px solid var(--line);
     box-shadow: var(--shadow-card);
-    background: linear-gradient(#fffaf3eb, #fffcf7d1);
+    background: linear-gradient(#fffaf3, rgba(255, 252, 247, 0.86));
   }
 
   .accent-ring {

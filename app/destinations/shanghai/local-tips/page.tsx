@@ -21,29 +21,29 @@ export default function ShanghaiLocalTipsPage() {
           <h2 className="text-2xl font-semibold mb-4">Common Scams to Avoid</h2>
           
           <div className="space-y-4">
-            <div className="bg-red-50 rounded-lg p-4 border-l-4 border-red-400">
-              <h3 className="font-semibold text-red-800">🍵 Tea Ceremony Scam</h3>
-              <p className="text-red-900">
+            <div className="bg-[var(--accent-soft)] rounded-lg p-4 border-l-4 border-[var(--accent)]">
+              <h3 className="font-semibold text-[var(--accent-strong)]">🍵 Tea Ceremony Scam</h3>
+              <p className="text-[var(--foreground)]">
                 Friendly locals approach tourists claiming to practice English, then invite you to an 
                 expensive tea house. Bill can be ¥500-2000.
               </p>
-              <p className="text-sm text-red-700 mt-2"><strong>Avoid:</strong> Never follow strangers to tea houses.</p>
+              <p className="text-sm text-[var(--accent-strong)] mt-2"><strong>Avoid:</strong> Never follow strangers to tea houses.</p>
             </div>
 
-            <div className="bg-red-50 rounded-lg p-4 border-l-4 border-red-400">
-              <h3 className="font-semibold text-red-800">🎨 Art Student Scam</h3>
-              <p className="text-red-900">
+            <div className="bg-[var(--accent-soft)] rounded-lg p-4 border-l-4 border-[var(--accent)]">
+              <h3 className="font-semibold text-[var(--accent-strong)]">🎨 Art Student Scam</h3>
+              <p className="text-[var(--foreground)]">
                 "Art students" invite you to see their work, then pressure you to buy overpriced art.
               </p>
-              <p className="text-sm text-red-700 mt-2"><strong>Avoid:</strong> Politely decline gallery invitations from strangers.</p>
+              <p className="text-sm text-[var(--accent-strong)] mt-2"><strong>Avoid:</strong> Politely decline gallery invitations from strangers.</p>
             </div>
 
-            <div className="bg-red-50 rounded-lg p-4 border-l-4 border-red-400">
-              <h3 className="font-semibold text-red-800">🚕 Fake Taxi Scam</h3>
-              <p className="text-red-900">
+            <div className="bg-[var(--accent-soft)] rounded-lg p-4 border-l-4 border-[var(--accent)]">
+              <h3 className="font-semibold text-[var(--accent-strong)]">🚕 Fake Taxi Scam</h3>
+              <p className="text-[var(--foreground)]">
                 Unofficial drivers at airports charge 3-5x normal rates.
               </p>
-              <p className="text-sm text-red-700 mt-2"><strong>Avoid:</strong> Use official taxi queue or DiDi app only.</p>
+              <p className="text-sm text-[var(--accent-strong)] mt-2"><strong>Avoid:</strong> Use official taxi queue or DiDi app only.</p>
             </div>
           </div>
         </section>

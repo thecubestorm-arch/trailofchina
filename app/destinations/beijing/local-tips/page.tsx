@@ -14,9 +14,9 @@ export default function BeijingLocalTipsPage() {
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">Scams to Avoid</h2>
           <div className="space-y-4">
-            <div className="bg-red-50 rounded-lg p-4 border-l-4 border-red-400">
-              <h3 className="font-semibold text-red-800">🚕 Fake Taxis at Tourist Sites</h3>
-              <p className="text-red-900">Always use official taxis or ride apps.</p>
+            <div className="bg-[var(--accent-soft)] rounded-lg p-4 border-l-4 border-[var(--accent)]">
+              <h3 className="font-semibold text-[var(--accent-strong)]">🚕 Fake Taxis at Tourist Sites</h3>
+              <p className="text-[var(--foreground)]">Always use official taxis or ride apps.</p>
             </div>
           </div>
         </section>

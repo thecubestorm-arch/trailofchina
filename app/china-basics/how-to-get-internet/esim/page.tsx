@@ -75,9 +75,9 @@ export default function EsimPage() {
           </ul>
         </div>
 
-        <div className="bg-red-50 border-l-4 border-red-400 p-4">
-          <h3 className="font-semibold text-red-800 mb-2">⚠️ Important Limitations</h3>
-          <p className="text-red-900">eSIMs use roaming networks, so they bypass the Great Firewall. However, speeds may be slower than local SIMs. VPN still recommended for full internet access.</p>
+        <div className="bg-[var(--accent-soft)] border-l-4 border-[var(--accent)] p-4">
+          <h3 className="font-semibold text-[var(--accent-strong)] mb-2">⚠️ Important Limitations</h3>
+          <p className="text-[var(--foreground)]">eSIMs use roaming networks, so they bypass the Great Firewall. However, speeds may be slower than local SIMs. VPN still recommended for full internet access.</p>
         </div>
       </main>
     </div>

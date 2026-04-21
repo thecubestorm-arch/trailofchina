@@ -72,9 +72,9 @@ export default function CarPage() {
           </ul>
         </div>
 
-        <div className="bg-red-50 border-l-4 border-red-400 p-4">
-          <h3 className="font-semibold text-red-800 mb-2">⚠️ Consider Carefully</h3>
-          <ul className="text-red-900 space-y-2">
+        <div className="bg-[var(--accent-soft)] border-l-4 border-[var(--accent)] p-4">
+          <h3 className="font-semibold text-[var(--accent-strong)] mb-2">⚠️ Consider Carefully</h3>
+          <ul className="text-[var(--foreground)] space-y-2">
             <li>• Traffic accidents are common</li>
             <li>• Chinese driving style is chaotic</li>
             <li>• Road signs mostly in Chinese</li>

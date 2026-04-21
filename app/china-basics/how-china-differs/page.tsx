@@ -21,38 +21,38 @@ export default function HowChinaDiffersHub() {
 
         <div className="grid md:grid-cols-2 gap-6 mb-12">
           <Link href="/china-basics/how-china-differs/censorship" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-red-500 hover:shadow-lg transition-all">
+            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all">
               <div className="text-4xl mb-4">🔒</div>
               <h2 className="text-2xl font-semibold mb-2">Censorship</h2>
               <p className="text-gray-600">The Great Firewall, blocked websites, and what you need to know.</p>
-              <span className="text-red-600 font-medium mt-4 inline-block">Learn more →</span>
+              <span className="text-[var(--accent)] font-medium mt-4 inline-block">Learn more →</span>
             </div>
           </Link>
 
           <Link href="/china-basics/how-china-differs/cultural-differences" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-red-500 hover:shadow-lg transition-all">
+            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all">
               <div className="text-4xl mb-4">🤝</div>
               <h2 className="text-2xl font-semibold mb-2">Cultural Differences</h2>
               <p className="text-gray-600">Etiquette, customs, and social norms to respect.</p>
-              <span className="text-red-600 font-medium mt-4 inline-block">Learn more →</span>
+              <span className="text-[var(--accent)] font-medium mt-4 inline-block">Learn more →</span>
             </div>
           </Link>
 
           <Link href="/china-basics/how-china-differs/security-standards" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-red-500 hover:shadow-lg transition-all">
+            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all">
               <div className="text-4xl mb-4">🛡️</div>
               <h2 className="text-2xl font-semibold mb-2">Security Standards</h2>
               <p className="text-gray-600">Safety tips, scams to avoid, and staying secure.</p>
-              <span className="text-red-600 font-medium mt-4 inline-block">Learn more →</span>
+              <span className="text-[var(--accent)] font-medium mt-4 inline-block">Learn more →</span>
             </div>
           </Link>
 
           <Link href="/china-basics/how-china-differs/passport-rules" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-red-500 hover:shadow-lg transition-all">
+            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all">
               <div className="text-4xl mb-4">📋</div>
               <h2 className="text-2xl font-semibold mb-2">Passport Rules</h2>
               <p className="text-gray-600">Hotel registration, police checks, and documentation.</p>
-              <span className="text-red-600 font-medium mt-4 inline-block">Learn more →</span>
+              <span className="text-[var(--accent)] font-medium mt-4 inline-block">Learn more →</span>
             </div>
           </Link>
         </div>
@@ -67,9 +67,9 @@ export default function HowChinaDiffersHub() {
           </ul>
         </div>
 
-        <div className="bg-red-50 border-l-4 border-red-400 p-4">
-          <h3 className="font-semibold text-red-800 mb-2">⚠️ Important</h3>
-          <p className="text-red-900">
+        <div className="bg-[var(--accent-soft)] border-l-4 border-[var(--accent)] p-4">
+          <h3 className="font-semibold text-[var(--accent-strong)] mb-2">⚠️ Important</h3>
+          <p className="text-[var(--foreground)]">
             Chinese laws are strictly enforced. What might be minor elsewhere can have serious consequences here. When in doubt, err on the side of caution.
           </p>
         </div>

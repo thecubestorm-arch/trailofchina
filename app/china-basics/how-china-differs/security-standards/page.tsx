@@ -33,24 +33,24 @@ export default function SecurityStandardsPage() {
           <h2 className="text-2xl font-semibold mb-4">Common Scams to Avoid</h2>
           
           <div className="space-y-4">
-            <div className="bg-red-50 rounded-lg p-4">
-              <h3 className="font-semibold text-red-800 mb-2">🎨 Art Student Scam</h3>
-              <p className="text-red-900">Friendly "art students" invite you to a tea house or art gallery, then present an inflated bill. Never follow strangers.</p>
+            <div className="bg-[var(--accent-soft)] rounded-lg p-4">
+              <h3 className="font-semibold text-[var(--accent-strong)] mb-2">🎨 Art Student Scam</h3>
+              <p className="text-[var(--foreground)]">Friendly "art students" invite you to a tea house or art gallery, then present an inflated bill. Never follow strangers.</p>
             </div>
             
-            <div className="bg-red-50 rounded-lg p-4">
-              <h3 className="font-semibold text-red-800 mb-2">🚕 Fake Taxi Scam</h3>
-              <p className="text-red-900">Unofficial drivers overcharge or take longer routes. Always use official taxis or DiDi app.</p>
+            <div className="bg-[var(--accent-soft)] rounded-lg p-4">
+              <h3 className="font-semibold text-[var(--accent-strong)] mb-2">🚕 Fake Taxi Scam</h3>
+              <p className="text-[var(--foreground)]">Unofficial drivers overcharge or take longer routes. Always use official taxis or DiDi app.</p>
             </div>
             
-            <div className="bg-red-50 rounded-lg p-4">
-              <h3 className="font-semibold text-red-800 mb-2">🏛️ Closed Attraction Scam</h3>
-              <p className="text-red-900">Touts claim attractions are closed and offer expensive alternatives. Verify opening times officially.</p>
+            <div className="bg-[var(--accent-soft)] rounded-lg p-4">
+              <h3 className="font-semibold text-[var(--accent-strong)] mb-2">🏛️ Closed Attraction Scam</h3>
+              <p className="text-[var(--foreground)]">Touts claim attractions are closed and offer expensive alternatives. Verify opening times officially.</p>
             </div>
             
-            <div className="bg-red-50 rounded-lg p-4">
-              <h3 className="font-semibold text-red-800 mb-2">💱 Currency Exchange Scam</h3>
-              <p className="text-red-900">Unofficial exchange services shortchange or give fake bills. Use banks or ATMs only.</p>
+            <div className="bg-[var(--accent-soft)] rounded-lg p-4">
+              <h3 className="font-semibold text-[var(--accent-strong)] mb-2">💱 Currency Exchange Scam</h3>
+              <p className="text-[var(--foreground)]">Unofficial exchange services shortchange or give fake bills. Use banks or ATMs only.</p>
             </div>
           </div>
         </section>

@@ -1,177 +1,283 @@
 # Trail of China - Design System
 
-## Source
-Cloned from: https://www.trailofchina.com/
+## Source of Truth
+- `styles/theme.css` for design tokens
+- `app/globals.css` for global look-and-feel rules
+- Reference: https://www.trailofchina.com/
 
-## Color Palette
+---
 
-### Primary Colors
-- **Primary Accent:** `#dc2626` (Red-600) - CTA buttons, links, accents
-- **Primary Hover:** `#b91c1c` (Red-700) - Button hover states
-- **Background Primary:** `#fafafa` (Gray-50) - Main page background
-- **Background Card:** `#ffffff` (White) - Card backgrounds
+## Brand Direction
 
-### Text Colors
-- **Text Primary:** `#171717` (Gray-900) - Headings
-- **Text Secondary:** `#404040` (Gray-700) - Body text
-- **Text Muted:** `#737373` (Gray-500) - Captions, meta text
-- **Text Light:** `#a3a3a3` (Gray-400) - Subtle text
+- **Feel:** Warm, editorial, calm, premium, and practical
+- **Audience:** First-time international travelers planning a China trip
+- **Goal:** Reduce stress, create clarity, feel trustworthy
+- **Avoid:** Flashy, corporate, or overly playful UI styles
 
-### Accent Colors
-- **Amber/Warm:** `#f59e0b` - Warning highlights, pro tips
-- **Border:** `#e5e5e5` (Gray-200) - Card borders, dividers
+---
+
+## Color System
+
+### Primary Tokens (from `styles/theme.css`)
+
+```css
+--background: #f5f1ea           /* Warm cream background */
+--background-strong: #ebe4d8    /* Darker warm background */
+--surface: rgba(255, 252, 247, 0.86)  /* Translucent surface */
+--surface-strong: #fffaf3       /* Solid cream surface */
+--foreground: #1f2933           /* Dark text */
+--muted: #5d6a73                /* Muted/secondary text */
+--line: rgba(31, 41, 51, 0.1)   /* Subtle borders */
+--accent: #af5d32               /* Terracotta accent */
+--accent-strong: #8f431c        /* Darker terracotta */
+--accent-soft: rgba(175, 93, 50, 0.12)  /* Subtle accent bg */
+```
+
+### Usage Guidelines
+
+| Token | Usage |
+|-------|-------|
+| `--background` | Main page background |
+| `--surface` | Cards, panels, elevated surfaces |
+| `--foreground` | Primary text, headings |
+| `--muted` | Secondary text, captions |
+| `--accent` | CTAs, links, highlights, active states |
+| `--line` | Borders, dividers |
+
+### Color Principles
+
+- ✅ **DO:** Use warm neutrals as base
+- ✅ **DO:** Use terracotta accent sparingly
+- ❌ **AVOID:** Bright, cold, or neon colors
+- ❌ **AVOID:** Cold blue-heavy palettes
+- ❌ **AVOID:** Harsh black-and-white contrast
+
+---
 
 ## Typography
 
-### Font Family
-- **Primary:** System UI font stack (`system-ui, -apple-system, sans-serif`)
-- **No custom webfonts** - Uses system fonts for performance
+### Font Strategy
+
+- **Body:** System sans-serif stack (from `app/globals.css`)
+- **Headings:** `.font-serif` for editorial travel feel
+- **Feel:** Elegant, readable, never condensed
 
 ### Type Scale
-- **Hero H1:** `text-4xl` (36px) / `font-bold` / `tracking-tight`
-- **Section H2:** `text-3xl` (30px) / `font-semibold`
-- **Card H3:** `text-xl` (20px) / `font-semibold`
-- **Body:** `text-base` (16px) / `leading-relaxed`
-- **Small/Caption:** `text-sm` (14px)
 
-## Layout
+| Level | Size | Weight | Usage |
+|-------|------|--------|-------|
+| Hero | text-4xl (36px) | font-bold | Main page titles |
+| H1 | text-3xl (30px) | font-semibold | Section headings |
+| H2 | text-2xl (24px) | font-semibold | Card titles |
+| H3 | text-xl (20px) | font-semibold | Subsection titles |
+| Body | text-base (16px) | normal | Paragraphs |
+| Small | text-sm (14px) | normal | Captions, meta |
 
-### Container
-- **Max Width:** `max-w-4xl` (896px) for content
-- **Padding:** `px-4` mobile, `px-6` desktop
-- **Section Spacing:** `py-12` (48px) vertical padding
+### Typography Principles
 
-### Grid System
-- **Destination Cards:** 2-column grid on mobile, 3-column on desktop
-- **FAQ Cards:** Single column, stacked
-- **Spacing:** `gap-6` (24px) between cards
+- Keep line lengths comfortable
+- Avoid dense text blocks
+- Use generous line-height (`leading-relaxed`)
+
+---
+
+## Surfaces and Effects
+
+### Utility Classes (from `app/globals.css`)
+
+| Class | Usage |
+|-------|-------|
+| `.glass-panel` | Translucent, elevated surfaces |
+| `.section-shell` | Main card/section treatment |
+| `.accent-ring` | Emphasized buttons, key interactive elements |
+
+### Surface Principles
+
+- Prefer **subtle blur** and layered backgrounds
+- Use **soft shadows** from token system
+- Preserve **gradient/radial page atmosphere**
+- Avoid stark blocks of color
+
+---
 
 ## Components
 
-### Feature Cards (Destinations)
+### Cards
+
 ```
-- Background: white
-- Border: 1px solid gray-200
-- Border Radius: rounded-xl
-- Padding: p-6
-- Hover: border-red-500, shadow-lg transition
-- Structure: Icon + Title + Description
+Background: var(--surface) or var(--surface-strong)
+Border Radius: rounded-2xl (generous rounding)
+Padding: p-6 to p-8 (roomy)
+Shadow: Soft, from token system
+Border: Subtle or none
 ```
 
-### FAQ Cards
-```
-- Background: gray-50
-- Border Radius: rounded-lg
-- Padding: p-6
-- Title: font-semibold text-lg
-- Content: text-gray-700
-```
-
-### Section Intro
-```
-- Centered text
-- Max width: max-w-2xl
-- Spacing: mb-12
-- Title: text-3xl font-semibold
-- Subtitle: text-lg text-gray-600
-```
+**Feel:** Roomy, generous padding, rounded corners, soft
 
 ### Buttons
+
+**Primary:**
 ```
-Primary:
-- Background: bg-red-600
-- Text: text-white
-- Padding: px-8 py-3
-- Border Radius: rounded-lg
-- Hover: bg-red-700
-- Font: font-semibold
+Background: var(--accent)
+Text: white
+Border Radius: rounded-full or rounded-xl (friendly)
+Padding: px-6 py-3
+Hover: var(--accent-strong)
+```
+
+**Secondary:**
+```
+Background: transparent or var(--surface)
+Border: 1px solid var(--line)
+Text: var(--foreground)
 ```
 
 ### Navigation
-```
-- Background: white
-- Border Bottom: border-gray-200
-- Height: h-16
-- Logo: Left aligned
-- Links: Right aligned, text-gray-600 hover:text-red-600
-- Mobile: Hamburger menu
-```
 
-### Footer
 ```
-- Background: gray-900
-- Text: gray-400
-- Padding: py-12
-- Links: hover:text-white
-- Grid: 4 columns on desktop
+Background: Translucent/glass effect
+Position: Sticky top
+Height: h-16 to h-20
+Links: Elegant, simple, slightly translucent
+Mobile: Hamburger with glass panel
 ```
 
-## Patterns
+### Section Spacing
 
-### Hero Section
-- Full width
-- Centered content
-- Large heading with tight tracking
-- Subtitle text below
-- Optional CTA button
+- **Section Padding:** py-16 to py-24 (open, breathable)
+- **Container:** max-w-5xl to max-w-6xl
+- **Element Spacing:** gap-6 to gap-8
 
-### Content Sections
-- Alternating white/gray backgrounds
-- Section intro component at top
-- Consistent py-12 spacing
+---
 
-### Cards Grid
-- Responsive grid layout
-- Consistent card height
-- Hover effects on all cards
-- Clear visual hierarchy
+## Layout
 
-## Responsive Breakpoints
+### Grid System
+
+- **Desktop:** 2-3 column grids for cards
+- **Tablet:** 2 columns
+- **Mobile:** 1 column, clean stacking
+
+### Container Widths
+
+- **Content:** max-w-3xl (text-heavy pages)
+- **Sections:** max-w-5xl to max-w-6xl (mixed content)
+- **Full:** Full width with internal padding
+
+### Responsive Breakpoints
 
 - **Mobile:** Default (< 640px)
 - **Tablet:** `md:` (640px+)
 - **Desktop:** `lg:` (1024px+)
 - **Wide:** `xl:` (1280px+)
 
-## Animation/Transitions
+---
 
-- **Card Hover:** `transition-all duration-200`
-- **Button Hover:** `hover:bg-red-700`
-- **Link Hover:** `hover:text-red-600`
-- **Border Hover:** `hover:border-red-500`
+## Interaction Style
 
-## Implementation Notes
+### Transitions
 
-### Files Changed
-- `app/globals.css` - Color variables and base styles
-- `app/layout.tsx` - Root layout structure
-- `app/page.tsx` - Home page redesign
-- `components/Navigation.tsx` - New navigation
-- `components/Footer.tsx` - New footer
-- `components/FeatureCard.tsx` - Destination cards
-- `components/FaqCard.tsx` - FAQ section cards
-- `components/SectionIntro.tsx` - Section headers
+```css
+transition: all 0.2s ease-out;
+```
 
-### Key Changes from Original
-1. Removed excessive red accents
-2. Simplified color palette
-3. Added proper card components
-4. Improved section spacing
-5. Better typography hierarchy
-6. Cleaner navigation
+- **Speed:** Soft and quick (200ms)
+- **Easing:** ease-out
+- **Feel:** Not flashy, gentle
+
+### Hover States
+
+- **Cards:** Lift slightly (translateY -2px), subtle shadow increase
+- **Buttons:** Darken to `--accent-strong`
+- **Links:** Color shift to accent
+
+### Disabled States
+
+- Keep elegant and clearly inactive
+- Reduce opacity (opacity-50)
+- Maintain rounded shapes
+
+---
+
+## Content Presentation
+
+### Principles
+
+- Practical, reassuring, easy to follow
+- Clear hierarchy and structured sections
+- Support travel planning confidence
+- Avoid high-pressure conversion tactics
+
+### Section Structure
+
+1. **Hero:** Warm background, serif heading, clear CTA
+2. **Content Cards:** Glass/surface treatment, generous spacing
+3. **FAQs:** Collapsible, soft borders, warm backgrounds
+4. **CTAs:** Accent color, rounded, friendly
+
+---
+
+## Do and Don't
+
+### ✅ DO
+
+- Reuse existing theme tokens
+- Keep visual consistency with homepage
+- Maintain warm, premium, editorial aesthetic
+- Design mobile-first
+- Use serif fonts for headings
+- Keep layouts airy and spacious
+- Use rounded shapes generously
+- Add subtle depth through blur and soft shadows
+
+### ❌ AVOID
+
+- Cold blue-heavy palettes
+- Harsh black-and-white contrast
+- Boxy SaaS-style dashboards
+- Overly playful illustrations
+- Dense layouts with little spacing
+- Purple-heavy default AI patterns
+- Neon or bright accent colors
+- Sharp, hard-edged UI
+
+---
+
+## Implementation Files
+
+| File | Purpose |
+|------|---------|
+| `styles/theme.css` | CSS variables and tokens |
+| `app/globals.css` | Global styles, utilities |
+| `app/layout.tsx` | Root layout, fonts |
+| `app/page.tsx` | Homepage implementation |
+| `components/` | Reusable components |
+
+---
 
 ## Quality Checklist
 
 Before committing design changes:
-- [ ] Colors match reference exactly
-- [ ] Typography uses system fonts
-- [ ] Cards have consistent styling
-- [ ] All hover states work
-- [ ] Mobile responsive
+
+- [ ] Colors use theme tokens (warm neutrals, terracotta accent)
+- [ ] Headings use serif font
+- [ ] Cards have generous padding and rounded corners
+- [ ] Background is warm cream (`#f5f1ea`)
+- [ ] Surfaces use glass/translucent effects
+- [ ] All hover states work smoothly
+- [ ] Mobile responsive and clean
 - [ ] Build passes (`npm run build`)
-- [ ] No content lost in migration
+- [ ] No harsh contrasts or cold colors
+- [ ] Layouts feel airy and breathable
 
 ---
 
+## Current Status
+
+**Phase B: Design Implementation**
+- ✅ Color tokens extracted from reference
+- ✅ Typography system defined
+- ✅ Component patterns documented
+- 🔄 Implementation in progress
+
 Last updated: 2026-04-21
-Source: https://www.trailofchina.com/

@@ -20,10 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="antialiased">
-        <div className="relative min-h-screen">
+      <body className="antialiased" style={{ backgroundColor: '#f5f1ea' }}>
+        <div className="relative min-h-screen" style={{ backgroundColor: '#f5f1ea' }}>
           <Navigation />
-          <main>{children}</main>
+          <main style={{ backgroundColor: '#f5f1ea' }}>{children}</main>
           <Footer />
         </div>
       </body>

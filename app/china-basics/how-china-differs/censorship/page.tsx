@@ -23,35 +23,35 @@ export default function CensorshipPage() {
           <p className="text-gray-700 mb-4">These popular services do NOT work in China without a VPN:</p>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-            <div className="bg-red-50 rounded-lg p-4 text-center">
+            <div className="bg-[var(--accent-soft)] rounded-lg p-4 text-center">
               <p className="font-semibold">Google</p>
               <p className="text-sm text-gray-600">Search, Maps, Gmail</p>
             </div>
-            <div className="bg-red-50 rounded-lg p-4 text-center">
+            <div className="bg-[var(--accent-soft)] rounded-lg p-4 text-center">
               <p className="font-semibold">Meta</p>
               <p className="text-sm text-gray-600">Facebook, Instagram, WhatsApp</p>
             </div>
-            <div className="bg-red-50 rounded-lg p-4 text-center">
+            <div className="bg-[var(--accent-soft)] rounded-lg p-4 text-center">
               <p className="font-semibold">X/Twitter</p>
               <p className="text-sm text-gray-600">Social media</p>
             </div>
-            <div className="bg-red-50 rounded-lg p-4 text-center">
+            <div className="bg-[var(--accent-soft)] rounded-lg p-4 text-center">
               <p className="font-semibold">YouTube</p>
               <p className="text-sm text-gray-600">Video streaming</p>
             </div>
-            <div className="bg-red-50 rounded-lg p-4 text-center">
+            <div className="bg-[var(--accent-soft)] rounded-lg p-4 text-center">
               <p className="font-semibold">Netflix</p>
               <p className="text-sm text-gray-600">Streaming</p>
             </div>
-            <div className="bg-red-50 rounded-lg p-4 text-center">
+            <div className="bg-[var(--accent-soft)] rounded-lg p-4 text-center">
               <p className="font-semibold">ChatGPT</p>
               <p className="text-sm text-gray-600">AI assistant</p>
             </div>
-            <div className="bg-red-50 rounded-lg p-4 text-center">
+            <div className="bg-[var(--accent-soft)] rounded-lg p-4 text-center">
               <p className="font-semibold">Dropbox</p>
               <p className="text-sm text-gray-600">Cloud storage</p>
             </div>
-            <div className="bg-red-50 rounded-lg p-4 text-center">
+            <div className="bg-[var(--accent-soft)] rounded-lg p-4 text-center">
               <p className="font-semibold">BBC/CNN</p>
               <p className="text-sm text-gray-600">News sites</p>
             </div>
@@ -95,9 +95,9 @@ export default function CensorshipPage() {
           </ul>
         </div>
 
-        <div className="bg-red-50 border-l-4 border-red-400 p-4">
-          <h3 className="font-semibold text-red-800 mb-2">⚠️ Legal Notice</h3>
-          <p className="text-red-900">
+        <div className="bg-[var(--accent-soft)] border-l-4 border-[var(--accent)] p-4">
+          <h3 className="font-semibold text-[var(--accent-strong)] mb-2">⚠️ Legal Notice</h3>
+          <p className="text-[var(--foreground)]">
             While many travelers use VPNs, they exist in a legal gray area in China. 
             Personal use is generally tolerated, but selling VPN services is illegal. 
             Never discuss VPN usage openly in public or with officials.

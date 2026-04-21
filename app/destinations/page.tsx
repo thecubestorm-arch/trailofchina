@@ -22,20 +22,20 @@ export default function DestinationsHub() {
 
         <div className="grid md:grid-cols-2 gap-6 mb-12">
           <Link href="/destinations/shanghai" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-red-500 hover:shadow-lg transition-all">
+            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all">
               <div className="text-4xl mb-4">🏙️</div>
               <h2 className="text-2xl font-semibold mb-2">Shanghai</h2>
               <p className="text-gray-600">China's futuristic financial hub with colonial charm.</p>
-              <span className="text-red-600 font-medium mt-4 inline-block">Explore Shanghai →</span>
+              <span className="text-[var(--accent)] font-medium mt-4 inline-block">Explore Shanghai →</span>
             </div>
           </Link>
 
           <Link href="/destinations/beijing" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-red-500 hover:shadow-lg transition-all">
+            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all">
               <div className="text-4xl mb-4">🏛️</div>
               <h2 className="text-2xl font-semibold mb-2">Beijing</h2>
               <p className="text-gray-600">Ancient capital with the Great Wall and Forbidden City.</p>
-              <span className="text-red-600 font-medium mt-4 inline-block">Explore Beijing →</span>
+              <span className="text-[var(--accent)] font-medium mt-4 inline-block">Explore Beijing →</span>
             </div>
           </Link>
         </div>

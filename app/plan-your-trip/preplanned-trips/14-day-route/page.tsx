@@ -30,27 +30,27 @@ export default function FourteenDayRoutePage() {
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">Itinerary</h2>
           <div className="space-y-4">
-            <div className="border-l-4 border-red-500 pl-4">
+            <div className="border-l-4 border-[var(--accent)] pl-4">
               <h3 className="font-semibold">Days 1-4: Beijing</h3>
               <p className="text-gray-700 text-sm">Forbidden City, Great Wall, Summer Palace, Temple of Heaven, Hutongs</p>
             </div>
-            <div className="border-l-4 border-red-500 pl-4">
+            <div className="border-l-4 border-[var(--accent)] pl-4">
               <h3 className="font-semibold">Days 5-6: Xi&apos;an</h3>
               <p className="text-gray-700 text-sm">Terracotta Warriors, City Wall, Muslim Quarter, Big Wild Goose Pagoda</p>
             </div>
-            <div className="border-l-4 border-red-500 pl-4">
+            <div className="border-l-4 border-[var(--accent)] pl-4">
               <h3 className="font-semibold">Days 7-8: Chengdu</h3>
               <p className="text-gray-700 text-sm">Panda Base, Jinli Street, People&apos;s Park, Sichuan opera</p>
             </div>
-            <div className="border-l-4 border-red-500 pl-4">
+            <div className="border-l-4 border-[var(--accent)] pl-4">
               <h3 className="font-semibold">Days 9-11: Yangshuo</h3>
               <p className="text-gray-700 text-sm">Li River cruise, rock climbing, countryside cycling, Xingping village</p>
             </div>
-            <div className="border-l-4 border-red-500 pl-4">
+            <div className="border-l-4 border-[var(--accent)] pl-4">
               <h3 className="font-semibold">Days 12-13: Shanghai</h3>
               <p className="text-gray-700 text-sm">The Bund, Yu Garden, French Concession, Shanghai Tower</p>
             </div>
-            <div className="border-l-4 border-red-500 pl-4">
+            <div className="border-l-4 border-[var(--accent)] pl-4">
               <h3 className="font-semibold">Day 14: Hangzhou Day Trip + Departure</h3>
               <p className="text-gray-700 text-sm">West Lake, Longjing tea plantations, return to Shanghai for flight</p>
             </div>

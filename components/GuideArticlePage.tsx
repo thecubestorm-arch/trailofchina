@@ -72,7 +72,7 @@ export default function GuideArticlePage({
         </ul>
       </div>
 
-      <div className="mt-8 rounded-2xl border border-red-200 bg-red-50 p-6">
+      <div className="mt-8 rounded-2xl border border-[var(--accent-soft)] bg-[var(--accent-soft)] p-6">
         <h2 className="text-xl font-black text-slate-900">Scam Alerts</h2>
         <ul className="mt-3 space-y-2">
           {scamAlerts.map((alert) => (

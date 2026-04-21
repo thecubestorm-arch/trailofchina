@@ -21,20 +21,20 @@ export default function InternetHub() {
 
         <div className="grid md:grid-cols-2 gap-6 mb-12">
           <Link href="/china-basics/how-to-get-internet/esim" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-red-500 hover:shadow-lg transition-all">
+            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all">
               <div className="text-4xl mb-4">📱</div>
               <h2 className="text-2xl font-semibold mb-2">eSIM Cards</h2>
               <p className="text-gray-600">Activate before you arrive. No physical SIM needed. Best for short trips.</p>
-              <span className="text-red-600 font-medium mt-4 inline-block">Learn more →</span>
+              <span className="text-[var(--accent)] font-medium mt-4 inline-block">Learn more →</span>
             </div>
           </Link>
 
           <Link href="/china-basics/how-to-get-internet/physical-sim" className="block">
-            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-red-500 hover:shadow-lg transition-all">
+            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all">
               <div className="text-4xl mb-4">💳</div>
               <h2 className="text-2xl font-semibold mb-2">Physical SIM Cards</h2>
               <p className="text-gray-600">Buy at the airport. More data for your money. Best for longer stays.</p>
-              <span className="text-red-600 font-medium mt-4 inline-block">Learn more →</span>
+              <span className="text-[var(--accent)] font-medium mt-4 inline-block">Learn more →</span>
             </div>
           </Link>
         </div>
@@ -85,9 +85,9 @@ export default function InternetHub() {
           </ul>
         </div>
 
-        <div className="bg-red-50 border-l-4 border-red-400 p-4 mb-8">
-          <h3 className="font-semibold text-red-800 mb-2">⚠️ Scam Alert</h3>
-          <p className="text-red-900">Avoid buying SIM cards from unofficial sellers at airports. Always go to official carrier counters (China Mobile, China Unicom, China Telecom).</p>
+        <div className="bg-[var(--accent-soft)] border-l-4 border-[var(--accent)] p-4 mb-8">
+          <h3 className="font-semibold text-[var(--accent-strong)] mb-2">⚠️ Scam Alert</h3>
+          <p className="text-[var(--foreground)]">Avoid buying SIM cards from unofficial sellers at airports. Always go to official carrier counters (China Mobile, China Unicom, China Telecom).</p>
         </div>
       </main>
     </div>

@@ -59,9 +59,9 @@ export default function BusPage() {
           </ul>
         </div>
 
-        <div className="bg-red-50 border-l-4 border-red-400 p-4">
-          <h3 className="font-semibold text-red-800 mb-2">⚠️ Challenges</h3>
-          <ul className="text-red-900 space-y-2">
+        <div className="bg-[var(--accent-soft)] border-l-4 border-[var(--accent)] p-4">
+          <h3 className="font-semibold text-[var(--accent-strong)] mb-2">⚠️ Challenges</h3>
+          <ul className="text-[var(--foreground)] space-y-2">
             <li>• Routes and stops are mostly in Chinese only</li>
             <li>• Traffic can make buses slow</li>
             <li>• Crowded during rush hour</li>
