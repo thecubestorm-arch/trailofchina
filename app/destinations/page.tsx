@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import { FeatureCard } from '@/components/FeatureCard'
+import { RelatedArticleCard } from '@/components/RelatedArticleCard'
 
 export const metadata: Metadata = {
   title: 'Destinations | Trail of China',
@@ -12,40 +12,42 @@ const cards = [
     description: "China's futuristic financial hub with colonial charm.",
     icon: '🏙️',
     href: '/destinations/shanghai',
+    category: 'Destination',
   },
   {
     title: 'Beijing',
     description: 'Ancient capital with the Great Wall and Forbidden City.',
     icon: '🏛️',
     href: '/destinations/beijing',
+    category: 'Destination',
   },
 ]
 
 export default function DestinationsHub() {
   return (
     <div className="min-h-screen bg-white">
-      <main className="max-w-4xl mx-auto px-4 py-12">
-        <h1 className="text-4xl font-bold mb-6 text-gray-900">Destinations</h1>
+      <main className="mx-auto max-w-4xl px-4 py-12">
+        <h1 className="mb-6 text-4xl font-bold text-gray-900">Destinations</h1>
 
         <section className="mb-8">
-          <p className="text-lg text-gray-700 leading-relaxed">
-            China is vast and diverse, from ultra-modern megacities to ancient historical sites.
-            Each destination offers a unique glimpse into different facets of Chinese culture,
-            history, and daily life.
+          <p className="text-lg leading-relaxed text-gray-700">
+            China is vast and diverse, from ultra-modern megacities to ancient historical sites. Each destination offers a unique glimpse into different facets of Chinese culture, history, and daily life.
           </p>
         </section>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {cards.map((card) => (
-            <FeatureCard key={card.href} {...card} />
-          ))}
-        </div>
+        <section className="mb-12">
+          <h2 className="mb-6 text-2xl font-serif font-semibold text-[#1f2933]">Related Pages</h2>
+          <div className="grid gap-4 md:grid-cols-2">
+            {cards.map((card) => (
+              <RelatedArticleCard key={card.href} {...card} />
+            ))}
+          </div>
+        </section>
 
-        <div className="bg-amber-50 border-l-4 border-amber-400 p-4">
-          <h3 className="font-semibold text-amber-800 mb-2">💡 Coming Soon</h3>
+        <div className="border-l-4 border-amber-400 bg-amber-50 p-4">
+          <h3 className="mb-2 font-semibold text-amber-800">💡 Coming Soon</h3>
           <p className="text-amber-900">
-            More destinations guides are being added: Xi'an (Terracotta Warriors),
-            Chengdu (Pandas), Guilin (Karst mountains), and Hong Kong.
+            More destinations guides are being added: Xi'an (Terracotta Warriors), Chengdu (Pandas), Guilin (Karst mountains), and Hong Kong.
           </p>
         </div>
       </main>
