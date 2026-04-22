@@ -1,0 +1,47 @@
+import { Metadata } from 'next';
+import NeighborhoodPage from '@/components/NeighborhoodPage';
+
+export const metadata: Metadata = {
+  title: 'French Concession (法租界) - Best Neighborhood to Stay in Shanghai',
+  description:
+    'Stay in Shanghai leafy, charming neighborhood with lane houses, cafes, and boutiques. Perfect for travelers who want to experience Shanghai like a local.',
+  openGraph: {
+    title: 'French Concession (法租界) - Best Neighborhood to Stay in Shanghai',
+    description:
+      'Stay in Shanghai leafy, charming neighborhood with lane houses, cafes, and boutiques. Perfect for travelers who want to experience Shanghai like a local.',
+    images: [
+      {
+        url: 'https://trailofchina.com/api/og?title=French+Concession&description=Leafy+streets+cafe+hou',
+        width: 1200,
+        height: 630,
+        alt: 'French Concession Shanghai',
+      },
+    ],
+  },
+};
+
+export default function FrenchConcessionPage() {
+  return (
+    <NeighborhoodPage
+      name="French Concession"
+      nameZh="法租界"
+      city="Shanghai"
+      description="The former French Concession is Shanghai's most livable neighborhood. Plane tree-lined streets, 1930s lane houses converted into cafes and boutiques, and a nightlife scene that ranges from cocktail bars to hole-in-the-wall dumpling shops. This is where expats and locals overlap most naturally."
+      vibe="Leafy streets, courtyard cafes, and Shanghai's best neighborhood feel"
+      bestFor="Travelers who want to experience Shanghai like a local — cafe hopping, boutique shopping, street wandering"
+      priceRange="¥300-1500/night"
+      nearestSubway="South Shaanxi Road (Line 1/10/12)"
+      tips={[
+        { type: 'tip', text: 'Boutique hotels and Airbnbs in lane houses are the best value' },
+        { type: 'tip', text: 'Walk everywhere — the area is not taxi-friendly on weekends' },
+        { type: 'tip', text: 'Stay near Fuxing Road for the best atmosphere' },
+      ] as const}
+      relatedLinks={[
+        { title: 'The Bund Area', href: '/destinations/shanghai/where-to-stay/bund-area' },
+        { title: 'Jing\'an', href: '/destinations/shanghai/where-to-stay/jingan' },
+        { title: 'Xintiandi', href: '/destinations/shanghai/where-to-stay/xintiandi' },
+        { title: 'Where to Stay in Shanghai', href: '/destinations/shanghai/where-to-stay' },
+      ]}
+    />
+  );
+}

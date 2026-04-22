@@ -1,0 +1,48 @@
+import { Metadata } from 'next';
+import NeighborhoodPage from '@/components/NeighborhoodPage';
+
+export const metadata: Metadata = {
+  title: 'The Bund (外滩) - Best Neighborhood to Stay in Shanghai',
+  description:
+    'Stay in Shanghai iconic waterfront district with luxury hotels and colonial grandeur. Perfect for travelers who want skyline views and don\'t mind paying for them.',
+  openGraph: {
+    title: 'The Bund (外滩) - Best Neighborhood to Stay in Shanghai',
+    description:
+      'Stay in Shanghai iconic waterfront district with luxury hotels and colonial grandeur. Perfect for travelers who want skyline views and don\'t mind paying for them.',
+    images: [
+      {
+        url: 'https://trailofchina.com/api/og?title=The+Bund&description=Iconic+waterfront+luxury+and+colonial+grandeur',
+        width: 1200,
+        height: 630,
+        alt: 'The Bund Shanghai',
+      },
+    ],
+  },
+};
+
+export default function BundAreaPage() {
+  return (
+    <NeighborhoodPage
+      name="The Bund Area"
+      nameZh="外滩"
+      city="Shanghai"
+      description="The Bund area encompasses the historic waterfront promenade and the streets immediately behind it. This is where Shanghai's colonial past meets its futuristic present — 1920s Art Deco buildings face off against Pudong's skyline across the river. Luxury hotels dominate, but mid-range options exist a few blocks inland."
+      vibe="Iconic waterfront luxury and colonial grandeur"
+      bestFor="Travelers who want to wake up to skyline views and don't mind paying for them"
+      priceRange="¥500-3000+/night"
+      nearestSubway="East Nanjing Road (Line 2/10)"
+      tips={[
+        { type: 'tip', text: 'Book rooms with Bund view for the best skyline views at night' },
+        { type: 'tip', text: 'Avoid restaurants with "view surcharges" — same food costs more with a view' },
+        { type: 'tip', text: 'Nanjing Road is walkable from here for shopping' },
+        { type: 'tip', text: 'Walk one block inland for half-price food and authentic local eateries' },
+      ] as const}
+      relatedLinks={[
+        { title: 'French Concession', href: '/destinations/shanghai/where-to-stay/french-concession' },
+        { title: 'Jing\'an', href: '/destinations/shanghai/where-to-stay/jingan' },
+        { title: 'Xintiandi', href: '/destinations/shanghai/where-to-stay/xintiandi' },
+        { title: 'Where to Stay in Shanghai', href: '/destinations/shanghai/where-to-stay' },
+      ]}
+    />
+  );
+}
