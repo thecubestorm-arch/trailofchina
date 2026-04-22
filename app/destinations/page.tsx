@@ -87,7 +87,7 @@ export default function DestinationsHub() {
             <Link
               key={section.href}
               href={section.href}
-              className={`block cursor-pointer rounded-lg transition-colors duration-200 hover:bg-[#fdf8f3] ${index < sections.length - 1 ? 'border-b border-[#ebe4d8]' : ''}`}
+              className={`block cursor-pointer rounded-xl transition-all duration-200 hover:bg-[#fdf8f3] hover:shadow-md ${index < sections.length - 1 ? 'border-b border-[#ebe4d8]' : ''}`}
             >
               <article className="py-8 px-6 -mx-6 md:py-10">
                 <div className="grid gap-5 md:grid-cols-[280px_1fr] md:items-start">

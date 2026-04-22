@@ -16,7 +16,7 @@ type FeatureCardProps = {
 export function FeatureCard({ title, description, href, icon, eyebrow, image }: FeatureCardProps) {
   return (
     <Link href={href} className="block group h-full">
-      <article className="section-shell flex h-full flex-col overflow-hidden rounded-2xl transition-all hover:-translate-y-1 hover:shadow-lg" style={{ backgroundColor: '#fffaf3' }}>
+      <article className="section-shell flex h-full flex-col overflow-hidden rounded-xl transition-all hover:-translate-y-1 hover:shadow-md" style={{ backgroundColor: '#fffaf3' }}>
         {image ? (
           <div className="aspect-video overflow-hidden">
             <motion.div
