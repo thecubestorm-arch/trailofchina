@@ -29,6 +29,24 @@ const sections = [
   },
   {
     category: 'China Basics',
+    icon: '🍔',
+    title: 'Meituan Guide',
+    preview:
+      'China\'s super-app for food delivery, hotels, movie tickets, and group deals. Learn how to order food, book hotels, and find discounted experiences with Meituan (美团).',
+    tags: ['🍕 Food Delivery', '🏨 Hotels', '🎬 Movie Tickets', '🎯 Group Deals'],
+    href: '/china-basics/what-apps-to-use/meituan',
+  },
+  {
+    category: 'China Basics',
+    icon: '🚕',
+    title: 'Didi Guide',
+    preview:
+      'China\'s Uber for ride-hailing, bike sharing, and bus routes. Setup guide, safety tips, and pricing for foreign travelers using Didi Chuxing (滴滴出行).',
+    tags: ['🚗 Ride-Hailing', '🚲 Bike Sharing', '📍 Navigation', '🛡️ Safety'],
+    href: '/china-basics/what-apps-to-use/didi',
+  },
+  {
+    category: 'China Basics',
     icon: '💬',
     title: 'WeChat Pay Guide',
     preview:
