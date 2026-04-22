@@ -3,9 +3,9 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Shanghai Local Tips | Scams, WeChat Pay, Subway & Insider Secrets',
+  title: 'Shanghai Local Tips | WeChat Pay, Subway & Insider Secrets',
   description:
-    'Insider tips for Shanghai: tea ceremony scam, art student scam, WeChat Pay setup, subway survival, nightlife safety, and money-saving hacks.',
+    'Insider tips for Shanghai: WeChat Pay setup, subway survival, nightlife, money-saving hacks, and things to watch out for.',
 };
 
 export default function ShanghaiLocalTipsPage() {
@@ -24,59 +24,13 @@ export default function ShanghaiLocalTipsPage() {
 
         <section className="mb-8">
           <p className="text-lg text-gray-700 leading-relaxed">
-            Shanghai is one of China&apos;s safest cities, but tourist scams are common near the Bund, Nanjing Road,
-            and Yu Garden. Learn the patterns, set up WeChat Pay before you arrive, and you&apos;ll navigate
-            the city like a local. For food-specific advice, see our{' '}
+            Shanghai is one of China&apos;s safest and most international cities. Set up WeChat Pay before you arrive,
+            learn the subway, and you&apos;ll navigate the city like a local. For food-specific advice, see our{' '}
             <Link href="/destinations/shanghai/where-to-eat" className="underline text-[var(--accent)]">
               Where to Eat
             </Link>{' '}
             guide.
           </p>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Common Scams to Avoid</h2>
-
-          <div className="space-y-4">
-            <div className="bg-[var(--accent-soft)] rounded-lg p-4 border-l-4 border-[var(--accent)]">
-              <h3 className="font-semibold text-[var(--accent-strong)]">🍵 Tea Ceremony Scam</h3>
-              <p className="text-[var(--foreground)]">
-                Friendly locals approach tourists near People&apos;s Square or Nanjing Road, claiming to practice English.
-                They invite you to a &quot;traditional tea ceremony&quot; at a nearby tea house. The bill arrives at ¥500-2000
-                for tea that costs ¥30. Sometimes they claim it&apos;s a &quot;cultural exchange.&quot;
-              </p>
-              <p className="text-sm text-[var(--accent-strong)] mt-2"><strong>Avoid:</strong> Never follow strangers to tea houses. If someone approaches you speaking English on the street, politely decline and walk away.</p>
-            </div>
-
-            <div className="bg-[var(--accent-soft)] rounded-lg p-4 border-l-4 border-[var(--accent)]">
-              <h3 className="font-semibold text-[var(--accent-strong)]">🎨 Art Student / Gallery Scam</h3>
-              <p className="text-[var(--foreground)]">
-                &quot;Art students&quot; near the Bund or French Concession invite you to see their exhibition.
-                You&apos;re taken to a small gallery and pressured to buy mass-produced paintings at ¥500-3000.
-                The &quot;students&quot; work on commission.
-              </p>
-              <p className="text-sm text-[var(--accent-strong)] mt-2"><strong>Avoid:</strong> Decline any art gallery invitation from people approaching you on the street. Legitimate galleries don&apos;t recruit visitors this way.</p>
-            </div>
-
-            <div className="bg-[var(--accent-soft)] rounded-lg p-4 border-l-4 border-[var(--accent)]">
-              <h3 className="font-semibold text-[var(--accent-strong)]">🚕 Fake Taxi Scam</h3>
-              <p className="text-[var(--foreground)]">
-                Unofficial drivers at Pudong Airport and Hongqiao Station approach you inside the terminal
-                offering rides. They charge 3-5x the meter rate, or claim a &quot;flat fee&quot; of ¥400 for a ¥100 ride.
-                Some have rigged meters.
-              </p>
-              <p className="text-sm text-[var(--accent-strong)] mt-2"><strong>Avoid:</strong> Use the official taxi queue outside (follow the signs). Better: book DiDi — it shows the price upfront and routes are tracked.</p>
-            </div>
-
-            <div className="bg-[var(--accent-soft)] rounded-lg p-4 border-l-4 border-[var(--accent)]">
-              <h3 className="font-semibold text-[var(--accent-strong)]">📿 Monk / Temple Donation Scam</h3>
-              <p className="text-[var(--foreground)]">
-                Fake monks near Jing&apos;an Temple or Yu Garden hand you a &quot;blessed&quot; bracelet or amulet,
-                then aggressively demand a &quot;donation&quot; of ¥100-500. Real Buddhist monks don&apos;t do this.
-              </p>
-              <p className="text-sm text-[var(--accent-strong)] mt-2"><strong>Avoid:</strong> Don&apos;t accept anything handed to you. Walk past without making eye contact.</p>
-            </div>
-          </div>
         </section>
 
         <section className="mb-8">
@@ -121,7 +75,7 @@ export default function ShanghaiLocalTipsPage() {
           <h2 className="text-2xl font-semibold mb-4">Nightlife & Safety</h2>
           <ul className="text-gray-700 list-disc pl-5 space-y-2">
             <li><strong>Shanghai is very safe at night</strong> — violent crime is extremely rare. Women can walk alone at 2 AM without issue</li>
-            <li><strong>Watch your drink</strong> — drink spiking is rare but has been reported in Sanlitun-style bars targeting solo travelers</li>
+            <li><strong>Watch your drink</strong> — drink spiking is rare but has been reported in bars targeting solo travelers</li>
             <li><strong>Bar street areas:</strong> Found 158 (Julu Road), Xintiandi, and the Bund for cocktails. Yongkang Road for craft beer</li>
             <li><strong>Last call:</strong> No official closing time, but most bars wind down around 2-3 AM. Clubs go to 5 AM</li>
             <li><strong>Late-night food:</strong> 24-hour congee shops and hotpot chains (Haidilao) for post-drinking meals</li>
@@ -157,12 +111,23 @@ export default function ShanghaiLocalTipsPage() {
           <ul className="text-amber-900 space-y-2">
             <li>• Best Bund photos from the riverside promenade on the Pudong side — looking back at the colonial buildings</li>
             <li>• Propaganda Poster Museum (宣传画艺术中心) is hidden in an apartment basement — incredible Cold War collection, ¥20 entry</li>
-            <li>• The free Bund Sightseeing Tunnel is a tourist trap — take the ¥2 ferry instead for real river views</li>
+            <li>• The free Bund Sightseeing Tunnel is not worth it — take the ¥2 ferry instead for real river views</li>
             <li>• Zhujiajiao water town is 45 min by subway (Line 17) — free entry on weekdays, ¥80 weekends</li>
             <li>• Carrefour and Hema (盒马) in the basement of malls sell cheap prepared meals — great for quick lunches</li>
             <li>• Carry toilet paper — most public restrooms don&apos;t provide any (even in malls)</li>
           </ul>
         </div>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold mb-4">Things to Watch Out For</h2>
+          <p className="text-gray-700 mb-4">Shanghai is generally very safe, but a few situations are worth knowing about. These are not common, but awareness helps:</p>
+          <ul className="text-gray-700 list-disc pl-5 space-y-3">
+            <li><strong>Tea ceremony invitations</strong> — Occasionally, friendly strangers near People&apos;s Square invite tourists to a &quot;traditional tea ceremony&quot; that ends with an inflated bill (¥500-2000). Politely decline invitations from people approaching you on the street.</li>
+            <li><strong>Art gallery visits</strong> — &quot;Art students&quot; near the Bund sometimes invite you to see an exhibition, then pressure you to buy overpriced paintings. Legitimate galleries don&apos;t recruit visitors this way.</li>
+            <li><strong>Unofficial taxis at airports</strong> — Drivers inside Pudong or Hongqiao terminals offering rides may charge far above the meter rate. Use the official taxi queue outside, or better yet, book DiDi for upfront pricing.</li>
+            <li><strong>Fake monks near temples</strong> — People dressed as monks near Jing&apos;an Temple or Yu Garden may hand you a &quot;blessed&quot; item and demand a donation. Real Buddhist monks don&apos;t do this — just walk past.</li>
+          </ul>
+        </section>
       </main>
     </div>
   );
