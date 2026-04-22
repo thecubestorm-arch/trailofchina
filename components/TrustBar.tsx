@@ -1,22 +1,27 @@
 export default function TrustBar() {
   return (
-    <div className="bg-[#f5f1ea] border-y border-[#ebe4d8] py-4">
-      <div className="max-w-4xl mx-auto px-4 flex flex-wrap justify-center gap-6 md:gap-10 items-center">
-        <div className="flex items-center gap-2">
-          <span className="text-lg">🇨🇳</span>
-          <span className="text-sm text-[#5d6a73]">4 Trips to China</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <span className="text-lg">🗣️</span>
-          <span className="text-sm text-[#5d6a73]">We Speak Mandarin</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <span className="text-lg">👨‍👩‍👧</span>
-          <span className="text-sm text-[#5d6a73]">Family in Beijing & Shanghai</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <span className="text-lg">📍</span>
-          <span className="text-sm text-[#5d6a73]">15+ Cities Visited</span>
+    <div className="bg-white border-y border-[#ebe4d8] py-8">
+      <div className="max-w-4xl mx-auto px-4">
+        <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-3 font-serif">
+          <div className="flex items-center gap-2">
+            <span className="text-2xl md:text-3xl font-bold text-[#1f2933]">4</span>
+            <span className="text-xs md:text-sm text-[#5d6a73] uppercase tracking-wider">Trips to China</span>
+          </div>
+          <span className="hidden md:block text-[#ebe4d8]">·</span>
+          <div className="flex items-center gap-2">
+            <span className="text-2xl md:text-3xl font-bold text-[#1f2933]">2+</span>
+            <span className="text-xs md:text-sm text-[#5d6a73] uppercase tracking-wider">Years</span>
+          </div>
+          <span className="hidden md:block text-[#ebe4d8]">·</span>
+          <div className="flex items-center gap-2">
+            <span className="text-2xl md:text-3xl font-bold text-[#1f2933]">中文</span>
+            <span className="text-xs md:text-sm text-[#5d6a73] uppercase tracking-wider">We Speak</span>
+          </div>
+          <span className="hidden md:block text-[#ebe4d8]">·</span>
+          <div className="flex items-center gap-2">
+            <span className="text-2xl md:text-3xl font-bold text-[#1f2933]">15+</span>
+            <span className="text-xs md:text-sm text-[#5d6a73] uppercase tracking-wider">Cities</span>
+          </div>
         </div>
       </div>
     </div>
