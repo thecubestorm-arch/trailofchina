@@ -2,7 +2,8 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Public Buses in China | Trail of China',
-  description: 'Guide to using public buses in China. Routes, payment, and when to use them.',
+  description:
+    'Guide to using public buses in China. Routes, payment with Alipay/WeChat, bus etiquette, and when buses are the best option.',
 };
 
 export default function BusPage() {

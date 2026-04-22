@@ -3,9 +3,9 @@ import Link from 'next/link'
 import ChineseWatermark from '@/components/ChineseWatermark'
 
 export const metadata: Metadata = {
-  title: 'What Apps to Use',
+  title: 'Essential Apps for China | Trail of China',
   description:
-    'Set up the essential China travel apps before departure: payments, maps, bookings, communication, and VPN access.',
+    'Set up essential China travel apps before departure: Alipay, WeChat Pay, maps, travel booking, communication, and VPN access. Get started right.',
 }
 
 const sections = [

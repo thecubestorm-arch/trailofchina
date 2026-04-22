@@ -2,7 +2,8 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Metro & Subway in China | Trail of China',
-  description: 'Complete guide to using the metro and subway systems in Chinese cities.',
+  description:
+    'Complete guide to using the metro and subway systems in Chinese cities. Shanghai, Beijing, Guangzhou, and more. Payment, etiquette, and tips.',
 };
 
 export default function MetroPage() {

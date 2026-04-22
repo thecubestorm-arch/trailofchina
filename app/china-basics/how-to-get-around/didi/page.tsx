@@ -2,7 +2,8 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'DiDi Ride-Hailing in China | Trail of China',
-  description: 'Complete guide to using DiDi, China\'s Uber equivalent. Setup, payment, and safety tips.',
+  description:
+    'Complete guide to using DiDi, China\'s Uber equivalent. Setup, payment, car types, and safety tips for foreign travelers.',
 };
 
 export default function DidiPage() {

@@ -2,7 +2,8 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Passport & Registration Rules | Trail of China',
-  description: 'Hotel registration, police checks, and passport requirements for travelers in China.',
+  description:
+    'Hotel registration, police checks, and passport requirements for travelers in China. Visa overstays and lost passport procedures.',
 };
 
 export default function PassportRulesPage() {

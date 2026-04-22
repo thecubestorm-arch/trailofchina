@@ -2,7 +2,8 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'High-Speed Trains in China | Trail of China',
-  description: 'Complete guide to booking and riding China\'s high-speed rail network. Speeds up to 350 km/h.',
+  description:
+    'Complete guide to booking and riding China\'s high-speed rail network. G-trains, D-trains, seat classes, booking, and station tips.',
 };
 
 export default function TrainPage() {

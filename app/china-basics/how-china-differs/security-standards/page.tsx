@@ -2,7 +2,8 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Safety & Security in China | Trail of China',
-  description: 'Safety tips, common scams, and how to stay secure while traveling in China.',
+  description:
+    'Safety tips, common scams, and how to stay secure while traveling in China. General safety, digital security, and emergency contacts.',
 };
 
 export default function SecurityStandardsPage() {

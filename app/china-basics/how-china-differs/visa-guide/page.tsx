@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import GuideArticlePage from '@/components/GuideArticlePage'
 
 export const metadata: Metadata = {
-  title: 'China Visa Guide: Everything You Need to Know (2025)',
+  title: 'China Visa Guide: Everything You Need to Know (2025) | Trail of China',
   description:
-    'Complete China visa guide for tourists — types, requirements, processing times, costs, and tips. L visa, visa-free entry, and transit visas explained.',
+    'Complete China visa guide for tourists — L visa, M visa, transit visas, 144-hour visa-free entry, and Swiss/EU citizen info.',
 }
 
 export default function VisaGuidePage() {

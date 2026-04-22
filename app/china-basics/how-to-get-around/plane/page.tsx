@@ -2,7 +2,8 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Domestic Flights in China | Trail of China',
-  description: 'Guide to booking and flying domestic flights in China. Airlines, airports, and tips for travelers.',
+  description:
+    'Guide to booking and flying domestic flights in China. Airlines, airports, booking tips, and what to expect at security checks.',
 };
 
 export default function PlanePage() {

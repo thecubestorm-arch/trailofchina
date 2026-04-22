@@ -2,7 +2,8 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Cultural Differences in China | Trail of China',
-  description: 'Essential etiquette, customs, and social norms for travelers in China. What to do and what to avoid.',
+  description:
+    'Essential etiquette, customs, and social norms for travelers in China. Dining, greetings, gift giving, and public behavior explained.',
 };
 
 export default function CulturalDifferencesPage() {

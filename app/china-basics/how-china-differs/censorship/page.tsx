@@ -3,7 +3,8 @@ import ContextualCTA from '@/components/ContextualCTA';
 
 export const metadata: Metadata = {
   title: 'Censorship & The Great Firewall | Trail of China',
-  description: 'Understanding the Great Firewall of China: blocked websites, VPNs, and how to stay connected.',
+  description:
+    'Understanding the Great Firewall of China: blocked websites, VPNs, and how to stay connected. Google, WhatsApp, Instagram blocked in China.',
 };
 
 export default function CensorshipPage() {
