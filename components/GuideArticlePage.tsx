@@ -1,9 +1,16 @@
 import Link from 'next/link';
 import Breadcrumb from './Breadcrumb';
+import RelatedArticles from './RelatedArticles';
 
 type Step = {
   title: string
   description: string
+}
+
+interface RelatedArticle {
+  title: string;
+  description: string;
+  href: string;
 }
 
 type Related = {
@@ -21,6 +28,7 @@ type GuideArticlePageProps = {
   proTips: string[]
   scamAlerts: string[]
   related: Related[]
+  relatedArticles?: RelatedArticle[]
 }
 
 export default function GuideArticlePage({
@@ -33,6 +41,7 @@ export default function GuideArticlePage({
   proTips,
   scamAlerts,
   related,
+  relatedArticles,
 }: GuideArticlePageProps) {
   return (
     <section className="container-px mx-auto max-w-4xl py-12 md:py-16" style={{
@@ -99,6 +108,11 @@ export default function GuideArticlePage({
         </ul>
       </div>
 
+
+      {/* Related Articles */}
+      {relatedArticles && relatedArticles.length > 0 && (
+        <RelatedArticles articles={relatedArticles} />
+      )}
 
       <div className="mt-8 card-base">
         <h2 className="text-2xl font-extrabold text-slate-900">Related pages</h2>

@@ -120,6 +120,12 @@ The layout reflects ancient Chinese cosmology, with the Three Great Halls (Supre
         { title: 'China Basics', href: '/china-basics' },
         { title: 'Where to Eat in Beijing', href: '/destinations/beijing/where-to-eat' },
       ]}
+      relatedArticles={[
+        { title: 'Great Wall of China', description: "The world's longest wall stretching across northern China.", href: '/destinations/beijing/what-to-do/great-wall' },
+        { title: 'Temple of Heaven', description: 'The majestic temple complex where emperors performed rituals.', href: '/destinations/beijing/what-to-do/temple-of-heaven' },
+        { title: 'Peking Duck', description: "Beijing's most famous dish - try it at the city's best restaurants.", href: '/destinations/beijing/where-to-eat/peking-duck' },
+        { title: 'Summer Palace', description: 'Imperial gardens and lakes on the outskirts of Beijing.', href: '/destinations/beijing/what-to-do/summer-palace' },
+      ]}
     />
   );
 }

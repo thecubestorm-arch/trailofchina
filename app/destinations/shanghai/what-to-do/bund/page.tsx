@@ -117,6 +117,11 @@ The area has evolved from a colonial enclave to asymbol of Shanghai\'s global am
         { title: 'China Basics', href: '/china-basics' },
         { title: 'Where to Eat in Shanghai', href: '/destinations/shanghai/where-to-eat' },
       ]}
+      relatedArticles={[
+        { title: "Shanghai Tower", description: "China's tallest building and the world's second-tallest.", href: "/destinations/shanghai/what-to-do/shanghai-tower" },
+        { title: "Yu Garden", description: "400-year-old classical Chinese garden in Shanghai's Old City.", href: "/destinations/shanghai/what-to-do/yu-garden" },
+        { title: "French Concession", description: "Shanghai's most charming neighborhood of tree-lined streets.", href: "/destinations/shanghai/what-to-do/french-concession" },
+      ]}
     />
   );
 }

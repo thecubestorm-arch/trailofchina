@@ -104,6 +104,11 @@ Three skyscrapers in Lujiazui offer observation decks. Shanghai Tower is the hig
         { title: 'Shanghai Local Tips', href: '/destinations/shanghai/local-tips' },
         { title: 'Shanghai Guide', href: '/destinations/shanghai' },
       ]}
+      relatedArticles={[
+        { title: "Yu Garden", description: "400-year-old classical Chinese garden in Shanghai's Old City.", href: "/destinations/shanghai/what-to-do/yu-garden" },
+        { title: "Shanghai Tower", description: "China's tallest building and the world's second-tallest.", href: "/destinations/shanghai/what-to-do/shanghai-tower" },
+        { title: "French Concession", description: "Shanghai's most charming neighborhood of tree-lined streets.", href: "/destinations/shanghai/what-to-do/french-concession" },
+      ]}
     />
   );
 }

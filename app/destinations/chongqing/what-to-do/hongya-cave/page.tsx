@@ -113,6 +113,11 @@ It\'s free to explore and has become Chongqing\'s most popular tourist destinati
         { title: 'Ciqikou Ancient Town', href: '/destinations/chongqing/what-to-do/ciqikou' },
         { title: 'Dazu Rock Carvings', href: '/destinations/chongqing/what-to-do/dazu-rock-carvings' },
       ]}
+      relatedArticles={[
+        { title: "Ciqikou Ancient Town", description: "Historic port town with cobblestone streets and traditional architecture.", href: "/destinations/chongqing/what-to-do/ciqikou" },
+        { title: "Chongqing Hotpot", description: "Chongqing's signature dish - spicy, oily, and unforgettable.", href: "/destinations/chongqing/where-to-eat/chongqing-hotpot" },
+        { title: "Yangtze River Cable Car", description: "Aerial ride over the Yangtze River with stunning city views.", href: "/destinations/chongqing/what-to-do/yangtze-cable-car" },
+      ]}
     />
   );
 }

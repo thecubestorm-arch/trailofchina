@@ -102,6 +102,12 @@ Surrounding the garden is the Yuyuan Bazaar, a bustling marketplace of souvenir 
         { title: 'Shanghai Local Tips', href: '/destinations/shanghai/local-tips' },
         { title: 'Shanghai Guide', href: '/destinations/shanghai' },
       ]}
+      relatedArticles={[
+        { title: "The Bund", description: "Shanghai's iconic waterfront district with colonial architecture and stunning views of Pudong.", href: "/destinations/shanghai/what-to-do/bund" },
+        { title: "Shanghai Tower", description: "China's tallest building and the world's second-tallest, offering panoramic city views.", href: "/destinations/shanghai/what-to-do/shanghai-tower" },
+        { title: "French Concession", description: "Shanghai's most charming neighborhood of tree-lined streets and historic architecture.", href: "/destinations/shanghai/what-to-do/french-concession" },
+        { title: "Bund Area", description: "Explore the historic waterfront district and its colonial-era buildings.", href: "/destinations/shanghai/where-to-stay/bund-area" },
+      ]}
     />
   );
 }

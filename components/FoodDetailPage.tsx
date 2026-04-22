@@ -2,11 +2,18 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import ChineseWatermark from './ChineseWatermark';
 import Breadcrumb from './Breadcrumb';
+import RelatedArticles from './RelatedArticles';
 
 type Tip = {
   type: 'tip' | 'scam' | 'where';
   text: string;
 };
+
+interface RelatedArticle {
+  title: string;
+  description: string;
+  href: string;
+}
 
 type RelatedLink = {
   title: string;
@@ -30,6 +37,7 @@ interface FoodDetailPageProps {
   whereToTry: readonly Restaurant[];
   tips: readonly { type: 'tip' | 'scam' | 'where'; text: string }[];
   relatedLinks: readonly { title: string; href: string }[];
+  relatedArticles?: RelatedArticle[];
 }
 
 export default function FoodDetailPage({
@@ -43,6 +51,7 @@ export default function FoodDetailPage({
   whereToTry,
   tips,
   relatedLinks,
+  relatedArticles,
 }: FoodDetailPageProps) {
   const tipCount = (tips as Tip[]).filter((t) => t.type === 'tip').length;
   const scamCount = (tips as Tip[]).filter((t) => t.type === 'scam').length;
@@ -181,6 +190,11 @@ export default function FoodDetailPage({
           )}
         </section>
 
+
+        {/* Related Articles */}
+        {relatedArticles && relatedArticles.length > 0 && (
+          <RelatedArticles articles={relatedArticles} />
+        )}
 
         {/* Related Links */}
         {relatedLinks.length > 0 && (

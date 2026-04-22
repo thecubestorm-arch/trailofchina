@@ -43,6 +43,11 @@ export default function ChongqingHotpotPage() {
       whereToTry={whereToTry}
       tips={tips}
       relatedLinks={relatedLinks}
+      relatedArticles={[
+        { title: "Hongya Cave", description: "Chongqing's iconic 11-story stilted building complex overlooking the river.", href: "/destinations/chongqing/what-to-do/hongya-cave" },
+        { title: "Ciqikou Ancient Town", description: "Historic port town with cobblestone streets and traditional architecture.", href: "/destinations/chongqing/what-to-do/ciqikou" },
+        { title: "Xiaomian", description: "Chongqing's iconic noodles - spicy and savory.", href: "/destinations/chongqing/where-to-eat/xiaomian" },
+      ]}
     />
   );
 }

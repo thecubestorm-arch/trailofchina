@@ -100,6 +100,11 @@ export default function TempleOfHeavenPage() {
         { title: 'Beijing Local Tips', href: '/destinations/beijing/local-tips' },
         { title: 'Forbidden City', href: '/destinations/beijing/what-to-do/forbidden-city' },
       ]}
+      relatedArticles={[
+        { title: "Forbidden City", description: "The world's largest palace complex with 980 buildings.", href: "/destinations/beijing/what-to-do/forbidden-city" },
+        { title: "Great Wall of China", description: "The world's longest wall stretching across northern China.", href: "/destinations/beijing/what-to-do/great-wall" },
+        { title: "Peking Duck", description: "Beijing's most famous dish - try it at the city's best restaurants.", href: "/destinations/beijing/where-to-eat/peking-duck" },
+      ]}
     />
   );
 }

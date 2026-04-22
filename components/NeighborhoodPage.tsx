@@ -2,11 +2,18 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import ChineseWatermark from './ChineseWatermark';
 import Breadcrumb from './Breadcrumb';
+import RelatedArticles from './RelatedArticles';
 
 type Tip = {
   type: 'tip' | 'scam' | 'photo';
   text: string;
 };
+
+interface RelatedArticle {
+  title: string;
+  description: string;
+  href: string;
+}
 
 type RelatedLink = {
   title: string;
@@ -25,6 +32,7 @@ interface NeighborhoodPageProps {
   nearestSubway: string;
   tips: readonly { type: 'tip' | 'scam' | 'photo'; text: string }[];
   relatedLinks: readonly { title: string; href: string }[];
+  relatedArticles?: RelatedArticle[];
 }
 
 export default function NeighborhoodPage({
@@ -39,6 +47,7 @@ export default function NeighborhoodPage({
   nearestSubway,
   tips,
   relatedLinks,
+  relatedArticles,
 }: NeighborhoodPageProps) {
   const tipCount = (tips as Tip[]).filter((t) => t.type === 'tip').length;
   const scamCount = (tips as Tip[]).filter((t) => t.type === 'scam').length;
@@ -163,6 +172,11 @@ export default function NeighborhoodPage({
           )}
         </section>
 
+
+        {/* Related Articles */}
+        {relatedArticles && relatedArticles.length > 0 && (
+          <RelatedArticles articles={relatedArticles} />
+        )}
 
         {/* Related Links */}
         {relatedLinks.length > 0 && (

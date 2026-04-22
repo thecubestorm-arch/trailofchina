@@ -101,6 +101,11 @@ The wall is especially magical at sunset when the golden light bathes the ancien
         { title: 'Xi\'an Local Tips', href: '/destinations/xian/local-tips' },
         { title: 'Xi\'an Guide', href: '/destinations/xian' },
       ]}
+      relatedArticles={[
+        { title: "Terracotta Warriors", description: "2,200-year-old army of China's first emperor, Qin Shi Huang.", href: "/destinations/xian/what-to-do/terracotta-warriors" },
+        { title: "Muslim Quarter", description: "Historic Islamic neighborhood with amazing street food.", href: "/destinations/xian/what-to-do/muslim-quarter" },
+        { title: "Yangroupaomo", description: "Xi'an's iconic lamb-oatmeal breakfast soup.", href: "/destinations/xian/where-to-eat/yangroupaomo" },
+      ]}
     />
   );
 }

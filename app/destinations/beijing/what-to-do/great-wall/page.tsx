@@ -122,6 +122,11 @@ The Great Wall is more than bricks and stone — it\'s the cultural symbol of Ch
         { title: '798 Art District', href: '/destinations/beijing/what-to-do/798-art-district' },
         { title: 'Summer Palace', href: '/destinations/beijing/what-to-do/summer-palace' },
       ]}
+      relatedArticles={[
+        { title: "Forbidden City", description: "The world's largest palace complex with 980 buildings.", href: "/destinations/beijing/what-to-do/forbidden-city" },
+        { title: "Temple of Heaven", description: "The majestic temple complex where emperors performed rituals.", href: "/destinations/beijing/what-to-do/temple-of-heaven" },
+        { title: "Peking Duck", description: "Beijing's most famous dish - try it at the city's best restaurants.", href: "/destinations/beijing/where-to-eat/peking-duck" },
+      ]}
     />
   );
 }

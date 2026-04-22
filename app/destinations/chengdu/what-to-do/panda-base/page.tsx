@@ -113,6 +113,11 @@ The base is also home to red pandas (smaller, squirrel-like relatives) and other
         { title: 'Jinsha Site Museum', href: '/destinations/chengdu/what-to-do/jinsha-site' },
         { title: 'Wuhou Temple', href: '/destinations/chengdu/what-to-do/wuhou-temple' },
       ]}
+      relatedArticles={[
+        { title: "Jinli Ancient Street", description: "Historic street with traditional Sichuan architecture and snacks.", href: "/destinations/chengdu/what-to-do/jinli-ancient-street" },
+        { title: "Sichuan Hotpot", description: "Chengdu's most famous culinary experience - spicy and numbing.", href: "/destinations/chengdu/where-to-eat/sichuan-hotpot" },
+        { title: "Chengdu Local Tips", description: "Essential tips for visiting Chengdu and avoiding common pitfalls.", href: "/destinations/chengdu/local-tips" },
+      ]}
     />
   );
 }

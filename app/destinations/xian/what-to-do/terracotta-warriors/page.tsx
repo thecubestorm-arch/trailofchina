@@ -113,6 +113,11 @@ The site is a UNESCO World Heritage site and one of China\'s most famous attract
         { title: 'Where to Eat in Xi\'an', href: '/destinations/xian/where-to-eat' },
         { title: 'Big Wild Goose Pagoda', href: '/destinations/xian/what-to-do/big-wild-geese-pagoda' },
       ]}
+      relatedArticles={[
+        { title: "City Wall", description: "Best-preserved ancient city wall with a 13.7 km perimeter.", href: "/destinations/xian/what-to-do/city-wall" },
+        { title: "Muslim Quarter", description: "Historic Islamic neighborhood with amazing street food.", href: "/destinations/xian/what-to-do/muslim-quarter" },
+        { title: "Yangroupaomo", description: "Xi'an's iconic lamb-oatmeal breakfast soup.", href: "/destinations/xian/where-to-eat/yangroupaomo" },
+      ]}
     />
   );
 }

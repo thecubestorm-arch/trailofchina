@@ -98,6 +98,11 @@ How to eat yangroupaomo like a local: Take your time breaking the bread — it's
       whereToTry={whereToTry}
       tips={tips}
       relatedLinks={relatedLinks}
+      relatedArticles={[
+        { title: "Terracotta Warriors", description: "2,200-year-old army of China's first emperor, Qin Shi Huang.", href: "/destinations/xian/what-to-do/terracotta-warriors" },
+        { title: "City Wall", description: "Best-preserved ancient city wall with a 14 km perimeter.", href: "/destinations/xian/what-to-do/city-wall" },
+        { title: "Muslim Quarter", description: "Historic Islamic neighborhood with amazing street food.", href: "/destinations/xian/what-to-do/muslim-quarter" },
+      ]}
     />
   );
 }

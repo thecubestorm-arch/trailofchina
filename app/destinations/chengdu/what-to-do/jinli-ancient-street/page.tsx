@@ -89,6 +89,11 @@ export default function JinliAncientStreetPage() {
       tips={[...tips, ...photoSpots]}
       mapUrl="https://www.openstreetmap.org/embed?layer=Mapnik&frame=&lat=30.6467&lon=104.0603&zoom=16&marker=30.6467%2C104.0603"
       relatedLinks={relatedLinks}
+      relatedArticles={[
+        { title: "Panda Base", description: "World's most famous giant panda sanctuary with over 200 pandas.", href: "/destinations/chengdu/what-to-do/panda-base" },
+        { title: "Sichuan Hotpot", description: "Chengdu's most famous culinary experience - spicy and numbing.", href: "/destinations/chengdu/where-to-eat/sichuan-hotpot" },
+        { title: "Wenshu Monastery", description: "Beautiful Buddhist monastery with peaceful gardens.", href: "/destinations/chengdu/what-to-do/wenshu-monastery" },
+      ]}
     />
   );
 }
