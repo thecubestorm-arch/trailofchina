@@ -83,11 +83,11 @@ export default function EsimPage() {
 
         <div className="mt-8">
           <ContextualCTA
-            icon="📱"
-            title="Get Your eSIM Before You Fly"
-            description="Set up data in 2 minutes — no physical SIM needed. Works on arrival."
-            buttonText="Get your eSIM →"
-            buttonHref="/china-basics/how-to-get-internet/esim"
+            icon="🔒"
+            title="Don't Forget a VPN"
+            description="A VPN is essential in China — install it before you arrive."
+            buttonText="Get a VPN for China →"
+            buttonHref="/china-basics/what-apps-to-use/vpn"
             variant="primary"
           />
         </div>

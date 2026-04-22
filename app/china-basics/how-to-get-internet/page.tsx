@@ -95,11 +95,11 @@ export default function InternetHub() {
 
         <div className="mt-8">
           <ContextualCTA
-            icon="🌐"
-            title="Don't Land Without Internet"
-            description="A VPN and eSIM are the two things you need sorted before touching down in China."
-            buttonText="See internet options →"
-            buttonHref="/china-basics/how-to-get-internet"
+            icon="🚫"
+            title="Understand the Great Firewall"
+            description="China blocks Google, WhatsApp, Instagram and more. Know before you go."
+            buttonText="Read about censorship →"
+            buttonHref="/china-basics/how-china-differs/censorship"
             variant="primary"
           />
         </div>

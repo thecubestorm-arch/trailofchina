@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import ChecklistDownload from './ChecklistDownload'
 
 export default function Footer() {
   return (
@@ -30,20 +31,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="section-shell rounded-[1.5rem] p-6 bg-[#f5f1ea]">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#af5d32]">Free Download</p>
-          <h2 className="mt-3 font-serif text-3xl text-[var(--foreground)]">
-            Download Your China Arrival Checklist
-          </h2>
-          <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
-            Get a detailed 2-page checklist of everything to do before and after landing. Free.
-          </p>
-          <Link
-            href="/#checklist-download"
-            className="mt-4 inline-block rounded-xl bg-[#af5d32] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#8f431c]"
-          >
-            Get My Free Checklist
-          </Link>
+        <div>
+          <ChecklistDownload />
         </div>
       </div>
     </footer>
