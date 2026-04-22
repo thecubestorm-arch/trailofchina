@@ -116,7 +116,7 @@ export default function ShanghaiWhereToEatPage() {
             <li>• <strong>Bund restaurants with &quot;view surcharges&quot;</strong> — You pay ¥200 for ¥50 food quality. Walk one block inland for the same cuisine at half price</li>
             <li>• <strong>Tea ceremony scam</strong> — Friendly strangers invite you to a &quot;tea tasting.&quot; Bill arrives at ¥500-2000. See our <Link href="/destinations/shanghai/local-tips" className="underline">Local Tips</Link></li>
             <li>• <strong>Menus without prices</strong> — If there&apos;s no price listed, it&apos;s likely a tourist trap. Walk away</li>
-            <li>• <strong>Nanjing Road tourist restaurants</strong> — Overpriced and bland. Locals eat on side streets, not the main drag</li></li>
+            <li>• <strong>Nanjing Road tourist restaurants</strong> — Overpriced and bland. Locals eat on side streets, not the main drag</li>
           </ul>
         </div>
       </main>
