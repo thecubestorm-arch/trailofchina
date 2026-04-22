@@ -24,6 +24,9 @@ export default function Footer() {
             <Link href="/plan-your-trip" className="hover:text-[#af5d32]">
               Plan Your Trip
             </Link>
+            <Link href="/blog" className="hover:text-[#af5d32]">
+              Blog
+            </Link>
           </div>
         </div>
 
