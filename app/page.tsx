@@ -9,6 +9,8 @@ import SectionIntro from '@/components/SectionIntro'
 import FadeIn from '@/components/FadeIn'
 import StaggerContainer from '@/components/StaggerContainer'
 import ChecklistDownload from '@/components/ChecklistDownload'
+import TrustBar from '@/components/TrustBar'
+import WhyTrustUs from '@/components/WhyTrustUs'
 
 const destinations = [
   {
@@ -132,6 +134,8 @@ export default function HomePage() {
           </section>
         </FadeIn>
 
+        <TrustBar />
+
         <FadeIn delay={0.08}>
           <section className="space-y-8">
             <SectionIntro
@@ -211,6 +215,8 @@ export default function HomePage() {
         <FadeIn delay={0.26}>
           <ChecklistDownload />
         </FadeIn>
+
+        <WhyTrustUs />
       </div>
     </div>
   )
