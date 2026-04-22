@@ -20,6 +20,15 @@ const sections = [
   },
   {
     category: 'China Basics',
+    icon: '🎫',
+    title: '12306 Train Booking',
+    preview:
+      'Official Chinese railway booking platform: account setup, passport verification, ticket search, and payment. Learn how to book trains directly through 12306 with foreign passports and international cards.',
+    tags: ['🚄 Official Platform', '🛂 Passport Setup', '💳 Payment', '📱 App Guide'],
+    href: '/china-basics/how-to-get-around/12306',
+  },
+  {
+    category: 'China Basics',
     icon: '✈️',
     title: 'Plane',
     preview:

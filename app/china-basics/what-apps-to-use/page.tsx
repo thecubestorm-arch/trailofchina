@@ -20,6 +20,24 @@ const sections = [
   },
   {
     category: 'China Basics',
+    icon: '📱',
+    title: 'Alipay Guide',
+    preview:
+      'Step-by-step setup for Alipay: download, international card linking, verification, and first payment. Learn how to use Alipay for transit, shops, and street vendors with confidence.',
+    tags: ['💰 Setup', '🔗 Card Linking', '📲 QR Payments', '🚇 Transit'],
+    href: '/china-basics/what-apps-to-use/alipay',
+  },
+  {
+    category: 'China Basics',
+    icon: '💬',
+    title: 'WeChat Pay Guide',
+    preview:
+      'Complete WeChat Pay walkthrough: wallet activation, binding foreign cards, and using Mini Programs. Essential for peer-to-peer payments and services that prefer WeChat.',
+    tags: ['💳 Wallet Setup', '🌐 Mini Programs', '📱 P2P Payments', '✅ Verification'],
+    href: '/china-basics/what-apps-to-use/wechat-pay',
+  },
+  {
+    category: 'China Basics',
     icon: '🗺️',
     title: 'Maps',
     preview:

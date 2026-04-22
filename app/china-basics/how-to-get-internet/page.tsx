@@ -22,6 +22,24 @@ const sections = [
   {
     category: 'China Basics',
     icon: '📡',
+    title: 'Airalo eSIM',
+    preview:
+      'Airalo eSIM setup guide: purchase, installation, activation, and data top-ups. Step-by-step instructions for getting connected before you land in China with reliable coverage.',
+    tags: ['📱 Pre-Arrival Setup', '💳 Easy Purchase', '📶 Data Plans', '🔧 Activation'],
+    href: '/china-basics/how-to-get-internet/airalo-esim',
+  },
+  {
+    category: 'China Basics',
+    icon: '🌍',
+    title: 'Holafly eSIM',
+    preview:
+      'Holafly eSIM walkthrough: unlimited data plans, QR code installation, and network selection. Ideal for travelers who want predictable costs without data worries.',
+    tags: ['♾️ Unlimited Data', '📲 QR Setup', '💰 Fixed Pricing', '🛠️ Support'],
+    href: '/china-basics/how-to-get-internet/holafly-esim',
+  },
+  {
+    category: 'China Basics',
+    icon: '📡',
     title: 'Physical SIM',
     preview:
       'Physical SIMs usually offer larger data allowances and can be more cost-effective for longer stays. Buy from official carrier counters and bring your passport for registration. This option works well if you need high data volume and local plan flexibility.',

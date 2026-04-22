@@ -108,6 +108,24 @@ export default function XianWhereToEatPage() {
         <Link href="/destinations/xian" className="text-[var(--accent-strong)] hover:underline">
           ← Back to Xi&apos;an Guide
         </Link>
+
+        <section className="mt-8 pt-8 border-t" aria-labelledby="explore-in-detail">
+          <h2 id="explore-in-detail" className="text-xl font-semibold mb-3 text-gray-900">Explore in Detail</h2>
+          <div className="grid gap-4 md:grid-cols-2">
+            <Link href="/destinations/xian/where-to-eat/yangroupaomo" className="text-[var(--accent)] hover:underline">
+              Yangroupaomo →
+            </Link>
+            <Link href="/destinations/xian/where-to-eat/roujiamo" className="text-[var(--accent)] hover:underline">
+              Roujiamo →
+            </Link>
+            <Link href="/destinations/xian/where-to-eat/liangpi" className="text-[var(--accent)] hover:underline">
+              Liangpi →
+            </Link>
+            <Link href="/destinations/xian/where-to-eat/biangbiang-noodles" className="text-[var(--accent)] hover:underline">
+              Biangbiang Noodles →
+            </Link>
+          </div>
+        </section>
       </main>
     </div>
   );

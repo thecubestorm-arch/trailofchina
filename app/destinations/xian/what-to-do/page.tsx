@@ -122,6 +122,27 @@ export default function XianWhatToDoPage() {
           </p>
         </section>
 
+        <section className="mb-10" aria-labelledby="explore-in-detail">
+          <h2 id="explore-in-detail" className="text-xl font-semibold mb-3 text-gray-900">Explore in Detail</h2>
+          <div className="grid gap-4 md:grid-cols-2">
+            <Link href="/destinations/xian/what-to-do/city-wall" className="text-[var(--accent)] hover:underline">
+              City Wall →
+            </Link>
+            <Link href="/destinations/xian/what-to-do/muslim-quarter" className="text-[var(--accent)] hover:underline">
+              Muslim Quarter →
+            </Link>
+            <Link href="/destinations/xian/what-to-do/bell-drum-tower" className="text-[var(--accent)] hover:underline">
+              Bell Tower &amp; Drum Tower →
+            </Link>
+            <Link href="/destinations/xian/what-to-do/big-wild-goose-pagoda" className="text-[var(--accent)] hover:underline">
+              Big Wild Goose Pagoda →
+            </Link>
+            <Link href="/destinations/xian/what-to-do/terracotta-warriors" className="text-[var(--accent)] hover:underline">
+              Terracotta Warriors →
+            </Link>
+          </div>
+        </section>
+
         <footer>
           <Link href="/destinations/xian" className="text-[var(--accent)] hover:underline">
             ← Back to Xi&apos;an Guide

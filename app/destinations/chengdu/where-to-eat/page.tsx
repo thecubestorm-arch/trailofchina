@@ -115,6 +115,24 @@ export default function ChengduWhereToEatPage() {
             ← Back to Chengdu Guide
           </Link>
         </div>
+
+        <section className="mt-8 pt-8 border-t" aria-labelledby="explore-in-detail">
+          <h2 id="explore-in-detail" className="text-xl font-semibold mb-3 text-gray-900">Explore in Detail</h2>
+          <div className="grid gap-4 md:grid-cols-2">
+            <Link href="/destinations/chengdu/where-to-eat/sichuan-hotpot" className="text-[var(--accent)] hover:underline">
+              Sichuan Hotpot →
+            </Link>
+            <Link href="/destinations/chengdu/where-to-eat/mapo-tofu" className="text-[var(--accent)] hover:underline">
+              Mapo Tofu →
+            </Link>
+            <Link href="/destinations/chengdu/where-to-eat/dan-dan-noodles" className="text-[var(--accent)] hover:underline">
+              Dan Dan Noodles →
+            </Link>
+            <Link href="/destinations/chengdu/where-to-eat/kung-pao-chicken" className="text-[var(--accent)] hover:underline">
+              Kung Pao Chicken →
+            </Link>
+          </div>
+        </section>
       </main>
     </div>
   );

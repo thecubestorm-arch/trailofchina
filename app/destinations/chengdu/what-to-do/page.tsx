@@ -119,6 +119,30 @@ export default function ChengduWhatToDoPage() {
             ← Back to Chengdu Guide
           </Link>
         </div>
+
+        <section className="mt-8 pt-8 border-t" aria-labelledby="explore-in-detail">
+          <h2 id="explore-in-detail" className="text-xl font-semibold mb-3 text-gray-900">Explore in Detail</h2>
+          <div className="grid gap-4 md:grid-cols-2">
+            <Link href="/destinations/chengdu/what-to-do/jinli-ancient-street" className="text-[var(--accent)] hover:underline">
+              Jinli Ancient Street →
+            </Link>
+            <Link href="/destinations/chengdu/what-to-do/wenshu-monastery" className="text-[var(--accent)] hover:underline">
+              Wenshu Monastery →
+            </Link>
+            <Link href="/destinations/chengdu/what-to-do/peoples-park-teahouse" className="text-[var(--accent)] hover:underline">
+              People&apos;s Park Teahouse →
+            </Link>
+            <Link href="/destinations/chengdu/what-to-do/sichuan-opera" className="text-[var(--accent)] hover:underline">
+              Sichuan Opera →
+            </Link>
+            <Link href="/destinations/chengdu/what-to-do/kuanzhai-alley" className="text-[var(--accent)] hover:underline">
+              Kuanzhai Alley →
+            </Link>
+            <Link href="/destinations/chengdu/what-to-do/panda-base" className="text-[var(--accent)] hover:underline">
+              Panda Base →
+            </Link>
+          </div>
+        </section>
       </main>
     </div>
   );

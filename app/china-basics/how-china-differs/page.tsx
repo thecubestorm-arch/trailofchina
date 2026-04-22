@@ -10,10 +10,19 @@ export const metadata: Metadata = {
 const sections = [
   {
     category: 'China Basics',
+    icon: '🛂',
+    title: 'Visa Guide',
+    preview:
+      'Complete China visa walkthrough: visa-free transit (144-hour), tourist visa (L visa) requirements, application forms, and supporting documents. Learn which cities offer visa-free transit and how to plan your entry accordingly.',
+    tags: ['📝 Application', '🛂 144-Hour Transit', '📄 Documents', '✅ Approval Tips'],
+    href: '/china-basics/how-china-differs/visa-guide',
+  },
+  {
+    category: 'China Basics',
     icon: '🚫',
     title: 'Censorship',
     preview:
-      'China’s internet environment is structured differently, with many familiar services limited or unavailable. Plan your access before departure so maps, communication tools, and cloud documents remain usable during your trip. Understanding these restrictions early prevents daily friction once you arrive.',
+      'China\'s internet environment is structured differently, with many familiar services limited or unavailable. Plan your access before departure so maps, communication tools, and cloud documents remain usable during your trip. Understanding these restrictions early prevents daily friction once you arrive.',
     tags: ['🌐 Great Firewall', '🔐 Access Planning', '📲 App Availability', '🧭 Trip Readiness'],
     href: '/china-basics/how-china-differs/censorship',
   },

@@ -104,6 +104,21 @@ export default function ChongqingWhereToEatPage() {
         <Link href="/destinations/chongqing" className="text-[var(--accent)] hover:underline">
           ← Back to Chongqing Guide
         </Link>
+
+        <section className="mt-8 pt-8 border-t" aria-labelledby="explore-in-detail">
+          <h2 id="explore-in-detail" className="text-xl font-semibold mb-3 text-gray-900">Explore in Detail</h2>
+          <div className="grid gap-4 md:grid-cols-2">
+            <Link href="/destinations/chongqing/where-to-eat/chongqing-hotpot" className="text-[var(--accent)] hover:underline">
+              Chongqing Hotpot →
+            </Link>
+            <Link href="/destinations/chongqing/where-to-eat/xiaomian" className="text-[var(--accent)] hover:underline">
+              Xiaomian →
+            </Link>
+            <Link href="/destinations/chongqing/where-to-eat/grilled-fish" className="text-[var(--accent)] hover:underline">
+              Grilled Fish →
+            </Link>
+          </div>
+        </section>
       </main>
     </div>
   );
