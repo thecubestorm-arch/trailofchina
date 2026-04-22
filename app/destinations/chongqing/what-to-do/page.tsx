@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import ContextualCTA from '@/components/ContextualCTA';
 import Breadcrumb from '@/components/Breadcrumb';
 import LanternWatermark from '@/components/LanternWatermark';
 
@@ -122,33 +123,16 @@ export default function ChongqingWhatToDoPage() {
           </ul>
         </div>
 
-        <Link href="/destinations/chongqing" className="text-[var(--accent)] hover:underline">
-          ← Back to Chongqing Guide
-        </Link>
-
-        <section className="mt-8 pt-8 border-t" aria-labelledby="explore-in-detail">
-          <h2 id="explore-in-detail" className="text-xl font-semibold mb-3 text-gray-900">Explore in Detail</h2>
-          <div className="grid gap-4 md:grid-cols-2">
-            <Link href="/destinations/chongqing/what-to-do/yangtze-cable-car" className="text-[var(--accent)] hover:underline">
-              Yangtze Cable Car →
-            </Link>
-            <Link href="/destinations/chongqing/what-to-do/ciqikou" className="text-[var(--accent)] hover:underline">
-              Ciqikou →
-            </Link>
-            <Link href="/destinations/chongqing/what-to-do/three-gorges-museum" className="text-[var(--accent)] hover:underline">
-              Three Gorges Museum →
-            </Link>
-            <Link href="/destinations/chongqing/what-to-do/liziba-monorail" className="text-[var(--accent)] hover:underline">
-              Liziba Monorail →
-            </Link>
-            <Link href="/destinations/chongqing/what-to-do/eling-park" className="text-[var(--accent)] hover:underline">
-              Eling Park →
-            </Link>
-            <Link href="/destinations/chongqing/what-to-do/hongya-cave" className="text-[var(--accent)] hover:underline">
-              Hongya Cave →
-            </Link>
-          </div>
-        </section>
+        <div className="mt-8">
+          <ContextualCTA
+            icon="🗺️"
+            title="Plan Your Perfect Chongqing Trip"
+            description="See our curated 7-day itinerary with everything timed and mapped out."
+            buttonText="See Chongqing itinerary →"
+            buttonHref="/plan-your-trip/preplanned-trips/7-day-route"
+            variant="secondary"
+          />
+        </div>
       </main>
     </div>
   );
