@@ -2,6 +2,8 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import ChineseWatermark from './ChineseWatermark';
 import Breadcrumb from './Breadcrumb';
+import InkWashDivider from './InkWashDivider';
+import RedSealBadge from './RedSealBadge';
 
 type Tip = {
   type: 'tip' | 'scam' | 'photo';
@@ -47,7 +49,9 @@ export default function AttractionPage({
   const photoCount = (tips as Tip[]).filter((t) => t.type === 'photo').length;
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen" style={{
+      background: 'linear-gradient(0deg, rgba(245,241,234,0.02) 0%, rgba(245,241,234,0.02) 100%), #ffffff',
+    }}>
       <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         {/* Breadcrumb */}
         <div className="mb-6">
@@ -56,6 +60,7 @@ export default function AttractionPage({
 
         {/* Hero Section */}
         <header className="mb-10 relative">
+          <RedSealBadge character="景" />
           <ChineseWatermark character={nameZh[0] || '中'} />
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-4 text-[var(--foreground)] relative z-10">
             {name}
@@ -100,6 +105,8 @@ export default function AttractionPage({
             ))}
           </div>
         </section>
+
+        <InkWashDivider />
 
         {/* Practical Tips */}
         <section className="mb-10">
@@ -162,6 +169,8 @@ export default function AttractionPage({
           )}
         </section>
 
+        <InkWashDivider />
+
         {/* Map */}
         <section className="mb-10">
           <h2 className="text-2xl font-serif font-bold mb-4 text-[var(--foreground)]">Location</h2>
@@ -175,6 +184,8 @@ export default function AttractionPage({
             />
           </div>
         </section>
+
+        <InkWashDivider />
 
         {/* Related Links */}
         {relatedLinks.length > 0 && (

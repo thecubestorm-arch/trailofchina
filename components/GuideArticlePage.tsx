@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import Breadcrumb from './Breadcrumb';
+import InkWashDivider from './InkWashDivider';
+import RedSealBadge from './RedSealBadge';
 
 type Step = {
   title: string
@@ -35,15 +37,22 @@ export default function GuideArticlePage({
   related,
 }: GuideArticlePageProps) {
   return (
-    <section className="container-px mx-auto max-w-4xl py-12 md:py-16">
+    <section className="container-px mx-auto max-w-4xl py-12 md:py-16" style={{
+      background: 'linear-gradient(0deg, rgba(245,241,234,0.02) 0%, rgba(245,241,234,0.02) 100%), #ffffff',
+    }}>
       {/* Breadcrumb */}
       <div className="mb-6">
         <Breadcrumb items={breadcrumbs || []} />
       </div>
 
       <p className="text-xs font-bold uppercase tracking-[0.2em] text-china-red">{category}</p>
-      <h1 className="mt-3 text-4xl font-black tracking-tight text-slate-900 md:text-5xl">{title}</h1>
+      <h1 className="mt-3 text-4xl font-black tracking-tight text-slate-900 md:text-5xl relative">
+        <RedSealBadge character="行" />
+        {title}
+      </h1>
       <p className="mt-4 text-base leading-relaxed text-slate-600 md:text-lg">{intro}</p>
+
+      <InkWashDivider />
 
       <div className="mt-10 card-base">
         <h2 className="text-2xl font-extrabold text-slate-900">Why you need this</h2>
@@ -55,6 +64,8 @@ export default function GuideArticlePage({
           ))}
         </ul>
       </div>
+
+      <InkWashDivider />
 
       <div className="mt-8 card-base">
         <h2 className="text-2xl font-extrabold text-slate-900">Step-by-step setup guide</h2>
@@ -69,6 +80,8 @@ export default function GuideArticlePage({
         </ol>
       </div>
 
+      <InkWashDivider />
+
       <div className="mt-8 rounded-2xl border border-amber-200 bg-amber-50 p-6">
         <h2 className="text-xl font-black text-slate-900">Pro Tips</h2>
         <ul className="mt-3 space-y-2">
@@ -80,6 +93,8 @@ export default function GuideArticlePage({
         </ul>
       </div>
 
+      <InkWashDivider />
+
       <div className="mt-8 rounded-2xl border border-[var(--accent-soft)] bg-[var(--accent-soft)] p-6">
         <h2 className="text-xl font-black text-slate-900">Scam Alerts</h2>
         <ul className="mt-3 space-y-2">
@@ -90,6 +105,8 @@ export default function GuideArticlePage({
           ))}
         </ul>
       </div>
+
+      <InkWashDivider />
 
       <div className="mt-8 card-base">
         <h2 className="text-2xl font-extrabold text-slate-900">Related pages</h2>
