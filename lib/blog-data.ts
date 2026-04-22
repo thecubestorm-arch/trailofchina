@@ -12,6 +12,492 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "best-esim-china",
+    title: "Best eSIM for China in 2025: Airalo vs Holafly vs China Unicom",
+    description: "Compare the best eSIM options for China including coverage, pricing, setup, and which provider works best for your travel needs.",
+    category: "Travel Tech",
+    date: "2025-04-25",
+    readingTime: "7 min",
+    tags: ["eSIM", "Internet", "China Unicom", "Airalo", "Holafly"],
+    imageUrl: "https://picsum.photos/seed/china-esim/800/400",
+    content: `**Which eSIM Works Best for China?**
+
+As of 2025, eSIM technology has become increasingly popular for travelers to China. While physical SIM cards still dominate the market, eSIMs offer the convenience of instant activation without needing to wait for delivery or find a local store. Three main providers stand out: Airalo, Holafly, and China Unicom's official eSIM. Let's break down which one makes the most sense for your trip.
+
+**Airalo: Best for Short-Term Visitors**
+
+Airalo offers flexible eSIM packages for China, typically bundling China Unicom data with international roaming agreements. The advantage is you can activate before arrival and don't need to worry about physical SIM cards. Prices typically range from $5-15 for 1-5GB of data, with 5G coverage in major cities. Setup takes 5 minutes via QR code after arrival. However, Airalo's China eSIMs often throttle speeds after your data allowance, and customer support can be slow during peak travel seasons. Best for travelers staying 1-2 weeks who want convenience over unlimited data.
+
+**Holafly: Best for Moderate Usage**
+
+Holafly provides China eSIMs with better speeds and less throttling than Airalo. Their Unlimited plans ($20-30 for 7-30 days) actually deliver usable speeds in urban areas, though you'll experience some slowdowns in rural regions. Setup is identical to Airalo — scan QR code, activate in settings, done. Holafly's app provides real-time data usage tracking and has better customer support response times. The company also offers English-language support, which is helpful if you encounter issues. Good for travelers staying 1-3 weeks who want reliable social media and navigation access.
+
+**China Unicom Official eSIM: Best for Extended Stays**
+
+If you're staying longer or need substantial data, China Unicom's official eSIM (available through partner portals) offers the best value. Plans start at ¥30/month for 10GB with 5G speeds, and top out at ¥99/month for 50GB with minimal throttling. The catch: you typically need to purchase through a Chinese partner (like China Unicom's international partners) and activate requires visiting a China Unicom store in person for verification. Some travel agencies offer pre-activated China Unicom eSIMs, but be wary of unofficial sellers. Best for travelers staying 1+ months who want the fastest, most reliable connection.
+
+**Practical Recommendation**
+
+For most Western tourists: Start with Airalo for your first visit (convenience matters), then upgrade to China Unicom if you return frequently. Use a VPN for access to blocked services (see our [VPN guide](/china-basics/what-apps-to-use/vpn/) and [censorship overview](/china-basics/how-china-differs/censorship/)). Test your eSIM immediately upon arrival — some phones require a restart after activation. Always keep a physical backup SIM from your home carrier, as eSIMs can fail or deactivate unexpectedly.
+
+**Alternative: Physical SIM Cards**
+
+If eSIM activation fails or your phone doesn't support eSIM, physical SIM cards remain the most reliable option. China Unicom offers the best international roaming deals, followed by China Mobile for coverage and China Telecom for speed in certain regions. Purchase at the airport (convenient but pricier) or local stores (cheaper but require Chinese language skills).
+
+**Final Tip: Data Usage Monitoring**
+
+Chinese eSIMs typically show data usage differently than home carriers. Use your phone's built-in data monitoring (Settings > Data Usage) to track consumption, and be aware that some apps (especially social media) may consume more data than expected due to censorship circumvention overhead.
+`
+  },
+  {
+    slug: "best-vpn-china",
+    title: "Best VPN for China in 2025: ExpressVPN vs NordVPN vs Surfshark Compared",
+    description: "Compare top VPN services for China with reviews of speed, reliability, server coverage, and effectiveness against the Great Firewall.",
+    category: "Travel Tech",
+    date: "2025-04-26",
+    readingTime: "8 min",
+    tags: ["VPN", "Privacy", "Great Firewall", "Security"],
+    imageUrl: "https://picsum.photos/seed/china-vpn/800/400",
+    content: `**Why You Need a VPN for China**
+
+China operates the world's most sophisticated internet filtering system, commonly known as the Great Firewall. This system blocks access to countless websites that are standard elsewhere — Google services, Facebook, Instagram, Twitter, WhatsApp, YouTube, Gmail, Dropbox, and hundreds of thousands of other sites. A VPN (Virtual Private Network) is the only reliable way to access these services while in China.
+
+**How VPNs Work in China**
+
+China doesn't block all VPNs — it blocks the protocols they use. Quality VPNs for China use custom protocols that evade detection, such as OpenVPN with custom ports, WireGuard, or proprietary protocols like IKEv2. The best VPNs also rotate their server IP addresses frequently to avoid blacklisting.
+
+**ExpressVPN: Best Overall for China**
+
+ExpressVPN consistently ranks as the most reliable VPN in China. Their custom Lightway protocol (UDP-based) bypasses firewall detection with exceptional efficiency, and their 94+ server locations include multiple optimized China servers. Speeds remain usable even after connecting (typically 60-80% of baseline), and the software is incredibly user-friendly — just one click to connect. The 15-month warranty means you can get a full refund if the VPN doesn't work in China. Drawbacks include a higher price point ($12.75/month for the 12-month plan) and limited simultaneous connections (5 devices). Best for travelers who prioritize reliability above all else.
+
+**NordVPN: Best Value for Money**
+
+NordVPN offers excellent performance at a lower price than ExpressVPN. Their Obfuscated Server feature specifically targets China, with over 20 servers dedicated to evading the Great Firewall. Speeds are slightly slower than ExpressVPN (40-60% of baseline), but still perfectly usable for video calls and streaming. The double VPN feature adds security (at the cost of speed), and the 60% discount on the 2-year plan brings it to $3.49/month — the best value in the market. NordVPN also offers a 30-day money-back guarantee. The interface is intuitive, and they support 6 simultaneous connections. The only downside is occasional server outages during peak hours.
+
+**Surfshark: Best for Budget-Conscious Travelers**
+
+Surfshark is the most affordable VPN that reliably works in China, starting at $2.49/month for the 2-year plan. Their Camouflage mode masks VPN traffic as regular HTTPS traffic, making detection more difficult. Speeds are decent for basic browsing and social media (30-50% of baseline) but may struggle with HD video streaming. The unlimited device feature is great for families or groups traveling together — one subscription covers all your devices. The interface is clean and simple, though not quite as polished as ExpressVPN or NordVPN. Best for budget travelers or those who only need occasional access to blocked services.
+
+**Setting Up Your VPN in China**
+
+The critical rule: Install and configure your VPN BEFORE you enter China. Once you're in the country, accessing the VPN provider's website to download the app becomes difficult or impossible. Download the app, create an account, configure settings, and test connection from your home country. When in China, launch the app — if it connects successfully within 30 seconds, you're good. If not, try switching servers or protocols. Always keep 2-3 backup accounts from different providers.
+
+**Legal Considerations**
+
+While VPNs are technically illegal for individuals in China, enforcement is rare for tourists. The focus is on VPN providers, not end users. That said, avoid activities that draw attention — torrenting, posting politically sensitive content, or using VPNs for illegal purposes will increase your risk. For normal travel use (browsing, social media, translation), the risk is minimal.
+
+**Final Recommendation**
+
+For first-time visitors: ExpressVPN for peace of mind. For budget travelers or frequent visitors: NordVPN. For families or groups: Surfshark. Always have a backup option, and never rely on free VPNs — they're slower, less secure, and more likely to be blocked.
+`
+  },
+  {
+    slug: "alipay-setup-guide",
+    title: "Alipay Setup Guide for Foreigners: Step-by-Step 2025 Instructions",
+    description: "Complete guide to setting up Alipay as a foreigner in China — including linking foreign cards, verification, and common troubleshooting.",
+    category: "Payment",
+    date: "2025-04-27",
+    readingTime: "9 min",
+    tags: ["Alipay", "Payment", "Mobile Payment", "Setup"],
+    imageUrl: "https://picsum.photos/seed/china-payment/800/400",
+    content: `**Why Alipay Matters**
+
+Alipay is China's dominant mobile payment platform, with over 1 billion users. While WeChat Pay competes in social payments, Alipay remains essential for larger transactions — e-commerce, utilities, transportation, and government services often require Alipay. This guide covers how to set it up as a foreigner in 2025.
+
+**Step 1: Download and Install**
+
+Search for "Alipay" in your phone's app store (Google Play or App Store). Download the official app — it's free and safe. The interface is available in English, though some features require switching to Chinese for full functionality.
+
+**Step 2: Create an Account**
+
+Open the app and tap "Sign Up" (注册). Use your international phone number (including country code). You'll receive an SMS verification code — enter it in the app. Set a password (minimum 8 characters, mix of letters and numbers).
+
+**Step 3: Complete Real-Name Verification**
+
+This is the critical step for foreigners. Tap "My" (我的) → "Settings" (设置) → "Real Name Verification" (实名认证). You'll need:
+
+- Your passport (scan or upload photo)
+- A Chinese phone number (for SMS verification)
+- A Chinese bank card or international card that supports Alipay
+
+For most foreigners, the process involves:
+
+1. Upload a clear photo of your passport (information page)
+2. Enter your name in Chinese characters (Alipay auto-fills based on your passport's Pinyin, but you can adjust)
+3. Enter your Chinese phone number
+4. Wait 24-48 hours for manual review (automated verification often fails for foreign passports)
+
+**Step 4: Link a Payment Method**
+
+Once verified, link a payment method:
+
+- **Chinese Bank Card**: Best option if you have a Chinese bank account
+- **International Cards**: Support for Visa/Mastercard from many countries (US, UK, EU, Canada, Australia, etc.)
+- **Apple Pay/Google Pay**: Alipay has partnerships with major mobile wallets
+
+For international cards:
+
+1. Go to "My" → "Wallet" (钱包)
+2. Tap "Add Card" (添加银行卡)
+3. Enter card details (number, expiry, CVV)
+4. Confirm with SMS to your Chinese number
+
+**Step 5: Set Up Alipay+ (for International Tourists)**
+
+Alipay+ allows tourists to pay without full verification. Tap "Alipay+" in the app → scan QR code at participating merchants → pay with your home country card. This works at major tourist attractions and chains like Starbucks and McDonald's in big cities.
+
+**Common Issues and Solutions**
+
+**Problem**: "Real name verification failed" message
+
+**Solution**: Try again with clearer passport photos. Some airports have Alipay service counters where staff can assist (Beijing Capital, Shanghai Pudong, Guangzhou Baiyun).
+
+**Problem**: Card linking fails with "invalid card" error
+
+**Solution**: Ensure your card supports international Alipay transactions. Cards from US, UK, EU, Canada, Australia, Singapore, and Japan typically work. Some German and Swiss cards have issues — contact your bank first.
+
+**Problem**: Limited spending without full verification
+
+**Solution**: Without real-name verification, daily spending is capped at ¥1,000-¥2,000. To increase limits, you must complete verification. Some tourists use a Chinese friend's help — they can verify on your behalf at a physical Alipay counter, but this is not officially endorsed.
+
+**Step 6: Top Up Your Balance**
+
+Alipay doesn't require a balance, but some merchants prefer Alipay Balance payments (which can offer discounts). To add funds:
+
+1. Go to "Wallet" → "Balance" (余额)
+2. Tap "Top Up" (充值)
+3. Select your payment method
+4. Enter amount (minimum ¥1)
+
+**Alipay Usage Tips**
+
+- **QR Codes**: Every merchant has a static QR code (usually on the counter or table). Point your camera at the code, confirm amount, and enter your payment password.
+- **Scan to Pay**: Some merchants generate dynamic QR codes via Alipay. Simply scan with your camera — no need to open Alipay app.
+- **Voice Payments**: In some stores, Alipay supports voice commands — say "Alipay" and scan to pay.
+- **Split Bills**: Alipay allows splitting bills among multiple people — useful for group dining or travel expenses.
+
+**Alternative: Alipay Hong Kong**
+
+If mainland Alipay verification fails, consider Alipay Hong Kong (Alipay+ HK). It has simpler verification (Hong Kong ID or passport) and works in mainland China at Alipay+ participating merchants. Download separately from the Hong Kong App Store or Google Play.
+
+**Final Notes**
+
+Alipay is essential for daily life in China. While setup can be challenging for foreigners, most issues resolve with patience. Have your passport ready, a Chinese contact number, and don't give up after the first failed attempt. Most tourists complete verification within 2-3 tries.
+`
+  },
+  {
+    slug: "wechat-pay-setup-guide",
+    title: "WeChat Pay Setup Guide for Foreigners: Complete 2025 Instructions",
+    description: "Step-by-step guide to setting up WeChat Pay as a foreigner — linking cards, verification, mini-programs, and red packets.",
+    category: "Payment",
+    date: "2025-04-28",
+    readingTime: "8 min",
+    tags: ["WeChat Pay", "Payment", "Mobile Payment", "Setup"],
+    imageUrl: "https://picsum.photos/seed/wechat-pay/800/400",
+    content: `**Why WeChat Pay Matters**
+
+WeChat Pay is China's second-largest mobile payment platform, integrated into the country's most popular messaging app. While Alipay handles more commercial transactions, WeChat Pay dominates social payments — birthday gifts, group red packets (hongbao), and peer-to-peer transfers. This guide covers setup for foreigners in 2025.
+
+**Step 1: Install WeChat**
+
+Download WeChat from your app store (iOS App Store or Google Play). Create an account using your international phone number (with country code). Complete verification via SMS code. Set up your profile with your name and profile picture.
+
+**Step 2: Enable WeChat Pay**
+
+Open WeChat → Tap "Me" (我) → "Services" (服务) → "Wallet" (钱包). If you don't see "Wallet", tap "More" (更多) first. You'll see options for WeChat Pay, Jingdong, and other services. Tap "Wallet" to begin setup.
+
+**Step 3: Add a Bank Card**
+
+Tap "Add Card" (添加银行卡) and enter your card details:
+
+- Card number
+- Expiry date
+- CVV
+- Cardholder name (as it appears on the card)
+
+**Important**: As of 2025, WeChat Pay requires a Chinese bank card for full functionality. International cards (Visa/Mastercard) only work for limited purposes and require additional verification.
+
+For Chinese bank cards:
+
+1. You'll need a Chinese phone number (for SMS verification)
+2. Name must match your passport Pinyin or Chinese characters
+3. Some banks require offline verification at a branch
+
+**Step 4: Complete Real-Name Verification**
+
+WeChat Pay requires verification in two steps:
+
+1. **Card Verification**: SMS code to your Chinese number
+2. **Real-Name Verification**: Upload passport photo, enter name, and wait for approval
+
+For foreigners, this process is more restrictive than Alipay. WeChat Pay's verification for foreign passports is limited and often requires:
+
+- A Chinese resident visa (for full access)
+- A Chinese bank account (for card linking)
+- Sometimes, a Chinese contact at the bank
+
+**Step 5: Use WeChat Pay Mini-Programs**
+
+WeChat Pay works through mini-programs — small apps within WeChat. Popular travel mini-programs include:
+
+- **Toutiao (ByteDance News)**: Read news and articles
+- **Meituan**: Food delivery, reservations, discounts
+- **Dianping**: Restaurant reviews and reservations
+- **DiDi**: Ride-hailing (WeChat Pay can be linked to DiDi)
+
+To use a mini-program:
+
+1. Search for it in WeChat's search bar
+2. Open the mini-program
+3. Pay within the mini-program using WeChat Pay
+
+**Step 6: Send and Receive Red Packets (Hongbao)**
+
+WeChat Pay's most popular feature: sending digital red packets during holidays and celebrations. To send a red packet:
+
+1. Open a chat with the recipient
+2. Tap "+" → "Red Packet" (红包)
+3. Enter amount (minimum ¥1)
+4. Choose type: Regular (normal), Lucky (random amounts)
+5. Add a message if desired
+6. Tap "Send" (发送)
+
+The recipient taps to "grab" the red packet, and funds go to their WeChat Pay balance.
+
+**Common Issues and Solutions**
+
+**Problem**: "Add card failed" or "card not supported"
+
+**Solution**: WeChat Pay has stricter card requirements than Alipay. Many international cards (especially from Germany, Switzerland, and some Asian countries) are not supported. Use [Alipay instead](/china-basics/what-apps-to-use/alipay/), or visit a Chinese bank to open an account.
+
+**Problem**: Verification stuck at "pending"
+
+**Solution**: WeChat Pay's manual verification can take 3-7 days. If it's been longer, visit a China Mobile or China Unicom store with your passport — staff can sometimes expedite the process.
+
+**Problem**: Limited spending or transaction blocks
+
+**Solution**: WeChat Pay restricts foreign accounts to prevent money laundering. To increase limits, you need:
+
+- Full real-name verification (passport + Chinese visa)
+- A Chinese bank account
+- A Chinese phone number active for 6+ months
+
+**Alternative: WeChat Pay Hong Kong**
+
+WeChat Pay Hong Kong offers easier foreigner access. Download from the Hong Kong App Store, verify with Hong Kong ID or passport, and link international cards. It works in mainland China at WeChat Pay participating merchants (similar to Alipay+).
+
+**WeChat Pay vs Alipay for Tourists**
+
+**Alipay Advantages**:
+
+- Easier foreigner verification
+- More international card support
+- Better English interface
+- Works at more merchants (especially transport, utilities)
+
+**WeChat Pay Advantages**:
+
+- Social integration (red packets, chatting)
+- Mini-program ecosystem
+- Often cheaper for peer-to-peer payments
+- Required for some services (e.g., DiDi ride-hailing integration)
+
+**Practical Recommendation**
+
+For most tourists: Start with Alipay for its ease of setup, then add WeChat Pay for social payments and mini-programs. Keep both active — many merchants accept both, and having both gives you flexibility. If you can only choose one, Alipay is the safer choice for broad acceptance.
+`
+  },
+  {
+    slug: "china-visa-guide",
+    title: "China Visa Guide 2025: Tourist Visas, Visa-Free Transit, and Entry Requirements",
+    description: "Complete guide to China visas — L visa requirements, processing times, visa-free transit policies, and entry documentation.",
+    category: "Visa",
+    date: "2025-04-29",
+    readingTime: "10 min",
+    tags: ["Visa", "Entry Requirements", "Tourist Visa", "L Visa"],
+    imageUrl: "https://picsum.photos/seed/china-visa/800/400",
+    content: `**China Visa Overview**
+
+As of 2025, most foreign travelers need a visa to enter China for tourism. The process has become more streamlined in major cities, but requirements remain strict. This guide covers tourist visas (L visa), visa-free transit policies, and entry requirements.
+
+**Chinese Visa Types**
+
+China offers several visa categories, but tourists typically need only the **L visa** (旅游签证). The L visa is for tourism, family visits, and some short-term cultural exchanges. Other common visas include:
+
+- **Z visa**: Work visa (requires job offer and work permit)
+- **M visa**: Business visa (for commercial activities)
+- **X visa**: Student visa (for study programs over 6 months)
+- **F visa**: Short-term exchange or invitation (for seminars, tours)
+
+For 99% of tourists, the L visa is your target.
+
+**L Visa Requirements**
+
+To apply for a China L visa, you'll need:
+
+1. **Passport**: Valid for at least 6 months with at least 2 blank pages
+2. **Visa Application Form**: Completed and signed (available online or at the embassy)
+3. **Passport Photo**: 48mm × 33mm, white background, recent (within 6 months)
+4. **Flight Itinerary**: Round-trip flight confirmations
+5. **Hotel Confirmations**: For your entire stay (or invitation letter if visiting locals)
+6. **Proof of Travel Purpose**: Tour itinerary, travel plans, etc.
+7. **Visa Fee**: Varies by nationality ($30-150)
+
+**Application Process**
+
+**Step 1: Gather Documents**
+
+Collect all required documents. Ensure your passport has sufficient validity and blank pages. Some embassies require notarized documents — check your local Chinese embassy's website.
+
+**Step 2: Submit Application**
+
+Apply at the Chinese embassy or consulate that covers your jurisdiction. In some countries (US, Canada, UK, Australia), you can apply through visa centers (VFS Global, BLS International) instead of the embassy directly.
+
+**Step 3: Biometrics and Interview**
+
+Many Chinese embassies now require fingerprinting and a brief interview. Be prepared to answer questions about your travel plans, accommodation, and purpose of visit.
+
+**Step 4: Wait for Processing**
+
+Standard processing: 4 working days (can take longer during peak seasons)
+
+Expedited processing: 2-3 working days (usually +$30-50)
+
+Same-day service: Rare, only in emergencies
+
+**Visa-Free Transit Policies**
+
+China offers several visa-free transit options for travelers passing through to third countries:
+
+**24-Hour Visa-Free Transit**
+
+Available at most international airports in China. You can stay for up to 24 hours without a visa if:
+
+- You have a confirmed onward ticket within 24 hours
+- You're traveling to a third country (not returning to your home country)
+- You stay within the city where you land
+
+This is ideal for layovers or short stops, but you can't leave the city or extend your stay.
+
+**72/144-Hour Visa-Free Transit**
+
+More useful for tourists: 72 or 144-hour visa-free transit in designated cities/regions.
+
+**144-Hour Visa-Free Transit (6 Days)**
+
+Available in:
+
+- Beijing, Shanghai, Guangzhou, Shenzhen, Zhuhai, Xiamen, Chengdu, Chongqing, Dalian, Qingdao, Wuhan, Xi'an, Kunming, Guilin, Lhasa, Yangling, Hohhot, Hangzhou, Nanjing, Tianjin, Shenyang, Jinan, Fuzhou, Nanning, Haikou
+- The Yangtze River Delta (Shanghai, Jiangsu, Zhejiang)
+- The Greater Bay Area (Guangdong, Hong Kong, Macau)
+- The Beijing-Tianjin-Hebei region
+
+Requirements:
+
+- Confirmed onward ticket within 144 hours (6 days)
+- Passport valid for at least 30 days
+- Some nationalities restricted (check your country's eligibility)
+
+**Application at Border Control**
+
+At the airport or port of entry, request the 144-hour visa-free transit form. Submit your:
+
+- Passport
+- Onward ticket (printout or digital)
+- Hotel reservations for your stay
+
+You'll receive a temporary entry permit stamped in your passport. Keep this with you at all times — police may check it.
+
+**Visa-Free Entry for Certain Countries**
+
+As of 2025, China offers visa-free entry for 15 days to citizens of:
+
+- France
+- Germany
+- Italy
+- Netherlands
+- Spain
+- Switzerland
+- Ireland
+- Malta
+- Cyprus
+- Belgium
+- Austria
+
+This is part of China's broader visa-free policy for tourism cooperation. Requirements:
+
+- Entry for tourism, family visits, or business
+- Stay limited to 15 days
+- Must enter via designated ports
+- Some restrictions apply (must join guided tours in some cases)
+
+**Schengen Country Citizens: 24/144-Hour Options**
+
+Citizens of Schengen Area countries (including Germany, France, Switzerland, etc.) can also use the 24-hour and 144-hour visa-free transit policies in addition to the 15-day visa-free entry, giving maximum flexibility.
+
+**Applying for China Visa from Third Countries**
+
+If you're traveling in Asia or Europe and need a China visa, many embassies accept applications from third-country nationals. Requirements typically include:
+
+- Valid residence permit in the country where you're applying
+- Proof of travel plans (flight itineraries, hotel bookings)
+- Sometimes, a letter of explanation
+
+Popular third-country visa applications:
+
+- **Thailand (Bangkok)**: Many expats in Southeast Asia apply here
+- **Vietnam (Hanoi/Ho Chi Minh)**: Convenient for travelers in Indochina
+- **South Korea (Seoul)**: Good option for travelers in East Asia
+- **Japan (Tokyo)**: Available but stricter requirements
+
+**Visa Processing Times**
+
+Standard: 4 working days
+
+Expedited: 2-3 working days (+$30-50)
+
+Same-day: Rare, only emergencies
+
+Peak seasons (summer, Christmas, Chinese New Year): Add 2-3 days to processing time
+
+**Tips for Successful Visa Applications**
+
+1. **Apply Early**: Don't wait until the last minute — embassy backlogs are common
+2. **Double-Check Requirements**: Each embassy has slightly different requirements
+3. **Use Professional Services**: Visa agencies (like China Visa Service Center) can help for $50-100
+4. **Keep Copies**: Bring copies of all documents, plus keep digital backups
+5. **Be Honest**: Provide accurate information — false info can lead to bans
+6. **Travel Insurance**: Some embassies now require travel insurance (¥50-100/day coverage)
+
+**Common Visa Issues**
+
+**Problem**: Visa application rejected
+
+**Solution**: Reapply with corrected documents. Common reasons for rejection: incomplete forms, insufficient passport validity, unclear travel plans.
+
+**Problem**: Visa denied at entry
+
+**Solution**: This is rare but can happen if your documents are incomplete or suspicious. Have printed copies of all documents, and be prepared to explain your travel plans.
+
+**Problem**: Visa expiring before travel
+
+**Solution**: Apply for a new visa if your travel plans change significantly. Some embassies allow visa validity extensions (rarely granted).
+
+**Final Notes**
+
+China's visa policy is evolving rapidly. As of 2025, the government has expanded visa-free transit options and simplified applications for many nationalities. However, requirements remain stricter than in many other countries. Always check your local Chinese embassy's website for the most current information before applying.
+
+**Recommended Resources**
+
+- China Embassy in your country (official website)
+- China Visa Service Center (if available)
+- Trusted travel forums (like TripAdvisor China forums)
+- Visa agencies with China specialization
+
+For the most current information, always verify with your local Chinese embassy or consulate before applying.
+`
+  },
+  {
     slug: "first-time-in-china-survival-guide",
     title: "First Time in China: A Complete 2025 Survival Guide",
     description: "Everything you need to know before your first trip to China - from visa requirements to mobile apps and payment methods.",
