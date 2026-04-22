@@ -57,12 +57,12 @@ export default function VpnGuidePage() {
         { label: 'Communication App', href: '/china-basics/what-apps-to-use/communication' },
       ]}
       />
-      <div className="mt-8">
+      <div className="max-w-4xl mx-auto px-4 mt-8">
         <ContextualCTA
           icon="🔒"
           title="Don't Wait Until You Land"
           description="Install your VPN before entering China — the download sites are blocked otherwise."
-          buttonText="Get ExpressVPN →"
+          buttonText="See VPN Recommendations →"
           buttonHref="/china-basics/what-apps-to-use/vpn"
           variant="secondary"
         />

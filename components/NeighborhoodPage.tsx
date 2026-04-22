@@ -2,8 +2,6 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import ChineseWatermark from './ChineseWatermark';
 import Breadcrumb from './Breadcrumb';
-import InkWashDivider from './InkWashDivider';
-import RedSealBadge from './RedSealBadge';
 
 type Tip = {
   type: 'tip' | 'scam' | 'photo';
@@ -58,7 +56,6 @@ export default function NeighborhoodPage({
 
         {/* Hero Section */}
         <header className="mb-10 relative">
-          <RedSealBadge character="住" />
           <ChineseWatermark character={nameZh[0] || '中'} />
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-4 text-[var(--foreground)] relative z-10">
             {name}
@@ -104,7 +101,6 @@ export default function NeighborhoodPage({
           </div>
         </section>
 
-        <InkWashDivider />
 
         {/* Practical Tips */}
         <section className="mb-10">
@@ -166,7 +162,6 @@ export default function NeighborhoodPage({
             </div>
           )}
         </section>
-        <InkWashDivider />
 
 
         {/* Related Links */}

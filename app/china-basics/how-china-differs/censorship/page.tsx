@@ -21,7 +21,7 @@ export default function CensorshipPage() {
 
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">Blocked Websites & Apps</h2>
-          <p className="text-gray-700 mb-4">These popular services do NOT work in China without a VPN:</p>
+          <p className="text-gray-700 mb-4">These popular services do NOT work in China without a <a href="/china-basics/what-apps-to-use/vpn" className="text-[#af5d32] underline hover:text-[#8f431c]">VPN</a>:</p>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
             <div className="bg-[var(--accent-soft)] rounded-lg p-4 text-center">
@@ -73,7 +73,7 @@ export default function CensorshipPage() {
 
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">How to Bypass (VPN)</h2>
-          <p className="text-gray-700 mb-4">A VPN is essential for accessing blocked services:</p>
+          <p className="text-gray-700 mb-4">A <a href="/china-basics/what-apps-to-use/vpn" className="text-[#af5d32] underline hover:text-[#8f431c]">VPN</a> is essential for accessing blocked services. See our <a href="/china-basics/what-apps-to-use/vpn" className="text-[#af5d32] underline hover:text-[#8f431c]">VPN guide</a> for setup instructions and recommended providers:</p>
           
           <div className="bg-gray-50 rounded-lg p-6">
             <h3 className="font-semibold mb-2">Recommended VPNs for China:</h3>
@@ -82,7 +82,7 @@ export default function CensorshipPage() {
               <li>• <strong>NordVPN</strong> - Good speeds, easy to use</li>
               <li>• <strong>Astrill</strong> - Popular among expats</li>
             </ul>
-            <p className="text-sm text-gray-600 mt-4 italic">Important: Download and set up your VPN BEFORE arriving in China.</p>
+            <p className="text-sm text-gray-600 mt-4 italic">Important: <a href="/china-basics/what-apps-to-use/vpn" className="text-[#af5d32] underline hover:text-[#8f431c]">Download and set up your VPN</a> BEFORE arriving in China.</p>
           </div>
         </section>
 

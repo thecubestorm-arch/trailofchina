@@ -2,8 +2,6 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import ChineseWatermark from './ChineseWatermark';
 import Breadcrumb from './Breadcrumb';
-import InkWashDivider from './InkWashDivider';
-import RedSealBadge from './RedSealBadge';
 
 type Tip = {
   type: 'tip' | 'scam' | 'where';
@@ -62,7 +60,6 @@ export default function FoodDetailPage({
 
         {/* Hero Section */}
         <header className="mb-10 relative">
-          <RedSealBadge character="食" />
           <ChineseWatermark character={nameZh[0] || '中'} />
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-4 text-[var(--foreground)] relative z-10">
             {name}
@@ -118,13 +115,11 @@ export default function FoodDetailPage({
                 </div>
               ))}
             </div>
-        <InkWashDivider />
 
           </section>
         )}
 
         {/* Practical Tips */}
-        <InkWashDivider />
 
         <section className="mb-10">
           <h2 className="text-2xl font-serif font-bold mb-6 text-[var(--foreground)]">Practical Tips</h2>
@@ -185,7 +180,6 @@ export default function FoodDetailPage({
             </div>
           )}
         </section>
-        <InkWashDivider />
 
 
         {/* Related Links */}
