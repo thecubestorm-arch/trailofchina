@@ -15,8 +15,12 @@ export const metadata: Metadata = {
     'Start planning your first China trip with practical prep guides, destination overviews, and realistic itinerary ideas for international travelers.',
   keywords: 'China travel guide,first trip to China,China itinerary,China travel planning,travel China first time',
   icons: {
-    icon: '/favicon.svg',
-    apple: '/favicon.svg',
+    icon: [
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    apple: '/apple-touch-icon.png',
   },
 }
 
