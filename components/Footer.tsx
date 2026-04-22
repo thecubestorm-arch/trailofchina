@@ -30,12 +30,20 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="section-shell rounded-[1.5rem] p-6">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--muted)]">CTA Placeholder</p>
-          <h2 className="mt-3 font-serif text-2xl text-[var(--foreground)]">Download the China arrival checklist</h2>
+        <div className="section-shell rounded-[1.5rem] p-6 bg-[#f5f1ea]">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#af5d32]">Free Download</p>
+          <h2 className="mt-3 font-serif text-3xl text-[var(--foreground)]">
+            Download Your China Arrival Checklist
+          </h2>
           <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
-            Reserve this space for your future lead magnet, service pitch, or email sign-up.
+            Get a detailed 2-page checklist of everything to do before and after landing. Free.
           </p>
+          <Link
+            href="/#checklist-download"
+            className="mt-4 inline-block rounded-xl bg-[#af5d32] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#8f431c]"
+          >
+            Get My Free Checklist
+          </Link>
         </div>
       </div>
     </footer>
