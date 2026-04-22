@@ -75,6 +75,12 @@ export default function ShanghaiTowerPage() {
   return (
     <AttractionPage
       name="Shanghai Tower"
+      breadcrumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Destinations', href: '/destinations' },
+      { label: 'Shanghai', href: '/destinations/shanghai' },
+      { label: 'What to Do', href: '/destinations/shanghai/what-to-do' },
+    ]}
       nameZh="上海中心大厦"
       city="Shanghai"
       description={`The Shanghai Tower (上海中心大厦) is China's tallest building and one of the world's tallest at 632 meters. Its observation deck, located on the 118th floor at 546 meters, offers the highest public viewing platform in Shanghai with uninterrupted 360° panoramic views of the entire city.

@@ -70,7 +70,13 @@ export default function BaoduPage() {
 
   return (
     <FoodDetailPage
-      name={name}
+      breadcrumbs={[
+    { label: 'Home', href: '/' },
+    { label: 'Destinations', href: '/destinations' },
+    { label: 'Beijing', href: '/destinations/beijing' },
+    { label: 'Where to Eat', href: '/destinations/beijing/where-to-eat' },
+  ]}
+    name={name}
       nameZh={nameZh}
       city={city}
       description={description}
@@ -79,6 +85,6 @@ export default function BaoduPage() {
       whereToTry={whereToTry}
       tips={tips}
       relatedLinks={relatedLinks}
-    />
+  />
   );
 }

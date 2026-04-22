@@ -75,6 +75,12 @@ export default function MuslimQuarterPage() {
   return (
     <AttractionPage
       name="Muslim Quarter"
+      breadcrumbs={[
+      { label: "Home", href: '/' },
+      { label: "Destinations", href: '/destinations' },
+      { label: "Xi'an", href: '/destinations/xian' },
+      { label: "What to Do", href: '/destinations/xian/what-to-do' },
+    ]}
       nameZh="回民街"
       city="Xi'an"
       description={`The Muslim Quarter (回民街) is Xi'an's beating heart of Hui Muslim culture and the street food capital of northwest China. This bustling network of narrow lanes, tucked behind the Drum Tower, has been home to Xi'an's Muslim community for over 1,000 years. The aromas here are intoxicating — cumin-spiced lamb sizzling over charcoal, hand-pulled noodles being slapped against countertops, and sweet osmanthus cakes steaming in bamboo baskets.

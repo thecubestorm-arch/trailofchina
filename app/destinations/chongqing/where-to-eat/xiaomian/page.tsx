@@ -31,7 +31,13 @@ const relatedLinks = [
 export default function XiaomianPage() {
   return (
     <FoodDetailPage
-      name="Chongqing Xiaomian"
+      breadcrumbs={[
+    { label: 'Home', href: '/' },
+    { label: 'Destinations', href: '/destinations' },
+    { label: 'Chongqing', href: '/destinations/chongqing' },
+    { label: 'Where to Eat', href: '/destinations/chongqing/where-to-eat' },
+  ]}
+    name="Chongqing Xiaomian"
       nameZh="小面"
       city="Chongqing"
       description="The humble bowl that fuels Chongqing. Fresh wheat noodles tossed in chili oil, Sichuan pepper, garlic, scallions, and a dozen other seasonings. Every street corner has a xiaomian stall and everyone has their favorite. Cheap, fast, and more addictive than any fine dining."
@@ -40,6 +46,6 @@ export default function XiaomianPage() {
       whereToTry={whereToTry}
       tips={tips}
       relatedLinks={relatedLinks}
-    />
+  />
   );
 }

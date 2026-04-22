@@ -77,6 +77,12 @@ export default function TempleOfHeavenPage() {
   return (
     <AttractionPage
       name="Temple of Heaven"
+      breadcrumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Destinations', href: '/destinations' },
+      { label: 'Beijing', href: '/destinations/beijing' },
+      { label: 'What to Do', href: '/destinations/beijing/what-to-do' },
+    ]}
       nameZh="天坛"
       city="Beijing"
       description={`Where Ming and Qing emperors prayed for good harvests. The circular Hall of Prayer for Good Harvests is Beijing\'s most iconic silhouette. Come at 6 AM to watch locals doing tai chi, sword dancing, and choir singing. The park is where real Beijing life happens.`}

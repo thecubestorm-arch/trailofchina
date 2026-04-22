@@ -32,6 +32,12 @@ export default function ElingParkPage() {
   return (
     <AttractionPage
       name="Eling Park"
+      breadcrumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Destinations', href: '/destinations' },
+      { label: 'Chongqing', href: '/destinations/chongqing' },
+      { label: 'What to Do', href: '/destinations/chongqing/what-to-do' },
+    ]}
       nameZh="鹅岭公园"
       city="Chongqing"
       description="The highest point on the Yuzhong peninsula and Chongqing's best free viewpoint. A quiet park with pavilions, a century-old mansion, and a two-story observation tower. From the top you see the Yangtze and Jialing rivers converging, the mountain skyline, and the vertical cityscape that makes Chongqing unique."

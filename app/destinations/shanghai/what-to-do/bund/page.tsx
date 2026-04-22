@@ -88,6 +88,12 @@ export default function BundPage() {
   return (
     <AttractionPage
       name="The Bund"
+      breadcrumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Destinations', href: '/destinations' },
+      { label: 'Shanghai', href: '/destinations/shanghai' },
+      { label: 'What to Do', href: '/destinations/shanghai/what-to-do' },
+    ]}
       nameZh="外滩"
       city="Shanghai"
       description={`The Bund (外滩) is Shanghai\'s most famous landmark — a 1.5 km waterfront promenade along the Huangpu River, lined with 33 buildings in various colonial-era architectural styles. Built in the early 20th century, it was once the heart of Shanghai\'s International Settlement.

@@ -31,6 +31,12 @@ export default function LizibaMonorailPage() {
   return (
     <AttractionPage
       name="Liziba Monorail Station"
+      breadcrumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Destinations', href: '/destinations' },
+      { label: 'Chongqing', href: '/destinations/chongqing' },
+      { label: 'What to Do', href: '/destinations/chongqing/what-to-do' },
+    ]}
       nameZh="李子坝"
       city="Chongqing"
       description="Chongqing's viral internet sensation — a monorail train passing straight through a residential apartment building. The train enters on floor 6 and exits on floor 7 while residents live on the other floors. It went viral in 2018 and now has its own viewing platform."

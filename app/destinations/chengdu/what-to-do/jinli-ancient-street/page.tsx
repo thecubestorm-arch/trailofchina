@@ -73,6 +73,12 @@ export default function JinliAncientStreetPage() {
   return (
     <AttractionPage
       name="Jinli Ancient Street"
+      breadcrumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Destinations', href: '/destinations' },
+      { label: 'Chengdu', href: '/destinations/chengdu' },
+      { label: 'What to Do', href: '/destinations/chengdu/what-to-do' },
+    ]}
       nameZh="锦里"
       city="Chengdu"
       description={`Chengdu's most atmospheric pedestrian street — red lanterns, wooden architecture, snack stalls, and tea houses. Adjacent to Wuhou Shrine. Packed by day, magical at night. The perfect first stop in Chengdu for street food and souvenirs.`}

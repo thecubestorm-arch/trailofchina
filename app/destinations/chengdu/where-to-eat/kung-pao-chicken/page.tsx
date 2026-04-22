@@ -90,7 +90,13 @@ What makes authentic Chengdu kung pao chicken special is the dry stir-fry techni
 
   return (
     <FoodDetailPage
-      name={name}
+      breadcrumbs={[
+    { label: 'Home', href: '/' },
+    { label: 'Destinations', href: '/destinations' },
+    { label: 'Chengdu', href: '/destinations/chengdu' },
+    { label: 'Where to Eat', href: '/destinations/chengdu/where-to-eat' },
+  ]}
+    name={name}
       nameZh={nameZh}
       city={city}
       description={description}
@@ -99,6 +105,6 @@ What makes authentic Chengdu kung pao chicken special is the dry stir-fry techni
       whereToTry={whereToTry}
       tips={tips}
       relatedLinks={relatedLinks}
-    />
+  />
   );
 }

@@ -68,6 +68,12 @@ export default function SummerPalacePage() {
   return (
     <AttractionPage
       name="Summer Palace"
+      breadcrumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Destinations', href: '/destinations' },
+      { label: 'Beijing', href: '/destinations/beijing' },
+      { label: 'What to Do', href: '/destinations/beijing/what-to-do' },
+    ]}
       nameZh="颐和园"
       city="Beijing"
       description={`Imperial retreat with Kunming Lake, Longevity Hill, Long Corridor (728m of painted beams). Marble Boat symbol of Cixi\'s extravagance. Rent a rowboat in summer. UNESCO World Heritage Site.`}

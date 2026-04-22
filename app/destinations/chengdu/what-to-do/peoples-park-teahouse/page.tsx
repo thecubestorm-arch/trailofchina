@@ -73,6 +73,12 @@ export default function PeoplesParkTeahousePage() {
   return (
     <AttractionPage
       name="People\'s Park Teahouse"
+      breadcrumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Destinations', href: '/destinations' },
+      { label: 'Chengdu', href: '/destinations/chengdu' },
+      { label: 'What to Do', href: '/destinations/chengdu/what-to-do' },
+    ]}
       nameZh="人民公园茶馆"
       city="Chengdu"
       description={`The Heming Teahouse in People\'s Park is where Chengdu\'s slow-living culture peaks. Hundreds of bamboo chairs under ginkgo trees, ear-cleaning services, mahjong tables, and ¥15 tea refills. This single experience defines what makes Chengdu different from every other Chinese city.`}

@@ -86,7 +86,13 @@ What makes Chengdu dan dan mian special is the balance of flavors — the chili 
 
   return (
     <FoodDetailPage
-      name={name}
+      breadcrumbs={[
+    { label: 'Home', href: '/' },
+    { label: 'Destinations', href: '/destinations' },
+    { label: 'Chengdu', href: '/destinations/chengdu' },
+    { label: 'Where to Eat', href: '/destinations/chengdu/where-to-eat' },
+  ]}
+    name={name}
       nameZh={nameZh}
       city={city}
       description={description}
@@ -95,6 +101,6 @@ What makes Chengdu dan dan mian special is the balance of flavors — the chili 
       whereToTry={whereToTry}
       tips={tips}
       relatedLinks={relatedLinks}
-    />
+  />
   );
 }

@@ -93,6 +93,12 @@ export default function GreatWallPage() {
   return (
     <AttractionPage
       name="Great Wall"
+      breadcrumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Destinations', href: '/destinations' },
+      { label: 'Beijing', href: '/destinations/beijing' },
+      { label: 'What to Do', href: '/destinations/beijing/what-to-do' },
+    ]}
       nameZh="长城"
       city="Beijing"
       description={`The Great Wall of China (长城) stretches over 13,000 miles across northern China, with the most impressive sections within reach of Beijing. The wall wasn\'t built by a single dynasty but evolved over 2,000 years, from the 7th century BC to the 17th century AD.

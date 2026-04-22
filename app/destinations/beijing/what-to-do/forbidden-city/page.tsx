@@ -93,6 +93,12 @@ export default function ForbiddenCityPage() {
   return (
     <AttractionPage
       name="Forbidden City"
+      breadcrumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Destinations', href: '/destinations' },
+      { label: 'Beijing', href: '/destinations/beijing' },
+      { label: 'What to Do', href: '/destinations/beijing/what-to-do' },
+    ]}
       nameZh="故宫"
       city="Beijing"
       description={`The Forbidden City (故宫) is the world\'s largest and best-preserved palace complex, spanning 180 acres with 980 buildings containing 8,700 rooms. It served as the imperial palace for 24 emperors over 500 years during the Ming and Qing dynasties.

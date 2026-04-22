@@ -84,7 +84,13 @@ Hotpot in Chengdu isn\'t just a meal — it\'s a social event. Friends gather ar
 
   return (
     <FoodDetailPage
-      name={name}
+      breadcrumbs={[
+    { label: 'Home', href: '/' },
+    { label: 'Destinations', href: '/destinations' },
+    { label: 'Chengdu', href: '/destinations/chengdu' },
+    { label: 'Where to Eat', href: '/destinations/chengdu/where-to-eat' },
+  ]}
+    name={name}
       nameZh={nameZh}
       city={city}
       description={description}
@@ -93,6 +99,6 @@ Hotpot in Chengdu isn\'t just a meal — it\'s a social event. Friends gather ar
       whereToTry={whereToTry}
       tips={tips}
       relatedLinks={relatedLinks}
-    />
+  />
   );
 }

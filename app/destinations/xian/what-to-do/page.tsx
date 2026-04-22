@@ -23,61 +23,61 @@ export default function XianWhatToDoPage() {
           <h2 id="must-see-attractions" className="text-2xl font-semibold mb-4 text-gray-900">
             Must-See Attractions
           </h2>
-          <div className="grid gap-6 md:grid-cols-2">
-            <article className="border rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-2">1. Terracotta Warriors (兵马俑): Pits 1, 2, 3</h3>
+          <div className="space-y-4">
+            <Link href="/destinations/xian/what-to-do/terracotta-warriors" className="block border rounded-xl p-6 transition-all duration-200 hover:shadow-md hover:bg-[#fdf8f3]">
+              <h3 className="text-xl font-semibold mb-2 text-[#1f2933]">1. Terracotta Warriors (兵马俑): Pits 1, 2, 3 <span className="text-[#af5d32] text-sm font-normal">→ Read more</span></h3>
               <p className="text-gray-700 mb-3">
                 Pit 1 delivers the dramatic first impression with the largest formation. Pit 3 is smaller but
                 historically important as a command center, while Pit 2 shows diverse troop types and unfinished
                 excavation details that explain the archaeological process.
               </p>
               <p className="text-sm text-gray-600">🕐 8:30-17:00, arrive near opening | 💰 ~¥120 | 📍 Lintong District</p>
-            </article>
+            </Link>
 
-            <article className="border rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-2">2. Xi'an City Wall (西安城墙) Bike Loop</h3>
+            <Link href="/destinations/xian/what-to-do/city-wall" className="block border rounded-xl p-6 transition-all duration-200 hover:shadow-md hover:bg-[#fdf8f3]">
+              <h3 className="text-xl font-semibold mb-2 text-[#1f2933]">2. Xi'an City Wall (西安城墙) Bike Loop <span className="text-[#af5d32] text-sm font-normal">→ Read more</span></h3>
               <p className="text-gray-700 mb-3">
                 The complete wall circuit is about 14 km. Riding at golden hour gives excellent skyline views and
                 a clear sense of the old-city layout. Enter from South Gate (永宁门) for easy transport access.
               </p>
               <p className="text-sm text-gray-600">🕐 Late afternoon to sunset | 💰 Wall + bike rental fee | 📍 South Gate area</p>
-            </article>
+            </Link>
 
-            <article className="border rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-2">3. Muslim Quarter (回民街) + Great Mosque</h3>
+            <Link href="/destinations/xian/what-to-do/muslim-quarter" className="block border rounded-xl p-6 transition-all duration-200 hover:shadow-md hover:bg-[#fdf8f3]">
+              <h3 className="text-xl font-semibold mb-2 text-[#1f2933]">3. Muslim Quarter (回民街) + Great Mosque <span className="text-[#af5d32] text-sm font-normal">→ Read more</span></h3>
               <p className="text-gray-700 mb-3">
                 Come for the evening energy, grilled skewers, and local snacks, then step into side lanes for calmer
                 food stalls and old storefronts. Pair this with the nearby Great Mosque (西安清真大寺).
               </p>
               <p className="text-sm text-gray-600">🕐 17:00-21:00 best atmosphere | 💰 Free to walk, food extra | 📍 Near Drum Tower</p>
-            </article>
+            </Link>
 
-            <article className="border rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-2">4. Bell Tower (钟楼) & Drum Tower (鼓楼)</h3>
+            <Link href="/destinations/xian/what-to-do/bell-drum-tower" className="block border rounded-xl p-6 transition-all duration-200 hover:shadow-md hover:bg-[#fdf8f3]">
+              <h3 className="text-xl font-semibold mb-2 text-[#1f2933]">4. Bell Tower (钟楼) &amp; Drum Tower (鼓楼) <span className="text-[#af5d32] text-sm font-normal">→ Read more</span></h3>
               <p className="text-gray-700 mb-3">
                 These Ming-era landmarks anchor central Xi'an. Climb both if possible to compare views and
                 understand how historic city planning radiates from this core intersection.
               </p>
               <p className="text-sm text-gray-600">🕐 Morning or blue hour | 💰 Combo tickets available | 📍 City center</p>
-            </article>
+            </Link>
 
-            <article className="border rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-2">5. Big Wild Goose Pagoda (大雁塔)</h3>
+            <Link href="/destinations/xian/what-to-do/big-wild-goose-pagoda" className="block border rounded-xl p-6 transition-all duration-200 hover:shadow-md hover:bg-[#fdf8f3]">
+              <h3 className="text-xl font-semibold mb-2 text-[#1f2933]">5. Big Wild Goose Pagoda (大雁塔) <span className="text-[#af5d32] text-sm font-normal">→ Read more</span></h3>
               <p className="text-gray-700 mb-3">
                 A major Buddhist site linked to Tang-era monk Xuanzang (玄奘). The surrounding plaza and evening
                 fountain area are especially lively, with families and local dance groups.
               </p>
               <p className="text-sm text-gray-600">🕐 Late day into evening | 💰 Grounds free, pagoda climb ticketed | 📍 Yanta District</p>
-            </article>
+            </Link>
 
-            <article className="border rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-2">6. Shaanxi History Museum (陕西历史博物馆)</h3>
+            <Link href="/destinations/xian/what-to-do/shaanxi-history-museum" className="block border rounded-xl p-6 transition-all duration-200 hover:shadow-md hover:bg-[#fdf8f3]">
+              <h3 className="text-xl font-semibold mb-2 text-[#1f2933]">6. Shaanxi History Museum (陕西历史博物馆) <span className="text-[#af5d32] text-sm font-normal">→ Read more</span></h3>
               <p className="text-gray-700 mb-3">
                 One of China&apos;s strongest museum collections, especially for Zhou, Qin, Han, and Tang artifacts.
                 Reserve in advance and budget at least two focused hours.
               </p>
               <p className="text-sm text-gray-600">🕐 Morning slots are smoother | 💰 Timed entry, special exhibits extra | 📍 Near Dayanta</p>
-            </article>
+            </Link>
           </div>
         </section>
 
@@ -107,9 +107,9 @@ export default function XianWhatToDoPage() {
         <section className="mb-8 bg-[var(--accent-soft)] border-l-4 border-[var(--accent)] p-4" aria-labelledby="tourist-traps">
           <h2 id="tourist-traps" className="font-semibold text-[var(--accent-strong)] mb-2">Tourist Traps</h2>
           <ul className="space-y-2 text-[var(--foreground)]">
-            <li>• Fake Terracotta “factory tours” that are mostly shopping detours.</li>
-            <li>• Overpriced souvenir sets sold as “museum certified relics.”</li>
-            <li>• Unofficial guides at station exits claiming “no queue” tickets.</li>
+            <li>• Fake Terracotta "factory tours" that are mostly shopping detours.</li>
+            <li>• Overpriced souvenir sets sold as "museum certified relics."</li>
+            <li>• Unofficial guides at station exits claiming "no queue" tickets.</li>
           </ul>
         </section>
 
@@ -145,7 +145,7 @@ export default function XianWhatToDoPage() {
 
         <footer>
           <Link href="/destinations/xian" className="text-[var(--accent)] hover:underline">
-            ← Back to Xi&apos;an Guide
+            ← Back to Xi'an Guide
           </Link>
         </footer>
       </main>

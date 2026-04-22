@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import ContextualCTA from '@/components/ContextualCTA';
 
 export const metadata: Metadata = {
@@ -22,42 +23,42 @@ export default function ShanghaiWhatToDoPage() {
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">Must-See Attractions</h2>
           
-          <div className="space-y-6">
-            <div className="border rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-2">1. The Bund (外滩)</h3>
+          <div className="space-y-4">
+            <Link href="/destinations/shanghai/what-to-do/bund" className="block border rounded-xl p-6 transition-all duration-200 hover:shadow-md hover:bg-[#fdf8f3]">
+              <h3 className="text-xl font-semibold mb-2 text-[#1f2933]">1. The Bund (外滩) <span className="text-[#af5d32] text-sm font-normal">→ Read more</span></h3>
               <p className="text-gray-700 mb-2">
-                Shanghai's iconic waterfront promenade lined with colonial-era buildings. 
-                Best visited at night when Pudong's skyline lights up across the river.
+                Shanghai&apos;s iconic waterfront promenade lined with colonial-era buildings. 
+                Best visited at night when Pudong&apos;s skyline lights up across the river.
               </p>
               <p className="text-sm text-gray-600">🕐 Evening is best | 💰 Free | 📍 Metro: East Nanjing Road</p>
-            </div>
+            </Link>
 
-            <div className="border rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-2">2. Yu Garden (豫园)</h3>
+            <Link href="/destinations/shanghai/what-to-do/yu-garden" className="block border rounded-xl p-6 transition-all duration-200 hover:shadow-md hover:bg-[#fdf8f3]">
+              <h3 className="text-xl font-semibold mb-2 text-[#1f2933]">2. Yu Garden (豫园) <span className="text-[#af5d32] text-sm font-normal">→ Read more</span></h3>
               <p className="text-gray-700 mb-2">
                 A 400-year-old classical Chinese garden with pavilions, rockeries, and ponds. 
                 Surrounded by a bustling bazaar perfect for souvenirs.
               </p>
               <p className="text-sm text-gray-600">🕐 8:30-17:00 | 💰 ¥40 | 📍 Old City</p>
-            </div>
+            </Link>
 
-            <div className="border rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-2">3. French Concession</h3>
+            <Link href="/destinations/shanghai/what-to-do/french-concession" className="block border rounded-xl p-6 transition-all duration-200 hover:shadow-md hover:bg-[#fdf8f3]">
+              <h3 className="text-xl font-semibold mb-2 text-[#1f2933]">3. French Concession <span className="text-[#af5d32] text-sm font-normal">→ Read more</span></h3>
               <p className="text-gray-700 mb-2">
                 Tree-lined streets with European architecture, boutiques, and cafes. 
                 Perfect for a leisurely afternoon walk.
               </p>
               <p className="text-sm text-gray-600">🕐 Anytime | 💰 Free | 📍 Metro: South Shaanxi Road</p>
-            </div>
+            </Link>
 
-            <div className="border rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-2">4. Shanghai Tower Observation Deck</h3>
+            <Link href="/destinations/shanghai/what-to-do/shanghai-tower" className="block border rounded-xl p-6 transition-all duration-200 hover:shadow-md hover:bg-[#fdf8f3]">
+              <h3 className="text-xl font-semibold mb-2 text-[#1f2933]">4. Shanghai Tower Observation Deck <span className="text-[#af5d32] text-sm font-normal">→ Read more</span></h3>
               <p className="text-gray-700 mb-2">
-                The world's second-tallest building with breathtaking 360° views from 546 meters. 
+                The world&apos;s second-tallest building with breathtaking 360° views from 546 meters. 
                 The elevator reaches 74 km/h.
               </p>
               <p className="text-sm text-gray-600">🕐 8:30-22:00 | 💰 ¥180 | 📍 Lujiazui</p>
-            </div>
+            </Link>
           </div>
         </section>
 
@@ -84,7 +85,7 @@ export default function ShanghaiWhatToDoPage() {
         <div className="bg-[var(--accent-soft)] border-l-4 border-[var(--accent)] p-4">
           <h3 className="font-semibold text-[var(--accent-strong)] mb-2">⚠️ Tourist Traps to Avoid</h3>
           <ul className="text-[var(--foreground)] space-y-2">
-            <li>• "Tea ceremony" invitations from strangers (expensive scam)</li>
+            <li>• &quot;Tea ceremony&quot; invitations from strangers (expensive scam)</li>
             <li>• Overpriced boats on the river - take the ferry instead</li>
             <li>• Fake antiques in Yu Garden bazaar</li>
           </ul>

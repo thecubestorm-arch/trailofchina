@@ -75,6 +75,12 @@ export default function YuGardenPage() {
   return (
     <AttractionPage
       name="Yu Garden"
+      breadcrumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Destinations', href: '/destinations' },
+      { label: 'Shanghai', href: '/destinations/shanghai' },
+      { label: 'What to Do', href: '/destinations/shanghai/what-to-do' },
+    ]}
       nameZh="豫园"
       city="Shanghai"
       description={`Yu Garden (豫园), meaning "Garden of Happiness," is a 400-year-old classical Chinese garden in the heart of Shanghai's Old City. Built in 1559 during the Ming Dynasty by Pan Yunduan as a private retreat for his aging father, the garden survived wars, occupations, and the Cultural Revolution to become one of Shanghai's most beloved landmarks.

@@ -33,6 +33,12 @@ export default function YangtzeCableCarPage() {
   return (
     <AttractionPage
       name="Yangtze River Cable Car"
+      breadcrumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Destinations', href: '/destinations' },
+      { label: 'Chongqing', href: '/destinations/chongqing' },
+      { label: 'What to Do', href: '/destinations/chongqing/what-to-do' },
+    ]}
       nameZh="长江索道"
       city="Chongqing"
       description="Chongqing's most iconic experience — a cable car gliding over the Yangtze River between the Yuzhong peninsula and Nan'an district. The 4-minute ride gives you panoramic views of the mountain city skyline, the river, and the chaotic beauty of Chongqing's vertical urban landscape."

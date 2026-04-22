@@ -71,6 +71,12 @@ export default function CityWallPage() {
   return (
     <AttractionPage
       name="Xi'an City Wall"
+      breadcrumbs={[
+      { label: "Home", href: '/' },
+      { label: "Destinations", href: '/destinations' },
+      { label: "Xi'an", href: '/destinations/xian' },
+      { label: "What to Do", href: '/destinations/xian/what-to-do' },
+    ]}
       nameZh="西安城墙"
       city="Xi'an"
       description={`The Xi'an City Wall is the best-preserved ancient city wall in China, and cycling its 14-kilometer perimeter is the ultimate way to experience this 600-year-old Ming dynasty fortress. Built in 1370 during the reign of Emperor Zhu Yuanzhang, the wall originally protected the city from invaders and today stands as a testament to ancient Chinese military architecture.

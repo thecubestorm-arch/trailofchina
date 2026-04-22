@@ -84,6 +84,12 @@ export default function HongyaCavePage() {
   return (
     <AttractionPage
       name="Hongya Cave"
+      breadcrumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Destinations', href: '/destinations' },
+      { label: 'Chongqing', href: '/destinations/chongqing' },
+      { label: 'What to Do', href: '/destinations/chongqing/what-to-do' },
+    ]}
       nameZh="洪崖洞"
       city="Chongqing"
       description={`Hongya Cave (洪崖洞) is Chongqing\'s most iconic landmark — an 11-story stilted building complex built into the hillside overlooking the Jialing River. The structure resembles ancient Chaotianmen Gate but was rebuilt in 2006 with modern amenities.

@@ -69,6 +69,12 @@ export default function ArtDistrict798Page() {
   return (
     <AttractionPage
       name="798 Art District"
+      breadcrumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Destinations', href: '/destinations' },
+      { label: 'Beijing', href: '/destinations/beijing' },
+      { label: 'What to Do', href: '/destinations/beijing/what-to-do' },
+    ]}
       nameZh="798艺术区"
       city="Beijing"
       description={`Beijing\'s contemporary art scene in a vast 1950s East German factory complex. Galleries, studios, design shops, cafes in converted warehouses. UCCA Center for Contemporary Art is the anchor. Best on weekends.`}

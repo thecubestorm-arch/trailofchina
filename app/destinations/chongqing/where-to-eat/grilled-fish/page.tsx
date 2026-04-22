@@ -32,7 +32,13 @@ const relatedLinks = [
 export default function GrilledFishPage() {
   return (
     <FoodDetailPage
-      name="Chongqing Grilled Fish"
+      breadcrumbs={[
+    { label: 'Home', href: '/' },
+    { label: 'Destinations', href: '/destinations' },
+    { label: 'Chongqing', href: '/destinations/chongqing' },
+    { label: 'Where to Eat', href: '/destinations/chongqing/where-to-eat' },
+  ]}
+    name="Chongqing Grilled Fish"
       nameZh="烤鱼"
       city="Chongqing"
       description="A whole fish grilled over charcoal, then served in a sizzling metal tray with chili oil, Sichuan pepper, lotus root, potatoes, and tofu skin. You eat it like hotpot — ingredients keep cooking at the table. Uniquely Chongqing, surprisingly hard to find elsewhere in China."
@@ -41,6 +47,6 @@ export default function GrilledFishPage() {
       whereToTry={whereToTry}
       tips={tips}
       relatedLinks={relatedLinks}
-    />
+  />
   );
 }

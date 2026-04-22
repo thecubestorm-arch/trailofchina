@@ -23,60 +23,60 @@ export default function ChongqingWhatToDoPage() {
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">Must-See Attractions</h2>
 
-          <div className="space-y-6">
-            <div className="border rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-2">1. Hongyadong (洪崖洞)</h3>
+          <div className="space-y-4">
+            <Link href="/destinations/chongqing/what-to-do/hongya-cave" className="block border rounded-xl p-6 transition-all duration-200 hover:shadow-md hover:bg-[#fdf8f3]">
+              <h3 className="text-xl font-semibold mb-2 text-[#1f2933]">1. Hongyadong (洪崖洞) <span className="text-[#af5d32] text-sm font-normal">→ Read more</span></h3>
               <p className="text-gray-700 mb-2">
                 A cliffside complex of stilted buildings glowing above the river. Visit after sunset when
                 the entire facade lights up.
               </p>
               <p className="text-sm text-gray-600">🕐 Best after 19:00 | 💰 Free to enter | 📍 Jialing River waterfront</p>
-            </div>
+            </Link>
 
-            <div className="border rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-2">2. Yangtze River Cable Car (长江索道)</h3>
+            <Link href="/destinations/chongqing/what-to-do/yangtze-cable-car" className="block border rounded-xl p-6 transition-all duration-200 hover:shadow-md hover:bg-[#fdf8f3]">
+              <h3 className="text-xl font-semibold mb-2 text-[#1f2933]">2. Yangtze River Cable Car (长江索道) <span className="text-[#af5d32] text-sm font-normal">→ Read more</span></h3>
               <p className="text-gray-700 mb-2">
                 One of Chongqing&apos;s signature rides, crossing the Yangtze with panoramic views of bridges,
                 high-rises, and layered roads.
               </p>
               <p className="text-sm text-gray-600">🕐 7:30-22:30 | 💰 ~¥20 one-way | 📍 Yuzhong to Nan&apos;an</p>
-            </div>
+            </Link>
 
-            <div className="border rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-2">3. Ciqikou Ancient Town (磁器口)</h3>
+            <Link href="/destinations/chongqing/what-to-do/ciqikou" className="block border rounded-xl p-6 transition-all duration-200 hover:shadow-md hover:bg-[#fdf8f3]">
+              <h3 className="text-xl font-semibold mb-2 text-[#1f2933]">3. Ciqikou Ancient Town (磁器口) <span className="text-[#af5d32] text-sm font-normal">→ Read more</span></h3>
               <p className="text-gray-700 mb-2">
                 Historic lanes with teahouses, street snacks, and old Chongqing character. Great for slow
                 walking and sampling local bites.
               </p>
               <p className="text-sm text-gray-600">🕐 Daytime to early evening | 💰 Free area entry | 📍 Shapingba District</p>
-            </div>
+            </Link>
 
-            <div className="border rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-2">4. Three Gorges Museum</h3>
+            <Link href="/destinations/chongqing/what-to-do/three-gorges-museum" className="block border rounded-xl p-6 transition-all duration-200 hover:shadow-md hover:bg-[#fdf8f3]">
+              <h3 className="text-xl font-semibold mb-2 text-[#1f2933]">4. Three Gorges Museum <span className="text-[#af5d32] text-sm font-normal">→ Read more</span></h3>
               <p className="text-gray-700 mb-2">
                 The best place to understand Chongqing&apos;s wartime role, migration history, and Three Gorges
                 cultural legacy.
               </p>
               <p className="text-sm text-gray-600">🕐 9:00-17:00 (closed Mondays) | 💰 Free | 📍 Across from People&apos;s Square</p>
-            </div>
+            </Link>
 
-            <div className="border rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-2">5. Liziba Monorail Station (李子坝)</h3>
+            <Link href="/destinations/chongqing/what-to-do/liziba-monorail" className="block border rounded-xl p-6 transition-all duration-200 hover:shadow-md hover:bg-[#fdf8f3]">
+              <h3 className="text-xl font-semibold mb-2 text-[#1f2933]">5. Liziba Monorail Station (李子坝) <span className="text-[#af5d32] text-sm font-normal">→ Read more</span></h3>
               <p className="text-gray-700 mb-2">
                 Chongqing&apos;s famous train-through-a-building scene. A quick stop, but a must for the iconic
                 city photo.
               </p>
               <p className="text-sm text-gray-600">🕐 Trains all day | 💰 Free to view | 📍 Line 2, Liziba Station</p>
-            </div>
+            </Link>
 
-            <div className="border rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-2">6. Eling Park</h3>
+            <Link href="/destinations/chongqing/what-to-do/eling-park" className="block border rounded-xl p-6 transition-all duration-200 hover:shadow-md hover:bg-[#fdf8f3]">
+              <h3 className="text-xl font-semibold mb-2 text-[#1f2933]">6. Eling Park <span className="text-[#af5d32] text-sm font-normal">→ Read more</span></h3>
               <p className="text-gray-700 mb-2">
                 A peaceful hilltop park with one of the best skyline panoramas over both major rivers and
                 dense urban layers.
               </p>
               <p className="text-sm text-gray-600">🕐 Sunrise to evening | 💰 Free | 📍 Yuzhong peninsula edge</p>
-            </div>
+            </Link>
           </div>
         </section>
 

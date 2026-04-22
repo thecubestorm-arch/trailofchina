@@ -75,6 +75,12 @@ export default function FrenchConcessionPage() {
   return (
     <AttractionPage
       name="French Concession"
+      breadcrumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Destinations', href: '/destinations' },
+      { label: 'Shanghai', href: '/destinations/shanghai' },
+      { label: 'What to Do', href: '/destinations/shanghai/what-to-do' },
+    ]}
       nameZh="法租界"
       city="Shanghai"
       description={`The French Concession (法租界) is Shanghai's most atmospheric neighborhood — a leafy enclave of plane tree-lined streets, 1930s Art Deco villas, and hidden lane houses that feels worlds apart from the city's hyper-modern skyline.

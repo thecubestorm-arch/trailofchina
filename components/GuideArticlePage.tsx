@@ -1,4 +1,5 @@
-import Link from 'next/link'
+import Link from 'next/link';
+import Breadcrumb from './Breadcrumb';
 
 type Step = {
   title: string
@@ -11,6 +12,7 @@ type Related = {
 }
 
 type GuideArticlePageProps = {
+  breadcrumbs?: readonly { label: string; href?: string }[];
   category: string
   title: string
   intro: string
@@ -22,6 +24,7 @@ type GuideArticlePageProps = {
 }
 
 export default function GuideArticlePage({
+  breadcrumbs,
   category,
   title,
   intro,
@@ -33,6 +36,11 @@ export default function GuideArticlePage({
 }: GuideArticlePageProps) {
   return (
     <section className="container-px mx-auto max-w-4xl py-12 md:py-16">
+      {/* Breadcrumb */}
+      <div className="mb-6">
+        <Breadcrumb items={breadcrumbs || []} />
+      </div>
+
       <p className="text-xs font-bold uppercase tracking-[0.2em] text-china-red">{category}</p>
       <h1 className="mt-3 text-4xl font-black tracking-tight text-slate-900 md:text-5xl">{title}</h1>
       <p className="mt-4 text-base leading-relaxed text-slate-600 md:text-lg">{intro}</p>

@@ -84,6 +84,12 @@ export default function TerracottaWarriorsPage() {
   return (
     <AttractionPage
       name="Terracotta Warriors"
+      breadcrumbs={[
+      { label: "Home", href: '/' },
+      { label: "Destinations", href: '/destinations' },
+      { label: "Xi'an", href: '/destinations/xian' },
+      { label: "What to Do", href: '/destinations/xian/what-to-do' },
+    ]}
       nameZh="兵马俑"
       city="Xi\'an"
       description={`The Terracotta Warriors (兵马俑) are the 2,200-year-old army of China\'s first emperor, Qin Shi Huang. Discovered in 1974 by farmers digging a well, the site contains over 8,000 life-sized soldiers, 130 chariots with 520 horses, and 150 cavalry horses.

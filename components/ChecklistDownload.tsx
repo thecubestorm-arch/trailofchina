@@ -121,15 +121,17 @@ export default function ChecklistDownload() {
         <ChinaCheatSheet />
       </div>
 
-      <section className="rounded-[1.75rem] border border-[#ebe4d8] bg-[#fffaf3] px-5 py-8 shadow-[var(--shadow-soft)] sm:px-8 sm:py-10 lg:px-10">
-        <div className="mx-auto max-w-3xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#af5d32]">Free Download</p>
-          <h2 className="mt-3 font-serif text-3xl leading-tight text-[#1f2933] sm:text-4xl">Download Your China Arrival Checklist</h2>
-          <p className="mt-4 text-base leading-7 text-[#34404b]">
-            Get a detailed 2-page checklist of everything to do before and after landing. Free.
-          </p>
+      <section className="rounded-[1.75rem] border border-[#ebe4d8] bg-[#fffaf3] px-5 py-6 shadow-[var(--shadow-soft)] sm:px-8 lg:px-10">
+        <div className="mx-auto max-w-3xl flex flex-col sm:flex-row sm:items-end sm:gap-8">
+          <div className="sm:flex-1">
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#af5d32]">Free Download</p>
+            <h2 className="mt-2 font-serif text-2xl leading-tight text-[#1f2933] sm:text-3xl">Download Your China Arrival Checklist</h2>
+            <p className="mt-2 text-sm leading-6 text-[#34404b]">
+              Get a detailed 2-page checklist of everything to do before and after landing. Free.
+            </p>
+          </div>
 
-          <form onSubmit={handleSubmit} className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-start">
+          <form onSubmit={handleSubmit} className="mt-4 flex flex-col gap-2 sm:mt-0 sm:min-w-[320px]">
             <label htmlFor="checklist-email" className="sr-only">
               Email address
             </label>
@@ -139,22 +141,22 @@ export default function ChecklistDownload() {
               value={email}
               onChange={(event) => setEmail(event.target.value)}
               placeholder="you@example.com"
-              className="w-full rounded-xl border border-[#d9d0c2] bg-white px-4 py-3 text-[#1f2933] shadow-sm outline-none transition focus:border-[#af5d32] focus:ring-2 focus:ring-[#af5d32]/30 sm:flex-1"
+              className="w-full rounded-xl border border-[#d9d0c2] bg-white px-4 py-2.5 text-sm text-[#1f2933] shadow-sm outline-none transition focus:border-[#af5d32] focus:ring-2 focus:ring-[#af5d32]/30"
               autoComplete="email"
               required
             />
             <button
               type="submit"
               disabled={isSubmitting}
-              className="inline-flex min-h-12 items-center justify-center rounded-xl bg-[#af5d32] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#8f431c] disabled:cursor-not-allowed disabled:opacity-75"
+              className="inline-flex min-h-10 items-center justify-center rounded-xl bg-[#af5d32] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#8f431c] disabled:cursor-not-allowed disabled:opacity-75"
             >
-              {isSubmitting ? 'Preparing your checklist...' : 'Get My Free Checklist'}
+              {isSubmitting ? 'Preparing...' : 'Get My Free Checklist'}
             </button>
           </form>
-
-          {error ? <p className="mt-3 text-sm text-[#9d2b2b]">{error}</p> : null}
-          {success ? <p className="mt-3 text-sm text-[#2f6b3f]">{success}</p> : null}
         </div>
+
+        {error ? <p className="mt-3 text-sm text-[#9d2b2b]">{error}</p> : null}
+        {success ? <p className="mt-3 text-sm text-[#2f6b3f]">{success}</p> : null}
       </section>
     </>
   )

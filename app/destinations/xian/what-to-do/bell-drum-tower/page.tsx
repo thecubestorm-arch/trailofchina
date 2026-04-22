@@ -71,6 +71,12 @@ export default function BellDrumTowerPage() {
   return (
     <AttractionPage
       name="Bell Tower & Drum Tower"
+      breadcrumbs={[
+      { label: "Home", href: '/' },
+      { label: "Destinations", href: '/destinations' },
+      { label: "Xi'an", href: '/destinations/xian' },
+      { label: "What to Do", href: '/destinations/xian/what-to-do' },
+    ]}
       nameZh="钟楼与鼓楼"
       city="Xi'an"
       description={`Standing at the geographic and symbolic heart of Xi'an, the Bell Tower (钟楼) and Drum Tower (鼓楼) are the city's most recognizable landmarks. These magnificent Ming dynasty structures have watched over Xi'an for over 600 years, marking time for the ancient capital and serving as gathering points for celebrations, warnings, and daily life.

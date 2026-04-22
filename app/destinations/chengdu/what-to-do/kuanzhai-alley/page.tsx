@@ -54,6 +54,12 @@ export default function KuanzhaiAlleyPage() {
   return (
     <AttractionPage
       name="Kuanzhai Alley"
+      breadcrumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Destinations', href: '/destinations' },
+      { label: 'Chengdu', href: '/destinations/chengdu' },
+      { label: 'What to Do', href: '/destinations/chengdu/what-to-do' },
+    ]}
       nameZh="宽窄巷子"
       city="Chengdu"
       description={`Three parallel Qing-dynasty alleys — Wide Alley (Kuan) for tea and culture, Narrow Alley (Zhai) for bars and boutiques, Well Alley (Jing) for local snacks and wall art. Chengdu\'s answer to Beijing\'s hutong but more polished. Packed but pretty.`}

@@ -71,6 +71,12 @@ export default function BigWildGoosePagodaPage() {
   return (
     <AttractionPage
       name="Big Wild Goose Pagoda"
+      breadcrumbs={[
+      { label: "Home", href: '/' },
+      { label: "Destinations", href: '/destinations' },
+      { label: "Xi'an", href: '/destinations/xian' },
+      { label: "What to Do", href: '/destinations/xian/what-to-do' },
+    ]}
       nameZh="大雁塔"
       city="Xi'an"
       description={`The Big Wild Goose Pagoda (大雁塔) is Xi'an's most iconic Buddhist monument and a towering symbol of the city's golden age as the eastern terminus of the Silk Road. Built in 652 AD during the Tang Dynasty, this seven-story brick pagoda was commissioned by the famous monk Xuanzang ( immortalized in Journey to the West) to house Buddhist scriptures and relics he brought back from his epic 17-year pilgrimage to India.

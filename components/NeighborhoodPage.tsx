@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import ChineseWatermark from './ChineseWatermark';
+import Breadcrumb from './Breadcrumb';
 
 type Tip = {
   type: 'tip' | 'scam' | 'photo';
@@ -13,6 +14,7 @@ type RelatedLink = {
 };
 
 interface NeighborhoodPageProps {
+  breadcrumbs?: readonly { label: string; href?: string }[];
   name: string;
   nameZh: string;
   city: string;
@@ -26,6 +28,7 @@ interface NeighborhoodPageProps {
 }
 
 export default function NeighborhoodPage({
+  breadcrumbs,
   name,
   nameZh,
   city,
@@ -44,6 +47,11 @@ export default function NeighborhoodPage({
   return (
     <div className="min-h-screen bg-white">
       <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        {/* Breadcrumb */}
+        <div className="mb-6">
+          <Breadcrumb items={breadcrumbs || []} />
+        </div>
+
         {/* Hero Section */}
         <header className="mb-10 relative">
           <ChineseWatermark character={nameZh[0] || '中'} />

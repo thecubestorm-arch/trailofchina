@@ -73,6 +73,12 @@ export default function LamaTemplePage() {
   return (
     <AttractionPage
       name="Lama Temple"
+      breadcrumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Destinations', href: '/destinations' },
+      { label: 'Beijing', href: '/destinations/beijing' },
+      { label: 'What to Do', href: '/destinations/beijing/what-to-do' },
+    ]}
       nameZh="雍和宫"
       city="Beijing"
       description={`Largest Tibetan Buddhist temple outside Tibet. Red walls, golden roofs, thick incense. The 18-meter Maitreya Buddha carved from single sandalwood tree. Visit early morning when monks chant.`}

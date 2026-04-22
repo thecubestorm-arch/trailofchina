@@ -54,6 +54,12 @@ export default function WenshuMonasteryPage() {
   return (
     <AttractionPage
       name="Wenshu Monastery"
+      breadcrumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Destinations', href: '/destinations' },
+      { label: 'Chengdu', href: '/destinations/chengdu' },
+      { label: 'What to Do', href: '/destinations/chengdu/what-to-do' },
+    ]}
       nameZh="文殊院"
       city="Chengdu"
       description={`Chengdu's best-preserved Buddhist monastery and the spiritual heart of the city. The real draw isn\'t the temple — it\'s the tea house in the courtyard where locals play mahjong for hours over ¥10 tea. This is authentic Chengdu life.`}

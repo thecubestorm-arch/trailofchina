@@ -54,6 +54,12 @@ export default function SichuanOperaPage() {
   return (
     <AttractionPage
       name="Sichuan Opera"
+      breadcrumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Destinations', href: '/destinations' },
+      { label: 'Chengdu', href: '/destinations/chengdu' },
+      { label: 'What to Do', href: '/destinations/chengdu/what-to-do' },
+    ]}
       nameZh="川剧变脸"
       city="Chengdu"
       description={`Sichuan opera\'s face-changing (bianlian) is one of China\'s most spectacular traditional arts. Masks change in a fraction of a second — by sleight of hand that\'s been secret for centuries. Chengdu is the only place to see it performed live.`}

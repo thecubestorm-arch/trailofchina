@@ -10,6 +10,12 @@ export const metadata: Metadata = {
 export default function VisaGuidePage() {
   return (
     <GuideArticlePage
+      breadcrumbs={[
+        { label: 'Home', href: '/' },
+        { label: 'China Basics', href: '/china-basics' },
+        { label: 'How China Differs', href: '/china-basics/how-china-differs' },
+        { label: 'Visa Guide', href: undefined }
+      ]}
       category="How China Differs"
       title="China Visa Guide: Everything You Need to Know (2025)"
       intro="Getting a China visa can feel intimidating, but the process is straightforward once you understand the requirements. This guide covers everything — visa types, application steps, costs, processing times, and the latest visa-free entry policies for eligible nationalities."

@@ -28,6 +28,12 @@ export default function CiqikouPage() {
   return (
     <AttractionPage
       name="Ciqikou Ancient Town"
+      breadcrumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Destinations', href: '/destinations' },
+      { label: 'Chongqing', href: '/destinations/chongqing' },
+      { label: 'What to Do', href: '/destinations/chongqing/what-to-do' },
+    ]}
       nameZh="磁器口"
       city="Chongqing"
       description="A 1,000-year-old trading town now converted into Chongqing's busiest tourist street. Narrow stone alleys lined with snack stalls, tea houses, and craft shops. Overwhelmingly crowded on weekends but genuinely atmospheric."

@@ -79,7 +79,13 @@ export default function PekingDuckPage() {
 
   return (
     <FoodDetailPage
-      name={name}
+      breadcrumbs={[
+    { label: 'Home', href: '/' },
+    { label: 'Destinations', href: '/destinations' },
+    { label: 'Beijing', href: '/destinations/beijing' },
+    { label: 'Where to Eat', href: '/destinations/beijing/where-to-eat' },
+  ]}
+    name={name}
       nameZh={nameZh}
       city={city}
       description={description}
@@ -88,6 +94,6 @@ export default function PekingDuckPage() {
       whereToTry={whereToTry}
       tips={tips}
       relatedLinks={relatedLinks}
-    />
+  />
   );
 }

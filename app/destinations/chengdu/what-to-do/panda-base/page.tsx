@@ -84,6 +84,12 @@ export default function PandaBasePage() {
   return (
     <AttractionPage
       name="Panda Base"
+      breadcrumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Destinations', href: '/destinations' },
+      { label: 'Chengdu', href: '/destinations/chengdu' },
+      { label: 'What to Do', href: '/destinations/chengdu/what-to-do' },
+    ]}
       nameZh="成都大熊猫繁育研究基地"
       city="Chengdu"
       description={`Chengdu Panda Base (成都大熊猫繁育研究基地) is the world\'s most famous giant panda sanctuary, housing over 200 pandas at any given time. Opened in 1987, it was founded to rescue and breed giant pandas, which are critically endangered.

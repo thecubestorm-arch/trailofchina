@@ -28,6 +28,12 @@ export default function ThreeGorgesMuseumPage() {
   return (
     <AttractionPage
       name="Three Gorges Museum"
+      breadcrumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Destinations', href: '/destinations' },
+      { label: 'Chongqing', href: '/destinations/chongqing' },
+      { label: 'What to Do', href: '/destinations/chongqing/what-to-do' },
+    ]}
       nameZh="三峡博物馆"
       city="Chongqing"
       description="Chongqing's best museum and one of China's finest. Four floors covering the Three Gorges Dam project, Ba culture, Chongqing's WWII history as China's wartime capital, and a stunning collection of ancient bronzes and ceramics. Free entry, air-conditioned."
