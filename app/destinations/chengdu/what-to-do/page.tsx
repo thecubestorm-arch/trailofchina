@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import LanternWatermark from '@/components/LanternWatermark';
 
 export const metadata: Metadata = {
   title: 'What to Do in Chengdu | Pandas, Teahouses, and Culture',
@@ -20,7 +21,10 @@ export default function ChengduWhatToDoPage() {
             { label: 'What to Do' },
           ]} />
         </div>
-        <h1 className="text-4xl font-bold mb-6 text-gray-900">What to Do in Chengdu</h1>
+        <div className="relative mb-6">
+          <LanternWatermark className="-top-4 -right-8" />
+          <h1 className="text-4xl font-bold text-gray-900">What to Do in Chengdu</h1>
+        </div>
 
         <section className="mb-8">
           <p className="text-lg text-gray-700 leading-relaxed">

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
 import Breadcrumb from '@/components/Breadcrumb';
+import LanternWatermark from '@/components/LanternWatermark';
 
 export const metadata: Metadata = {
   title: "What to Do in Xi'an | Terracotta Warriors, City Wall & Historic Highlights",
@@ -12,7 +13,8 @@ export default function XianWhatToDoPage() {
   return (
     <div className="min-h-screen bg-white">
       <main className="max-w-5xl mx-auto px-4 py-12">
-        <header className="mb-8">
+        <header className="mb-8 relative">
+          <LanternWatermark className="-top-4 -right-8" />
           <h1 className="text-4xl font-bold mb-4 text-gray-900">What to Do in Xi'an</h1>
           <p className="text-lg text-gray-700 leading-relaxed">
             Xi'an (西安) is where imperial history and living street culture meet. This page focuses on the
