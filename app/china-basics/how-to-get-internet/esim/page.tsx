@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import ContextualCTA from '@/components/ContextualCTA';
 
 export const metadata: Metadata = {
   title: 'eSIM Cards for China | Trail of China',
@@ -78,6 +79,17 @@ export default function EsimPage() {
         <div className="bg-[var(--accent-soft)] border-l-4 border-[var(--accent)] p-4">
           <h3 className="font-semibold text-[var(--accent-strong)] mb-2">⚠️ Important Limitations</h3>
           <p className="text-[var(--foreground)]">eSIMs use roaming networks, so they bypass the Great Firewall. However, speeds may be slower than local SIMs. VPN still recommended for full internet access.</p>
+        </div>
+
+        <div className="mt-8">
+          <ContextualCTA
+            icon="📱"
+            title="Get Your eSIM Before You Fly"
+            description="Set up data in 2 minutes — no physical SIM needed. Works on arrival."
+            buttonText="Get your eSIM →"
+            buttonHref="/china-basics/how-to-get-internet/esim"
+            variant="primary"
+          />
         </div>
       </main>
     </div>

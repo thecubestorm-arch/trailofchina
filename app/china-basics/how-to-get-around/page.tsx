@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import ContextualCTA from '@/components/ContextualCTA'
 
 export const metadata: Metadata = {
   title: 'How to Get Around in China | Trail of China',
@@ -135,6 +136,17 @@ export default function HowToGetAroundHub() {
             <br />
             <strong>For budget travel:</strong> Overnight trains and buses
           </p>
+        </div>
+
+        <div className="mt-8">
+          <ContextualCTA
+            icon="🚄"
+            title="Book Your Train Tickets Early"
+            description="High-speed trains sell out fast, especially during holidays. Book 2 weeks ahead."
+            buttonText="Plan your route →"
+            buttonHref="/plan-your-trip/preplanned-trips/7-day-route"
+            variant="secondary"
+          />
         </div>
       </main>
     </div>

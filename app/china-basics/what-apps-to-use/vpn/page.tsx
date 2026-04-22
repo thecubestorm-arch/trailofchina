@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import GuideArticlePage from '@/components/GuideArticlePage'
+import ContextualCTA from '@/components/ContextualCTA'
 
 export const metadata: Metadata = {
   title: 'VPN Guide for China Travel',
@@ -9,7 +10,8 @@ export const metadata: Metadata = {
 
 export default function VpnGuidePage() {
   return (
-    <GuideArticlePage
+    <div>
+      <GuideArticlePage
       category="What Apps to Use"
       title="VPN Guide for China Travel"
       intro="If you rely on global services for work or communication, configure your VPN before arrival. Last-minute setup inside China can be unreliable."
@@ -54,6 +56,17 @@ export default function VpnGuidePage() {
         { label: 'eSIM Guide', href: '/china-basics/how-to-get-internet/esim' },
         { label: 'Communication App', href: '/china-basics/what-apps-to-use/communication' },
       ]}
-    />
+      />
+      <div className="mt-8">
+        <ContextualCTA
+          icon="🔒"
+          title="Don't Wait Until You Land"
+          description="Install your VPN before entering China — the download sites are blocked otherwise."
+          buttonText="Get ExpressVPN →"
+          buttonHref="/china-basics/what-apps-to-use/vpn"
+          variant="secondary"
+        />
+      </div>
+    </div>
   )
 }

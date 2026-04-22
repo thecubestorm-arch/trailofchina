@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import ContextualCTA from '@/components/ContextualCTA';
 
 export const metadata: Metadata = {
   title: 'What to Do in Beijing | Forbidden City, Great Wall & Hidden Gems',
@@ -176,6 +177,17 @@ export default function BeijingWhatToDoPage() {
             <li>• Ignore touts at Deshengmen bus station claiming Bus 877 is &quot;canceled&quot; — it&apos;s a scam to sell you a ¥150 private ride</li>
             <li>• Don&apos;t visit Badaling on a Chinese national holiday — shoulder-to-shoulder crowds for miles</li>
           </ul>
+        </div>
+
+        <div className="mt-8">
+          <ContextualCTA
+            icon="🗺️"
+            title="Plan Your Perfect Beijing Trip"
+            description="See our curated 7-day itinerary with everything timed and mapped out."
+            buttonText="See Beijing itinerary →"
+            buttonHref="/plan-your-trip/preplanned-trips/7-day-route"
+            variant="secondary"
+          />
         </div>
       </main>
     </div>

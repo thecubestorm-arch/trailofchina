@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import ContextualCTA from '@/components/ContextualCTA'
 
 export const metadata: Metadata = {
   title: 'How to Get Internet in China | Trail of China',
@@ -86,6 +87,17 @@ export default function InternetHub() {
             Avoid buying SIM cards from unofficial sellers at airports. Always go to official carrier counters (China
             Mobile, China Unicom, China Telecom).
           </p>
+        </div>
+
+        <div className="mt-8">
+          <ContextualCTA
+            icon="🌐"
+            title="Don't Land Without Internet"
+            description="A VPN and eSIM are the two things you need sorted before touching down in China."
+            buttonText="See internet options →"
+            buttonHref="/china-basics/how-to-get-internet"
+            variant="primary"
+          />
         </div>
       </main>
     </div>

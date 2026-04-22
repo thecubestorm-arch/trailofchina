@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import ContextualCTA from '@/components/ContextualCTA';
 
 export const metadata: Metadata = {
   title: 'Censorship & The Great Firewall | Trail of China',
@@ -102,6 +103,17 @@ export default function CensorshipPage() {
             Personal use is generally tolerated, but selling VPN services is illegal. 
             Never discuss VPN usage openly in public or with officials.
           </p>
+        </div>
+
+        <div className="mt-8">
+          <ContextualCTA
+            icon="🔒"
+            title="Bypass the Great Firewall"
+            description="Google, WhatsApp, Instagram — all blocked in China. A VPN keeps you connected."
+            buttonText="Get a VPN for China →"
+            buttonHref="/china-basics/what-apps-to-use/vpn"
+            variant="primary"
+          />
         </div>
       </main>
     </div>

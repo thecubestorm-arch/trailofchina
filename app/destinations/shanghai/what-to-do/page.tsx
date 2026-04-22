@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import ContextualCTA from '@/components/ContextualCTA';
 
 export const metadata: Metadata = {
   title: 'What to Do in Shanghai | Trail of China',
@@ -87,6 +88,17 @@ export default function ShanghaiWhatToDoPage() {
             <li>• Overpriced boats on the river - take the ferry instead</li>
             <li>• Fake antiques in Yu Garden bazaar</li>
           </ul>
+        </div>
+
+        <div className="mt-8">
+          <ContextualCTA
+            icon="🗺️"
+            title="Plan Your Perfect Shanghai Trip"
+            description="Our step-by-step itinerary takes the guesswork out of your first visit."
+            buttonText="See Shanghai itinerary →"
+            buttonHref="/plan-your-trip/preplanned-trips/7-day-route"
+            variant="secondary"
+          />
         </div>
       </main>
     </div>
