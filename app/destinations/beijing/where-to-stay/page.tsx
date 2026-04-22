@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
   title: 'Where to Stay in Beijing | Best Neighborhoods, Hotels & Hutong Courtyards',
@@ -11,6 +12,14 @@ export default function BeijingWhereToStayPage() {
   return (
     <div className="min-h-screen bg-white">
       <main className="max-w-4xl mx-auto px-4 py-12">
+        <div className="mb-6">
+          <Breadcrumb items={[
+            { label: 'Home', href: '/' },
+            { label: 'Destinations', href: '/destinations' },
+            { label: 'Beijing', href: '/destinations/beijing' },
+            { label: 'Where to Stay' },
+          ]} />
+        </div>
         <h1 className="text-4xl font-bold mb-6 text-gray-900">Where to Stay in Beijing</h1>
 
         <section className="mb-8">

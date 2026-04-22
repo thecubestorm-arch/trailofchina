@@ -213,5 +213,165 @@ The best free viewpoint in Chongqing. Climb to the top for a 360-degree panorama
 
 **Pro Tip:** Chongqing is a 3D city — navigation apps regularly fail here. Trust the locals when they say "go up" — your destination might literally be above you. Take the escalators (not stairs) in the hillside.
 `
+  },
+  {
+    slug: "top-5-street-food-shanghai",
+    title: "Top 5 Street Foods You Must Try in Shanghai",
+    description: "From soup dumplings to crispy-bottomed buns, these are the 5 street foods that define Shanghai's culinary soul.",
+    category: "Food Guide",
+    date: "2025-04-20",
+    readingTime: "5 min",
+    tags: ["Shanghai", "Street Food", "Xiaolongbao"],
+    imageUrl: "https://picsum.photos/seed/shanghai-xiaolongbao/800/400",
+    content: `**1. Xiaolongbao (小笼包) — Soup Dumplings**
+
+Shanghai's most iconic food. These delicate steamed buns contain a rich pork broth that explodes in your mouth. The trick: bite a small hole, sip the soup, then eat the dumpling with ginger-vinegar dipping sauce. Jia Jia Tang Bao near People's Square is the gold standard — skip the fancy restaurants and eat standing at the counter like a local. Expect ¥10-15 for a basket of 4.
+
+**2. Shengjianbao (生煎包) — Pan-Fried Buns**
+
+The crispy-bottomed cousin of xiaolongbao. Thick dough on top, golden crust on the bottom, and soup inside. Yang's Dumplings is the famous chain, but any street-side shengjian shop at 7 AM will show you the real experience — lines of locals grabbing breakfast on the go. Dip in vinegar. Burn your tongue. Repeat.
+
+**3. Scallion Oil Noodles (葱油拌面)**
+
+The simplest dish in Shanghai and maybe the best. Fresh noodles tossed in scallion oil with a splash of soy sauce. That's it. No meat, no broth, no fuss. Find it at any cong you ban mian shop for ¥8-15. The best ones crisp the scallions until they're almost black — that bitter caramelization is the whole point.
+
+**4. Hairy Crab (大闸蟹)**
+
+Seasonal luxury (October-December). Shanghainese go crazy for these Yangtze Delta crabs with their golden roe and sweet meat. The traditional way: steamed with ginger, dipped in vinegar, paired with warm yellow wine. High-end restaurants charge ¥200+, but street vendors sell them for ¥30-50 each in season. Eating one properly takes 20 minutes and a lot of patience.
+
+**5. Red Braised Pork (红烧肉)**
+
+Slow-braised pork belly in soy sauce, rock sugar, and Shaoxing wine until it melts. This is the dish that made Mao Zedong famously declare it his favorite. The fat should glisten, the sauce should be thick and dark, and you should need nothing but rice to complete the meal. Every Shanghainese grandmother has her own recipe — find a small family-run restaurant for the real deal.
+
+**Pro Tip:** Shanghai street food peaks at breakfast. Hit the streets before 9 AM when the best items are freshest and the lines are shortest. Most stalls sell out by noon.
+`
+  },
+  {
+    slug: "top-5-street-food-beijing",
+    title: "Top 5 Street Foods You Must Try in Beijing",
+    description: "Beijing's street food is bold, rustic, and deeply satisfying. These 5 dishes define the capital's working-class culinary tradition.",
+    category: "Food Guide",
+    date: "2025-04-21",
+    readingTime: "5 min",
+    tags: ["Beijing", "Street Food", "Peking Duck"],
+    imageUrl: "https://picsum.photos/seed/beijing-jianbing/800/400",
+    content: `**1. Peking Duck (北京烤鸭)**
+
+The emperor of Beijing cuisine. Crispy lacquered skin, tender meat, thin pancakes, hoisin sauce, and scallion strips — assembled at your table with surgical precision. Quanjude is the famous name, but Siji Minfu and Da Dong are what locals actually recommend. A whole duck costs ¥150-300. Book ahead. The skin-only course (dipped in sugar) is a Beijing tradition you should not skip.
+
+**2. Jianbing (煎饼) — Chinese Crepe**
+
+Beijing's #1 breakfast. A thin crepe cooked on a circular griddle, smeared with chili and black bean sauces, topped with egg, crispy crackers, lettuce, and cilantro, then folded into a handheld package of joy. ¥8-15 from any street cart. Every Beijinger has their favorite corner cart — ask a local where to find the best one near you.
+
+**3. Zhajiangmian (炸酱面) — Beijing Noodles**
+
+Thick wheat noodles topped with a dark, savory sauce of stir-fried ground pork and fermented soybean paste, accompanied by a rainbow of fresh toppings (cucumber, bean sprouts, radish, edamame). You mix it all together yourself. This is Beijing comfort food at its most honest. ¥15-25 at any old-school noodle shop. Look for the ones with plastic stools on the sidewalk.
+
+**4. Lamb Skewers (羊肉串)**
+
+Cumin-dusted lamb chunks grilled over charcoal — Beijing's answer to kebabs. The Xinjiang vendors in the hutongs do it best. The cumin-chili powder combination is uniquely northern Chinese and utterly addictive. ¥3-5 per skewer. Order 10. Eat them standing. Wipe the grease on your pants like everyone else.
+
+**5. Tanghulu (糖葫芦) — Candied Fruit Skewers**
+
+Hawthorn berries dipped in hard sugar glaze on a bamboo stick. Sweet, sour, crunchy, and impossibly photogenic. You'll see vendors carrying straw bundles of them in tourist areas and hutongs. ¥10-15. The traditional hawthorn is the best, but strawberry and grape versions exist for the less adventurous. Best eaten within 10 minutes before the sugar softens.
+
+**Pro Tip:** The best Beijing street food is in the hutongs and around temple fairs. Avoid Wangfujing's "exotic" snack street — it's for tourists. The real stuff is where the cabs don't fit.
+`
+  },
+  {
+    slug: "top-5-street-food-chengdu",
+    title: "Top 5 Street Foods You Must Try in Chengdu",
+    description: "Chengdu's food will test your spice tolerance and reward your courage. These 5 dishes are the soul of Sichuan street food.",
+    category: "Food Guide",
+    date: "2025-04-22",
+    readingTime: "5 min",
+    tags: ["Chengdu", "Street Food", "Sichuan", "Spicy"],
+    imageUrl: "https://picsum.photos/seed/chengdu-hotpot/800/400",
+    content: `**1. Sichuan Hotpot (四川火锅)**
+
+The ultimate Chengdu experience. A bubbling pot of chili oil and Sichuan peppercorns where you cook your own ingredients: beef tripe, duck blood, lotus root, potato slices, and anything else that fits on a stick. The numbing-heat (麻辣) sensation is addictive. Shared pots start at ¥60/person. The dipping sauce is sesame oil + garlic + oyster sauce — mix your own. Budget 2 hours minimum.
+
+**2. Mapo Tofu (麻婆豆腐)**
+
+Soft tofu cubes swimming in a scarlet sauce of chili oil, ground beef, and Sichuan peppercorns. The original Chen Mapo Tofu restaurant has been serving it since 1862. Silky, fiery, and best eaten over plain rice. ¥25-40. The authentic version numbs your mouth for 15 minutes afterward — this is a feature, not a bug.
+
+**3. Dan Dan Noodles (担担面)**
+
+A bowl of thin noodles topped with a spoonful of savory pork sauce, chili oil, and pickled vegetables. The sauce is the star — you mix it vigorously before eating. Every Chengdu noodle shop has its own version. ¥12-20. It looks small but the flavor is concentrated — this is not a soup, it's a seasoned noodle dish. Order a second bowl if needed.
+
+**4. Kung Pao Chicken (宫保鸡丁)**
+
+Diced chicken stir-fried with peanuts, dried chili, and Sichuan peppercorns in a sweet-sour-savory sauce. Yes, you've had the Western version — now try the real one. The Chengdu original is drier, spicier, and the peanuts are crispier. ¥30-50. Best with a cold beer on a Chengdu evening.
+
+**5. Rabbit Heads (兔头)**
+
+Chengdu's notorious delicacy. Halved rabbit heads, seasoned with chili and Sichuan pepper, eaten with your hands. The cheeks are tender, the brain is creamy, and the spice level is punishing. ¥8-15 each. Locals devour these as bar snacks with beer. If you can get past the appearance, it's genuinely delicious. The麻辣 (numbing-spicy) version is the one to try.
+
+**Pro Tip:** Chengdu's spice scale is not like anywhere else. "微辣" (mild) in Chengdu = "very spicy" anywhere else. Start mild, bring tissues, and always order rice.
+`
+  },
+  {
+    slug: "top-5-street-food-xian",
+    title: "Top 5 Street Foods You Must Try in Xi'an",
+    description: "Xi'an's Silk Road heritage creates a unique food culture — Muslim-influenced, wheat-heavy, and deeply comforting.",
+    category: "Food Guide",
+    date: "2025-04-23",
+    readingTime: "5 min",
+    tags: ["Xi'an", "Street Food", "Muslim Quarter"],
+    imageUrl: "https://picsum.photos/seed/xian-roujiamo/800/400",
+    content: `**1. Yangroupaomo (羊肉泡馍) — Lamb Soup with Bread**
+
+Xi'an's signature dish. You receive a bowl of hard flatbread and a bowl of rich lamb broth — you tear the bread into pea-sized pieces and soak them in the soup. The slower you eat, the more the bread absorbs the broth. It's participatory, communal, and deeply satisfying. ¥30-50. The Muslim Quarter's Lao Sun Jia is legendary. Allow 30-40 minutes for the full experience.
+
+**2. Roujiamo (肉夹馍) — Chinese Hamburger**
+
+Slow-braised pork stuffed into a crispy baked bun — called the world's oldest hamburger (dating to the Qin dynasty, 200+ years before Rome). The pork is shredded, the bun is fresh from the oven, and the juices drip down your wrist. ¥10-15. Find the small shops near the Drum Tower for the best ones. Add chili if you dare.
+
+**3. Liangpi (凉皮) — Cold Skin Noodles**
+
+Chewy wheat noodles served cold with chili oil, black vinegar, garlic, and cucumber. The texture is bouncy, the sauce is electric, and it costs ¥8-12. Perfect on a hot Xi'an afternoon (summers hit 40°C). Look for the shops with the red plastic stools and handwritten menus. This is what Xi'an locals actually eat for lunch.
+
+**4. Biangbiang Noodles (油泼扯面)**
+
+Hand-pulled belt-width noodles — each one is 2-3 fingers wide and nearly a meter long. Topped with chili flakes, garlic, and scallions, then sizzled with hot oil poured directly on top. The theatrical oil-pour is half the experience. ¥15-25. Slurping is mandatory and expected. The character "biang" has 58 strokes — the most complex character in Chinese.
+
+**5. Persimmon Cake (柿子饼)**
+
+A sweet fried pastry stuffed with persimmon paste and walnut, crispy outside and gooey inside. Found only in the Muslim Quarter, especially in autumn when persimmons are in season. ¥5-8 each. Best eaten warm with a cup of pomegranate juice from the vendor next door. This is Xi'an's sweet tooth at its finest.
+
+**Pro Tip:** The Muslim Quarter is the epicenter, but arrive before 11 AM or after 8 PM. Peak dinner hour is packed, hot, and overwhelming. Morning is when the best stalls are freshest.
+`
+  },
+  {
+    slug: "top-5-street-food-chongqing",
+    title: "Top 5 Street Foods You Must Try in Chongqing",
+    description: "Chongqing takes everything to the extreme — hotter, spicier, bolder. These 5 street foods are not for the faint of heart.",
+    category: "Food Guide",
+    date: "2025-04-24",
+    readingTime: "5 min",
+    tags: ["Chongqing", "Street Food", "Spicy"],
+    imageUrl: "https://picsum.photos/seed/chongqing-hotpot/800/400",
+    content: `**1. Chongqing Hotpot (重庆火锅)**
+
+If Sichuan hotpot is a conversation, Chongqing hotpot is a shouting match. The broth is pure beef tallow and chili — no mild option, no split pot, no mercy. The signature ingredient is 毛肚 (beef tripe) — swish it 7 times (the "seven-second rule") and eat it crisp. ¥80-120/person. Skip the touristy Hongya Cave restaurants; find a 坝子 (outdoor courtyard) spot where locals sit on plastic stools.
+
+**2. Xiaomian (小面) — Chongqing Noodles**
+
+A bowl of fresh wheat noodles in chili oil with Sichuan pepper, scallions, and maybe a spoonful of minced pork. This is what Chongqing eats for breakfast, lunch, and dinner. ¥8-15. Every block has a xiaomian shop with its own secret chili oil recipe. The sauce should be red enough to hide the noodles. Add a fried egg on top.
+
+**3. Grilled Fish (烤鱼)**
+
+A whole fish grilled over charcoal, then served in a massive tray of chili broth with vegetables and tofu. You cook additional ingredients at the table. It's part hotpot, part barbecue, entirely Chongqing. ¥60-80 for two people. Best in the evening with cold beer. The 翠云 (Cuiyun) chain is reliable, but the hole-in-wall places near universities are cheaper and better.
+
+**4. Spicy Chicken (辣子鸡)**
+
+Diced chicken deep-fried and buried in a mountain of dried red chilies. You dig through the chilies to find the chicken pieces — like delicious archaeology. The chilies are the point, not decoration — they add smoky depth. ¥40-60. Geleshan Lazi Ji near Eling Park is the origin story. Pair with rice and a wet towel.
+
+**5. Sour Spicy Noodles (酸辣粉)**
+
+Thick sweet potato starch noodles in a tangy, spicy, vinegar-forward broth. Softer and slurpier than xiaomian, with a distinctive sour kick from pickled vegetables. ¥8-12. The best ones are at street carts near Ciqikou and metro stations. It's a quick hit of Chongqing flavor — eat it standing, burn your tongue, go back for more.
+
+**Pro Tip:** Chongqing food is not for beginners. If you need a break, order 冰粉 (bingfen) — a cold jelly dessert that cools the burn instantly. Every hotpot restaurant has it.
+`
   }
 ]

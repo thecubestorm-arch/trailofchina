@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import ContextualCTA from '@/components/ContextualCTA';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
   title: 'What to Do in Shanghai | Trail of China',
@@ -11,6 +12,14 @@ export default function ShanghaiWhatToDoPage() {
   return (
     <div className="min-h-screen bg-white">
       <main className="max-w-4xl mx-auto px-4 py-12">
+        <div className="mb-6">
+          <Breadcrumb items={[
+            { label: 'Home', href: '/' },
+            { label: 'Destinations', href: '/destinations' },
+            { label: 'Shanghai', href: '/destinations/shanghai' },
+            { label: 'What to Do' },
+          ]} />
+        </div>
         <h1 className="text-4xl font-bold mb-6 text-gray-900">What to Do in Shanghai</h1>
         
         <section className="mb-8">
