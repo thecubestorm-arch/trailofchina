@@ -91,8 +91,8 @@ export default function XianLocalTipsPage() {
         </div>
 
         <div className="bg-red-50 border-l-4 border-red-400 p-4 mb-10">
-          <h3 className="font-semibold text-red-800 mb-2">Tourist Traps</h3>
-          <ul className="text-red-900 space-y-2">
+          <h3 className="font-semibold text-gray-800 mb-2">Things to Watch Out For</h3>
+          <ul className="text-gray-700 space-y-2">
             <li>• Fake jade sold near major attractions as “museum quality”</li>
             <li>• Tea ceremony invitations that end with inflated bills</li>
             <li>• Unofficial tours with forced shopping stops and inflated pricing</li>

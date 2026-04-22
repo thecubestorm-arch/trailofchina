@@ -101,7 +101,7 @@ export default function ChongqingLocalTipsPage() {
         </div>
 
         <div className="bg-[var(--accent-soft)] border-l-4 border-[var(--accent)] p-4 mb-8">
-          <h3 className="font-semibold text-[var(--accent-strong)] mb-2">⚠️ Tourist Traps to Avoid</h3>
+          <h3 className="font-semibold text-[var(--accent-strong)] mb-2">Things to Watch Out For</h3>
           <ul className="text-[var(--foreground)] space-y-2">
             <li>• Trusting one map app blindly without cross-checking entrance levels</li>
             <li>• Over-scheduling outdoor viewpoints during heavy fog periods</li>

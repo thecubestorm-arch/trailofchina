@@ -104,8 +104,8 @@ export default function ChengduLocalTipsPage() {
 
         <section className="mb-10">
           <div className="bg-red-50 border-l-4 border-red-400 p-4 rounded-r-lg">
-            <h3 className="font-semibold text-red-800 mb-2">⚠️ Tourist Traps</h3>
-            <ul className="text-red-900 space-y-2">
+            <h3 className="font-semibold text-gray-800 mb-2">Things to Watch Out For</h3>
+            <ul className="text-gray-700 space-y-2">
               <li>• Paying premium rates for late-morning panda entry when most pandas are inactive.</li>
               <li>• Unofficial drivers near attractions quoting fixed prices well above DiDi.</li>
               <li>• Last-minute opera tickets from street sellers with unclear seat locations.</li>

@@ -3,9 +3,9 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Beijing Local Tips | Scams, Transport Hacks & Insider Secrets',
+  title: 'Beijing Local Tips | Transport, Food & Insider Secrets',
   description:
-    'Insider tips for Beijing: scams to avoid (tea ceremony, art students, fake taxis), money-saving hacks, subway survival, and cultural etiquette.',
+    'Insider tips for Beijing: transport hacks, money-saving strategies, cultural etiquette, and things to watch out for.',
 };
 
 export default function BeijingLocalTipsPage() {
@@ -24,65 +24,13 @@ export default function BeijingLocalTipsPage() {
 
         <section className="mb-8">
           <p className="text-lg text-gray-700 leading-relaxed">
-            Beijing is generally safe, but tourist-targeted scams are common around major sights.
-            Learn the patterns, carry small bills, and use apps instead of street touts.
-            Pair this with our{' '}
+            Beijing is a massive city that rewards preparation. Carry small bills, use apps instead of street touts,
+            and you&apos;ll navigate it like a local. Pair this with our{' '}
             <Link href="/destinations/beijing/where-to-eat" className="underline text-[var(--accent)]">
               Where to Eat
             </Link>{' '}
-            guide to avoid overpriced restaurants near attractions.
+            guide for the best food experiences.
           </p>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Common Scams to Avoid</h2>
-
-          <div className="space-y-4">
-            <div className="bg-[var(--accent-soft)] rounded-lg p-4 border-l-4 border-[var(--accent)]">
-              <h3 className="font-semibold text-[var(--accent-strong)]">🍵 Tea Ceremony Scam</h3>
-              <p className="text-[var(--foreground)]">
-                Friendly &quot;students&quot; approach you near Wangfujing or Qianmen, claiming to practice English.
-                They invite you to a tea house where you&apos;re hit with a ¥500-2000 bill.
-              </p>
-              <p className="text-sm text-[var(--accent-strong)] mt-2"><strong>Avoid:</strong> Never follow strangers to tea houses or &quot;cultural experiences.&quot;</p>
-            </div>
-
-            <div className="bg-[var(--accent-soft)] rounded-lg p-4 border-l-4 border-[var(--accent)]">
-              <h3 className="font-semibold text-[var(--accent-strong)]">🎨 Art Student / Gallery Scam</h3>
-              <p className="text-[var(--foreground)]">
-                &quot;Art students&quot; invite you to see their exhibition, then pressure you to buy overpriced
-                mass-produced paintings. Common near 798 Art District exits and Sanlitun.
-              </p>
-              <p className="text-sm text-[var(--accent-strong)] mt-2"><strong>Avoid:</strong> Decline any gallery invitation from people approaching you on the street.</p>
-            </div>
-
-            <div className="bg-[var(--accent-soft)] rounded-lg p-4 border-l-4 border-[var(--accent)]">
-              <h3 className="font-semibold text-[var(--accent-strong)]">🚕 Fake Taxi / Black Cab Scam</h3>
-              <p className="text-[var(--foreground)]">
-                Unlicensed drivers at Beijing Capital Airport and train stations charge 3-5x normal rates.
-                Some have rigged meters or claim &quot;flat rate&quot; fees of ¥300+ for a ¥80 ride.
-              </p>
-              <p className="text-sm text-[var(--accent-strong)] mt-2"><strong>Avoid:</strong> Use the official taxi queue, insist on the meter, or book DiDi. Never accept rides from people approaching you inside terminals.</p>
-            </div>
-
-            <div className="bg-[var(--accent-soft)] rounded-lg p-4 border-l-4 border-[var(--accent)]">
-              <h3 className="font-semibold text-[var(--accent-strong)]">🚌 Great Wall Bus Scam</h3>
-              <p className="text-[var(--foreground)]">
-                Touts at Deshengmen bus station claim the real 877 bus is &quot;canceled&quot; and redirect you to
-                a private minibus charging ¥100-150. The real bus 877 costs ¥12.
-              </p>
-              <p className="text-sm text-[var(--accent-strong)] mt-2"><strong>Avoid:</strong> Ignore touts entirely. Walk past them to the official 877 bus. It runs 6:00-12:00 to Badaling.</p>
-            </div>
-
-            <div className="bg-[var(--accent-soft)] rounded-lg p-4 border-l-4 border-[var(--accent)]">
-              <h3 className="font-semibold text-[var(--accent-strong)]">💆 Massage Scam</h3>
-              <p className="text-[var(--foreground)]">
-                Someone hands you a massage parlor flyer near your hotel. You go in for a ¥100 foot massage
-                and get hit with a ¥1000+ bill for &quot;extra services.&quot;
-              </p>
-              <p className="text-sm text-[var(--accent-strong)] mt-2"><strong>Avoid:</strong> Only visit well-reviewed massage chains (e.g., Liangzi, Bodhi). Ignore street flyers.</p>
-            </div>
-          </div>
         </section>
 
         <section className="mb-8">
@@ -136,6 +84,18 @@ export default function BeijingLocalTipsPage() {
             <li>• Carry toilet paper — most public restrooms don&apos;t provide any</li>
           </ul>
         </div>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold mb-4">Things to Watch Out For</h2>
+          <p className="text-gray-700 mb-4">Beijing is generally safe, but a few situations are worth knowing about. These are not common, but awareness helps:</p>
+          <ul className="text-gray-700 list-disc pl-5 space-y-3">
+            <li><strong>Tea ceremony invitations</strong> — Occasionally, friendly &quot;students&quot; near Wangfujing or Qianmen invite tourists to a tea house that ends with an inflated ¥500-2000 bill. Politely decline invitations from strangers on the street.</li>
+            <li><strong>Art gallery visits</strong> — &quot;Art students&quot; near 798 or Sanlitun may invite you to an exhibition, then pressure you to buy overpriced paintings. Legitimate galleries don&apos;t recruit visitors this way.</li>
+            <li><strong>Unofficial taxis at airports/stations</strong> — Drivers inside terminals may charge far above the meter rate. Use the official taxi queue outside, or book DiDi for upfront pricing.</li>
+            <li><strong>Great Wall bus touts at Deshengmen</strong> — People may claim bus 877 is &quot;canceled&quot; and redirect you to a ¥100-150 minibus. The real bus 877 costs ¥12 — walk past the touts.</li>
+            <li><strong>Massage parlor flyers</strong> — Flyers near hotels may lead to ¥100 foot massages that turn into ¥1000+ bills. Only visit well-reviewed chains like Liangzi or Bodhi.</li>
+          </ul>
+        </section>
       </main>
     </div>
   );
