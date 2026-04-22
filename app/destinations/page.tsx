@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import ChineseWatermark from '@/components/ChineseWatermark'
 
 export const metadata: Metadata = {
   title: 'Destinations | Trail of China',
@@ -69,7 +70,10 @@ export default function DestinationsHub() {
   return (
     <div className="min-h-screen bg-white">
       <main className="mx-auto max-w-4xl px-4 py-12">
-        <h1 className="mb-6 text-4xl font-bold text-gray-900">Destinations</h1>
+        <div className="relative">
+          <ChineseWatermark character="目的地" />
+          <h1 className="mb-6 text-4xl font-bold text-gray-900">Destinations</h1>
+        </div>
 
         <section className="mb-8">
           <p className="text-lg leading-relaxed text-gray-700">

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import ChineseWatermark from '@/components/ChineseWatermark'
 
 export const metadata: Metadata = {
   title: 'What Apps to Use',
@@ -59,7 +60,10 @@ export default function WhatAppsToUsePage() {
   return (
     <div className="min-h-screen bg-white">
       <main className="mx-auto max-w-4xl px-4 py-12">
-        <h1 className="mb-6 text-4xl font-bold text-gray-900">What Apps to Use in China</h1>
+        <div className="relative">
+          <ChineseWatermark character="应用" />
+          <h1 className="mb-6 text-4xl font-bold text-gray-900">What Apps to Use in China</h1>
+        </div>
 
         <section className="mb-8">
           <p className="text-lg leading-relaxed text-gray-700">

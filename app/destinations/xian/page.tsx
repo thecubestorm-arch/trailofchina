@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import ChineseWatermark from '@/components/ChineseWatermark';
 
 export const metadata: Metadata = {
   title: "Xi'an Travel Guide | Trail of China",
@@ -46,7 +47,10 @@ export default function XianPage() {
   return (
     <div className="min-h-screen bg-white">
       <main className="max-w-4xl mx-auto px-4 py-12">
-        <h1 className="text-4xl font-bold mb-6 text-gray-900">Xi&apos;an</h1>
+        <div className="relative">
+          <ChineseWatermark character="西安" />
+          <h1 className="text-4xl font-bold mb-6 text-gray-900">Xi&apos;an</h1>
+        </div>
 
         <section className="mb-8">
           <p className="text-lg text-gray-700 leading-relaxed">
