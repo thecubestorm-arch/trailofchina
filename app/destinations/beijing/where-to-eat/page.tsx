@@ -26,62 +26,63 @@ export default function BeijingWhereToEatPage() {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Must-Try Foods</h2>
+          <h2 className="text-2xl font-semibold mb-2">Must-Try Foods</h2>
+          <p className="text-gray-600 mb-6">Click any dish for the full guide</p>
 
           <div className="space-y-4">
-            <div className="border rounded-lg p-4">
+            <Link href="/destinations/beijing/where-to-eat/peking-duck" className="block border rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer">
               <h3 className="font-semibold">Peking Duck (北京烤鸭)</h3>
               <p className="text-gray-700 mb-2">
                 Crispy lacquered skin, tender meat, wrapped in thin pancakes with scallion and sweet bean sauce.
                 The dish dates to the imperial court and remains Beijing&apos;s defining meal.
               </p>
               <p className="text-sm text-gray-600">📍 Best: Quanjude (全聚德), Siji Minfu (四季民福), Da Dong (大董) | 💰 ¥150-300 per person</p>
-            </div>
+            </Link>
 
-            <div className="border rounded-lg p-4">
+            <Link href="/destinations/beijing/where-to-eat/jianbing" className="block border rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer">
               <h3 className="font-semibold">Jianbing (煎饼)</h3>
               <p className="text-gray-700 mb-2">
                 Savory crepe with egg, scallions, cilantro, and a crispy cracker (薄脆) folded inside.
                 The best ones come from morning street carts near subway entrances.
               </p>
               <p className="text-sm text-gray-600">📍 Street carts, 6:00-9:00 AM | 💰 ¥8-15</p>
-            </div>
+            </Link>
 
-            <div className="border rounded-lg p-4">
+            <Link href="/destinations/beijing/where-to-eat/zhajiangmian" className="block border rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer">
               <h3 className="font-semibold">Zhajiangmian (炸酱面)</h3>
               <p className="text-gray-700 mb-2">
                 Beijing&apos;s signature noodle bowl: hand-pulled wheat noodles topped with fermented soybean paste
                 and fresh vegetables (cucumber, bean sprouts, radish). Cheap, filling, and everywhere.
               </p>
               <p className="text-sm text-gray-600">📍 Old Beijing Noodle King (老北京炸酱面) | 💰 ¥20-35</p>
-            </div>
+            </Link>
 
-            <div className="border rounded-lg p-4">
+            <Link href="/destinations/beijing/where-to-eat/lamb-skewers" className="block border rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer">
               <h3 className="font-semibold">Lamb Skewers (羊肉串) at Muslim Quarter (牛街)</h3>
               <p className="text-gray-700 mb-2">
                 Cumin-dusted lamb skewers grilled over charcoal in the Niujie (Muslim Quarter) area.
                 Come after 6 PM when the smoke and crowds make it feel like a festival.
               </p>
               <p className="text-sm text-gray-600">📍 Niujie (牛街), Xicheng | 💰 ¥3-5 per skewer</p>
-            </div>
+            </Link>
 
-            <div className="border rounded-lg p-4">
+            <Link href="/destinations/beijing/where-to-eat/baodu" className="block border rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer">
               <h3 className="font-semibold">Baodu (爆肚) — Tripe Quick-Boil</h3>
               <p className="text-gray-700 mb-2">
                 Sliced beef tripe blanched for seconds in boiling water, dipped in sesame paste.
                 An old Beijing snack that sounds intimidating but has a clean, bouncy texture.
               </p>
               <p className="text-sm text-gray-600">📍 Baodu Feng (爆肚冯), Qianmen area | 💰 ¥25-40</p>
-            </div>
+            </Link>
 
-            <div className="border rounded-lg p-4">
+            <Link href="/destinations/beijing/where-to-eat/tanghulu" className="block border rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer">
               <h3 className="font-semibold">Tanghulu (糖葫芦)</h3>
               <p className="text-gray-700 mb-2">
                 Candied hawthorn berries on a stick — crunchy sugar shell, sour fruit inside.
                 Available from street vendors everywhere, especially around temple fairs and Wangfujing.
               </p>
               <p className="text-sm text-gray-600">📍 Street vendors | 💰 ¥10-20</p>
-            </div>
+            </Link>
           </div>
         </section>
 

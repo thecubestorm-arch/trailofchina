@@ -24,43 +24,44 @@ export default function ShanghaiWhereToEatPage() {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Must-Try Foods</h2>
+          <h2 className="text-2xl font-semibold mb-2">Must-Try Foods</h2>
+          <p className="text-gray-600 mb-6">Click any dish for the full guide</p>
           
           <div className="space-y-4">
-            <div className="border rounded-lg p-4">
+            <Link href="/destinations/shanghai/where-to-eat/xiaolongbao" className="block border rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer">
               <h3 className="font-semibold">Xiaolongbao (小笼包) — Soup Dumplings</h3>
               <p className="text-gray-700 mb-2">Steamed dumplings filled with pork and hot soup. The signature Shanghai dish.
                 Bite the top, slurp the soup, then eat the rest — never bite the whole thing at once.</p>
               <p className="text-sm text-gray-600">📍 Jia Jia Tang Bao (黄浦区黄河路), Din Tai Fung (multiple locations), Fu Chun (静安区)</p>
-            </div>
+            </Link>
 
-            <div className="border rounded-lg p-4">
+            <Link href="/destinations/shanghai/where-to-eat/shengjianbao" className="block border rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer">
               <h3 className="font-semibold">Shengjianbao (生煎包) — Pan-Fried Buns</h3>
               <p className="text-gray-700 mb-2">Crispy bottom, fluffy top, filled with pork and soup. Breakfast favorite.
                 The soup inside is scorching hot — poke a hole first to let steam escape.</p>
               <p className="text-sm text-gray-600">📍 Xiaoyang Shengjian (小杨生煎, multiple branches), Yang&apos;s Fry Dumpling (吴江路)</p>
-            </div>
+            </Link>
 
-            <div className="border rounded-lg p-4">
+            <Link href="/destinations/shanghai/where-to-eat/hairy-crab" className="block border rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer">
               <h3 className="font-semibold">Hairy Crab (大闸蟹)</h3>
               <p className="text-gray-700 mb-2">Seasonal delicacy (Oct-Nov) from nearby Yangcheng Lake. The roe is the prize —
                 rich, creamy, and intensely savory. Best at specialist crab restaurants during peak season.</p>
               <p className="text-sm text-gray-600">📍 Season: Oct-Nov | 💰 ¥80-300 per crab depending on size</p>
-            </div>
+            </Link>
 
-            <div className="border rounded-lg p-4">
+            <Link href="/destinations/shanghai/where-to-eat/scallion-oil-noodles" className="block border rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer">
               <h3 className="font-semibold">Scallion Oil Noodles (葱油拌面)</h3>
               <p className="text-gray-700 mb-2">Simple but iconic: noodles tossed in caramelized scallion oil and soy sauce.
                 The best versions have deep-brown scallions almost burnt into the oil.</p>
               <p className="text-sm text-gray-600">📍 Any old Shanghainese restaurant | 💰 ¥15-25</p>
-            </div>
+            </Link>
 
-            <div className="border rounded-lg p-4">
+            <Link href="/destinations/shanghai/where-to-eat/red-braised-pork" className="block border rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer">
               <h3 className="font-semibold">Red Braised Pork (红烧肉)</h3>
               <p className="text-gray-700 mb-2">Slow-braised pork belly in soy sauce, rock sugar, and Shaoxing wine. Meltingly
                 tender and sweet — Shanghai&apos;s comfort food. Every family has a recipe.</p>
               <p className="text-sm text-gray-600">📍 Jesse Restaurant (杰西餐厅, French Concession) | 💰 ¥40-60</p>
-            </div>
+            </Link>
           </div>
         </section>
 
