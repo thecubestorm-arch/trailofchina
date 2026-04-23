@@ -98,6 +98,11 @@ How to eat roujiamo like a local: Order it hot, straight from the pan. The contr
       whereToTry={whereToTry}
       tips={tips}
       relatedLinks={relatedLinks}
+      images={[
+        { src: "https://picsum.photos/seed/roujiamo-1/800/500", alt: "Classic Xi'an roujiamo Chinese burger with braised pork" },
+        { src: "https://picsum.photos/seed/roujiamo-2/800/500", alt: "Crispy flatbread stuffed with tender braised pork belly" },
+        { src: "https://picsum.photos/seed/roujiamo-3/800/500", alt: "Freshly made roujiamo from Xi'an Muslim Quarter stall" },
+      ]}
     />
   );
 }

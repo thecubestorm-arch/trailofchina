@@ -79,6 +79,11 @@ export default function JianbingPage() {
       whereToTry={whereToTry}
       tips={tips}
       relatedLinks={relatedLinks}
+      images={[
+        { src: "https://picsum.photos/seed/jianbing-1/800/500", alt: "Beijing jianbing crepe being cooked on a round griddle" },
+        { src: "https://picsum.photos/seed/jianbing-2/800/500", alt: "Crispy jianbing street food with egg and chili sauce" },
+        { src: "https://picsum.photos/seed/jianbing-3/800/500", alt: "Chinese savory crepe folded and ready to eat" },
+      ]}
     />
   );
 }

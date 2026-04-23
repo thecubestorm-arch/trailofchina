@@ -88,6 +88,11 @@ This was originally a working-class dish, cheap and filling for long shifts. Tod
       whereToTry={whereToTry}
       tips={tips}
       relatedLinks={relatedLinks}
+      images={[
+        { src: "https://picsum.photos/seed/scallion-oil-1/800/500", alt: "Shanghai scallion oil noodles with caramelized scallions" },
+        { src: "https://picsum.photos/seed/scallion-oil-2/800/500", alt: "Golden brown fried scallions on wheat noodles" },
+        { src: "https://picsum.photos/seed/scallion-oil-3/800/500", alt: "Simple Shanghai comfort bowl of cong you ban mian" },
+      ]}
     />
   );
 }

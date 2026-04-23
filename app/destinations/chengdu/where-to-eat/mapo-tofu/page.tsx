@@ -101,6 +101,11 @@ What makes mapo tofu special is the balance — too much Sichuan peppercorn and 
       whereToTry={whereToTry}
       tips={tips}
       relatedLinks={relatedLinks}
+      images={[
+        { src: "https://picsum.photos/seed/mapo-tofu-1/800/500", alt: "Sichuan mapo tofu with chili oil and Sichuan peppercorns" },
+        { src: "https://picsum.photos/seed/mapo-tofu-2/800/500", alt: "Silken tofu in fiery red sauce with minced pork" },
+        { src: "https://picsum.photos/seed/mapo-tofu-3/800/500", alt: "Authentic Chen mapo tofu at Qingyang District restaurant" },
+      ]}
   />
   );
 }

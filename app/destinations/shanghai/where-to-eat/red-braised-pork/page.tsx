@@ -90,6 +90,11 @@ This dish is a point of pride for Shanghai chefs — everyone claims their famil
       whereToTry={whereToTry}
       tips={tips}
       relatedLinks={relatedLinks}
+      images={[
+        { src: "https://picsum.photos/seed/red-braised-pork-1/800/500", alt: "Shanghai hong shao rou braised pork belly in dark sauce" },
+        { src: "https://picsum.photos/seed/red-braised-pork-2/800/500", alt: "Glistening red braised pork with rock sugar glaze" },
+        { src: "https://picsum.photos/seed/red-braised-pork-3/800/500", alt: "Tender braised pork belly served over white rice" },
+      ]}
     />
   );
 }

@@ -47,6 +47,11 @@ export default function GrilledFishPage() {
       whereToTry={whereToTry}
       tips={tips}
       relatedLinks={relatedLinks}
+      images={[
+        { src: "https://picsum.photos/seed/grilled-fish-1/800/500", alt: "Chongqing grilled fish sizzling in metal tray with chili oil" },
+        { src: "https://picsum.photos/seed/grilled-fish-2/800/500", alt: "Whole char-grilled fish with lotus root and tofu" },
+        { src: "https://picsum.photos/seed/grilled-fish-3/800/500", alt: "Spicy kaoyu served at table with vegetables" },
+      ]}
   />
   );
 }

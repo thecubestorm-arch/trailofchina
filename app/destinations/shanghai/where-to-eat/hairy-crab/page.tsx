@@ -88,6 +88,11 @@ Men prefer orange roe (male), while women often prefer white roe (female) — th
       whereToTry={whereToTry}
       tips={tips}
       relatedLinks={relatedLinks}
+      images={[
+        { src: "https://picsum.photos/seed/hairy-crab-1/800/500", alt: "Hairy crab with roe served during autumn season" },
+        { src: "https://picsum.photos/seed/hairy-crab-2/800/500", alt: "Steamed Yangcheng Lake hairy crab with ginger and vinegar" },
+        { src: "https://picsum.photos/seed/hairy-crab-3/800/500", alt: "Golden crab roe and fresh meat being prepared" },
+      ]}
     />
   );
 }

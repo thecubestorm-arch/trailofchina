@@ -48,6 +48,11 @@ export default function ChongqingHotpotPage() {
         { title: "Ciqikou Ancient Town", description: "Historic port town with cobblestone streets and traditional architecture.", href: "/destinations/chongqing/what-to-do/ciqikou" },
         { title: "Xiaomian", description: "Chongqing's iconic noodles - spicy and savory.", href: "/destinations/chongqing/where-to-eat/xiaomian" },
       ]}
+      images={[
+        { src: "https://picsum.photos/seed/chongqing-hotpot-1/800/500", alt: "Chongqing hotpot with rich beef tallow base" },
+        { src: "https://picsum.photos/seed/chongqing-hotpot-2/800/500", alt: "Nine-grid hotpot bubbling with chili oil" },
+        { src: "https://picsum.photos/seed/chongqing-hotpot-3/800/500", alt: "Sizzling hotpot with fresh tripe and duck intestine" },
+      ]}
     />
   );
 }

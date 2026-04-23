@@ -83,6 +83,11 @@ How they differ from xiaolongbao: Size (shengjianbao are larger), cooking method
       whereToTry={whereToTry}
       tips={tips}
       relatedLinks={relatedLinks}
+      images={[
+        { src: "https://picsum.photos/seed/shengjianbao-1/800/500", alt: "Pan-fried shengjianbao with crispy golden bottom" },
+        { src: "https://picsum.photos/seed/shengjianbao-2/800/500", alt: "Shanghai shengjianbao fresh from the hot pan" },
+        { src: "https://picsum.photos/seed/shengjianbao-3/800/500", alt: "Juicy pork shengjianbao with soup inside" },
+      ]}
     />
   );
 }

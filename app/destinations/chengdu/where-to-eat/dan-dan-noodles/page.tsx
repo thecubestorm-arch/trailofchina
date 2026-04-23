@@ -101,6 +101,11 @@ What makes Chengdu dan dan mian special is the balance of flavors — the chili 
       whereToTry={whereToTry}
       tips={tips}
       relatedLinks={relatedLinks}
+      images={[
+        { src: "https://picsum.photos/seed/dan-dan-noodles-1/800/500", alt: "Chengdu dan dan noodles topped with chili oil and ya cai" },
+        { src: "https://picsum.photos/seed/dan-dan-noodles-2/800/500", alt: "Small bowl of spicy dan dan mian with minced pork" },
+        { src: "https://picsum.photos/seed/dan-dan-noodles-3/800/500", alt: "Traditional street vendor dan dan noodles with Sichuan pepper" },
+      ]}
   />
   );
 }

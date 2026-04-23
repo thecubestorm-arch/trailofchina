@@ -79,6 +79,11 @@ export default function ZhajiangmianPage() {
       whereToTry={whereToTry}
       tips={tips}
       relatedLinks={relatedLinks}
+      images={[
+        { src: "https://picsum.photos/seed/zhajiangmian-1/800/500", alt: "Beijing zhajiangmian noodles with dark soybean paste and fresh toppings" },
+        { src: "https://picsum.photos/seed/zhajiangmian-2/800/500", alt: "Hand-pulled noodles topped with zhajiang sauce and cucumber" },
+        { src: "https://picsum.photos/seed/zhajiangmian-3/800/500", alt: "Colorful zhajiangmian bowl with edamame and bean sprouts" },
+      ]}
     />
   );
 }

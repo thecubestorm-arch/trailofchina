@@ -85,6 +85,11 @@ export default function TanghuluPage() {
       whereToTry={whereToTry}
       tips={tips}
       relatedLinks={relatedLinks}
+      images={[
+        { src: "https://picsum.photos/seed/tanghulu-1/800/500", alt: "Bright red candied hawthorn berries on skewers" },
+        { src: "https://picsum.photos/seed/tanghulu-2/800/500", alt: "Traditional Beijing tanghulu street snack with sugar glaze" },
+        { src: "https://picsum.photos/seed/tanghulu-3/800/500", alt: "Crackly sugar-coated hawthorn fruit on a stick" },
+      ]}
   />
   );
 }

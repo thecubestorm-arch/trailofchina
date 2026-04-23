@@ -85,6 +85,11 @@ export default function BaoduPage() {
       whereToTry={whereToTry}
       tips={tips}
       relatedLinks={relatedLinks}
+      images={[
+        { src: "https://picsum.photos/seed/baodu-1/800/500", alt: "Quick-blanched tripe slices dipped in sesame sauce" },
+        { src: "https://picsum.photos/seed/baodu-2/800/500", alt: "Traditional Beijing baodu served with dipping sauce" },
+        { src: "https://picsum.photos/seed/baodu-3/800/500", alt: "Thinly sliced tripe fresh from the hotpot" },
+      ]}
   />
   );
 }

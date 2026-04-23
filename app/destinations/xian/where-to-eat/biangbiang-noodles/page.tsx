@@ -100,6 +100,11 @@ How to eat biangbiang noodles like a local: Mix everything thoroughly before eat
       whereToTry={whereToTry}
       tips={tips}
       relatedLinks={relatedLinks}
+      images={[
+        { src: "https://picsum.photos/seed/biangbiang-noodles-1/800/500", alt: "Wide belt-like biangbiang noodles with chili oil" },
+        { src: "https://picsum.photos/seed/biangbiang-noodles-2/800/500", alt: "Hand-pulled biangbiang noodles being stretched" },
+        { src: "https://picsum.photos/seed/biangbiang-noodles-3/800/500", alt: "Sizzling chili oil poured over Xi'an biangbiang noodles" },
+      ]}
     />
   );
 }

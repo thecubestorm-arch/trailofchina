@@ -105,6 +105,11 @@ What makes authentic Chengdu kung pao chicken special is the dry stir-fry techni
       whereToTry={whereToTry}
       tips={tips}
       relatedLinks={relatedLinks}
+      images={[
+        { src: "https://picsum.photos/seed/kung-pao-chicken-1/800/500", alt: "Authentic kung pao chicken with dried chilies and peanuts" },
+        { src: "https://picsum.photos/seed/kung-pao-chicken-2/800/500", alt: "Gong bao ji ding with crispy peanuts and Sichuan pepper" },
+        { src: "https://picsum.photos/seed/kung-pao-chicken-3/800/500", alt: "Diced chicken stir-fried with chili and scallions" },
+      ]}
   />
   );
 }

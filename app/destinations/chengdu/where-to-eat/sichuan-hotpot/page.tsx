@@ -99,6 +99,11 @@ Hotpot in Chengdu isn\'t just a meal — it\'s a social event. Friends gather ar
       whereToTry={whereToTry}
       tips={tips}
       relatedLinks={relatedLinks}
+      images={[
+        { src: "https://picsum.photos/seed/sichuan-hotpot-1/800/500", alt: "Sichuan hotpot with bubbling red chili broth" },
+        { src: "https://picsum.photos/seed/sichuan-hotpot-2/800/500", alt: "Fresh ingredients ready to cook in mala hotpot" },
+        { src: "https://picsum.photos/seed/sichuan-hotpot-3/800/500", alt: "Split pot hotpot with spicy and mild sides in Chengdu" },
+      ]}
   />
   );
 }

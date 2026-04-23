@@ -88,6 +88,11 @@ How to eat xiaolongbao properly: First, use chopsticks to lift the dumpling gent
       whereToTry={whereToTry}
       tips={tips}
       relatedLinks={relatedLinks}
+      images={[
+        { src: "https://picsum.photos/seed/xiaolongbao-1/800/500", alt: "Xiaolongbao soup dumplings steaming in bamboo basket" },
+        { src: "https://picsum.photos/seed/xiaolongbao-2/800/500", alt: "Delicate xiaolongbao with thin translucent wrapper" },
+        { src: "https://picsum.photos/seed/xiaolongbao-3/800/500", alt: "Dipping xiaolongbao in black vinegar with ginger" },
+      ]}
     />
   );
 }

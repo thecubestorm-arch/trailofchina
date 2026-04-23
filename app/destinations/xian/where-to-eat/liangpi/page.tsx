@@ -98,6 +98,11 @@ How to eat liangpi like a local: Mix everything thoroughly before your first bit
       whereToTry={whereToTry}
       tips={tips}
       relatedLinks={relatedLinks}
+      images={[
+        { src: "https://picsum.photos/seed/liangpi-1/800/500", alt: "Refreshing cold liangpi noodles with chili oil and vinegar" },
+        { src: "https://picsum.photos/seed/liangpi-2/800/500", alt: "Xi'an summer staple liangpi with cucumber and bean sprouts" },
+        { src: "https://picsum.photos/seed/liangpi-3/800/500", alt: "Chewy wheat starch noodles dressed in fragrant sauce" },
+      ]}
     />
   );
 }

@@ -94,6 +94,11 @@ export default function PekingDuckPage() {
       whereToTry={whereToTry}
       tips={tips}
       relatedLinks={relatedLinks}
+      images={[
+        { src: "https://picsum.photos/seed/peking-duck-1/800/500", alt: "Peking duck with crispy skin served in Beijing restaurant" },
+        { src: "https://picsum.photos/seed/peking-duck-2/800/500", alt: "Whole roasted Peking duck being carved tableside" },
+        { src: "https://picsum.photos/seed/peking-duck-3/800/500", alt: "Peking duck wrapped in thin pancake with hoisin sauce" },
+      ]}
   />
   );
 }

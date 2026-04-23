@@ -46,6 +46,11 @@ export default function XiaomianPage() {
       whereToTry={whereToTry}
       tips={tips}
       relatedLinks={relatedLinks}
+      images={[
+        { src: "https://picsum.photos/seed/xiaomian-1/800/500", alt: "Chongqing xiaomian noodles tossed in spicy chili oil" },
+        { src: "https://picsum.photos/seed/xiaomian-2/800/500", alt: "Street stall bowl of xiaomian with garlic and scallions" },
+        { src: "https://picsum.photos/seed/xiaomian-3/800/500", alt: "Fresh wheat noodles drenched in Sichuan pepper sauce" },
+      ]}
   />
   );
 }

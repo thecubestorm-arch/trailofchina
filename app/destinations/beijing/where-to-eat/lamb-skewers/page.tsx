@@ -81,6 +81,11 @@ export default function LambSkewersPage() {
       whereToTry={whereToTry}
       tips={[...tips] as const}
       relatedLinks={relatedLinks}
+      images={[
+        { src: "https://picsum.photos/seed/lamb-skewers-1/800/500", alt: "Cumin-dusted lamb skewers grilling over charcoal in Beijing" },
+        { src: "https://picsum.photos/seed/lamb-skewers-2/800/500", alt: "Char-grilled lamb skewers sprinkled with chili and cumin" },
+        { src: "https://picsum.photos/seed/lamb-skewers-3/800/500", alt: "Late night lamb skewers at Guijie street market" },
+      ]}
     />
   );
 }

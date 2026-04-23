@@ -103,6 +103,11 @@ How to eat yangroupaomo like a local: Take your time breaking the bread — it's
         { title: "City Wall", description: "Best-preserved ancient city wall with a 14 km perimeter.", href: "/destinations/xian/what-to-do/city-wall" },
         { title: "Muslim Quarter", description: "Historic Islamic neighborhood with amazing street food.", href: "/destinations/xian/what-to-do/muslim-quarter" },
       ]}
+      images={[
+        { src: "https://picsum.photos/seed/yangroupaomo-1/800/500", alt: "Rich lamb broth with hand-torn flatbread in Xi'an" },
+        { src: "https://picsum.photos/seed/yangroupaomo-2/800/500", alt: "Traditional yangroupaomo with vermicelli and lamb" },
+        { src: "https://picsum.photos/seed/yangroupaomo-3/800/500", alt: "Milky-white lamb soup served in Muslim Quarter" },
+      ]}
     />
   );
 }
