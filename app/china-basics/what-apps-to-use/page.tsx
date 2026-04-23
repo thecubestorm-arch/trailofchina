@@ -69,6 +69,15 @@ const sections: Section[] = [
   },
   {
     category: 'China Basics',
+    icon: '🎫',
+    title: 'Trip.com Guide',
+    preview:
+      'Book high-speed train tickets, hotels, flights, attraction tickets, eSIMs, and airport transfers — all in English with foreign card support. Trip.com is the all-in-one booking platform every China traveler needs.',
+    tags: ['🚄 Trains', '🏨 Hotels', '✈️ Flights', '🎫 Attractions', '📱 eSIM'],
+    href: '/china-basics/what-apps-to-use/trip-com',
+  },
+  {
+    category: 'China Basics',
     icon: '🔐',
     title: 'VPN Setup',
     preview:

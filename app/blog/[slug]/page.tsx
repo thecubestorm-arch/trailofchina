@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { blogPosts } from '@/lib/blog-data'
+import RelatedArticles from '@/components/RelatedArticles'
 
 type Params = Promise<{ slug: string }>
 
@@ -82,6 +83,12 @@ export default async function BlogPostPage({ params }: { params: Params }) {
               ))}
             </div>
           </div>
+
+          {post.relatedArticles && post.relatedArticles.length > 0 && (
+            <div className="mt-10">
+              <RelatedArticles articles={post.relatedArticles} />
+            </div>
+          )}
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { blogPosts } from '@/lib/blog-data'
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata = {
   title: 'Blog | Trail of China',
@@ -55,6 +56,15 @@ export default function BlogPage() {
               </Link>
             </div>
           ))}
+        </div>
+
+        <div className="mt-12">
+          <RelatedArticles articles={[
+            { title: 'China Basics', description: 'Essential knowledge every traveler needs — visas, apps, payments, and internet', href: '/china-basics/' },
+            { title: 'Destinations', description: 'Explore Beijing, Shanghai, Chengdu, Xi\'an, Chongqing, and more', href: '/destinations/' },
+            { title: 'Plan Your Trip', description: 'Itinerary planner and pre-planned trips for every travel style', href: '/plan-your-trip/' },
+            { title: 'How China Differs', description: 'What surprises first-time visitors the most', href: '/china-basics/how-china-differs/' }
+          ]} />
         </div>
       </div>
     </div>

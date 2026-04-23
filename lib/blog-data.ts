@@ -1,3 +1,9 @@
+export type RelatedArticle = {
+  title: string
+  description: string
+  href: string
+}
+
 export type BlogPost = {
   slug: string
   title: string
@@ -8,6 +14,7 @@ export type BlogPost = {
   tags: string[]
   content: string
   imageUrl: string
+  relatedArticles: RelatedArticle[]
 }
 
 export const blogPosts: BlogPost[] = [
@@ -20,6 +27,12 @@ export const blogPosts: BlogPost[] = [
     readingTime: "7 min",
     tags: ["eSIM", "Internet", "China Unicom", "Airalo", "Holafly"],
     imageUrl: "https://picsum.photos/seed/china-esim/800/400",
+    relatedArticles: [
+      { title: "Airalo eSIM for China", description: "Setup guide and coverage details for Airalo's China eSIM", href: "/china-basics/how-to-get-internet/airalo-esim/" },
+      { title: "Holafly eSIM for China", description: "Unlimited data plans and performance review for Holafly", href: "/china-basics/how-to-get-internet/holafly-esim/" },
+      { title: "How to Get Internet in China", description: "Complete guide to staying connected — eSIMs, SIMs, and VPNs", href: "/china-basics/how-to-get-internet/" },
+      { title: "Best VPN for China", description: "Compare ExpressVPN, NordVPN, and Surfshark for the Great Firewall", href: "/blog/best-vpn-china" }
+    ],
     content: `**Which eSIM Works Best for China?**
 
 As of 2025, eSIM technology has become increasingly popular for travelers to China. While physical SIM cards still dominate the market, eSIMs offer the convenience of instant activation without needing to wait for delivery or find a local store. Three main providers stand out: Airalo, Holafly, and China Unicom's official eSIM. Let's break down which one makes the most sense for your trip.
@@ -58,6 +71,12 @@ Chinese eSIMs typically show data usage differently than home carriers. Use your
     readingTime: "8 min",
     tags: ["VPN", "Privacy", "Great Firewall", "Security"],
     imageUrl: "https://picsum.photos/seed/china-vpn/800/400",
+    relatedArticles: [
+      { title: "How to Get Internet in China", description: "Complete connectivity guide — eSIMs, SIMs, VPNs, and Wi-Fi", href: "/china-basics/how-to-get-internet/" },
+      { title: "Best eSIM for China", description: "Compare Airalo, Holafly, and China Unicom eSIM options", href: "/blog/best-esim-china" },
+      { title: "Censorship in China", description: "What's blocked and how to prepare before you go", href: "/china-basics/how-china-differs/censorship/" },
+      { title: "Essential Apps for China", description: "The apps you need to download before your trip", href: "/china-basics/what-apps-to-use/" }
+    ],
     content: `**Why You Need a VPN for China**
 
 China operates the world's most sophisticated internet filtering system, commonly known as the Great Firewall. This system blocks access to countless websites that are standard elsewhere — Google services, Facebook, Instagram, Twitter, WhatsApp, YouTube, Gmail, Dropbox, and hundreds of thousands of other sites. A VPN (Virtual Private Network) is the only reliable way to access these services while in China.
@@ -100,6 +119,12 @@ For first-time visitors: ExpressVPN for peace of mind. For budget travelers or f
     readingTime: "9 min",
     tags: ["Alipay", "Payment", "Mobile Payment", "Setup"],
     imageUrl: "https://picsum.photos/seed/china-payment/800/400",
+    relatedArticles: [
+      { title: "Alipay Setup Guide", description: "How to set up Alipay as a foreigner — step by step", href: "/china-basics/what-apps-to-use/alipay/" },
+      { title: "WeChat Pay Setup", description: "The other payment app you'll need in China", href: "/blog/wechat-pay-setup-guide" },
+      { title: "Payment Apps in China", description: "Overview of mobile payment options for travelers", href: "/china-basics/what-apps-to-use/payment/" },
+      { title: "First Time in China Survival Guide", description: "Everything you need to know before your first trip", href: "/blog/first-time-in-china-survival-guide" }
+    ],
     content: `**Why Alipay Matters**
 
 Alipay is China's dominant mobile payment platform, with over 1 billion users. While WeChat Pay competes in social payments, Alipay remains essential for larger transactions — e-commerce, utilities, transportation, and government services often require Alipay. This guide covers how to set it up as a foreigner in 2025.
@@ -194,6 +219,12 @@ Alipay is essential for daily life in China. While setup can be challenging for 
     readingTime: "8 min",
     tags: ["WeChat Pay", "Payment", "Mobile Payment", "Setup"],
     imageUrl: "https://picsum.photos/seed/wechat-pay/800/400",
+    relatedArticles: [
+      { title: "Alipay Setup Guide", description: "Step-by-step guide to setting up Alipay as a foreigner", href: "/blog/alipay-setup-guide" },
+      { title: "Payment Apps in China", description: "Overview of mobile payment options for travelers", href: "/china-basics/what-apps-to-use/payment/" },
+      { title: "WeChat Pay Setup", description: "Detailed WeChat Pay setup instructions on our China Basics page", href: "/china-basics/what-apps-to-use/wechat-pay/" },
+      { title: "Essential Apps for China", description: "All the apps you need before your trip", href: "/china-basics/what-apps-to-use/" }
+    ],
     content: `**Why WeChat Pay Matters**
 
 WeChat Pay is China's second-largest mobile payment platform, integrated into the country's most popular messaging app. While Alipay handles more commercial transactions, WeChat Pay dominates social payments — birthday gifts, group red packets (hongbao), and peer-to-peer transfers. This guide covers setup for foreigners in 2025.
@@ -316,6 +347,12 @@ For most tourists: Start with Alipay for its ease of setup, then add WeChat Pay 
     readingTime: "10 min",
     tags: ["Visa", "Entry Requirements", "Tourist Visa", "L Visa"],
     imageUrl: "https://picsum.photos/seed/china-visa/800/400",
+    relatedArticles: [
+      { title: "First Time in China Survival Guide", description: "Everything you need to know before your first trip", href: "/blog/first-time-in-china-survival-guide" },
+      { title: "How China Differs", description: "Cultural differences and what to expect", href: "/china-basics/how-china-differs/" },
+      { title: "Plan Your Trip", description: "Itinerary planner and pre-planned trips", href: "/plan-your-trip/" },
+      { title: "China Basics Hub", description: "Essential knowledge for first-time visitors", href: "/china-basics/" }
+    ],
     content: `**China Visa Overview**
 
 As of 2025, most foreign travelers need a visa to enter China for tourism. The process has become more streamlined in major cities, but requirements remain strict. This guide covers tourist visas (L visa), visa-free transit policies, and entry requirements.
@@ -506,6 +543,12 @@ For the most current information, always verify with your local Chinese embassy 
     readingTime: "8 min",
     tags: ["Visa", "Apps", "Payment", "Internet"],
     imageUrl: "https://picsum.photos/seed/china-street-food/800/400",
+    relatedArticles: [
+      { title: "China Visa Guide 2025", description: "Tourist visas, visa-free transit, and entry requirements", href: "/blog/china-visa-guide" },
+      { title: "Best eSIM for China", description: "Stay connected — compare eSIM providers for China", href: "/blog/best-esim-china" },
+      { title: "Essential Apps for China", description: "The apps you must download before you arrive", href: "/china-basics/what-apps-to-use/" },
+      { title: "How China Differs", description: "What surprises first-time visitors the most", href: "/china-basics/how-china-differs/" }
+    ],
     content: `**Visa Requirements and Application Process**
 
 Getting a China visa can be daunting for first-time visitors. As of 2025, most travelers need to apply for a visa before arrival. The process typically involves submitting your passport, completed application form, photos, and supporting documents like flight itineraries and hotel bookings to the Chinese embassy or consulate in your country. Processing times can take 4-5 working days, so plan ahead. Some cities offer visa-free transit policies for 24-72 hours if you're continuing to a third country, but for most tourists, a full visa is required. Make sure your passport has at least six months validity remaining from your planned departure date from China.
@@ -521,6 +564,12 @@ Getting a China visa can be daunting for first-time visitors. As of 2025, most t
     readingTime: "6 min",
     tags: ["Shanghai", "Beijing", "Comparison"],
     imageUrl: "https://picsum.photos/seed/shanghai-skyline/800/400",
+    relatedArticles: [
+      { title: "Top 5 Things to Do in Beijing", description: "The essential Beijing experiences for first-time visitors", href: "/blog/top-5-things-beijing" },
+      { title: "Top 5 Things to Do in Shanghai", description: "Shanghai's must-see experiences from the Bund to Yu Garden", href: "/blog/top-5-things-shanghai" },
+      { title: "Beijing Destination Guide", description: "Complete guide to China's capital", href: "/destinations/beijing/" },
+      { title: "Shanghai Destination Guide", description: "Complete guide to China's financial capital", href: "/destinations/shanghai/" }
+    ],
     content: `**Modern Megacity vs Historical Capital**
 
 Shanghai and Beijing represent two very different sides of China, and the choice between them depends on what kind of experience you're seeking. Shanghai is China's financial capital and most international city, with its iconic skyline featuring the Oriental Pearl Tower and the futuristic Pudong district. The city exudes a cosmopolitan vibe with colonial architecture in the Bund area, luxury shopping in Nanjing Road, and vibrant nightlife. For first-time visitors interested in modern China and business, Shanghai provides an impressive introduction.
@@ -535,6 +584,12 @@ Shanghai and Beijing represent two very different sides of China, and the choice
     readingTime: "10 min",
     tags: ["Great Wall", "Hiking", "Beijing"],
     imageUrl: "https://picsum.photos/seed/great-wall-hike/800/400",
+    relatedArticles: [
+      { title: "Great Wall History", description: "The 2,000-year story from Qin to Ming dynasties", href: "/blog/great-wall-history" },
+      { title: "Great Wall at Mutianyu", description: "Visitor info for the best-balanced Great Wall section", href: "/destinations/beijing/what-to-do/great-wall/" },
+      { title: "Top 5 Things to Do in Beijing", description: "Essential Beijing experiences including the Great Wall", href: "/blog/top-5-things-beijing" },
+      { title: "Beijing Destination Guide", description: "Complete guide to Beijing neighborhoods, food, and sights", href: "/destinations/beijing/" }
+    ],
     content: `**The Classic Tourist Section**
 
 Badaling is the most famous and most visited section of the Great Wall, located about 70 kilometers north of Beijing. It was the first section restored after the 1950s and has been visited by over 370 million people, including numerous world leaders. The advantage is excellent facilities, easy access via subway and bus, and wheelchair accessibility on some sections. However, it's also the most crowded, especially during holidays and weekends. If you visit during peak season, expect long queues and crowded cable cars.
@@ -549,6 +604,12 @@ Badaling is the most famous and most visited section of the Great Wall, located 
     readingTime: "6 min",
     tags: ["Shanghai", "Attractions", "First Time"],
     imageUrl: "https://picsum.photos/seed/shanghai-bund-night/800/400",
+    relatedArticles: [
+      { title: "Shanghai Destination Guide", description: "Complete guide to Shanghai neighborhoods, food, and sights", href: "/destinations/shanghai/" },
+      { title: "Shanghai vs Beijing", description: "Which city should you visit first?", href: "/blog/shanghai-vs-beijing" },
+      { title: "Top 5 Street Foods in Shanghai", description: "From xiaolongbao to scallion oil noodles", href: "/blog/top-5-street-food-shanghai" },
+      { title: "China High-Speed Rail", description: "Travel between Shanghai and Beijing in 4.5 hours", href: "/blog/china-high-speed-rail" }
+    ],
     content: `**1. The Bund (外滩)**
 
 Shanghai's iconic waterfront is the one place you absolutely cannot skip. The colonial-era buildings on the west bank face Pudong's futuristic skyline across the Huangpu River, creating one of the world's great urban vistas. Come at night when both sides light up — the view from the promenade is unforgettable. Take the ¥2 ferry across the river for the best budget photo op in China.
@@ -581,6 +642,12 @@ Free entry and one of the best collections of ancient Chinese art anywhere — c
     readingTime: "7 min",
     tags: ["Beijing", "Attractions", "History"],
     imageUrl: "https://picsum.photos/seed/beijing-great-wall/800/400",
+    relatedArticles: [
+      { title: "Beijing Destination Guide", description: "Complete guide to Beijing — where to stay, eat, and explore", href: "/destinations/beijing/" },
+      { title: "Great Wall Sections Compared", description: "Mutianyu vs Badaling vs Jinshanling — which to choose?", href: "/blog/great-wall-sections-compared" },
+      { title: "Top 5 Street Foods in Beijing", description: "Jianbing, zhajiangmian, lamb skewers, and more", href: "/blog/top-5-street-food-beijing" },
+      { title: "Shanghai vs Beijing", description: "Which city should you visit first?", href: "/blog/shanghai-vs-beijing" }
+    ],
     content: `**1. The Forbidden City (故宫)**
 
 The world's largest palace complex — 980 buildings, 8,700 rooms, 500 years of imperial rule. Enter through the Meridian Gate and walk the central axis north through succession halls of increasing intimacy. The final exit leads directly into Jingshan Park for a panoramic overview of the entire complex. Allow 3-4 hours minimum. Book tickets online in advance — same-day tickets often sell out.
@@ -613,6 +680,12 @@ Beijing's ancient alleyway neighborhoods are disappearing fast, but the ones tha
     readingTime: "6 min",
     tags: ["Chengdu", "Pandas", "Food"],
     imageUrl: "https://picsum.photos/seed/chengdu-panda/800/400",
+    relatedArticles: [
+      { title: "Chengdu Destination Guide", description: "Complete guide to Chengdu — pandas, teahouses, and spice", href: "/destinations/chengdu/" },
+      { title: "Top 5 Street Foods in Chengdu", description: "Hotpot, mapo tofu, dan dan noodles, and more", href: "/blog/top-5-street-food-chengdu" },
+      { title: "Chinese Tea Culture", description: "From gongfu ceremony to People's Park teahouses", href: "/blog/chinese-tea-culture" },
+      { title: "China High-Speed Rail", description: "Get to Chengdu by bullet train from anywhere", href: "/blog/china-high-speed-rail" }
+    ],
     content: `**1. Chengdu Research Base of Giant Panda Breeding**
 
 This is the reason most people come to Chengdu — and it delivers. See giant pandas at their most active during morning feeding time (arrive by 8 AM). The red panda enclosure is equally charming. Budget 3-4 hours. Book online to skip the queue, and take the internal shuttle if you want to save walking energy for the rest of the day.
@@ -645,6 +718,12 @@ Three parallel alleys — Wide, Narrow, and Well — offer a polished blend of o
     readingTime: "6 min",
     tags: ["Xi'an", "Terracotta Warriors", "History"],
     imageUrl: "https://picsum.photos/seed/xian-terracotta/800/400",
+    relatedArticles: [
+      { title: "Xi'an Destination Guide", description: "Complete guide to Xi'an — terracotta warriors, city wall, and Muslim Quarter", href: "/destinations/xian/" },
+      { title: "Silk Road Legacy", description: "From Xi'an to Rome — the ancient trade route that shaped civilization", href: "/blog/silk-road-legacy" },
+      { title: "Top 5 Street Foods in Xi'an", description: "Yangroupaomo, roujiamo, biangbiang noodles, and more", href: "/blog/top-5-street-food-xian" },
+      { title: "Chinese Calligraphy", description: "Visit the Stele Forest in Xi'an for world-class calligraphy", href: "/blog/chinese-calligraphy" }
+    ],
     content: `**1. Terracotta Warriors (兵马俑)**
 
 One of the greatest archaeological discoveries of the 20th century. Over 8,000 life-sized clay soldiers, each with unique facial features, guard Emperor Qin Shi Huang's tomb. Pit 1 is the most impressive — rows of warriors stretching into the distance. Hire an audio guide or a local guide (¥150-200) to understand what you're seeing. It's 40 km from the city center — allow a full half day.
@@ -677,6 +756,12 @@ Built in 652 AD to house Buddhist scriptures brought from India by monk Xuanzang
     readingTime: "6 min",
     tags: ["Chongqing", "Nightlife", "Food"],
     imageUrl: "https://picsum.photos/seed/chongqing-night/800/400",
+    relatedArticles: [
+      { title: "Chongqing Destination Guide", description: "Complete guide to the mountain city — where to stay, eat, and explore", href: "/destinations/chongqing/" },
+      { title: "Top 5 Street Foods in Chongqing", description: "Hotpot, xiaomian, grilled fish — not for the faint of heart", href: "/blog/top-5-street-food-chongqing" },
+      { title: "Chengdu Destination Guide", description: "Chengdu is just 1 hour by bullet train from Chongqing", href: "/destinations/chengdu/" },
+      { title: "China High-Speed Rail", description: "The Chengdu–Chongqing route takes just 1 hour by bullet train", href: "/blog/china-high-speed-rail" }
+    ],
     content: `**1. Hongya Cave (洪崖洞)**
 
 Chongqing's most famous sight — a 75-meter cliffside complex of shops, restaurants, and traditional stilt houses (吊脚楼) stacked 11 stories high. At night, the warm lighting turns it into something out of Spirited Away. The view from the opposite bank (Qiansimen Bridge) is the classic shot. Go after 8 PM for the full effect. It's free to wander, but the restaurants are overpriced — eat elsewhere.
@@ -709,6 +794,12 @@ The best free viewpoint in Chongqing. Climb to the top for a 360-degree panorama
     readingTime: "5 min",
     tags: ["Shanghai", "Street Food", "Xiaolongbao"],
     imageUrl: "https://picsum.photos/seed/shanghai-xiaolongbao/800/400",
+    relatedArticles: [
+      { title: "Shanghai Destination Guide", description: "Complete guide to Shanghai — where to eat, stay, and explore", href: "/destinations/shanghai/" },
+      { title: "Top 5 Things to Do in Shanghai", description: "The Bund, Yu Garden, French Concession, and more", href: "/blog/top-5-things-shanghai" },
+      { title: "Shanghai vs Beijing", description: "Which city should you visit first?", href: "/blog/shanghai-vs-beijing" },
+      { title: "Top 5 Street Foods in Beijing", description: "Compare Beijing's street food scene", href: "/blog/top-5-street-food-beijing" }
+    ],
     content: `**1. Xiaolongbao (小笼包) — Soup Dumplings**
 
 Shanghai's most iconic food. These delicate steamed buns contain a rich pork broth that explodes in your mouth. The trick: bite a small hole, sip the soup, then eat the dumpling with ginger-vinegar dipping sauce. Jia Jia Tang Bao near People's Square is the gold standard — skip the fancy restaurants and eat standing at the counter like a local. Expect ¥10-15 for a basket of 4.
@@ -741,6 +832,12 @@ Slow-braised pork belly in soy sauce, rock sugar, and Shaoxing wine until it mel
     readingTime: "5 min",
     tags: ["Beijing", "Street Food", "Peking Duck"],
     imageUrl: "https://picsum.photos/seed/beijing-jianbing/800/400",
+    relatedArticles: [
+      { title: "Beijing Destination Guide", description: "Complete guide to Beijing — neighborhoods, food, and sights", href: "/destinations/beijing/" },
+      { title: "Top 5 Things to Do in Beijing", description: "Forbidden City, Great Wall, hutongs, and more", href: "/blog/top-5-things-beijing" },
+      { title: "Great Wall Sections Compared", description: "Which section to visit — Mutianyu, Badaling, or Jinshanling?", href: "/blog/great-wall-sections-compared" },
+      { title: "Top 5 Street Foods in Shanghai", description: "Compare Shanghai's street food scene", href: "/blog/top-5-street-food-shanghai" }
+    ],
     content: `**1. Peking Duck (北京烤鸭)**
 
 The emperor of Beijing cuisine. Crispy lacquered skin, tender meat, thin pancakes, hoisin sauce, and scallion strips — assembled at your table with surgical precision. Quanjude is the famous name, but Siji Minfu and Da Dong are what locals actually recommend. A whole duck costs ¥150-300. Book ahead. The skin-only course (dipped in sugar) is a Beijing tradition you should not skip.
@@ -773,6 +870,12 @@ Hawthorn berries dipped in hard sugar glaze on a bamboo stick. Sweet, sour, crun
     readingTime: "5 min",
     tags: ["Chengdu", "Street Food", "Sichuan", "Spicy"],
     imageUrl: "https://picsum.photos/seed/chengdu-hotpot/800/400",
+    relatedArticles: [
+      { title: "Chengdu Destination Guide", description: "Complete guide to Chengdu — where to eat, stay, and explore", href: "/destinations/chengdu/" },
+      { title: "Top 5 Things to Do in Chengdu", description: "Pandas, teahouses, Sichuan opera, and more", href: "/blog/top-5-things-chengdu" },
+      { title: "Chinese Tea Culture", description: "Visit People's Park Teahouse for authentic Chengdu tea culture", href: "/blog/chinese-tea-culture" },
+      { title: "Top 5 Street Foods in Chongqing", description: "Compare Chengdu's rival city — even spicier!", href: "/blog/top-5-street-food-chongqing" }
+    ],
     content: `**1. Sichuan Hotpot (四川火锅)**
 
 The ultimate Chengdu experience. A bubbling pot of chili oil and Sichuan peppercorns where you cook your own ingredients: beef tripe, duck blood, lotus root, potato slices, and anything else that fits on a stick. The numbing-heat (麻辣) sensation is addictive. Shared pots start at ¥60/person. The dipping sauce is sesame oil + garlic + oyster sauce — mix your own. Budget 2 hours minimum.
@@ -805,6 +908,12 @@ Chengdu's notorious delicacy. Halved rabbit heads, seasoned with chili and Sichu
     readingTime: "5 min",
     tags: ["Xi'an", "Street Food", "Muslim Quarter"],
     imageUrl: "https://picsum.photos/seed/xian-roujiamo/800/400",
+    relatedArticles: [
+      { title: "Xi'an Destination Guide", description: "Complete guide to Xi'an — terracotta warriors, city wall, and Muslim Quarter", href: "/destinations/xian/" },
+      { title: "Top 5 Things to Do in Xi'an", description: "Terracotta warriors, city wall, bell towers, and more", href: "/blog/top-5-things-xian" },
+      { title: "Silk Road Legacy", description: "Xi'an as the eastern gateway of the ancient Silk Road", href: "/blog/silk-road-legacy" },
+      { title: "Chinese Calligraphy", description: "Visit the Stele Forest for 3,000 years of calligraphy", href: "/blog/chinese-calligraphy" }
+    ],
     content: `**1. Yangroupaomo (羊肉泡馍) — Lamb Soup with Bread**
 
 Xi'an's signature dish. You receive a bowl of hard flatbread and a bowl of rich lamb broth — you tear the bread into pea-sized pieces and soak them in the soup. The slower you eat, the more the bread absorbs the broth. It's participatory, communal, and deeply satisfying. ¥30-50. The Muslim Quarter's Lao Sun Jia is legendary. Allow 30-40 minutes for the full experience.
@@ -837,6 +946,12 @@ A sweet fried pastry stuffed with persimmon paste and walnut, crispy outside and
     readingTime: "5 min",
     tags: ["Chongqing", "Street Food", "Spicy"],
     imageUrl: "https://picsum.photos/seed/chongqing-hotpot/800/400",
+    relatedArticles: [
+      { title: "Chongqing Destination Guide", description: "Complete guide to Chongqing — where to eat, stay, and explore", href: "/destinations/chongqing/" },
+      { title: "Top 5 Things to Do in Chongqing", description: "Hongya Cave, cable car, Ciqikou, and more", href: "/blog/top-5-things-chongqing" },
+      { title: "Chengdu Destination Guide", description: "Just 1 hour by bullet train — combine both cities!", href: "/destinations/chengdu/" },
+      { title: "Top 5 Street Foods in Chengdu", description: "Chengdu's hotpot rival — same spice, different style", href: "/blog/top-5-street-food-chengdu" }
+    ],
     content: `**1. Chongqing Hotpot (重庆火锅)**
 
 If Sichuan hotpot is a conversation, Chongqing hotpot is a shouting match. The broth is pure beef tallow and chili — no mild option, no split pot, no mercy. The signature ingredient is 毛肚 (beef tripe) — swish it 7 times (the "seven-second rule") and eat it crisp. ¥80-120/person. Skip the touristy Hongya Cave restaurants; find a 坝子 (outdoor courtyard) spot where locals sit on plastic stools.
@@ -869,6 +984,12 @@ Thick sweet potato starch noodles in a tangy, spicy, vinegar-forward broth. Soft
     readingTime: "8 min",
     tags: ["Great Wall", "Beijing", "History", "Ancient China"],
     imageUrl: "https://picsum.photos/seed/great-wall-history/800/400",
+    relatedArticles: [
+      { title: "Great Wall Sections Compared", description: "Mutianyu vs Badaling vs Jinshanling — which to visit?", href: "/blog/great-wall-sections-compared" },
+      { title: "Great Wall at Mutianyu", description: "Visitor info for the best-balanced Great Wall section", href: "/destinations/beijing/what-to-do/great-wall/" },
+      { title: "Beijing Destination Guide", description: "Complete guide to Beijing including the Great Wall", href: "/destinations/beijing/" },
+      { title: "Silk Road Legacy", description: "The Great Wall guarded the Silk Road's northern approaches", href: "/blog/silk-road-legacy" }
+    ],
     content: `**A Monument Spanning Dynasties**
 
 The Great Wall of China is not a single structure but a series of walls built and rebuilt across more than 2,000 years. Its construction began in the 7th century BC during the Warring States period, but the most famous sections were built by three major dynasties: Qin, Han, and Ming.
@@ -928,6 +1049,12 @@ The Great Wall was never a single, continuous wall but a system of defenses that
     readingTime: "9 min",
     tags: ["Silk Road", "Xi'an", "Trade History", "Cultural Exchange", "Belt and Road"],
     imageUrl: "https://picsum.photos/seed/silk-road/800/400",
+    relatedArticles: [
+      { title: "Xi'an Destination Guide", description: "Xi'an was the eastern terminus of the Silk Road", href: "/destinations/xian/" },
+      { title: "Top 5 Things to Do in Xi'an", description: "Terracotta warriors, Muslim Quarter, city wall, and more", href: "/blog/top-5-things-xian" },
+      { title: "Great Wall History", description: "The Great Wall guarded the Silk Road's northern approaches", href: "/blog/great-wall-history" },
+      { title: "Chinese Calligraphy", description: "Visit the Stele Forest — 3,000 years of writing history", href: "/blog/chinese-calligraphy" }
+    ],
     content: `**The Network That Changed the World**
 
 The Silk Road was never a single road but a vast network of trade routes connecting China to Europe, Africa, and the Middle East. Established during the Han Dynasty in the 2nd century BC, this corridor of commerce facilitated the exchange of goods, ideas, religions, and technologies that shaped world history for over 1,500 years.
@@ -996,6 +1123,12 @@ The Silk Road was more than commerce — it was the world's first internet, faci
     readingTime: "7 min",
     tags: ["Tea", "Culture", "Ceremony", "Chengdu", "Hangzhou"],
     imageUrl: "https://picsum.photos/seed/chinese-tea/800/400",
+    relatedArticles: [
+      { title: "Chengdu Destination Guide", description: "Home of the famous People's Park Teahouse", href: "/destinations/chengdu/" },
+      { title: "Top 5 Things to Do in Chengdu", description: "Pandas, teahouses, Sichuan opera, and more", href: "/blog/top-5-things-chengdu" },
+      { title: "Chinese Calligraphy", description: "Another ancient Chinese art form — brush, ink, and spirit", href: "/blog/chinese-calligraphy" },
+      { title: "Silk Road Legacy", description: "Tea was one of the Silk Road's most important commodities", href: "/blog/silk-road-legacy" }
+    ],
     content: `**A Beverage That Shaped a Nation**
 
 China is home to tea — the plant (Camellia sinensis), the beverage, and the culture. Tea has been consumed in China for over 4,000 years, evolving from a medicinal drink to a central element of social life, philosophy, and art. This guide explores China's tea varieties, the gongfu ceremony, and where to experience the best teahouses.
@@ -1117,6 +1250,12 @@ Tea in China is never just tea. It's philosophy (Zen/Daoist principles), social 
     readingTime: "6 min",
     tags: ["High-Speed Rail", "Transportation", "12306", "China Travel", "Train"],
     imageUrl: "https://picsum.photos/seed/china-hsr/800/400",
+    relatedArticles: [
+      { title: "How to Get Around in China", description: "Complete transportation guide — trains, buses, taxis, and DiDi", href: "/china-basics/how-to-get-around/" },
+      { title: "Booking with 12306", description: "Step-by-step guide to China's rail booking platform", href: "/china-basics/how-to-get-around/12306/" },
+      { title: "Shanghai vs Beijing", description: "Which city to visit — connected by HSR in 4.5 hours", href: "/blog/shanghai-vs-beijing" },
+      { title: "Destinations Hub", description: "Explore all destinations connected by China's rail network", href: "/destinations/" }
+    ],
     content: `**The Iron Artery of Modern China**
 
 China's high-speed rail network is the largest and fastest-growing in the world, with over 40,000 kilometers of tracks as of 2025. This network connects 150+ cities and carries over 2 billion passengers annually — more than the entire population of the Americas. This guide covers everything you need to know to travel like a pro.
@@ -1226,6 +1365,12 @@ China's high-speed rail is more than transportation — it's a symbol of the cou
     readingTime: "8 min",
     tags: ["Calligraphy", "Art", "Writing", "Beijing", "Xi'an"],
     imageUrl: "https://picsum.photos/seed/chinese-calligraphy/800/400",
+    relatedArticles: [
+      { title: "Beijing Destination Guide", description: "Home to the National Museum of China's calligraphy collection", href: "/destinations/beijing/" },
+      { title: "Xi'an Destination Guide", description: "Visit the Stele Forest — the world's largest calligraphy collection", href: "/destinations/xian/" },
+      { title: "Chinese Tea Culture", description: "Tea and calligraphy — two art forms intertwined for millennia", href: "/blog/chinese-tea-culture" },
+      { title: "Silk Road Legacy", description: "Calligraphy traveled the Silk Road alongside silk and tea", href: "/blog/silk-road-legacy" }
+    ],
     content: `**The Art of the Brush Stroke**
 
 Chinese calligraphy (shūfǎ, 书法) is more than writing — it's a visual art form that has been practiced for over 3,000 years. It's considered the supreme art in traditional China, above painting and sculpture, because it directly expresses the artist's inner self through the minimal medium of ink and brush on paper.
@@ -1351,6 +1496,63 @@ Calligraphy is everywhere in China — from temple signs and shop names to poetr
 **Final Reflection**
 
 Chinese calligraphy is the art of patience, precision, and expression. Each stroke tells a story of a civilization that has valued writing as a high art for over three millennia. As you watch ink flow across paper, you're witnessing an art form that has shaped Chinese thought, aesthetics, and identity for longer than any other continuous artistic tradition on Earth.
+`
+  },
+  {
+    slug: "trip-com-complete-guide",
+    title: "Trip.com Complete Guide: Book Trains, Hotels & Flights for China",
+    description: "Trip.com is the all-in-one booking platform every China traveler needs. From high-speed train tickets to hotels, flights, attraction tickets, and even eSIMs — here's how to use it like a pro.",
+    category: "Practical Tips",
+    date: "2026-04-23",
+    readingTime: "8 min",
+    tags: ["Trip.com", "Trains", "Hotels", "Flights", "eSIM", "Booking"],
+    imageUrl: "https://picsum.photos/seed/trip-com-guide/800/400",
+    relatedArticles: [
+      { title: 'Best eSIM for China', description: 'Stay connected with the right eSIM plan.', href: '/china-basics/how-to-get-internet/esim' },
+      { title: 'Payment Apps Guide', description: 'Alipay, WeChat Pay, and how to pay in cashless China.', href: '/china-basics/what-apps-to-use/payment' },
+      { title: '12306 Train Booking Guide', description: 'The official train booking app explained.', href: '/china-basics/how-to-get-around/12306' },
+    ],
+    content: `**Why Trip.com Is the One App Every China Traveler Needs**
+
+If you're heading to China and can only install one booking app, make it Trip.com. It's the Swiss Army knife of China travel — a single platform where you can book high-speed train tickets, reserve hotels, search flights, buy attraction tickets, purchase eSIMs, and arrange airport transfers, all in English with foreign credit card support. No Chinese bank account required, no WeChat Pay needed, no language barrier to fight through.
+
+Trip.com is the international brand of Ctrip (携程), China's largest travel platform with over 400 million users. The international version is specifically designed for foreign travelers: English interface, USD/EUR/GBP pricing, and payment via Visa, Mastercard, or other international cards. It's the closest thing China has to Booking.com + Trainline + Viator, all in one app.
+
+**Booking High-Speed Train Tickets**
+
+China's bullet trains are the best way to travel between cities — fast, comfortable, and punctual. But the official booking system (12306) is entirely in Chinese and requires a Chinese phone number for verification. Trip.com solves this by pulling live data from 12306 and presenting it in a clean English interface. You see all available trains, seat classes, and prices, then book with your foreign credit card. After booking, you receive an e-ticket with a QR code — just show it at the station gate along with your passport.
+
+Book early. China's train tickets go on sale 15 days before departure, and popular routes (Beijing→Shanghai, Chengdu→Jiuzhaigou) sell out within hours, especially during holidays. Trip.com lets you set price alerts and will notify you when tickets become available.
+
+**Hotels & Serviced Apartments**
+
+Trip.com offers a massive inventory of hotels across China — from international chains like Marriott and Hilton to local boutique properties you won't find on Booking.com. The app also lists serviced apartments, which are great for longer stays and come with kitchenettes and laundry facilities.
+
+Key tip: always filter for "Free Cancellation" when booking. Plans change, and having flexibility is worth a small premium. Also, pay attention to guest ratings from international travelers rather than overall ratings, since Chinese domestic travelers have different expectations than Western tourists.
+
+**Domestic Flights**
+
+China's domestic flight network is extensive and often surprisingly cheap — you can fly Beijing to Shanghai for ¥500–800 ($70–110) on a good day. Trip.com searches all major Chinese airlines (China Eastern, Air China, China Southern, Hainan Airlines) plus international carriers. The flexible date calendar shows the cheapest days to fly.
+
+Note: budget domestic flights sometimes include only carry-on luggage. Check baggage allowances before booking, and arrive at the airport early — Chinese airports have tight security with document checks.
+
+**Attraction Tickets**
+
+Many of China's top attractions — the Forbidden City, Great Wall (various sections), Terracotta Warriors, Zhangjiajie glass bridge — cap daily visitor numbers and require advance booking. Trip.com lets you buy e-tickets with QR codes that you scan at the entrance, skipping the often chaotic ticket queues.
+
+During peak seasons (Chinese New Year, National Day Golden Week in October, summer holidays), attractions can sell out days or even weeks in advance. Book as soon as your itinerary is set.
+
+**eSIM Purchase**
+
+Trip.com now sells travel eSIMs directly through the app, powered by China Unicom's network. Plans start around $5–15 depending on data volume and duration. Activation is instant — you receive a QR code, scan it in your phone's settings, and you're online within minutes. This eliminates the need to find a physical SIM card at the airport or deal with Chinese-language registration.
+
+**Airport Transfers & Car Rental**
+
+Arriving in China at 11pm after a long flight is not the time to figure out local transit. Trip.com's "Car & Transport" section lets you pre-book private airport transfers — a driver meets you in arrivals with your name on a sign. Shared shuttles and self-drive car rentals are also available. Prices are shown upfront in your currency.
+
+**Putting It All Together**
+
+Download Trip.com before you fly. Set up your account, add your passport details, and browse options so you're familiar with the interface. Book your first train and hotel before departure — having those confirmations in your pocket makes the first 24 hours in China dramatically less stressful. Use Trip.com for big-ticket items (trains, hotels, attractions) and Alipay/WeChat Pay for daily purchases like meals and metro rides. With these three apps, you're equipped for virtually everything China throws at you.
 `
   }
 ]
