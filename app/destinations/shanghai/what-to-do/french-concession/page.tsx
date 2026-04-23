@@ -85,6 +85,8 @@ The French Concession is less a single attraction and more an experience — pla
       nearestSubway="South Shaanxi Road Station, Lines 1/10/12"
       bestTime="Weekday afternoons for fewer crowds; autumn for golden plane tree leaves"
       mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=121.4567%2C31.2097%2C121.4667%2C31.2157&layer=mapnik&marker=31.2127%2C121.4617"
+      address="Fuxing Middle Road, Huangpu District"
+      addressZh="上海市黄浦区复兴中路"
         
       relatedLinks={[
         { title: 'The Bund', href: '/destinations/shanghai/what-to-do/bund' },

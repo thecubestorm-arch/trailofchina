@@ -95,6 +95,8 @@ The base is also home to red pandas (smaller, squirrel-like relatives) and other
       nearestSubway="Panda Avenue Station, Line 3"
       bestTime="Morning hours (8:30-10:30 AM) when pandas are most active"
       mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=104.1406%2C30.731%2C104.1506%2C30.737&layer=mapnik&marker=30.734%2C104.1456"
+      address="1375 Panda Base Road, Chenghua District"
+      addressZh="成都市成华区熊猫基地路1375号"
         
       relatedLinks={[
         { title: 'Chengdu Local Tips', href: '/destinations/chengdu/local-tips' },

@@ -43,6 +43,8 @@ export default function ThreeGorgesMuseumPage() {
       bestTime="Weekday afternoon, or rainy days"
       tips={tips}
       mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=106.5478%2C29.5589%2C106.5578%2C29.5649&layer=mapnik&marker=29.5619%2C106.5528"
+      address="236 Renmin Road, Yuzhong District"
+      addressZh="重庆市渝中区人民路236号"
         
       relatedLinks={relatedLinks}
     />

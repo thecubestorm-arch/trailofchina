@@ -85,6 +85,8 @@ Three skyscrapers in Lujiazui offer observation decks. Shanghai Tower is the hig
       nearestSubway="Lujiazui Station, Line 2"
       bestTime="30 minutes before sunset for daylight-to-night transition shots"
       mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=121.4965%2C31.2325%2C121.5065%2C31.2385&layer=mapnik&marker=31.2355%2C121.5015"
+      address="501 Yincheng Middle Road, Pudong New Area"
+      addressZh="上海市浦东新区银城中路501号"
         
       relatedLinks={[
         { title: 'The Bund', href: '/destinations/shanghai/what-to-do/bund' },

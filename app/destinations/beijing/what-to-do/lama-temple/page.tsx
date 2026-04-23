@@ -77,6 +77,8 @@ export default function LamaTemplePage() {
       nearestSubway="Yonghegong, Lines 2/5"
       bestTime="Early morning (9:00-10:30) for monk chanting"
       mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=116.4126%2C39.9447%2C116.4226%2C39.9507&layer=mapnik&marker=39.9477%2C116.4176"
+      address="12 Yonghegong Street, Dongcheng District"
+      addressZh="北京市东城区雍和宫大街12号"
         
       relatedLinks={[
         { title: 'Temple of Heaven', href: '/destinations/beijing/what-to-do/temple-of-heaven' },

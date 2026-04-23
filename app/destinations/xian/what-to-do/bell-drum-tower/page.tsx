@@ -81,6 +81,8 @@ Both towers are beautifully illuminated at night, creating a magical atmosphere 
       nearestSubway="Zhonglou (Bell Tower), Line 2 or 6"
       bestTime="Sunset for photos (5-7 PM), evening for illuminated views"
       mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=108.9375%2C34.258%2C108.9475%2C34.264&layer=mapnik&marker=34.261%2C108.9425"
+      address="Bell Tower, Lianhu District"
+      addressZh="西安市莲湖区钟楼"
         
       relatedLinks={[
         { title: 'Muslim Quarter', href: '/destinations/xian/what-to-do/muslim-quarter' },

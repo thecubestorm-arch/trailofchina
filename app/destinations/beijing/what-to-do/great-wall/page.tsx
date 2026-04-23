@@ -104,6 +104,8 @@ The Great Wall is more than bricks and stone — it\'s the cultural symbol of Ch
       nearestSubway="Various — see section details below"
       bestTime="Early morning (before 8:00 AM) to beat crowds and get best light for photos"
       mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=116.5654%2C40.4289%2C116.5754%2C40.4349&layer=mapnik&marker=40.4319%2C116.5704"
+      address="Badaling, Yanqing District"
+      addressZh="北京市延庆区八达岭"
         
       relatedLinks={[
         { title: 'Forbidden City', href: '/destinations/beijing/what-to-do/forbidden-city' },

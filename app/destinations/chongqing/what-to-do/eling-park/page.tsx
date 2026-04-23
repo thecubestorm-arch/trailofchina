@@ -47,6 +47,8 @@ export default function ElingParkPage() {
       bestTime="Sunset or night for illuminated skyline"
       tips={tips}
       mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=106.5078%2C29.5501%2C106.5178%2C29.5561&layer=mapnik&marker=29.5531%2C106.5128"
+      address="Eling Main Street, Yuzhong District"
+      addressZh="重庆市渝中区鹅岭正街"
         
       relatedLinks={relatedLinks}
     />

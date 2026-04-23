@@ -88,6 +88,8 @@ export default function JinliAncientStreetPage() {
       bestTime="Evening for lanterns and night atmosphere"
       tips={[...tips, ...photoSpots]}
       mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=104.0433%2C30.6437%2C104.0533%2C30.6497&layer=mapnik&marker=30.6467%2C104.0483"
+      address="231 Wuhou Shrine Street, Wuhou District"
+      addressZh="成都市武侯区武侯祠大街231号"
         
       relatedLinks={relatedLinks}
       relatedArticles={[

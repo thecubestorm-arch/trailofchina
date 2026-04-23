@@ -48,6 +48,8 @@ export default function YangtzeCableCarPage() {
       bestTime="Sunset (6:00-7:30 PM) for golden hour skyline"
       tips={tips}
       mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=106.5764%2C29.5556%2C106.5864%2C29.5616&layer=mapnik&marker=29.5586%2C106.5814"
+      address="Xinhua Road, Yuzhong District"
+      addressZh="重庆市渝中区新华路"
         
       relatedLinks={relatedLinks}
     />

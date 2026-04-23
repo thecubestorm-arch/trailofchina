@@ -95,6 +95,8 @@ The site is a UNESCO World Heritage site and one of China\'s most famous attract
       nearestSubway="Shuttle bus from Xi\'an Station (20-30 minutes)"
       bestTime="Morning hours (8:30-10:30 AM) to beat tour groups"
       mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=109.2735%2C34.3812%2C109.2835%2C34.3872&layer=mapnik&marker=34.3842%2C109.2785"
+      address="Qinling North Road, Lintong District"
+      addressZh="西安市临潼区秦陵北路"
         
       relatedLinks={[
         { title: 'Xi\'an City Wall', href: '/destinations/xian/what-to-do/xian-city-wall' },

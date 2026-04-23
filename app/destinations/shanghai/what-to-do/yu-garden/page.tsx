@@ -79,6 +79,8 @@ Surrounding the garden is the Yuyuan Bazaar, a bustling marketplace of souvenir 
       nearestSubway="Yuyuan Garden Station, Line 10"
       bestTime="Early morning weekdays (8:30-9:30 AM) before tour groups arrive"
       mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=121.4877%2C31.2245%2C121.4977%2C31.2305&layer=mapnik&marker=31.2275%2C121.4927"
+      address="137 Anren Street, Huangpu District"
+      addressZh="上海市黄浦区安仁街137号"
         
       relatedLinks={[
         { title: 'The Bund', href: '/destinations/shanghai/what-to-do/bund' },

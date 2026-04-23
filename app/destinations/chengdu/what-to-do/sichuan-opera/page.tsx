@@ -69,6 +69,8 @@ export default function SichuanOperaPage() {
       bestTime="Evening shows (book ahead)"
       tips={tips}
       mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=104.0564%2C30.6442%2C104.0664%2C30.6502&layer=mapnik&marker=30.6472%2C104.0614"
+      address="23 Qinyang Road, Qingyang District"
+      addressZh="成都市青羊区琴台路23号"
         
       relatedLinks={relatedLinks}
     />

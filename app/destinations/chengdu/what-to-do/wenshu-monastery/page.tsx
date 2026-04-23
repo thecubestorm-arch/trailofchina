@@ -69,6 +69,8 @@ export default function WenshuMonasteryPage() {
       bestTime="Afternoon (2:00-5:00 PM) for tea house atmosphere"
       tips={tips}
       mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=104.0767%2C30.6695%2C104.0867%2C30.6755&layer=mapnik&marker=30.6725%2C104.0817"
+      address="66 Wenshu Street, Qingyang District"
+      addressZh="成都市青羊区文殊院街66号"
         
       relatedLinks={relatedLinks}
     />

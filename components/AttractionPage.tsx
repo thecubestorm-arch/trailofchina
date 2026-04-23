@@ -32,6 +32,8 @@ interface AttractionPageProps {
   nearestSubway: string;
   bestTime: string;
   tips: readonly { type: 'tip' | 'photo'; text: string }[];
+  address?: string;
+  addressZh?: string;
   mapUrl: string;
   relatedLinks: readonly { title: string; href: string }[];
   relatedArticles?: RelatedArticle[];
@@ -49,6 +51,8 @@ export default function AttractionPage({
   nearestSubway,
   bestTime,
   tips,
+  address,
+  addressZh,
   mapUrl,
   relatedLinks,
   relatedArticles,
@@ -137,6 +141,19 @@ export default function AttractionPage({
         {/* Map */}
         <section className="mb-10">
           <h2 className="text-2xl font-serif font-bold mb-4 text-[var(--foreground)]">Location</h2>
+          {(address || addressZh) && (
+            <div className="mb-3 flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 text-sm">
+              {address && (
+                <span className="text-[var(--foreground)] font-medium">{address}</span>
+              )}
+              {address && addressZh && (
+                <span className="text-[var(--muted)] hidden sm:inline">·</span>
+              )}
+              {addressZh && (
+                <span className="text-[var(--muted)]">{addressZh}</span>
+              )}
+            </div>
+          )}
           <div className="aspect-video rounded-lg overflow-hidden border border-[var(--line)] shadow-sm">
             <iframe
               src={mapUrl}

@@ -81,6 +81,8 @@ export default function HutongPage() {
       nearestSubway="Nanluoguxiang Station, Line 6"
       bestTime="Morning or late afternoon"
       mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=116.398%2C39.9341%2C116.408%2C39.9401&layer=mapnik&marker=39.9371%2C116.403"
+      address="Nanluoguxiang, Dongcheng District"
+      addressZh="北京市东城区南锣鼓巷"
         
       relatedLinks={[
         { title: 'Forbidden City', href: '/destinations/beijing/what-to-do/forbidden-city' },

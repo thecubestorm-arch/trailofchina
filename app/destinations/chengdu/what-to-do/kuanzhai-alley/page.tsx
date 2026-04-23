@@ -69,6 +69,8 @@ export default function KuanzhaiAlleyPage() {
       bestTime="Morning for quiet, evening for atmosphere"
       tips={tips}
       mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=104.0511%2C30.6667%2C104.0611%2C30.6727&layer=mapnik&marker=30.6697%2C104.0561"
+      address="8 Kuan Alley, Qingyang District"
+      addressZh="成都市青羊区宽巷子8号"
         
       relatedLinks={relatedLinks}
     />

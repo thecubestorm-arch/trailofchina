@@ -81,6 +81,8 @@ export default function TempleOfHeavenPage() {
       nearestSubway="Tiantan Dongmen, Line 5"
       bestTime="6:00-8:00 AM for local life, 8:30-11:00 for halls"
       mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=116.4016%2C39.8792%2C116.4116%2C39.8852&layer=mapnik&marker=39.8822%2C116.4066"
+      address="7 Tiantan Road, Dongcheng District"
+      addressZh="北京市东城区天坛路7号"
         
       relatedLinks={[
         { title: 'Summer Palace', href: '/destinations/beijing/what-to-do/summer-palace' },

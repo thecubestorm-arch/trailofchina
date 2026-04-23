@@ -46,6 +46,8 @@ export default function LizibaMonorailPage() {
       bestTime="Any time (frequent trains)"
       tips={tips}
       mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=106.5295%2C29.5504%2C106.5395%2C29.5564&layer=mapnik&marker=29.5534%2C106.5345"
+      address="Liziba Station, Yuzhong District"
+      addressZh="重庆市渝中区李子坝站"
         
       relatedLinks={relatedLinks}
     />

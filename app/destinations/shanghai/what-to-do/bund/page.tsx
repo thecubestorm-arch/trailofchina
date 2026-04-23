@@ -99,6 +99,8 @@ The area has evolved from a colonial enclave to asymbol of Shanghai\'s global am
       nearestSubway="Nanjing East Road Station, Line 2/10"
       bestTime="Golden hour (30 minutes before sunset) and nighttime for the skyline lights"
       mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=121.485%2C31.237%2C121.495%2C31.243&layer=mapnik&marker=31.24%2C121.49"
+      address="Zhongshan East 1st Road, Huangpu District"
+      addressZh="上海市黄浦区中山东一路"
         
       relatedLinks={[
         { title: 'Shanghai Tower', href: '/destinations/shanghai/what-to-do/shanghai-tower' },

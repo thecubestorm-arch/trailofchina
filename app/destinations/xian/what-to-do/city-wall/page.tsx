@@ -81,6 +81,8 @@ The wall is especially magical at sunset when the golden light bathes the ancien
       nearestSubway="Yongningmen (South Gate), Line 2"
       bestTime="Early morning (7-9 AM) or sunset (5-7 PM) for best light and fewer crowds"
       mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=108.9394%2C34.2531%2C108.9494%2C34.2591&layer=mapnik&marker=34.2561%2C108.9444"
+      address="South Gate, Beilin District"
+      addressZh="西安市碑林区南门"
         
       relatedLinks={[
         { title: 'Muslim Quarter', href: '/destinations/xian/what-to-do/muslim-quarter' },

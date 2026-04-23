@@ -77,6 +77,8 @@ export default function ArtDistrict798Page() {
       nearestSubway="Jiangtai, Line 14"
       bestTime="Weekend afternoons"
       mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=116.4894%2C39.9809%2C116.4994%2C39.9869&layer=mapnik&marker=39.9839%2C116.4944"
+      address="4 Jiuxianqiao Road, Chaoyang District"
+      addressZh="北京市朝阳区酒仙桥路4号"
         
       relatedLinks={[
         { title: 'Lama Temple', href: '/destinations/beijing/what-to-do/lama-temple' },

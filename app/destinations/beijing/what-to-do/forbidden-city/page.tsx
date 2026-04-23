@@ -102,6 +102,8 @@ The layout reflects ancient Chinese cosmology, with the Three Great Halls (Supre
       nearestSubway="Tiananmen East Station, Line 1"
       bestTime="Morning hours (8:30-11:00) for light and fewer crowds"
       mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=116.3922%2C39.9133%2C116.4022%2C39.9193&layer=mapnik&marker=39.9163%2C116.3972"
+      address="4 Jingshan Front Street, Dongcheng District"
+      addressZh="北京市东城区景山前街4号"
         
       relatedLinks={[
         { title: 'Summer Palace', href: '/destinations/beijing/what-to-do/summer-palace' },
