@@ -23,7 +23,7 @@ export default function PreplannedTripsPage() {
           <Link href="/plan-your-trip/preplanned-trips/7-day-route" className="block">
             <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all h-full">
               <div className="text-4xl mb-4">🧭</div>
-              <h2 className="text-2xl font-semibold mb-2">7-Day Route</h2>
+              <h3 className="text-2xl font-semibold mb-2">7-Day Route</h3>
               <p className="text-gray-600 mb-4">Beijing, Xi&apos;an, and Shanghai in one efficient week.</p>
               <ul className="text-sm text-gray-700 space-y-1">
                 <li>• 2 high-speed train legs</li>
@@ -37,7 +37,7 @@ export default function PreplannedTripsPage() {
           <Link href="/plan-your-trip/preplanned-trips/10-day-route" className="block">
             <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all h-full">
               <div className="text-4xl mb-4">🐼</div>
-              <h2 className="text-2xl font-semibold mb-2">10-Day Route</h2>
+              <h3 className="text-2xl font-semibold mb-2">10-Day Route</h3>
               <p className="text-gray-600 mb-4">Adds Chengdu pandas and Yangshuo karst scenery.</p>
               <ul className="text-sm text-gray-700 space-y-1">
                 <li>• Mix of train + one domestic flight</li>
@@ -51,7 +51,7 @@ export default function PreplannedTripsPage() {
           <Link href="/plan-your-trip/preplanned-trips/14-day-route" className="block">
             <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all h-full">
               <div className="text-4xl mb-4">🏯</div>
-              <h2 className="text-2xl font-semibold mb-2">14-Day Route</h2>
+              <h3 className="text-2xl font-semibold mb-2">14-Day Route</h3>
               <p className="text-gray-600 mb-4">Grand loop with extra rest days and deeper city time.</p>
               <ul className="text-sm text-gray-700 space-y-1">
                 <li>• Comfortable pace with buffer time</li>

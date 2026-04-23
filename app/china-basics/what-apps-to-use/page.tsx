@@ -142,9 +142,9 @@ export default function WhatAppsToUsePage() {
             >
               <article className="py-8 px-6 -mx-6 md:py-10">
               <p className="text-xs font-semibold uppercase tracking-widest text-[#af5d32]">{section.category}</p>
-              <h2 className="mt-3 text-2xl font-bold text-[#1f2933] md:text-3xl">
+              <h3 className="mt-3 text-2xl font-bold text-[#1f2933] md:text-3xl">
                 {section.icon} {section.title}
-              </h2>
+              </h3>
               <p className="mt-3 text-base leading-relaxed text-[#4a5568] md:text-lg">{section.preview}</p>
               {'wechatNote' in section && section.wechatNote && (
                 <p className="mt-2 text-sm text-[#af5d32]">

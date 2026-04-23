@@ -65,7 +65,7 @@ export default function ShanghaiPage() {
             <Link key={section.href} href={section.href} className={`block cursor-pointer rounded-lg transition-colors duration-200 hover:bg-[#fdf8f3] ${index < sections.length - 1 ? 'border-b border-[#ebe4d8] pb-8 mb-8' : ''}`}>
               <article className="py-8 px-6 -mx-6 md:py-10">
               <p className="text-xs font-semibold uppercase tracking-widest text-[#af5d32]">{section.category}</p>
-              <h2 className="text-2xl md:text-3xl font-bold text-[#1f2933] mt-3">{section.title}</h2>
+              <h3 className="text-2xl md:text-3xl font-bold text-[#1f2933] mt-3">{section.title}</h3>
               <p className="text-base md:text-lg text-[#4a5568] leading-relaxed mt-3">{section.preview}</p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {section.tags.map((tag) => (

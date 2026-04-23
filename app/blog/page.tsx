@@ -34,9 +34,9 @@ export default function BlogPage() {
                     </span>
                   </div>
 
-                  <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#1f2933] mb-3 group-hover:text-[#af5d32] transition-colors duration-200">
+                  <h3 className="font-serif text-2xl md:text-3xl font-bold text-[#1f2933] mb-3 group-hover:text-[#af5d32] transition-colors duration-200">
                     {post.title}
-                  </h2>
+                  </h3>
 
                   <p className="text-[#5d6a73] mb-4 leading-relaxed">
                     {post.description}

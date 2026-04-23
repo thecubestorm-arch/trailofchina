@@ -17,23 +17,25 @@ export default function RelatedArticles({ articles }: RelatedArticlesProps) {
 
   return (
     <section className="mb-10">
-      <h2 className="text-2xl font-serif font-bold mb-6 text-[var(--foreground)]">You Might Also Like</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <h2 className="text-sm font-bold uppercase tracking-wider text-[#af5d32] mb-4">
+        You Might Also Like
+      </h2>
+      <div className="divide-y divide-[#ebe4d8]">
         {articles.map((article, idx) => (
           <Link
             key={idx}
             href={article.href}
-            className="group block p-5 border-l-4 border-[#af5d32] rounded-lg bg-[#f5f1ea] hover:shadow-md transition-all"
+            className="group flex items-start gap-3 py-3 hover:bg-[#faf8f4] transition-colors"
           >
-            <h3 className="font-serif font-bold text-lg mb-2 text-[#333] group-hover:text-[#af5d32] transition-colors">
-              {article.title}
-            </h3>
-            <p className="text-[#555] text-sm leading-relaxed mb-3">
-              {article.description}
-            </p>
-            <span className="text-[#af5d32] text-sm font-medium flex items-center gap-1">
-              Learn more &rarr;
-            </span>
+            <span className="mt-1 text-[#af5d32] text-xs">&rarr;</span>
+            <div>
+              <h3 className="font-serif text-sm font-semibold text-[var(--foreground)] group-hover:text-[#af5d32] transition-colors">
+                {article.title}
+              </h3>
+              <p className="text-xs text-[var(--muted)] mt-0.5 line-clamp-1">
+                {article.description}
+              </p>
+            </div>
           </Link>
         ))}
       </div>
