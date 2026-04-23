@@ -110,6 +110,12 @@ What makes authentic Chengdu kung pao chicken special is the dry stir-fry techni
         { src: "https://picsum.photos/seed/kung-pao-chicken-2/800/500", alt: "Gong bao ji ding with crispy peanuts and Sichuan pepper" },
         { src: "https://picsum.photos/seed/kung-pao-chicken-3/800/500", alt: "Diced chicken stir-fried with chili and scallions" },
       ]}
-  />
+        relatedArticles={[
+        { title: "Where to Eat in Chengdu", description: "The best restaurants and street food in Chengdu.", href: "/destinations/chengdu/where-to-eat" },
+        { title: "Sichuan Hotpot", description: "A bubbling cauldron of chili oil and Sichuan pepper.", href: "/destinations/chengdu/where-to-eat/sichuan-hotpot" },
+        { title: "Mapo Tofu", description: "Silken tofu in fiery chili oil — invented here in 1862.", href: "/destinations/chengdu/where-to-eat/mapo-tofu" },
+        { title: "Local Experiences in Chengdu", description: "Pandas, tea houses, and beyond — explore Chengdu like a local.", href: "/destinations/chengdu/local-experiences" },
+      ]}
+    />
   );
 }

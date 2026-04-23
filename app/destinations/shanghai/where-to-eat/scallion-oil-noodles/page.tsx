@@ -93,6 +93,12 @@ This was originally a working-class dish, cheap and filling for long shifts. Tod
         { src: "https://picsum.photos/seed/scallion-oil-2/800/500", alt: "Golden brown fried scallions on wheat noodles" },
         { src: "https://picsum.photos/seed/scallion-oil-3/800/500", alt: "Simple Shanghai comfort bowl of cong you ban mian" },
       ]}
+          relatedArticles={[
+        { title: "Where to Eat in Shanghai", description: "The best restaurants and street food in Shanghai.", href: "/destinations/shanghai/where-to-eat" },
+        { title: "Xiaolongbao", description: "Shanghai's legendary soup dumplings — bite carefully.", href: "/destinations/shanghai/where-to-eat/xiaolongbao" },
+        { title: "Shengjianbao", description: "Pan-fried pork buns — crispy bottom, juicy inside.", href: "/destinations/shanghai/where-to-eat/shengjianbao" },
+        { title: "Local Experiences in Shanghai", description: "Discover Shanghai beyond the skyline with local tours.", href: "/destinations/shanghai/local-experiences" },
+      ]}
     />
   );
 }

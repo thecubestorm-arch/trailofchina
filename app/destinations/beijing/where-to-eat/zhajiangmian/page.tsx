@@ -84,6 +84,12 @@ export default function ZhajiangmianPage() {
         { src: "https://picsum.photos/seed/zhajiangmian-2/800/500", alt: "Hand-pulled noodles topped with zhajiang sauce and cucumber" },
         { src: "https://picsum.photos/seed/zhajiangmian-3/800/500", alt: "Colorful zhajiangmian bowl with edamame and bean sprouts" },
       ]}
+          relatedArticles={[
+        { title: "Where to Eat in Beijing", description: "The best restaurants and street food in Beijing.", href: "/destinations/beijing/where-to-eat" },
+        { title: "Peking Duck", description: "Beijing's most famous dish — crispy, lacquered perfection.", href: "/destinations/beijing/where-to-eat/peking-duck" },
+        { title: "Jianbing", description: "Chinese breakfast crepe — crispy, savory, perfect.", href: "/destinations/beijing/where-to-eat/jianbing" },
+        { title: "Local Experiences in Beijing", description: "Go beyond the monuments with authentic local tours.", href: "/destinations/beijing/local-experiences" },
+      ]}
     />
   );
 }

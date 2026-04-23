@@ -99,6 +99,12 @@ export default function PekingDuckPage() {
         { src: "https://picsum.photos/seed/peking-duck-2/800/500", alt: "Whole roasted Peking duck being carved tableside" },
         { src: "https://picsum.photos/seed/peking-duck-3/800/500", alt: "Peking duck wrapped in thin pancake with hoisin sauce" },
       ]}
-  />
+        relatedArticles={[
+        { title: "Where to Eat in Beijing", description: "The best restaurants and street food in Beijing.", href: "/destinations/beijing/where-to-eat" },
+        { title: "Zhajiangmian", description: "Beijing's famous noodle dish with savory sauce.", href: "/destinations/beijing/where-to-eat/zhajiangmian" },
+        { title: "Jianbing", description: "Chinese breakfast crepe — crispy, savory, perfect.", href: "/destinations/beijing/where-to-eat/jianbing" },
+        { title: "Local Experiences in Beijing", description: "Go beyond the monuments with authentic local tours.", href: "/destinations/beijing/local-experiences" },
+      ]}
+    />
   );
 }

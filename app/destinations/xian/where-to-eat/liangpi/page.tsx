@@ -103,6 +103,12 @@ How to eat liangpi like a local: Mix everything thoroughly before your first bit
         { src: "https://picsum.photos/seed/liangpi-2/800/500", alt: "Xi'an summer staple liangpi with cucumber and bean sprouts" },
         { src: "https://picsum.photos/seed/liangpi-3/800/500", alt: "Chewy wheat starch noodles dressed in fragrant sauce" },
       ]}
+          relatedArticles={[
+        { title: "Where to Eat in Xi'an", description: "The best restaurants and street food in Xi'an.", href: "/destinations/xian/where-to-eat" },
+        { title: "Biangbiang Noodles", description: "Wide, belt-like hand-pulled noodles drenched in chili oil.", href: "/destinations/xian/where-to-eat/biangbiang-noodles" },
+        { title: "Roujiamo", description: "The original Chinese burger — braised pork in crispy flatbread.", href: "/destinations/xian/where-to-eat/roujiamo" },
+        { title: "Local Experiences in Xi'an", description: "Terracotta Warriors, Muslim Quarter, and ancient city walls.", href: "/destinations/xian/local-experiences" },
+      ]}
     />
   );
 }

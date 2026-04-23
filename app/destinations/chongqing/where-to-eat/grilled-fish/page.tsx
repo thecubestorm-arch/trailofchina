@@ -52,6 +52,12 @@ export default function GrilledFishPage() {
         { src: "https://picsum.photos/seed/grilled-fish-2/800/500", alt: "Whole char-grilled fish with lotus root and tofu" },
         { src: "https://picsum.photos/seed/grilled-fish-3/800/500", alt: "Spicy kaoyu served at table with vegetables" },
       ]}
-  />
+        relatedArticles={[
+        { title: "Where to Eat in Chongqing", description: "The best restaurants and street food in Chongqing.", href: "/destinations/chongqing/where-to-eat" },
+        { title: "Chongqing Hotpot", description: "Beef tallow base, nine grids, pure mala — the real deal.", href: "/destinations/chongqing/where-to-eat/chongqing-hotpot" },
+        { title: "Xiaomian", description: "The humble bowl that fuels Chongqing — spicy wheat noodles.", href: "/destinations/chongqing/where-to-eat/xiaomian" },
+        { title: "Local Experiences in Chongqing", description: "Explore the mountain city's hidden corners with local guides.", href: "/destinations/chongqing/local-experiences" },
+      ]}
+    />
   );
 }

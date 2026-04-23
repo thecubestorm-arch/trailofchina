@@ -106,6 +106,12 @@ What makes mapo tofu special is the balance — too much Sichuan peppercorn and 
         { src: "https://picsum.photos/seed/mapo-tofu-2/800/500", alt: "Silken tofu in fiery red sauce with minced pork" },
         { src: "https://picsum.photos/seed/mapo-tofu-3/800/500", alt: "Authentic Chen mapo tofu at Qingyang District restaurant" },
       ]}
-  />
+        relatedArticles={[
+        { title: "Where to Eat in Chengdu", description: "The best restaurants and street food in Chengdu.", href: "/destinations/chengdu/where-to-eat" },
+        { title: "Sichuan Hotpot", description: "A bubbling cauldron of chili oil and Sichuan pepper.", href: "/destinations/chengdu/where-to-eat/sichuan-hotpot" },
+        { title: "Dan Dan Noodles", description: "Small bowl, massive flavor — Chengdu's iconic street noodles.", href: "/destinations/chengdu/where-to-eat/dan-dan-noodles" },
+        { title: "Local Experiences in Chengdu", description: "Pandas, tea houses, and beyond — explore Chengdu like a local.", href: "/destinations/chengdu/local-experiences" },
+      ]}
+    />
   );
 }

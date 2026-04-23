@@ -93,6 +93,12 @@ Men prefer orange roe (male), while women often prefer white roe (female) — th
         { src: "https://picsum.photos/seed/hairy-crab-2/800/500", alt: "Steamed Yangcheng Lake hairy crab with ginger and vinegar" },
         { src: "https://picsum.photos/seed/hairy-crab-3/800/500", alt: "Golden crab roe and fresh meat being prepared" },
       ]}
+          relatedArticles={[
+        { title: "Where to Eat in Shanghai", description: "The best restaurants and street food in Shanghai.", href: "/destinations/shanghai/where-to-eat" },
+        { title: "Xiaolongbao", description: "Shanghai's legendary soup dumplings — bite carefully.", href: "/destinations/shanghai/where-to-eat/xiaolongbao" },
+        { title: "Red Braised Pork", description: "Melt-in-your-mouth pork belly braised in soy and sugar.", href: "/destinations/shanghai/where-to-eat/red-braised-pork" },
+        { title: "Local Experiences in Shanghai", description: "Discover Shanghai beyond the skyline with local tours.", href: "/destinations/shanghai/local-experiences" },
+      ]}
     />
   );
 }

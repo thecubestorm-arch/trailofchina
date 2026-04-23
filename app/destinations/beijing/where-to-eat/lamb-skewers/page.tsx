@@ -86,6 +86,12 @@ export default function LambSkewersPage() {
         { src: "https://picsum.photos/seed/lamb-skewers-2/800/500", alt: "Char-grilled lamb skewers sprinkled with chili and cumin" },
         { src: "https://picsum.photos/seed/lamb-skewers-3/800/500", alt: "Late night lamb skewers at Guijie street market" },
       ]}
+          relatedArticles={[
+        { title: "Where to Eat in Beijing", description: "The best restaurants and street food in Beijing.", href: "/destinations/beijing/where-to-eat" },
+        { title: "Peking Duck", description: "Beijing's most famous dish — crispy, lacquered perfection.", href: "/destinations/beijing/where-to-eat/peking-duck" },
+        { title: "Tanghulu", description: "Candied hawthorn on a stick — Beijing's iconic street snack.", href: "/destinations/beijing/where-to-eat/tanghulu" },
+        { title: "Local Experiences in Beijing", description: "Go beyond the monuments with authentic local tours.", href: "/destinations/beijing/local-experiences" },
+      ]}
     />
   );
 }

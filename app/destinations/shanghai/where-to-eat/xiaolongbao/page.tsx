@@ -93,6 +93,12 @@ How to eat xiaolongbao properly: First, use chopsticks to lift the dumpling gent
         { src: "https://picsum.photos/seed/xiaolongbao-2/800/500", alt: "Delicate xiaolongbao with thin translucent wrapper" },
         { src: "https://picsum.photos/seed/xiaolongbao-3/800/500", alt: "Dipping xiaolongbao in black vinegar with ginger" },
       ]}
+          relatedArticles={[
+        { title: "Where to Eat in Shanghai", description: "The best restaurants and street food in Shanghai.", href: "/destinations/shanghai/where-to-eat" },
+        { title: "Shengjianbao", description: "Pan-fried pork buns — crispy bottom, juicy inside.", href: "/destinations/shanghai/where-to-eat/shengjianbao" },
+        { title: "Hairy Crab", description: "Yangcheng Lake delicacy — autumn's most prized catch.", href: "/destinations/shanghai/where-to-eat/hairy-crab" },
+        { title: "Local Experiences in Shanghai", description: "Discover Shanghai beyond the skyline with local tours.", href: "/destinations/shanghai/local-experiences" },
+      ]}
     />
   );
 }

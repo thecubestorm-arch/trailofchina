@@ -103,6 +103,12 @@ How to eat roujiamo like a local: Order it hot, straight from the pan. The contr
         { src: "https://picsum.photos/seed/roujiamo-2/800/500", alt: "Crispy flatbread stuffed with tender braised pork belly" },
         { src: "https://picsum.photos/seed/roujiamo-3/800/500", alt: "Freshly made roujiamo from Xi'an Muslim Quarter stall" },
       ]}
+          relatedArticles={[
+        { title: "Where to Eat in Xi'an", description: "The best restaurants and street food in Xi'an.", href: "/destinations/xian/where-to-eat" },
+        { title: "Yangroupaomo", description: "Lamb soup with hand-torn flatbread — a 2,000-year-old tradition.", href: "/destinations/xian/where-to-eat/yangroupaomo" },
+        { title: "Biangbiang Noodles", description: "Wide, belt-like hand-pulled noodles drenched in chili oil.", href: "/destinations/xian/where-to-eat/biangbiang-noodles" },
+        { title: "Local Experiences in Xi'an", description: "Terracotta Warriors, Muslim Quarter, and ancient city walls.", href: "/destinations/xian/local-experiences" },
+      ]}
     />
   );
 }

@@ -104,6 +104,12 @@ Hotpot in Chengdu isn\'t just a meal — it\'s a social event. Friends gather ar
         { src: "https://picsum.photos/seed/sichuan-hotpot-2/800/500", alt: "Fresh ingredients ready to cook in mala hotpot" },
         { src: "https://picsum.photos/seed/sichuan-hotpot-3/800/500", alt: "Split pot hotpot with spicy and mild sides in Chengdu" },
       ]}
-  />
+        relatedArticles={[
+        { title: "Where to Eat in Chengdu", description: "The best restaurants and street food in Chengdu.", href: "/destinations/chengdu/where-to-eat" },
+        { title: "Mapo Tofu", description: "Silken tofu in fiery chili oil — invented here in 1862.", href: "/destinations/chengdu/where-to-eat/mapo-tofu" },
+        { title: "Kung Pao Chicken", description: "The real thing — dry, complex, and peanut-forward.", href: "/destinations/chengdu/where-to-eat/kung-pao-chicken" },
+        { title: "Local Experiences in Chengdu", description: "Pandas, tea houses, and beyond — explore Chengdu like a local.", href: "/destinations/chengdu/local-experiences" },
+      ]}
+    />
   );
 }

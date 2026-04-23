@@ -90,6 +90,12 @@ export default function BaoduPage() {
         { src: "https://picsum.photos/seed/baodu-2/800/500", alt: "Traditional Beijing baodu served with dipping sauce" },
         { src: "https://picsum.photos/seed/baodu-3/800/500", alt: "Thinly sliced tripe fresh from the hotpot" },
       ]}
-  />
+        relatedArticles={[
+        { title: "Where to Eat in Beijing", description: "The best restaurants and street food in Beijing.", href: "/destinations/beijing/where-to-eat" },
+        { title: "Peking Duck", description: "Beijing's most famous dish — crispy, lacquered perfection.", href: "/destinations/beijing/where-to-eat/peking-duck" },
+        { title: "Zhajiangmian", description: "Beijing's famous noodle dish with savory sauce.", href: "/destinations/beijing/where-to-eat/zhajiangmian" },
+        { title: "Local Experiences in Beijing", description: "Go beyond the monuments with authentic local tours.", href: "/destinations/beijing/local-experiences" },
+      ]}
+    />
   );
 }

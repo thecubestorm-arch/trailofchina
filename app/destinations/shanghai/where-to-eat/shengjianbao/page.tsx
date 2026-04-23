@@ -88,6 +88,12 @@ How they differ from xiaolongbao: Size (shengjianbao are larger), cooking method
         { src: "https://picsum.photos/seed/shengjianbao-2/800/500", alt: "Shanghai shengjianbao fresh from the hot pan" },
         { src: "https://picsum.photos/seed/shengjianbao-3/800/500", alt: "Juicy pork shengjianbao with soup inside" },
       ]}
+          relatedArticles={[
+        { title: "Where to Eat in Shanghai", description: "The best restaurants and street food in Shanghai.", href: "/destinations/shanghai/where-to-eat" },
+        { title: "Xiaolongbao", description: "Shanghai's legendary soup dumplings — bite carefully.", href: "/destinations/shanghai/where-to-eat/xiaolongbao" },
+        { title: "Scallion Oil Noodles", description: "Simple noodles in caramelized scallion oil — pure comfort.", href: "/destinations/shanghai/where-to-eat/scallion-oil-noodles" },
+        { title: "Local Experiences in Shanghai", description: "Discover Shanghai beyond the skyline with local tours.", href: "/destinations/shanghai/local-experiences" },
+      ]}
     />
   );
 }

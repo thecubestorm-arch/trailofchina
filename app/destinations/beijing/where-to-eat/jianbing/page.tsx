@@ -84,6 +84,12 @@ export default function JianbingPage() {
         { src: "https://picsum.photos/seed/jianbing-2/800/500", alt: "Crispy jianbing street food with egg and chili sauce" },
         { src: "https://picsum.photos/seed/jianbing-3/800/500", alt: "Chinese savory crepe folded and ready to eat" },
       ]}
+          relatedArticles={[
+        { title: "Where to Eat in Beijing", description: "The best restaurants and street food in Beijing.", href: "/destinations/beijing/where-to-eat" },
+        { title: "Peking Duck", description: "Beijing's most famous dish — crispy, lacquered perfection.", href: "/destinations/beijing/where-to-eat/peking-duck" },
+        { title: "Zhajiangmian", description: "Beijing's famous noodle dish with savory sauce.", href: "/destinations/beijing/where-to-eat/zhajiangmian" },
+        { title: "Local Experiences in Beijing", description: "Go beyond the monuments with authentic local tours.", href: "/destinations/beijing/local-experiences" },
+      ]}
     />
   );
 }

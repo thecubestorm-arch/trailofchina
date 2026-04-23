@@ -106,6 +106,12 @@ What makes Chengdu dan dan mian special is the balance of flavors — the chili 
         { src: "https://picsum.photos/seed/dan-dan-noodles-2/800/500", alt: "Small bowl of spicy dan dan mian with minced pork" },
         { src: "https://picsum.photos/seed/dan-dan-noodles-3/800/500", alt: "Traditional street vendor dan dan noodles with Sichuan pepper" },
       ]}
-  />
+        relatedArticles={[
+        { title: "Where to Eat in Chengdu", description: "The best restaurants and street food in Chengdu.", href: "/destinations/chengdu/where-to-eat" },
+        { title: "Mapo Tofu", description: "Silken tofu in fiery chili oil — invented here in 1862.", href: "/destinations/chengdu/where-to-eat/mapo-tofu" },
+        { title: "Sichuan Hotpot", description: "A bubbling cauldron of chili oil and Sichuan pepper.", href: "/destinations/chengdu/where-to-eat/sichuan-hotpot" },
+        { title: "Local Experiences in Chengdu", description: "Pandas, tea houses, and beyond — explore Chengdu like a local.", href: "/destinations/chengdu/local-experiences" },
+      ]}
+    />
   );
 }

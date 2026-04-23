@@ -105,6 +105,12 @@ How to eat biangbiang noodles like a local: Mix everything thoroughly before eat
         { src: "https://picsum.photos/seed/biangbiang-noodles-2/800/500", alt: "Hand-pulled biangbiang noodles being stretched" },
         { src: "https://picsum.photos/seed/biangbiang-noodles-3/800/500", alt: "Sizzling chili oil poured over Xi'an biangbiang noodles" },
       ]}
+          relatedArticles={[
+        { title: "Where to Eat in Xi'an", description: "The best restaurants and street food in Xi'an.", href: "/destinations/xian/where-to-eat" },
+        { title: "Yangroupaomo", description: "Lamb soup with hand-torn flatbread — a 2,000-year-old tradition.", href: "/destinations/xian/where-to-eat/yangroupaomo" },
+        { title: "Liangpi", description: "Cold, chewy wheat noodles with chili oil and vinegar.", href: "/destinations/xian/where-to-eat/liangpi" },
+        { title: "Local Experiences in Xi'an", description: "Terracotta Warriors, Muslim Quarter, and ancient city walls.", href: "/destinations/xian/local-experiences" },
+      ]}
     />
   );
 }

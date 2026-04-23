@@ -51,6 +51,12 @@ export default function XiaomianPage() {
         { src: "https://picsum.photos/seed/xiaomian-2/800/500", alt: "Street stall bowl of xiaomian with garlic and scallions" },
         { src: "https://picsum.photos/seed/xiaomian-3/800/500", alt: "Fresh wheat noodles drenched in Sichuan pepper sauce" },
       ]}
-  />
+        relatedArticles={[
+        { title: "Where to Eat in Chongqing", description: "The best restaurants and street food in Chongqing.", href: "/destinations/chongqing/where-to-eat" },
+        { title: "Chongqing Hotpot", description: "Beef tallow base, nine grids, pure mala — the real deal.", href: "/destinations/chongqing/where-to-eat/chongqing-hotpot" },
+        { title: "Grilled Fish", description: "Whole fish grilled over charcoal, served sizzling at the table.", href: "/destinations/chongqing/where-to-eat/grilled-fish" },
+        { title: "Local Experiences in Chongqing", description: "Explore the mountain city's hidden corners with local guides.", href: "/destinations/chongqing/local-experiences" },
+      ]}
+    />
   );
 }

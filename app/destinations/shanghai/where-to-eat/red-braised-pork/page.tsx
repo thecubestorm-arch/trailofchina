@@ -95,6 +95,12 @@ This dish is a point of pride for Shanghai chefs — everyone claims their famil
         { src: "https://picsum.photos/seed/red-braised-pork-2/800/500", alt: "Glistening red braised pork with rock sugar glaze" },
         { src: "https://picsum.photos/seed/red-braised-pork-3/800/500", alt: "Tender braised pork belly served over white rice" },
       ]}
+          relatedArticles={[
+        { title: "Where to Eat in Shanghai", description: "The best restaurants and street food in Shanghai.", href: "/destinations/shanghai/where-to-eat" },
+        { title: "Hairy Crab", description: "Yangcheng Lake delicacy — autumn's most prized catch.", href: "/destinations/shanghai/where-to-eat/hairy-crab" },
+        { title: "Xiaolongbao", description: "Shanghai's legendary soup dumplings — bite carefully.", href: "/destinations/shanghai/where-to-eat/xiaolongbao" },
+        { title: "Local Experiences in Shanghai", description: "Discover Shanghai beyond the skyline with local tours.", href: "/destinations/shanghai/local-experiences" },
+      ]}
     />
   );
 }
