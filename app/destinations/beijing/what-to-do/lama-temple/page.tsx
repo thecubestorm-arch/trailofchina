@@ -76,7 +76,7 @@ export default function LamaTemplePage() {
       price="¥25"
       nearestSubway="Yonghegong, Lines 2/5"
       bestTime="Early morning (9:00-10:30) for monk chanting"
-      mapUrl="https://www.openstreetmap.org/embed?layer=Mapnik&frame=&lat=39.9461&lon=116.4064&zoom=16&marker=39.9461%2C116.4064"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=116.3664%2C39.9061%2C116.44640000000001%2C39.9861&layer=mapnik&marker=39.9461%2C116.4064"
       relatedLinks={[
         { title: 'Temple of Heaven', href: '/destinations/beijing/what-to-do/temple-of-heaven' },
         { title: 'Bell and Drum Towers', href: '/destinations/beijing/what-to-do/bell-and-drum-towers' },

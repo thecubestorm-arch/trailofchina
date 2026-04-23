@@ -98,7 +98,7 @@ The area has evolved from a colonial enclave to asymbol of Shanghai\'s global am
       price="Free"
       nearestSubway="Nanjing East Road Station, Line 2/10"
       bestTime="Golden hour (30 minutes before sunset) and nighttime for the skyline lights"
-      mapUrl="https://www.openstreetmap.org/embed?layer=Mapnik&frame=&lat=31.2333&lon=121.4737&zoom=15&marker=31.2333%2C121.4737"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=121.43369999999999%2C31.1933%2C121.5137%2C31.2733&layer=mapnik&marker=31.2333%2C121.4737"
       relatedLinks={[
         { title: 'Shanghai Tower', href: '/destinations/shanghai/what-to-do/shanghai-tower' },
         { title: 'Yu Garden', href: '/destinations/shanghai/what-to-do/yu-garden' },

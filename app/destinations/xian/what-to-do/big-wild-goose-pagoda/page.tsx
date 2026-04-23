@@ -80,7 +80,7 @@ Just north of the temple lies the North Square, home to Asia's largest musical f
       price="Temple ¥40, Pagoda climb extra ¥25, Fountain show free"
       nearestSubway="Dayanta (Big Wild Goose Pagoda), Line 3 or 4"
       bestTime="Late afternoon (4-6 PM) to explore temple, stay for evening fountain show"
-      mapUrl="https://www.openstreetmap.org/embed?layer=Mapnik&frame=&lat=34.2194&lon=108.9642&zoom=16&marker=34.2194%2C108.9642"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=108.9242%2C34.1794%2C109.00420000000001%2C34.2594&layer=mapnik&marker=34.2194%2C108.9642"
       relatedLinks={[
         { title: 'City Wall', href: '/destinations/xian/what-to-do/city-wall' },
         { title: 'Muslim Quarter', href: '/destinations/xian/what-to-do/muslim-quarter' },

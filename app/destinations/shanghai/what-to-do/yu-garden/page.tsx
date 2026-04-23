@@ -78,7 +78,7 @@ Surrounding the garden is the Yuyuan Bazaar, a bustling marketplace of souvenir 
       price="¥40 (April-October), ¥30 (November-March)"
       nearestSubway="Yuyuan Garden Station, Line 10"
       bestTime="Early morning weekdays (8:30-9:30 AM) before tour groups arrive"
-      mapUrl="https://www.openstreetmap.org/embed?layer=Mapnik&frame=&lat=31.2275&lon=121.4927&zoom=16&marker=31.2275%2C121.4927"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=121.4527%2C31.1875%2C121.5327%2C31.2675&layer=mapnik&marker=31.2275%2C121.4927"
       relatedLinks={[
         { title: 'The Bund', href: '/destinations/shanghai/what-to-do/bund' },
         { title: 'Shanghai Tower', href: '/destinations/shanghai/what-to-do/shanghai-tower' },

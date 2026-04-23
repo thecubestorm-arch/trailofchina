@@ -80,7 +80,7 @@ The wall is especially magical at sunset when the golden light bathes the ancien
       price="¥54 (includes wall access), bike rental ¥45/3 hours"
       nearestSubway="Yongningmen (South Gate), Line 2"
       bestTime="Early morning (7-9 AM) or sunset (5-7 PM) for best light and fewer crowds"
-      mapUrl="https://www.openstreetmap.org/embed?layer=Mapnik&frame=&lat=34.2583&lon=108.9458&zoom=15&marker=34.2583%2C108.9458"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=108.9058%2C34.2183%2C108.98580000000001%2C34.2983&layer=mapnik&marker=34.2583%2C108.9458"
       relatedLinks={[
         { title: 'Muslim Quarter', href: '/destinations/xian/what-to-do/muslim-quarter' },
         { title: 'Bell & Drum Tower', href: '/destinations/xian/what-to-do/bell-drum-tower' },

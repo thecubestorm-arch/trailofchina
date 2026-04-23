@@ -80,7 +80,7 @@ export default function HutongPage() {
       price="Free to walk, rickshaw ¥80-120/hr"
       nearestSubway="Nanluoguxiang Station, Line 6"
       bestTime="Morning or late afternoon"
-      mapUrl="https://www.openstreetmap.org/embed?layer=Mapnik&frame=&lat=39.9356&lon=116.4145&zoom=16&marker=39.9356%2C116.4145"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=116.3745%2C39.8956%2C116.45450000000001%2C39.9756&layer=mapnik&marker=39.9356%2C116.4145"
       relatedLinks={[
         { title: 'Forbidden City', href: '/destinations/beijing/what-to-do/forbidden-city' },
         { title: 'Bell and Drum Towers', href: '/destinations/beijing/what-to-do/bell-and-drum-towers' },

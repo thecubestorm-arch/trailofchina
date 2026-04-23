@@ -103,7 +103,7 @@ The Great Wall is more than bricks and stone — it\'s the cultural symbol of Ch
       price="¥40-65 (depends on section)"
       nearestSubway="Various — see section details below"
       bestTime="Early morning (before 8:00 AM) to beat crowds and get best light for photos"
-      mapUrl="https://www.openstreetmap.org/embed?layer=Mapnik&frame=&lat=40.4547&lon=116.5682&zoom=10&marker=40.4547%2C116.5682"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=116.5282%2C40.4147%2C116.60820000000001%2C40.4947&layer=mapnik&marker=40.4547%2C116.5682"
       relatedLinks={[
         { title: 'Forbidden City', href: '/destinations/beijing/what-to-do/forbidden-city' },
         { title: 'Beijing Local Tips', href: '/destinations/beijing/local-tips' },

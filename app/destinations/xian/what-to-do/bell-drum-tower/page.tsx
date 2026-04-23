@@ -80,7 +80,7 @@ Both towers are beautifully illuminated at night, creating a magical atmosphere 
       price="Combo ticket ¥80, Individual ¥50 each"
       nearestSubway="Zhonglou (Bell Tower), Line 2 or 6"
       bestTime="Sunset for photos (5-7 PM), evening for illuminated views"
-      mapUrl="https://www.openstreetmap.org/embed?layer=Mapnik&frame=&lat=34.2606&lon=108.9461&zoom=16&marker=34.2606%2C108.9461"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=108.9061%2C34.2206%2C108.98610000000001%2C34.300599999999996&layer=mapnik&marker=34.2606%2C108.9461"
       relatedLinks={[
         { title: 'Muslim Quarter', href: '/destinations/xian/what-to-do/muslim-quarter' },
         { title: 'City Wall', href: '/destinations/xian/what-to-do/city-wall' },

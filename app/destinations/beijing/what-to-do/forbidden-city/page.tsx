@@ -101,7 +101,7 @@ The layout reflects ancient Chinese cosmology, with the Three Great Halls (Supre
       price="¥60 (April-October), ¥40 (November-March)"
       nearestSubway="Tiananmen East Station, Line 1"
       bestTime="Morning hours (8:30-11:00) for light and fewer crowds"
-      mapUrl="https://www.openstreetmap.org/embed?layer=Mapnik&frame=&lat=39.9164&lon=116.3973&zoom=16&marker=39.9164%2C116.3973"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=116.3573%2C39.876400000000004%2C116.43730000000001%2C39.9564&layer=mapnik&marker=39.9164%2C116.3973"
       relatedLinks={[
         { title: 'Summer Palace', href: '/destinations/beijing/what-to-do/summer-palace' },
         { title: 'Temple of Heaven', href: '/destinations/beijing/what-to-do/temple-of-heaven' },

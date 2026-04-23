@@ -87,7 +87,7 @@ export default function JinliAncientStreetPage() {
       nearestSubway="Gaoshengqiao, Line 3"
       bestTime="Evening for lanterns and night atmosphere"
       tips={[...tips, ...photoSpots]}
-      mapUrl="https://www.openstreetmap.org/embed?layer=Mapnik&frame=&lat=30.6467&lon=104.0603&zoom=16&marker=30.6467%2C104.0603"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=104.02029999999999%2C30.6067%2C104.1003%2C30.6867&layer=mapnik&marker=30.6467%2C104.0603"
       relatedLinks={relatedLinks}
       relatedArticles={[
         { title: "Panda Base", description: "World's most famous giant panda sanctuary with over 200 pandas.", href: "/destinations/chengdu/what-to-do/panda-base" },

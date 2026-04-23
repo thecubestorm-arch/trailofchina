@@ -84,7 +84,7 @@ Three skyscrapers in Lujiazui offer observation decks. Shanghai Tower is the hig
       price="¥180 (standard), ¥120 (children 1.0-1.4m), free under 1.0m"
       nearestSubway="Lujiazui Station, Line 2"
       bestTime="30 minutes before sunset for daylight-to-night transition shots"
-      mapUrl="https://www.openstreetmap.org/embed?layer=Mapnik&frame=&lat=31.2355&lon=121.5015&zoom=16&marker=31.2355%2C121.5015"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=121.46149999999999%2C31.1955%2C121.5415%2C31.275499999999997&layer=mapnik&marker=31.2355%2C121.5015"
       relatedLinks={[
         { title: 'The Bund', href: '/destinations/shanghai/what-to-do/bund' },
         { title: 'Yu Garden', href: '/destinations/shanghai/what-to-do/yu-garden' },

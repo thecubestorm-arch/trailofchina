@@ -171,6 +171,7 @@ export default function AttractionPage({
               title={`${name} Location`}
               allowFullScreen
               loading="lazy"
+              sandbox="allow-scripts allow-same-origin allow-popups"
               className="w-full h-full"
             />
           </div>

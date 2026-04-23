@@ -89,7 +89,7 @@ It\'s free to explore and has become Chongqing\'s most popular tourist destinati
       price="Free (some attractions within have separate fees)"
       nearestSubway="Linjiangmen Station, Line 1"
       bestTime="Golden hour (sunset) and nighttime for the lights"
-      mapUrl="https://www.openstreetmap.org/embed?layer=Mapnik&frame=&lat=29.5492&lon=106.5625&zoom=16&marker=29.5492%2C106.5625"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=106.5225%2C29.5092%2C106.6025%2C29.589199999999998&layer=mapnik&marker=29.5492%2C106.5625"
       relatedLinks={[
         { title: 'Chongqing Local Tips', href: '/destinations/chongqing/local-tips' },
         { title: 'Chongqing Food Guide', href: '/destinations/chongqing/where-to-eat' },

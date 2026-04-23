@@ -80,7 +80,7 @@ export default function TempleOfHeavenPage() {
       price="Park ¥15, All-access ¥34"
       nearestSubway="Tiantan Dongmen, Line 5"
       bestTime="6:00-8:00 AM for local life, 8:30-11:00 for halls"
-      mapUrl="https://www.openstreetmap.org/embed?layer=Mapnik&frame=&lat=39.8845&lon=116.4072&zoom=16&marker=39.8845%2C116.4072"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=116.3672%2C39.844500000000004%2C116.44720000000001%2C39.9245&layer=mapnik&marker=39.8845%2C116.4072"
       relatedLinks={[
         { title: 'Summer Palace', href: '/destinations/beijing/what-to-do/summer-palace' },
         { title: 'Lama Temple', href: '/destinations/beijing/what-to-do/lama-temple' },

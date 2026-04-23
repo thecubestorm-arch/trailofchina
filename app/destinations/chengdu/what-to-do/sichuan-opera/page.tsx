@@ -68,7 +68,7 @@ export default function SichuanOperaPage() {
       nearestSubway="Varies by venue"
       bestTime="Evening shows (book ahead)"
       tips={tips}
-      mapUrl="https://www.openstreetmap.org/embed?layer=Mapnik&frame=&lat=30.6467&lon=104.0603&zoom=16&marker=30.6467%2C104.0603"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=104.02029999999999%2C30.6067%2C104.1003%2C30.6867&layer=mapnik&marker=30.6467%2C104.0603"
       relatedLinks={relatedLinks}
     />
   );
