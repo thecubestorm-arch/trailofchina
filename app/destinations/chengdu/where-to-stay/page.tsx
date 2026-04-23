@@ -34,27 +34,32 @@ export default function ChengduWhereToStayPage() {
           <h2 className="text-2xl font-semibold mb-4">Best Areas for Visitors</h2>
 
           <div className="space-y-6">
-            <div className="border rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-2">🏙️ Jinjiang / Chunxi Road (Best for First-Timers)</h3>
-              <p className="text-gray-700 mb-3">
-                Chengdu&apos;s most practical base: malls, food streets, and easy transport in every
-                direction. Perfect if you want to see major sights without complicated transfers.
+            <Link href="/destinations/chengdu/where-to-stay/jinli-area" className="block border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--primary)] hover:shadow-sm transition-all">
+              <h3 className="text-xl font-semibold mb-2">🏮 Jinli Area (锦里)</h3>
+              <p className="text-gray-700 mb-2">
+                Traditional, atmospheric quarter near Wuhou Shrine. Red lanterns, teahouses, Sichuan opera,
+                and backpacker hostels to mid-range hotels. Magical at night.
               </p>
-              <p className="text-sm text-gray-600">🕐 Best for: 2-5 day city trips</p>
-              <p className="text-sm text-gray-600">💰 Typical stay: ¥350-1200/night</p>
-              <p className="text-sm text-gray-600">📍 Metro: Chunxi Road, Taisheng South Road, Tianfu Square nearby</p>
-            </div>
+              <p className="text-sm text-gray-600">💰 ¥200-900/night | 🚇 Gaoshengqiao (Line 3) | 🎯 Best for: Culture, history, evening charm</p>
+            </Link>
 
-            <div className="border rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-2">🏛️ Wuhou District (Temple Area, Quieter)</h3>
-              <p className="text-gray-700 mb-3">
-                Around Wuhou Shrine and Jinli, this area feels older and calmer than central shopping
-                zones. Good for evening walks and travelers who prefer atmosphere over nightlife.
+            <Link href="/destinations/chengdu/where-to-stay/chunxi-road" className="block border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--primary)] hover:shadow-sm transition-all">
+              <h3 className="text-xl font-semibold mb-2">🏙️ Chunxi Road (春熙路)</h3>
+              <p className="text-gray-700 mb-2">
+                Central shopping and dining district with the IFS climbing panda. The most convenient base
+                in Chengdu with Line 2/3 crossing right here.
               </p>
-              <p className="text-sm text-gray-600">🕐 Best for: history-focused itineraries</p>
-              <p className="text-sm text-gray-600">💰 Typical stay: ¥280-900/night</p>
-              <p className="text-sm text-gray-600">📍 Metro: Gaoshengqiao, Huaxiba, Wuhouci/Jinli area access</p>
-            </div>
+              <p className="text-sm text-gray-600">💰 ¥350-1200/night | 🚇 Chunxi Road (Line 2/3) | 🎯 Best for: First-timers, shoppers, convenience</p>
+            </Link>
+
+            <Link href="/destinations/chengdu/where-to-stay/wide-narrow-alley" className="block border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--primary)] hover:shadow-sm transition-all">
+              <h3 className="text-xl font-semibold mb-2">🧳 Wide & Narrow Alleys (宽窄巷子)</h3>
+              <p className="text-gray-700 mb-2">
+                Boutique courtyard hotels, hipster coffee shops, and traditional Qing-dynasty lanes.
+                The best of old and new Chengdu in one walkable area.
+              </p>
+              <p className="text-sm text-gray-600">💰 ¥400-1500/night | 🚇 Kuanzhai Xiangzi (Line 4) | 🎯 Best for: Atmosphere, design hotels, coffee</p>
+            </Link>
 
             <div className="border rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-2">🧿 Tibetan Quarter (Unique Culture, Budget-Friendly)</h3>
@@ -96,7 +101,7 @@ export default function ChengduWhereToStayPage() {
           <div className="bg-red-50 border-l-4 border-red-400 p-4 rounded-r-lg">
             <h3 className="font-semibold text-red-800 mb-2">⚠️ Tourist Traps</h3>
             <ul className="text-red-900 space-y-2">
-              <li>• Hotels listed as “near pandas” may still require 45+ minutes transit.</li>
+              <li>• Hotels listed as "near pandas" may still require 45+ minutes transit.</li>
               <li>• Ultra-cheap rooms around nightlife streets can be very noisy after midnight.</li>
               <li>• Some listings advertise metro proximity but mean bus-distance, not walking-distance.</li>
             </ul>

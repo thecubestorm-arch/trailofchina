@@ -33,31 +33,40 @@ export default function ChongqingWhereToStayPage() {
           <h2 className="text-2xl font-semibold mb-4">Best Areas</h2>
 
           <div className="space-y-6">
-            <div className="border rounded-lg p-6">
+            <Link href="/destinations/chongqing/where-to-stay/jiefangbei" className="block border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--primary)] hover:shadow-sm transition-all">
               <h3 className="text-xl font-semibold mb-2">1. Jiefangbei (解放碑)</h3>
               <p className="text-gray-700 mb-2">
                 The most convenient city-center base: malls, food streets, metro connections, and easy access
                 to major attractions.
               </p>
-              <p className="text-sm text-gray-600">🕐 Best for 2-4 night stays | 💰 Mid to high range | 📍 Yuzhong District core</p>
-            </div>
+              <p className="text-sm text-gray-600">💰 ¥400-1500/night | 🚇 Lines 1, 2, 6 | 🎯 Best for: First-timers, maximum convenience</p>
+            </Link>
+
+            <Link href="/destinations/chongqing/where-to-stay/hongyadong-area" className="block border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--primary)] hover:shadow-sm transition-all">
+              <h3 className="text-xl font-semibold mb-2">2. Hongyadong Area (洪崖洞)</h3>
+              <p className="text-gray-700 mb-2">
+                Iconic stilt-house complex with spectacular night views. Touristy but visually unmatched
+                — perfect for a 1-2 night splurge.
+              </p>
+              <p className="text-sm text-gray-600">💰 ¥300-2000/night | 🚇 Xiaoshizi (Line 1/6) | 🎯 Best for: Short scenic stays, photographers</p>
+            </Link>
+
+            <Link href="/destinations/chongqing/where-to-stay/cuntan" className="block border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--primary)] hover:shadow-sm transition-all">
+              <h3 className="text-xl font-semibold mb-2">3. Cuntan / Nan&apos;an (南岸)</h3>
+              <p className="text-gray-700 mb-2">
+                Across the river with local flavor, budget prices, and skyline views of downtown without
+                the downtown prices. More authentic Chongqing.
+              </p>
+              <p className="text-sm text-gray-600">💰 ¥150-600/night | 🚇 Cuntan (Line 10), Nanping (Line 3) | 🎯 Best for: Budget, local vibe</p>
+            </Link>
 
             <div className="border rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-2">2. Nanbin Road (南滨路)</h3>
+              <h3 className="text-xl font-semibold mb-2">4. Nanbin Road (南滨路)</h3>
               <p className="text-gray-700 mb-2">
                 Riverside hotels with skyline-facing views and a slower evening vibe. Great for couples and
                 travelers prioritizing scenery.
               </p>
               <p className="text-sm text-gray-600">🕐 Best for evenings and views | 💰 Mid to high range | 📍 Nan&apos;an riverfront</p>
-            </div>
-
-            <div className="border rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-2">3. Hongyadong Area</h3>
-              <p className="text-gray-700 mb-2">
-                Ideal if you want iconic night scenery within walking distance. Expect crowds and more traffic
-                noise, but unmatched nighttime atmosphere.
-              </p>
-              <p className="text-sm text-gray-600">🕐 Best for short scenic stays | 💰 Budget to upscale | 📍 Near Jialing riverbanks</p>
             </div>
           </div>
         </section>
