@@ -16,70 +16,15 @@ export const metadata: Metadata = {
 };
 
 export default function BundPage() {
-  const tips = [
-    {
-      type: 'tip',
-      text: 'Best time to visit is during "golden hour" — 30 minutes before sunset until about 20 minutes after',
-    },
-    {
-      type: 'tip',
-      text: 'Walk the entire 1.5 km promenade — each section has different architecture and energy',
-    },
-    {
-      type: 'tip',
-      text: 'Visit the building interiors — many are now hotels, restaurants, or museums open to the public',
-    },
-    {
-      type: 'tip',
-      text: 'Cross the road (carefully) for photos with the Pudong skyline in the background',
-    },
-    {
-      type: 'tip',
-      text: 'Nighttime offers the best photos — the buildings are lit up and the skyline looks dramatically different',
-    },
-    {
-      type: 'tip',
-      text: 'Take the ferry (¥2) across the Huangpu River to Pudong for a different perspective',
-    },
-    {
-      type: 'tip',
-      text: 'Avoid Chinese national holidays — the area becomes completely packed and walking is difficult',
-    },
-    {
-      type: 'tip',
-      text: 'The Bund View Hotel bar (18th floor) has the best view, but you need to be a guest or spend significantly',
-    },
-  ] as const
-
-
-  const photoSpots = [
-    {
-      type: 'photo',
-      text: 'From the Pudong Side (Jin Mao Tower area) — the classic postcard view with all 33 buildings',
-    },
-    {
-      type: 'photo',
-      text: 'Nanjing Road intersection — where shopping meets the waterfront',
-    },
-    {
-      type: 'photo',
-      text: 'Shanghai World Financial Center bridge — unique angle through the building',
-    },
-    {
-      type: 'photo',
-      text: 'Bund Square at night — the water reflections are stunning',
-    },
-  ] as const
-
   return (
     <AttractionPage
       name="The Bund"
       breadcrumbs={[
-      { label: 'Home', href: '/' },
-      { label: 'Destinations', href: '/destinations' },
-      { label: 'Shanghai', href: '/destinations/shanghai' },
-      { label: 'What to Do', href: '/destinations/shanghai/what-to-do' },
-    ]}
+        { label: 'Home', href: '/' },
+        { label: 'Destinations', href: '/destinations' },
+        { label: 'Shanghai', href: '/destinations/shanghai' },
+        { label: 'What to Do', href: '/destinations/shanghai/what-to-do' },
+      ]}
       nameZh="外滩"
       city="Shanghai"
       images={[
@@ -87,13 +32,25 @@ export default function BundPage() {
         { src: 'https://picsum.photos/seed/bund-2/800/600', alt: 'Colonial architecture along the Bund' },
         { src: 'https://picsum.photos/seed/bund-3/800/600', alt: 'Pudong skyline from the Bund' },
       ]}
-      description={`The Bund (外滩) is Shanghai\'s most famous landmark — a 1.5 km waterfront promenade along the Huangpu River, lined with 33 buildings in various colonial-era architectural styles. Built in the early 20th century, it was once the heart of Shanghai\'s International Settlement.
+      hook="The Bund comes alive after 8 PM when Pudong's skyscrapers light up — come for sunset, stay for the show."
+      quickInfo={{
+        price: 'Free',
+        hours: 'Open 24h',
+        bestTime: 'Best after sunset',
+        metro: 'Nanjing East Road (Line 2)',
+      }}
+      whyYouLoveIt={`Most tourists walk the Bund during the day and miss the real magic. After 8 PM, the Pudong skyline erupts in a synchronized light show that makes Times Square look understated. The colonial facades on the Bund side are floodlit in warm gold, and the river reflects it all like a mirror. You don't need to pay for anything — just walk the promenade.
+
+The best move? Start at Nanjing East Road metro, walk the Bund at golden hour, then hop the ¥2 ferry across the river to the Pudong side. From there, look back at the colonial buildings you just walked past — it's the single best view in Shanghai, and almost no one tells you to do this. The ferry runs until 10 PM, so you can do the round trip and catch the light show from both sides.
+
+Skip the overpriced river cruises and the Bund Sightseeing Tunnel — they're tourist traps. The promenade is free, open 24 hours, and the experience is better on foot. If you must splurge, grab a drink at one of the rooftop bars in the historic buildings and watch the river traffic below.`}
+      description={`The Bund (外滩) is Shanghai's most famous landmark — a 1.5 km waterfront promenade along the Huangpu River, lined with 33 buildings in various colonial-era architectural styles. Built in the early 20th century, it was once the heart of Shanghai's International Settlement.
 
 The buildings were constructed between 1897 and 1937 by foreign banks and trading houses, representing styles from Neoclassical and Beaux-Arts to Art Deco. Each building has its own history, from the HSBC Building (now the Shanghai Pudong Development Bank) to the Astor House Hotel (now a restaurant).
 
-Opposite the Bund stands the modern Pudong skyline, including the 492-meter Shanghai Tower, the 468-meter Oriental Pearl Tower, and the 420-meter Jin Mao Tower. This dramatic contrast between old and new — European colonial past and Asian economic present — makes The Bund one of the world\'s most photographed locations.
+Opposite the Bund stands the modern Pudong skyline, including the 492-meter Shanghai Tower, the 468-meter Oriental Pearl Tower, and the 420-meter Jin Mao Tower. This dramatic contrast between old and new — European colonial past and Asian economic present — makes The Bund one of the world's most photographed locations.
 
-The area has evolved from a colonial enclave to asymbol of Shanghai\'s global ambitions, with luxury hotels, restaurants, and shopping replacing the old foreign firms. It remains free to walk and is the city\'s most popular photo spot.`}
+The area has evolved from a colonial enclave to a symbol of Shanghai's global ambitions, with luxury hotels, restaurants, and shopping replacing the old foreign firms. It remains free to walk and is the city's most popular photo spot.`}
       hours="24 hours (best during golden hour and nighttime)"
       price="Free"
       nearestSubway="Nanjing East Road Station, Line 2/10"
@@ -101,7 +58,6 @@ The area has evolved from a colonial enclave to asymbol of Shanghai\'s global am
       mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=121.4826%2C31.2323%2C121.4926%2C31.2383&layer=mapnik&marker=31.2353%2C121.4876"
       address="Zhongshan East 1st Road, Huangpu District"
       addressZh="上海市黄浦区中山东一路"
-        
       relatedLinks={[]}
       relatedArticles={[
         { title: "Shanghai Tower", description: "China's tallest building and the world's second-tallest.", href: "/destinations/shanghai/what-to-do/shanghai-tower" },
@@ -111,7 +67,22 @@ The area has evolved from a colonial enclave to asymbol of Shanghai\'s global am
         { title: "China Basics", description: "Essential tips for first-time visitors to China.", href: "/china-basics" },
         { title: "Where to Eat in Shanghai", description: "Discover Shanghai's best local dishes and restaurants.", href: "/destinations/shanghai/where-to-eat" },
       ]}
-      tips={[...tips, ...photoSpots]}
+      tips={[]}
+      practicalDetails={{
+        gettingThere: `Take Metro Line 2 to Nanjing East Road Station. Use Exit 2 and walk east — you'll hit the promenade in under 5 minutes. Start from the northern end (near the Monument to the People's Heroes) and walk south for the full 1.5 km experience.
+
+For the Pudong side view, take the ferry from the Jinling East Road pier (¥2, runs 7 AM – 10 PM) or metro to Lujiazui Station (Line 2) and walk to the waterfront park. The ferry is faster and more fun — you cross the Huangpu in about 5 minutes with open-air views.`,
+        whatToSkip: `The Bund Sightseeing Tunnel is a slow, overpriced light show in a underground tram. It connects the Bund to Pudong but costs around ¥50-70 one-way and adds nothing to your trip. Take the ferry instead — it's ¥2 and the views are real.
+
+River cruises sound romantic but are consistently rated as overpriced and underwhelming. The promenade walk is free and the views are identical. If you want to be on the water, the public ferry is authentic and costs next to nothing.
+
+Avoid Chinese national holidays (especially October 1–7) if you can. The Bund becomes a shoulder-to-shoulder crush, police close nearby roads, and you'll spend more time navigating crowds than enjoying the view.`,
+        photographyTips: `The classic postcard shot is from the Pudong waterfront park, looking back at the Bund's colonial skyline. Go just after sunset when the building lights turn on — the warm gold facades against a deep blue sky is the money shot.
+
+On the Bund side, the best spot is near the intersection with Nanjing Road, where the crowd thins slightly and you get a straight-on view of the Oriental Pearl Tower. Bring a tripod if you want clean night shots — the promenade lights create mixed color temperatures that are hard to handhold.
+
+The Shanghai Tower observation deck (118th floor) is the highest viewpoint, but the view *of* the Bund is better from the ground on the Pudong side. For a different angle, walk the pedestrian bridge near the Shanghai IFC Mall — you get the river, the ferry traffic, and both skylines in one frame.`,
+      }}
     />
   );
 }

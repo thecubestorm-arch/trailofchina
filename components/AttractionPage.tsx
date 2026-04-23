@@ -21,6 +21,19 @@ type RelatedLink = {
   href: string;
 };
 
+interface QuickInfo {
+  price: string;
+  hours: string;
+  bestTime: string;
+  metro: string;
+}
+
+interface PracticalDetails {
+  gettingThere?: string;
+  whatToSkip?: string;
+  photographyTips?: string;
+}
+
 interface AttractionPageProps {
   breadcrumbs?: readonly { label: string; href?: string }[];
   name: string;
@@ -38,6 +51,14 @@ interface AttractionPageProps {
   relatedArticles?: RelatedArticle[];
   city: string;
   images?: { src: string; alt: string }[];
+  /** 1-sentence hook displayed prominently below the title */
+  hook?: string;
+  /** Scannable info bar (price · hours · best time · metro). When provided, replaces the key-info grid. */
+  quickInfo?: QuickInfo;
+  /** Flowing prose for the "Why You'll Love It" section. When provided, rendered before the description. */
+  whyYouLoveIt?: string;
+  /** Practical details: getting there, what to skip, photography tips. Rendered as narrative sections. */
+  practicalDetails?: PracticalDetails;
 }
 
 export default function AttractionPage({
@@ -57,6 +78,10 @@ export default function AttractionPage({
   relatedArticles,
   city,
   images,
+  hook,
+  quickInfo,
+  whyYouLoveIt,
+  practicalDetails,
 }: AttractionPageProps) {
   return (
     <div className="min-h-screen" style={{
@@ -69,41 +94,75 @@ export default function AttractionPage({
         </div>
 
         {/* Hero Section */}
-        <header className="mb-10 relative">
+        <header className="mb-8 relative">
           <ChineseWatermark character={nameZh[0] || '中'} />
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-4 text-[var(--foreground)] relative z-10">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-3 text-[var(--foreground)] relative z-10">
             {name}
           </h1>
-          <div className="flex items-center gap-2 text-[var(--muted)] mt-2">
+          {hook && (
+            <p className="text-lg sm:text-xl text-[var(--muted)] italic leading-relaxed max-w-3xl relative z-10">
+              {hook}
+            </p>
+          )}
+          <div className="flex items-center gap-2 text-[var(--muted)] mt-3 relative z-10">
             <span className="text-2xl">{nameZh}</span>
             <span className="text-lg">• {city}</span>
           </div>
         </header>
 
-        {/* Key Info Bar */}
-        <section className="mb-10">
-          <h2 className="text-xl font-semibold mb-4 text-[var(--foreground)]">Essential Information</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            <div className="border rounded-lg p-4 bg-[var(--surface)]">
-              <span className="text-[var(--muted)] text-sm block mb-1">🕒 Opening Hours</span>
-              <span className="font-medium text-[var(--foreground)]">{hours}</span>
+        {/* Quick Info Bar */}
+        {quickInfo ? (
+          <section className="mb-10">
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm sm:text-base text-[var(--foreground)] bg-[var(--surface)] border rounded-lg px-4 py-3">
+              <span className="font-medium">{quickInfo.price}</span>
+              <span className="text-[var(--muted)]">·</span>
+              <span>{quickInfo.hours}</span>
+              <span className="text-[var(--muted)]">·</span>
+              <span>{quickInfo.bestTime}</span>
+              <span className="text-[var(--muted)]">·</span>
+              <span className="text-[var(--muted)]">Metro: {quickInfo.metro}</span>
             </div>
-            <div className="border rounded-lg p-4 bg-[var(--surface)]">
-              <span className="text-[var(--muted)] text-sm block mb-1">💰 Admission</span>
-              <span className="font-medium text-[var(--foreground)]">{price}</span>
+          </section>
+        ) : (
+          /* Legacy Key Info Grid */
+          <section className="mb-10">
+            <h2 className="text-xl font-semibold mb-4 text-[var(--foreground)]">Essential Information</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+              <div className="border rounded-lg p-4 bg-[var(--surface)]">
+                <span className="text-[var(--muted)] text-sm block mb-1">🕒 Opening Hours</span>
+                <span className="font-medium text-[var(--foreground)]">{hours}</span>
+              </div>
+              <div className="border rounded-lg p-4 bg-[var(--surface)]">
+                <span className="text-[var(--muted)] text-sm block mb-1">💰 Admission</span>
+                <span className="font-medium text-[var(--foreground)]">{price}</span>
+              </div>
+              <div className="border rounded-lg p-4 bg-[var(--surface)]">
+                <span className="text-[var(--muted)] text-sm block mb-1">🚇 Nearest Subway</span>
+                <span className="font-medium text-[var(--foreground)]">{nearestSubway}</span>
+              </div>
+              <div className="border rounded-lg p-4 bg-[var(--surface)]">
+                <span className="text-[var(--muted)] text-sm block mb-1">🌞 Best Time to Visit</span>
+                <span className="font-medium text-[var(--foreground)]">{bestTime}</span>
+              </div>
             </div>
-            <div className="border rounded-lg p-4 bg-[var(--surface)]">
-              <span className="text-[var(--muted)] text-sm block mb-1">🚇 Nearest Subway</span>
-              <span className="font-medium text-[var(--foreground)]">{nearestSubway}</span>
-            </div>
-            <div className="border rounded-lg p-4 bg-[var(--surface)]">
-              <span className="text-[var(--muted)] text-sm block mb-1">🌞 Best Time to Visit</span>
-              <span className="font-medium text-[var(--foreground)]">{bestTime}</span>
-            </div>
-          </div>
-        </section>
+          </section>
+        )}
 
-        {/* Description */}
+        {/* Why You'll Love It */}
+        {whyYouLoveIt && (
+          <section className="mb-10">
+            <h2 className="text-2xl font-serif font-bold mb-5 text-[var(--foreground)]">Why You&apos;ll Love It</h2>
+            <div className="prose prose-lg max-w-none text-[var(--foreground)] leading-relaxed">
+              {whyYouLoveIt.split('\n\n').map((paragraph, idx) => (
+                <p key={idx} className="mb-4">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Description (legacy fallback / additional context) */}
         <section className="mb-10">
           <h2 className="text-2xl font-serif font-bold mb-4 text-[var(--foreground)]">About {name}</h2>
           <div className="prose prose-lg max-w-none text-[var(--foreground)] leading-relaxed">
@@ -117,24 +176,65 @@ export default function AttractionPage({
 
         <ImageGallery images={images || []} />
 
-        {/* Know Before You Go */}
-        <section className="mb-10">
-          <h2 className="text-2xl font-serif font-bold mb-6 text-[var(--foreground)]">Know Before You Go</h2>
-          <div className="space-y-4">
-            {tips.filter((t) => t.type === 'tip').map((tip, idx) => (
-              <div key={idx} className="flex items-start gap-3">
-                <span className="text-terracotta mt-0.5 text-lg">•</span>
-                <p className="text-[var(--foreground)] leading-relaxed">{tip.text}</p>
-              </div>
-            ))}
-            {tips.filter((t) => t.type === 'photo').map((tip, idx) => (
-              <div key={`photo-${idx}`} className="flex items-start gap-3">
-                <span className="mt-0.5">📷</span>
-                <p className="text-[var(--foreground)] leading-relaxed">{tip.text}</p>
-              </div>
-            ))}
-          </div>
-        </section>
+        {/* Practical Details (new value-first section) */}
+        {practicalDetails && (
+          <section className="mb-10">
+            <h2 className="text-2xl font-serif font-bold mb-6 text-[var(--foreground)]">Practical Details</h2>
+            <div className="space-y-6">
+              {practicalDetails.gettingThere && (
+                <div>
+                  <h3 className="text-lg font-semibold mb-2 text-[var(--foreground)]">Getting There</h3>
+                  <div className="prose max-w-none text-[var(--foreground)] leading-relaxed">
+                    {practicalDetails.gettingThere.split('\n\n').map((p, i) => (
+                      <p key={i} className="mb-2">{p}</p>
+                    ))}
+                  </div>
+                </div>
+              )}
+              {practicalDetails.whatToSkip && (
+                <div>
+                  <h3 className="text-lg font-semibold mb-2 text-[var(--foreground)]">What to Skip</h3>
+                  <div className="prose max-w-none text-[var(--foreground)] leading-relaxed">
+                    {practicalDetails.whatToSkip.split('\n\n').map((p, i) => (
+                      <p key={i} className="mb-2">{p}</p>
+                    ))}
+                  </div>
+                </div>
+              )}
+              {practicalDetails.photographyTips && (
+                <div>
+                  <h3 className="text-lg font-semibold mb-2 text-[var(--foreground)]">Photography Tips</h3>
+                  <div className="prose max-w-none text-[var(--foreground)] leading-relaxed">
+                    {practicalDetails.photographyTips.split('\n\n').map((p, i) => (
+                      <p key={i} className="mb-2">{p}</p>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          </section>
+        )}
+
+        {/* Know Before You Go (legacy tips — hidden when practicalDetails replaces it) */}
+        {!practicalDetails && (
+          <section className="mb-10">
+            <h2 className="text-2xl font-serif font-bold mb-6 text-[var(--foreground)]">Know Before You Go</h2>
+            <div className="space-y-4">
+              {tips.filter((t) => t.type === 'tip').map((tip, idx) => (
+                <div key={idx} className="flex items-start gap-3">
+                  <span className="text-terracotta mt-0.5 text-lg">•</span>
+                  <p className="text-[var(--foreground)] leading-relaxed">{tip.text}</p>
+                </div>
+              ))}
+              {tips.filter((t) => t.type === 'photo').map((tip, idx) => (
+                <div key={`photo-${idx}`} className="flex items-start gap-3">
+                  <span className="mt-0.5">📷</span>
+                  <p className="text-[var(--foreground)] leading-relaxed">{tip.text}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
 
 
         {/* Map */}
