@@ -84,7 +84,7 @@ Three skyscrapers in Lujiazui offer observation decks. Shanghai Tower is the hig
       price="¥180 (standard), ¥120 (children 1.0-1.4m), free under 1.0m"
       nearestSubway="Lujiazui Station, Line 2"
       bestTime="30 minutes before sunset for daylight-to-night transition shots"
-      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=121.4965%2C31.2325%2C121.5065%2C31.2385&layer=mapnik&marker=31.2355%2C121.5015"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=121.4962%2C31.2326%2C121.5062%2C31.2386&layer=mapnik&marker=31.2356%2C121.5012"
       address="501 Yincheng Middle Road, Pudong New Area"
       addressZh="上海市浦东新区银城中路501号"
         

@@ -79,7 +79,7 @@ export default function JinliAncientStreetPage() {
       price="Free entry"
       nearestSubway="Gaoshengqiao, Line 3"
       bestTime="Evening (after 6 PM) when lanterns are lit"
-      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=104.0436%2C30.6406%2C104.0536%2C30.6466&layer=mapnik&marker=30.6436%2C104.0486"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=104.0424%2C30.6457%2C104.0524%2C30.6517&layer=mapnik&marker=30.6487%2C104.0474"
       address="Jinli Street, Wuhou District"
       addressZh="成都市武侯区锦里"
       relatedLinks={[]}

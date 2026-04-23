@@ -89,7 +89,7 @@ It\'s free to explore and has become Chongqing\'s most popular tourist destinati
       price="Free (some attractions within have separate fees)"
       nearestSubway="Linjiangmen Station, Line 1"
       bestTime="Golden hour (sunset) and nighttime for the lights"
-      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=106.5739%2C29.5584%2C106.5839%2C29.5644&layer=mapnik&marker=29.5614%2C106.5789"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=106.5703%2C29.5621%2C106.5803%2C29.5681&layer=mapnik&marker=29.5651%2C106.5753"
       address="88 Jialingjiang Binjiang Road, Yuzhong District"
       addressZh="重庆市渝中区嘉陵江滨江路88号"
         

@@ -80,7 +80,7 @@ export default function SummerPalacePage() {
       price="¥30 (park), ¥60 (all-inclusive)"
       nearestSubway="Beigongmen, Line 4"
       bestTime="Morning (8:00-11:00) or late afternoon"
-      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=116.2705%2C39.9969%2C116.2805%2C40.0029&layer=mapnik&marker=39.9999%2C116.2755"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=116.2597%2C39.9871%2C116.2697%2C39.9931&layer=mapnik&marker=39.9901%2C116.2647"
       address="19 Xinjiangongmen Road, Haidian District"
       addressZh="北京市海淀区新建宫门路19号"
         

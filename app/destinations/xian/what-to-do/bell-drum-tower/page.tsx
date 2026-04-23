@@ -80,7 +80,7 @@ Both towers are beautifully illuminated at night, creating a magical atmosphere 
       price="Combo ticket ¥80, Individual ¥50 each"
       nearestSubway="Zhonglou (Bell Tower), Line 2 or 6"
       bestTime="Sunset for photos (5-7 PM), evening for illuminated views"
-      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=108.9375%2C34.258%2C108.9475%2C34.264&layer=mapnik&marker=34.261%2C108.9425"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=108.9400%2C34.2581%2C108.9500%2C34.2641&layer=mapnik&marker=34.2611%2C108.9450"
       address="Bell Tower, Lianhu District"
       addressZh="西安市莲湖区钟楼"
         

@@ -42,7 +42,7 @@ export default function YangtzeCableCarPage() {
       nearestSubway="Xiaoshizi, Line 1"
       bestTime="Sunset (6:00-7:30 PM) for golden hour skyline"
       tips={tips}
-      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=106.5764%2C29.5556%2C106.5864%2C29.5616&layer=mapnik&marker=29.5586%2C106.5814"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=106.5794%2C29.5550%2C106.5894%2C29.5610&layer=mapnik&marker=29.5580%2C106.5844"
       address="Xinhua Road, Yuzhong District"
       addressZh="重庆市渝中区新华路"
         

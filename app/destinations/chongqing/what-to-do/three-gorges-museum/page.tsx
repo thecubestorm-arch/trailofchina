@@ -38,7 +38,7 @@ export default function ThreeGorgesMuseumPage() {
       nearestSubway="Niujiaotuo, Line 2"
       bestTime="Weekday afternoon, or rainy days"
       tips={tips}
-      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=106.5478%2C29.5589%2C106.5578%2C29.5649&layer=mapnik&marker=29.5619%2C106.5528"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=106.5416%2C29.5619%2C106.5516%2C29.5679&layer=mapnik&marker=29.5649%2C106.5466"
       address="236 Renmin Road, Yuzhong District"
       addressZh="重庆市渝中区人民路236号"
         

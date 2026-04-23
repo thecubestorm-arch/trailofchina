@@ -80,7 +80,7 @@ export default function TempleOfHeavenPage() {
       price="Park ¥15, All-access ¥34"
       nearestSubway="Tiantan Dongmen, Line 5"
       bestTime="6:00-8:00 AM for local life, 8:30-11:00 for halls"
-      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=116.4016%2C39.8792%2C116.4116%2C39.8852&layer=mapnik&marker=39.8822%2C116.4066"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=116.3979%2C39.8769%2C116.4079%2C39.8829&layer=mapnik&marker=39.8799%2C116.4029"
       address="7 Tiantan Road, Dongcheng District"
       addressZh="北京市东城区天坛路7号"
         

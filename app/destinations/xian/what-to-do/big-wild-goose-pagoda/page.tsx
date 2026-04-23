@@ -80,7 +80,7 @@ Just north of the temple lies the North Square, home to Asia's largest musical f
       price="Temple ¥40, Pagoda climb extra ¥25, Fountain show free"
       nearestSubway="Dayanta (Big Wild Goose Pagoda), Line 3 or 4"
       bestTime="Late afternoon (4-6 PM) to explore temple, stay for evening fountain show"
-      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=108.9594%2C34.2154%2C108.9694%2C34.2214&layer=mapnik&marker=34.2184%2C108.9644"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=108.9544%2C34.2168%2C108.9644%2C34.2228&layer=mapnik&marker=34.2198%2C108.9594"
       address="1 Yanta Road, Yanta District"
       addressZh="西安市雁塔区雁塔路1号"
         

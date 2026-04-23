@@ -80,7 +80,7 @@ The wall is especially magical at sunset when the golden light bathes the ancien
       price="¥54 (includes wall access), bike rental ¥45/3 hours"
       nearestSubway="Yongningmen (South Gate), Line 2"
       bestTime="Early morning (7-9 AM) or sunset (5-7 PM) for best light and fewer crowds"
-      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=108.9394%2C34.2531%2C108.9494%2C34.2591&layer=mapnik&marker=34.2561%2C108.9444"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=108.9158%2C34.2621%2C108.9258%2C34.2681&layer=mapnik&marker=34.2651%2C108.9208"
       address="South Gate, Beilin District"
       addressZh="西安市碑林区南门"
         

@@ -98,7 +98,7 @@ The area has evolved from a colonial enclave to asymbol of Shanghai\'s global am
       price="Free"
       nearestSubway="Nanjing East Road Station, Line 2/10"
       bestTime="Golden hour (30 minutes before sunset) and nighttime for the skyline lights"
-      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=121.485%2C31.237%2C121.495%2C31.243&layer=mapnik&marker=31.24%2C121.49"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=121.4826%2C31.2323%2C121.4926%2C31.2383&layer=mapnik&marker=31.2353%2C121.4876"
       address="Zhongshan East 1st Road, Huangpu District"
       addressZh="上海市黄浦区中山东一路"
         

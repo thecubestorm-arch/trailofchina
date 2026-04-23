@@ -41,7 +41,7 @@ export default function LizibaMonorailPage() {
       nearestSubway="Liziba, Line 2"
       bestTime="Any time (frequent trains)"
       tips={tips}
-      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=106.5295%2C29.5504%2C106.5395%2C29.5564&layer=mapnik&marker=29.5534%2C106.5345"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=106.5289%2C29.5527%2C106.5389%2C29.5587&layer=mapnik&marker=29.5557%2C106.5339"
       address="Liziba Station, Yuzhong District"
       addressZh="重庆市渝中区李子坝站"
         

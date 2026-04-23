@@ -63,7 +63,7 @@ export default function KuanzhaiAlleyPage() {
       nearestSubway="Kuanzhai Alley, Line 4"
       bestTime="Morning for quiet, evening for atmosphere"
       tips={tips}
-      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=104.0511%2C30.6667%2C104.0611%2C30.6727&layer=mapnik&marker=30.6697%2C104.0561"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=104.0393%2C30.6647%2C104.0493%2C30.6707&layer=mapnik&marker=30.6677%2C104.0443"
       address="8 Kuan Alley, Qingyang District"
       addressZh="成都市青羊区宽巷子8号"
         

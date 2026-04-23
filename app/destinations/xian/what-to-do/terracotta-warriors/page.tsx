@@ -94,7 +94,7 @@ The site is a UNESCO World Heritage site and one of China\'s most famous attract
       price="¥120 (including bus shuttle from Xi\'an Station)"
       nearestSubway="Shuttle bus from Xi\'an Station (20-30 minutes)"
       bestTime="Morning hours (8:30-10:30 AM) to beat tour groups"
-      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=109.2735%2C34.3812%2C109.2835%2C34.3872&layer=mapnik&marker=34.3842%2C109.2785"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=109.2727%2C34.3844%2C109.2827%2C34.3904&layer=mapnik&marker=34.3874%2C109.2777"
       address="Qinling North Road, Lintong District"
       addressZh="西安市临潼区秦陵北路"
         

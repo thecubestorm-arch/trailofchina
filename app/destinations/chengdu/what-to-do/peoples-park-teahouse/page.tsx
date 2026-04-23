@@ -82,7 +82,7 @@ export default function PeoplesParkTeahousePage() {
       nearestSubway="People\'s Park, Line 2"
       bestTime="Afternoon (1:00-5:00 PM)"
       tips={[...tips, ...photoSpots]}
-      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=104.0586%2C30.6567%2C104.0686%2C30.6627&layer=mapnik&marker=30.6597%2C104.0636"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=104.0498%2C30.6567%2C104.0598%2C30.6627&layer=mapnik&marker=30.6597%2C104.0548"
       address="6 Shaanxi Street, Qingyang District"
       addressZh="成都市青羊区少城路6号"
         

@@ -38,7 +38,7 @@ export default function CiqikouPage() {
       nearestSubway="Ciqikou, Line 1"
       bestTime="Weekday morning (9:00-11:00 AM)"
       tips={tips}
-      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=106.445%2C29.577%2C106.455%2C29.583&layer=mapnik&marker=29.58%2C106.45"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=106.4416%2C29.5803%2C106.4516%2C29.5863&layer=mapnik&marker=29.5833%2C106.4466"
       address="Ciqikou, Shapingba District"
       addressZh="重庆市沙坪坝区磁器口"
         

@@ -76,7 +76,7 @@ export default function LamaTemplePage() {
       price="¥25"
       nearestSubway="Yonghegong, Lines 2/5"
       bestTime="Early morning (9:00-10:30) for monk chanting"
-      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=116.4126%2C39.9447%2C116.4226%2C39.9507&layer=mapnik&marker=39.9477%2C116.4176"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=116.4060%2C39.9426%2C116.4160%2C39.9486&layer=mapnik&marker=39.9456%2C116.4110"
       address="12 Yonghegong Street, Dongcheng District"
       addressZh="北京市东城区雍和宫大街12号"
         

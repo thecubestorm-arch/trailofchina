@@ -80,7 +80,7 @@ The Muslim Quarter is best explored on foot, ideally in the evening when the foo
       price="Free to enter; food ¥10-30 per dish; Great Mosque ¥25"
       nearestSubway="Zhonglou (Bell Tower), Line 2 or 6"
       bestTime="Evening (6-9 PM) for food scene; weekday mornings for quieter mosque visit"
-      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=108.9361%2C34.2606%2C108.9461%2C34.2666&layer=mapnik&marker=34.2636%2C108.9411"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=108.9339%2C34.2604%2C108.9439%2C34.2664&layer=mapnik&marker=34.2634%2C108.9389"
       address="Muslim Quarter, Lianhu District"
       addressZh="西安市莲湖区回民街"
         

@@ -76,7 +76,7 @@ export default function ArtDistrict798Page() {
       price="Free entry, some exhibitions ¥50-80"
       nearestSubway="Jiangtai, Line 14"
       bestTime="Weekend afternoons"
-      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=116.4894%2C39.9809%2C116.4994%2C39.9869&layer=mapnik&marker=39.9839%2C116.4944"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=116.4855%2C39.9798%2C116.4955%2C39.9858&layer=mapnik&marker=39.9828%2C116.4905"
       address="4 Jiuxianqiao Road, Chaoyang District"
       addressZh="北京市朝阳区酒仙桥路4号"
         

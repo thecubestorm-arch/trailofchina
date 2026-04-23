@@ -94,7 +94,7 @@ The base is also home to red pandas (smaller, squirrel-like relatives) and other
       price="¥55 (including entry + bus shuttle)"
       nearestSubway="Panda Avenue Station, Line 3"
       bestTime="Morning hours (8:30-10:30 AM) when pandas are most active"
-      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=104.1406%2C30.731%2C104.1506%2C30.737&layer=mapnik&marker=30.734%2C104.1456"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=104.1279%2C30.7402%2C104.1379%2C30.7462&layer=mapnik&marker=30.7432%2C104.1329"
       address="1375 Panda Base Road, Chenghua District"
       addressZh="成都市成华区熊猫基地路1375号"
         

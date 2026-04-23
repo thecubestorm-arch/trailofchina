@@ -78,7 +78,7 @@ Surrounding the garden is the Yuyuan Bazaar, a bustling marketplace of souvenir 
       price="¥40 (April-October), ¥30 (November-March)"
       nearestSubway="Yuyuan Garden Station, Line 10"
       bestTime="Early morning weekdays (8:30-9:30 AM) before tour groups arrive"
-      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=121.4877%2C31.2245%2C121.4977%2C31.2305&layer=mapnik&marker=31.2275%2C121.4927"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=121.4830%2C31.2259%2C121.4930%2C31.2319&layer=mapnik&marker=31.2289%2C121.4880"
       address="137 Anren Street, Huangpu District"
       addressZh="上海市黄浦区安仁街137号"
         
