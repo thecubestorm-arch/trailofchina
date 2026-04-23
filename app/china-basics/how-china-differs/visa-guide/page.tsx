@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import ContextualCTA from '@/components/ContextualCTA'
 import GuideArticlePage from '@/components/GuideArticlePage'
 
 export const metadata: Metadata = {
@@ -9,7 +10,8 @@ export const metadata: Metadata = {
 
 export default function VisaGuidePage() {
   return (
-    <GuideArticlePage
+    <div>
+      <GuideArticlePage
       heroImage={{ src: "https://picsum.photos/seed/china-visa/800/400", alt: "China visa guide" }}
       breadcrumbs={[
         { label: 'Home', href: '/' },
@@ -74,5 +76,16 @@ export default function VisaGuidePage() {
         { label: 'Apps You Need', href: '/china-basics/what-apps-to-use' },
       ]}
     />
-  )
+    <div className="max-w-4xl mx-auto px-4 mt-8">
+      <ContextualCTA
+        icon="🗺️"
+        title="Plan Your China Trip"
+        description="Ready to plan? Browse our pre-planned itineraries and start building your perfect trip."
+        buttonText="See Pre-Planned Trips →"
+        buttonHref="/plan-your-trip/preplanned-trips"
+        variant="primary"
+      />
+    </div>
+  </div>
+)
 }

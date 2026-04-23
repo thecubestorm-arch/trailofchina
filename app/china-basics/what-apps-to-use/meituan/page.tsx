@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import ContextualCTA from '@/components/ContextualCTA'
 import GuideArticlePage from '@/components/GuideArticlePage'
 
 export const metadata: Metadata = {
@@ -9,7 +10,8 @@ export const metadata: Metadata = {
 
 export default function MeituanPage() {
   return (
-    <GuideArticlePage
+    <div>
+      <GuideArticlePage
       heroImage={{ src: "https://picsum.photos/seed/meituan-food/800/400", alt: "Ordering food with Meituan" }}
       breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'China Basics', href: '/china-basics' }, { label: 'What Apps to Use', href: '/china-basics/what-apps-to-use' }, { label: 'Meituan' }]}
       relatedArticles={[
@@ -69,5 +71,16 @@ export default function MeituanPage() {
         { label: 'What Apps to Use', href: '/china-basics/what-apps-to-use' },
       ]}
     />
-  )
+    <div className="max-w-4xl mx-auto px-4 mt-8">
+      <ContextualCTA
+        icon="🌐"
+        title="Need Internet in China?"
+        description="Get an eSIM before you go and stay connected the moment you land."
+        buttonText="Get an eSIM →"
+        buttonHref="/china-basics/how-to-get-internet/airalo-esim"
+        variant="secondary"
+      />
+    </div>
+  </div>
+)
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import ContextualCTA from '@/components/ContextualCTA'
 import GuideArticlePage from '@/components/GuideArticlePage'
 
 export const metadata: Metadata = {
@@ -9,7 +10,8 @@ export const metadata: Metadata = {
 
 export default function HolaflyEsimPage() {
   return (
-    <GuideArticlePage
+    <div>
+      <GuideArticlePage
       heroImage={{ src: "https://picsum.photos/seed/holafly-esim/800/400", alt: "Holafly eSIM for China" }}
       breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'China Basics', href: '/china-basics' }, { label: 'How to Get Internet', href: '/china-basics/how-to-get-internet' }, { label: 'Holafly eSIM' }]}
       relatedArticles={[
@@ -61,5 +63,16 @@ export default function HolaflyEsimPage() {
         { label: 'VPN & Censorship', href: '/china-basics/how-china-differs/censorship' },
       ]}
     />
-  )
+    <div className="max-w-4xl mx-auto px-4 mt-8">
+      <ContextualCTA
+        icon="🔒"
+        title="Don't Forget a VPN for China"
+        description="The Great Firewall blocks Google, Meta, and Western apps. A VPN is essential."
+        buttonText="Get a VPN →"
+        buttonHref="/china-basics/what-apps-to-use/vpn"
+        variant="primary"
+      />
+    </div>
+  </div>
+)
 }

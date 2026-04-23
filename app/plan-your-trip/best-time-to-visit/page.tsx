@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import ContextualCTA from '@/components/ContextualCTA'
 import GuideArticlePage from '@/components/GuideArticlePage'
 
 export const metadata: Metadata = {
@@ -15,7 +16,8 @@ export const metadata: Metadata = {
 
 export default function BestTimeToVisitPage() {
   return (
-    <GuideArticlePage
+    <div>
+      <GuideArticlePage
       heroImage={{ src: "https://picsum.photos/seed/china-seasons/800/400", alt: "Best time to visit China" }}
       breadcrumbs={[
         { label: 'Home', href: '/' },
@@ -89,5 +91,16 @@ export default function BestTimeToVisitPage() {
         { label: 'Trip.com Guide', href: '/china-basics/what-apps-to-use/trip-com' },
       ]}
     />
-  )
+    <div className="max-w-4xl mx-auto px-4 mt-8">
+      <ContextualCTA
+        icon="🗺️"
+        title="See Our Pre-Planned Itineraries"
+        description="Ready-made 7, 10, and 14-day itineraries covering China's highlights."
+        buttonText="Browse Itineraries →"
+        buttonHref="/plan-your-trip/preplanned-trips"
+        variant="secondary"
+      />
+    </div>
+  </div>
+)
 }

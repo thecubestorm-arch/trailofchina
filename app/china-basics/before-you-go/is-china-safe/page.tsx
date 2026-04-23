@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import ContextualCTA from '@/components/ContextualCTA'
 import GuideArticlePage from '@/components/GuideArticlePage'
 
 export const metadata: Metadata = {
@@ -9,7 +10,8 @@ export const metadata: Metadata = {
 
 export default function IsChinaSafePage() {
   return (
-    <GuideArticlePage
+    <div>
+      <GuideArticlePage
       heroImage={{ src: "https://picsum.photos/seed/china-safe-travel/800/400", alt: "Safety in China" }}
       breadcrumbs={[
         { label: 'Home', href: '/' },
@@ -84,5 +86,16 @@ export default function IsChinaSafePage() {
         { label: 'Censorship', href: '/china-basics/how-china-differs/censorship' },
       ]}
     />
-  )
+    <div className="max-w-4xl mx-auto px-4 mt-8">
+      <ContextualCTA
+        icon="📋"
+        title="Ready to Plan?"
+        description="Download our free China Cheat Sheet — quick reference for phrases, etiquette, and essentials."
+        buttonText="Get the Cheat Sheet →"
+        buttonHref="#cheat-sheet"
+        variant="secondary"
+      />
+    </div>
+  </div>
+)
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import ContextualCTA from '@/components/ContextualCTA'
 import GuideArticlePage from '@/components/GuideArticlePage'
 
 export const metadata: Metadata = {
@@ -9,7 +10,8 @@ export const metadata: Metadata = {
 
 export default function PackingListPage() {
   return (
-    <GuideArticlePage
+    <div>
+      <GuideArticlePage
       heroImage={{ src: "https://picsum.photos/seed/packing-china/800/400", alt: "Packing for China" }}
       breadcrumbs={[
         { label: 'Home', href: '/' },
@@ -84,5 +86,16 @@ export default function PackingListPage() {
         { label: 'VPN Setup', href: '/china-basics/what-apps-to-use/vpn' },
       ]}
     />
-  )
+    <div className="max-w-4xl mx-auto px-4 mt-8">
+      <ContextualCTA
+        icon="🌐"
+        title="Get an eSIM Before You Go"
+        description="Stay connected in China with an eSIM — activate before you land."
+        buttonText="Get an eSIM →"
+        buttonHref="/china-basics/how-to-get-internet/airalo-esim"
+        variant="primary"
+      />
+    </div>
+  </div>
+)
 }

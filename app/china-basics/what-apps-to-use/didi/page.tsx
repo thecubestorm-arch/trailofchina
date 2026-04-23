@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import ContextualCTA from '@/components/ContextualCTA'
 import GuideArticlePage from '@/components/GuideArticlePage'
 
 export const metadata: Metadata = {
@@ -9,7 +10,8 @@ export const metadata: Metadata = {
 
 export default function DidiPage() {
   return (
-    <GuideArticlePage
+    <div>
+      <GuideArticlePage
       icon="/images/icons/didi.svg"
       heroImage={{ src: "https://picsum.photos/seed/didi-ride-china/800/400", alt: "Didi ride-hailing in China" }}
       breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'China Basics', href: '/china-basics' }, { label: 'What Apps to Use', href: '/china-basics/what-apps-to-use' }, { label: 'Didi' }]}
@@ -70,5 +72,16 @@ export default function DidiPage() {
         { label: 'What Apps to Use', href: '/china-basics/what-apps-to-use' },
       ]}
     />
-  )
+    <div className="max-w-4xl mx-auto px-4 mt-8">
+      <ContextualCTA
+        icon="🌐"
+        title="Need Internet in China?"
+        description="Get an eSIM before you go and stay connected the moment you land."
+        buttonText="Get an eSIM →"
+        buttonHref="/china-basics/how-to-get-internet/airalo-esim"
+        variant="secondary"
+      />
+    </div>
+  </div>
+)
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import ContextualCTA from '@/components/ContextualCTA'
 import GuideArticlePage from '@/components/GuideArticlePage'
 
 export const metadata: Metadata = {
@@ -15,7 +16,8 @@ export const metadata: Metadata = {
 
 export default function BudgetGuidePage() {
   return (
-    <GuideArticlePage
+    <div>
+      <GuideArticlePage
       heroImage={{ src: "https://picsum.photos/seed/china-budget/800/400", alt: "Budget travel in China" }}
       breadcrumbs={[
         { label: 'Home', href: '/' },
@@ -92,5 +94,16 @@ export default function BudgetGuidePage() {
         { label: 'Alipay Guide', href: '/china-basics/what-apps-to-use/alipay' },
       ]}
     />
-  )
+    <div className="max-w-4xl mx-auto px-4 mt-8">
+      <ContextualCTA
+        icon="🚄"
+        title="Book on Trip.com for the Best Prices"
+        description="Compare hotels, trains, and flights — all in English with foreign cards accepted."
+        buttonText="Book on Trip.com →"
+        buttonHref="/china-basics/what-apps-to-use/trip-com"
+        variant="secondary"
+      />
+    </div>
+  </div>
+)
 }

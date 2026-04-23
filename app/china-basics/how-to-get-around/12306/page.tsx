@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import ContextualCTA from '@/components/ContextualCTA'
 import GuideArticlePage from '@/components/GuideArticlePage'
 
 export const metadata: Metadata = {
@@ -9,7 +10,8 @@ export const metadata: Metadata = {
 
 export default function TrainBookingPage() {
   return (
-    <GuideArticlePage
+    <div>
+      <GuideArticlePage
       heroImage={{ src: "https://picsum.photos/seed/china-train/800/400", alt: "Train travel in China" }}
       breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'China Basics', href: '/china-basics' }, { label: 'How to Get Around', href: '/china-basics/how-to-get-around' }, { label: '12306 Train Booking' }]}
       relatedArticles={[
@@ -72,5 +74,16 @@ export default function TrainBookingPage() {
         { label: 'Alipay Guide', href: '/china-basics/what-apps-to-use/alipay' },
       ]}
     />
-  )
+    <div className="max-w-4xl mx-auto px-4 mt-8">
+      <ContextualCTA
+        icon="🚄"
+        title="Book Trains Easily with Trip.com"
+        description="The easiest way for foreigners to book China trains in English with foreign cards."
+        buttonText="Book on Trip.com →"
+        buttonHref="/china-basics/what-apps-to-use/trip-com"
+        variant="secondary"
+      />
+    </div>
+  </div>
+)
 }
