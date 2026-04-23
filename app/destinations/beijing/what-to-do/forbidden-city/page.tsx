@@ -52,7 +52,6 @@ export default function ForbiddenCityPage() {
     },
   ] as const
 
-
   const photoSpots = [
     {
       type: 'photo',
@@ -88,10 +87,35 @@ export default function ForbiddenCityPage() {
       nameZh="故宫"
       city="Beijing"
       images={[
-        { src: 'https://picsum.photos/seed/forbidden-city-1/800/600', alt: 'Forbidden City entrance gate' },
-        { src: 'https://picsum.photos/seed/forbidden-city-2/800/600', alt: 'Forbidden City courtyard' },
-        { src: 'https://picsum.photos/seed/forbidden-city-3/800/600', alt: 'Forbidden City throne room' },
+        { src: 'https://picsum.photos/seed/forbidden-city-gate/800/600', alt: 'Forbidden City entrance gate' },
+        { src: 'https://picsum.photos/seed/forbidden-city-courtyard/800/600', alt: 'Forbidden City courtyard' },
+        { src: 'https://picsum.photos/seed/forbidden-city-roofs/800/600', alt: 'Golden roofs of the Forbidden City' },
+        { src: 'https://picsum.photos/seed/forbidden-city-throne/800/600', alt: 'Imperial throne room' },
+        { src: 'https://picsum.photos/seed/forbidden-city-corridor/800/600', alt: 'Long corridor inside the Forbidden City' },
       ]}
+      hook="9,999 rooms, 500 years of emperors — arrive before 8 AM to beat the crowds."
+      quickInfo={{
+        price: '¥60-80',
+        hours: '8:30–17:00 (closed Mondays)',
+        bestTime: 'Morning, Wed–Fri',
+        metro: 'Tiananmen East (Line 1)',
+      }}
+      whyYouLoveIt={`The first time you walk through the Meridian Gate and see the golden roofs stretching to the horizon, you understand why this place was forbidden. The scale is overwhelming — 980 buildings, courtyards within courtyards, and a central axis so precisely aligned that the emperor literally stood at the center of the world.
+
+What gets me every time is the detail. The glazed tiles shimmer in morning light, the marble staircases are worn smooth by 500 years of footsteps, and the painted ceilings in the side halls still hold their original colors. Most visitors rush the central axis and miss the quieter halls — the Palace of Heavenly Purity, the Hall of Mental Cultivation, the western wing galleries. These are where the real history lives, and you'll share them with a fraction of the crowds.
+
+The center stairs at the Hall of Supreme Harmony were reserved for the emperor alone. Walking past them knowing that commoners were executed for touching the same stone gives the place a weight no museum can replicate. Come early, walk slow, and let the scale sink in.`}
+      practicalDetails={{
+        gettingThere: `Take Metro Line 1 to Tiananmen East Station. Use Exit B and walk north — you'll reach the Meridian Gate (south entrance) in about 5 minutes. This is the main entry point and the start of the classic route.
+
+For a quieter approach, enter from the north gate (Gate of Divine Prowess) and walk the route in reverse. Take Line 1 to Tiananmen East, walk through the south gate, and exit north into Jingshan Park for the rooftop panorama.`,
+        whatToSkip: `Skip the tourist shops inside the complex — overpriced souvenirs that you can buy for half the price outside. The audio guide rental (around ¥40) is also underwhelming — the narration is dry and the device is clunky. Download a podcast or read up beforehand instead.
+
+Avoid weekends and Chinese national holidays if possible. The central axis becomes a human conveyor belt, and you'll spend more time navigating crowds than seeing the architecture.`,
+        photographyTips: `Morning light on the golden roofs is the single best shot — arrive at 8:30 AM opening and head straight for the Hall of Supreme Harmony. The low sun hits the glazed tiles at an angle that makes them glow.
+
+For corridor shots, use the covered walkways on the east and west sides of the central axis. The repeating red pillars and shadow patterns create strong leading lines, and most tourists miss them entirely. A wide-angle lens helps capture the vertical scale of the halls.`,
+      }}
       description={`The Forbidden City (故宫) is the world\'s largest and best-preserved palace complex, spanning 180 acres with 980 buildings containing 8,700 rooms. It served as the imperial palace for 24 emperors over 500 years during the Ming and Qing dynasties.
 
 Today, it houses the Palace Museum with over one million cultural relics, from ancient bronzes and ceramics to imperial robes and calligraphy. The complex follows strict feng shui principles, with the Hall of Supreme Harmony at its geometric center, symbolizing the emperor\'s position as the center of the universe.
@@ -104,7 +128,7 @@ The layout reflects ancient Chinese cosmology, with the Three Great Halls (Supre
       mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=116.3858%2C39.9143%2C116.3958%2C39.9203&layer=mapnik&marker=39.9173%2C116.3908"
       address="4 Jingshan Front Street, Dongcheng District"
       addressZh="北京市东城区景山前街4号"
-        
+      
       relatedLinks={[]}
       relatedArticles={[
         { title: 'Great Wall of China', description: "The world's longest wall stretching across northern China.", href: '/destinations/beijing/what-to-do/great-wall' },

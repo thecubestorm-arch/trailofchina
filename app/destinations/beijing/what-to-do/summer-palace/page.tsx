@@ -44,7 +44,6 @@ export default function SummerPalacePage() {
     },
   ] as const
 
-
   const photoSpots = [
     {
       type: 'photo',
@@ -76,10 +75,35 @@ export default function SummerPalacePage() {
       nameZh="颐和园"
       city="Beijing"
       images={[
-        { src: 'https://picsum.photos/seed/summer-palace-1/800/500', alt: 'Summer Palace Long Corridor with painted beams in Beijing' },
-        { src: 'https://picsum.photos/seed/summer-palace-2/800/500', alt: 'Marble Boat on Kunming Lake at Summer Palace' },
-        { src: 'https://picsum.photos/seed/summer-palace-3/800/500', alt: 'Seventeen-Arch Bridge at Summer Palace' },
+        { src: 'https://picsum.photos/seed/summer-palace-lake/800/600', alt: 'Kunming Lake at Summer Palace' },
+        { src: 'https://picsum.photos/seed/summer-palace-corridor/800/600', alt: 'Long Corridor with painted beams at Summer Palace' },
+        { src: 'https://picsum.photos/seed/summer-palace-marble-boat/800/600', alt: 'Marble Boat on Kunming Lake' },
+        { src: 'https://picsum.photos/seed/summer-palace-pavilion/800/600', alt: 'Traditional pavilion at Summer Palace' },
+        { src: 'https://picsum.photos/seed/summer-palace-sunset/800/600', alt: 'Sunset over Kunming Lake at Summer Palace' },
       ]}
+      hook="The emperor's summer escape — a lake, a marble boat, and pavilions for a full day."
+      quickInfo={{
+        price: '¥30–60',
+        hours: '6:30–18:00',
+        bestTime: 'Late afternoon',
+        metro: 'Beigongmen (Line 4)',
+      }}
+      whyYouLoveIt={`The Summer Palace is where you go when the Forbidden City starts feeling heavy. Emperors came here to escape the formality of court life, and you can feel why the moment you step into the Long Corridor. It's a 728-meter covered walkway — the longest in any classical Chinese garden — with over 14,000 individually painted beams depicting battles, legends, and landscapes. Most visitors rush through it on their way to the Marble Boat. Walk it slowly. Each painting is a story, and the repetition of red pillars against Kunming Lake creates a rhythm that calms something in your brain.
+
+The view from Longevity Hill is the money shot. Climb the stone stairs to the Buddhist Fragrance Pavilion and look out over the lake — the Seventeen-Arch Bridge connects to South Lake Island, rowboats drift below, and the western hills frame everything in blue. On a clear day, it looks like a painting because it was designed to look like a painting. This was the imperial idea of paradise.
+
+The Marble Boat is smaller than you expect, but its history is the point. Empress Dowager Cixi redirected naval funds to rebuild this pleasure garden, and the boat became the symbol of her extravagance. The fact that it's made of stone — and therefore can't float — somehow makes the whole thing more perfect.`}
+      practicalDetails={{
+        gettingThere: `Take Metro Line 4 to Beigongmen Station (North Palace Gate). Use Exit D and walk south — you'll enter through the north gate directly into the hill area, which is ideal if you want to start with the climb to the Buddhist Fragrance Pavilion.
+
+Alternatively, take Line 4 to Xiyuan Station and enter from the east gate for a flatter, more gradual route through the Long Corridor first.`,
+        whatToSkip: `The boat rides on Kunming Lake look romantic but are overpriced for what they are — a slow loop around the same view you can see from the shore for free. The electric boats especially feel like a theme park ride. If you want to be on the water, rent a pedal boat near the east gate instead — it's cheaper and more fun.
+
+The tourist shops near the Marble Boat sell the same souvenirs you'll find everywhere in Beijing at inflated prices. Skip them and spend the time walking the western shore paths, which most tour groups ignore entirely.`,
+        photographyTips: `Sunset over Kunming Lake is the single best photo opportunity in the entire park. Position yourself on the eastern shore, near the Seventeen-Arch Bridge, about 45 minutes before sunset. The low light turns the lake surface into a mirror and the western hills go amber and gold.
+
+For the Long Corridor, shoot from within the covered walkway looking toward the lake — the repeating pillars create natural leading lines that draw the eye to the water and Longevity Hill beyond. Morning light from the east side illuminates the painted beams better than harsh midday sun.`,
+      }}
       description={`Imperial retreat with Kunming Lake, Longevity Hill, Long Corridor (728m of painted beams). Marble Boat symbol of Cixi\'s extravagance. Rent a rowboat in summer. UNESCO World Heritage Site.`}
       hours="6:00-18:00 (Nov-Mar to 17:00)"
       price="¥30 (park), ¥60 (all-inclusive)"
@@ -88,7 +112,7 @@ export default function SummerPalacePage() {
       mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=116.2597%2C39.9871%2C116.2697%2C39.9931&layer=mapnik&marker=39.9901%2C116.2647"
       address="19 Xinjiangongmen Road, Haidian District"
       addressZh="北京市海淀区新建宫门路19号"
-        
+      
       relatedLinks={[]}
       relatedArticles={[
         { title: "Temple of Heaven", description: "Explore Temple of Heaven, one of Beijing's top attractions.", href: "/destinations/beijing/what-to-do/temple-of-heaven" },

@@ -44,7 +44,6 @@ export default function LamaTemplePage() {
     },
   ] as const
 
-
   const photoSpots = [
     {
       type: 'photo',
@@ -72,10 +71,35 @@ export default function LamaTemplePage() {
       nameZh="雍和宫"
       city="Beijing"
       images={[
-        { src: 'https://picsum.photos/seed/lama-temple-1/800/500', alt: 'Lama Temple red walls and golden roofs in Beijing' },
-        { src: 'https://picsum.photos/seed/lama-temple-2/800/500', alt: 'Lama Temple incense smoke at morning light' },
-        { src: 'https://picsum.photos/seed/lama-temple-3/800/500', alt: 'Prayer wheels at Lama Temple' },
+        { src: 'https://picsum.photos/seed/lama-temple-gate/800/600', alt: 'Lama Temple entrance gate' },
+        { src: 'https://picsum.photos/seed/lama-temple-incense/800/600', alt: 'Incense smoke rising at Lama Temple' },
+        { src: 'https://picsum.photos/seed/lama-temple-roof/800/600', alt: 'Golden roofs of Lama Temple' },
+        { src: 'https://picsum.photos/seed/lama-temple-hall/800/600', alt: 'Main hall at Lama Temple' },
+        { src: 'https://picsum.photos/seed/lama-temple-wheels/800/600', alt: 'Tibetan prayer wheels at Lama Temple' },
       ]}
+      hook="A Tibetan Buddhist temple with a 26-meter Buddha carved from a single sandalwood tree."
+      quickInfo={{
+        price: '¥25',
+        hours: '9:00–16:30',
+        bestTime: 'Morning, weekdays',
+        metro: 'Yonghegong (Line 2/5)',
+      }}
+      whyYouLoveIt={`The first thing that hits you is the smell. Sandalwood incense in thick coils hangs in the air before you even pass through the gate, and by the time you reach the main courtyard, it's worked its way into your clothes. This isn't a museum with incense added for atmosphere — this is a working monastery where monks still chant, pray, and live. The fact that it exists in central Beijing, surrounded by apartment blocks and metro lines, makes it feel like a portal to somewhere else entirely.
+
+The 26-meter Maitreya Buddha in Wanfu Pavilion is the reason most people come, and it's worth the price of admission alone. Carved from a single sandalwood tree, it rises through three floors of the pavilion, and the scale doesn't compute until you're standing at its feet. The craftsmanship is staggering — facial expressions, hand gestures, the folds of robes, all from one trunk. But what stays with me is the sound of monks chanting in the hall below it. The acoustics of the old wooden building make the voices resonate in a way that feels intentional, even if it wasn't.
+
+Outside the main halls, the prayer wheels line the paths — rows of copper cylinders engraved with sutras, spinning as people walk past. Spin one and you're supposed to be sending a prayer into the world. Whether or not you believe it, there's something meditative about the physical act, the weight of the wheel, the soft metallic clink as it turns.`}
+      practicalDetails={{
+        gettingThere: `Take Metro Line 2 or Line 5 to Yonghegong Station. Use Exit F and walk east — the temple entrance is directly across the street, impossible to miss with its red walls and golden roofs. The station name literally means "Lama Temple," so you can't go wrong.
+
+The Confucius Temple is next door to the west and shares the same ticket. Exit Lama Temple through the west gate and walk 2 minutes to combine both sites in a single morning.`,
+        whatToSkip: `Skip the tourist shops lining the street outside the temple entrance. They sell the same incense, prayer beads, and "lucky" trinkets at inflated prices. If you want to participate in the incense ritual, grab the free sticks offered at the temple entrance instead.
+
+The tea houses nearby are mostly tourist-oriented with overpriced menus. For better value, walk 10 minutes south to Guijie (Ghost Street) after your visit for some of Beijing's best local restaurants.`,
+        photographyTips: `No photos are allowed inside the main halls, including Wanfu Pavilion where the giant Buddha sits. This rule is enforced, so don't try to sneak shots. Instead, focus on the exterior — the red walls, golden tile roofs, and incense smoke create a color palette that's unmistakably Tibetan Buddhist.
+
+The best exterior shots are in the side courtyards, away from the central axis where crowds concentrate. Morning light from the east illuminates the golden roof decorations beautifully between 9:00 and 10:30 AM. The prayer wheels near the western path make for intimate, detail-focused compositions.`,
+      }}
       description={`Largest Tibetan Buddhist temple outside Tibet. Red walls, golden roofs, thick incense. The 18-meter Maitreya Buddha carved from single sandalwood tree. Visit early morning when monks chant.`}
       hours="9:00-16:30"
       price="¥25"
@@ -84,7 +108,7 @@ export default function LamaTemplePage() {
       mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=116.4060%2C39.9426%2C116.4160%2C39.9486&layer=mapnik&marker=39.9456%2C116.4110"
       address="12 Yonghegong Street, Dongcheng District"
       addressZh="北京市东城区雍和宫大街12号"
-        
+      
       relatedLinks={[]}
       relatedArticles={[
         { title: "Temple of Heaven", description: "Explore Temple of Heaven, one of Beijing's top attractions.", href: "/destinations/beijing/what-to-do/temple-of-heaven" },
