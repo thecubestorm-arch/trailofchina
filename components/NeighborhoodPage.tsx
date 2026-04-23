@@ -3,6 +3,7 @@ import Link from 'next/link';
 import ChineseWatermark from './ChineseWatermark';
 import Breadcrumb from './Breadcrumb';
 import RelatedArticles from './RelatedArticles';
+import ImageGallery from './ImageGallery';
 
 type Tip = {
   type: 'tip' | 'scam' | 'photo';
@@ -33,6 +34,7 @@ interface NeighborhoodPageProps {
   tips: readonly { type: 'tip' | 'scam' | 'photo'; text: string }[];
   relatedLinks: readonly { title: string; href: string }[];
   relatedArticles?: RelatedArticle[];
+  images?: { src: string; alt: string }[];
 }
 
 export default function NeighborhoodPage({
@@ -48,6 +50,7 @@ export default function NeighborhoodPage({
   tips,
   relatedLinks,
   relatedArticles,
+  images,
 }: NeighborhoodPageProps) {
   const tipCount = (tips as Tip[]).filter((t) => t.type === 'tip').length;
   const photoCount = (tips as Tip[]).filter((t) => t.type === 'photo').length;
@@ -109,6 +112,7 @@ export default function NeighborhoodPage({
           </div>
         </section>
 
+        <ImageGallery images={images || []} />
 
         {/* Practical Tips */}
         <section className="mb-10">

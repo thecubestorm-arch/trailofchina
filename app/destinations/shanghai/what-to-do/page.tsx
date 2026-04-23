@@ -4,6 +4,7 @@ import ContextualCTA from '@/components/ContextualCTA';
 import Breadcrumb from '@/components/Breadcrumb';
 import LanternWatermark from '@/components/LanternWatermark';
 import RelatedArticles from '@/components/RelatedArticles'
+import ToursCTA from '@/components/ToursCTA'
 
 export const metadata: Metadata = {
   title: 'What to Do in Shanghai | Trail of China',
@@ -95,6 +96,7 @@ export default function ShanghaiWhatToDoPage() {
             variant="secondary"
           />
         </div>
+        <ToursCTA city="Shanghai" />
         <RelatedArticles articles={[
           {title: 'The Bund', description: 'Shanghai’s iconic waterfront promenade.', href: '/destinations/shanghai/what-to-do/bund'},
           {title: 'Yu Garden', description: 'A classical Chinese garden in the heart of Shanghai.', href: '/destinations/shanghai/what-to-do/yu-garden'},

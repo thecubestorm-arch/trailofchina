@@ -77,7 +77,12 @@ export default function TerracottaWarriorsPage() {
       { label: "What to Do", href: '/destinations/xian/what-to-do' },
     ]}
       nameZh="兵马俑"
-      city="Xi\'an"
+      city="Xi'an"
+      images={[
+        { src: 'https://picsum.photos/seed/terracotta-1/800/600', alt: 'Terracotta Warriors in formation' },
+        { src: 'https://picsum.photos/seed/terracotta-2/800/600', alt: 'Close-up of warrior faces' },
+        { src: 'https://picsum.photos/seed/terracotta-3/800/600', alt: 'Pit 1 excavation site' },
+      ]}
       description={`The Terracotta Warriors (兵马俑) are the 2,200-year-old army of China\'s first emperor, Qin Shi Huang. Discovered in 1974 by farmers digging a well, the site contains over 8,000 life-sized soldiers, 130 chariots with 520 horses, and 150 cavalry horses.
 
 The warriors were buried with the emperor in 210-209 BC to protect him in the afterlife. Each warrior is unique — different facial features, heights, and uniforms indicating rank. They were originally painted in bright colors, but most pigment deteriorated upon exposure to air after excavation.

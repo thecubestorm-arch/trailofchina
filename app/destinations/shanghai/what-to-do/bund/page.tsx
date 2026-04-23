@@ -82,6 +82,11 @@ export default function BundPage() {
     ]}
       nameZh="外滩"
       city="Shanghai"
+      images={[
+        { src: 'https://picsum.photos/seed/bund-1/800/600', alt: 'The Bund waterfront at night' },
+        { src: 'https://picsum.photos/seed/bund-2/800/600', alt: 'Colonial architecture along the Bund' },
+        { src: 'https://picsum.photos/seed/bund-3/800/600', alt: 'Pudong skyline from the Bund' },
+      ]}
       description={`The Bund (外滩) is Shanghai\'s most famous landmark — a 1.5 km waterfront promenade along the Huangpu River, lined with 33 buildings in various colonial-era architectural styles. Built in the early 20th century, it was once the heart of Shanghai\'s International Settlement.
 
 The buildings were constructed between 1897 and 1937 by foreign banks and trading houses, representing styles from Neoclassical and Beaux-Arts to Art Deco. Each building has its own history, from the HSBC Building (now the Shanghai Pudong Development Bank) to the Astor House Hotel (now a restaurant).

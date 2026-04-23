@@ -4,6 +4,7 @@ import ContextualCTA from '@/components/ContextualCTA';
 import Breadcrumb from '@/components/Breadcrumb';
 import LanternWatermark from '@/components/LanternWatermark';
 import RelatedArticles from '@/components/RelatedArticles'
+import ToursCTA from '@/components/ToursCTA'
 
 export const metadata: Metadata = {
   title: 'What to Do in Chongqing | Trail of China',
@@ -114,6 +115,7 @@ export default function ChongqingWhatToDoPage() {
             variant="secondary"
           />
         </div>
+        <ToursCTA city="Chongqing" />
         <RelatedArticles articles={[
           {title: 'Hongya Cave', description: 'The iconic stilt-house complex lit up at night.', href: '/destinations/chongqing/what-to-do/hongya-cave'},
           {title: 'Liziba Monorail', description: 'The train that goes right through a residential building.', href: '/destinations/chongqing/what-to-do/liziba-monorail'},

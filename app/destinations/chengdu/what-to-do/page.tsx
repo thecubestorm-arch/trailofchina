@@ -4,6 +4,7 @@ import ContextualCTA from '@/components/ContextualCTA';
 import Breadcrumb from '@/components/Breadcrumb';
 import LanternWatermark from '@/components/LanternWatermark';
 import RelatedArticles from '@/components/RelatedArticles'
+import ToursCTA from '@/components/ToursCTA'
 
 export const metadata: Metadata = {
   title: 'What to Do in Chengdu | Pandas, Teahouses, and Culture',
@@ -125,6 +126,7 @@ export default function ChengduWhatToDoPage() {
             variant="secondary"
           />
         </div>
+        <ToursCTA city="Chengdu" />
         <RelatedArticles articles={[
           {title: 'Giant Panda Base', description: 'See giant pandas up close at the breeding research base.', href: '/destinations/chengdu/what-to-do/panda-base'},
           {title: 'Kuanzhai Alley', description: 'Stroll through Chengdu’s iconic Wide and Narrow Alleys.', href: '/destinations/chengdu/what-to-do/kuanzhai-alley'},

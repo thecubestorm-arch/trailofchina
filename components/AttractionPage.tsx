@@ -3,6 +3,8 @@ import Link from 'next/link';
 import ChineseWatermark from './ChineseWatermark';
 import Breadcrumb from './Breadcrumb';
 import RelatedArticles from './RelatedArticles';
+import ImageGallery from './ImageGallery';
+import ToursCTA from './ToursCTA';
 
 type Tip = {
   type: 'tip' | 'scam' | 'photo';
@@ -34,6 +36,7 @@ interface AttractionPageProps {
   relatedLinks: readonly { title: string; href: string }[];
   relatedArticles?: RelatedArticle[];
   city: string;
+  images?: { src: string; alt: string }[];
 }
 
 export default function AttractionPage({
@@ -50,6 +53,7 @@ export default function AttractionPage({
   relatedLinks,
   relatedArticles,
   city,
+  images,
 }: AttractionPageProps) {
   const tipCount = (tips as Tip[]).filter((t) => t.type === 'tip').length;
   const photoCount = (tips as Tip[]).filter((t) => t.type === 'photo').length;
@@ -111,6 +115,7 @@ export default function AttractionPage({
           </div>
         </section>
 
+        <ImageGallery images={images || []} />
 
         {/* Practical Tips */}
         <section className="mb-10">
@@ -171,6 +176,9 @@ export default function AttractionPage({
           </div>
         </section>
 
+
+        {/* Tours CTA */}
+        <ToursCTA city={city} attraction={name} />
 
         {/* Related Articles */}
         {relatedArticles && relatedArticles.length > 0 && (

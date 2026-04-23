@@ -4,6 +4,7 @@ import ContextualCTA from '@/components/ContextualCTA';
 import Breadcrumb from '@/components/Breadcrumb';
 import LanternWatermark from '@/components/LanternWatermark';
 import RelatedArticles from '@/components/RelatedArticles'
+import ToursCTA from '@/components/ToursCTA'
 
 export const metadata: Metadata = {
   title: 'What to Do in Beijing | Forbidden City, Great Wall & Hidden Gems',
@@ -182,6 +183,7 @@ export default function BeijingWhatToDoPage() {
             variant="secondary"
           />
         </div>
+        <ToursCTA city="Beijing" />
         <RelatedArticles articles={[
           {title: 'Forbidden City Guide', description: 'Explore the largest ancient palace complex in the world.', href: '/destinations/beijing/what-to-do/forbidden-city'},
           {title: 'Great Wall Guide', description: 'How to visit the Great Wall from Beijing.', href: '/destinations/beijing/what-to-do/great-wall'},

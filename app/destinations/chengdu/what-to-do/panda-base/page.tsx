@@ -78,6 +78,11 @@ export default function PandaBasePage() {
     ]}
       nameZh="成都大熊猫繁育研究基地"
       city="Chengdu"
+      images={[
+        { src: 'https://picsum.photos/seed/panda-base-1/800/600', alt: 'Giant pandas eating bamboo' },
+        { src: 'https://picsum.photos/seed/panda-base-2/800/600', alt: 'Baby pandas in nursery' },
+        { src: 'https://picsum.photos/seed/panda-base-3/800/600', alt: 'Panda resting in tree' },
+      ]}
       description={`Chengdu Panda Base (成都大熊猫繁育研究基地) is the world\'s most famous giant panda sanctuary, housing over 200 pandas at any given time. Opened in 1987, it was founded to rescue and breed giant pandas, which are critically endangered.
 
 The base covers 600 acres of bamboo forests and mountains, with multiple village areas containing pandas of different ages. Visitors can see newborns in the nursery, adolescents in the adolescents' home, and adults in various enclosures. The pandas sleep 10-16 hours daily and spend 12-16 hours eating — bamboo is their only food source.

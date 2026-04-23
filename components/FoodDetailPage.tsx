@@ -3,6 +3,7 @@ import Link from 'next/link';
 import ChineseWatermark from './ChineseWatermark';
 import Breadcrumb from './Breadcrumb';
 import RelatedArticles from './RelatedArticles';
+import ImageGallery from './ImageGallery';
 
 type Tip = {
   type: 'tip' | 'scam' | 'where';
@@ -38,6 +39,7 @@ interface FoodDetailPageProps {
   tips: readonly { type: 'tip' | 'scam' | 'where'; text: string }[];
   relatedLinks: readonly { title: string; href: string }[];
   relatedArticles?: RelatedArticle[];
+  images?: { src: string; alt: string }[];
 }
 
 export default function FoodDetailPage({
@@ -52,6 +54,7 @@ export default function FoodDetailPage({
   tips,
   relatedLinks,
   relatedArticles,
+  images,
 }: FoodDetailPageProps) {
   const tipCount = (tips as Tip[]).filter((t) => t.type === 'tip').length;
   const scamCount = (tips as Tip[]).filter((t) => t.type === 'scam').length;
@@ -108,6 +111,8 @@ export default function FoodDetailPage({
             ))}
           </div>
         </section>
+
+        <ImageGallery images={images || []} />
 
         {/* Where to Try */}
         {whereToTry.length > 0 && (

@@ -4,6 +4,7 @@ import ContextualCTA from '@/components/ContextualCTA';
 import Breadcrumb from '@/components/Breadcrumb';
 import LanternWatermark from '@/components/LanternWatermark';
 import RelatedArticles from '@/components/RelatedArticles'
+import ToursCTA from '@/components/ToursCTA'
 
 export const metadata: Metadata = {
   title: "What to Do in Xi’an | Terracotta Warriors, City Wall & Historic Highlights",
@@ -119,6 +120,7 @@ export default function XianWhatToDoPage() {
             variant="secondary"
           />
         </div>
+        <ToursCTA city="Xi'an" />
         <RelatedArticles articles={[
           {title: 'Terracotta Warriors', description: 'The must-see army of 8,000 clay soldiers.', href: '/destinations/xian/what-to-do/terracotta-warriors'},
           {title: 'Xi’an City Wall', description: 'Bike or walk along the best-preserved city wall in China.', href: '/destinations/xian/what-to-do/city-wall'},

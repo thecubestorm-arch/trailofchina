@@ -87,6 +87,11 @@ export default function GreatWallPage() {
     ]}
       nameZh="长城"
       city="Beijing"
+      images={[
+        { src: 'https://picsum.photos/seed/great-wall-1/800/600', alt: 'Great Wall winding through mountains' },
+        { src: 'https://picsum.photos/seed/great-wall-2/800/600', alt: 'Great Wall watchtower' },
+        { src: 'https://picsum.photos/seed/great-wall-3/800/600', alt: 'Great Wall at sunrise' },
+      ]}
       description={`The Great Wall of China (长城) stretches over 13,000 miles across northern China, with the most impressive sections within reach of Beijing. The wall wasn\'t built by a single dynasty but evolved over 2,000 years, from the 7th century BC to the 17th century AD.
 
 Multiple sections near Beijing each offer different experiences: fully restored and crowded, wild and unrestored, or a balance of both. The Ming Dynasty (1368-1644) built the best-preserved sections using bricks and stone, replacing earlier earthen walls.

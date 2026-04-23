@@ -87,6 +87,11 @@ export default function ForbiddenCityPage() {
     ]}
       nameZh="故宫"
       city="Beijing"
+      images={[
+        { src: 'https://picsum.photos/seed/forbidden-city-1/800/600', alt: 'Forbidden City entrance gate' },
+        { src: 'https://picsum.photos/seed/forbidden-city-2/800/600', alt: 'Forbidden City courtyard' },
+        { src: 'https://picsum.photos/seed/forbidden-city-3/800/600', alt: 'Forbidden City throne room' },
+      ]}
       description={`The Forbidden City (故宫) is the world\'s largest and best-preserved palace complex, spanning 180 acres with 980 buildings containing 8,700 rooms. It served as the imperial palace for 24 emperors over 500 years during the Ming and Qing dynasties.
 
 Today, it houses the Palace Museum with over one million cultural relics, from ancient bronzes and ceramics to imperial robes and calligraphy. The complex follows strict feng shui principles, with the Hall of Supreme Harmony at its geometric center, symbolizing the emperor\'s position as the center of the universe.
