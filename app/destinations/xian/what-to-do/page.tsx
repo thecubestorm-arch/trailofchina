@@ -110,6 +110,17 @@ export default function XianWhatToDoPage() {
             <li><strong>Ancient City Wall morning walk:</strong> Enter right after opening for fewer cyclists.</li>
           </ul>
         </section>
+
+        <section className="mb-8 bg-[#fdf8f3] rounded-xl p-6">
+          <h2 className="text-xl font-semibold mb-2 text-[#1f2933]">Want something more authentic?</h2>
+          <p className="text-gray-700 mb-3">
+            Experience Xi’an like a local — sunrise walks on the city wall, Muslim Quarter deep dives, hand-pulled noodle classes, and shadow puppet workshops.
+          </p>
+          <Link href="/destinations/xian/local-experiences" className="inline-block text-[#af5d32] font-medium hover:underline">
+            Local Experiences in Xi’an →
+          </Link>
+        </section>
+
         <div className="mt-8">
           <ContextualCTA
             icon="🗺️"

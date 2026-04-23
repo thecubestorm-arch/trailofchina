@@ -105,6 +105,17 @@ export default function ChongqingWhatToDoPage() {
             <li><strong>Night river cruise views:</strong> Better skyline framing than many observation decks</li>
           </ul>
         </section>
+
+        <section className="mb-8 bg-[#fdf8f3] rounded-xl p-6">
+          <h2 className="text-xl font-semibold mb-2 text-[#1f2933]">Want something more authentic?</h2>
+          <p className="text-gray-700 mb-3">
+            Discover the real Chongqing with locals — old town walks behind the souvenir shops, hotpot boot camps, mountain city photography, and the legendary ¥2 ferry.
+          </p>
+          <Link href="/destinations/chongqing/local-experiences" className="inline-block text-[#af5d32] font-medium hover:underline">
+            Local Experiences in Chongqing →
+          </Link>
+        </section>
+
         <div className="mt-8">
           <ContextualCTA
             icon="🗺️"

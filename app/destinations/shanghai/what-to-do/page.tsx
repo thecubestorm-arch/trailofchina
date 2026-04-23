@@ -86,6 +86,17 @@ export default function ShanghaiWhatToDoPage() {
             <li><strong>Shanghai Museum:</strong> Free entry, incredible ancient Chinese art</li>
           </ul>
         </section>
+
+        <section className="mb-8 bg-[#fdf8f3] rounded-xl p-6">
+          <h2 className="text-xl font-semibold mb-2 text-[#1f2933]">Want something more authentic?</h2>
+          <p className="text-gray-700 mb-3">
+            Explore Shanghai with locals — shikumen walks with preservationists, French Concession food tours, Art Deco architecture tours, and water town day trips.
+          </p>
+          <Link href="/destinations/shanghai/local-experiences" className="inline-block text-[#af5d32] font-medium hover:underline">
+            Local Experiences in Shanghai →
+          </Link>
+        </section>
+
         <div className="mt-8">
           <ContextualCTA
             icon="🗺️"

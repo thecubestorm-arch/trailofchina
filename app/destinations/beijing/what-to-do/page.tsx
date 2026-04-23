@@ -173,6 +173,17 @@ export default function BeijingWhatToDoPage() {
             <li><strong>Old Summer Palace (圆明园):</strong> Less visited than the Summer Palace, more atmospheric. Ruined by British-French forces in 1860. The scattered stone columns of the European-style fountains are haunting. ¥25</li>
           </ul>
         </section>
+
+        <section className="mb-8 bg-[#fdf8f3] rounded-xl p-6">
+          <h2 className="text-xl font-semibold mb-2 text-[#1f2933]">Want something more authentic?</h2>
+          <p className="text-gray-700 mb-3">
+            Go beyond the monuments with locals who know the real city — hutong breakfasts, night market food walks, calligraphy in courtyard homes, and hidden workshops.
+          </p>
+          <Link href="/destinations/beijing/local-experiences" className="inline-block text-[#af5d32] font-medium hover:underline">
+            Local Experiences in Beijing →
+          </Link>
+        </section>
+
         <div className="mt-8">
           <ContextualCTA
             icon="🗺️"

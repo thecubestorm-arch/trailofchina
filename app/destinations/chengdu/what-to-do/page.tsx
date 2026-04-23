@@ -116,6 +116,17 @@ export default function ChengduWhatToDoPage() {
             <li><strong>Anshun Bridge at night (安顺廊桥):</strong> River reflections and easy evening strolls.</li>
           </ul>
         </section>
+
+        <section className="mb-8 bg-[#fdf8f3] rounded-xl p-6">
+          <h2 className="text-xl font-semibold mb-2 text-[#1f2933]">Want something more authentic?</h2>
+          <p className="text-gray-700 mb-3">
+            Go deeper into Chengdu with locals — tea ceremonies at People’s Park, spicy hotpot with neighborhood guides, bamboo weaving workshops, and panda volunteering.
+          </p>
+          <Link href="/destinations/chengdu/local-experiences" className="inline-block text-[#af5d32] font-medium hover:underline">
+            Local Experiences in Chengdu →
+          </Link>
+        </section>
+
         <div className="mt-8">
           <ContextualCTA
             icon="🗺️"
