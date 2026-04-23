@@ -111,32 +111,13 @@ export default function VpnGuidePage() {
               <p className="mt-4 text-sm leading-relaxed text-slate-700 md:text-base">
                 After installing, log in and test the connection while you still have uncensored internet. Make sure you can connect to a server, browse a blocked site like Google, and get decent speeds. Screenshot the login credentials and any support contact info, and save them somewhere accessible offline. Write down the server locations that worked best — Japan, Singapore, and Hong Kong are usually the fastest from mainland China.
               </p>
-              <p className="mt-4 text-sm leading-relaxed text-slate-700 md:text-base">
-                If your VPN offers multiple protocols, enable the stealth or obfuscated option now. In the app settings, look for terms like "Stealth," "Obfuscated," or "Camouflage Mode." This makes your VPN traffic look like normal web traffic, which dramatically improves reliability inside China.
-              </p>
+
             </div>
 
-            <div className="mt-8 rounded-2xl border border-amber-200 bg-amber-50 p-6">
-              <h2 className="text-xl font-black text-slate-900">What if your VPN stops working?</h2>
-              <p className="mt-3 text-sm leading-relaxed text-slate-700 md:text-base">
-                It happens. The Great Firewall gets stricter around major political events, and even the best VPNs have off days. Here is what to try before you panic:
-              </p>
-              <p className="mt-3 text-sm leading-relaxed text-slate-700 md:text-base">
-                <strong className="text-slate-900">Switch servers.</strong> Try Japan, Singapore, or Hong Kong first. Avoid US and European servers — they are slower and more heavily blocked. Some VPNs list specific "China-optimized" servers; use those if available.
-              </p>
-              <p className="mt-3 text-sm leading-relaxed text-slate-700 md:text-base">
-                <strong className="text-slate-900">Switch protocols.</strong> OpenVPN TCP is often more reliable than UDP in China. WireGuard can be faster but may be easier to detect. If your VPN has a stealth or obfuscated protocol, switch to it immediately.
-              </p>
-              <p className="mt-3 text-sm leading-relaxed text-slate-700 md:text-base">
-                <strong className="text-slate-900">Use your backup VPN.</strong> This is why you installed two. If ExpressVPN is down, fire up NordVPN or Astrill. Having a second app already logged in saves you from being completely cut off.
-              </p>
-            </div>
+
 
             <div className="mt-8">
               <h2 className="text-2xl font-extrabold text-slate-900">Alternatives if you can not get a VPN working</h2>
-              <p className="mt-4 text-sm leading-relaxed text-slate-700 md:text-base">
-                If you are tech-savvy, Shadowsocks and V2Ray are open-source proxy tools that some travelers use to bypass the Great Firewall. They are more complex to set up than a commercial VPN and require your own server or a subscription to a specialized service. I only recommend them if you already know what you are doing.
-              </p>
               <p className="mt-4 text-sm leading-relaxed text-slate-700 md:text-base">
                 Another option is roaming with your home SIM card. If your carrier offers international roaming in China, your traffic routes through your home network and bypasses the Great Firewall entirely. The downside is cost — roaming data is expensive, and speeds can be slow. It is useful as an emergency backup to check email or send a WhatsApp message, but not for everyday browsing.
               </p>
