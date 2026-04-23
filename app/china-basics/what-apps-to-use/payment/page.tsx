@@ -25,8 +25,8 @@ export default function PaymentAppsPage() {
         <section className="mb-8">
           <p className="text-lg text-gray-700 leading-relaxed">
             China has gone almost entirely cashless. Street vendors, taxi drivers, convenience stores, 
-            even temple donation boxes — they all use QR codes. If you show up with only cash, you&apos;ll 
-            manage, but you&apos;ll stand out and slow yourself down. Setting up Alipay and WeChat Pay before 
+            even temple donation boxes — they all use QR codes. If you show up with only cash, you'll 
+            manage, but you'll stand out and slow yourself down. Setting up Alipay and WeChat Pay before 
             you arrive is one of the most important things you can do for a smooth trip.
           </p>
         </section>
@@ -45,7 +45,7 @@ export default function PaymentAppsPage() {
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">Alipay (支付宝) — More Than Just Payment</h2>
           <p className="text-gray-700 mb-4">
-            Alipay is China&apos;s most powerful super-app. Yes, it handles payments — but the real magic is in its 
+            Alipay is China's most powerful super-app. Yes, it handles payments — but the real magic is in its 
             <strong> mini-apps (小程序)</strong>, which turn Alipay into a gateway for hundreds of services without 
             downloading separate apps:
           </p>
@@ -60,7 +60,7 @@ export default function PaymentAppsPage() {
           </ul>
           <div className="mt-4">
             <Link 
-              href="/china-basics/what-apps-to-use/alipay" 
+              href="/china-basics/what-apps-to-use/alipay#payment" 
               className="inline-flex items-center gap-1 text-[#af5d32] font-semibold hover:text-[#8f431c] transition-colors"
             >
               Set up Alipay step by step →
@@ -71,7 +71,7 @@ export default function PaymentAppsPage() {
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">WeChat Pay (微信支付) — Social Payments & Mini-Programs</h2>
           <p className="text-gray-700 mb-4">
-            WeChat Pay is built into China&apos;s most-used messaging app. It handles payments, but its strength 
+            WeChat Pay is built into China's most-used messaging app. It handles payments, but its strength 
             is <strong>social payments</strong> and <strong>mini-programs</strong>:
           </p>
           <ul className="text-gray-700 list-disc pl-5 space-y-2">
@@ -85,7 +85,7 @@ export default function PaymentAppsPage() {
           </ul>
           <div className="mt-4">
             <Link 
-              href="/china-basics/what-apps-to-use/wechat-pay" 
+              href="/china-basics/what-apps-to-use/wechat-pay#payment" 
               className="inline-flex items-center gap-1 text-[#af5d32] font-semibold hover:text-[#8f431c] transition-colors"
             >
               Set up WeChat Pay step by step →
@@ -96,15 +96,15 @@ export default function PaymentAppsPage() {
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">Which One Should You Get First?</h2>
           <div className="bg-[#f5f1ea] rounded-xl p-6">
-            <p className="text-gray-700 mb-4"><strong>Short answer: Get both.</strong> They&apos;re free, and some merchants only accept one or the other.</p>
+            <p className="text-gray-700 mb-4"><strong>Short answer: Get both.</strong> They're free, and some merchants only accept one or the other.</p>
             <p className="text-gray-700 mb-4">If you must choose one first:</p>
             <ul className="text-gray-700 list-disc pl-5 space-y-2">
               <li><strong>Alipay first</strong> if you want more standalone functionality — transit tickets, food delivery, hospital booking all work better inside Alipay</li>
-              <li><strong>WeChat Pay first</strong> if you&apos;re traveling with Chinese friends or staying with locals — social payments (red packets, splitting bills) are WeChat&apos;s superpower</li>
+              <li><strong>WeChat Pay first</strong> if you're traveling with Chinese friends or staying with locals — social payments (red packets, splitting bills) are WeChat's superpower</li>
             </ul>
             <p className="text-gray-700 mt-4">
               Some merchants accept only Alipay (most street vendors, some smaller shops) and some only WeChat Pay 
-              (certain restaurants, some services). Having both means you&apos;re never stuck.
+              (certain restaurants, some services). Having both means you're never stuck.
             </p>
           </div>
         </section>
@@ -124,8 +124,8 @@ export default function PaymentAppsPage() {
           <h2 className="text-2xl font-semibold mb-4">Other Useful Payment Apps</h2>
           <ul className="text-gray-700 list-disc pl-5 space-y-2">
             <li><strong>Meituan (美团)</strong> — Not a payment app per se, but essential for food delivery, hotel deals, and group-buying discounts. Payment happens through Alipay or WeChat Pay</li>
-            <li><strong>Didi (滴滴出行)</strong> — China&apos;s Uber. Pay within the app via Alipay or WeChat Pay. No cash needed</li>
-            <li><strong>UnionPay (银联)</strong> — China&apos;s domestic card network. Some UnionPay cards work internationally; useful as backup</li>
+            <li><strong>Didi (滴滴出行)</strong> — China's Uber. Pay within the app via Alipay or WeChat Pay. No cash needed</li>
+            <li><strong>UnionPay (银联)</strong> — China's domestic card network. Some UnionPay cards work internationally; useful as backup</li>
           </ul>
         </section>
       </main>
