@@ -19,8 +19,8 @@ export default function TripAdvisorGallery({ items }: TripAdvisorGalleryProps) {
   const [lightboxIdx, setLightboxIdx] = useState(0);
 
   const mainItem = items[mainIdx];
-  const thumbnails = items.slice(0, 4);
-  const moreCount = Math.max(0, items.length - 4);
+  const thumbnails = items.slice(1, 3); // 2 preview thumbnails (skip main)
+  const moreCount = Math.max(0, items.length - 3); // how many beyond the 3 shown
 
   const openLightbox = useCallback((idx: number) => {
     setLightboxIdx(idx);
@@ -111,19 +111,20 @@ export default function TripAdvisorGallery({ items }: TripAdvisorGalleryProps) {
           </div>
         </div>
 
-        {/* Thumbnails — 2x2 grid */}
+        {/* Two preview thumbnails side by side */}
         <div className="grid grid-cols-2 gap-3">
           {thumbnails.map((item, idx) => {
-            const isActive = idx === mainIdx;
-            const isLastThumbnail = idx === 3;
+            const realIdx = idx + 1; // thumbnails start from index 1
+            const isActive = mainIdx === realIdx;
+            const isLast = idx === thumbnails.length - 1;
             return (
               <button
                 key={idx}
                 onClick={() => {
-                  if (isLastThumbnail && moreCount > 0) {
+                  if (isLast && moreCount > 0) {
                     openLightbox(0);
                   } else {
-                    setMainIdx(idx);
+                    setMainIdx(realIdx);
                   }
                 }}
                 className={`relative aspect-[4/3] rounded-lg overflow-hidden border cursor-pointer transition-all ${
@@ -160,7 +161,7 @@ export default function TripAdvisorGallery({ items }: TripAdvisorGalleryProps) {
                 )}
 
                 {/* "+N more photos" overlay on last thumbnail */}
-                {isLastThumbnail && moreCount > 0 && (
+                {isLast && moreCount > 0 && (
                   <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
                     <span className="text-white font-semibold text-sm sm:text-base">
                       +{moreCount} more photo{moreCount > 1 ? 's' : ''}
