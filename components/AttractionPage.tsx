@@ -7,7 +7,7 @@ import ImageGallery from './ImageGallery';
 import ToursCTA from './ToursCTA';
 
 type Tip = {
-  type: 'tip' | 'scam' | 'photo';
+  type: 'tip' | 'photo';
   text: string;
 };
 
@@ -31,7 +31,7 @@ interface AttractionPageProps {
   price: string;
   nearestSubway: string;
   bestTime: string;
-  tips: readonly { type: 'tip' | 'scam' | 'photo'; text: string }[];
+  tips: readonly { type: 'tip' | 'photo'; text: string }[];
   mapUrl: string;
   relatedLinks: readonly { title: string; href: string }[];
   relatedArticles?: RelatedArticle[];
@@ -55,9 +55,6 @@ export default function AttractionPage({
   city,
   images,
 }: AttractionPageProps) {
-  const tipCount = (tips as Tip[]).filter((t) => t.type === 'tip').length;
-  const photoCount = (tips as Tip[]).filter((t) => t.type === 'photo').length;
-
   return (
     <div className="min-h-screen" style={{
       background: 'linear-gradient(0deg, rgba(245,241,234,0.02) 0%, rgba(245,241,234,0.02) 100%), #ffffff',
@@ -117,48 +114,23 @@ export default function AttractionPage({
 
         <ImageGallery images={images || []} />
 
-        {/* Practical Tips */}
+        {/* Know Before You Go */}
         <section className="mb-10">
-          <h2 className="text-2xl font-serif font-bold mb-6 text-[var(--foreground)]">Practical Tips</h2>
-          
-          {/* Tips Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            {tips.filter((t) => t.type === 'tip').length > 0 && (
-              <div className="md:col-span-2">
-                <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                  <span className="text-2xl">💡</span> Helpful Tips
-                </h3>
-                <div className="space-y-3">
-                  {tips
-                    .filter((t) => t.type === 'tip')
-                    .map((tip, idx) => (
-                      <div key={idx} className="bg-amber-50 border-l-4 border-amber-400 p-4 rounded-r">
-                        <span className="text-amber-900">{tip.text}</span>
-                      </div>
-                    ))}
-                </div>
+          <h2 className="text-2xl font-serif font-bold mb-6 text-[var(--foreground)]">Know Before You Go</h2>
+          <div className="space-y-4">
+            {tips.filter((t) => t.type === 'tip').map((tip, idx) => (
+              <div key={idx} className="flex items-start gap-3">
+                <span className="text-terracotta mt-0.5 text-lg">•</span>
+                <p className="text-[var(--foreground)] leading-relaxed">{tip.text}</p>
               </div>
-            )}
+            ))}
+            {tips.filter((t) => t.type === 'photo').map((tip, idx) => (
+              <div key={`photo-${idx}`} className="flex items-start gap-3">
+                <span className="mt-0.5">📷</span>
+                <p className="text-[var(--foreground)] leading-relaxed">{tip.text}</p>
+              </div>
+            ))}
           </div>
-
-
-          {/* Best Photo Spots */}
-          {photoCount > 0 && (
-            <div className="mb-8">
-              <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                <span className="text-2xl">📷</span> Best Photo Spots
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {tips
-                  .filter((t) => t.type === 'photo')
-                  .map((tip, idx) => (
-                    <div key={idx} className="bg-[var(--background-strong)] border border-[var(--line)] p-4 rounded-lg">
-                      <span className="text-[var(--foreground)]">{tip.text}</span>
-                    </div>
-                  ))}
-              </div>
-            </div>
-          )}
         </section>
 
 

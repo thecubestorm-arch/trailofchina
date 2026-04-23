@@ -6,7 +6,7 @@ import RelatedArticles from './RelatedArticles';
 import ImageGallery from './ImageGallery';
 
 type Tip = {
-  type: 'tip' | 'scam' | 'where';
+  type: 'tip' | 'where';
   text: string;
 };
 
@@ -36,7 +36,7 @@ interface FoodDetailPageProps {
   priceRange: string;
   bestTime: string;
   whereToTry: readonly Restaurant[];
-  tips: readonly { type: 'tip' | 'scam' | 'where'; text: string }[];
+  tips: readonly { type: 'tip' | 'where'; text: string }[];
   relatedLinks: readonly { title: string; href: string }[];
   relatedArticles?: RelatedArticle[];
   images?: { src: string; alt: string }[];
@@ -56,10 +56,6 @@ export default function FoodDetailPage({
   relatedArticles,
   images,
 }: FoodDetailPageProps) {
-  const tipCount = (tips as Tip[]).filter((t) => t.type === 'tip').length;
-  const scamCount = (tips as Tip[]).filter((t) => t.type === 'scam').length;
-  const whereCount = (tips as Tip[]).filter((t) => t.type === 'where').length;
-
   return (
     <div className="min-h-screen" style={{
       background: 'linear-gradient(0deg, rgba(245,241,234,0.02) 0%, rgba(245,241,234,0.02) 100%), #ffffff',
@@ -133,66 +129,23 @@ export default function FoodDetailPage({
           </section>
         )}
 
-        {/* Practical Tips */}
-
+        {/* Know Before You Go */}
         <section className="mb-10">
-          <h2 className="text-2xl font-serif font-bold mb-6 text-[var(--foreground)]">Practical Tips</h2>
-          
-          {/* Tips Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            {tipCount > 0 && (
-              <div className="md:col-span-2">
-                <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                  <span className="text-2xl">💡</span> Helpful Tips
-                </h3>
-                <div className="space-y-3">
-                  {tips
-                    .filter((t) => t.type === 'tip')
-                    .map((tip, idx) => (
-                      <div key={idx} className="bg-amber-50 border-l-4 border-amber-400 p-4 rounded-r">
-                        <span className="text-amber-900">{tip.text}</span>
-                      </div>
-                    ))}
-                </div>
+          <h2 className="text-2xl font-serif font-bold mb-6 text-[var(--foreground)]">Know Before You Go</h2>
+          <div className="space-y-4">
+            {tips.filter((t) => t.type === 'tip').map((tip, idx) => (
+              <div key={idx} className="flex items-start gap-3">
+                <span className="text-terracotta mt-0.5 text-lg">•</span>
+                <p className="text-[var(--foreground)] leading-relaxed">{tip.text}</p>
               </div>
-            )}
+            ))}
+            {tips.filter((t) => t.type === 'where').map((tip, idx) => (
+              <div key={`where-${idx}`} className="flex items-start gap-3">
+                <span className="mt-0.5">📍</span>
+                <p className="text-[var(--foreground)] leading-relaxed">{tip.text}</p>
+              </div>
+            ))}
           </div>
-
-          {/* Where to Eat Tips */}
-          {whereCount > 0 && (
-            <div className="mb-8">
-              <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                <span className="text-2xl">📍</span> Where to Eat
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {tips
-                  .filter((t) => t.type === 'where')
-                  .map((tip, idx) => (
-                    <div key={idx} className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r">
-                      <span className="text-blue-900">{tip.text}</span>
-                    </div>
-                  ))}
-              </div>
-            </div>
-          )}
-
-          {/* Scam Alerts */}
-          {scamCount > 0 && (
-            <div className="mb-8">
-              <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                <span className="text-2xl">⚠️</span> Avoid These Scams
-              </h3>
-              <div className="space-y-2">
-                {tips
-                  .filter((t) => t.type === 'scam')
-                  .map((tip, idx) => (
-                    <div key={idx} className="bg-[var(--accent-soft)] border-l-4 border-[var(--accent)] p-4 rounded-r">
-                      <span className="text-[var(--foreground)] font-medium">{tip.text}</span>
-                    </div>
-                  ))}
-              </div>
-            </div>
-          )}
         </section>
 
 
