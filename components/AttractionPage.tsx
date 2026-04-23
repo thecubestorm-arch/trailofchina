@@ -4,6 +4,7 @@ import RelatedArticles from './RelatedArticles';
 import ImageGallery from './ImageGallery';
 import ToursCTA from './ToursCTA';
 import TripAdvisorGallery from './TripAdvisorGallery';
+import React from 'react';
 
 type Tip = {
   type: 'tip' | 'photo';
@@ -59,6 +60,8 @@ interface AttractionPageProps {
   whyYouLoveIt?: string;
   /** Practical details: getting there, what to skip, photography tips. Rendered as narrative sections. */
   practicalDetails?: PracticalDetails;
+  /** Optional custom Tours CTA element. When provided, replaces the default ToursCTA. */
+  customToursCTA?: React.ReactNode;
 }
 
 export default function AttractionPage({
@@ -82,6 +85,7 @@ export default function AttractionPage({
   quickInfo,
   whyYouLoveIt,
   practicalDetails,
+  customToursCTA,
 }: AttractionPageProps) {
   // Use magazine layout when we have images + rich content fields
   const useMagazineLayout = images && images.length > 0 && (hook || quickInfo || whyYouLoveIt);
@@ -264,8 +268,8 @@ export default function AttractionPage({
               </div>
             </section>
 
-            {/* Tours CTA */}
-            <ToursCTA city={city} attraction={name} />
+            {/* Tours CTA (magazine layout) */}
+            {customToursCTA ? customToursCTA : <ToursCTA city={city} attraction={name} />}
 
             {/* Related Articles */}
             {relatedArticles && relatedArticles.length > 0 && (
@@ -429,8 +433,8 @@ export default function AttractionPage({
               </div>
             </section>
 
-            {/* Tours CTA */}
-            <ToursCTA city={city} attraction={name} />
+            {/* Tours CTA (legacy layout) */}
+            {customToursCTA ? customToursCTA : <ToursCTA city={city} attraction={name} />}
 
             {/* Related Articles */}
             {relatedArticles && relatedArticles.length > 0 && (
