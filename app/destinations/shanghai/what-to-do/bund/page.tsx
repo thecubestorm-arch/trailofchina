@@ -28,9 +28,11 @@ export default function BundPage() {
       nameZh="外滩"
       city="Shanghai"
       images={[
-        { src: 'https://picsum.photos/seed/bund-1/800/600', alt: 'The Bund waterfront at night' },
-        { src: 'https://picsum.photos/seed/bund-2/800/600', alt: 'Colonial architecture along the Bund' },
-        { src: 'https://picsum.photos/seed/bund-3/800/600', alt: 'Pudong skyline from the Bund' },
+        { src: 'https://picsum.photos/seed/bund-day/800/600', alt: 'The Bund during the day' },
+        { src: 'https://picsum.photos/seed/bund-night/800/600', alt: 'The Bund at night with illuminated skyline' },
+        { src: 'https://picsum.photos/seed/bund-panorama/800/600', alt: 'Panoramic view of The Bund' },
+        { src: 'https://picsum.photos/seed/bund-river/800/600', alt: 'Huangpu River view from The Bund' },
+        { src: 'https://picsum.photos/seed/bund-sunset/800/600', alt: 'Sunset over The Bund' },
       ]}
       hook="The Bund comes alive after 8 PM when Pudong's skyscrapers light up — come for sunset, stay for the show."
       quickInfo={{
