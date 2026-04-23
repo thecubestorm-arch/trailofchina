@@ -113,9 +113,6 @@ export default function ChengduLocalTipsPage() {
           </div>
         </section>
 
-        <Link href="/destinations/chengdu" className="text-amber-700 hover:text-amber-800 hover:underline">
-          ← Back to Chengdu Guide
-        </Link>
       </main>
     </div>
   );

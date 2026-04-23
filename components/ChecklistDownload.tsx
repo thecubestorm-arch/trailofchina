@@ -90,7 +90,7 @@ export default function ChecklistDownload() {
       const url = URL.createObjectURL(pdfBlob)
       const link = document.createElement('a')
       link.href = url
-      link.download = 'china-arrival-checklist-trail-of-china.pdf'
+      link.download = 'china-arrival-cheat-sheet-trail-of-china.pdf'
       document.body.appendChild(link)
       link.click()
       link.remove()
@@ -98,7 +98,7 @@ export default function ChecklistDownload() {
 
       saveEmailForMarketing(normalizedEmail)
 
-      setSuccess('Your checklist is downloading! Check your inbox for more China travel tips.')
+      setSuccess('Your cheat sheet is downloading! Check your inbox for more China travel tips.')
       setEmail('')
     } catch {
       setError('Something went wrong while generating your PDF. Please try again.')
@@ -125,18 +125,18 @@ export default function ChecklistDownload() {
         <div className="mx-auto max-w-3xl flex flex-col sm:flex-row sm:items-end sm:gap-8">
           <div className="sm:flex-1">
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#af5d32]">Free Download</p>
-            <h2 className="mt-2 font-serif text-2xl leading-tight text-[#1f2933] sm:text-3xl">Download Your China Arrival Checklist</h2>
+            <h2 className="mt-2 font-serif text-2xl leading-tight text-[#1f2933] sm:text-3xl">Download Your China Arrival Cheat Sheet</h2>
             <p className="mt-2 text-sm leading-6 text-[#34404b]">
-              Get a detailed 2-page checklist of everything to do before and after landing. Free.
+              Get a detailed 2-page cheat sheet of everything to do before and after landing. Free.
             </p>
           </div>
 
           <form onSubmit={handleSubmit} className="mt-4 flex flex-col gap-2 sm:mt-0 sm:min-w-[320px]">
-            <label htmlFor="checklist-email" className="sr-only">
+            <label htmlFor="cheat-sheet-email" className="sr-only">
               Email address
             </label>
             <input
-              id="checklist-email"
+              id="cheat-sheet-email"
               type="email"
               value={email}
               onChange={(event) => setEmail(event.target.value)}
@@ -150,7 +150,7 @@ export default function ChecklistDownload() {
               disabled={isSubmitting}
               className="inline-flex min-h-10 items-center justify-center rounded-xl bg-[#af5d32] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#8f431c] disabled:cursor-not-allowed disabled:opacity-75"
             >
-              {isSubmitting ? 'Preparing...' : 'Get My Free Checklist'}
+              {isSubmitting ? 'Preparing...' : 'Get My Free Cheat Sheet'}
             </button>
           </form>
         </div>

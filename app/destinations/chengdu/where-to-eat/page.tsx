@@ -119,11 +119,6 @@ export default function ChengduWhereToEatPage() {
           </ul>
         </div>
 
-        <div>
-          <Link href="/destinations/chengdu" className="text-[var(--accent)] font-medium hover:underline">
-            ← Back to Chengdu Guide
-          </Link>
-        </div>
 
         <section className="mt-8 pt-8 border-t" aria-labelledby="explore-in-detail">
           <h2 id="explore-in-detail" className="text-xl font-semibold mb-3 text-gray-900">Explore in Detail</h2>

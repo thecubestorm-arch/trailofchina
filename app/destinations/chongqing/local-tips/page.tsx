@@ -109,9 +109,6 @@ export default function ChongqingLocalTipsPage() {
           </ul>
         </div>
 
-        <Link href="/destinations/chongqing" className="text-[var(--accent)] hover:underline">
-          ← Back to Chongqing Guide
-        </Link>
       </main>
     </div>
   );

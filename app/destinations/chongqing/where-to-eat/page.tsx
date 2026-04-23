@@ -110,10 +110,6 @@ export default function ChongqingWhereToEatPage() {
           </ul>
         </div>
 
-        <Link href="/destinations/chongqing" className="text-[var(--accent)] hover:underline">
-          ← Back to Chongqing Guide
-        </Link>
-
         <section className="mt-8 pt-8 border-t" aria-labelledby="explore-in-detail">
           <h2 id="explore-in-detail" className="text-xl font-semibold mb-3 text-gray-900">Explore in Detail</h2>
           <div className="grid gap-4 md:grid-cols-2">

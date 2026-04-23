@@ -28,9 +28,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
       <div className="min-h-screen bg-white">
         <div className="max-w-4xl mx-auto px-4 py-12 text-center">
           <h1 className="font-serif text-3xl font-bold text-[#1f2933] mb-4">Post not found</h1>
-          <Link href="/blog" className="text-[#af5d32] hover:underline">
-            ← Back to Blog
-          </Link>
+
         </div>
       </div>
     )
@@ -40,10 +38,6 @@ export default async function BlogPostPage({ params }: { params: Params }) {
     <div className="min-h-screen bg-white">
       <div className="max-w-4xl mx-auto px-4 py-12">
         <div className="mb-8">
-          <Link href="/blog" className="inline-flex items-center gap-1 text-[#af5d32] hover:underline mb-8">
-            ← Back to Blog
-          </Link>
-          
           <div className="flex flex-wrap items-center gap-4 mb-6">
             <span className="text-[#af5d32] uppercase tracking-[0.2em] text-xs font-semibold">
               {post.category}

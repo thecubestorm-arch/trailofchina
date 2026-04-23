@@ -119,9 +119,6 @@ export default function XianWhereToStayPage() {
           </ul>
         </div>
 
-        <Link href="/destinations/xian" className="text-[var(--accent-strong)] hover:underline">
-          ← Back to Xi&apos;an Guide
-        </Link>
       </main>
     </div>
   );
