@@ -8,6 +8,61 @@ export const metadata: Metadata = {
     'The best VPNs that actually work in China, plus setup tips and backup plans for when the Great Firewall blocks your connection.',
 }
 
+const vpnProviders = [
+  {
+    name: 'ExpressVPN',
+    initials: 'EX',
+    color: 'bg-red-600',
+    badge: '⭐ Best for China',
+    badgeColor: 'bg-amber-100 text-amber-800',
+    platforms: '📱📱💻',
+    price: '$6.67–$12.95/month',
+    description:
+      'The most reliable option for China. ExpressVPN has dedicated teams monitoring the Great Firewall and pushing updates within hours when blocks happen. Speeds are fast enough for video calls and streaming. It works on iOS, Android, Windows, macOS, and even routers.',
+  },
+  {
+    name: 'NordVPN',
+    initials: 'NR',
+    color: 'bg-blue-600',
+    badge: '',
+    badgeColor: '',
+    platforms: '📱📱💻',
+    price: '$3.79–$12.99/month',
+    description:
+      'A solid alternative with obfuscated servers specifically designed to hide VPN traffic from deep-packet inspection. NordVPN is slightly cheaper than ExpressVPN and offers a huge server network. Turn on "Obfuscated Servers" in the settings before you connect from China.',
+  },
+  {
+    name: 'Surfshark',
+    initials: 'SS',
+    color: 'bg-teal-500',
+    badge: '💰 Budget Pick',
+    badgeColor: 'bg-green-100 text-green-800',
+    platforms: '📱📱💻',
+    price: '$2.19–$15.45/month',
+    description:
+      'The best budget pick. Surfshark allows unlimited devices on one account, so you can share it with your travel partner. It uses Camouflage Mode to mask VPN traffic. Speeds are decent, though slightly less consistent than ExpressVPN during peak blocking periods.',
+  },
+  {
+    name: 'Astrill',
+    initials: 'AS',
+    color: 'bg-indigo-600',
+    badge: '🛡️ Best Backup',
+    badgeColor: 'bg-purple-100 text-purple-800',
+    platforms: '📱📱💻',
+    price: '$10.00–$30.00/month',
+    description:
+      'Expensive, but when nothing else works, Astrill usually still connects. It is the go-to VPN for expats living in China long-term. The StealthVPN and OpenWeb protocols are specifically built to evade the Great Firewall. If you are traveling during a politically sensitive period or other VPNs are down, Astrill is your backup plan.',
+  },
+]
+
+const setupSteps = [
+  { num: '①', text: 'Download BEFORE you fly', icon: '✈️' },
+  { num: '②', text: 'Install on ALL devices', icon: '📱💻' },
+  { num: '③', text: 'Test connection', icon: '✓' },
+  { num: '④', text: 'Screenshot your login', icon: '📸' },
+  { num: '⑤', text: "You're ready for China!", icon: '🇨🇳' },
+]
+
 export default function VpnGuidePage() {
   return (
     <div>
@@ -53,49 +108,32 @@ export default function VpnGuidePage() {
               </p>
 
               <div className="mt-6 space-y-4">
-                <div className="rounded-xl border border-slate-200 bg-slate-50 p-5">
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-red-100 text-lg font-bold text-red-700">1</div>
-                    <h3 className="text-lg font-extrabold text-slate-900">ExpressVPN</h3>
+                {vpnProviders.map((vpn) => (
+                  <div key={vpn.name} className="rounded-xl border border-slate-200 bg-slate-50 p-5">
+                    <div className="flex items-center gap-3">
+                      <div className={`flex h-12 w-12 items-center justify-center rounded-xl ${vpn.color} text-sm font-bold text-white`}>
+                        {vpn.initials}
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2">
+                          <h3 className="text-lg font-extrabold text-slate-900">{vpn.name}</h3>
+                          {vpn.badge && (
+                            <span className={`rounded-full px-3 py-0.5 text-xs font-bold ${vpn.badgeColor}`}>
+                              {vpn.badge}
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                    <p className="mt-3 text-sm leading-relaxed text-slate-700 md:text-base">
+                      {vpn.description}
+                    </p>
+                    <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-slate-600">
+                      <span className="font-bold text-slate-800">{vpn.price}</span>
+                      <span className="flex items-center gap-1">{vpn.platforms}</span>
+                    </div>
                   </div>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-700 md:text-base">
-                    The most reliable option for China. ExpressVPN has dedicated teams monitoring the Great Firewall and pushing updates within hours when blocks happen. Speeds are fast enough for video calls and streaming. It works on iOS, Android, Windows, macOS, and even routers.
-                  </p>
-                  <p className="mt-2 text-sm font-semibold text-slate-800">Price: $6.67–$12.95/month · Platforms: iOS, Android, Mac, Windows, Linux, Router</p>
-                </div>
-
-                <div className="rounded-xl border border-slate-200 bg-slate-50 p-5">
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-red-100 text-lg font-bold text-red-700">2</div>
-                    <h3 className="text-lg font-extrabold text-slate-900">NordVPN</h3>
-                  </div>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-700 md:text-base">
-                    A solid alternative with obfuscated servers specifically designed to hide VPN traffic from deep-packet inspection. NordVPN is slightly cheaper than ExpressVPN and offers a huge server network. Turn on "Obfuscated Servers" in the settings before you connect from China.
-                  </p>
-                  <p className="mt-2 text-sm font-semibold text-slate-800">Price: $3.79–$12.99/month · Platforms: iOS, Android, Mac, Windows, Linux</p>
-                </div>
-
-                <div className="rounded-xl border border-slate-200 bg-slate-50 p-5">
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-red-100 text-lg font-bold text-red-700">3</div>
-                    <h3 className="text-lg font-extrabold text-slate-900">Surfshark</h3>
-                  </div>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-700 md:text-base">
-                    The best budget pick. Surfshark allows unlimited devices on one account, so you can share it with your travel partner. It uses Camouflage Mode to mask VPN traffic. Speeds are decent, though slightly less consistent than ExpressVPN during peak blocking periods.
-                  </p>
-                  <p className="mt-2 text-sm font-semibold text-slate-800">Price: $2.19–$15.45/month · Platforms: iOS, Android, Mac, Windows, Linux</p>
-                </div>
-
-                <div className="rounded-xl border border-slate-200 bg-slate-50 p-5">
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-red-100 text-lg font-bold text-red-700">4</div>
-                    <h3 className="text-lg font-extrabold text-slate-900">Astrill</h3>
-                  </div>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-700 md:text-base">
-                    Expensive, but when nothing else works, Astrill usually still connects. It is the go-to VPN for expats living in China long-term. The StealthVPN and OpenWeb protocols are specifically built to evade the Great Firewall. If you are traveling during a politically sensitive period or other VPNs are down, Astrill is your backup plan.
-                  </p>
-                  <p className="mt-2 text-sm font-semibold text-slate-800">Price: $10.00–$30.00/month · Platforms: iOS, Android, Mac, Windows, Linux, Router</p>
-                </div>
+                ))}
               </div>
 
               <p className="mt-5 text-sm italic text-slate-500">
@@ -105,7 +143,27 @@ export default function VpnGuidePage() {
 
             <div className="mt-8">
               <h2 className="text-2xl font-extrabold text-slate-900">How to set up your VPN before you travel</h2>
-              <p className="mt-4 text-sm leading-relaxed text-slate-700 md:text-base">
+              <div className="mt-4 flex flex-col items-start gap-0">
+                {setupSteps.map((step, i) => (
+                  <div key={i} className="flex w-full items-start">
+                    <div className="flex flex-col items-center">
+                      <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-china-red bg-red-50 text-xl font-black text-china-red shadow-sm">
+                        <span>{step.num}</span>
+                      </div>
+                      {i < setupSteps.length - 1 && (
+                        <div className="h-8 w-0.5 bg-china-red/40" />
+                      )}
+                    </div>
+                    <div className="ml-4 flex-1 rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+                      <div className="flex items-center gap-2">
+                        <span className="text-lg">{step.icon}</span>
+                        <span className="text-sm font-bold text-slate-800 md:text-base">{step.text}</span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-6 text-sm leading-relaxed text-slate-700 md:text-base">
                 Download your VPN app before you leave home. Once you are in China, VPN websites are blocked — you will not be able to sign up or download the installer. Install the app on every device you plan to use: your phone, your laptop, and your tablet if you have one.
               </p>
               <p className="mt-4 text-sm leading-relaxed text-slate-700 md:text-base">
