@@ -42,7 +42,8 @@ export default function CiqikouPage() {
       nearestSubway="Ciqikou, Line 1"
       bestTime="Weekday morning (9:00-11:00 AM)"
       tips={tips}
-      mapUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.123!2d106.4567!3d29.5789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x36f8e3f0e8e8e8e9%3A0x1234567890abcdef!2sCiqikou%20Ancient%20Town!5e0!3m2!1sen!2scn!4v1234567890"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=106.445%2C29.577%2C106.455%2C29.583&layer=mapnik&marker=29.58%2C106.45"
+        
       relatedLinks={relatedLinks}
       relatedArticles={[
         { title: "Hongya Cave", description: "Chongqing's iconic 11-story stilted building complex overlooking the river.", href: "/destinations/chongqing/what-to-do/hongya-cave" },

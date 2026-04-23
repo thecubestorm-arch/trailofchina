@@ -87,7 +87,8 @@ export default function PeoplesParkTeahousePage() {
       nearestSubway="People\'s Park, Line 2"
       bestTime="Afternoon (1:00-5:00 PM)"
       tips={[...tips, ...photoSpots]}
-      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=104.0286%2C30.615000000000002%2C104.10860000000001%2C30.695&layer=mapnik&marker=30.655%2C104.0686"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=104.0586%2C30.6567%2C104.0686%2C30.6627&layer=mapnik&marker=30.6597%2C104.0636"
+        
       relatedLinks={relatedLinks}
     />
   );

@@ -80,7 +80,8 @@ export default function SummerPalacePage() {
       price="¥30 (park), ¥60 (all-inclusive)"
       nearestSubway="Beigongmen, Line 4"
       bestTime="Morning (8:00-11:00) or late afternoon"
-      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=116.24329999999999%2C39.9577%2C116.3233%2C40.0377&layer=mapnik&marker=39.9977%2C116.2833"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=116.2705%2C39.9969%2C116.2805%2C40.0029&layer=mapnik&marker=39.9999%2C116.2755"
+        
       relatedLinks={[
         { title: 'Temple of Heaven', href: '/destinations/beijing/what-to-do/temple-of-heaven' },
         { title: 'Forbidden City', href: '/destinations/beijing/what-to-do/forbidden-city' },

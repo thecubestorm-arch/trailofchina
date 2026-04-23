@@ -84,7 +84,8 @@ The French Concession is less a single attraction and more an experience — pla
       price="Free (outdoor area — individual venues vary)"
       nearestSubway="South Shaanxi Road Station, Lines 1/10/12"
       bestTime="Weekday afternoons for fewer crowds; autumn for golden plane tree leaves"
-      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=121.4189%2C31.1708%2C121.4989%2C31.250799999999998&layer=mapnik&marker=31.2108%2C121.4589"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=121.4567%2C31.2097%2C121.4667%2C31.2157&layer=mapnik&marker=31.2127%2C121.4617"
+        
       relatedLinks={[
         { title: 'The Bund', href: '/destinations/shanghai/what-to-do/bund' },
         { title: 'Yu Garden', href: '/destinations/shanghai/what-to-do/yu-garden' },

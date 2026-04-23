@@ -68,7 +68,8 @@ export default function KuanzhaiAlleyPage() {
       nearestSubway="Kuanzhai Alley, Line 4"
       bestTime="Morning for quiet, evening for atmosphere"
       tips={tips}
-      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=104.0286%2C30.6189%2C104.10860000000001%2C30.6989&layer=mapnik&marker=30.6589%2C104.0686"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=104.0511%2C30.6667%2C104.0611%2C30.6727&layer=mapnik&marker=30.6697%2C104.0561"
+        
       relatedLinks={relatedLinks}
     />
   );

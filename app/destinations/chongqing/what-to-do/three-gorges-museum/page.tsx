@@ -42,7 +42,8 @@ export default function ThreeGorgesMuseumPage() {
       nearestSubway="Niujiaotuo, Line 2"
       bestTime="Weekday afternoon, or rainy days"
       tips={tips}
-      mapUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.456!2d106.5234!3d29.5612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x36f8e3f0e8e8e8e9%3A0x1234567890abcdef!2sThree%20Gorges%20Museum!5e0!3m2!1sen!2scn!4v1234567890"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=106.5478%2C29.5589%2C106.5578%2C29.5649&layer=mapnik&marker=29.5619%2C106.5528"
+        
       relatedLinks={relatedLinks}
     />
   );

@@ -76,7 +76,8 @@ export default function ArtDistrict798Page() {
       price="Free entry, some exhibitions ¥50-80"
       nearestSubway="Jiangtai, Line 14"
       bestTime="Weekend afternoons"
-      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=116.47189999999999%2C39.9364%2C116.5519%2C40.0164&layer=mapnik&marker=39.9764%2C116.5119"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=116.4894%2C39.9809%2C116.4994%2C39.9869&layer=mapnik&marker=39.9839%2C116.4944"
+        
       relatedLinks={[
         { title: 'Lama Temple', href: '/destinations/beijing/what-to-do/lama-temple' },
         { title: 'Hutong Tours', href: '/destinations/beijing/what-to-do/hutong' },

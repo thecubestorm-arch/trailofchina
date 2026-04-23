@@ -94,7 +94,8 @@ The base is also home to red pandas (smaller, squirrel-like relatives) and other
       price="¥55 (including entry + bus shuttle)"
       nearestSubway="Panda Avenue Station, Line 3"
       bestTime="Morning hours (8:30-10:30 AM) when pandas are most active"
-      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=104.0957%2C30.7823%2C104.1757%2C30.862299999999998&layer=mapnik&marker=30.8223%2C104.1357"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=104.1406%2C30.731%2C104.1506%2C30.737&layer=mapnik&marker=30.734%2C104.1456"
+        
       relatedLinks={[
         { title: 'Chengdu Local Tips', href: '/destinations/chengdu/local-tips' },
         { title: 'Chengdu Food Guide', href: '/destinations/chengdu/where-to-eat' },

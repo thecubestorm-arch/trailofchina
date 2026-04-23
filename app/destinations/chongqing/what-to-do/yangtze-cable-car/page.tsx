@@ -47,7 +47,8 @@ export default function YangtzeCableCarPage() {
       nearestSubway="Xiaoshizi, Line 1"
       bestTime="Sunset (6:00-7:30 PM) for golden hour skyline"
       tips={tips}
-      mapUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.678!2d106.5833!3d29.5569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x36f8e3f0e8e8e8e9%3A0x1234567890abcdef!2sYangtze%20River%20Cableway!5e0!3m2!1sen!2scn!4v1234567890"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=106.5764%2C29.5556%2C106.5864%2C29.5616&layer=mapnik&marker=29.5586%2C106.5814"
+        
       relatedLinks={relatedLinks}
     />
   );

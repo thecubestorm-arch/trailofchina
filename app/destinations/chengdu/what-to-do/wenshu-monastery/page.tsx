@@ -68,7 +68,8 @@ export default function WenshuMonasteryPage() {
       nearestSubway="Wenshu Monastery, Line 1"
       bestTime="Afternoon (2:00-5:00 PM) for tea house atmosphere"
       tips={tips}
-      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=104.04339999999999%2C30.625600000000002%2C104.1234%2C30.7056&layer=mapnik&marker=30.6656%2C104.0834"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=104.0767%2C30.6695%2C104.0867%2C30.6755&layer=mapnik&marker=30.6725%2C104.0817"
+        
       relatedLinks={relatedLinks}
     />
   );

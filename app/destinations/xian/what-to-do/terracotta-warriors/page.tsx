@@ -94,7 +94,8 @@ The site is a UNESCO World Heritage site and one of China\'s most famous attract
       price="¥120 (including bus shuttle from Xi\'an Station)"
       nearestSubway="Shuttle bus from Xi\'an Station (20-30 minutes)"
       bestTime="Morning hours (8:30-10:30 AM) to beat tour groups"
-      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=109.11919999999999%2C34.3442%2C109.1992%2C34.4242&layer=mapnik&marker=34.3842%2C109.1592"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=109.2735%2C34.3812%2C109.2835%2C34.3872&layer=mapnik&marker=34.3842%2C109.2785"
+        
       relatedLinks={[
         { title: 'Xi\'an City Wall', href: '/destinations/xian/what-to-do/xian-city-wall' },
         { title: 'Muslim Quarter', href: '/destinations/xian/what-to-do/muslim-quarter' },

@@ -80,7 +80,8 @@ The Muslim Quarter is best explored on foot, ideally in the evening when the foo
       price="Free to enter; food ¥10-30 per dish; Great Mosque ¥25"
       nearestSubway="Zhonglou (Bell Tower), Line 2 or 6"
       bestTime="Evening (6-9 PM) for food scene; weekday mornings for quieter mosque visit"
-      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=108.9022%2C34.2219%2C108.9822%2C34.301899999999996&layer=mapnik&marker=34.2619%2C108.9422"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=108.9361%2C34.2606%2C108.9461%2C34.2666&layer=mapnik&marker=34.2636%2C108.9411"
+        
       relatedLinks={[
         { title: 'Bell & Drum Tower', href: '/destinations/xian/what-to-do/bell-drum-tower' },
         { title: 'City Wall', href: '/destinations/xian/what-to-do/city-wall' },
