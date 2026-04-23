@@ -20,24 +20,10 @@ const sections = [
       'An eSIM is the fastest way to get online because you can buy, install, and test it before departure. You land with data already active for maps, translation, ride-hailing, and payments. It is ideal for short trips when you want zero airport setup friction.',
     tags: ['⚡ Fast Setup', '🛬 Arrival Ready', '🧭 Navigation', '🧳 Short Trips'],
     href: '/china-basics/how-to-get-internet/esim',
-  },
-  {
-    category: 'China Basics',
-    icon: '📡',
-    title: 'Airalo eSIM',
-    preview:
-      'Airalo eSIM setup guide: purchase, installation, activation, and data top-ups. Step-by-step instructions for getting connected before you land in China with reliable coverage.',
-    tags: ['📱 Pre-Arrival Setup', '💳 Easy Purchase', '📶 Data Plans', '🔧 Activation'],
-    href: '/china-basics/how-to-get-internet/airalo-esim',
-  },
-  {
-    category: 'China Basics',
-    icon: '🌍',
-    title: 'Holafly eSIM',
-    preview:
-      'Holafly eSIM walkthrough: unlimited data plans, QR code installation, and network selection. Ideal for travelers who want predictable costs without data worries.',
-    tags: ['♾️ Unlimited Data', '📲 QR Setup', '💰 Fixed Pricing', '🛠️ Support'],
-    href: '/china-basics/how-to-get-internet/holafly-esim',
+    providers: [
+      { label: '→ Airalo eSIM', href: '/china-basics/how-to-get-internet/airalo-esim', icon: '📡' },
+      { label: '→ Holafly eSIM', href: '/china-basics/how-to-get-internet/holafly-esim', icon: '🌍' },
+    ],
   },
   {
     category: 'China Basics',
@@ -69,31 +55,50 @@ export default function InternetHub() {
 
         <section>
           {sections.map((section, index) => (
-            <Link
+            <div
               key={section.href}
-              href={section.href}
-              className={`block cursor-pointer rounded-lg transition-colors duration-200 hover:bg-[#fdf8f3] ${index < sections.length - 1 ? 'border-b border-[#ebe4d8]' : ''}`}
+              className={`border-b border-[#ebe4d8] ${index < sections.length - 1 ? '' : ''}`}
             >
-              <article className="py-8 px-6 -mx-6 md:py-10">
-              <p className="text-xs font-semibold uppercase tracking-widest text-[#af5d32]">{section.category}</p>
-              <h2 className="mt-3 text-2xl font-bold text-[#1f2933] md:text-3xl">
-                {section.icon} {section.title}
-              </h2>
-              <p className="mt-3 text-base leading-relaxed text-[#4a5568] md:text-lg">{section.preview}</p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {section.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="inline-flex items-center gap-1.5 rounded-full bg-[#f5f1ea] px-3 py-1 text-sm text-[#1f2933]"
-                  >
-                    {tag}
+              <Link
+                href={section.href}
+                className="block cursor-pointer rounded-lg transition-colors duration-200 hover:bg-[#fdf8f3]"
+              >
+                <article className="py-8 px-6 -mx-6 md:py-10">
+                  <p className="text-xs font-semibold uppercase tracking-widest text-[#af5d32]">{section.category}</p>
+                  <h2 className="mt-3 text-2xl font-bold text-[#1f2933] md:text-3xl">
+                    {section.icon} {section.title}
+                  </h2>
+                  <p className="mt-3 text-base leading-relaxed text-[#4a5568] md:text-lg">{section.preview}</p>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {section.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="inline-flex items-center gap-1.5 rounded-full bg-[#f5f1ea] px-3 py-1 text-sm text-[#1f2933]"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <span className="mt-4 inline-flex items-center gap-1 font-semibold text-[#af5d32]">
+                    Read full guide →
                   </span>
-                ))}
-              </div>
-              <span className="mt-4 inline-flex items-center gap-1 font-semibold text-[#af5d32]">
-                Read full guide →</span>
-            </article>
-            </Link>
+                </article>
+              </Link>
+              {'providers' in section && section.providers && (
+                <div className="flex flex-wrap gap-3 px-6 pb-6 -mx-6">
+                  {section.providers.map((provider) => (
+                    <Link
+                      key={provider.href}
+                      href={provider.href}
+                      className="inline-flex items-center gap-2 rounded-lg border border-[#e2dbd0] bg-white px-4 py-2.5 text-sm font-medium text-[#1f2933] shadow-sm transition-colors duration-200 hover:border-[#af5d32] hover:bg-[#fdf8f3] hover:text-[#af5d32]"
+                    >
+                      <span>{provider.icon}</span>
+                      {provider.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
         </section>
 
