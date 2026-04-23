@@ -160,25 +160,9 @@ export default function WeChatPayPage() {
         </ul>
       </div>
 
-      {/* Related Pages Section */}
-      <section className="container-px mx-auto max-w-4xl py-12 md:py-16">
-        <h2 className="text-2xl font-extrabold text-slate-900">Related pages</h2>
-        <div className="mt-4 flex flex-wrap gap-3">
-          <a href="/china-basics/what-apps-to-use/alipay#payment" className="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-china-red hover:text-china-red">
-            Alipay Guide
-          </a>
-          <a href="/china-basics/what-apps-to-use/payment" className="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-china-red hover:text-china-red">
-            Payment Apps Overview
-          </a>
-          <a href="/china-basics/how-to-get-internet" className="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-china-red hover:text-china-red">
-            Internet Setup
-          </a>
-          <a href="/china-basics/what-apps-to-use" className="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-china-red hover:text-china-red">
-            Apps Overview
-          </a>
-        </div>
-      </section>
-            <RelatedArticles articles={[{title:'Alipay Guide',description:'Set up Alipay as your backup payment method.',href:'/china-basics/what-apps-to-use/alipay'},{title:'Payment Apps Overview',description:'Why you need both payment apps in China.',href:'/china-basics/what-apps-to-use/payment'},{title:'Didi Guide',description:'Pay for rides with WeChat Pay via Didi.',href:'/china-basics/what-apps-to-use/didi'}]} />
+      <div className="container-px mx-auto max-w-4xl py-12 md:py-16">
+      <RelatedArticles articles={[{title:'Alipay Guide',description:'Set up Alipay as your backup payment method.',href:'/china-basics/what-apps-to-use/alipay'},{title:'Payment Apps Overview',description:'Why you need both payment apps in China.',href:'/china-basics/what-apps-to-use/payment'},{title:'Didi Guide',description:'Pay for rides with WeChat Pay via Didi.',href:'/china-basics/what-apps-to-use/didi'}]} />
+      </div>
 </div>
   )
 }

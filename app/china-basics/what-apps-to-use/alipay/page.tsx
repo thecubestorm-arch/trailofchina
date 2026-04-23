@@ -159,25 +159,9 @@ export default function AlipayPage() {
         </ul>
       </div>
 
-      {/* Related Pages Section */}
-      <section className="container-px mx-auto max-w-4xl py-12 md:py-16">
-        <h2 className="text-2xl font-extrabold text-slate-900">Related pages</h2>
-        <div className="mt-4 flex flex-wrap gap-3">
-          <a href="/china-basics/what-apps-to-use/wechat-pay#payment" className="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-china-red hover:text-china-red">
-            WeChat Pay Guide
-          </a>
-          <a href="/china-basics/what-apps-to-use/payment" className="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-china-red hover:text-china-red">
-            Payment Apps Overview
-          </a>
-          <a href="/china-basics/how-to-get-internet" className="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-china-red hover:text-china-red">
-            Internet Setup
-          </a>
-          <a href="/china-basics/what-apps-to-use" className="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-china-red hover:text-china-red">
-            Apps Overview
-          </a>
-        </div>
-      </section>
-            <RelatedArticles articles={[{title:'WeChat Pay Guide',description:'The other must-have payment app for China travelers.',href:'/china-basics/what-apps-to-use/wechat-pay'},{title:'Payment Apps Overview',description:'Why you need Alipay and WeChat Pay in cashless China.',href:'/china-basics/what-apps-to-use/payment'},{title:'Meituan Guide',description:'Order food delivery and book hotels with Meituan.',href:'/china-basics/what-apps-to-use/meituan'}]} />
+      <div className="container-px mx-auto max-w-4xl py-12 md:py-16">
+      <RelatedArticles articles={[{title:'WeChat Pay Guide',description:'The other must-have payment app for China travelers.',href:'/china-basics/what-apps-to-use/wechat-pay'},{title:'Payment Apps Overview',description:'Why you need Alipay and WeChat Pay in cashless China.',href:'/china-basics/what-apps-to-use/payment'},{title:'Meituan Guide',description:'Order food delivery and book hotels with Meituan.',href:'/china-basics/what-apps-to-use/meituan'}]} />
+      </div>
 </div>
   )
 }
