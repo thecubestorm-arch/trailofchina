@@ -154,17 +154,6 @@ export default function AttractionPage({
                   </div>
                 )}
 
-                {/* About */}
-                <div>
-                  <h2 className="text-2xl font-serif font-bold mb-4 text-[var(--foreground)]">About {name}</h2>
-                  <div className="prose prose-lg max-w-none text-[var(--foreground)] leading-relaxed">
-                    {description.split('\n\n').map((paragraph, idx) => (
-                      <p key={idx} className="mb-4">
-                        {paragraph}
-                      </p>
-                    ))}
-                  </div>
-                </div>
               </div>
 
               {/* RIGHT COLUMN: Gallery (40% on desktop) */}
@@ -172,6 +161,18 @@ export default function AttractionPage({
                 <TripAdvisorGallery items={images} />
               </div>
             </div>
+
+            {/* About — full width, same as Practical Details */}
+            <section className="mb-10">
+              <h2 className="text-2xl font-serif font-bold mb-4 text-[var(--foreground)]">About {name}</h2>
+              <div className="prose prose-lg max-w-none text-[var(--foreground)] leading-relaxed">
+                {description.split('\n\n').map((paragraph, idx) => (
+                  <p key={idx} className="mb-4">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            </section>
 
             {/* Practical Details */}
             {practicalDetails && (
