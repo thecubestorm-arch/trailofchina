@@ -23,13 +23,16 @@ type GuideArticlePageProps = {
   category: string
   title: string
   intro: string
-  whyYouNeedThis: string[]
-  setupSteps: Step[]
-  proTips: string[]
-  related: Related[]
+  whyYouNeedThis?: string[]
+  setupSteps?: Step[]
+  proTips?: string[]
+  related?: Related[]
   relatedArticles?: RelatedArticle[]
   icon?: string
   heroImage?: { src: string; alt: string }
+  hook?: string
+  quickInfo?: string
+  children?: React.ReactNode
 }
 
 export default function GuideArticlePage({
@@ -44,6 +47,9 @@ export default function GuideArticlePage({
   relatedArticles,
   icon,
   heroImage,
+  hook,
+  quickInfo,
+  children,
 }: GuideArticlePageProps) {
   return (
     <section className="container-px mx-auto max-w-4xl py-12 md:py-16" style={{
@@ -77,59 +83,89 @@ export default function GuideArticlePage({
         />
       )}
 
+      {hook && (
+        <div className="mt-6 rounded-xl border border-red-200 bg-red-50 p-5">
+          <p className="text-sm font-semibold leading-relaxed text-red-800 md:text-base">
+            {hook}
+          </p>
+        </div>
+      )}
 
-      <div className="mt-10 card-base">
-        <h2 className="text-2xl font-extrabold text-slate-900">Why you need this</h2>
-        <ul className="mt-4 space-y-3">
-          {whyYouNeedThis.map((item) => (
-            <li key={item} className="text-sm leading-relaxed text-slate-700 md:text-base">
-              • {item}
-            </li>
+      {quickInfo && (
+        <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 rounded-xl border border-slate-200 bg-slate-50 px-5 py-3 text-sm text-slate-600">
+          {quickInfo.split(' · ').map((item, i) => (
+            <span key={i} className="flex items-center gap-2">
+              <span className="inline-block h-1.5 w-1.5 rounded-full bg-china-red" />
+              {item.trim()}
+            </span>
           ))}
-        </ul>
-      </div>
+        </div>
+      )}
 
+      {children && (
+        <div className="mt-10 space-y-8">
+          {children}
+        </div>
+      )}
 
-      <div className="mt-8 card-base">
-        <h2 className="text-2xl font-extrabold text-slate-900">Step-by-step setup guide</h2>
-        <ol className="mt-5 space-y-4">
-          {setupSteps.map((step, index) => (
-            <li key={step.title} className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-              <p className="text-xs font-bold uppercase tracking-wide text-china-red">Step {index + 1}</p>
-              <h3 className="mt-1 text-lg font-extrabold text-slate-900">{step.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-700 md:text-base">{step.description}</p>
-            </li>
-          ))}
-        </ol>
-      </div>
+      {whyYouNeedThis && whyYouNeedThis.length > 0 && (
+        <div className="mt-10 card-base">
+          <h2 className="text-2xl font-extrabold text-slate-900">Why you need this</h2>
+          <ul className="mt-4 space-y-3">
+            {whyYouNeedThis.map((item) => (
+              <li key={item} className="text-sm leading-relaxed text-slate-700 md:text-base">
+                • {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
+      {setupSteps && setupSteps.length > 0 && (
+        <div className="mt-8 card-base">
+          <h2 className="text-2xl font-extrabold text-slate-900">Step-by-step setup guide</h2>
+          <ol className="mt-5 space-y-4">
+            {setupSteps.map((step, index) => (
+              <li key={step.title} className="rounded-xl border border-slate-200 bg-slate-50 p-4">
+                <p className="text-xs font-bold uppercase tracking-wide text-china-red">Step {index + 1}</p>
+                <h3 className="mt-1 text-lg font-extrabold text-slate-900">{step.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-700 md:text-base">{step.description}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      )}
 
-      <div className="mt-8 rounded-2xl border border-amber-200 bg-amber-50 p-6">
-        <h2 className="text-xl font-black text-slate-900">Pro Tips</h2>
-        <ul className="mt-3 space-y-2">
-          {proTips.map((tip) => (
-            <li key={tip} className="text-sm leading-relaxed text-slate-700 md:text-base">
-              • {tip}
-            </li>
-          ))}
-        </ul>
-      </div>
+      {proTips && proTips.length > 0 && (
+        <div className="mt-8 rounded-2xl border border-amber-200 bg-amber-50 p-6">
+          <h2 className="text-xl font-black text-slate-900">Pro Tips</h2>
+          <ul className="mt-3 space-y-2">
+            {proTips.map((tip) => (
+              <li key={tip} className="text-sm leading-relaxed text-slate-700 md:text-base">
+                • {tip}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       {/* Related Articles */}
       {relatedArticles && relatedArticles.length > 0 && (
         <RelatedArticles articles={relatedArticles} />
       )}
 
-      <div className="mt-8 card-base">
-        <h2 className="text-2xl font-extrabold text-slate-900">Related pages</h2>
-        <div className="mt-4 flex flex-wrap gap-3">
-          {related.map((link) => (
-            <Link key={link.href} href={link.href} className="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-china-red hover:text-china-red">
-              {link.label}
-            </Link>
-          ))}
+      {related && related.length > 0 && (
+        <div className="mt-8 card-base">
+          <h2 className="text-2xl font-extrabold text-slate-900">Related pages</h2>
+          <div className="mt-4 flex flex-wrap gap-3">
+            {related.map((link) => (
+              <Link key={link.href} href={link.href} className="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-china-red hover:text-china-red">
+                {link.label}
+              </Link>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </section>
   )
 }
