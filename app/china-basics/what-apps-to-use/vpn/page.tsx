@@ -48,10 +48,6 @@ export default function VpnGuidePage() {
         'Use wired or high-quality hotel Wi-Fi for important meetings.',
         'Maintain one non-VPN fallback workflow for local services that work better directly.',
       ]}
-      scamAlerts={[
-        'Avoid unknown “free VPN” links shared in travel chat groups; many harvest data or credentials.',
-        'Do not purchase VPN accounts from street vendors or unofficial QR posters.',
-      ]}
       relatedArticles={[
         { title: 'How to Get Internet in China', description: 'eSIM, physical SIM, and Wi-Fi options for staying connected.', href: '/china-basics/how-to-get-internet' },
         { title: 'Censorship in China', description: 'What is blocked and how to prepare for the Great Firewall.', href: '/china-basics/how-china-differs/censorship' },

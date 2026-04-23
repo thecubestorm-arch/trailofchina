@@ -3,9 +3,9 @@ import { Metadata } from 'next';
 import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
-  title: "Xi’an Local Tips | Transport, Scams, and Smart Visiting Advice",
+  title: "Xi'an Local Tips | Transport and Smart Visiting Advice",
   description:
-    "Local Xi’an travel tips covering Bus 306 for Terracotta Warriors, early starts, common scams, haggling etiquette, and city wall bike rental advice.",
+    "Local Xi'an travel tips covering Bus 306 for Terracotta Warriors, early starts, haggling etiquette, and city wall bike rental advice.",
 };
 
 export default function XianLocalTipsPage() {
@@ -17,7 +17,7 @@ export default function XianLocalTipsPage() {
         <section className="mb-8">
           <p className="text-lg text-gray-700 leading-relaxed">
             Xi&apos;an is straightforward once you know timing and common sales tactics. These tips help
-            you avoid crowd bottlenecks and the most common visitor scams.
+            you avoid crowd bottlenecks and make the most of your visit.
           </p>
         </section>
 
@@ -94,14 +94,14 @@ export default function XianLocalTipsPage() {
         <div className="bg-red-50 border-l-4 border-red-400 p-4 mb-10">
           <h3 className="font-semibold text-gray-800 mb-2">Things to Watch Out For</h3>
           <ul className="text-gray-700 space-y-2">
-            <li>• Fake jade sold near major attractions as “museum quality”</li>
+            <li>• Fake jade sold near major attractions as "museum quality"</li>
             <li>• Tea ceremony invitations that end with inflated bills</li>
             <li>• Unofficial tours with forced shopping stops and inflated pricing</li>
           </ul>
         </div>
 
         <RelatedArticles articles={[
-          {title: 'What to Do in Xi’an', description: 'Terracotta Warriors, City Wall, and Muslim Quarter.', href: '/destinations/xian/what-to-do'},
+          {title: 'What to Do in Xi&apos;an', description: 'Terracotta Warriors, City Wall, and Muslim Quarter.', href: '/destinations/xian/what-to-do'},
           {title: 'VPN & Internet', description: 'Stay connected with a VPN setup guide.', href: '/china-basics/what-apps-to-use/vpn'},
           {title: 'eSIM Setup', description: 'Get data instantly with a travel eSIM.', href: '/china-basics/how-to-get-internet/esim'},
         ]} />

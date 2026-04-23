@@ -42,16 +42,6 @@ export default function FrenchConcessionPage() {
     },
   ];
 
-  const scamAlerts = [
-    {
-      type: 'scam' as const,
-      text: 'Some "heritage" shops in Tianzifang sell mass-produced goods at boutique prices — check quality before buying',
-    },
-    {
-      type: 'scam' as const,
-      text: 'Avoid "art galleries" that pressure you to buy — many are commercial operations, not genuine artist studios',
-    },
-  ];
 
   const photoSpots = [
     {
@@ -94,7 +84,6 @@ The French Concession is less a single attraction and more an experience — pla
       price="Free (outdoor area — individual venues vary)"
       nearestSubway="South Shaanxi Road Station, Lines 1/10/12"
       bestTime="Weekday afternoons for fewer crowds; autumn for golden plane tree leaves"
-      tips={[...tips, ...scamAlerts, ...photoSpots]}
       mapUrl="https://www.openstreetmap.org/embed?layer=Mapnik&frame=&lat=31.2108&lon=121.4589&zoom=15&marker=31.2108%2C121.4589"
       relatedLinks={[
         { title: 'The Bund', href: '/destinations/shanghai/what-to-do/bund' },
@@ -109,6 +98,7 @@ The French Concession is less a single attraction and more an experience — pla
         { title: "Shanghai Tower", description: "China's tallest building and the world's second-tallest.", href: "/destinations/shanghai/what-to-do/shanghai-tower" },
         { title: "The Bund", description: "Shanghai's iconic waterfront with colonial architecture.", href: "/destinations/shanghai/what-to-do/bund" },
       ]}
+      tips={[...tips, ...photoSpots]}
     />
   );
 }

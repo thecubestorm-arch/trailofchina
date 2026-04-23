@@ -58,11 +58,6 @@ export default function AiraloEsimPage() {
         'Airalo eSIMs are data-only — you cannot receive SMS or make phone calls on the eSIM number.',
         'Screenshot your eSIM QR code as a backup in case you need to reinstall.',
       ]}
-      scamAlerts={[
-        'Buy only from the official Airalo app or website — third-party resellers may sell invalid or overpriced plans.',
-        'Airalo does not offer refunds once the eSIM is installed, even if you have not used the data yet.',
-        'Be aware that Airalo\'s China eSIM does not include Hong Kong or Macau — you need a separate plan for those regions.',
-      ]}
       related={[
         { label: 'Holafly eSIM Review', href: '/china-basics/how-to-get-internet/holafly-esim' },
         { label: 'Internet in China Overview', href: '/china-basics/how-to-get-internet' },

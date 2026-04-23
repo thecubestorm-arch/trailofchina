@@ -5,7 +5,7 @@ import RelatedArticles from '@/components/RelatedArticles'
 export const metadata: Metadata = {
   title: 'Safety & Security in China | Trail of China',
   description:
-    'Safety tips, common scams, and how to stay secure while traveling in China. General safety, digital security, and emergency contacts.',
+    'Safety tips and how to stay secure while traveling in China. General safety, digital security, and emergency contacts.',
 };
 
 export default function SecurityStandardsPage() {
@@ -19,8 +19,7 @@ export default function SecurityStandardsPage() {
         
         <section className="mb-8">
           <p className="text-lg text-gray-700 leading-relaxed">
-            China is generally very safe for travelers. Violent crime is rare, but petty theft 
-            and scams exist. Here's how to protect yourself.
+            China is generally very safe for travelers. Violent crime is rare. Here's how to protect yourself.
           </p>
         </section>
 
@@ -35,31 +34,7 @@ export default function SecurityStandardsPage() {
           </ul>
         </section>
 
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Common Scams to Avoid</h2>
-          
-          <div className="space-y-4">
-            <div className="bg-[var(--accent-soft)] rounded-lg p-4">
-              <h3 className="font-semibold text-[var(--accent-strong)] mb-2">🎨 Art Student Scam</h3>
-              <p className="text-[var(--foreground)]">Friendly "art students" invite you to a tea house or art gallery, then present an inflated bill. Never follow strangers.</p>
-            </div>
-            
-            <div className="bg-[var(--accent-soft)] rounded-lg p-4">
-              <h3 className="font-semibold text-[var(--accent-strong)] mb-2">🚕 Fake Taxi Scam</h3>
-              <p className="text-[var(--foreground)]">Unofficial drivers overcharge or take longer routes. Always use official taxis or DiDi app.</p>
-            </div>
-            
-            <div className="bg-[var(--accent-soft)] rounded-lg p-4">
-              <h3 className="font-semibold text-[var(--accent-strong)] mb-2">🏛️ Closed Attraction Scam</h3>
-              <p className="text-[var(--foreground)]">Touts claim attractions are closed and offer expensive alternatives. Verify opening times officially.</p>
-            </div>
-            
-            <div className="bg-[var(--accent-soft)] rounded-lg p-4">
-              <h3 className="font-semibold text-[var(--accent-strong)] mb-2">💱 Currency Exchange Scam</h3>
-              <p className="text-[var(--foreground)]">Unofficial exchange services shortchange or give fake bills. Use banks or ATMs only.</p>
-            </div>
-          </div>
-        </section>
+
 
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">Protecting Your Belongings</h2>
@@ -90,7 +65,7 @@ export default function SecurityStandardsPage() {
             <li>• Keep digital copies of passport and visa</li>
             <li>• Learn your hotel's name and address in Chinese</li>
             <li>• Trust your instincts - if something feels off, leave</li>
-            <li>• Most locals are genuinely helpful, not scammers</li>
+            <li>• Most locals are genuinely helpful</li>
           </ul>
         </div>
 

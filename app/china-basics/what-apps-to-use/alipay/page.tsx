@@ -149,15 +149,6 @@ export default function AlipayPage() {
         </ul>
       </div>
 
-      {/* Scam Alerts Section */}
-      <div className="container-px mx-auto max-w-4xl py-12 md:py-16 rounded-2xl border border-[var(--accent-soft)] bg-[var(--accent-soft)] p-6">
-        <h2 className="text-2xl font-black text-slate-900">Scam Alerts</h2>
-        <ul className="mt-3 space-y-2">
-          <li className="text-sm leading-relaxed text-slate-700 md:text-base">• Only scan QR codes displayed at official merchant counters. Never scan codes from strangers or printed on flyers.</li>
-          <li className="text-sm leading-relaxed text-slate-700 md:text-base">• If someone asks you to transfer money via Alipay to "help" them, decline — this is a common tourist scam.</li>
-          <li className="text-sm leading-relaxed text-slate-700 md:text-base">• Do not share your payment QR code screenshot with anyone; it can be used to initiate unwanted charges.</li>
-        </ul>
-      </div>
 
       <div className="container-px mx-auto max-w-4xl py-12 md:py-16">
       <RelatedArticles articles={[{title:'WeChat Pay Guide',description:'The other must-have payment app for China travelers.',href:'/china-basics/what-apps-to-use/wechat-pay'},{title:'Payment Apps Overview',description:'Why you need Alipay and WeChat Pay in cashless China.',href:'/china-basics/what-apps-to-use/payment'},{title:'Meituan Guide',description:'Order food delivery and book hotels with Meituan.',href:'/china-basics/what-apps-to-use/meituan'}]} />

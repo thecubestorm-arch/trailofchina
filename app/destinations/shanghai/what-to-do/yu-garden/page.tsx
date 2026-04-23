@@ -38,20 +38,6 @@ export default function YuGardenPage() {
     },
   ];
 
-  const scamAlerts = [
-    {
-      type: 'scam' as const,
-      text: 'Bazaar vendors often start at 3-5x the real price — bargain firmly and be prepared to walk away',
-    },
-    {
-      type: 'scam' as const,
-      text: 'Avoid the "free tea tasting" invitations in the bazaar — they often end with a ¥500+ bill for low-quality tea',
-    },
-    {
-      type: 'scam' as const,
-      text: 'Skip the overpriced pearl and jade shops — most "antiques" are mass-produced replicas',
-    },
-  ];
 
   const photoSpots = [
     {
@@ -92,7 +78,6 @@ Surrounding the garden is the Yuyuan Bazaar, a bustling marketplace of souvenir 
       price="¥40 (April-October), ¥30 (November-March)"
       nearestSubway="Yuyuan Garden Station, Line 10"
       bestTime="Early morning weekdays (8:30-9:30 AM) before tour groups arrive"
-      tips={[...tips, ...scamAlerts, ...photoSpots]}
       mapUrl="https://www.openstreetmap.org/embed?layer=Mapnik&frame=&lat=31.2275&lon=121.4927&zoom=16&marker=31.2275%2C121.4927"
       relatedLinks={[
         { title: 'The Bund', href: '/destinations/shanghai/what-to-do/bund' },
@@ -108,6 +93,7 @@ Surrounding the garden is the Yuyuan Bazaar, a bustling marketplace of souvenir 
         { title: "French Concession", description: "Shanghai's most charming neighborhood of tree-lined streets and historic architecture.", href: "/destinations/shanghai/what-to-do/french-concession" },
         { title: "Bund Area", description: "Explore the historic waterfront district and its colonial-era buildings.", href: "/destinations/shanghai/where-to-stay/bund-area" },
       ]}
+      tips={[...tips, ...photoSpots]}
     />
   );
 }

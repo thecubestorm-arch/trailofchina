@@ -3,7 +3,7 @@ import Link from 'next/link';
 import AttractionPage from '@/components/AttractionPage';
 
 type Tip = {
-  type: 'tip' | 'scam' | 'photo';
+  type: 'tip' | 'photo';
   text: string;
 };
 
@@ -56,20 +56,6 @@ export default function GreatWallPage() {
     },
   ] as const
 
-  const scamAlerts = [
-    {
-      type: 'scam',
-      text: 'Ignore touts at Beijing subway stations claiming "today\'s Great Wall is closed" — they\'re trying to sell you a private tour',
-    },
-    {
-      type: 'scam',
-      text: 'Bus 877 from Deshengmen is legitimate — don\'t believe anyone claiming it\'s "canceled" and offering a "special service" for ¥150',
-    },
-    {
-      type: 'scam',
-      text: 'Don\'t pay for "official" wall photos sold at the entrance — you can take your own for free',
-    },
-  ] as const
 
   const photoSpots = [
     {
@@ -112,7 +98,6 @@ The Great Wall is more than bricks and stone — it\'s the cultural symbol of Ch
       price="¥40-65 (depends on section)"
       nearestSubway="Various — see section details below"
       bestTime="Early morning (before 8:00 AM) to beat crowds and get best light for photos"
-      tips={[...tips, ...scamAlerts, ...photoSpots]}
       mapUrl="https://www.openstreetmap.org/embed?layer=Mapnik&frame=&lat=40.4547&lon=116.5682&zoom=10&marker=40.4547%2C116.5682"
       relatedLinks={[
         { title: 'Forbidden City', href: '/destinations/beijing/what-to-do/forbidden-city' },
@@ -127,6 +112,7 @@ The Great Wall is more than bricks and stone — it\'s the cultural symbol of Ch
         { title: "Temple of Heaven", description: "The majestic temple complex where emperors performed rituals.", href: "/destinations/beijing/what-to-do/temple-of-heaven" },
         { title: "Peking Duck", description: "Beijing's most famous dish - try it at the city's best restaurants.", href: "/destinations/beijing/where-to-eat/peking-duck" },
       ]}
+      tips={[...tips, ...photoSpots]}
     />
   );
 }

@@ -52,7 +52,6 @@ export default function AttractionPage({
   city,
 }: AttractionPageProps) {
   const tipCount = (tips as Tip[]).filter((t) => t.type === 'tip').length;
-  const scamCount = (tips as Tip[]).filter((t) => t.type === 'scam').length;
   const photoCount = (tips as Tip[]).filter((t) => t.type === 'photo').length;
 
   return (
@@ -137,23 +136,6 @@ export default function AttractionPage({
             )}
           </div>
 
-          {/* Scam Alerts */}
-          {scamCount > 0 && (
-            <div className="mb-8">
-              <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                <span className="text-2xl">⚠️</span> Avoid These Scams
-              </h3>
-              <div className="space-y-2">
-                {tips
-                  .filter((t) => t.type === 'scam')
-                  .map((tip, idx) => (
-                    <div key={idx} className="bg-[var(--accent-soft)] border-l-4 border-[var(--accent)] p-4 rounded-r">
-                      <span className="text-[var(--foreground)] font-medium">{tip.text}</span>
-                    </div>
-                  ))}
-              </div>
-            </div>
-          )}
 
           {/* Best Photo Spots */}
           {photoCount > 0 && (

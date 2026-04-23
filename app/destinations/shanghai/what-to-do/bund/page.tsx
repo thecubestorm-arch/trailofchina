@@ -51,20 +51,6 @@ export default function BundPage() {
     },
   ] as const
 
-  const scamAlerts = [
-    {
-      type: 'scam',
-      text: 'Ignore "free" tea offerings from people near the promenade — they will demand exorbitant payment',
-    },
-    {
-      type: 'scam',
-      text: 'Avoid photo scams where someone asks you to take their photo then demands money',
-    },
-    {
-      type: 'scam',
-      text: 'Bicycle rentals near the promenade often overcharge tourists — stick to official stations or DiDi',
-    },
-  ] as const
 
   const photoSpots = [
     {
@@ -107,7 +93,6 @@ The area has evolved from a colonial enclave to asymbol of Shanghai\'s global am
       price="Free"
       nearestSubway="Nanjing East Road Station, Line 2/10"
       bestTime="Golden hour (30 minutes before sunset) and nighttime for the skyline lights"
-      tips={[...tips, ...scamAlerts, ...photoSpots]}
       mapUrl="https://www.openstreetmap.org/embed?layer=Mapnik&frame=&lat=31.2333&lon=121.4737&zoom=15&marker=31.2333%2C121.4737"
       relatedLinks={[
         { title: 'Shanghai Tower', href: '/destinations/shanghai/what-to-do/shanghai-tower' },
@@ -122,6 +107,7 @@ The area has evolved from a colonial enclave to asymbol of Shanghai\'s global am
         { title: "Yu Garden", description: "400-year-old classical Chinese garden in Shanghai's Old City.", href: "/destinations/shanghai/what-to-do/yu-garden" },
         { title: "French Concession", description: "Shanghai's most charming neighborhood of tree-lined streets.", href: "/destinations/shanghai/what-to-do/french-concession" },
       ]}
+      tips={[...tips, ...photoSpots]}
     />
   );
 }

@@ -37,8 +37,8 @@ const sections = [
     category: 'Guide Section',
     title: '💡 Local Tips',
     preview:
-      'Be cautious around unofficial guides and overpriced tourist traps near top monuments and shopping streets. Early starts are essential for major sights because ticket checks and security lines can build quickly by mid-morning.',
-    tags: ['Tourist Traps', 'Early Starts', 'Ticket Checks', 'Route Planning'],
+      'Early starts are essential for major sights because ticket checks and security lines can build quickly by mid-morning.',
+    tags: ['Early Starts', 'Ticket Checks', 'Route Planning', 'Local Tips'],
     href: '/destinations/beijing/local-tips',
   },
 ];
@@ -97,7 +97,7 @@ export default function BeijingPage() {
           {title: 'What to Do in Beijing', description: 'Top attractions from the Forbidden City to the Great Wall.', href: '/destinations/beijing/what-to-do'},
           {title: 'Where to Eat in Beijing', description: 'Peking duck, jianbing, and street food favorites.', href: '/destinations/beijing/where-to-eat'},
           {title: 'Where to Stay in Beijing', description: 'Best neighborhoods for every budget and style.', href: '/destinations/beijing/where-to-stay'},
-          {title: 'Beijing Local Tips', description: 'Insider advice for getting around and avoiding tourist traps.', href: '/destinations/beijing/local-tips'},
+          {title: 'Beijing Local Tips', description: 'Insider advice for getting around like a local.', href: '/destinations/beijing/local-tips'},
         ]} />
       </main>
     </div>

@@ -99,9 +99,9 @@ export default function ChengduWhereToStayPage() {
         </section>
 
         <section className="mb-10">
-          <div className="bg-red-50 border-l-4 border-red-400 p-4 rounded-r-lg">
-            <h3 className="font-semibold text-red-800 mb-2">⚠️ Tourist Traps</h3>
-            <ul className="text-red-900 space-y-2">
+          <div className="bg-amber-50 border-l-4 border-amber-400 p-4 rounded-r-lg">
+            <h3 className="font-semibold text-amber-800 mb-2">⚠️ Tips to Know</h3>
+            <ul className="text-amber-900 space-y-2">
               <li>• Hotels listed as "near pandas" may still require 45+ minutes transit.</li>
               <li>• Ultra-cheap rooms around nightlife streets can be very noisy after midnight.</li>
               <li>• Some listings advertise metro proximity but mean bus-distance, not walking-distance.</li>

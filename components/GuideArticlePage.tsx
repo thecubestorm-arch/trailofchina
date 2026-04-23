@@ -26,7 +26,6 @@ type GuideArticlePageProps = {
   whyYouNeedThis: string[]
   setupSteps: Step[]
   proTips: string[]
-  scamAlerts: string[]
   related: Related[]
   relatedArticles?: RelatedArticle[]
 }
@@ -39,7 +38,6 @@ export default function GuideArticlePage({
   whyYouNeedThis,
   setupSteps,
   proTips,
-  scamAlerts,
   related,
   relatedArticles,
 }: GuideArticlePageProps) {
@@ -95,19 +93,6 @@ export default function GuideArticlePage({
           ))}
         </ul>
       </div>
-
-
-      <div className="mt-8 rounded-2xl border border-[var(--accent-soft)] bg-[var(--accent-soft)] p-6">
-        <h2 className="text-xl font-black text-slate-900">Scam Alerts</h2>
-        <ul className="mt-3 space-y-2">
-          {scamAlerts.map((alert) => (
-            <li key={alert} className="text-sm leading-relaxed text-slate-700 md:text-base">
-              • {alert}
-            </li>
-          ))}
-        </ul>
-      </div>
-
 
       {/* Related Articles */}
       {relatedArticles && relatedArticles.length > 0 && (

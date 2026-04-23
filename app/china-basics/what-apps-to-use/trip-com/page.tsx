@@ -69,11 +69,6 @@ const proTips = [
   '🔄 Check cancellation policies before booking — many hotels offer free cancellation, but train tickets have strict refund windows (typically 8 days+ before departure for full refund on Trip.com).',
 ]
 
-const scamAlerts = [
-  '⚠️ Beware of fake Trip.com lookalike websites — always use the official app or trip.com. Phishing sites may steal your payment details.',
-  '⚠️ Double-check prices across platforms before booking — while Trip.com is generally competitive, third-party sellers on other sites sometimes offer misleading "discounted" prices that include hidden fees.',
-  '⚠️ Read cancellation and refund policies carefully — train ticket refunds follow China\'s official 12306 rules and the refund window shrinks the closer you get to departure. Some hotel rates are non-refundable even if they look cheap.',
-]
 
 const related = [
   { label: '12306 Train Booking', href: '/china-basics/how-to-get-around/12306' },
@@ -116,7 +111,6 @@ export default function TripComPage() {
       whyYouNeedThis={whyYouNeedThis}
       setupSteps={setupSteps}
       proTips={proTips}
-      scamAlerts={scamAlerts}
       related={related}
       relatedArticles={relatedArticles}
     />

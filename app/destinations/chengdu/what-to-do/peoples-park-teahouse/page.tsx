@@ -3,7 +3,7 @@ import Link from 'next/link';
 import AttractionPage from '@/components/AttractionPage';
 
 type Tip = {
-  type: 'tip' | 'scam' | 'photo';
+  type: 'tip' | 'photo';
   text: string;
 };
 

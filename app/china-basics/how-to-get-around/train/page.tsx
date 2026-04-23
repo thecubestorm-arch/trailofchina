@@ -98,7 +98,6 @@ export default function TrainPage() {
         <div className="bg-[var(--accent-soft)] border-l-4 border-[var(--accent)] p-4">
           <h3 className="font-semibold text-[var(--accent-strong)] mb-2">⚠️ Watch Out For</h3>
           <ul className="text-[var(--foreground)] space-y-2">
-            <li>• Scammers selling "tickets" outside stations - buy official only</li>
             <li>• Booking through unofficial apps cancels your seat</li>
             <li>• Train stations are HUGE - allow extra time to find your platform</li>
           </ul>

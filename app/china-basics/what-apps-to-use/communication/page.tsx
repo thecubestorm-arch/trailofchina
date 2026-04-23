@@ -50,10 +50,6 @@ export default function CommunicationAppsPage() {
         'Use labels or notes to remember who is hotel staff, driver, or guide.',
         'Export essential booking confirmations as screenshots for offline access.',
       ]}
-      scamAlerts={[
-        'Be cautious of fake WeChat accounts impersonating hotels and requesting deposits.',
-        'Never share verification SMS codes, even if a contact claims to be support.',
-      ]}
       related={[
         { label: 'VPN Guide', href: '/china-basics/what-apps-to-use/vpn' },
         { label: 'Cultural Differences', href: '/china-basics/how-china-differs/cultural-differences' },

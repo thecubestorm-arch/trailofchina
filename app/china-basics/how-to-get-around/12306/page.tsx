@@ -4,7 +4,7 @@ import GuideArticlePage from '@/components/GuideArticlePage'
 export const metadata: Metadata = {
   title: '12306 Train Booking: How to Buy China Train Tickets Like a Local',
   description:
-    'Master the 12306 app — China\'s official train booking platform. Step-by-step guide for foreigners to book high-speed rail tickets, pick seats, and avoid scams.',
+    'Master the 12306 app — China\'s official train booking platform. Step-by-step guide for foreigners to book high-speed rail tickets, pick seats, and book with confidence.',
 }
 
 export default function TrainBookingPage() {
@@ -63,11 +63,6 @@ export default function TrainBookingPage() {
         'Arrive at the station 30-45 minutes early for major cities; security lines can be long during rush hours.',
         'The 12306 app works offline for viewing your booked tickets — screenshot your ticket details before leaving WiFi.',
         'Children under 1.2m ride free (no seat), under 1.5m pay child fare (with seat).',
-      ]}
-      scamAlerts={[
-        'Only book through the official 12306 app or website (www.12306.cn). Third-party booking sites charge extra fees.',
-        'Never buy tickets from people outside train stations claiming "sold out" — these are often counterfeit or overpriced.',
-        'Some scam apps mimic 12306 — always download from official app stores and verify the developer is "China Railway".',
       ]}
       related={[
         { label: 'Getting Around China', href: '/china-basics/how-to-get-around' },

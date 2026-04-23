@@ -50,10 +50,6 @@ const tips = [
     type: 'where',
     text: 'Peak season is October through December — outside this range, crabs may be frozen or imported',
   },
-  {
-    type: 'scam',
-    text: 'Beware of "Yangcheng crab" scams — many restaurants fake the origin. Authentic crabs have certification tags.',
-  },
 ] as const;
 
 const relatedLinks = [

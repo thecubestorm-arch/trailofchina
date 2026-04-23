@@ -150,15 +150,6 @@ export default function WeChatPayPage() {
         </ul>
       </div>
 
-      {/* Scam Alerts Section */}
-      <div className="container-px mx-auto max-w-4xl py-12 md:py-16 rounded-2xl border border-[var(--accent-soft)] bg-[var(--accent-soft)] p-6">
-        <h2 className="text-2xl font-black text-slate-900">Scam Alerts</h2>
-        <ul className="mt-3 space-y-2">
-          <li className="text-sm leading-relaxed text-slate-700 md:text-base">• Never send money to people you just met online through WeChat — romance and investment scams targeting foreigners are common.</li>
-          <li className="text-sm leading-relaxed text-slate-700 md:text-base">• Be cautious of "friend requests" from strangers asking you to transfer money — always verify identity through other channels.</li>
-          <li className="text-sm leading-relaxed text-slate-700 md:text-base">• Only scan QR codes at official merchant counters, not from random people or flyers.</li>
-        </ul>
-      </div>
 
       <div className="container-px mx-auto max-w-4xl py-12 md:py-16">
       <RelatedArticles articles={[{title:'Alipay Guide',description:'Set up Alipay as your backup payment method.',href:'/china-basics/what-apps-to-use/alipay'},{title:'Payment Apps Overview',description:'Why you need both payment apps in China.',href:'/china-basics/what-apps-to-use/payment'},{title:'Didi Guide',description:'Pay for rides with WeChat Pay via Didi.',href:'/china-basics/what-apps-to-use/didi'}]} />

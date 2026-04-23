@@ -50,10 +50,6 @@ export default function TravelAppsPage() {
         'For airport pickups, use the exact terminal-level pickup pin shown in DiDi.',
         'Keep a screenshot of your booking reference if mobile signal is unstable.',
       ]}
-      scamAlerts={[
-        'Ignore unofficial ticket agents near stations who claim online tickets are invalid.',
-        'Do not cancel DiDi rides based on calls from unknown numbers asking for cash payment.',
-      ]}
       related={[
         { label: 'Train Travel Guide', href: '/china-basics/how-to-get-around/train' },
         { label: 'Taxi Basics', href: '/china-basics/how-to-get-around/taxi' },

@@ -42,16 +42,6 @@ export default function ShanghaiTowerPage() {
     },
   ];
 
-  const scamAlerts = [
-    {
-      type: 'scam' as const,
-      text: 'Avoid unofficial ticket sellers near the entrance — they charge premium prices for the same tickets available online',
-    },
-    {
-      type: 'scam' as const,
-      text: 'Don\'t buy combined "3-tower" packages from touts — they\'re rarely good value unless you genuinely want to visit all three',
-    },
-  ];
 
   const photoSpots = [
     {
@@ -94,7 +84,6 @@ Three skyscrapers in Lujiazui offer observation decks. Shanghai Tower is the hig
       price="¥180 (standard), ¥120 (children 1.0-1.4m), free under 1.0m"
       nearestSubway="Lujiazui Station, Line 2"
       bestTime="30 minutes before sunset for daylight-to-night transition shots"
-      tips={[...tips, ...scamAlerts, ...photoSpots]}
       mapUrl="https://www.openstreetmap.org/embed?layer=Mapnik&frame=&lat=31.2355&lon=121.5015&zoom=16&marker=31.2355%2C121.5015"
       relatedLinks={[
         { title: 'The Bund', href: '/destinations/shanghai/what-to-do/bund' },
@@ -109,6 +98,7 @@ Three skyscrapers in Lujiazui offer observation decks. Shanghai Tower is the hig
         { title: "Shanghai Tower", description: "China's tallest building and the world's second-tallest.", href: "/destinations/shanghai/what-to-do/shanghai-tower" },
         { title: "French Concession", description: "Shanghai's most charming neighborhood of tree-lined streets.", href: "/destinations/shanghai/what-to-do/french-concession" },
       ]}
+      tips={[...tips, ...photoSpots]}
     />
   );
 }

@@ -9,7 +9,7 @@ type Restaurant = {
 };
 
 type Tip = {
-  type: 'tip' | 'scam' | 'where';
+  type: 'tip' | 'where';
   text: string;
 };
 

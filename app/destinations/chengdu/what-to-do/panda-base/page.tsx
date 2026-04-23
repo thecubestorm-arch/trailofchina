@@ -47,20 +47,6 @@ export default function PandaBasePage() {
     },
   ] as const
 
-  const scamAlerts = [
-    {
-      type: 'scam',
-      text: 'Ignore "panda volunteer program" scams at the gate — they\'ll take your money but provide little actual experience',
-    },
-    {
-      type: 'scam',
-      text: 'Buses from Chengdu city center are legitimate — don\'t believe touts saying "today\'s buses are full" and offering expensive alternatives',
-    },
-    {
-      type: 'scam',
-      text: 'Don\'t buy "panda-themed" souvenirs from street vendors outside — quality is poor and prices are inflated',
-    },
-  ] as const
 
   const photoSpots = [
     {
@@ -103,7 +89,6 @@ The base is also home to red pandas (smaller, squirrel-like relatives) and other
       price="¥55 (including entry + bus shuttle)"
       nearestSubway="Panda Avenue Station, Line 3"
       bestTime="Morning hours (8:30-10:30 AM) when pandas are most active"
-      tips={[...tips, ...scamAlerts, ...photoSpots]}
       mapUrl="https://www.openstreetmap.org/embed?layer=Mapnik&frame=&lat=30.8223&lon=104.1357&zoom=16&marker=30.8223%2C104.1357"
       relatedLinks={[
         { title: 'Chengdu Local Tips', href: '/destinations/chengdu/local-tips' },
@@ -118,6 +103,7 @@ The base is also home to red pandas (smaller, squirrel-like relatives) and other
         { title: "Sichuan Hotpot", description: "Chengdu's most famous culinary experience - spicy and numbing.", href: "/destinations/chengdu/where-to-eat/sichuan-hotpot" },
         { title: "Chengdu Local Tips", description: "Essential tips for visiting Chengdu and avoiding common pitfalls.", href: "/destinations/chengdu/local-tips" },
       ]}
+      tips={[...tips, ...photoSpots]}
     />
   );
 }

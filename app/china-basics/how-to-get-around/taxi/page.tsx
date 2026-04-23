@@ -4,7 +4,7 @@ import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
   title: 'Taxis in China | Trail of China',
-  description: 'How to take traditional taxis in China. Tips for hailing, payment, and avoiding scams.',
+  description: 'How to take traditional taxis in China. Tips for hailing, payment, and getting around.',
 };
 
 export default function TaxiPage() {
@@ -67,12 +67,10 @@ export default function TaxiPage() {
         </div>
 
         <div className="bg-[var(--accent-soft)] border-l-4 border-[var(--accent)] p-4">
-          <h3 className="font-semibold text-[var(--accent-strong)] mb-2">⚠️ Scam Alert</h3>
+          <h3 className="font-semibold text-[var(--accent-strong)] mb-2">⚠️ Tips</h3>
           <ul className="text-[var(--foreground)] space-y-2">
-            <li>• Refuse taxis that approach you at airports/stations (unofficial)</li>
             <li>• Insist on meter use - "Dǎ biǎo" (打表)</li>
-            <li>• Watch for fake currency if paying cash</li>
-            <li>• Some drivers pretend not to know your hotel to take longer routes</li>
+            <li>• Flag down taxis on streets going your direction</li>
           </ul>
         </div>
               <RelatedArticles articles={[{title:'Didi Ride-Hailing',description:"China's Uber — book rides from your phone.",href:'/china-basics/how-to-get-around/didi'},{title:'How to Get Around',description:'All transportation options in China.',href:'/china-basics/how-to-get-around'}]} />

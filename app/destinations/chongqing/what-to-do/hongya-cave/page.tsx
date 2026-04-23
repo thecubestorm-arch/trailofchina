@@ -47,20 +47,6 @@ export default function HongyaCavePage() {
     },
   ] as const
 
-  const scamAlerts = [
-    {
-      type: 'scam',
-      text: 'Ignore "free" tea or snack offerings from vendors inside — they will demand payment afterward'
-    },
-    {
-      type: 'scam',
-      text: 'Fake "exclusive discount" coupons sold by street vendors — these are worthless'
-    },
-    {
-      type: 'scam',
-      text: 'Unlicensed "guides" inside claiming to have "special access" — there\'s no special access needed'
-    },
-  ] as const
 
   const photoSpots = [
     {
@@ -103,7 +89,6 @@ It\'s free to explore and has become Chongqing\'s most popular tourist destinati
       price="Free (some attractions within have separate fees)"
       nearestSubway="Linjiangmen Station, Line 1"
       bestTime="Golden hour (sunset) and nighttime for the lights"
-      tips={[...tips, ...scamAlerts, ...photoSpots]}
       mapUrl="https://www.openstreetmap.org/embed?layer=Mapnik&frame=&lat=29.5492&lon=106.5625&zoom=16&marker=29.5492%2C106.5625"
       relatedLinks={[
         { title: 'Chongqing Local Tips', href: '/destinations/chongqing/local-tips' },
@@ -118,6 +103,7 @@ It\'s free to explore and has become Chongqing\'s most popular tourist destinati
         { title: "Chongqing Hotpot", description: "Chongqing's signature dish - spicy, oily, and unforgettable.", href: "/destinations/chongqing/where-to-eat/chongqing-hotpot" },
         { title: "Yangtze River Cable Car", description: "Aerial ride over the Yangtze River with stunning city views.", href: "/destinations/chongqing/what-to-do/yangtze-cable-car" },
       ]}
+      tips={[...tips, ...photoSpots]}
     />
   );
 }

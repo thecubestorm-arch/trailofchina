@@ -38,16 +38,6 @@ export default function BellDrumTowerPage() {
     },
   ];
 
-  const scamAlerts = [
-    {
-      type: 'scam' as const,
-      text: 'Ignore street vendors selling "discounted" tickets — only buy from official ticket booths or WeChat mini-program',
-    },
-    {
-      type: 'scam' as const,
-      text: 'Some photo spots charge hidden fees — ask the price before posing with costumed performers',
-    },
-  ];
 
   const photoSpots = [
     {
@@ -90,7 +80,6 @@ Both towers are beautifully illuminated at night, creating a magical atmosphere 
       price="Combo ticket ¥80, Individual ¥50 each"
       nearestSubway="Zhonglou (Bell Tower), Line 2 or 6"
       bestTime="Sunset for photos (5-7 PM), evening for illuminated views"
-      tips={[...tips, ...scamAlerts, ...photoSpots]}
       mapUrl="https://www.openstreetmap.org/embed?layer=Mapnik&frame=&lat=34.2606&lon=108.9461&zoom=16&marker=34.2606%2C108.9461"
       relatedLinks={[
         { title: 'Muslim Quarter', href: '/destinations/xian/what-to-do/muslim-quarter' },
@@ -101,6 +90,7 @@ Both towers are beautifully illuminated at night, creating a magical atmosphere 
         { title: 'Xi\'an Local Tips', href: '/destinations/xian/local-tips' },
         { title: 'Xi\'an Guide', href: '/destinations/xian' },
       ]}
+      tips={[...tips, ...photoSpots]}
     />
   );
 }

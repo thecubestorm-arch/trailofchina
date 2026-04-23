@@ -93,7 +93,7 @@ export default function ChongqingWhereToStayPage() {
         </div>
 
         <div className="bg-[var(--accent-soft)] border-l-4 border-[var(--accent)] p-4 mb-8">
-          <h3 className="font-semibold text-[var(--accent-strong)] mb-2">⚠️ Tourist Traps to Avoid</h3>
+          <h3 className="font-semibold text-[var(--accent-strong)] mb-2">⚠️ Tips to Know</h3>
           <ul className="text-[var(--foreground)] space-y-2">
             <li>• Choosing by skyline photo only without checking transport links</li>
             <li>• Booking steep hillside properties with poor taxi drop-off access</li>

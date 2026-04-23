@@ -3,7 +3,7 @@ import Link from 'next/link';
 import AttractionPage from '@/components/AttractionPage';
 
 type Tip = {
-  type: 'tip' | 'scam' | 'photo';
+  type: 'tip' | 'photo';
   text: string;
 };
 
@@ -44,20 +44,6 @@ export default function HutongPage() {
     },
   ] as const
 
-  const scamAlerts = [
-    {
-      type: 'scam',
-      text: 'Rickshaw drivers who "forget" agreed price — always confirm and repeat the price',
-    },
-    {
-      type: 'scam',
-      text: '"Authentic" hutong tours that are shopping circuits — avoid tour packages',
-    },
-    {
-      type: 'scam',
-      text: 'Tea house scam near Nanluoguxiang — high-pressure sales tactics',
-    },
-  ] as const
 
   const photoSpots = [
     {
@@ -94,7 +80,6 @@ export default function HutongPage() {
       price="Free to walk, rickshaw ¥80-120/hr"
       nearestSubway="Nanluoguxiang Station, Line 6"
       bestTime="Morning or late afternoon"
-      tips={[...tips, ...scamAlerts, ...photoSpots]}
       mapUrl="https://www.openstreetmap.org/embed?layer=Mapnik&frame=&lat=39.9356&lon=116.4145&zoom=16&marker=39.9356%2C116.4145"
       relatedLinks={[
         { title: 'Forbidden City', href: '/destinations/beijing/what-to-do/forbidden-city' },
@@ -103,6 +88,7 @@ export default function HutongPage() {
         { title: 'Beijing Local Tips', href: '/destinations/beijing/local-tips' },
         { title: 'Beijing Guide', href: '/destinations/beijing' },
       ]}
+      tips={[...tips, ...photoSpots]}
     />
   );
 }

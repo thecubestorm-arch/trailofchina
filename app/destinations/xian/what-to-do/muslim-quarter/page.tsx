@@ -38,20 +38,6 @@ export default function MuslimQuarterPage() {
     },
   ];
 
-  const scamAlerts = [
-    {
-      type: 'scam' as const,
-      text: 'Some stalls charge tourists higher prices — observe what locals pay or ask the price before ordering',
-    },
-    {
-      type: 'scam' as const,
-      text: 'Avoid "free samples" that turn into high-pressure sales — especially for dried fruits and nuts',
-    },
-    {
-      type: 'scam' as const,
-      text: 'Be wary of photo opportunities with costumed "locals" — they often demand payment afterwards',
-    },
-  ];
 
   const photoSpots = [
     {
@@ -94,7 +80,6 @@ The Muslim Quarter is best explored on foot, ideally in the evening when the foo
       price="Free to enter; food ¥10-30 per dish; Great Mosque ¥25"
       nearestSubway="Zhonglou (Bell Tower), Line 2 or 6"
       bestTime="Evening (6-9 PM) for food scene; weekday mornings for quieter mosque visit"
-      tips={[...tips, ...scamAlerts, ...photoSpots]}
       mapUrl="https://www.openstreetmap.org/embed?layer=Mapnik&frame=&lat=34.2619&lon=108.9422&zoom=16&marker=34.2619%2C108.9422"
       relatedLinks={[
         { title: 'Bell & Drum Tower', href: '/destinations/xian/what-to-do/bell-drum-tower' },
@@ -110,6 +95,7 @@ The Muslim Quarter is best explored on foot, ideally in the evening when the foo
         { title: "City Wall", description: "Best-preserved ancient city wall with a 14 km perimeter.", href: "/destinations/xian/what-to-do/city-wall" },
         { title: "Yangroupaomo", description: "Xi'an's iconic lamb-oatmeal breakfast soup.", href: "/destinations/xian/where-to-eat/yangroupaomo" },
       ]}
+      tips={[...tips, ...photoSpots]}
     />
   );
 }

@@ -102,9 +102,8 @@ export default function ChongqingWhereToEatPage() {
         </div>
 
         <div className="bg-[var(--accent-soft)] border-l-4 border-[var(--accent)] p-4">
-          <h3 className="font-semibold text-[var(--accent-strong)] mb-2">⚠️ Tourist Traps to Avoid</h3>
+          <h3 className="font-semibold text-[var(--accent-strong)] mb-2">⚠️ Tips to Know</h3>
           <ul className="text-[var(--foreground)] space-y-2">
-            <li>• Empty &quot;famous&quot; hotpot shops with aggressive street promoters</li>
             <li>• Ordering maximum spice level on your first Chongqing meal</li>
             <li>• Assuming every high-rated listing is recent or locally trusted</li>
           </ul>

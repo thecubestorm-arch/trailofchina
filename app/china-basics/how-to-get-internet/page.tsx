@@ -111,13 +111,6 @@ export default function InternetHub() {
           </ul>
         </div>
 
-        <div className="mb-8 border-l-4 border-[var(--accent)] bg-[var(--accent-soft)] p-4">
-          <h3 className="mb-2 font-semibold text-[var(--accent-strong)]">⚠️ Scam Alert</h3>
-          <p className="text-[var(--foreground)]">
-            Avoid buying SIM cards from unofficial sellers at airports. Always go to official carrier counters (China
-            Mobile, China Unicom, China Telecom).
-          </p>
-        </div>
 
         <div className="mt-8">
           <ContextualCTA

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import AttractionPage from '@/components/AttractionPage';
 
 type Tip = {
-  type: 'tip' | 'scam' | 'photo';
+  type: 'tip' | 'photo';
   text: string;
 };
 
@@ -52,20 +52,6 @@ export default function ForbiddenCityPage() {
     },
   ] as const
 
-  const scamAlerts = [
-    {
-      type: 'scam',
-      text: 'Ignore touts near the ticket booths offering "fast-track entry" — they\'re selling the same tickets you can book online',
-    },
-    {
-      type: 'scam',
-      text: 'Avoid unofficial "guided tours" inside the complex — there are no licensed guides permitted inside the paid areas',
-    },
-    {
-      type: 'scam',
-      text: 'Don\'t buy souvenirs from street vendors outside the gate — prices are inflated and quality is poor',
-    },
-  ] as const
 
   const photoSpots = [
     {
@@ -110,7 +96,6 @@ The layout reflects ancient Chinese cosmology, with the Three Great Halls (Supre
       price="¥60 (April-October), ¥40 (November-March)"
       nearestSubway="Tiananmen East Station, Line 1"
       bestTime="Morning hours (8:30-11:00) for light and fewer crowds"
-      tips={[...tips, ...scamAlerts, ...photoSpots]}
       mapUrl="https://www.openstreetmap.org/embed?layer=Mapnik&frame=&lat=39.9164&lon=116.3973&zoom=16&marker=39.9164%2C116.3973"
       relatedLinks={[
         { title: 'Summer Palace', href: '/destinations/beijing/what-to-do/summer-palace' },
@@ -126,6 +111,7 @@ The layout reflects ancient Chinese cosmology, with the Three Great Halls (Supre
         { title: 'Peking Duck', description: "Beijing's most famous dish - try it at the city's best restaurants.", href: '/destinations/beijing/where-to-eat/peking-duck' },
         { title: 'Summer Palace', description: 'Imperial gardens and lakes on the outskirts of Beijing.', href: '/destinations/beijing/what-to-do/summer-palace' },
       ]}
+      tips={[...tips, ...photoSpots]}
     />
   );
 }

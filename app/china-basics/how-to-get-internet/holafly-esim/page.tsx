@@ -53,11 +53,6 @@ export default function HolaflyEsimPage() {
         'Holafly offers 24/7 customer support via chat, which is helpful if something goes wrong mid-trip.',
         'If traveling with others, you can share your connection via hotspot — a big advantage over data-capped eSIMs.',
       ]}
-      scamAlerts={[
-        'Buy only from holafly.com — third-party resellers may sell invalid plans or charge hidden fees.',
-        'Holafly does not offer refunds after eSIM activation — make sure your phone supports eSIM before purchasing.',
-        'The "unlimited" claim comes with a fair-use throttle — heavy users may see speeds drop after 1-2 GB per day.',
-      ]}
       related={[
         { label: 'Airalo eSIM Review', href: '/china-basics/how-to-get-internet/airalo-esim' },
         { label: 'Internet in China Overview', href: '/china-basics/how-to-get-internet' },

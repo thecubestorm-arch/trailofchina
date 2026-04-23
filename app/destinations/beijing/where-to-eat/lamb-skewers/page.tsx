@@ -43,12 +43,7 @@ const tips = [
   },
 ] as const;
 
-const scams = [
-  {
-    type: 'scam',
-    text: 'Avoid places that weigh skewers — you should pay per stick not per gram',
-  },
-] as const;
+const scams: { type: 'tip'; text: string }[] = [];
 
 const relatedLinks = [
   {
@@ -84,7 +79,7 @@ export default function LambSkewersPage() {
       priceRange="¥2-5 per skewer"
       bestTime="Evening (after 7 PM) — night market food"
       whereToTry={whereToTry}
-      tips={[...tips, ...scams] as const}
+      tips={[...tips] as const}
       relatedLinks={relatedLinks}
     />
   );

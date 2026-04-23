@@ -114,9 +114,8 @@ export default function ChengduWhereToEatPage() {
         </div>
 
         <div className="bg-[var(--accent-soft)] border-l-4 border-[var(--accent)] p-4">
-          <h3 className="font-semibold text-[var(--accent-strong)] mb-2">⚠️ Tourist Traps to Avoid</h3>
+          <h3 className="font-semibold text-[var(--accent-strong)] mb-2">⚠️ Tips to Know</h3>
           <ul className="text-[var(--foreground)] space-y-2">
-            <li>• Menus without clear prices near top tourist lanes.</li>
             <li>• &quot;Authentic hotpot&quot; spots with no local diners during prime dinner hours.</li>
             <li>• Ordering maximum spice on your first meal and losing the next day.</li>
           </ul>

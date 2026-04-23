@@ -47,20 +47,6 @@ export default function TerracottaWarriorsPage() {
     },
   ] as const
 
-  const scamAlerts = [
-    {
-      type: 'scam',
-      text: 'Ignore "free" tea offerings from people near the entrance — they will demand payment afterward',
-    },
-    {
-      type: 'scam',
-      text: 'Fake "museum-certified" replicas sold outside the site — these are worthless souvenirs',
-    },
-    {
-      type: 'scam',
-      text: '"Special access" tours claiming to bypass lines — they\'re lying and will take your money',
-    },
-  ] as const
 
   const photoSpots = [
     {
@@ -103,7 +89,6 @@ The site is a UNESCO World Heritage site and one of China\'s most famous attract
       price="¥120 (including bus shuttle from Xi\'an Station)"
       nearestSubway="Shuttle bus from Xi\'an Station (20-30 minutes)"
       bestTime="Morning hours (8:30-10:30 AM) to beat tour groups"
-      tips={[...tips, ...scamAlerts, ...photoSpots]}
       mapUrl="https://www.openstreetmap.org/embed?layer=Mapnik&frame=&lat=34.3842&lon=109.1592&zoom=16&marker=34.3842%2C109.1592"
       relatedLinks={[
         { title: 'Xi\'an City Wall', href: '/destinations/xian/what-to-do/xian-city-wall' },
@@ -118,6 +103,7 @@ The site is a UNESCO World Heritage site and one of China\'s most famous attract
         { title: "Muslim Quarter", description: "Historic Islamic neighborhood with amazing street food.", href: "/destinations/xian/what-to-do/muslim-quarter" },
         { title: "Yangroupaomo", description: "Xi'an's iconic lamb-oatmeal breakfast soup.", href: "/destinations/xian/where-to-eat/yangroupaomo" },
       ]}
+      tips={[...tips, ...photoSpots]}
     />
   );
 }

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import AttractionPage from '@/components/AttractionPage';
 
 type Tip = {
-  type: 'tip' | 'scam' | 'photo';
+  type: 'tip' | 'photo';
   text: string;
 };
 
@@ -40,12 +40,6 @@ export default function ArtDistrict798Page() {
     },
   ] as const
 
-  const scamAlerts = [
-    {
-      type: 'scam',
-      text: 'Some "galleries" are actually retail shops selling mass-produced art — know what you\'re buying',
-    },
-  ] as const
 
   const photoSpots = [
     {
@@ -82,7 +76,6 @@ export default function ArtDistrict798Page() {
       price="Free entry, some exhibitions ¥50-80"
       nearestSubway="Jiangtai, Line 14"
       bestTime="Weekend afternoons"
-      tips={[...tips, ...scamAlerts, ...photoSpots]}
       mapUrl="https://www.openstreetmap.org/embed?layer=Mapnik&frame=&lat=39.9764&lon=116.5119&zoom=16&marker=39.9764%2C116.5119"
       relatedLinks={[
         { title: 'Lama Temple', href: '/destinations/beijing/what-to-do/lama-temple' },
@@ -90,6 +83,7 @@ export default function ArtDistrict798Page() {
         { title: 'Beijing Where to Eat', href: '/destinations/beijing/where-to-eat' },
         { title: 'Beijing Guide', href: '/destinations/beijing' },
       ]}
+      tips={[...tips, ...photoSpots]}
     />
   );
 }

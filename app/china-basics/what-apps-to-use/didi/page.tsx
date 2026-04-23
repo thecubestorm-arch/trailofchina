@@ -61,14 +61,6 @@ export default function DidiPage() {
         'For airport trips, book 30-60 minutes in advance — traffic to major airports can be heavy, and Didi drivers face penalties for late arrivals.',
         'Didi\'s bike-sharing (青桔单车) integrates directly into the app — no deposit required for foreign users, just pay per ride.',
       ]}
-      scamAlerts={[
-        'Always verify the license plate matches your app before entering the vehicle — this is the most common scam tactic.',
-        'Use the "Share Trip" feature to send your real-time location and ETA to trusted contacts.',
-        'Didi\'s built-in SOS button (appears during rides) connects you directly to emergency services and your emergency contacts.',
-        'Keep your phone charged during rides — if you need to show your destination or verify with the driver, your phone should be ready.',
-        'Avoid unmarked vehicles or drivers who approach you outside stations — always use the official Didi app to book.',
-        'If you feel uncomfortable during a ride, use the SOS button immediately and let the system handle it — Didi takes safety seriously.',
-      ]}
       related={[
         { label: 'Alipay Guide', href: '/china-basics/what-apps-to-use/alipay' },
         { label: 'Payment Apps Overview', href: '/china-basics/what-apps-to-use/payment' },

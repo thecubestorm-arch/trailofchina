@@ -143,11 +143,10 @@ export default function BeijingWhereToEatPage() {
         </div>
 
         <div className="bg-[var(--accent-soft)] border-l-4 border-[var(--accent)] p-4 mb-8">
-          <h3 className="font-semibold text-[var(--accent-strong)] mb-2">⚠️ What to Avoid</h3>
+          <h3 className="font-semibold text-[var(--accent-strong)] mb-2">⚠️ Tips</h3>
           <ul className="text-[var(--foreground)] space-y-2">
             <li>• <strong>Wangfujing Snack Street</strong> — Overpriced novelty foods (scorpions, starfish). Not where locals eat. Walk 10 min to Niujie instead</li>
             <li>• <strong>Restaurants with picture menus near Forbidden City</strong> — 3x normal prices, bland food</li>
-            <li>• <strong>Tea ceremony invitations</strong> — Friendly strangers invite you to tea; the bill is ¥500-2000</li>
             <li>• <strong>Tourist-trap duck restaurants</strong> near Qianmen with touts outside — go to Siji Minfu or Da Dong</li>
           </ul>
         </div>

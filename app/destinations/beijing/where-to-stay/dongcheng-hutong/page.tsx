@@ -36,7 +36,6 @@ export default function DongchengHutongPage() {
         { type: 'tip', text: "Some hutong hotels have no elevator - ask before booking if you have mobility concerns" },
         { type: 'tip', text: "Walk to Nanluoguxiang for dinner - it's just 10 minutes away" },
         { type: 'tip', text: 'Combine with morning visit to Drum Tower for a full day of exploration' },
-        { type: 'scam', text: 'Some "hutong hotels" are just regular hotels with hutong in the name - check photos for actual courtyard architecture' },
       ] as const}
       relatedLinks={[
         { title: 'Hutong Tours', href: '/destinations/beijing/things-to-do/hutong-tours' },

@@ -76,7 +76,7 @@ export default function DidiPage() {
             <li>• Emergency button in app if needed</li>
           </ul>
         </div>
-              <RelatedArticles articles={[{title:'Taxi Guide',description:'Traditional taxi tips and scams to watch for.',href:'/china-basics/how-to-get-around/taxi'},{title:'Didi App Guide',description:'Set up the Didi app for ride-hailing.',href:'/china-basics/what-apps-to-use/didi'}]} />
+              <RelatedArticles articles={[{title:'Taxi Guide',description:'Traditional taxi tips and getting around.',href:'/china-basics/how-to-get-around/taxi'},{title:'Didi App Guide',description:'Set up the Didi app for ride-hailing.',href:'/china-basics/what-apps-to-use/didi'}]} />
       </main>
     </div>
   );

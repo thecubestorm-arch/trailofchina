@@ -60,12 +60,6 @@ export default function VisaGuidePage() {
         'Register with your country\'s embassy in China for safety alerts and emergency assistance.',
         'Swiss and EU citizens: check the latest visa-free policy before applying — China has been expanding visa-free entry and policies change frequently.',
       ]}
-      scamAlerts={[
-        'Only apply through official Chinese Visa Application Service Centers (CVASC) — third-party agencies charge unnecessary markups.',
-        'Never accept "visa on arrival" offers from unofficial sources — China does not offer visa on arrival for most nationalities.',
-        'Some visa agencies promise "guaranteed approval" — this is impossible. Visa decisions are always at the discretion of the consulate.',
-        'Beware of fake invitation letters — using fraudulent documents can result in a permanent visa ban.',
-      ]}
       relatedArticles={[
         { title: 'Passport Rules in China', description: 'Entry requirements, passport validity, and registration rules.', href: '/china-basics/how-china-differs/passport-rules' },
         { title: 'How China Differs', description: 'Cultural differences, censorship, and safety standards.', href: '/china-basics/how-china-differs' },

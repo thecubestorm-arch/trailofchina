@@ -3,7 +3,7 @@ import Link from 'next/link';
 import AttractionPage from '@/components/AttractionPage';
 
 type Tip = {
-  type: 'tip' | 'scam' | 'photo';
+  type: 'tip' | 'photo';
   text: string;
 };
 
@@ -44,7 +44,6 @@ export default function SummerPalacePage() {
     },
   ] as const
 
-  const scamAlerts: { type: 'scam'; text: string }[] = []
 
   const photoSpots = [
     {
@@ -81,7 +80,6 @@ export default function SummerPalacePage() {
       price="¥30 (park), ¥60 (all-inclusive)"
       nearestSubway="Beigongmen, Line 4"
       bestTime="Morning (8:00-11:00) or late afternoon"
-      tips={[...tips, ...scamAlerts, ...photoSpots]}
       mapUrl="https://www.openstreetmap.org/embed?layer=Mapnik&frame=&lat=39.9977&lon=116.2833&zoom=16&marker=39.9977%2C116.2833"
       relatedLinks={[
         { title: 'Temple of Heaven', href: '/destinations/beijing/what-to-do/temple-of-heaven' },
@@ -90,6 +88,7 @@ export default function SummerPalacePage() {
         { title: 'Beijing Where to Eat', href: '/destinations/beijing/where-to-eat' },
         { title: 'Beijing Guide', href: '/destinations/beijing' },
       ]}
+      tips={[...tips, ...photoSpots]}
     />
   );
 }

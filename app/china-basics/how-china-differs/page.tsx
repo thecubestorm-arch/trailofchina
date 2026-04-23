@@ -42,8 +42,8 @@ const sections = [
     icon: '🔒',
     title: 'Safety',
     preview:
-      'China is generally convenient for travelers, but practical risk management still matters in crowded transport hubs and tourist zones. Use common anti-scam habits, protect payment accounts, and keep digital copies of key documents. Basic routines keep your trip predictable and low-stress.',
-    tags: ['🛡️ Personal Safety', '💳 Payment Security', '📄 Document Backups', '⚠️ Scam Awareness'],
+      'China is generally convenient for travelers, but practical risk management still matters in crowded transport hubs and tourist zones. Protect payment accounts and keep digital copies of key documents. Basic routines keep your trip predictable and low-stress.',
+    tags: ['🛡️ Personal Safety', '💳 Payment Security', '📄 Document Backups', '💡 Practical Habits'],
     href: '/china-basics/how-china-differs/security-standards',
   },
   {

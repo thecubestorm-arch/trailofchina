@@ -76,16 +76,7 @@ export default function CulturalDifferencesPage() {
           </ul>
         </div>
 
-        <div className="bg-[var(--accent-soft)] border-l-4 border-[var(--accent)] p-4">
-          <h3 className="font-semibold text-[var(--accent-strong)] mb-2">⚠️ Things to Avoid</h3>
-          <ul className="text-[var(--foreground)] space-y-2">
-            <li>• Pointing with your index finger (use open hand)</li>
-            <li>• Touching someone's head (sacred)</li>
-            <li>• Losing your temper publicly (loss of face)</li>
-            <li>• Discussing Tibet, Taiwan, Tiananmen, or Xinjiang politics</li>
-            <li>• Showing public displays of affection</li>
-          </ul>
-        </div>
+
               <RelatedArticles articles={[{title:'Censorship in China',description:'What to expect from the Great Firewall.',href:'/china-basics/how-china-differs/censorship'},{title:'How China Differs',description:'Overview of key differences for travelers.',href:'/china-basics/how-china-differs'}]} />
       </main>
     </div>

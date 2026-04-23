@@ -121,20 +121,12 @@ export default function ShanghaiWhereToEatPage() {
           </ul>
         </div>
 
-        <div className="bg-[var(--accent-soft)] border-l-4 border-[var(--accent)] p-4">
-          <h3 className="font-semibold text-[var(--accent-strong)] mb-2">⚠️ What to Avoid</h3>
-          <ul className="text-[var(--foreground)] space-y-2">
-            <li>• <strong>Bund restaurants with &quot;view surcharges&quot;</strong> — You pay ¥200 for ¥50 food quality. Walk one block inland for the same cuisine at half price</li>
-            <li>• <strong>Tea ceremony scam</strong> — Friendly strangers invite you to a &quot;tea tasting.&quot; Bill arrives at ¥500-2000. See our <Link href="/destinations/shanghai/local-tips" className="underline">Local Tips</Link></li>
-            <li>• <strong>Menus without prices</strong> — If there&apos;s no price listed, it&apos;s likely a tourist trap. Walk away</li>
-            <li>• <strong>Nanjing Road tourist restaurants</strong> — Overpriced and bland. Locals eat on side streets, not the main drag</li>
-          </ul>
-        </div>
+
         <RelatedArticles articles={[
           {title: 'Xiaolongbao', description: 'Shanghai’s famous soup dumplings — bite with care.', href: '/destinations/shanghai/where-to-eat/xiaolongbao'},
           {title: 'Shengjianbao', description: 'Pan-fried pork buns with a crispy bottom.', href: '/destinations/shanghai/where-to-eat/shengjianbao'},
           {title: 'What to Do in Shanghai', description: 'The Bund, Yu Garden, and more.', href: '/destinations/shanghai/what-to-do'},
-          {title: 'Shanghai Local Tips', description: 'Metro hacks and scam warnings.', href: '/destinations/shanghai/local-tips'},
+          {title: 'Shanghai Local Tips', description: 'Metro hacks and local tips.', href: '/destinations/shanghai/local-tips'},
         ]} />
       </main>
     </div>

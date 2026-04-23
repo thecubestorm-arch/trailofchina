@@ -3,7 +3,7 @@ import Link from 'next/link';
 import AttractionPage from '@/components/AttractionPage';
 
 type Tip = {
-  type: 'tip' | 'scam' | 'photo';
+  type: 'tip' | 'photo';
   text: string;
 };
 
@@ -44,16 +44,6 @@ export default function LamaTemplePage() {
     },
   ] as const
 
-  const scamAlerts = [
-    {
-      type: 'scam',
-      text: 'Don\'t buy "blessed" items from vendors outside — they\'re overpriced and not authentic',
-    },
-    {
-      type: 'scam',
-      text: 'Ignore fortune-tellers near the gate — they\'re not associated with the temple',
-    },
-  ] as const
 
   const photoSpots = [
     {
@@ -86,7 +76,6 @@ export default function LamaTemplePage() {
       price="¥25"
       nearestSubway="Yonghegong, Lines 2/5"
       bestTime="Early morning (9:00-10:30) for monk chanting"
-      tips={[...tips, ...scamAlerts, ...photoSpots]}
       mapUrl="https://www.openstreetmap.org/embed?layer=Mapnik&frame=&lat=39.9461&lon=116.4064&zoom=16&marker=39.9461%2C116.4064"
       relatedLinks={[
         { title: 'Temple of Heaven', href: '/destinations/beijing/what-to-do/temple-of-heaven' },
@@ -94,6 +83,7 @@ export default function LamaTemplePage() {
         { title: 'Hutong Tours', href: '/destinations/beijing/what-to-do/hutong' },
         { title: 'Beijing Local Tips', href: '/destinations/beijing/local-tips' },
       ]}
+      tips={[...tips, ...photoSpots]}
     />
   );
 }

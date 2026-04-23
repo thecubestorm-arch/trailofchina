@@ -60,12 +60,6 @@ export default function MeituanPage() {
         'Meituan\'s bike-sharing integration means you can rent bikes without the separate Mobike or Hellobike apps — just look for the bike icon in the main Meituan menu.',
         'Save screenshots of your order confirmations and delivery tracking — Meituan\'s customer support can be difficult to reach if you don\'t speak Chinese.',
       ]}
-      scamAlerts={[
-        'Only order from restaurants with verified "Official Store" badges or high ratings (4.7+ stars). Unverified restaurants may have higher prices or poor quality.',
-        'Beware of "group buying" scams where fake deals promise discounts but never materialize. Stick to Meituan\'s official GroupBuying section with clearly stated terms.',
-        'If a merchant asks you to pay outside Meituan (cash or direct transfer), decline — Meituan offers buyer protection only for in-app transactions.',
-        'Don\'t use third-party Meituan codes or coupons from unknown websites — many are expired or fraudulent.',
-      ]}
       related={[
         { label: 'Alipay Guide', href: '/china-basics/what-apps-to-use/alipay' },
         { label: 'WeChat Pay Guide', href: '/china-basics/what-apps-to-use/wechat-pay' },

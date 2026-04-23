@@ -50,10 +50,6 @@ export default function MapsAppsPage() {
         'Share precise map pins in WeChat when meeting local guides or drivers.',
         'Include nearest metro exit number in your notes for faster navigation.',
       ]}
-      scamAlerts={[
-        'Drivers may claim your destination is closed and suggest another stop; verify directly in your app before agreeing.',
-        'Avoid unofficial “tour map” apps pushed via QR flyers near attractions.',
-      ]}
       related={[
         { label: 'DiDi and Travel Apps', href: '/china-basics/what-apps-to-use/travel' },
         { label: 'Metro and Subway Guide', href: '/china-basics/how-to-get-around/metro-subway' },

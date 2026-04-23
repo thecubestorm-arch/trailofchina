@@ -3,7 +3,7 @@ import Link from 'next/link';
 import AttractionPage from '@/components/AttractionPage';
 
 type Tip = {
-  type: 'tip' | 'scam' | 'photo';
+  type: 'tip' | 'photo';
   text: string;
 };
 
@@ -44,16 +44,6 @@ export default function TempleOfHeavenPage() {
     },
   ] as const
 
-  const scamAlerts = [
-    {
-      type: 'scam',
-      text: 'Ignore "guided tour" offers at entrance — they\'re selling the same access you have with your ticket',
-    },
-    {
-      type: 'scam',
-      text: 'Don\'t buy incense from vendors outside — it\'s overpriced and the quality is poor',
-    },
-  ] as const
 
   const photoSpots = [
     {
@@ -90,7 +80,6 @@ export default function TempleOfHeavenPage() {
       price="Park ¥15, All-access ¥34"
       nearestSubway="Tiantan Dongmen, Line 5"
       bestTime="6:00-8:00 AM for local life, 8:30-11:00 for halls"
-      tips={[...tips, ...scamAlerts, ...photoSpots]}
       mapUrl="https://www.openstreetmap.org/embed?layer=Mapnik&frame=&lat=39.8845&lon=116.4072&zoom=16&marker=39.8845%2C116.4072"
       relatedLinks={[
         { title: 'Summer Palace', href: '/destinations/beijing/what-to-do/summer-palace' },
@@ -105,6 +94,7 @@ export default function TempleOfHeavenPage() {
         { title: "Great Wall of China", description: "The world's longest wall stretching across northern China.", href: "/destinations/beijing/what-to-do/great-wall" },
         { title: "Peking Duck", description: "Beijing's most famous dish - try it at the city's best restaurants.", href: "/destinations/beijing/where-to-eat/peking-duck" },
       ]}
+      tips={[...tips, ...photoSpots]}
     />
   );
 }

@@ -105,10 +105,9 @@ export default function XianWhereToStayPage() {
           </ul>
         </div>
 
-        <div className="bg-red-50 border-l-4 border-red-400 p-4 mb-10">
-          <h3 className="font-semibold text-red-800 mb-2">Tourist Traps</h3>
-          <ul className="text-red-900 space-y-2">
-            <li>• Overpriced &quot;wall-view&quot; listings with outdated photos</li>
+        <div className="bg-amber-50 border-l-4 border-amber-400 p-4 mb-10">
+          <h3 className="font-semibold text-amber-800 mb-2">⚠️ Tips to Know</h3>
+          <ul className="text-amber-900 space-y-2">
             <li>• Ultra-cheap station-area rooms with poor cleanliness records</li>
             <li>• Properties advertising central access but far from metro lines</li>
           </ul>

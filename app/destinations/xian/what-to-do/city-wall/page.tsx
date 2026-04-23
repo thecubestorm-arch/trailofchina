@@ -38,16 +38,6 @@ export default function CityWallPage() {
     },
   ];
 
-  const scamAlerts = [
-    {
-      type: 'scam' as const,
-      text: 'Avoid vendors selling "shortcut" tickets — only buy from official ticket booths or the WeChat mini-program',
-    },
-    {
-      type: 'scam' as const,
-      text: 'Some bike rental stalls charge extra for "insurance" — this is optional, decline if you\'re confident cycling',
-    },
-  ];
 
   const photoSpots = [
     {
@@ -90,7 +80,6 @@ The wall is especially magical at sunset when the golden light bathes the ancien
       price="¥54 (includes wall access), bike rental ¥45/3 hours"
       nearestSubway="Yongningmen (South Gate), Line 2"
       bestTime="Early morning (7-9 AM) or sunset (5-7 PM) for best light and fewer crowds"
-      tips={[...tips, ...scamAlerts, ...photoSpots]}
       mapUrl="https://www.openstreetmap.org/embed?layer=Mapnik&frame=&lat=34.2583&lon=108.9458&zoom=15&marker=34.2583%2C108.9458"
       relatedLinks={[
         { title: 'Muslim Quarter', href: '/destinations/xian/what-to-do/muslim-quarter' },
@@ -106,6 +95,7 @@ The wall is especially magical at sunset when the golden light bathes the ancien
         { title: "Muslim Quarter", description: "Historic Islamic neighborhood with amazing street food.", href: "/destinations/xian/what-to-do/muslim-quarter" },
         { title: "Yangroupaomo", description: "Xi'an's iconic lamb-oatmeal breakfast soup.", href: "/destinations/xian/where-to-eat/yangroupaomo" },
       ]}
+      tips={[...tips, ...photoSpots]}
     />
   );
 }

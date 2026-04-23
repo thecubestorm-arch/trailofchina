@@ -99,7 +99,7 @@ export default function ShanghaiWhatToDoPage() {
           {title: 'The Bund', description: 'Shanghai’s iconic waterfront promenade.', href: '/destinations/shanghai/what-to-do/bund'},
           {title: 'Yu Garden', description: 'A classical Chinese garden in the heart of Shanghai.', href: '/destinations/shanghai/what-to-do/yu-garden'},
           {title: 'Where to Eat in Shanghai', description: 'Xiaolongbao, shengjianbao, and more.', href: '/destinations/shanghai/where-to-eat'},
-          {title: 'Shanghai Local Tips', description: 'Metro hacks and scam warnings.', href: '/destinations/shanghai/local-tips'},
+          {title: 'Shanghai Local Tips', description: 'Metro hacks and local tips.', href: '/destinations/shanghai/local-tips'},
         ]} />
       </main>
     </div>

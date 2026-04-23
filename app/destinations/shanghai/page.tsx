@@ -37,8 +37,8 @@ const sections = [
     category: 'Guide Section',
     title: '💡 Local Tips',
     preview:
-      'Watch for common tea-house and fake-ticket scams in busy tourist zones, especially near major landmarks. For weather and crowds, aim for March to May or September to November, and plan popular sights early in the day.',
-    tags: ['Scam Awareness', 'Best Seasons', 'Crowd Timing', 'Practical Advice'],
+      'For weather and crowds, aim for March to May or September to November, and plan popular sights early in the day.',
+    tags: ['Best Seasons', 'Crowd Timing', 'Practical Advice', 'Local Tips'],
     href: '/destinations/shanghai/local-tips',
   },
 ];
@@ -97,7 +97,7 @@ export default function ShanghaiPage() {
           {title: 'What to Do in Shanghai', description: 'From the Bund to French Concession.', href: '/destinations/shanghai/what-to-do'},
           {title: 'Where to Eat in Shanghai', description: 'Xiaolongbao, shengjianbao, and more local specialties.', href: '/destinations/shanghai/where-to-eat'},
           {title: 'Where to Stay in Shanghai', description: 'Bund, Jing’an, Xintiandi — pick the right area.', href: '/destinations/shanghai/where-to-stay'},
-          {title: 'Shanghai Local Tips', description: 'Metro hacks, scam warnings, and local etiquette.', href: '/destinations/shanghai/local-tips'},
+          {title: 'Shanghai Local Tips', description: 'Metro hacks and local etiquette.', href: '/destinations/shanghai/local-tips'},
         ]} />
       </main>
     </div>
