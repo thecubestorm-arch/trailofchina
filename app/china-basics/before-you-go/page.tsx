@@ -56,7 +56,7 @@ export default function BeforeYouGoPage() {
         <div className="relative">
           <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'China Basics', href: '/china-basics' }, { label: 'Before You Go' }]} />
           <ChineseWatermark character="准备" />
-          <h1 className="mb-6 text-4xl font-bold text-gray-900">Before You Go</h1>
+          <h1 className="mb-6 text-5xl font-bold text-gray-900">Before You Go</h1>
         </div>
 
         <section className="mb-8">

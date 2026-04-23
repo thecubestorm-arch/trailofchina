@@ -68,7 +68,7 @@ export default function ChinaBasicsPage() {
         </div>
         <div className="relative">
           <ChineseWatermark character="中国" />
-          <h1 className="mb-6 text-4xl font-bold text-gray-900">China Basics</h1>
+          <h1 className="mb-6 text-6xl font-bold text-gray-900">China Basics</h1>
         </div>
 
         <section className="mb-8 overflow-hidden rounded-2xl shadow-sm">

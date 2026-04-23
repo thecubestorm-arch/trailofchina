@@ -72,7 +72,7 @@ export default function DestinationsHub() {
       <main className="mx-auto max-w-4xl px-4 py-12">
         <div className="relative">
           <ChineseWatermark character="目的地" />
-          <h1 className="mb-6 text-4xl font-bold text-gray-900">Destinations</h1>
+          <h1 className="mb-6 text-6xl font-bold text-gray-900">Destinations</h1>
         </div>
 
         <section className="mb-8">

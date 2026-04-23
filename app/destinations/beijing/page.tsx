@@ -49,7 +49,7 @@ export default function BeijingPage() {
       <main className="max-w-4xl mx-auto px-4 py-12">
         <div className="relative">
           <ChineseWatermark character="北京" />
-          <h1 className="text-4xl font-bold mb-6 text-gray-900">Beijing</h1>
+          <h1 className="text-5xl font-bold mb-6 text-gray-900">Beijing</h1>
         </div>
 
         <section className="mb-8">

@@ -110,7 +110,7 @@ export default function HowToGetAroundHub() {
         <div className="relative">
           <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'China Basics', href: '/china-basics' }, { label: 'How to Get Around' }]} />
           <ChineseWatermark character="交通" />
-          <h1 className="mb-6 text-4xl font-bold text-gray-900">How to Get Around</h1>
+          <h1 className="mb-6 text-5xl font-bold text-gray-900">How to Get Around</h1>
         </div>
 
         <section className="mb-8">

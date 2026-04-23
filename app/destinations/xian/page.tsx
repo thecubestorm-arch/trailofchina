@@ -50,7 +50,7 @@ export default function XianPage() {
       <main className="max-w-4xl mx-auto px-4 py-12">
         <div className="relative">
           <ChineseWatermark character="西安" />
-          <h1 className="text-4xl font-bold mb-6 text-gray-900">Xi&apos;an</h1>
+          <h1 className="text-5xl font-bold mb-6 text-gray-900">Xi&apos;an</h1>
         </div>
 
         <section className="mb-8">

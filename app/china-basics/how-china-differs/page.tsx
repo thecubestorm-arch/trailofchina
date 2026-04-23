@@ -64,7 +64,7 @@ export default function HowChinaDiffersHub() {
         <div className="relative">
           <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'China Basics', href: '/china-basics' }, { label: 'How China Differs' }]} />
           <ChineseWatermark character="文化" />
-          <h1 className="mb-6 text-4xl font-bold text-gray-900">How China Differs</h1>
+          <h1 className="mb-6 text-5xl font-bold text-gray-900">How China Differs</h1>
         </div>
 
         <section className="mb-8">

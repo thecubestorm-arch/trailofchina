@@ -52,7 +52,7 @@ export default function PlanYourTripPage() {
       <main className="mx-auto max-w-4xl px-4 py-12">
         <div className="relative">
           <ChineseWatermark character="计划" />
-          <h1 className="mb-6 text-4xl font-bold text-gray-900">Plan Your Trip</h1>
+          <h1 className="mb-6 text-6xl font-bold text-gray-900">Plan Your Trip</h1>
         </div>
 
         <section className="mb-8">
