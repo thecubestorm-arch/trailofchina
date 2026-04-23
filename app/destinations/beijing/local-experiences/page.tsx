@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import ChineseWatermark from '@/components/ChineseWatermark';
+import RelatedArticles from '@/components/RelatedArticles';
 
 export const metadata: Metadata = {
   title: 'Local Experiences in Beijing | Trail of China',
@@ -159,6 +160,13 @@ export default function BeijingLocalExperiencesPage() {
             for the must-see sights and hidden gems.
           </p>
         </div>
+
+        <RelatedArticles articles={[
+          { title: 'Beijing Travel Guide', description: 'Everything you need to know about visiting Beijing, from top sights to local tips.', href: '/destinations/beijing' },
+          { title: 'What to Do in Beijing', description: 'Must-see attractions and hidden gems in Beijing.', href: '/destinations/beijing/what-to-do' },
+          { title: 'What Apps to Use in China', description: 'Essential apps to download before your trip to China.', href: '/china-basics/what-apps-to-use' },
+          { title: 'Best Time to Visit China', description: 'When to go to China based on weather, crowds, and seasonal events.', href: '/china-basics/best-time-to-visit' },
+        ]} />
       </main>
     </div>
   );

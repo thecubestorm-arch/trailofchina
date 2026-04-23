@@ -45,6 +45,12 @@ export default function SanlitunPage() {
         { title: 'Beijing Local Tips', href: '/destinations/beijing/local-tips' },
         { title: 'Where to Stay in Beijing', href: '/destinations/beijing/where-to-stay' },
       ]}
+      relatedArticles={[
+        { title: 'Where to Stay in Beijing', description: 'Compare all neighborhoods and find the best area for your trip.', href: '/destinations/beijing/where-to-stay' },
+        { title: 'Haidian', description: 'Academic, leafy, and quieter than central Beijing — near universities.', href: '/destinations/beijing/where-to-stay/haidian' },
+        { title: 'What to Do in Beijing', description: 'Must-see attractions and hidden gems in Beijing.', href: '/destinations/beijing/what-to-do' },
+        { title: 'Local Experiences in Beijing', description: 'Hutong breakfast walks, temple rituals, calligraphy, and street food tours.', href: '/destinations/beijing/local-experiences' },
+      ]}
       images={[
         { src: "https://picsum.photos/seed/sanlitun-1/800/500", alt: "Sanlitun Soho modern architecture at night in Beijing" },
         { src: "https://picsum.photos/seed/sanlitun-2/800/500", alt: "Taikoo Li shopping and dining district in Beijing" },

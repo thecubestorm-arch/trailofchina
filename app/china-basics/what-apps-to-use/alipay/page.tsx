@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import GuideArticlePage from '@/components/GuideArticlePage'
+import ContextualCTA from '@/components/ContextualCTA'
 import Breadcrumb from '@/components/Breadcrumb'
 import RelatedArticles from '@/components/RelatedArticles'
 
@@ -149,6 +149,17 @@ export default function AlipayPage() {
         </ul>
       </div>
 
+
+      <div className="container-px mx-auto max-w-4xl py-8 md:py-12">
+        <ContextualCTA
+          icon="🌐"
+          title="Need Internet in China?"
+          description="Get an eSIM before you go and stay connected the moment you land."
+          buttonText="Get an eSIM →"
+          buttonHref="/china-basics/how-to-get-internet/airalo-esim"
+          variant="primary"
+        />
+      </div>
 
       <div className="container-px mx-auto max-w-4xl py-12 md:py-16">
       <RelatedArticles articles={[{title:'WeChat Pay Guide',description:'The other must-have payment app for China travelers.',href:'/china-basics/what-apps-to-use/wechat-pay'},{title:'Payment Apps Overview',description:'Why you need Alipay and WeChat Pay in cashless China.',href:'/china-basics/what-apps-to-use/payment'},{title:'Meituan Guide',description:'Order food delivery and book hotels with Meituan.',href:'/china-basics/what-apps-to-use/meituan'}]} />

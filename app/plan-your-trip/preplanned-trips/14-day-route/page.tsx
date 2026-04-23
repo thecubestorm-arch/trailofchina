@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import RelatedArticles from '@/components/RelatedArticles';
 
 export const metadata: Metadata = {
   title: '14-Day Grand China Tour | Trail of China',
@@ -65,6 +66,13 @@ export default function FourteenDayRoutePage() {
             <li>• Book all trains and flights in advance for better prices</li>
           </ul>
         </div>
+
+        <RelatedArticles articles={[
+          { title: '10-Day Extended China Route', description: 'Add Chengdu pandas and Yangshuo karst to the classic circuit.', href: '/plan-your-trip/preplanned-trips/10-day-route' },
+          { title: '7-Day China Route', description: 'A practical one-week China itinerary covering Beijing, Xi\'an, and Shanghai.', href: '/plan-your-trip/preplanned-trips/7-day-route' },
+          { title: 'Budget Guide', description: 'How much to budget for your China trip, with cost breakdowns by city.', href: '/plan-your-trip/budget-guide' },
+          { title: 'Visa Guide', description: 'Everything you need to know about China visa requirements and application.', href: '/china-basics/visa-guide' },
+        ]} />
       </main>
     </div>
   );

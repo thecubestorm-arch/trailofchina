@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import ContextualCTA from '@/components/ContextualCTA'
 import Breadcrumb from '@/components/Breadcrumb'
 import RelatedArticles from '@/components/RelatedArticles'
 
@@ -150,6 +151,17 @@ export default function WeChatPayPage() {
         </ul>
       </div>
 
+
+      <div className="container-px mx-auto max-w-4xl py-8 md:py-12">
+        <ContextualCTA
+          icon="🌐"
+          title="Need Internet in China?"
+          description="Get an eSIM before you go and stay connected the moment you land."
+          buttonText="Get an eSIM →"
+          buttonHref="/china-basics/how-to-get-internet/airalo-esim"
+          variant="primary"
+        />
+      </div>
 
       <div className="container-px mx-auto max-w-4xl py-12 md:py-16">
       <RelatedArticles articles={[{title:'Alipay Guide',description:'Set up Alipay as your backup payment method.',href:'/china-basics/what-apps-to-use/alipay'},{title:'Payment Apps Overview',description:'Why you need both payment apps in China.',href:'/china-basics/what-apps-to-use/payment'},{title:'Didi Guide',description:'Pay for rides with WeChat Pay via Didi.',href:'/china-basics/what-apps-to-use/didi'}]} />

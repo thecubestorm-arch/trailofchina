@@ -43,6 +43,12 @@ export default function BundAreaPage() {
         { title: 'Xintiandi', href: '/destinations/shanghai/where-to-stay/xintiandi' },
         { title: 'Where to Stay in Shanghai', href: '/destinations/shanghai/where-to-stay' },
       ]}
+      relatedArticles={[
+        { title: 'Where to Stay in Shanghai', description: 'Compare all neighborhoods and find the best area for your trip.', href: '/destinations/shanghai/where-to-stay' },
+        { title: 'French Concession', description: 'Leafy streets, courtyard cafes, and Shanghai\'s best neighborhood feel.', href: '/destinations/shanghai/where-to-stay/french-concession' },
+        { title: 'What to Do in Shanghai', description: 'Must-see attractions and hidden gems in Shanghai.', href: '/destinations/shanghai/what-to-do' },
+        { title: 'Local Experiences in Shanghai', description: 'Authentic local experiences: shikumen walks, Art Deco tours, and street food adventures.', href: '/destinations/shanghai/local-experiences' },
+      ]}
       images={[
         { src: "https://picsum.photos/seed/bund-area-1/800/500", alt: "The Bund waterfront skyline at night in Shanghai" },
         { src: "https://picsum.photos/seed/bund-area-2/800/500", alt: "Colonial-era architecture along the Shanghai Bund" },

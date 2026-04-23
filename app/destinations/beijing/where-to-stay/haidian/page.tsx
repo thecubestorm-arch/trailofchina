@@ -45,6 +45,12 @@ export default function HaidianPage() {
         { title: 'Beijing Local Tips', href: '/destinations/beijing/local-tips' },
         { title: 'Where to Stay in Beijing', href: '/destinations/beijing/where-to-stay' },
       ]}
+      relatedArticles={[
+        { title: 'Where to Stay in Beijing', description: 'Compare all neighborhoods and find the best area for your trip.', href: '/destinations/beijing/where-to-stay' },
+        { title: 'Sanlitun', description: 'Modern, international, and Beijing\'s nightlife capital.', href: '/destinations/beijing/where-to-stay/sanlitun' },
+        { title: 'What to Do in Beijing', description: 'Must-see attractions and hidden gems in Beijing.', href: '/destinations/beijing/what-to-do' },
+        { title: 'Local Experiences in Beijing', description: 'Hutong breakfast walks, temple rituals, calligraphy, and street food tours.', href: '/destinations/beijing/local-experiences' },
+      ]}
       images={[
         { src: "https://picsum.photos/seed/haidian-1/800/500", alt: "Peking University campus in Haidian district, Beijing" },
         { src: "https://picsum.photos/seed/haidian-2/800/500", alt: "Summer Palace gardens near Beijing's university district" },

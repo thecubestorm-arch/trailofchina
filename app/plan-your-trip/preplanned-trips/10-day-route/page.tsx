@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import RelatedArticles from '@/components/RelatedArticles';
 
 export const metadata: Metadata = {
   title: '10-Day China Itinerary | Trail of China',
@@ -22,7 +23,7 @@ export default function TenDayRoutePage() {
           <h2 className="text-2xl font-semibold mb-4">Route Overview</h2>
           <div className="bg-gray-50 rounded-lg p-6">
             <p className="text-gray-700 font-medium">Beijing → Xi&apos;an → Chengdu → Yangshuo → Shanghai</p>
-            <p className="text-gray-600 mt-2">Duration: 10 days | Best for: Nature & culture mix</p>
+            <p className="text-gray-600 mt-2">Duration: 10 days | Best for: Nature &amp; culture mix</p>
             <p className="text-gray-600">Estimated budget: $1200-2000 per person</p>
           </div>
         </section>
@@ -61,6 +62,13 @@ export default function TenDayRoutePage() {
             <li>• Chengdu-Xi&apos;an flight: 1.5 hours vs 13 hours by train</li>
           </ul>
         </div>
+
+        <RelatedArticles articles={[
+          { title: '7-Day China Route', description: 'A practical one-week China itinerary covering Beijing, Xi\'an, and Shanghai.', href: '/plan-your-trip/preplanned-trips/7-day-route' },
+          { title: '14-Day Grand China Tour', description: 'The ultimate 2-week China itinerary covering all highlights at a comfortable pace.', href: '/plan-your-trip/preplanned-trips/14-day-route' },
+          { title: 'Budget Guide', description: 'How much to budget for your China trip, with cost breakdowns by city.', href: '/plan-your-trip/budget-guide' },
+          { title: 'Best Time to Visit', description: 'When to go to China based on weather, crowds, and seasonal events.', href: '/china-basics/best-time-to-visit' },
+        ]} />
       </main>
     </div>
   );

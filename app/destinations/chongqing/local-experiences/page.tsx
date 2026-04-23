@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import ChineseWatermark from '@/components/ChineseWatermark';
+import RelatedArticles from '@/components/RelatedArticles';
 
 export const metadata: Metadata = {
   title: 'Local Experiences in Chongqing | Trail of China',
@@ -153,6 +154,13 @@ export default function ChongqingLocalExperiencesPage() {
             for the must-see sights and hidden gems.
           </p>
         </div>
+
+        <RelatedArticles articles={[
+          { title: 'Chongqing Travel Guide', description: 'Everything you need to know about visiting Chongqing, the mountain city.', href: '/destinations/chongqing' },
+          { title: 'What to Do in Chongqing', description: 'Must-see attractions and hidden gems in Chongqing.', href: '/destinations/chongqing/what-to-do' },
+          { title: 'What Apps to Use in China', description: 'Essential apps to download before your trip to China.', href: '/china-basics/what-apps-to-use' },
+          { title: 'City-to-City Transport', description: 'How to travel between Chinese cities by train, bus, and plane.', href: '/china-basics/how-to-get-around/city-to-city' },
+        ]} />
       </main>
     </div>
   );

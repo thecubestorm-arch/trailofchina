@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import ContextualCTA from '@/components/ContextualCTA'
 import Breadcrumb from '@/components/Breadcrumb'
 import RelatedArticles from '@/components/RelatedArticles'
 
@@ -76,6 +77,16 @@ export default function CulturalDifferencesPage() {
           </ul>
         </div>
 
+        <div className="mb-8">
+          <ContextualCTA
+            icon="📋"
+            title="Download Our Free China Cheat Sheet"
+            description="Quick reference for phrases, etiquette, and essentials — save it to your phone before you go."
+            buttonText="Get the Cheat Sheet →"
+            buttonHref="#cheat-sheet"
+            variant="secondary"
+          />
+        </div>
 
               <RelatedArticles articles={[{title:'Censorship in China',description:'What to expect from the Great Firewall.',href:'/china-basics/how-china-differs/censorship'},{title:'How China Differs',description:'Overview of key differences for travelers.',href:'/china-basics/how-china-differs'}]} />
       </main>

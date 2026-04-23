@@ -42,6 +42,12 @@ export default function JinganPage() {
         { title: 'Xintiandi', href: '/destinations/shanghai/where-to-stay/xintiandi' },
         { title: 'Where to Stay in Shanghai', href: '/destinations/shanghai/where-to-stay' },
       ]}
+      relatedArticles={[
+        { title: 'Where to Stay in Shanghai', description: 'Compare all neighborhoods and find the best area for your trip.', href: '/destinations/shanghai/where-to-stay' },
+        { title: 'Xintiandi', description: 'Polished, modern, and expat-friendly entertainment district.', href: '/destinations/shanghai/where-to-stay/xintiandi' },
+        { title: 'What to Do in Shanghai', description: 'Must-see attractions and hidden gems in Shanghai.', href: '/destinations/shanghai/what-to-do' },
+        { title: 'Local Experiences in Shanghai', description: 'Authentic local experiences: shikumen walks, Art Deco tours, and street food adventures.', href: '/destinations/shanghai/local-experiences' },
+      ]}
       images={[
         { src: "https://picsum.photos/seed/jingan-1/800/500", alt: "Jing'an Temple surrounded by modern skyscrapers in Shanghai" },
         { src: "https://picsum.photos/seed/jingan-2/800/500", alt: "Nanjing West Road shopping district in Shanghai's Jing'an" },

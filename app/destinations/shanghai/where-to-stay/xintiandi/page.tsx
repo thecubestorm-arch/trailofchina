@@ -42,6 +42,12 @@ export default function XintiandiPage() {
         { title: 'Jing\'an', href: '/destinations/shanghai/where-to-stay/jingan' },
         { title: 'Where to Stay in Shanghai', href: '/destinations/shanghai/where-to-stay' },
       ]}
+      relatedArticles={[
+        { title: 'Where to Stay in Shanghai', description: 'Compare all neighborhoods and find the best area for your trip.', href: '/destinations/shanghai/where-to-stay' },
+        { title: 'Jing\'an', description: 'Central, connected, and always buzzing — Shanghai\'s transport hub.', href: '/destinations/shanghai/where-to-stay/jingan' },
+        { title: 'What to Do in Shanghai', description: 'Must-see attractions and hidden gems in Shanghai.', href: '/destinations/shanghai/what-to-do' },
+        { title: 'Local Experiences in Shanghai', description: 'Authentic local experiences: shikumen walks, Art Deco tours, and street food adventures.', href: '/destinations/shanghai/local-experiences' },
+      ]}
       images={[
         { src: "https://picsum.photos/seed/xintiandi-1/800/500", alt: "Restored shikumen stone-gate buildings in Shanghai's Xintiandi" },
         { src: "https://picsum.photos/seed/xintiandi-2/800/500", alt: "Upscale restaurants in the Xintiandi entertainment district" },

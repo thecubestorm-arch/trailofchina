@@ -45,6 +45,12 @@ export default function DongchengHutongPage() {
         { title: 'Beijing Local Tips', href: '/destinations/beijing/local-tips' },
         { title: 'Where to Stay in Beijing', href: '/destinations/beijing/where-to-stay' },
       ]}
+      relatedArticles={[
+        { title: 'Where to Stay in Beijing', description: 'Compare all neighborhoods and find the best area for your trip.', href: '/destinations/beijing/where-to-stay' },
+        { title: 'Wangfujing', description: 'Central, tourist-friendly, and walking distance to everything.', href: '/destinations/beijing/where-to-stay/wangfujing' },
+        { title: 'What to Do in Beijing', description: 'Must-see attractions and hidden gems in Beijing.', href: '/destinations/beijing/what-to-do' },
+        { title: 'Local Experiences in Beijing', description: 'Hutong breakfast walks, temple rituals, calligraphy, and street food tours.', href: '/destinations/beijing/local-experiences' },
+      ]}
       images={[
         { src: "https://picsum.photos/seed/dongcheng-hutong-1/800/500", alt: "Traditional hutong alleyways in Dongcheng, Beijing" },
         { src: "https://picsum.photos/seed/dongcheng-hutong-2/800/500", alt: "Courtyard siheyuan hotel in Beijing's historic hutongs" },

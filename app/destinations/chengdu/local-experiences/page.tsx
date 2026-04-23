@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import ChineseWatermark from '@/components/ChineseWatermark';
+import RelatedArticles from '@/components/RelatedArticles';
 
 export const metadata: Metadata = {
   title: 'Local Experiences in Chengdu | Trail of China',
@@ -153,6 +154,13 @@ export default function ChengduLocalExperiencesPage() {
             for the must-see sights and hidden gems.
           </p>
         </div>
+
+        <RelatedArticles articles={[
+          { title: 'Chengdu Travel Guide', description: 'Everything you need to know about visiting Chengdu, from pandas to spicy food.', href: '/destinations/chengdu' },
+          { title: 'What to Do in Chengdu', description: 'Must-see attractions and hidden gems in Chengdu.', href: '/destinations/chengdu/what-to-do' },
+          { title: 'Getting Around China', description: 'Trains, metros, buses, and everything you need to navigate China.', href: '/china-basics/how-to-get-around' },
+          { title: 'Best Time to Visit China', description: 'When to go to China based on weather, crowds, and seasonal events.', href: '/china-basics/best-time-to-visit' },
+        ]} />
       </main>
     </div>
   );

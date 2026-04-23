@@ -42,6 +42,12 @@ export default function FrenchConcessionPage() {
         { title: 'Xintiandi', href: '/destinations/shanghai/where-to-stay/xintiandi' },
         { title: 'Where to Stay in Shanghai', href: '/destinations/shanghai/where-to-stay' },
       ]}
+      relatedArticles={[
+        { title: 'Where to Stay in Shanghai', description: 'Compare all neighborhoods and find the best area for your trip.', href: '/destinations/shanghai/where-to-stay' },
+        { title: 'The Bund Area', description: 'Iconic waterfront luxury and colonial grandeur in Shanghai.', href: '/destinations/shanghai/where-to-stay/bund-area' },
+        { title: 'What to Do in Shanghai', description: 'Must-see attractions and hidden gems in Shanghai.', href: '/destinations/shanghai/what-to-do' },
+        { title: 'Local Experiences in Shanghai', description: 'Authentic local experiences: shikumen walks, Art Deco tours, and street food adventures.', href: '/destinations/shanghai/local-experiences' },
+      ]}
       images={[
         { src: "https://picsum.photos/seed/french-concession-1/800/500", alt: "Plane tree-lined streets of Shanghai's French Concession" },
         { src: "https://picsum.photos/seed/french-concession-2/800/500", alt: "Historic lane houses and cafes in the French Concession" },

@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import ChineseWatermark from '@/components/ChineseWatermark';
+import RelatedArticles from '@/components/RelatedArticles';
 
 export const metadata: Metadata = {
   title: 'Local Experiences in Xi\'an | Trail of China',
@@ -153,6 +154,13 @@ export default function XianLocalExperiencesPage() {
             for the must-see sights and hidden gems.
           </p>
         </div>
+
+        <RelatedArticles articles={[
+          { title: 'Xi\'an Travel Guide', description: 'Everything you need to know about visiting Xi\'an, from the Terracotta Warriors to the Muslim Quarter.', href: '/destinations/xian' },
+          { title: 'What to Do in Xi\'an', description: 'Must-see attractions and hidden gems in Xi\'an.', href: '/destinations/xian/what-to-do' },
+          { title: 'China Visa Guide', description: 'Everything you need to know about China visa requirements and application.', href: '/china-basics/visa-guide' },
+          { title: 'Best Time to Visit China', description: 'When to go to China based on weather, crowds, and seasonal events.', href: '/china-basics/best-time-to-visit' },
+        ]} />
       </main>
     </div>
   );

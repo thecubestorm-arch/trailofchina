@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import ChineseWatermark from '@/components/ChineseWatermark';
+import RelatedArticles from '@/components/RelatedArticles';
 
 export const metadata: Metadata = {
   title: 'Local Experiences in Shanghai | Trail of China',
@@ -153,6 +154,13 @@ export default function ShanghaiLocalExperiencesPage() {
             for the must-see sights and hidden gems.
           </p>
         </div>
+
+        <RelatedArticles articles={[
+          { title: 'Shanghai Travel Guide', description: 'Everything you need to know about visiting Shanghai, from top sights to local tips.', href: '/destinations/shanghai' },
+          { title: 'What to Do in Shanghai', description: 'Must-see attractions and hidden gems in Shanghai.', href: '/destinations/shanghai/what-to-do' },
+          { title: 'How to Get Internet in China', description: 'Staying connected: eSIMs, VPNs, and mobile data options.', href: '/china-basics/how-to-get-internet' },
+          { title: 'Budget Guide', description: 'How much to budget for your China trip, with cost breakdowns by city.', href: '/plan-your-trip/budget-guide' },
+        ]} />
       </main>
     </div>
   );

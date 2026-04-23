@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import RelatedArticles from '@/components/RelatedArticles';
 
 export const metadata: Metadata = {
   title: '7-Day China Route: Beijing, Xi\'an, Shanghai | Trail of China',
@@ -89,6 +90,13 @@ export default function SevenDayRoutePage() {
             <li>• Keep at least one flexible half-day for weather or delays.</li>
           </ul>
         </div>
+
+        <RelatedArticles articles={[
+          { title: '10-Day Extended China Route', description: 'Add Chengdu pandas and Yangshuo karst to the classic circuit.', href: '/plan-your-trip/preplanned-trips/10-day-route' },
+          { title: '14-Day Grand China Tour', description: 'The ultimate 2-week China itinerary covering all highlights at a comfortable pace.', href: '/plan-your-trip/preplanned-trips/14-day-route' },
+          { title: 'Budget Guide', description: 'How much to budget for your China trip, with cost breakdowns by city.', href: '/plan-your-trip/budget-guide' },
+          { title: 'Best Time to Visit', description: 'When to go to China based on weather, crowds, and seasonal events.', href: '/china-basics/best-time-to-visit' },
+        ]} />
       </main>
     </div>
   );

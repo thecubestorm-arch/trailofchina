@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import ContextualCTA from '@/components/ContextualCTA'
 import Breadcrumb from '@/components/Breadcrumb'
 import RelatedArticles from '@/components/RelatedArticles'
 
@@ -124,6 +125,17 @@ export default function CityToCityPage() {
             <li>• Beijing has multiple train stations — check which one your train departs from</li>
             <li>• Shanghai Hongqiao Station is for trains, not the airport (though they're connected)</li>
           </ul>
+        </div>
+
+        <div className="mt-8">
+          <ContextualCTA
+            icon="🚄"
+            title="Book Trains Easily with Trip.com"
+            description="The easiest way for foreigners to book China trains in English with foreign cards."
+            buttonText="Book on Trip.com →"
+            buttonHref="/china-basics/what-apps-to-use/trip-com"
+            variant="secondary"
+          />
         </div>
 
         <RelatedArticles articles={[
