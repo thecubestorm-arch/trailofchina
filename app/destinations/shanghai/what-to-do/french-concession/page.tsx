@@ -42,7 +42,6 @@ export default function FrenchConcessionPage() {
     },
   ];
 
-
   const photoSpots = [
     {
       type: 'photo' as const,
@@ -66,18 +65,32 @@ export default function FrenchConcessionPage() {
     <AttractionPage
       name="French Concession"
       breadcrumbs={[
-      { label: 'Home', href: '/' },
-      { label: 'Destinations', href: '/destinations' },
-      { label: 'Shanghai', href: '/destinations/shanghai' },
-      { label: 'What to Do', href: '/destinations/shanghai/what-to-do' },
-    ]}
+        { label: 'Home', href: '/' },
+        { label: 'Destinations', href: '/destinations' },
+        { label: 'Shanghai', href: '/destinations/shanghai' },
+        { label: 'What to Do', href: '/destinations/shanghai/what-to-do' },
+      ]}
       nameZh="法租界"
       city="Shanghai"
       images={[
-        { src: 'https://picsum.photos/seed/french-concession-1/800/500', alt: 'French Concession plane tree-lined street in Shanghai' },
-        { src: 'https://picsum.photos/seed/french-concession-2/800/500', alt: 'Wukang Mansion Art Deco building on Wukang Road' },
-        { src: 'https://picsum.photos/seed/french-concession-3/800/500', alt: 'Tianzifang narrow alleyways in Shanghai French Concession' },
+        { src: 'https://picsum.photos/seed/french-concession-streets/800/600', alt: 'French Concession plane tree-lined street in Shanghai' },
+        { src: 'https://picsum.photos/seed/french-concession-cafe/800/600', alt: 'Courtyard cafe in the French Concession' },
+        { src: 'https://picsum.photos/seed/french-concession-architecture/800/600', alt: 'Art Deco villa on Wukang Road' },
+        { src: 'https://picsum.photos/seed/french-concession-alley/800/600', alt: 'Hidden alleyway in the French Concession' },
+        { src: 'https://picsum.photos/seed/french-concession-night/800/600', alt: 'French Concession at night' },
       ]}
+      hook="Shanghai's most livable neighborhood — tree-lined streets, hidden bars, and the best coffee in China."
+      quickInfo={{
+        price: 'Free to wander',
+        hours: 'Always open',
+        bestTime: 'Late afternoon for café hopping',
+        metro: 'South Shaanxi Rd (Line 1/10/12)',
+      }}
+      whyYouLoveIt={`The French Concession is the part of Shanghai where you forget you're in a city of 25 million people. Walk down Fuxing Road under a canopy of plane trees, duck into a lane house courtyard, and suddenly the skyscrapers of Pudong feel like they're on another planet. This was the foreign concession that Shanghai never demolished — and it's the best neighborhood in the city.
+
+What makes it special isn't any single attraction; it's the cumulative effect of hundreds of small details. The Art Deco villas on Wukang Road, their balconies rusting in a way that looks intentional. The hidden speakeasies behind unmarked doors — some of the best cocktail bars in Asia are in this neighborhood, and you'd never find them without knowing where to look. The café culture, which is genuinely excellent — Shanghai's coffee scene rivals Melbourne's, and most of the best shops are right here.
+
+I've spent entire afternoons here with no itinerary: coffee on Yongkang Road, a walk down Hunan Road past 1930s villas, dinner at a hole-in-the-wall noodle shop that hasn't changed in 30 years. That's the French Concession. It's not a checklist — it's a vibe.`}
       description={`The French Concession (法租界) is Shanghai's most atmospheric neighborhood — a leafy enclave of plane tree-lined streets, 1930s Art Deco villas, and hidden lane houses that feels worlds apart from the city's hyper-modern skyline.
 
 Established in 1849 as a French colonial settlement, the concession grew into Shanghai's most elegant district. Today, the colonial architecture remains, repurposed as trendy cafes, cocktail bars, boutique hotels, and designer shops. The area roughly spans from Huaihai Road (淮海路) in the north to Zhaojiabang Road in the south, and from Ruijin Road (瑞金路) in the east to Xingfu Road (幸福路) in the west.
@@ -92,7 +105,6 @@ The French Concession is less a single attraction and more an experience — pla
       mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=121.4599%2C31.2089%2C121.4699%2C31.2149&layer=mapnik&marker=31.2119%2C121.4649"
       address="Fuxing Middle Road, Huangpu District"
       addressZh="上海市黄浦区复兴中路"
-        
       relatedLinks={[]}
       relatedArticles={[
         { title: "Yu Garden", description: "400-year-old classical Chinese garden in Shanghai's Old City.", href: "/destinations/shanghai/what-to-do/yu-garden" },
@@ -103,6 +115,17 @@ The French Concession is less a single attraction and more an experience — pla
         { title: "Shanghai Guide", description: "Complete guide to planning your Shanghai trip.", href: "/destinations/shanghai" },
       ]}
       tips={[...tips, ...photoSpots]}
+      practicalDetails={{
+        gettingThere: `The French Concession is served by multiple metro stations. South Shaanxi Road (Lines 1/10/12) puts you at the northern edge near Huaihai Road. For the southern villa areas, use Changshu Road (Line 1/7) or Shanghai Library (Line 10). For Tianzifang, use Dapuqiao (Line 9).
+
+The best way to arrive is by metro to South Shaanxi Road and then just walk. The entire neighborhood is flat and pedestrian-friendly — you'll cover more ground and see more hidden details on foot than by taxi. Start at the Wukang Mansion and work your way south or east.`,
+        whatToSkip: `The main shopping streets — Huaihai Road and parts of Wukang Road — have been overtaken by overpriced boutiques and chain stores. They're fine for a quick walk-through, but the real French Concession is in the side streets and lane houses. Push through the iron gates and explore the quieter blocks.
+
+Tianzifang, while charming, is also touristy and overpriced. Go once for the atmosphere, but don't make it your whole afternoon. The real gems are the hidden cafes and bars on the surrounding streets — places with no signs and no English menus that you'd never find without local knowledge.`,
+        photographyTips: `Golden hour on the plane tree streets is unbeatable — Fuxing Road and Wukang Road are the classics, but Hunan Road is quieter and just as photogenic. The dappled light through the leaves creates natural patterns that work beautifully in photos. The Wukang Mansion from the street corner is Shanghai's most photographed Art Deco building for a reason — shoot it just after sunrise or just before sunset for the best light.
+
+For something different, shoot the hidden alleyways and lane house courtyards. Push through the iron gates on side streets and you'll find 1930s architecture, hanging laundry, potted plants on balconies — the real texture of the neighborhood. The narrow lanes of Tianzifang are colorful but crowded; go early morning for clean shots without tourists.`,
+      }}
     />
   );
 }

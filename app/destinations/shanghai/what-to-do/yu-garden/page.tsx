@@ -38,7 +38,6 @@ export default function YuGardenPage() {
     },
   ];
 
-
   const photoSpots = [
     {
       type: 'photo' as const,
@@ -62,18 +61,32 @@ export default function YuGardenPage() {
     <AttractionPage
       name="Yu Garden"
       breadcrumbs={[
-      { label: 'Home', href: '/' },
-      { label: 'Destinations', href: '/destinations' },
-      { label: 'Shanghai', href: '/destinations/shanghai' },
-      { label: 'What to Do', href: '/destinations/shanghai/what-to-do' },
-    ]}
+        { label: 'Home', href: '/' },
+        { label: 'Destinations', href: '/destinations' },
+        { label: 'Shanghai', href: '/destinations/shanghai' },
+        { label: 'What to Do', href: '/destinations/shanghai/what-to-do' },
+      ]}
       nameZh="豫园"
       city="Shanghai"
       images={[
-        { src: 'https://picsum.photos/seed/yu-garden-1/800/500', alt: 'Yu Garden Dragon Wall with ceramic dragons in Shanghai' },
-        { src: 'https://picsum.photos/seed/yu-garden-2/800/500', alt: 'Exquisite Jade Rock at Yu Garden' },
-        { src: 'https://picsum.photos/seed/yu-garden-3/800/500', alt: 'Zigzag bridge over lotus pond at Yu Garden' },
+        { src: 'https://picsum.photos/seed/yu-garden-ponds/800/600', alt: 'Yu Garden koi ponds and pavilions' },
+        { src: 'https://picsum.photos/seed/yu-garden-pagoda/800/600', alt: 'Ming Dynasty pagoda at Yu Garden' },
+        { src: 'https://picsum.photos/seed/yu-garden-bridge/800/600', alt: 'Zigzag bridge over lotus pond at Yu Garden' },
+        { src: 'https://picsum.photos/seed/yu-garden-dragon-wall/800/600', alt: 'Dragon Wall with ceramic dragons at Yu Garden' },
+        { src: 'https://picsum.photos/seed/yu-garden-tea-house/800/600', alt: 'Huxinting Teahouse at Yu Garden' },
       ]}
+      hook="A 400-year-old garden where Ming Dynasty pagodas hover above koi ponds — come early to have it almost to yourself."
+      quickInfo={{
+        price: '¥40',
+        hours: '8:30–17:00',
+        bestTime: 'Morning (fewer crowds)',
+        metro: 'Yuyuan Garden (Line 10)',
+      }}
+      whyYouLoveIt={`Stepping into Yu Garden is one of the strangest contrasts you'll feel in Shanghai. One minute you're surrounded by neon signs and shopping malls, and the next you're standing in a 400-year-old Ming Dynasty garden, watching koi glide under a zigzag bridge while the modern city hums just beyond the walls. It's surreal — and it's why locals still come here after decades of living in the city.
+
+The garden itself is small — only about 2 hectares — but every corner is dense with detail. The Dragon Wall winds through the grounds with undulating ceramic dragons, each scale hand-painted. The zigzag bridge forces you to slow down (a deliberate design choice — evil spirits can't turn corners, apparently). And the Exquisite Jade Rock, a porous 3-meter stone, is genuinely impressive up close — water poured over it flows through every hole at once.
+
+My favorite move: visit the Huxinting Teahouse after walking the garden. It's perched in the middle of the lotus pond, reached by that same zigzag bridge, and serves traditional Chinese tea with a view of the garden you just explored. On a quiet weekday morning, with the garden almost empty, it feels like you've stumbled onto a secret — even though it's been here since 1559.`}
       description={`Yu Garden (豫园), meaning "Garden of Happiness," is a 400-year-old classical Chinese garden in the heart of Shanghai's Old City. Built in 1559 during the Ming Dynasty by Pan Yunduan as a private retreat for his aging father, the garden survived wars, occupations, and the Cultural Revolution to become one of Shanghai's most beloved landmarks.
 
 The garden spans about 2 hectares and features the essential elements of classical Chinese landscape design: rockeries carved from Taihu stones, carp-filled ponds, zigzag bridges, and intricately carved wooden pavilions. The Exquisite Jade Rock (玉玲珑), a porous 3-meter stone with 72 holes, is the garden's most famous feature — water poured over it flows through every hole simultaneously.
@@ -86,7 +99,6 @@ Surrounding the garden is the Yuyuan Bazaar, a bustling marketplace of souvenir 
       mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=121.4830%2C31.2259%2C121.4930%2C31.2319&layer=mapnik&marker=31.2289%2C121.4880"
       address="137 Anren Street, Huangpu District"
       addressZh="上海市黄浦区安仁街137号"
-        
       relatedLinks={[]}
       relatedArticles={[
         { title: "The Bund", description: "Shanghai's iconic waterfront district with colonial architecture and stunning views of Pudong.", href: "/destinations/shanghai/what-to-do/bund" },
@@ -98,6 +110,17 @@ Surrounding the garden is the Yuyuan Bazaar, a bustling marketplace of souvenir 
         { title: "Shanghai Guide", description: "Complete guide to planning your Shanghai trip.", href: "/destinations/shanghai" },
       ]}
       tips={[...tips, ...photoSpots]}
+      practicalDetails={{
+        gettingThere: `Take Metro Line 10 to Yuyuan Garden Station. Use Exit 3 and walk south — you'll reach the garden entrance in about 5 minutes. The entrance is tucked behind the touristy bazaar, so you'll walk through a gauntlet of souvenir shops first. Don't let that fool you — the garden itself is genuinely serene once you're inside.
+
+If you're coming from the Bund, it's a pleasant 15-minute walk west along Renmin Road. You'll pass through the Old City area, which gives you a feel for pre-skyscraper Shanghai before you hit the garden gates.`,
+        whatToSkip: `The Yuyuan Bazaar directly outside the garden is a tourist trap. Yes, it's atmospheric with its Ming-style architecture, but the prices are inflated and the "traditional crafts" are mostly mass-produced. Walk through it for the visuals, but don't buy souvenirs here — you'll find the same items for half the price in less touristy neighborhoods.
+
+Avoid the garden on weekends and Chinese national holidays if at all possible. It transforms from a peaceful retreat into a shoulder-to-shoulder crowd experience. Monday is also a bad choice — the garden is closed. Tuesday and Wednesday mornings are your best bet for having the place almost to yourself.`,
+        photographyTips: `The best light is early morning, when the sun hits the ponds and creates mirror-like reflections of the pagodas and pavilions. The Dragon Wall is the money shot — stand on the bridge for a straight-on view with the wall curving through the frame. The zigzag bridge over the lotus pond is classic, but shoot it from the far side for the Huxinting Teahouse in the background.
+
+Inside the garden, use the elevated pavilions for shots looking down over the bazaar rooftops — the contrast of ancient garden and modern city beyond is uniquely Shanghai. For the Jade Rock, get close and shoot it from a low angle to emphasize its height and the water flowing through the holes.`,
+      }}
     />
   );
 }
