@@ -31,6 +31,15 @@ const sections = [
   },
   {
     category: 'China Basics',
+    icon: '🗺️',
+    title: 'City-to-City Routes',
+    preview:
+      'The most popular inter-city routes for tourists: Beijing to Shanghai, Xi\'an to Chengdu, and more. Compare train vs flight times, prices, and booking tips for each route.',
+    tags: ['🚄 Route Comparisons', '⏱️ Train vs Flight', '💰 Price Ranges', '📍 Station Info'],
+    href: '/china-basics/how-to-get-around/city-to-city',
+  },
+  {
+    category: 'China Basics',
     icon: '✈️',
     title: 'Plane',
     preview:

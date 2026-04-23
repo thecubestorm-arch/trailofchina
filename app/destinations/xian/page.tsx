@@ -94,6 +94,27 @@ export default function XianPage() {
             <li>• Pair this page with the detailed <Link href="/destinations/xian/what-to-do" className="underline">What to Do guide</Link> to plan your route efficiently.</li>
           </ul>
         </div>
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold mb-4">✈️ Getting Here</h2>
+          <div className="space-y-4">
+            <div className="bg-sky-50 rounded-lg p-4">
+              <h3 className="font-semibold text-lg mb-2">Airports</h3>
+              <ul className="text-gray-700 space-y-2 list-disc pl-5">
+                <li>✈️ <strong>Xi'an Xianyang International Airport (XIY)</strong> — 40km NW, Airport Metro Line 14, 60min</li>
+              </ul>
+            </div>
+            <div className="bg-sky-50 rounded-lg p-4">
+              <h3 className="font-semibold text-lg mb-2">Train Stations</h3>
+              <ul className="text-gray-700 space-y-2 list-disc pl-5">
+                <li>🚄 <strong>Xi'an North Station</strong> — High-speed to Beijing, Shanghai, Chengdu</li>
+              </ul>
+            </div>
+            <p className="text-gray-600">
+              For inter-city routes, see our <Link href="/china-basics/how-to-get-around/city-to-city" className="text-[#af5d32] font-semibold underline">City-to-City Transport Guide</Link>.
+            </p>
+          </div>
+        </section>
+
         <RelatedArticles articles={[
           {title: 'What to Do in Xi’an', description: 'Terracotta Warriors, City Wall, and Muslim Quarter.', href: '/destinations/xian/what-to-do'},
           {title: 'Where to Eat in Xi’an', description: 'Roujiamo, biangbiang noodles, and yangroupaomo.', href: '/destinations/xian/where-to-eat'},

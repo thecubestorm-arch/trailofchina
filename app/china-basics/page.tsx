@@ -14,6 +14,15 @@ export const metadata: Metadata = {
 const sections = [
   {
     category: 'China Basics',
+    icon: '🛫',
+    title: 'Before You Go',
+    preview:
+      'Visa, safety, and packing — the three things every traveler needs to sort before departure. Check requirements, know what to expect, and pack smart.',
+    tags: ['🛂 Visa', '🛡️ Safety', '🧳 Packing'],
+    href: '/china-basics/before-you-go',
+  },
+  {
+    category: 'China Basics',
     icon: '📱',
     title: 'What Apps to Use',
     preview:

@@ -95,6 +95,27 @@ export default function ChongqingPage() {
             <li>• Even “mild” hotpot can be intense if you are not used to málà heat</li>
           </ul>
         </div>
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold mb-4">✈️ Getting Here</h2>
+          <div className="space-y-4">
+            <div className="bg-sky-50 rounded-lg p-4">
+              <h3 className="font-semibold text-lg mb-2">Airports</h3>
+              <ul className="text-gray-700 space-y-2 list-disc pl-5">
+                <li>✈️ <strong>Chongqing Jiangbei International Airport (CKG)</strong> — 20km north, Metro Line 3/10, 40min</li>
+              </ul>
+            </div>
+            <div className="bg-sky-50 rounded-lg p-4">
+              <h3 className="font-semibold text-lg mb-2">Train Stations</h3>
+              <ul className="text-gray-700 space-y-2 list-disc pl-5">
+                <li>🚄 <strong>Chongqing North Station</strong> — High-speed to Chengdu</li>
+              </ul>
+            </div>
+            <p className="text-gray-600">
+              For inter-city routes, see our <Link href="/china-basics/how-to-get-around/city-to-city" className="text-[#af5d32] font-semibold underline">City-to-City Transport Guide</Link>.
+            </p>
+          </div>
+        </section>
+
         <RelatedArticles articles={[
           {title: 'What to Do in Chongqing', description: 'Hongya Cave, Liziba monorail, and Yangtze cable car.', href: '/destinations/chongqing/what-to-do'},
           {title: 'Where to Eat in Chongqing', description: 'Chongqing hotpot, xiaomian, and grilled fish.', href: '/destinations/chongqing/where-to-eat'},

@@ -10,6 +10,24 @@ export const metadata: Metadata = {
 const sections = [
   {
     category: 'Trip Planning',
+    icon: '🗓️',
+    title: 'Best Time to Visit',
+    preview:
+      "When should you go? Month-by-month climate guide, peak seasons, holidays to avoid, and the ideal months for every region.",
+    tags: ['🌸 Spring', '🍂 Autumn', '❄️ Winter'],
+    href: '/plan-your-trip/best-time-to-visit',
+  },
+  {
+    category: 'Trip Planning',
+    icon: '💰',
+    title: 'Budget Guide',
+    preview:
+      "What does China actually cost? Daily budgets, accommodation, food, transport, and money-saving tips for every travel style.",
+    tags: ['¥ Budget', '¥¥ Mid-Range', '¥¥¥ Luxury'],
+    href: '/plan-your-trip/budget',
+  },
+  {
+    category: 'Trip Planning',
     icon: '🗺️',
     title: 'Preplanned Trips',
     preview:

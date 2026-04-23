@@ -61,10 +61,12 @@ export default function VisaGuidePage() {
         'Swiss and EU citizens: check the latest visa-free policy before applying — China has been expanding visa-free entry and policies change frequently.',
       ]}
       relatedArticles={[
+        { title: 'Before You Go', description: 'Visa, safety, and packing essentials before departure.', href: '/china-basics/before-you-go' },
         { title: 'Passport Rules in China', description: 'Entry requirements, passport validity, and registration rules.', href: '/china-basics/how-china-differs/passport-rules' },
         { title: 'How China Differs', description: 'Cultural differences, censorship, and safety standards.', href: '/china-basics/how-china-differs' },
       ]}
       related={[
+        { label: 'Before You Go', href: '/china-basics/before-you-go' },
         { label: 'How China Differs', href: '/china-basics/how-china-differs' },
         { label: 'Passport Rules', href: '/china-basics/how-china-differs/passport-rules' },
         { label: 'Internet & VPN', href: '/china-basics/how-to-get-internet' },

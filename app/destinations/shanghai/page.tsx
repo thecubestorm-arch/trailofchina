@@ -93,6 +93,28 @@ export default function ShanghaiPage() {
             <li>• Download a VPN before you arrive</li>
           </ul>
         </div>
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold mb-4">✈️ Getting Here</h2>
+          <div className="space-y-4">
+            <div className="bg-sky-50 rounded-lg p-4">
+              <h3 className="font-semibold text-lg mb-2">Airports</h3>
+              <ul className="text-gray-700 space-y-2 list-disc pl-5">
+                <li>✈️ <strong>Shanghai Pudong International Airport (PVG)</strong> — Maglev ¥50 + Metro, 40min total</li>
+                <li>✈️ <strong>Shanghai Hongqiao International Airport (SHA)</strong> — 15km west, Metro Line 2/10, 30min</li>
+              </ul>
+            </div>
+            <div className="bg-sky-50 rounded-lg p-4">
+              <h3 className="font-semibold text-lg mb-2">Train Stations</h3>
+              <ul className="text-gray-700 space-y-2 list-disc pl-5">
+                <li>🚄 <strong>Shanghai Hongqiao Station</strong> — High-speed trains to Beijing, Hangzhou, Nanjing</li>
+              </ul>
+            </div>
+            <p className="text-gray-600">
+              For inter-city routes, see our <Link href="/china-basics/how-to-get-around/city-to-city" className="text-[#af5d32] font-semibold underline">City-to-City Transport Guide</Link>.
+            </p>
+          </div>
+        </section>
+
         <RelatedArticles articles={[
           {title: 'What to Do in Shanghai', description: 'From the Bund to French Concession.', href: '/destinations/shanghai/what-to-do'},
           {title: 'Where to Eat in Shanghai', description: 'Xiaolongbao, shengjianbao, and more local specialties.', href: '/destinations/shanghai/where-to-eat'},

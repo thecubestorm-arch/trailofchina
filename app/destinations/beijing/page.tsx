@@ -93,6 +93,29 @@ export default function BeijingPage() {
             <li>• Great Wall: Mutianyu less crowded than Badaling</li>
           </ul>
         </div>
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold mb-4">✈️ Getting Here</h2>
+          <div className="space-y-4">
+            <div className="bg-sky-50 rounded-lg p-4">
+              <h3 className="font-semibold text-lg mb-2">Airports</h3>
+              <ul className="text-gray-700 space-y-2 list-disc pl-5">
+                <li>✈️ <strong>Beijing Capital International Airport (PEK)</strong> — 30km NE, Airport Express ¥25, 30min to city</li>
+                <li>✈️ <strong>Beijing Daxing International Airport (PKX)</strong> — 46km south, high-speed rail ¥35, 20min to city</li>
+              </ul>
+            </div>
+            <div className="bg-sky-50 rounded-lg p-4">
+              <h3 className="font-semibold text-lg mb-2">Train Stations</h3>
+              <ul className="text-gray-700 space-y-2 list-disc pl-5">
+                <li>🚄 <strong>Beijing South Station</strong> — High-speed trains to Shanghai, Xi'an</li>
+                <li>🚄 <strong>Beijing West Station</strong> — Trains to Chengdu, Chongqing</li>
+              </ul>
+            </div>
+            <p className="text-gray-600">
+              For inter-city routes, see our <Link href="/china-basics/how-to-get-around/city-to-city" className="text-[#af5d32] font-semibold underline">City-to-City Transport Guide</Link>.
+            </p>
+          </div>
+        </section>
+
         <RelatedArticles articles={[
           {title: 'What to Do in Beijing', description: 'Top attractions from the Forbidden City to the Great Wall.', href: '/destinations/beijing/what-to-do'},
           {title: 'Where to Eat in Beijing', description: 'Peking duck, jianbing, and street food favorites.', href: '/destinations/beijing/where-to-eat'},

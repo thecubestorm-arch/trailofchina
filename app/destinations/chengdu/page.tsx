@@ -94,6 +94,27 @@ export default function ChengduPage() {
             <li>• Check our <Link href="/destinations/chengdu/local-tips" className="underline">Local Tips</Link> before using taxis.</li>
           </ul>
         </div>
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold mb-4">✈️ Getting Here</h2>
+          <div className="space-y-4">
+            <div className="bg-sky-50 rounded-lg p-4">
+              <h3 className="font-semibold text-lg mb-2">Airports</h3>
+              <ul className="text-gray-700 space-y-2 list-disc pl-5">
+                <li>✈️ <strong>Chengdu Tianfu International Airport (TFU)</strong> — 50km south, Metro Line 18, 60min</li>
+              </ul>
+            </div>
+            <div className="bg-sky-50 rounded-lg p-4">
+              <h3 className="font-semibold text-lg mb-2">Train Stations</h3>
+              <ul className="text-gray-700 space-y-2 list-disc pl-5">
+                <li>🚄 <strong>Chengdu East Station</strong> — High-speed to Chongqing, Xi'an</li>
+              </ul>
+            </div>
+            <p className="text-gray-600">
+              For inter-city routes, see our <Link href="/china-basics/how-to-get-around/city-to-city" className="text-[#af5d32] font-semibold underline">City-to-City Transport Guide</Link>.
+            </p>
+          </div>
+        </section>
+
         <RelatedArticles articles={[
           {title: 'What to Do in Chengdu', description: 'Pandas, teahouses, and Sichuan opera nights.', href: '/destinations/chengdu/what-to-do'},
           {title: 'Where to Eat in Chengdu', description: 'Mapo tofu, hotpot, and dan dan noodles.', href: '/destinations/chengdu/where-to-eat'},
