@@ -3,6 +3,7 @@ import Link from 'next/link'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import Breadcrumb from '@/components/Breadcrumb'
 import ContextualCTA from '@/components/ContextualCTA'
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
   title: 'How to Get Around in China | Trail of China',
@@ -163,6 +164,12 @@ export default function HowToGetAroundHub() {
             variant="secondary"
           />
         </div>
+        <RelatedArticles articles={[
+          {title: '12306 Train Booking', description: 'Book high-speed rail tickets like a local.', href: '/china-basics/how-to-get-around/12306'},
+          {title: 'DiDi Ride-Hailing', description: 'China’s answer to Uber — cheaper and everywhere.', href: '/china-basics/how-to-get-around/didi'},
+          {title: 'Metro & Subway', description: 'Navigate China’s extensive metro systems.', href: '/china-basics/how-to-get-around/metro-subway'},
+          {title: 'Beijing Guide', description: 'Start exploring the capital city.', href: '/destinations/beijing'},
+        ]} />
       </main>
     </div>
   )

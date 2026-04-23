@@ -1,11 +1,12 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import ChineseWatermark from '@/components/ChineseWatermark';
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
-  title: "Xi'an Travel Guide | Trail of China",
+  title: "Xi’an Travel Guide | Trail of China",
   description:
-    "Plan a complete Xi'an trip with this city guide covering Terracotta Warriors, food streets, best neighborhoods, and practical local tips for first-time visitors.",
+    "Plan a complete Xi’an trip with this city guide covering Terracotta Warriors, food streets, best neighborhoods, and practical local tips for first-time visitors.",
 };
 
 const sections = [
@@ -93,6 +94,12 @@ export default function XianPage() {
             <li>• Pair this page with the detailed <Link href="/destinations/xian/what-to-do" className="underline">What to Do guide</Link> to plan your route efficiently.</li>
           </ul>
         </div>
+        <RelatedArticles articles={[
+          {title: 'What to Do in Xi’an', description: 'Terracotta Warriors, City Wall, and Muslim Quarter.', href: '/destinations/xian/what-to-do'},
+          {title: 'Where to Eat in Xi’an', description: 'Roujiamo, biangbiang noodles, and yangroupaomo.', href: '/destinations/xian/where-to-eat'},
+          {title: 'Where to Stay in Xi’an', description: 'Bell Tower, Muslim Quarter, and Dayan Pagoda areas.', href: '/destinations/xian/where-to-stay'},
+          {title: 'Xi’an Local Tips', description: 'City Wall bike rentals, market haggling, and more.', href: '/destinations/xian/local-tips'},
+        ]} />
       </main>
     </div>
   );

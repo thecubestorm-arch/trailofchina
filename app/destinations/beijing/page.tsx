@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import ChineseWatermark from '@/components/ChineseWatermark';
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
   title: 'Beijing Travel Guide | Trail of China',
@@ -92,6 +93,12 @@ export default function BeijingPage() {
             <li>• Great Wall: Mutianyu less crowded than Badaling</li>
           </ul>
         </div>
+        <RelatedArticles articles={[
+          {title: 'What to Do in Beijing', description: 'Top attractions from the Forbidden City to the Great Wall.', href: '/destinations/beijing/what-to-do'},
+          {title: 'Where to Eat in Beijing', description: 'Peking duck, jianbing, and street food favorites.', href: '/destinations/beijing/where-to-eat'},
+          {title: 'Where to Stay in Beijing', description: 'Best neighborhoods for every budget and style.', href: '/destinations/beijing/where-to-stay'},
+          {title: 'Beijing Local Tips', description: 'Insider advice for getting around and avoiding tourist traps.', href: '/destinations/beijing/local-tips'},
+        ]} />
       </main>
     </div>
   );

@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
-  title: "Where to Stay in Xi'an | Best Areas Inside and Outside the City Wall",
+  title: "Where to Stay in Xi’an | Best Areas Inside and Outside the City Wall",
   description:
-    "Neighborhood-by-neighborhood Xi'an stay guide with Bell Tower, Muslim Quarter, Yanta, and station-area options from budget to luxury.",
+    "Neighborhood-by-neighborhood Xi’an stay guide with Bell Tower, Muslim Quarter, Yanta, and station-area options from budget to luxury.",
 };
 
 export default function XianWhereToStayPage() {
@@ -113,6 +114,12 @@ export default function XianWhereToStayPage() {
           </ul>
         </div>
 
+        <RelatedArticles articles={[
+          {title: 'Bell Tower Area', description: 'Dead center — walk everywhere inside the Wall.', href: '/destinations/xian/where-to-stay/bell-tower'},
+          {title: 'Muslim Quarter', description: 'Street food paradise — noisy, lively, delicious.', href: '/destinations/xian/where-to-stay/muslim-quarter'},
+          {title: 'What to Do in Xi’an', description: 'Terracotta Warriors, City Wall, and more.', href: '/destinations/xian/what-to-do'},
+          {title: 'How to Get Around', description: 'Trains, buses, and metro explained.', href: '/china-basics/how-to-get-around'},
+        ]} />
       </main>
     </div>
   );

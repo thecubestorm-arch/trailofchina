@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
   title: 'Shanghai Local Tips | WeChat Pay, Subway & Insider Secrets',
@@ -128,6 +129,11 @@ export default function ShanghaiLocalTipsPage() {
             <li><strong>Fake monks near temples</strong> — People dressed as monks near Jing&apos;an Temple or Yu Garden may hand you a &quot;blessed&quot; item and demand a donation. Real Buddhist monks don&apos;t do this — just walk past.</li>
           </ul>
         </section>
+        <RelatedArticles articles={[
+          {title: 'What to Do in Shanghai', description: 'The Bund, Yu Garden, and more.', href: '/destinations/shanghai/what-to-do'},
+          {title: 'VPN & Internet', description: 'Stay connected with a VPN setup guide.', href: '/china-basics/what-apps-to-use/vpn'},
+          {title: 'eSIM Setup', description: 'Get data instantly with a travel eSIM.', href: '/china-basics/how-to-get-internet/esim'},
+        ]} />
       </main>
     </div>
   );

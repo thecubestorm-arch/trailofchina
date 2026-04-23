@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
   title: 'Where to Eat in Chengdu | Hotpot, Noodles, and Local Classics',
@@ -120,6 +121,12 @@ export default function ChengduWhereToEatPage() {
             <li>• Ordering maximum spice on your first meal and losing the next day.</li>
           </ul>
         </div>
+        <RelatedArticles articles={[
+          {title: 'Sichuan Hotpot', description: 'Numbing, spicy, and utterly addictive.', href: '/destinations/chengdu/where-to-eat/sichuan-hotpot'},
+          {title: 'Mapo Tofu', description: 'Silken tofu in fiery chili oil — a Sichuan classic.', href: '/destinations/chengdu/where-to-eat/mapo-tofu'},
+          {title: 'What to Do in Chengdu', description: 'Pandas, teahouses, and opera nights.', href: '/destinations/chengdu/what-to-do'},
+          {title: 'Chengdu Local Tips', description: 'Chili tolerance and local etiquette.', href: '/destinations/chengdu/local-tips'},
+        ]} />
       </main>
     </div>
   );

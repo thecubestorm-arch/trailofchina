@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
   title: 'Where to Eat in Shanghai | Xiaolongbao, Street Food & Fine Dining',
@@ -129,6 +130,12 @@ export default function ShanghaiWhereToEatPage() {
             <li>• <strong>Nanjing Road tourist restaurants</strong> — Overpriced and bland. Locals eat on side streets, not the main drag</li>
           </ul>
         </div>
+        <RelatedArticles articles={[
+          {title: 'Xiaolongbao', description: 'Shanghai’s famous soup dumplings — bite with care.', href: '/destinations/shanghai/where-to-eat/xiaolongbao'},
+          {title: 'Shengjianbao', description: 'Pan-fried pork buns with a crispy bottom.', href: '/destinations/shanghai/where-to-eat/shengjianbao'},
+          {title: 'What to Do in Shanghai', description: 'The Bund, Yu Garden, and more.', href: '/destinations/shanghai/what-to-do'},
+          {title: 'Shanghai Local Tips', description: 'Metro hacks and scam warnings.', href: '/destinations/shanghai/local-tips'},
+        ]} />
       </main>
     </div>
   );

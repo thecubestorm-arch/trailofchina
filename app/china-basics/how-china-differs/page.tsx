@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import Breadcrumb from '@/components/Breadcrumb'
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
   title: 'How China Differs | Trail of China',
@@ -120,6 +121,12 @@ export default function HowChinaDiffersHub() {
             in doubt, err on the side of caution.
           </p>
         </div>
+        <RelatedArticles articles={[
+          {title: 'Censorship & Internet', description: 'What’s blocked, what’s not, and how to cope.', href: '/china-basics/how-china-differs/censorship'},
+          {title: 'Cultural Differences', description: 'Etiquette, habits, and surprises to expect.', href: '/china-basics/how-china-differs/cultural-differences'},
+          {title: 'Visa Guide', description: 'Which visa you need and how to apply.', href: '/china-basics/how-china-differs/visa-guide'},
+          {title: 'Passport Rules', description: 'Entry requirements and passport validity.', href: '/china-basics/how-china-differs/passport-rules'},
+        ]} />
       </main>
     </div>
   )

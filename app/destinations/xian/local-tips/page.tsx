@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
-  title: "Xi'an Local Tips | Transport, Scams, and Smart Visiting Advice",
+  title: "Xi’an Local Tips | Transport, Scams, and Smart Visiting Advice",
   description:
-    "Local Xi'an travel tips covering Bus 306 for Terracotta Warriors, early starts, common scams, haggling etiquette, and city wall bike rental advice.",
+    "Local Xi’an travel tips covering Bus 306 for Terracotta Warriors, early starts, common scams, haggling etiquette, and city wall bike rental advice.",
 };
 
 export default function XianLocalTipsPage() {
@@ -99,6 +100,11 @@ export default function XianLocalTipsPage() {
           </ul>
         </div>
 
+        <RelatedArticles articles={[
+          {title: 'What to Do in Xi’an', description: 'Terracotta Warriors, City Wall, and Muslim Quarter.', href: '/destinations/xian/what-to-do'},
+          {title: 'VPN & Internet', description: 'Stay connected with a VPN setup guide.', href: '/china-basics/what-apps-to-use/vpn'},
+          {title: 'eSIM Setup', description: 'Get data instantly with a travel eSIM.', href: '/china-basics/how-to-get-internet/esim'},
+        ]} />
       </main>
     </div>
   );

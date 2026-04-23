@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import ChineseWatermark from '@/components/ChineseWatermark';
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
   title: 'Chongqing Travel Guide | Trail of China',
@@ -94,6 +95,12 @@ export default function ChongqingPage() {
             <li>• Even “mild” hotpot can be intense if you are not used to málà heat</li>
           </ul>
         </div>
+        <RelatedArticles articles={[
+          {title: 'What to Do in Chongqing', description: 'Hongya Cave, Liziba monorail, and Yangtze cable car.', href: '/destinations/chongqing/what-to-do'},
+          {title: 'Where to Eat in Chongqing', description: 'Chongqing hotpot, xiaomian, and grilled fish.', href: '/destinations/chongqing/where-to-eat'},
+          {title: 'Where to Stay in Chongqing', description: 'Jiefangbei, Hongyadong area, and Cuntan.', href: '/destinations/chongqing/where-to-stay'},
+          {title: 'Chongqing Local Tips', description: 'Navigating the 3D city and avoiding tourist traps.', href: '/destinations/chongqing/local-tips'},
+        ]} />
       </main>
     </div>
   );

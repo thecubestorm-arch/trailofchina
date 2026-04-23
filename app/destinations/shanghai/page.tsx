@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import ChineseWatermark from '@/components/ChineseWatermark';
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
   title: 'Shanghai Travel Guide | Trail of China',
@@ -92,6 +93,12 @@ export default function ShanghaiPage() {
             <li>• Download a VPN before you arrive</li>
           </ul>
         </div>
+        <RelatedArticles articles={[
+          {title: 'What to Do in Shanghai', description: 'From the Bund to French Concession.', href: '/destinations/shanghai/what-to-do'},
+          {title: 'Where to Eat in Shanghai', description: 'Xiaolongbao, shengjianbao, and more local specialties.', href: '/destinations/shanghai/where-to-eat'},
+          {title: 'Where to Stay in Shanghai', description: 'Bund, Jing’an, Xintiandi — pick the right area.', href: '/destinations/shanghai/where-to-stay'},
+          {title: 'Shanghai Local Tips', description: 'Metro hacks, scam warnings, and local etiquette.', href: '/destinations/shanghai/local-tips'},
+        ]} />
       </main>
     </div>
   );

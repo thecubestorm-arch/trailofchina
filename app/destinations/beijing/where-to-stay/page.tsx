@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
   title: 'Where to Stay in Beijing | Best Neighborhoods, Hotels & Hutong Courtyards',
@@ -138,6 +139,12 @@ export default function BeijingWhereToStayPage() {
             <li>• <strong>WeChat Pay / Alipay</strong> at hotel check-in — some smaller places don&apos;t take foreign credit cards</li>
           </ul>
         </div>
+        <RelatedArticles articles={[
+          {title: 'Wangfujing', description: 'Central shopping district — walk to the Forbidden City.', href: '/destinations/beijing/where-to-stay/wangfujing'},
+          {title: 'Dongcheng Hutong', description: 'Stay in a traditional courtyard — authentic Beijing.', href: '/destinations/beijing/where-to-stay/dongcheng-hutong'},
+          {title: 'What to Do in Beijing', description: 'Top attractions and must-see sights.', href: '/destinations/beijing/what-to-do'},
+          {title: 'How to Get Around', description: 'Trains, metros, and DiDi explained.', href: '/china-basics/how-to-get-around'},
+        ]} />
       </main>
     </div>
   );

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
 import Breadcrumb from '@/components/Breadcrumb';
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
   title: 'Chongqing Local Tips | Trail of China',
@@ -109,6 +110,11 @@ export default function ChongqingLocalTipsPage() {
           </ul>
         </div>
 
+        <RelatedArticles articles={[
+          {title: 'What to Do in Chongqing', description: 'Hongya Cave, Liziba, and more.', href: '/destinations/chongqing/what-to-do'},
+          {title: 'VPN & Internet', description: 'Stay connected with a VPN setup guide.', href: '/china-basics/what-apps-to-use/vpn'},
+          {title: 'eSIM Setup', description: 'Get data instantly with a travel eSIM.', href: '/china-basics/how-to-get-internet/esim'},
+        ]} />
       </main>
     </div>
   );

@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
   title: 'Where to Stay in Shanghai | Best Neighborhoods, Hotels & Hostels',
@@ -59,13 +60,13 @@ export default function ShanghaiWhereToStayPage() {
             </div>
 
             <div className="border-2 border-gray-200 rounded-xl p-6">
-              <h3 className="text-xl font-semibold mb-2">🏢 Jing'an (静安)</h3>
+              <h3 className="text-xl font-semibold mb-2">🏢 Jing’an (静安)</h3>
               <p className="text-gray-700 mb-2">
-                Modern business district anchored by Jing'an Temple. High-end shopping (Plaza 66),
+                Modern business district anchored by Jing’an Temple. High-end shopping (Plaza 66),
                 great restaurants, and the best subway connections in the city.
                 Busy during the day but quieter than People's Square.
               </p>
-              <p className="text-sm text-gray-600">💰 ¥300-1000/night | 🚇 Metro: Jing'an Temple (Line 2/7) | 🎯 Best for: Convenience, shopping</p>
+              <p className="text-sm text-gray-600">💰 ¥300-1000/night | 🚇 Metro: Jing’an Temple (Line 2/7) | 🎯 Best for: Convenience, shopping</p>
             </div>
 
             <div className="border-2 border-gray-200 rounded-xl p-6">
@@ -100,14 +101,14 @@ export default function ShanghaiWhereToStayPage() {
                 <li><strong>Mingtown Etour Hostel</strong> — Clean hostel on Nanjing Road. ¥80-150/bed, ¥250/double. Social vibe</li>
                 <li><strong>Phoenix Hostel</strong> — French Concession location, rooftop terrace. ¥60-120/bed</li>
                 <li><strong>Shanghai Blue Mountain Youth Hostel</strong> — Near Yu Garden, reliable and cheap. ¥50-100/bed</li>
-                <li><strong>Le Tour Traveler's Rest</strong> — Jing'an, friendly common room. ¥70-130/bed</li>
+                <li><strong>Le Tour Traveler's Rest</strong> — Jing’an, friendly common room. ¥70-130/bed</li>
               </ul>
             </div>
 
             <div className="bg-blue-50 rounded-lg p-4">
               <h3 className="font-semibold">🏨 Mid-Range (¥300-800)</h3>
               <ul className="text-gray-700 mt-2 space-y-1">
-                <li><strong>The Sukhothai (素凯泰)</strong> — Thai-inspired design hotel in Jing'an. ¥600-800/night</li>
+                <li><strong>The Sukhothai (素凯泰)</strong> — Thai-inspired design hotel in Jing’an. ¥600-800/night</li>
                 <li><strong>Campanile Shanghai (静安)</strong> — French chain, clean modern rooms. ¥350-500</li>
                 <li><strong>SSAW Boutique Hotel (世贸)</strong> — Multiple locations, good value. ¥400-600</li>
                 <li><strong>Waterhouse Hotel</strong> — Industrial design near The Bund. ¥450-650</li>
@@ -138,6 +139,12 @@ export default function ShanghaiWhereToStayPage() {
             <li>• <strong>Plum rain season</strong> (mid-June to early July): rooms feel damp, pack moisture absorbers</li>
           </ul>
         </div>
+        <RelatedArticles articles={[
+          {title: 'The Bund Area', description: 'Iconic waterfront views and luxury hotels.', href: '/destinations/shanghai/where-to-stay/bund-area'},
+          {title: 'Jing’an', description: 'Trendy cafes, temples, and great transport links.', href: '/destinations/shanghai/where-to-stay/jingan'},
+          {title: 'What to Do in Shanghai', description: 'The Bund, Yu Garden, and more.', href: '/destinations/shanghai/what-to-do'},
+          {title: 'How to Get Around', description: 'Metro, taxi, and ride-hailing tips.', href: '/china-basics/how-to-get-around'},
+        ]} />
       </main>
     </div>
   );

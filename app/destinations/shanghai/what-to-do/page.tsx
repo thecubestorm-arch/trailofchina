@@ -3,6 +3,7 @@ import Link from 'next/link';
 import ContextualCTA from '@/components/ContextualCTA';
 import Breadcrumb from '@/components/Breadcrumb';
 import LanternWatermark from '@/components/LanternWatermark';
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
   title: 'What to Do in Shanghai | Trail of China',
@@ -94,6 +95,12 @@ export default function ShanghaiWhatToDoPage() {
             variant="secondary"
           />
         </div>
+        <RelatedArticles articles={[
+          {title: 'The Bund', description: 'Shanghai’s iconic waterfront promenade.', href: '/destinations/shanghai/what-to-do/bund'},
+          {title: 'Yu Garden', description: 'A classical Chinese garden in the heart of Shanghai.', href: '/destinations/shanghai/what-to-do/yu-garden'},
+          {title: 'Where to Eat in Shanghai', description: 'Xiaolongbao, shengjianbao, and more.', href: '/destinations/shanghai/where-to-eat'},
+          {title: 'Shanghai Local Tips', description: 'Metro hacks and scam warnings.', href: '/destinations/shanghai/local-tips'},
+        ]} />
       </main>
     </div>
   );

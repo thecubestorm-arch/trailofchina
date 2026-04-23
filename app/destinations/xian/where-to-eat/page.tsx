@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
 import Breadcrumb from '@/components/Breadcrumb';
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
-  title: "Where to Eat in Xi'an | Street Food, Noodles, and Muslim Quarter Picks",
+  title: "Where to Eat in Xi’an | Street Food, Noodles, and Muslim Quarter Picks",
   description:
-    "A practical Xi'an food guide covering yangroupaomo, roujiamo, liangpi, biangbiang noodles, and how to eat well around the Muslim Quarter.",
+    "A practical Xi’an food guide covering yangroupaomo, roujiamo, liangpi, biangbiang noodles, and how to eat well around the Muslim Quarter.",
 };
 
 export default function XianWhereToEatPage() {
@@ -16,7 +17,7 @@ export default function XianWhereToEatPage() {
           <Breadcrumb items={[
             { label: 'Home', href: '/' },
             { label: 'Destinations', href: '/destinations' },
-            { label: "Xi'an", href: '/destinations/xian' },
+            { label: "Xi’an", href: '/destinations/xian' },
             { label: 'Where to Eat' },
           ]} />
         </div>
@@ -126,6 +127,12 @@ export default function XianWhereToEatPage() {
             <li>• Aggressive hawkers pushing low-quality &quot;famous local&quot; combos</li>
           </ul>
         </div>
+        <RelatedArticles articles={[
+          {title: 'Roujiamo', description: 'The Chinese hamburger — savory, crispy, and cheap.', href: '/destinations/xian/where-to-eat/roujiamo'},
+          {title: 'Biangbiang Noodles', description: 'Wide, hand-pulled belt noodles with chili oil.', href: '/destinations/xian/where-to-eat/biangbiang-noodles'},
+          {title: 'What to Do in Xi’an', description: 'Terracotta Warriors, City Wall, and Muslim Quarter.', href: '/destinations/xian/what-to-do'},
+          {title: 'Xi’an Local Tips', description: 'City Wall bike rentals and market tips.', href: '/destinations/xian/local-tips'},
+        ]} />
       </main>
     </div>
   );

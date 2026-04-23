@@ -3,6 +3,7 @@ import Link from 'next/link';
 import ContextualCTA from '@/components/ContextualCTA';
 import Breadcrumb from '@/components/Breadcrumb';
 import LanternWatermark from '@/components/LanternWatermark';
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
   title: 'What to Do in Beijing | Forbidden City, Great Wall & Hidden Gems',
@@ -181,6 +182,12 @@ export default function BeijingWhatToDoPage() {
             variant="secondary"
           />
         </div>
+        <RelatedArticles articles={[
+          {title: 'Forbidden City Guide', description: 'Explore the largest ancient palace complex in the world.', href: '/destinations/beijing/what-to-do/forbidden-city'},
+          {title: 'Great Wall Guide', description: 'How to visit the Great Wall from Beijing.', href: '/destinations/beijing/what-to-do/great-wall'},
+          {title: 'Where to Eat in Beijing', description: 'Peking duck and street food favorites.', href: '/destinations/beijing/where-to-eat'},
+          {title: 'Beijing Local Tips', description: 'Insider advice for a smoother trip.', href: '/destinations/beijing/local-tips'},
+        ]} />
       </main>
     </div>
   );

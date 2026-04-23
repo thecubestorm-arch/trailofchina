@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
   title: 'Where to Eat in Beijing | Peking Duck, Hutong Food & Local Eats',
@@ -150,6 +151,12 @@ export default function BeijingWhereToEatPage() {
             <li>• <strong>Tourist-trap duck restaurants</strong> near Qianmen with touts outside — go to Siji Minfu or Da Dong</li>
           </ul>
         </div>
+        <RelatedArticles articles={[
+          {title: 'Peking Duck', description: 'Beijing’s most iconic dish — crispy skin, tender meat.', href: '/destinations/beijing/where-to-eat/peking-duck'},
+          {title: 'Jianbing', description: 'China’s favorite breakfast crepe — cheap and delicious.', href: '/destinations/beijing/where-to-eat/jianbing'},
+          {title: 'What to Do in Beijing', description: 'Top attractions and must-see sights.', href: '/destinations/beijing/what-to-do'},
+          {title: 'Beijing Local Tips', description: 'Insider advice for a smoother trip.', href: '/destinations/beijing/local-tips'},
+        ]} />
       </main>
     </div>
   );

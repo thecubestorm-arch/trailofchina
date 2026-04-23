@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import ChineseWatermark from '@/components/ChineseWatermark';
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
   title: 'Chengdu Travel Guide | Pandas, Teahouses, and Sichuan Flavor',
@@ -93,6 +94,12 @@ export default function ChengduPage() {
             <li>• Check our <Link href="/destinations/chengdu/local-tips" className="underline">Local Tips</Link> before using taxis.</li>
           </ul>
         </div>
+        <RelatedArticles articles={[
+          {title: 'What to Do in Chengdu', description: 'Pandas, teahouses, and Sichuan opera nights.', href: '/destinations/chengdu/what-to-do'},
+          {title: 'Where to Eat in Chengdu', description: 'Mapo tofu, hotpot, and dan dan noodles.', href: '/destinations/chengdu/where-to-eat'},
+          {title: 'Where to Stay in Chengdu', description: 'Chunxi Road, Jinli area, and Kuanzhai Alley neighborhoods.', href: '/destinations/chengdu/where-to-stay'},
+          {title: 'Chengdu Local Tips', description: 'Chili tolerance, panda timing, and local etiquette.', href: '/destinations/chengdu/local-tips'},
+        ]} />
       </main>
     </div>
   );

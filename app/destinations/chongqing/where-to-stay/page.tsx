@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
 import Breadcrumb from '@/components/Breadcrumb';
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
   title: 'Where to Stay in Chongqing | Trail of China',
@@ -100,6 +101,12 @@ export default function ChongqingWhereToStayPage() {
           </ul>
         </div>
 
+        <RelatedArticles articles={[
+          {title: 'Jiefangbei', description: 'Downtown core — shopping, food, and nightlife.', href: '/destinations/chongqing/where-to-stay/jiefangbei'},
+          {title: 'Hongyadong Area', description: 'Stay near the iconic lit-up cliff houses.', href: '/destinations/chongqing/where-to-stay/hongyadong-area'},
+          {title: 'What to Do in Chongqing', description: 'Hongya Cave, Liziba, and more.', href: '/destinations/chongqing/what-to-do'},
+          {title: 'How to Get Around', description: 'Metro and monorail tips for the 3D city.', href: '/china-basics/how-to-get-around'},
+        ]} />
       </main>
     </div>
   );

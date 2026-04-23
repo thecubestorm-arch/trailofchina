@@ -3,6 +3,7 @@ import Link from 'next/link'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import Breadcrumb from '@/components/Breadcrumb'
 import ContextualCTA from '@/components/ContextualCTA'
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
   title: 'How to Get Internet in China | Trail of China',
@@ -123,6 +124,12 @@ export default function InternetHub() {
             variant="primary"
           />
         </div>
+        <RelatedArticles articles={[
+          {title: 'Airalo eSIM', description: 'Affordable data plans that work right away.', href: '/china-basics/how-to-get-internet/airalo-esim'},
+          {title: 'Holafly eSIM', description: 'Unlimited data eSIM for worry-free browsing.', href: '/china-basics/how-to-get-internet/holafly-esim'},
+          {title: 'VPN Guide', description: 'Access blocked sites with a reliable VPN.', href: '/china-basics/what-apps-to-use/vpn'},
+          {title: 'What Apps to Use', description: 'Essential apps to download before your trip.', href: '/china-basics/what-apps-to-use'},
+        ]} />
       </main>
     </div>
   )

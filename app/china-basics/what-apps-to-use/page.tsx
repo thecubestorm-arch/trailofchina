@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import Breadcrumb from '@/components/Breadcrumb'
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
   title: 'Essential Apps for China | Trail of China',
@@ -91,7 +92,7 @@ const sections: Section[] = [
     icon: '🍔',
     title: 'Meituan Guide',
     preview:
-      "China's super-app for food delivery, hotels, movie tickets, and group deals. Learn how to order food, book hotels, and find discounted experiences with Meituan (美团).",
+      "China’s super-app for food delivery, hotels, movie tickets, and group deals. Learn how to order food, book hotels, and find discounted experiences with Meituan (美团).",
     tags: ['🍕 Food Delivery', '🏨 Hotels', '🎬 Movie Tickets', '🎯 Group Deals'],
     href: '/china-basics/what-apps-to-use/meituan',
   },
@@ -100,7 +101,7 @@ const sections: Section[] = [
     icon: '🚕',
     title: 'Didi Guide',
     preview:
-      "China's Uber for ride-hailing, bike sharing, and bus routes. Setup guide, safety tips, and pricing for foreign travelers using Didi Chuxing (滴滴出行).",
+      "China’s Uber for ride-hailing, bike sharing, and bus routes. Setup guide, safety tips, and pricing for foreign travelers using Didi Chuxing (滴滴出行).",
     tags: ['🚗 Ride-Hailing', '🚲 Bike Sharing', '📍 Navigation', '🛡️ Safety'],
     href: '/china-basics/what-apps-to-use/didi',
   },
@@ -166,6 +167,12 @@ export default function WhatAppsToUsePage() {
             verification gets delayed while roaming.
           </p>
         </div>
+        <RelatedArticles articles={[
+          {title: 'Payment Apps', description: 'Set up Alipay and WeChat Pay before you arrive.', href: '/china-basics/what-apps-to-use/payment'},
+          {title: 'VPN Guide', description: 'Which VPNs work in China and how to set them up.', href: '/china-basics/what-apps-to-use/vpn'},
+          {title: 'eSIM Setup', description: 'Get connected instantly with a travel eSIM.', href: '/china-basics/how-to-get-internet/esim'},
+          {title: 'Censorship & Internet', description: 'What’s blocked and how to stay connected.', href: '/china-basics/how-china-differs/censorship'},
+        ]} />
       </main>
     </div>
   )

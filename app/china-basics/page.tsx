@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import Breadcrumb from '@/components/Breadcrumb'
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
   title: 'China Basics - Everything You Need to Know',
@@ -108,6 +109,12 @@ export default function ChinaBasicsPage() {
             </Link>
           ))}
         </section>
+        <RelatedArticles articles={[
+          {title: 'What Apps to Use in China', description: 'Essential apps for payments, navigation, and daily life.', href: '/china-basics/what-apps-to-use'},
+          {title: 'How to Get Internet', description: 'eSIMs, VPNs, and staying connected in China.', href: '/china-basics/how-to-get-internet'},
+          {title: 'How China Differs', description: 'Cultural differences and what to expect.', href: '/china-basics/how-china-differs'},
+          {title: 'How to Get Around', description: 'Trains, metros, taxis, and ride-hailing explained.', href: '/china-basics/how-to-get-around'},
+        ]} />
       </main>
     </div>
   )

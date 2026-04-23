@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
 import Breadcrumb from '@/components/Breadcrumb';
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
   title: 'Where to Eat in Chongqing | Trail of China',
@@ -108,6 +109,12 @@ export default function ChongqingWhereToEatPage() {
             <li>• Assuming every high-rated listing is recent or locally trusted</li>
           </ul>
         </div>
+        <RelatedArticles articles={[
+          {title: 'Chongqing Hotpot', description: 'Mala hotpot in its birthplace — not for the faint-hearted.', href: '/destinations/chongqing/where-to-eat/chongqing-hotpot'},
+          {title: 'Xiaomian', description: 'Chongqing’s beloved spicy noodle soup.', href: '/destinations/chongqing/where-to-eat/xiaomian'},
+          {title: 'What to Do in Chongqing', description: 'Hongya Cave, Liziba, and more.', href: '/destinations/chongqing/what-to-do'},
+          {title: 'Chongqing Local Tips', description: 'Navigating the 3D city like a local.', href: '/destinations/chongqing/local-tips'},
+        ]} />
       </main>
     </div>
   );

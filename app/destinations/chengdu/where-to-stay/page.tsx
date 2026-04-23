@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
 import Breadcrumb from '@/components/Breadcrumb';
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
   title: 'Where to Stay in Chengdu | Trail of China',
@@ -108,6 +109,12 @@ export default function ChengduWhereToStayPage() {
           </div>
         </section>
 
+        <RelatedArticles articles={[
+          {title: 'Chunxi Road', description: 'Shopping heart of Chengdu — central and convenient.', href: '/destinations/chengdu/where-to-stay/chunxi-road'},
+          {title: 'Jinli Area', description: 'Near the famous Jinli Ancient Street — lively at night.', href: '/destinations/chengdu/where-to-stay/jinli-area'},
+          {title: 'What to Do in Chengdu', description: 'Pandas, teahouses, and opera nights.', href: '/destinations/chengdu/what-to-do'},
+          {title: 'How to Get Around', description: 'Metro, DiDi, and train tips.', href: '/china-basics/how-to-get-around'},
+        ]} />
       </main>
     </div>
   );

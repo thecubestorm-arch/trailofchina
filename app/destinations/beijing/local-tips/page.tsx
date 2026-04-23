@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
   title: 'Beijing Local Tips | Transport, Food & Insider Secrets',
@@ -96,6 +97,11 @@ export default function BeijingLocalTipsPage() {
             <li><strong>Massage parlor flyers</strong> — Flyers near hotels may lead to ¥100 foot massages that turn into ¥1000+ bills. Only visit well-reviewed chains like Liangzi or Bodhi.</li>
           </ul>
         </section>
+        <RelatedArticles articles={[
+          {title: 'What to Do in Beijing', description: 'Top attractions and must-see sights.', href: '/destinations/beijing/what-to-do'},
+          {title: 'VPN & Internet', description: 'Stay connected with a VPN setup guide.', href: '/china-basics/what-apps-to-use/vpn'},
+          {title: 'eSIM Setup', description: 'Get data instantly with a travel eSIM.', href: '/china-basics/how-to-get-internet/esim'},
+        ]} />
       </main>
     </div>
   );
