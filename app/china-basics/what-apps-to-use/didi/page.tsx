@@ -10,6 +10,8 @@ export const metadata: Metadata = {
 export default function DidiPage() {
   return (
     <GuideArticlePage
+      icon="/images/icons/didi.svg"
+      heroImage={{ src: "https://picsum.photos/seed/didi-ride-china/800/400", alt: "Didi ride-hailing in China" }}
       breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'China Basics', href: '/china-basics' }, { label: 'What Apps to Use', href: '/china-basics/what-apps-to-use' }, { label: 'Didi' }]}
       relatedArticles={[
         { title: 'Alipay Guide', description: 'Pay for Didi rides and more with Alipay.', href: '/china-basics/what-apps-to-use/alipay' },

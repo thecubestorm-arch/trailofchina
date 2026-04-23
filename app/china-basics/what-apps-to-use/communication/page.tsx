@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function CommunicationAppsPage() {
   return (
     <GuideArticlePage
+      heroImage={{ src: "https://picsum.photos/seed/china-communication/800/400", alt: "Communication apps in China" }}
       breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'China Basics', href: '/china-basics' }, { label: 'What Apps to Use', href: '/china-basics/what-apps-to-use' }, { label: 'Communication' }]}
       relatedArticles={[
         { title: 'WeChat Pay Guide', description: 'Set up WeChat Pay for payments, mini programs, and P2P transfers.', href: '/china-basics/what-apps-to-use/wechat-pay' },

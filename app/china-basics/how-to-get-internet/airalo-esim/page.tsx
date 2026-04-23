@@ -10,6 +10,8 @@ export const metadata: Metadata = {
 export default function AiraloEsimPage() {
   return (
     <GuideArticlePage
+      icon="/images/icons/airalo.svg"
+      heroImage={{ src: "https://picsum.photos/seed/esim-travel-china/800/400", alt: "eSIM for China travel" }}
       breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'China Basics', href: '/china-basics' }, { label: 'How to Get Internet', href: '/china-basics/how-to-get-internet' }, { label: 'Airalo eSIM' }]}
       relatedArticles={[
         { title: 'Holafly eSIM Guide', description: 'Compare with Holafly for unlimited data eSIM.', href: '/china-basics/how-to-get-internet/holafly-esim' },

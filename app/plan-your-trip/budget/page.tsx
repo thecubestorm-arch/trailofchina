@@ -16,6 +16,7 @@ export const metadata: Metadata = {
 export default function BudgetGuidePage() {
   return (
     <GuideArticlePage
+      heroImage={{ src: "https://picsum.photos/seed/china-budget/800/400", alt: "Budget travel in China" }}
       breadcrumbs={[
         { label: 'Home', href: '/' },
         { label: 'Plan Your Trip', href: '/plan-your-trip' },

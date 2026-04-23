@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function TravelAppsPage() {
   return (
     <GuideArticlePage
+      heroImage={{ src: "https://picsum.photos/seed/travel-apps-china/800/400", alt: "Travel apps in China" }}
       breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'China Basics', href: '/china-basics' }, { label: 'What Apps to Use', href: '/china-basics/what-apps-to-use' }, { label: 'Travel Booking' }]}
       relatedArticles={[
         { title: 'How to Get Around', description: 'Transportation overview: trains, planes, taxis, and more.', href: '/china-basics/how-to-get-around' },

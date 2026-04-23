@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function IsChinaSafePage() {
   return (
     <GuideArticlePage
+      heroImage={{ src: "https://picsum.photos/seed/china-safe-travel/800/400", alt: "Safety in China" }}
       breadcrumbs={[
         { label: 'Home', href: '/' },
         { label: 'China Basics', href: '/china-basics' },

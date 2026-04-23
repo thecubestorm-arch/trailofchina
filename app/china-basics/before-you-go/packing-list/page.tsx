@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function PackingListPage() {
   return (
     <GuideArticlePage
+      heroImage={{ src: "https://picsum.photos/seed/packing-china/800/400", alt: "Packing for China" }}
       breadcrumbs={[
         { label: 'Home', href: '/' },
         { label: 'China Basics', href: '/china-basics' },

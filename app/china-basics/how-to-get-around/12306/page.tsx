@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function TrainBookingPage() {
   return (
     <GuideArticlePage
+      heroImage={{ src: "https://picsum.photos/seed/china-train/800/400", alt: "Train travel in China" }}
       breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'China Basics', href: '/china-basics' }, { label: 'How to Get Around', href: '/china-basics/how-to-get-around' }, { label: '12306 Train Booking' }]}
       relatedArticles={[
         { title: 'Train Travel in China', description: 'Everything about high-speed rail and seat types.', href: '/china-basics/how-to-get-around/train' },

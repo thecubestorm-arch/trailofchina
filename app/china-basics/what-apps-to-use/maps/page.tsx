@@ -10,6 +10,8 @@ export const metadata: Metadata = {
 export default function MapsAppsPage() {
   return (
     <GuideArticlePage
+      icon="/images/icons/baidu.svg"
+      heroImage={{ src: "https://picsum.photos/seed/china-maps/800/400", alt: "Navigation in China" }}
       breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'China Basics', href: '/china-basics' }, { label: 'What Apps to Use', href: '/china-basics/what-apps-to-use' }, { label: 'Maps' }]}
       relatedArticles={[
         { title: 'How to Get Around', description: 'Navigation tips for trains, metro, and taxis.', href: '/china-basics/how-to-get-around' },

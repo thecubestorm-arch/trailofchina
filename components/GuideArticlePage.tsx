@@ -28,6 +28,8 @@ type GuideArticlePageProps = {
   proTips: string[]
   related: Related[]
   relatedArticles?: RelatedArticle[]
+  icon?: string
+  heroImage?: { src: string; alt: string }
 }
 
 export default function GuideArticlePage({
@@ -40,6 +42,8 @@ export default function GuideArticlePage({
   proTips,
   related,
   relatedArticles,
+  icon,
+  heroImage,
 }: GuideArticlePageProps) {
   return (
     <section className="container-px mx-auto max-w-4xl py-12 md:py-16" style={{
@@ -51,10 +55,27 @@ export default function GuideArticlePage({
       </div>
 
       <p className="text-xs font-bold uppercase tracking-[0.2em] text-china-red">{category}</p>
-      <h1 className="mt-3 text-4xl font-black tracking-tight text-slate-900 md:text-5xl relative">
-        {title}
-      </h1>
+      <div className="mt-3 flex items-center">
+        {icon && (
+          <img
+            src={icon}
+            alt={`${title} icon`}
+            className="mr-3 h-10 w-10 rounded-xl bg-white shadow-sm"
+          />
+        )}
+        <h1 className="text-4xl font-black tracking-tight text-slate-900 md:text-5xl relative">
+          {title}
+        </h1>
+      </div>
       <p className="mt-4 text-base leading-relaxed text-slate-600 md:text-lg">{intro}</p>
+
+      {heroImage && (
+        <img
+          src={heroImage.src}
+          alt={heroImage.alt}
+          className="mt-8 mb-8 h-48 w-full rounded-2xl object-cover md:h-64"
+        />
+      )}
 
 
       <div className="mt-10 card-base">

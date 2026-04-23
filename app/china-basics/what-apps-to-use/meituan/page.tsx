@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function MeituanPage() {
   return (
     <GuideArticlePage
+      heroImage={{ src: "https://picsum.photos/seed/meituan-food/800/400", alt: "Ordering food with Meituan" }}
       breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'China Basics', href: '/china-basics' }, { label: 'What Apps to Use', href: '/china-basics/what-apps-to-use' }, { label: 'Meituan' }]}
       relatedArticles={[
         { title: 'Alipay Guide', description: 'Pay for Meituan orders with Alipay.', href: '/china-basics/what-apps-to-use/alipay' },

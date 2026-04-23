@@ -12,6 +12,8 @@ export default function VpnGuidePage() {
   return (
     <div>
       <GuideArticlePage
+        icon="/images/icons/expressvpn.svg"
+        heroImage={{ src: "https://picsum.photos/seed/vpn-china-travel/800/400", alt: "Using VPN in China" }}
       breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'China Basics', href: '/china-basics' }, { label: 'What Apps to Use', href: '/china-basics/what-apps-to-use' }, { label: 'VPN' }]}
       category="What Apps to Use"
       title="VPN Guide for China Travel"

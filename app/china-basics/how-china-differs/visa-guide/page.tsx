@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function VisaGuidePage() {
   return (
     <GuideArticlePage
+      heroImage={{ src: "https://picsum.photos/seed/china-visa/800/400", alt: "China visa guide" }}
       breadcrumbs={[
         { label: 'Home', href: '/' },
         { label: 'China Basics', href: '/china-basics' },

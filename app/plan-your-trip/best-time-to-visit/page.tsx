@@ -16,6 +16,7 @@ export const metadata: Metadata = {
 export default function BestTimeToVisitPage() {
   return (
     <GuideArticlePage
+      heroImage={{ src: "https://picsum.photos/seed/china-seasons/800/400", alt: "Best time to visit China" }}
       breadcrumbs={[
         { label: 'Home', href: '/' },
         { label: 'Plan Your Trip', href: '/plan-your-trip' },
