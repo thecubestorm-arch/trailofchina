@@ -59,44 +59,38 @@ export default function JinliAncientStreetPage() {
     },
     {
       type: 'photo',
-      text: 'Traditional wooden architecture — intricate carvings and red woodfacades',
+      text: 'Traditional wooden architecture — intricate carvings and red wood facades',
     },
-  ] as const;
-
-  const relatedLinks = [
-    { title: 'Wenshu Monastery', href: '/destinations/chengdu/what-to-do/wenshu-monastery' },
-    { title: 'Kuanzhai Alley', href: '/destinations/chengdu/what-to-do/kuanzhai-alley' },
-    { title: 'Chengdu Where to Eat', href: '/destinations/chengdu/where-to-eat' },
-    { title: 'Panda Base', href: '/destinations/chengdu/what-to-do/panda-base' },
   ] as const;
 
   return (
     <AttractionPage
       name="Jinli Ancient Street"
       breadcrumbs={[
-      { label: 'Home', href: '/' },
-      { label: 'Destinations', href: '/destinations' },
-      { label: 'Chengdu', href: '/destinations/chengdu' },
-      { label: 'What to Do', href: '/destinations/chengdu/what-to-do' },
-    ]}
+        { label: 'Home', href: '/' },
+        { label: 'Destinations', href: '/destinations' },
+        { label: 'Chengdu', href: '/destinations/chengdu' },
+        { label: 'What to Do', href: '/destinations/chengdu/what-to-do' },
+      ]}
       nameZh="锦里"
       city="Chengdu"
       description={`Chengdu's most atmospheric pedestrian street — red lanterns, wooden architecture, snack stalls, and tea houses. Adjacent to Wuhou Shrine. Packed by day, magical at night. The perfect first stop in Chengdu for street food and souvenirs.`}
-      hours="Open all day, best 6:00-10:00 PM"
+      hours="Open all day, best 10:00-22:00"
       price="Free entry"
       nearestSubway="Gaoshengqiao, Line 3"
-      bestTime="Evening for lanterns and night atmosphere"
-      tips={[...tips, ...photoSpots]}
-      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=104.0433%2C30.6437%2C104.0533%2C30.6497&layer=mapnik&marker=30.6467%2C104.0483"
-      address="231 Wuhou Shrine Street, Wuhou District"
-      addressZh="成都市武侯区武侯祠大街231号"
-        
-      relatedLinks={relatedLinks}
+      bestTime="Evening (after 6 PM) when lanterns are lit"
+      mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=104.0436%2C30.6406%2C104.0536%2C30.6466&layer=mapnik&marker=30.6436%2C104.0486"
+      address="Jinli Street, Wuhou District"
+      addressZh="成都市武侯区锦里"
+      relatedLinks={[]}
       relatedArticles={[
         { title: "Panda Base", description: "World's most famous giant panda sanctuary with over 200 pandas.", href: "/destinations/chengdu/what-to-do/panda-base" },
         { title: "Sichuan Hotpot", description: "Chengdu's most famous culinary experience - spicy and numbing.", href: "/destinations/chengdu/where-to-eat/sichuan-hotpot" },
         { title: "Wenshu Monastery", description: "Beautiful Buddhist monastery with peaceful gardens.", href: "/destinations/chengdu/what-to-do/wenshu-monastery" },
+        { title: "Kuanzhai Alley", description: "Explore Kuanzhai Alley, one of Chengdu's top attractions.", href: "/destinations/chengdu/what-to-do/kuanzhai-alley" },
+        { title: "Where to Eat in Chengdu", description: "Discover Chengdu's best local dishes and restaurants.", href: "/destinations/chengdu/where-to-eat" },
       ]}
+      tips={[...tips, ...photoSpots]}
     />
   );
 }

@@ -21,11 +21,7 @@ const tips = [
   { type: 'photo' as const, text: 'The building itself' },
 ] as const;
 
-const relatedLinks = [
-  { title: 'Yangtze Cable Car', href: '/destinations/chongqing/what-to-do/yangtze-cable-car' },
-  { title: 'Three Gorges Museum', href: '/destinations/chongqing/what-to-do/three-gorges-museum' },
-  { title: 'Chongqing Guide', href: '/destinations/chongqing' },
-] as const;
+const relatedLinks = [] as const;
 
 export default function LizibaMonorailPage() {
   return (
@@ -50,6 +46,11 @@ export default function LizibaMonorailPage() {
       addressZh="重庆市渝中区李子坝站"
         
       relatedLinks={relatedLinks}
+      relatedArticles={[
+        { title: "Yangtze River Cable Car", description: "Explore Yangtze River Cable Car, one of Chongqing's top attractions.", href: "/destinations/chongqing/what-to-do/yangtze-cable-car" },
+        { title: "Three Gorges Museum", description: "Explore Three Gorges Museum, one of Chongqing's top attractions.", href: "/destinations/chongqing/what-to-do/three-gorges-museum" },
+        { title: "Chongqing Guide", description: "Complete guide to planning your Chongqing trip.", href: "/destinations/chongqing" },
+      ]}
     />
   );
 }

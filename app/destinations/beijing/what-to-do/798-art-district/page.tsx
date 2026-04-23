@@ -80,11 +80,12 @@ export default function ArtDistrict798Page() {
       address="4 Jiuxianqiao Road, Chaoyang District"
       addressZh="北京市朝阳区酒仙桥路4号"
         
-      relatedLinks={[
-        { title: 'Lama Temple', href: '/destinations/beijing/what-to-do/lama-temple' },
-        { title: 'Hutong Tours', href: '/destinations/beijing/what-to-do/hutong' },
-        { title: 'Beijing Where to Eat', href: '/destinations/beijing/where-to-eat' },
-        { title: 'Beijing Guide', href: '/destinations/beijing' },
+      relatedLinks={[]}
+      relatedArticles={[
+        { title: "Lama Temple", description: "Explore Lama Temple, one of Beijing's top attractions.", href: "/destinations/beijing/what-to-do/lama-temple" },
+        { title: "Hutong Tours", description: "Explore Hutong Tours, one of Beijing's top attractions.", href: "/destinations/beijing/what-to-do/hutong" },
+        { title: "Where to Eat in Beijing", description: "Discover Beijing's best local dishes and restaurants.", href: "/destinations/beijing/where-to-eat" },
+        { title: "Beijing Guide", description: "Complete guide to planning your Beijing trip.", href: "/destinations/beijing" },
       ]}
       tips={[...tips, ...photoSpots]}
     />

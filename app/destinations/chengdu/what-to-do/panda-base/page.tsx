@@ -98,18 +98,16 @@ The base is also home to red pandas (smaller, squirrel-like relatives) and other
       address="1375 Panda Base Road, Chenghua District"
       addressZh="成都市成华区熊猫基地路1375号"
         
-      relatedLinks={[
-        { title: 'Chengdu Local Tips', href: '/destinations/chengdu/local-tips' },
-        { title: 'Chengdu Food Guide', href: '/destinations/chengdu/where-to-eat' },
-        { title: 'China Basics', href: '/china-basics' },
-        { title: 'Where to Stay in Chengdu', href: '/destinations/chengdu/where-to-stay' },
-        { title: 'Jinsha Site Museum', href: '/destinations/chengdu/what-to-do/jinsha-site' },
-        { title: 'Wuhou Temple', href: '/destinations/chengdu/what-to-do/wuhou-temple' },
-      ]}
+      relatedLinks={[]}
       relatedArticles={[
         { title: "Jinli Ancient Street", description: "Historic street with traditional Sichuan architecture and snacks.", href: "/destinations/chengdu/what-to-do/jinli-ancient-street" },
         { title: "Sichuan Hotpot", description: "Chengdu's most famous culinary experience - spicy and numbing.", href: "/destinations/chengdu/where-to-eat/sichuan-hotpot" },
         { title: "Chengdu Local Tips", description: "Essential tips for visiting Chengdu and avoiding common pitfalls.", href: "/destinations/chengdu/local-tips" },
+        { title: "Chengdu Food Guide", description: "Discover Chengdu's best local dishes and restaurants.", href: "/destinations/chengdu/where-to-eat" },
+        { title: "China Basics", description: "Essential tips for first-time visitors to China.", href: "/china-basics" },
+        { title: "Where to Stay in Chengdu", description: "Find the best neighborhoods and accommodations in Chengdu.", href: "/destinations/chengdu/where-to-stay" },
+        { title: "Jinsha Site Museum", description: "Explore Jinsha Site Museum, one of Chengdu's top attractions.", href: "/destinations/chengdu/what-to-do/jinsha-site" },
+        { title: "Wuhou Temple", description: "Explore Wuhou Temple, one of Chengdu's top attractions.", href: "/destinations/chengdu/what-to-do/wuhou-temple" },
       ]}
       tips={[...tips, ...photoSpots]}
     />

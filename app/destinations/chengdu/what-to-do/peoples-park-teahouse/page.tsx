@@ -63,16 +63,11 @@ export default function PeoplesParkTeahousePage() {
     },
   ] as const;
 
-  const relatedLinks = [
-    { title: 'Wenshu Monastery', href: '/destinations/chengdu/what-to-do/wenshu-monastery' },
-    { title: 'Jinli', href: '/destinations/chengdu/what-to-do/jinli-ancient-street' },
-    { title: 'Chengdu Where to Eat', href: '/destinations/chengdu/where-to-eat' },
-    { title: 'Chengdu Guide', href: '/destinations/chengdu' },
-  ] as const;
+  const relatedLinks = [] as const;
 
   return (
     <AttractionPage
-      name="People\'s Park Teahouse"
+      name="People's Park Teahouse"
       breadcrumbs={[
       { label: 'Home', href: '/' },
       { label: 'Destinations', href: '/destinations' },
@@ -92,6 +87,12 @@ export default function PeoplesParkTeahousePage() {
       addressZh="成都市青羊区少城路6号"
         
       relatedLinks={relatedLinks}
+      relatedArticles={[
+        { title: "Wenshu Monastery", description: "Explore Wenshu Monastery, one of Chengdu's top attractions.", href: "/destinations/chengdu/what-to-do/wenshu-monastery" },
+        { title: "Jinli", description: "Explore Jinli, one of Chengdu's top attractions.", href: "/destinations/chengdu/what-to-do/jinli-ancient-street" },
+        { title: "Where to Eat in Chengdu", description: "Discover Chengdu's best local dishes and restaurants.", href: "/destinations/chengdu/where-to-eat" },
+        { title: "Chengdu Guide", description: "Complete guide to planning your Chengdu trip.", href: "/destinations/chengdu" },
+      ]}
     />
   );
 }

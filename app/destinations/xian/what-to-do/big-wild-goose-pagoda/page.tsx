@@ -84,14 +84,15 @@ Just north of the temple lies the North Square, home to Asia's largest musical f
       address="1 Yanta Road, Yanta District"
       addressZh="西安市雁塔区雁塔路1号"
         
-      relatedLinks={[
-        { title: 'City Wall', href: '/destinations/xian/what-to-do/city-wall' },
-        { title: 'Muslim Quarter', href: '/destinations/xian/what-to-do/muslim-quarter' },
-        { title: 'Bell & Drum Tower', href: '/destinations/xian/what-to-do/bell-drum-tower' },
-        { title: 'Terracotta Warriors', href: '/destinations/xian/what-to-do/terracotta-warriors' },
-        { title: 'Where to Eat in Xi\'an', href: '/destinations/xian/where-to-eat' },
-        { title: 'Xi\'an Local Tips', href: '/destinations/xian/local-tips' },
-        { title: 'Xi\'an Guide', href: '/destinations/xian' },
+      relatedLinks={[]}
+      relatedArticles={[
+        { title: "City Wall", description: "Explore City Wall, one of Xi'an's top attractions.", href: "/destinations/xian/what-to-do/city-wall" },
+        { title: "Muslim Quarter", description: "Explore Muslim Quarter, one of Xi'an's top attractions.", href: "/destinations/xian/what-to-do/muslim-quarter" },
+        { title: "Bell & Drum Tower", description: "Explore Bell & Drum Tower, one of Xi'an's top attractions.", href: "/destinations/xian/what-to-do/bell-drum-tower" },
+        { title: "Terracotta Warriors", description: "Explore Terracotta Warriors, one of Xi'an's top attractions.", href: "/destinations/xian/what-to-do/terracotta-warriors" },
+        { title: "Where to Eat in Xi'an", description: "Discover Xi'an's best local dishes and restaurants.", href: "/destinations/xian/where-to-eat" },
+        { title: "Xi'an Local Tips", description: "Practical tips for navigating Xi'an like a local.", href: "/destinations/xian/local-tips" },
+        { title: "Xi'an Guide", description: "Complete guide to planning your Xi'an trip.", href: "/destinations/xian" },
       ]}
       tips={[...tips, ...photoSpots]}
     />

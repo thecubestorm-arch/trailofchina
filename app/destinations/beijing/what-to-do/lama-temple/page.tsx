@@ -80,11 +80,12 @@ export default function LamaTemplePage() {
       address="12 Yonghegong Street, Dongcheng District"
       addressZh="北京市东城区雍和宫大街12号"
         
-      relatedLinks={[
-        { title: 'Temple of Heaven', href: '/destinations/beijing/what-to-do/temple-of-heaven' },
-        { title: 'Bell and Drum Towers', href: '/destinations/beijing/what-to-do/bell-and-drum-towers' },
-        { title: 'Hutong Tours', href: '/destinations/beijing/what-to-do/hutong' },
-        { title: 'Beijing Local Tips', href: '/destinations/beijing/local-tips' },
+      relatedLinks={[]}
+      relatedArticles={[
+        { title: "Temple of Heaven", description: "Explore Temple of Heaven, one of Beijing's top attractions.", href: "/destinations/beijing/what-to-do/temple-of-heaven" },
+        { title: "Bell and Drum Towers", description: "Explore Bell and Drum Towers, one of Beijing's top attractions.", href: "/destinations/beijing/what-to-do/bell-and-drum-towers" },
+        { title: "Hutong Tours", description: "Explore Hutong Tours, one of Beijing's top attractions.", href: "/destinations/beijing/what-to-do/hutong" },
+        { title: "Beijing Local Tips", description: "Practical tips for navigating Beijing like a local.", href: "/destinations/beijing/local-tips" },
       ]}
       tips={[...tips, ...photoSpots]}
     />

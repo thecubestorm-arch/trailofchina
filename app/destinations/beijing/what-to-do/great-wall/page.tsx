@@ -107,18 +107,16 @@ The Great Wall is more than bricks and stone — it\'s the cultural symbol of Ch
       address="Badaling, Yanqing District"
       addressZh="北京市延庆区八达岭"
         
-      relatedLinks={[
-        { title: 'Forbidden City', href: '/destinations/beijing/what-to-do/forbidden-city' },
-        { title: 'Beijing Local Tips', href: '/destinations/beijing/local-tips' },
-        { title: 'China Basics', href: '/china-basics' },
-        { title: 'Where to Eat in Beijing', href: '/destinations/beijing/where-to-eat' },
-        { title: '798 Art District', href: '/destinations/beijing/what-to-do/798-art-district' },
-        { title: 'Summer Palace', href: '/destinations/beijing/what-to-do/summer-palace' },
-      ]}
+      relatedLinks={[]}
       relatedArticles={[
         { title: "Forbidden City", description: "The world's largest palace complex with 980 buildings.", href: "/destinations/beijing/what-to-do/forbidden-city" },
         { title: "Temple of Heaven", description: "The majestic temple complex where emperors performed rituals.", href: "/destinations/beijing/what-to-do/temple-of-heaven" },
         { title: "Peking Duck", description: "Beijing's most famous dish - try it at the city's best restaurants.", href: "/destinations/beijing/where-to-eat/peking-duck" },
+        { title: "Beijing Local Tips", description: "Practical tips for navigating Beijing like a local.", href: "/destinations/beijing/local-tips" },
+        { title: "China Basics", description: "Essential tips for first-time visitors to China.", href: "/china-basics" },
+        { title: "Where to Eat in Beijing", description: "Discover Beijing's best local dishes and restaurants.", href: "/destinations/beijing/where-to-eat" },
+        { title: "798 Art District", description: "Explore 798 Art District, one of Beijing's top attractions.", href: "/destinations/beijing/what-to-do/798-art-district" },
+        { title: "Summer Palace", description: "Imperial gardens and lakes on the outskirts of Beijing.", href: "/destinations/beijing/what-to-do/summer-palace" },
       ]}
       tips={[...tips, ...photoSpots]}
     />

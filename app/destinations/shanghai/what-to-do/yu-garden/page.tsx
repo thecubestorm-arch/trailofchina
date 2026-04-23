@@ -82,19 +82,15 @@ Surrounding the garden is the Yuyuan Bazaar, a bustling marketplace of souvenir 
       address="137 Anren Street, Huangpu District"
       addressZh="上海市黄浦区安仁街137号"
         
-      relatedLinks={[
-        { title: 'The Bund', href: '/destinations/shanghai/what-to-do/bund' },
-        { title: 'Shanghai Tower', href: '/destinations/shanghai/what-to-do/shanghai-tower' },
-        { title: 'French Concession', href: '/destinations/shanghai/what-to-do/french-concession' },
-        { title: 'Where to Eat in Shanghai', href: '/destinations/shanghai/where-to-eat' },
-        { title: 'Shanghai Local Tips', href: '/destinations/shanghai/local-tips' },
-        { title: 'Shanghai Guide', href: '/destinations/shanghai' },
-      ]}
+      relatedLinks={[]}
       relatedArticles={[
         { title: "The Bund", description: "Shanghai's iconic waterfront district with colonial architecture and stunning views of Pudong.", href: "/destinations/shanghai/what-to-do/bund" },
         { title: "Shanghai Tower", description: "China's tallest building and the world's second-tallest, offering panoramic city views.", href: "/destinations/shanghai/what-to-do/shanghai-tower" },
         { title: "French Concession", description: "Shanghai's most charming neighborhood of tree-lined streets and historic architecture.", href: "/destinations/shanghai/what-to-do/french-concession" },
         { title: "Bund Area", description: "Explore the historic waterfront district and its colonial-era buildings.", href: "/destinations/shanghai/where-to-stay/bund-area" },
+        { title: "Where to Eat in Shanghai", description: "Discover Shanghai's best local dishes and restaurants.", href: "/destinations/shanghai/where-to-eat" },
+        { title: "Shanghai Local Tips", description: "Practical tips for navigating Shanghai like a local.", href: "/destinations/shanghai/local-tips" },
+        { title: "Shanghai Guide", description: "Complete guide to planning your Shanghai trip.", href: "/destinations/shanghai" },
       ]}
       tips={[...tips, ...photoSpots]}
     />

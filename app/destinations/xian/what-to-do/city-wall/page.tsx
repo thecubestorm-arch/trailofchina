@@ -84,19 +84,16 @@ The wall is especially magical at sunset when the golden light bathes the ancien
       address="South Gate, Beilin District"
       addressZh="西安市碑林区南门"
         
-      relatedLinks={[
-        { title: 'Muslim Quarter', href: '/destinations/xian/what-to-do/muslim-quarter' },
-        { title: 'Bell & Drum Tower', href: '/destinations/xian/what-to-do/bell-drum-tower' },
-        { title: 'Big Wild Goose Pagoda', href: '/destinations/xian/what-to-do/big-wild-goose-pagoda' },
-        { title: 'Terracotta Warriors', href: '/destinations/xian/what-to-do/terracotta-warriors' },
-        { title: 'Where to Eat in Xi\'an', href: '/destinations/xian/where-to-eat' },
-        { title: 'Xi\'an Local Tips', href: '/destinations/xian/local-tips' },
-        { title: 'Xi\'an Guide', href: '/destinations/xian' },
-      ]}
+      relatedLinks={[]}
       relatedArticles={[
         { title: "Terracotta Warriors", description: "2,200-year-old army of China's first emperor, Qin Shi Huang.", href: "/destinations/xian/what-to-do/terracotta-warriors" },
         { title: "Muslim Quarter", description: "Historic Islamic neighborhood with amazing street food.", href: "/destinations/xian/what-to-do/muslim-quarter" },
         { title: "Yangroupaomo", description: "Xi'an's iconic lamb-oatmeal breakfast soup.", href: "/destinations/xian/where-to-eat/yangroupaomo" },
+        { title: "Bell & Drum Tower", description: "Explore Bell & Drum Tower, one of Xi'an's top attractions.", href: "/destinations/xian/what-to-do/bell-drum-tower" },
+        { title: "Big Wild Goose Pagoda", description: "Explore Big Wild Goose Pagoda, one of Xi'an's top attractions.", href: "/destinations/xian/what-to-do/big-wild-goose-pagoda" },
+        { title: "Where to Eat in Xi'an", description: "Discover Xi'an's best local dishes and restaurants.", href: "/destinations/xian/where-to-eat" },
+        { title: "Xi'an Local Tips", description: "Practical tips for navigating Xi'an like a local.", href: "/destinations/xian/local-tips" },
+        { title: "Xi'an Guide", description: "Complete guide to planning your Xi'an trip.", href: "/destinations/xian" },
       ]}
       tips={[...tips, ...photoSpots]}
     />

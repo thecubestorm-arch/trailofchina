@@ -84,12 +84,13 @@ export default function HutongPage() {
       address="Nanluoguxiang, Dongcheng District"
       addressZh="北京市东城区南锣鼓巷"
         
-      relatedLinks={[
-        { title: 'Forbidden City', href: '/destinations/beijing/what-to-do/forbidden-city' },
-        { title: 'Bell and Drum Towers', href: '/destinations/beijing/what-to-do/bell-and-drum-towers' },
-        { title: 'Beijing Where to Eat', href: '/destinations/beijing/where-to-eat' },
-        { title: 'Beijing Local Tips', href: '/destinations/beijing/local-tips' },
-        { title: 'Beijing Guide', href: '/destinations/beijing' },
+      relatedLinks={[]}
+      relatedArticles={[
+        { title: "Forbidden City", description: "Explore Forbidden City, one of Beijing's top attractions.", href: "/destinations/beijing/what-to-do/forbidden-city" },
+        { title: "Bell and Drum Towers", description: "Explore Bell and Drum Towers, one of Beijing's top attractions.", href: "/destinations/beijing/what-to-do/bell-and-drum-towers" },
+        { title: "Where to Eat in Beijing", description: "Discover Beijing's best local dishes and restaurants.", href: "/destinations/beijing/where-to-eat" },
+        { title: "Beijing Local Tips", description: "Practical tips for navigating Beijing like a local.", href: "/destinations/beijing/local-tips" },
+        { title: "Beijing Guide", description: "Complete guide to planning your Beijing trip.", href: "/destinations/beijing" },
       ]}
       tips={[...tips, ...photoSpots]}
     />

@@ -102,18 +102,14 @@ The area has evolved from a colonial enclave to asymbol of Shanghai\'s global am
       address="Zhongshan East 1st Road, Huangpu District"
       addressZh="上海市黄浦区中山东一路"
         
-      relatedLinks={[
-        { title: 'Shanghai Tower', href: '/destinations/shanghai/what-to-do/shanghai-tower' },
-        { title: 'Yu Garden', href: '/destinations/shanghai/what-to-do/yu-garden' },
-        { title: 'French Quarter', href: '/destinations/shanghai/what-to-do/french-quarter' },
-        { title: 'Shanghai Local Tips', href: '/destinations/shanghai/local-tips' },
-        { title: 'China Basics', href: '/china-basics' },
-        { title: 'Where to Eat in Shanghai', href: '/destinations/shanghai/where-to-eat' },
-      ]}
+      relatedLinks={[]}
       relatedArticles={[
         { title: "Shanghai Tower", description: "China's tallest building and the world's second-tallest.", href: "/destinations/shanghai/what-to-do/shanghai-tower" },
         { title: "Yu Garden", description: "400-year-old classical Chinese garden in Shanghai's Old City.", href: "/destinations/shanghai/what-to-do/yu-garden" },
         { title: "French Concession", description: "Shanghai's most charming neighborhood of tree-lined streets.", href: "/destinations/shanghai/what-to-do/french-concession" },
+        { title: "Shanghai Local Tips", description: "Practical tips for navigating Shanghai like a local.", href: "/destinations/shanghai/local-tips" },
+        { title: "China Basics", description: "Essential tips for first-time visitors to China.", href: "/china-basics" },
+        { title: "Where to Eat in Shanghai", description: "Discover Shanghai's best local dishes and restaurants.", href: "/destinations/shanghai/where-to-eat" },
       ]}
       tips={[...tips, ...photoSpots]}
     />

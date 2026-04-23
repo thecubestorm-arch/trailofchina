@@ -93,18 +93,16 @@ It\'s free to explore and has become Chongqing\'s most popular tourist destinati
       address="88 Jialingjiang Binjiang Road, Yuzhong District"
       addressZh="重庆市渝中区嘉陵江滨江路88号"
         
-      relatedLinks={[
-        { title: 'Chongqing Local Tips', href: '/destinations/chongqing/local-tips' },
-        { title: 'Chongqing Food Guide', href: '/destinations/chongqing/where-to-eat' },
-        { title: 'China Basics', href: '/china-basics' },
-        { title: 'Where to Stay in Chongqing', href: '/destinations/chongqing/where-to-stay' },
-        { title: 'Ciqikou Ancient Town', href: '/destinations/chongqing/what-to-do/ciqikou' },
-        { title: 'Dazu Rock Carvings', href: '/destinations/chongqing/what-to-do/dazu-rock-carvings' },
-      ]}
+      relatedLinks={[]}
       relatedArticles={[
         { title: "Ciqikou Ancient Town", description: "Historic port town with cobblestone streets and traditional architecture.", href: "/destinations/chongqing/what-to-do/ciqikou" },
         { title: "Chongqing Hotpot", description: "Chongqing's signature dish - spicy, oily, and unforgettable.", href: "/destinations/chongqing/where-to-eat/chongqing-hotpot" },
         { title: "Yangtze River Cable Car", description: "Aerial ride over the Yangtze River with stunning city views.", href: "/destinations/chongqing/what-to-do/yangtze-cable-car" },
+        { title: "Chongqing Local Tips", description: "Practical tips for navigating Chongqing like a local.", href: "/destinations/chongqing/local-tips" },
+        { title: "Chongqing Food Guide", description: "Discover Chongqing's best local dishes and restaurants.", href: "/destinations/chongqing/where-to-eat" },
+        { title: "China Basics", description: "Essential tips for first-time visitors to China.", href: "/china-basics" },
+        { title: "Where to Stay in Chongqing", description: "Find the best neighborhoods and accommodations in Chongqing.", href: "/destinations/chongqing/where-to-stay" },
+        { title: "Dazu Rock Carvings", description: "Explore Dazu Rock Carvings, one of Chongqing's top attractions.", href: "/destinations/chongqing/what-to-do/dazu-rock-carvings" },
       ]}
       tips={[...tips, ...photoSpots]}
     />

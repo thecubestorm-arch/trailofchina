@@ -84,12 +84,13 @@ export default function SummerPalacePage() {
       address="19 Xinjiangongmen Road, Haidian District"
       addressZh="北京市海淀区新建宫门路19号"
         
-      relatedLinks={[
-        { title: 'Temple of Heaven', href: '/destinations/beijing/what-to-do/temple-of-heaven' },
-        { title: 'Forbidden City', href: '/destinations/beijing/what-to-do/forbidden-city' },
-        { title: 'Lama Temple', href: '/destinations/beijing/what-to-do/lama-temple' },
-        { title: 'Beijing Where to Eat', href: '/destinations/beijing/where-to-eat' },
-        { title: 'Beijing Guide', href: '/destinations/beijing' },
+      relatedLinks={[]}
+      relatedArticles={[
+        { title: "Temple of Heaven", description: "Explore Temple of Heaven, one of Beijing's top attractions.", href: "/destinations/beijing/what-to-do/temple-of-heaven" },
+        { title: "Forbidden City", description: "Explore Forbidden City, one of Beijing's top attractions.", href: "/destinations/beijing/what-to-do/forbidden-city" },
+        { title: "Lama Temple", description: "Explore Lama Temple, one of Beijing's top attractions.", href: "/destinations/beijing/what-to-do/lama-temple" },
+        { title: "Where to Eat in Beijing", description: "Discover Beijing's best local dishes and restaurants.", href: "/destinations/beijing/where-to-eat" },
+        { title: "Beijing Guide", description: "Complete guide to planning your Beijing trip.", href: "/destinations/beijing" },
       ]}
       tips={[...tips, ...photoSpots]}
     />

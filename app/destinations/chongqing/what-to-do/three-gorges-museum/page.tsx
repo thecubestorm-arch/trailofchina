@@ -18,11 +18,7 @@ const tips = [
   { type: 'tip' as const, text: 'Combine with People\'s Assembly Hall across the street' },
 ] as const;
 
-const relatedLinks = [
-  { title: 'Ciqikou', href: '/destinations/chongqing/what-to-do/ciqikou' },
-  { title: 'Chongqing Guide', href: '/destinations/chongqing' },
-  { title: 'Chongqing Where to Eat', href: '/destinations/chongqing/where-to-eat' },
-] as const;
+const relatedLinks = [] as const;
 
 export default function ThreeGorgesMuseumPage() {
   return (
@@ -47,6 +43,11 @@ export default function ThreeGorgesMuseumPage() {
       addressZh="重庆市渝中区人民路236号"
         
       relatedLinks={relatedLinks}
+      relatedArticles={[
+        { title: "Ciqikou", description: "Explore Ciqikou, one of Chongqing's top attractions.", href: "/destinations/chongqing/what-to-do/ciqikou" },
+        { title: "Chongqing Guide", description: "Complete guide to planning your Chongqing trip.", href: "/destinations/chongqing" },
+        { title: "Where to Eat in Chongqing", description: "Discover Chongqing's best local dishes and restaurants.", href: "/destinations/chongqing/where-to-eat" },
+      ]}
     />
   );
 }

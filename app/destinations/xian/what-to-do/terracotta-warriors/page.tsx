@@ -98,18 +98,15 @@ The site is a UNESCO World Heritage site and one of China\'s most famous attract
       address="Qinling North Road, Lintong District"
       addressZh="西安市临潼区秦陵北路"
         
-      relatedLinks={[
-        { title: 'Xi\'an City Wall', href: '/destinations/xian/what-to-do/xian-city-wall' },
-        { title: 'Muslim Quarter', href: '/destinations/xian/what-to-do/muslim-quarter' },
-        { title: 'Xi\'an Local Tips', href: '/destinations/xian/local-tips' },
-        { title: 'China Basics', href: '/china-basics' },
-        { title: 'Where to Eat in Xi\'an', href: '/destinations/xian/where-to-eat' },
-        { title: 'Big Wild Goose Pagoda', href: '/destinations/xian/what-to-do/big-wild-geese-pagoda' },
-      ]}
+      relatedLinks={[]}
       relatedArticles={[
         { title: "City Wall", description: "Best-preserved ancient city wall with a 13.7 km perimeter.", href: "/destinations/xian/what-to-do/city-wall" },
         { title: "Muslim Quarter", description: "Historic Islamic neighborhood with amazing street food.", href: "/destinations/xian/what-to-do/muslim-quarter" },
         { title: "Yangroupaomo", description: "Xi'an's iconic lamb-oatmeal breakfast soup.", href: "/destinations/xian/where-to-eat/yangroupaomo" },
+        { title: "Xi'an Local Tips", description: "Practical tips for navigating Xi'an like a local.", href: "/destinations/xian/local-tips" },
+        { title: "China Basics", description: "Essential tips for first-time visitors to China.", href: "/china-basics" },
+        { title: "Where to Eat in Xi'an", description: "Discover Xi'an's best local dishes and restaurants.", href: "/destinations/xian/where-to-eat" },
+        { title: "Big Wild Goose Pagoda", description: "Explore Big Wild Goose Pagoda, one of Xi'an's top attractions.", href: "/destinations/xian/what-to-do/big-wild-geese-pagoda" },
       ]}
       tips={[...tips, ...photoSpots]}
     />

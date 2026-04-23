@@ -88,18 +88,14 @@ Three skyscrapers in Lujiazui offer observation decks. Shanghai Tower is the hig
       address="501 Yincheng Middle Road, Pudong New Area"
       addressZh="上海市浦东新区银城中路501号"
         
-      relatedLinks={[
-        { title: 'The Bund', href: '/destinations/shanghai/what-to-do/bund' },
-        { title: 'Yu Garden', href: '/destinations/shanghai/what-to-do/yu-garden' },
-        { title: 'French Concession', href: '/destinations/shanghai/what-to-do/french-concession' },
-        { title: 'Where to Eat in Shanghai', href: '/destinations/shanghai/where-to-eat' },
-        { title: 'Shanghai Local Tips', href: '/destinations/shanghai/local-tips' },
-        { title: 'Shanghai Guide', href: '/destinations/shanghai' },
-      ]}
+      relatedLinks={[]}
       relatedArticles={[
         { title: "Yu Garden", description: "400-year-old classical Chinese garden in Shanghai's Old City.", href: "/destinations/shanghai/what-to-do/yu-garden" },
         { title: "Shanghai Tower", description: "China's tallest building and the world's second-tallest.", href: "/destinations/shanghai/what-to-do/shanghai-tower" },
         { title: "French Concession", description: "Shanghai's most charming neighborhood of tree-lined streets.", href: "/destinations/shanghai/what-to-do/french-concession" },
+        { title: "Where to Eat in Shanghai", description: "Discover Shanghai's best local dishes and restaurants.", href: "/destinations/shanghai/where-to-eat" },
+        { title: "Shanghai Local Tips", description: "Practical tips for navigating Shanghai like a local.", href: "/destinations/shanghai/local-tips" },
+        { title: "Shanghai Guide", description: "Complete guide to planning your Shanghai trip.", href: "/destinations/shanghai" },
       ]}
       tips={[...tips, ...photoSpots]}
     />

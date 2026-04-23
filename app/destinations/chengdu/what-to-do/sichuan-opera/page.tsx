@@ -44,12 +44,7 @@ export default function SichuanOperaPage() {
     },
   ] as const;
 
-  const relatedLinks = [
-    { title: 'Jinli', href: '/destinations/chengdu/what-to-do/jinli-ancient-street' },
-    { title: 'Kuanzhai Alley', href: '/destinations/chengdu/what-to-do/kuanzhai-alley' },
-    { title: 'Chengdu Guide', href: '/destinations/chengdu' },
-    { title: 'Chengdu Where to Eat', href: '/destinations/chengdu/where-to-eat' },
-  ] as const;
+  const relatedLinks = [] as const;
 
   return (
     <AttractionPage
@@ -73,6 +68,12 @@ export default function SichuanOperaPage() {
       addressZh="成都市青羊区琴台路23号"
         
       relatedLinks={relatedLinks}
+      relatedArticles={[
+        { title: "Jinli", description: "Explore Jinli, one of Chengdu's top attractions.", href: "/destinations/chengdu/what-to-do/jinli-ancient-street" },
+        { title: "Kuanzhai Alley", description: "Explore Kuanzhai Alley, one of Chengdu's top attractions.", href: "/destinations/chengdu/what-to-do/kuanzhai-alley" },
+        { title: "Chengdu Guide", description: "Complete guide to planning your Chengdu trip.", href: "/destinations/chengdu" },
+        { title: "Where to Eat in Chengdu", description: "Discover Chengdu's best local dishes and restaurants.", href: "/destinations/chengdu/where-to-eat" },
+      ]}
     />
   );
 }

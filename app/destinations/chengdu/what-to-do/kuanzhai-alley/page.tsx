@@ -44,12 +44,7 @@ export default function KuanzhaiAlleyPage() {
     },
   ] as const;
 
-  const relatedLinks = [
-    { title: 'Jinli', href: '/destinations/chengdu/what-to-do/jinli-ancient-street' },
-    { title: 'Wenshu Monastery', href: '/destinations/chengdu/what-to-do/wenshu-monastery' },
-    { title: 'Chengdu Where to Eat', href: '/destinations/chengdu/where-to-eat' },
-    { title: 'Chengdu Guide', href: '/destinations/chengdu' },
-  ] as const;
+  const relatedLinks = [] as const;
 
   return (
     <AttractionPage
@@ -62,7 +57,7 @@ export default function KuanzhaiAlleyPage() {
     ]}
       nameZh="宽窄巷子"
       city="Chengdu"
-      description={`Three parallel Qing-dynasty alleys — Wide Alley (Kuan) for tea and culture, Narrow Alley (Zhai) for bars and boutiques, Well Alley (Jing) for local snacks and wall art. Chengdu\'s answer to Beijing\'s hutong but more polished. Packed but pretty.`}
+      description={`Three parallel Qing-dynasty alleys — Wide Alley (Kuan) for tea and culture, Narrow Alley (Zhai) for bars and boutiques, Well Alley (Jing) for local snacks and wall art. Chengdu's answer to Beijing's hutong but more polished. Packed but pretty.`}
       hours="Open all day, best 10:00-22:00"
       price="Free entry"
       nearestSubway="Kuanzhai Alley, Line 4"
@@ -73,6 +68,12 @@ export default function KuanzhaiAlleyPage() {
       addressZh="成都市青羊区宽巷子8号"
         
       relatedLinks={relatedLinks}
+      relatedArticles={[
+        { title: "Jinli", description: "Explore Jinli, one of Chengdu's top attractions.", href: "/destinations/chengdu/what-to-do/jinli-ancient-street" },
+        { title: "Wenshu Monastery", description: "Explore Wenshu Monastery, one of Chengdu's top attractions.", href: "/destinations/chengdu/what-to-do/wenshu-monastery" },
+        { title: "Where to Eat in Chengdu", description: "Discover Chengdu's best local dishes and restaurants.", href: "/destinations/chengdu/where-to-eat" },
+        { title: "Chengdu Guide", description: "Complete guide to planning your Chengdu trip.", href: "/destinations/chengdu" },
+      ]}
     />
   );
 }

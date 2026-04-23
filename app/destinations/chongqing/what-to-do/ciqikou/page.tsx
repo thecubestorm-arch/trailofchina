@@ -18,11 +18,7 @@ const tips = [
   { type: 'tip' as const, text: '15 minutes by subway from city center' },
 ] as const;
 
-const relatedLinks = [
-  { title: 'Yangtze Cable Car', href: '/destinations/chongqing/what-to-do/yangtze-cable-car' },
-  { title: 'Chongqing Where to Eat', href: '/destinations/chongqing/where-to-eat' },
-  { title: 'Chongqing Guide', href: '/destinations/chongqing' },
-] as const;
+const relatedLinks = [] as const;
 
 export default function CiqikouPage() {
   return (
@@ -51,6 +47,8 @@ export default function CiqikouPage() {
         { title: "Hongya Cave", description: "Chongqing's iconic 11-story stilted building complex overlooking the river.", href: "/destinations/chongqing/what-to-do/hongya-cave" },
         { title: "Chongqing Hotpot", description: "Chongqing's signature dish - spicy, oily, and unforgettable.", href: "/destinations/chongqing/where-to-eat/chongqing-hotpot" },
         { title: "Yangtze River Cable Car", description: "Aerial ride over the Yangtze River with stunning city views.", href: "/destinations/chongqing/what-to-do/yangtze-cable-car" },
+        { title: "Where to Eat in Chongqing", description: "Discover Chongqing's best local dishes and restaurants.", href: "/destinations/chongqing/where-to-eat" },
+        { title: "Chongqing Guide", description: "Complete guide to planning your Chongqing trip.", href: "/destinations/chongqing" },
       ]}
     />
   );

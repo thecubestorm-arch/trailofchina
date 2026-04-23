@@ -84,18 +84,16 @@ export default function TempleOfHeavenPage() {
       address="7 Tiantan Road, Dongcheng District"
       addressZh="北京市东城区天坛路7号"
         
-      relatedLinks={[
-        { title: 'Summer Palace', href: '/destinations/beijing/what-to-do/summer-palace' },
-        { title: 'Lama Temple', href: '/destinations/beijing/what-to-do/lama-temple' },
-        { title: 'Hutong Tours', href: '/destinations/beijing/what-to-do/hutong' },
-        { title: 'Beijing Where to Eat', href: '/destinations/beijing/where-to-eat' },
-        { title: 'Beijing Local Tips', href: '/destinations/beijing/local-tips' },
-        { title: 'Forbidden City', href: '/destinations/beijing/what-to-do/forbidden-city' },
-      ]}
+      relatedLinks={[]}
       relatedArticles={[
         { title: "Forbidden City", description: "The world's largest palace complex with 980 buildings.", href: "/destinations/beijing/what-to-do/forbidden-city" },
         { title: "Great Wall of China", description: "The world's longest wall stretching across northern China.", href: "/destinations/beijing/what-to-do/great-wall" },
         { title: "Peking Duck", description: "Beijing's most famous dish - try it at the city's best restaurants.", href: "/destinations/beijing/where-to-eat/peking-duck" },
+        { title: "Summer Palace", description: "Imperial gardens and lakes on the outskirts of Beijing.", href: "/destinations/beijing/what-to-do/summer-palace" },
+        { title: "Lama Temple", description: "Explore Lama Temple, one of Beijing's top attractions.", href: "/destinations/beijing/what-to-do/lama-temple" },
+        { title: "Hutong Tours", description: "Explore Hutong Tours, one of Beijing's top attractions.", href: "/destinations/beijing/what-to-do/hutong" },
+        { title: "Where to Eat in Beijing", description: "Discover Beijing's best local dishes and restaurants.", href: "/destinations/beijing/where-to-eat" },
+        { title: "Beijing Local Tips", description: "Practical tips for navigating Beijing like a local.", href: "/destinations/beijing/local-tips" },
       ]}
       tips={[...tips, ...photoSpots]}
     />

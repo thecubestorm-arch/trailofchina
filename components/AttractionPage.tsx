@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
 import ChineseWatermark from './ChineseWatermark';
 import Breadcrumb from './Breadcrumb';
 import RelatedArticles from './RelatedArticles';
@@ -175,24 +174,7 @@ export default function AttractionPage({
           <RelatedArticles articles={relatedArticles} />
         )}
 
-        {/* Related Links */}
-        {relatedLinks.length > 0 && (
-          <section className="mb-10">
-            <h2 className="text-2xl font-serif font-bold mb-4 text-[var(--foreground)]">Explore More</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-              {relatedLinks.map((link, idx) => (
-                <Link
-                  key={idx}
-                  href={link.href}
-                  className="block p-4 border border-[var(--line)] rounded-lg hover:border-[var(--primary)] hover:shadow-sm transition-all bg-[var(--background)] hover:bg-[var(--accent-soft)]"
-                >
-                  <span className="text-[var(--primary)] font-medium block mb-1">{link.title}</span>
-                  <span className="text-[var(--muted)] text-sm">Click to view details</span>
-                </Link>
-              ))}
-            </div>
-          </section>
-        )}
+
       </main>
     </div>
   );

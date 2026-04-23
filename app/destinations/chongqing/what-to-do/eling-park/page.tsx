@@ -22,11 +22,7 @@ const tips = [
   { type: 'photo' as const, text: 'Park pavilions' },
 ] as const;
 
-const relatedLinks = [
-  { title: 'Yangtze Cable Car', href: '/destinations/chongqing/what-to-do/yangtze-cable-car' },
-  { title: 'Hongya Cave', href: '/destinations/chongqing/what-to-do/hongya-cave' },
-  { title: 'Chongqing Guide', href: '/destinations/chongqing' },
-] as const;
+const relatedLinks = [] as const;
 
 export default function ElingParkPage() {
   return (
@@ -51,6 +47,11 @@ export default function ElingParkPage() {
       addressZh="重庆市渝中区鹅岭正街"
         
       relatedLinks={relatedLinks}
+      relatedArticles={[
+        { title: "Yangtze River Cable Car", description: "Explore Yangtze River Cable Car, one of Chongqing's top attractions.", href: "/destinations/chongqing/what-to-do/yangtze-cable-car" },
+        { title: "Hongya Cave", description: "Explore Hongya Cave, one of Chongqing's top attractions.", href: "/destinations/chongqing/what-to-do/hongya-cave" },
+        { title: "Chongqing Guide", description: "Complete guide to planning your Chongqing trip.", href: "/destinations/chongqing" },
+      ]}
     />
   );
 }

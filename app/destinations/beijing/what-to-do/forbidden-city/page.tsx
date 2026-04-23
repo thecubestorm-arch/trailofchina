@@ -105,19 +105,16 @@ The layout reflects ancient Chinese cosmology, with the Three Great Halls (Supre
       address="4 Jingshan Front Street, Dongcheng District"
       addressZh="北京市东城区景山前街4号"
         
-      relatedLinks={[
-        { title: 'Summer Palace', href: '/destinations/beijing/what-to-do/summer-palace' },
-        { title: 'Temple of Heaven', href: '/destinations/beijing/what-to-do/temple-of-heaven' },
-        { title: 'Jingshan Park', href: '/destinations/beijing/what-to-do/jingshan-park' },
-        { title: 'Beijing Local Tips', href: '/destinations/beijing/local-tips' },
-        { title: 'China Basics', href: '/china-basics' },
-        { title: 'Where to Eat in Beijing', href: '/destinations/beijing/where-to-eat' },
-      ]}
+      relatedLinks={[]}
       relatedArticles={[
         { title: 'Great Wall of China', description: "The world's longest wall stretching across northern China.", href: '/destinations/beijing/what-to-do/great-wall' },
         { title: 'Temple of Heaven', description: 'The majestic temple complex where emperors performed rituals.', href: '/destinations/beijing/what-to-do/temple-of-heaven' },
         { title: 'Peking Duck', description: "Beijing's most famous dish - try it at the city's best restaurants.", href: '/destinations/beijing/where-to-eat/peking-duck' },
         { title: 'Summer Palace', description: 'Imperial gardens and lakes on the outskirts of Beijing.', href: '/destinations/beijing/what-to-do/summer-palace' },
+        { title: 'Jingshan Park', description: 'Explore Jingshan Park, one of Beijing\'s top attractions.', href: '/destinations/beijing/what-to-do/jingshan-park' },
+        { title: 'Beijing Local Tips', description: 'Practical tips for navigating Beijing like a local.', href: '/destinations/beijing/local-tips' },
+        { title: 'China Basics', description: 'Essential tips for first-time visitors to China.', href: '/china-basics' },
+        { title: 'Where to Eat in Beijing', description: "Discover Beijing's best local dishes and restaurants.", href: '/destinations/beijing/where-to-eat' },
       ]}
       tips={[...tips, ...photoSpots]}
     />

@@ -22,12 +22,7 @@ const tips = [
   { type: 'photo' as const, text: 'Both station platforms' },
 ] as const;
 
-const relatedLinks = [
-  { title: 'Hongya Cave', href: '/destinations/chongqing/what-to-do/hongya-cave' },
-  { title: 'Ciqikou', href: '/destinations/chongqing/what-to-do/ciqikou' },
-  { title: 'Chongqing Where to Eat', href: '/destinations/chongqing/where-to-eat' },
-  { title: 'Chongqing Guide', href: '/destinations/chongqing' },
-] as const;
+const relatedLinks = [] as const;
 
 export default function YangtzeCableCarPage() {
   return (
@@ -52,6 +47,12 @@ export default function YangtzeCableCarPage() {
       addressZh="重庆市渝中区新华路"
         
       relatedLinks={relatedLinks}
+      relatedArticles={[
+        { title: "Hongya Cave", description: "Explore Hongya Cave, one of Chongqing's top attractions.", href: "/destinations/chongqing/what-to-do/hongya-cave" },
+        { title: "Ciqikou", description: "Explore Ciqikou, one of Chongqing's top attractions.", href: "/destinations/chongqing/what-to-do/ciqikou" },
+        { title: "Where to Eat in Chongqing", description: "Discover Chongqing's best local dishes and restaurants.", href: "/destinations/chongqing/where-to-eat" },
+        { title: "Chongqing Guide", description: "Complete guide to planning your Chongqing trip.", href: "/destinations/chongqing" },
+      ]}
     />
   );
 }
