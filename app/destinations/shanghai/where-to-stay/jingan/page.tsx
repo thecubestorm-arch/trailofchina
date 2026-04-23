@@ -42,6 +42,11 @@ export default function JinganPage() {
         { title: 'Xintiandi', href: '/destinations/shanghai/where-to-stay/xintiandi' },
         { title: 'Where to Stay in Shanghai', href: '/destinations/shanghai/where-to-stay' },
       ]}
+      images={[
+        { src: "https://picsum.photos/seed/jingan-1/800/500", alt: "Jing'an Temple surrounded by modern skyscrapers in Shanghai" },
+        { src: "https://picsum.photos/seed/jingan-2/800/500", alt: "Nanjing West Road shopping district in Shanghai's Jing'an" },
+        { src: "https://picsum.photos/seed/jingan-3/800/500", alt: "Busy intersection near Jing'an Temple metro station" },
+      ]}
     />
   );
 }

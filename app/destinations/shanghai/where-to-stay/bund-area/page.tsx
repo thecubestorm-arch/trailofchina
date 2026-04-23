@@ -43,6 +43,11 @@ export default function BundAreaPage() {
         { title: 'Xintiandi', href: '/destinations/shanghai/where-to-stay/xintiandi' },
         { title: 'Where to Stay in Shanghai', href: '/destinations/shanghai/where-to-stay' },
       ]}
+      images={[
+        { src: "https://picsum.photos/seed/bund-area-1/800/500", alt: "The Bund waterfront skyline at night in Shanghai" },
+        { src: "https://picsum.photos/seed/bund-area-2/800/500", alt: "Colonial-era architecture along the Shanghai Bund" },
+        { src: "https://picsum.photos/seed/bund-area-3/800/500", alt: "Huangpu River view from the Bund in Shanghai" },
+      ]}
     />
   );
 }

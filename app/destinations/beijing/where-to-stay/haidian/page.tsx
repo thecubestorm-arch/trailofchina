@@ -45,6 +45,11 @@ export default function HaidianPage() {
         { title: 'Beijing Local Tips', href: '/destinations/beijing/local-tips' },
         { title: 'Where to Stay in Beijing', href: '/destinations/beijing/where-to-stay' },
       ]}
+      images={[
+        { src: "https://picsum.photos/seed/haidian-1/800/500", alt: "Peking University campus in Haidian district, Beijing" },
+        { src: "https://picsum.photos/seed/haidian-2/800/500", alt: "Summer Palace gardens near Beijing's university district" },
+        { src: "https://picsum.photos/seed/haidian-3/800/500", alt: "Tree-lined academic streets in Haidian" },
+      ]}
     />
   );
 }

@@ -52,6 +52,11 @@ export default function ChunxiRoadPage() {
         { label: 'Where to Stay', href: '/destinations/chengdu/where-to-stay' },
         { label: 'Chunxi Road' },
       ]}
+      images={[
+        { src: "https://picsum.photos/seed/chunxi-road-1/800/500", alt: "Chunxi Road shopping district in Chengdu" },
+        { src: "https://picsum.photos/seed/chunxi-road-2/800/500", alt: "IFS Plaza with the famous climbing panda sculpture in Chengdu" },
+        { src: "https://picsum.photos/seed/chunxi-road-3/800/500", alt: "Busy pedestrian street in Chengdu's central shopping area" },
+      ]}
     />
   );
 }

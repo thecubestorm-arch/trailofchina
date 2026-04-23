@@ -45,6 +45,11 @@ export default function SanlitunPage() {
         { title: 'Beijing Local Tips', href: '/destinations/beijing/local-tips' },
         { title: 'Where to Stay in Beijing', href: '/destinations/beijing/where-to-stay' },
       ]}
+      images={[
+        { src: "https://picsum.photos/seed/sanlitun-1/800/500", alt: "Sanlitun Soho modern architecture at night in Beijing" },
+        { src: "https://picsum.photos/seed/sanlitun-2/800/500", alt: "Taikoo Li shopping and dining district in Beijing" },
+        { src: "https://picsum.photos/seed/sanlitun-3/800/500", alt: "Bustling nightlife scene in Beijing's Sanlitun district" },
+      ]}
     />
   );
 }

@@ -44,6 +44,11 @@ export default function WangfujingPage() {
         { title: 'Beijing Guide', href: '/destinations/beijing/guide' },
         { title: 'Where to Stay in Beijing', href: '/destinations/beijing/where-to-stay' },
       ]}
+      images={[
+        { src: "https://picsum.photos/seed/wangfujing-1/800/500", alt: "Wangfujing pedestrian shopping street in central Beijing" },
+        { src: "https://picsum.photos/seed/wangfujing-2/800/500", alt: "Night market stalls on Wangfujing Snack Street" },
+        { src: "https://picsum.photos/seed/wangfujing-3/800/500", alt: "Historic buildings along Beijing's Wangfujing avenue" },
+      ]}
     />
   );
 }

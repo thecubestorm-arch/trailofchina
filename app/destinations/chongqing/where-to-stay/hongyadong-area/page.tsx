@@ -52,6 +52,11 @@ export default function HongyadongAreaPage() {
         { label: 'Where to Stay', href: '/destinations/chongqing/where-to-stay' },
         { label: 'Hongyadong Area' },
       ]}
+      images={[
+        { src: "https://picsum.photos/seed/hongyadong-area-1/800/500", alt: "Hongyadong stilt-house complex lit up at night in Chongqing" },
+        { src: "https://picsum.photos/seed/hongyadong-area-2/800/500", alt: "Riverside view of Chongqing's iconic Hongyadong architecture" },
+        { src: "https://picsum.photos/seed/hongyadong-area-3/800/500", alt: "Crowded tourist walkways at Hongyadong in the evening" },
+      ]}
     />
   );
 }

@@ -42,6 +42,11 @@ export default function FrenchConcessionPage() {
         { title: 'Xintiandi', href: '/destinations/shanghai/where-to-stay/xintiandi' },
         { title: 'Where to Stay in Shanghai', href: '/destinations/shanghai/where-to-stay' },
       ]}
+      images={[
+        { src: "https://picsum.photos/seed/french-concession-1/800/500", alt: "Plane tree-lined streets of Shanghai's French Concession" },
+        { src: "https://picsum.photos/seed/french-concession-2/800/500", alt: "Historic lane houses and cafes in the French Concession" },
+        { src: "https://picsum.photos/seed/french-concession-3/800/500", alt: "Charming boutiques on a quiet French Concession street" },
+      ]}
     />
   );
 }

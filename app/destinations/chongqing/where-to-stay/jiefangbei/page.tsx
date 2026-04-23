@@ -52,6 +52,11 @@ export default function JiefangbeiPage() {
         { label: 'Where to Stay', href: '/destinations/chongqing/where-to-stay' },
         { label: 'Jiefangbei' },
       ]}
+      images={[
+        { src: "https://picsum.photos/seed/jiefangbei-1/800/500", alt: "Jiefangbei pedestrian street neon lights in Chongqing" },
+        { src: "https://picsum.photos/seed/jiefangbei-2/800/500", alt: "Liberation Monument square in downtown Chongqing" },
+        { src: "https://picsum.photos/seed/jiefangbei-3/800/500", alt: "Busy shopping district around Jiefangbei at night" },
+      ]}
     />
   );
 }

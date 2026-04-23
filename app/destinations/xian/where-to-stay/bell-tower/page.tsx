@@ -52,6 +52,11 @@ export default function BellTowerPage() {
         { label: 'Where to Stay', href: '/destinations/xian/where-to-stay' },
         { label: 'Bell Tower Area' },
       ]}
+      images={[
+        { src: "https://picsum.photos/seed/bell-tower-xian-1/800/500", alt: "Xi'an Bell Tower illuminated at night at the city center" },
+        { src: "https://picsum.photos/seed/bell-tower-xian-2/800/500", alt: "Dong Dajie shopping street near the Bell Tower in Xi'an" },
+        { src: "https://picsum.photos/seed/bell-tower-xian-3/800/500", alt: "City Wall gates visible from central Xi'an near Bell Tower" },
+      ]}
     />
   );
 }

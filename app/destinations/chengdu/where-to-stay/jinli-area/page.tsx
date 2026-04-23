@@ -52,6 +52,11 @@ export default function JinliAreaPage() {
         { label: 'Where to Stay', href: '/destinations/chengdu/where-to-stay' },
         { label: 'Jinli Area' },
       ]}
+      images={[
+        { src: "https://picsum.photos/seed/jinli-area-1/800/500", alt: "Red lanterns illuminating Jinli Street in Chengdu" },
+        { src: "https://picsum.photos/seed/jinli-area-2/800/500", alt: "Traditional snack stalls along Jinli Ancient Street" },
+        { src: "https://picsum.photos/seed/jinli-area-3/800/500", alt: "Wuhou Shrine temple grounds near Jinli in Chengdu" },
+      ]}
     />
   );
 }

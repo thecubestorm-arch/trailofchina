@@ -45,6 +45,11 @@ export default function DongchengHutongPage() {
         { title: 'Beijing Local Tips', href: '/destinations/beijing/local-tips' },
         { title: 'Where to Stay in Beijing', href: '/destinations/beijing/where-to-stay' },
       ]}
+      images={[
+        { src: "https://picsum.photos/seed/dongcheng-hutong-1/800/500", alt: "Traditional hutong alleyways in Dongcheng, Beijing" },
+        { src: "https://picsum.photos/seed/dongcheng-hutong-2/800/500", alt: "Courtyard siheyuan hotel in Beijing's historic hutongs" },
+        { src: "https://picsum.photos/seed/dongcheng-hutong-3/800/500", alt: "Nanluoguxiang street scene at dusk" },
+      ]}
     />
   );
 }

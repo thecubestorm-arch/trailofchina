@@ -42,6 +42,11 @@ export default function XintiandiPage() {
         { title: 'Jing\'an', href: '/destinations/shanghai/where-to-stay/jingan' },
         { title: 'Where to Stay in Shanghai', href: '/destinations/shanghai/where-to-stay' },
       ]}
+      images={[
+        { src: "https://picsum.photos/seed/xintiandi-1/800/500", alt: "Restored shikumen stone-gate buildings in Shanghai's Xintiandi" },
+        { src: "https://picsum.photos/seed/xintiandi-2/800/500", alt: "Upscale restaurants in the Xintiandi entertainment district" },
+        { src: "https://picsum.photos/seed/xintiandi-3/800/500", alt: "Fuxing Park near Xintiandi in Shanghai" },
+      ]}
     />
   );
 }

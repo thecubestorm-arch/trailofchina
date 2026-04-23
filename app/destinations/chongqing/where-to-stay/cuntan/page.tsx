@@ -52,6 +52,11 @@ export default function CuntanPage() {
         { label: 'Where to Stay', href: '/destinations/chongqing/where-to-stay' },
         { label: "Cuntan / Nan'an" },
       ]}
+      images={[
+        { src: "https://picsum.photos/seed/cuntan-1/800/500", alt: "Skyline view of Yuzhong peninsula from across the Yangtze River" },
+        { src: "https://picsum.photos/seed/cuntan-2/800/500", alt: "Nanbin Road riverside dining area in Chongqing at dusk" },
+        { src: "https://picsum.photos/seed/cuntan-3/800/500", alt: "Local street-side hotpot restaurant in Chongqing's Nan'an district" },
+      ]}
     />
   );
 }

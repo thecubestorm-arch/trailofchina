@@ -52,6 +52,11 @@ export default function WideNarrowAlleyPage() {
         { label: 'Where to Stay', href: '/destinations/chengdu/where-to-stay' },
         { label: 'Wide & Narrow Alleys' },
       ]}
+      images={[
+        { src: "https://picsum.photos/seed/wide-narrow-alley-1/800/500", alt: "Traditional Qing-dynasty courtyard in Chengdu's Wide Alley" },
+        { src: "https://picsum.photos/seed/wide-narrow-alley-2/800/500", alt: "Hipster cafes on Narrow Alley in Chengdu" },
+        { src: "https://picsum.photos/seed/wide-narrow-alley-3/800/500", alt: "Colorful street lanterns in Chengdu's Kuanzhai Xiangzi" },
+      ]}
     />
   );
 }
