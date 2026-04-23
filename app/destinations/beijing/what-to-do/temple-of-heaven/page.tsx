@@ -75,6 +75,11 @@ export default function TempleOfHeavenPage() {
     ]}
       nameZh="天坛"
       city="Beijing"
+      images={[
+        { src: 'https://picsum.photos/seed/temple-heaven-1/800/500', alt: 'Temple of Heaven circular Hall of Prayer for Good Harvests in Beijing' },
+        { src: 'https://picsum.photos/seed/temple-heaven-2/800/500', alt: 'Echo Wall at Temple of Heaven with tourists' },
+        { src: 'https://picsum.photos/seed/temple-heaven-3/800/500', alt: 'Temple of Heaven park at dawn with tai chi practitioners' },
+      ]}
       description={`Where Ming and Qing emperors prayed for good harvests. The circular Hall of Prayer for Good Harvests is Beijing\'s most iconic silhouette. Come at 6 AM to watch locals doing tai chi, sword dancing, and choir singing. The park is where real Beijing life happens.`}
       hours="6:00-22:00 (park), 8:00-17:30 (halls)"
       price="Park ¥15, All-access ¥34"

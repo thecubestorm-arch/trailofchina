@@ -36,6 +36,11 @@ export default function YangtzeCableCarPage() {
     ]}
       nameZh="长江索道"
       city="Chongqing"
+      images={[
+        { src: 'https://picsum.photos/seed/yangtze-cable-car-1/800/500', alt: 'Yangtze River Cable Car crossing the river in Chongqing' },
+        { src: 'https://picsum.photos/seed/yangtze-cable-car-2/800/500', alt: 'Cable car station with Chongqing mountain city skyline' },
+        { src: 'https://picsum.photos/seed/yangtze-cable-car-3/800/500', alt: 'Aerial view from Yangtze Cable Car at sunset' },
+      ]}
       description="Chongqing's most iconic experience — a cable car gliding over the Yangtze River between the Yuzhong peninsula and Nan'an district. The 4-minute ride gives you panoramic views of the mountain city skyline, the river, and the chaotic beauty of Chongqing's vertical urban landscape."
       hours="7:00-22:00"
       price="¥20 one-way, ¥30 round-trip"

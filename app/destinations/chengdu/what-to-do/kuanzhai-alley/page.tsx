@@ -57,6 +57,11 @@ export default function KuanzhaiAlleyPage() {
     ]}
       nameZh="宽窄巷子"
       city="Chengdu"
+      images={[
+        { src: 'https://picsum.photos/seed/kuanzhai-alley-1/800/500', alt: 'Kuanzhai Alley traditional Qing-dynasty architecture in Chengdu' },
+        { src: 'https://picsum.photos/seed/kuanzhai-alley-2/800/500', alt: 'Wide Alley tea house at Kuanzhai Alley' },
+        { src: 'https://picsum.photos/seed/kuanzhai-alley-3/800/500', alt: 'Brick art wall at Well Alley in Chengdu' },
+      ]}
       description={`Three parallel Qing-dynasty alleys — Wide Alley (Kuan) for tea and culture, Narrow Alley (Zhai) for bars and boutiques, Well Alley (Jing) for local snacks and wall art. Chengdu's answer to Beijing's hutong but more polished. Packed but pretty.`}
       hours="Open all day, best 10:00-22:00"
       price="Free entry"

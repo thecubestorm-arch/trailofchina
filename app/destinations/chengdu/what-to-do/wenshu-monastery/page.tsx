@@ -57,6 +57,11 @@ export default function WenshuMonasteryPage() {
     ]}
       nameZh="文殊院"
       city="Chengdu"
+      images={[
+        { src: 'https://picsum.photos/seed/wenshu-monastery-1/800/500', alt: 'Wenshu Monastery Buddhist temple architecture in Chengdu' },
+        { src: 'https://picsum.photos/seed/wenshu-monastery-2/800/500', alt: 'Wenshu Monastery tea house courtyard with bamboo chairs' },
+        { src: 'https://picsum.photos/seed/wenshu-monastery-3/800/500', alt: 'Vegetarian restaurant near Wenshu Monastery entrance' },
+      ]}
       description={`Chengdu's best-preserved Buddhist monastery and the spiritual heart of the city. The real draw isn\'t the temple — it\'s the tea house in the courtyard where locals play mahjong for hours over ¥10 tea. This is authentic Chengdu life.`}
       hours="8:00-17:00 (tea house until 20:00)"
       price="Free entry, tea ¥10-20"

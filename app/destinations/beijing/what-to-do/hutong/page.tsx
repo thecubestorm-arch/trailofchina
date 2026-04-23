@@ -75,6 +75,11 @@ export default function HutongPage() {
     ]}
       nameZh="胡同"
       city="Beijing"
+      images={[
+        { src: 'https://picsum.photos/seed/hutong-1/800/500', alt: 'Beijing hutong traditional alleyway with siheyuan courtyard houses' },
+        { src: 'https://picsum.photos/seed/hutong-2/800/500', alt: 'Red-tiled hutong rooftops viewed from above' },
+        { src: 'https://picsum.photos/seed/hutong-3/800/500', alt: 'Shichahai lakeside at sunset with traditional huts' },
+      ]}
       description={`Beijing\'s traditional alleyways — living counterpoint to imperial monuments. Nanluoguxiang is polished tourist lane, Yandai Xiejie near Shichahai is quieter. Walk or hire rickshaw. Real hutong life is one block off main tourist drags.`}
       hours="Always open (outdoor neighborhood)"
       price="Free to walk, rickshaw ¥80-120/hr"

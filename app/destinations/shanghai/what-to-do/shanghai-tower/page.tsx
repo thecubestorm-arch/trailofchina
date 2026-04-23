@@ -73,6 +73,11 @@ export default function ShanghaiTowerPage() {
     ]}
       nameZh="上海中心大厦"
       city="Shanghai"
+      images={[
+        { src: 'https://picsum.photos/seed/shanghai-tower-1/800/500', alt: 'Shanghai Tower observation deck panoramic city view' },
+        { src: 'https://picsum.photos/seed/shanghai-tower-2/800/500', alt: 'Shanghai Tower exterior twisted glass skyscraper' },
+        { src: 'https://picsum.photos/seed/shanghai-tower-3/800/500', alt: 'Lujiazui skyline at sunset from Shanghai Tower' },
+      ]}
       description={`The Shanghai Tower (上海中心大厦) is China's tallest building and one of the world's tallest at 632 meters. Its observation deck, located on the 118th floor at 546 meters, offers the highest public viewing platform in Shanghai with uninterrupted 360° panoramic views of the entire city.
 
 The building's distinctive twisted form — rotating 120° from base to top — isn't just aesthetic. The spiral shape reduces wind loads by 24%, a crucial engineering feat for a building this tall in a typhoon-prone city. The tower houses offices, a hotel, retail spaces, and the observation deck, spread across 128 above-ground floors.

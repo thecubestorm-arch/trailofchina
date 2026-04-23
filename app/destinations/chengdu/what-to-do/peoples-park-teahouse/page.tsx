@@ -76,6 +76,11 @@ export default function PeoplesParkTeahousePage() {
     ]}
       nameZh="人民公园茶馆"
       city="Chengdu"
+      images={[
+        { src: 'https://picsum.photos/seed/peoples-park-1/800/500', alt: 'Heming Teahouse bamboo chairs under ginkgo trees in Chengdu' },
+        { src: 'https://picsum.photos/seed/peoples-park-2/800/500', alt: 'Tea master pouring long-stream water at People\'s Park' },
+        { src: 'https://picsum.photos/seed/peoples-park-3/800/500', alt: 'Golden ginkgo leaves at Chengdu People\'s Park teahouse' },
+      ]}
       description={`The Heming Teahouse in People\'s Park is where Chengdu\'s slow-living culture peaks. Hundreds of bamboo chairs under ginkgo trees, ear-cleaning services, mahjong tables, and ¥15 tea refills. This single experience defines what makes Chengdu different from every other Chinese city.`}
       hours="7:00-22:00"
       price="¥15-25 for tea + seat"

@@ -69,6 +69,11 @@ export default function YuGardenPage() {
     ]}
       nameZh="豫园"
       city="Shanghai"
+      images={[
+        { src: 'https://picsum.photos/seed/yu-garden-1/800/500', alt: 'Yu Garden Dragon Wall with ceramic dragons in Shanghai' },
+        { src: 'https://picsum.photos/seed/yu-garden-2/800/500', alt: 'Exquisite Jade Rock at Yu Garden' },
+        { src: 'https://picsum.photos/seed/yu-garden-3/800/500', alt: 'Zigzag bridge over lotus pond at Yu Garden' },
+      ]}
       description={`Yu Garden (豫园), meaning "Garden of Happiness," is a 400-year-old classical Chinese garden in the heart of Shanghai's Old City. Built in 1559 during the Ming Dynasty by Pan Yunduan as a private retreat for his aging father, the garden survived wars, occupations, and the Cultural Revolution to become one of Shanghai's most beloved landmarks.
 
 The garden spans about 2 hectares and features the essential elements of classical Chinese landscape design: rockeries carved from Taihu stones, carp-filled ponds, zigzag bridges, and intricately carved wooden pavilions. The Exquisite Jade Rock (玉玲珑), a porous 3-meter stone with 72 holes, is the garden's most famous feature — water poured over it flows through every hole simultaneously.

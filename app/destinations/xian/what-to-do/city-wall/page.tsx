@@ -69,6 +69,11 @@ export default function CityWallPage() {
     ]}
       nameZh="西安城墙"
       city="Xi'an"
+      images={[
+        { src: 'https://picsum.photos/seed/xian-city-wall-1/800/500', alt: "Xi'an City Wall South Gate watchtower" },
+        { src: 'https://picsum.photos/seed/xian-city-wall-2/800/500', alt: "Cycling on top of Xi'an ancient City Wall" },
+        { src: 'https://picsum.photos/seed/xian-city-wall-3/800/500', alt: "Xi'an City Wall illuminated at night" },
+      ]}
       description={`The Xi'an City Wall is the best-preserved ancient city wall in China, and cycling its 14-kilometer perimeter is the ultimate way to experience this 600-year-old Ming dynasty fortress. Built in 1370 during the reign of Emperor Zhu Yuanzhang, the wall originally protected the city from invaders and today stands as a testament to ancient Chinese military architecture.
 
 The wall is massive — 12 meters tall, 15 meters thick at the base, and wide enough on top for soldiers to march in formation. Today, it's wide enough for cyclists and pedestrians to enjoy leisurely laps while taking in panoramic views of Xi'an. From the wall, you can see the contrast between the old city within (with its traditional architecture and the Muslim Quarter) and the modern metropolis sprawling beyond.

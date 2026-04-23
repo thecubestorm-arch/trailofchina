@@ -73,6 +73,11 @@ export default function FrenchConcessionPage() {
     ]}
       nameZh="法租界"
       city="Shanghai"
+      images={[
+        { src: 'https://picsum.photos/seed/french-concession-1/800/500', alt: 'French Concession plane tree-lined street in Shanghai' },
+        { src: 'https://picsum.photos/seed/french-concession-2/800/500', alt: 'Wukang Mansion Art Deco building on Wukang Road' },
+        { src: 'https://picsum.photos/seed/french-concession-3/800/500', alt: 'Tianzifang narrow alleyways in Shanghai French Concession' },
+      ]}
       description={`The French Concession (法租界) is Shanghai's most atmospheric neighborhood — a leafy enclave of plane tree-lined streets, 1930s Art Deco villas, and hidden lane houses that feels worlds apart from the city's hyper-modern skyline.
 
 Established in 1849 as a French colonial settlement, the concession grew into Shanghai's most elegant district. Today, the colonial architecture remains, repurposed as trendy cafes, cocktail bars, boutique hotels, and designer shops. The area roughly spans from Huaihai Road (淮海路) in the north to Zhaojiabang Road in the south, and from Ruijin Road (瑞金路) in the east to Xingfu Road (幸福路) in the west.

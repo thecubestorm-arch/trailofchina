@@ -36,6 +36,11 @@ export default function ElingParkPage() {
     ]}
       nameZh="鹅岭公园"
       city="Chongqing"
+      images={[
+        { src: 'https://picsum.photos/seed/eling-park-1/800/500', alt: 'Eling Park observation tower panoramic view of Chongqing' },
+        { src: 'https://picsum.photos/seed/eling-park-2/800/500', alt: 'Sunset over Yangtze and Jialing rivers from Eling Park' },
+        { src: 'https://picsum.photos/seed/eling-park-3/800/500', alt: 'Traditional pavilion at Eling Park in Chongqing' },
+      ]}
       description="The highest point on the Yuzhong peninsula and Chongqing's best free viewpoint. A quiet park with pavilions, a century-old mansion, and a two-story observation tower. From the top you see the Yangtze and Jialing rivers converging, the mountain skyline, and the vertical cityscape that makes Chongqing unique."
       hours="6:00-22:00"
       price="Free entry (tower ¥5)"

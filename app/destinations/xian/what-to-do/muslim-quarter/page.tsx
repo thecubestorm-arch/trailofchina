@@ -69,6 +69,11 @@ export default function MuslimQuarterPage() {
     ]}
       nameZh="回民街"
       city="Xi'an"
+      images={[
+        { src: 'https://picsum.photos/seed/muslim-quarter-1/800/500', alt: "Xi'an Muslim Quarter bustling street food stalls at night" },
+        { src: 'https://picsum.photos/seed/muslim-quarter-2/800/500', alt: "Great Mosque Chinese-Islamic architecture in Xi'an" },
+        { src: 'https://picsum.photos/seed/muslim-quarter-3/800/500', alt: "Roujiamo being prepared at Xi'an Muslim Quarter" },
+      ]}
       description={`The Muslim Quarter (回民街) is Xi'an's beating heart of Hui Muslim culture and the street food capital of northwest China. This bustling network of narrow lanes, tucked behind the Drum Tower, has been home to Xi'an's Muslim community for over 1,000 years. The aromas here are intoxicating — cumin-spiced lamb sizzling over charcoal, hand-pulled noodles being slapped against countertops, and sweet osmanthus cakes steaming in bamboo baskets.
 
 The quarter's main drag, Beiyuanmen, is lined with food stalls, souvenir shops, and restaurants serving halal specialties. Must-try dishes include roujiamo (often called the world's first hamburger — spiced meat stuffed in crispy flatbread), yangroupaomo (shredded lamb soup where you tear your own bread into bite-sized pieces), and biangbiang noodles (wide, belt-like noodles with chili oil and garlic). For dessert, try persimmon cakes or sweet fermented rice drink.

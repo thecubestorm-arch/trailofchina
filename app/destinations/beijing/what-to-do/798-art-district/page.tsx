@@ -71,6 +71,11 @@ export default function ArtDistrict798Page() {
     ]}
       nameZh="798艺术区"
       city="Beijing"
+      images={[
+        { src: 'https://picsum.photos/seed/798-art-district-1/800/500', alt: '798 Art District factory pipes and Bauhaus architecture' },
+        { src: 'https://picsum.photos/seed/798-art-district-2/800/500', alt: 'UCCA contemporary art gallery in converted warehouse' },
+        { src: 'https://picsum.photos/seed/798-art-district-3/800/500', alt: 'Outdoor sculptures in Beijing 798 Art District' },
+      ]}
       description={`Beijing\'s contemporary art scene in a vast 1950s East German factory complex. Galleries, studios, design shops, cafes in converted warehouses. UCCA Center for Contemporary Art is the anchor. Best on weekends.`}
       hours="10:00-18:00 (most galleries, weekdays many closed)"
       price="Free entry, some exhibitions ¥50-80"

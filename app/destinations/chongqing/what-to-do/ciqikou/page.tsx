@@ -32,6 +32,11 @@ export default function CiqikouPage() {
     ]}
       nameZh="磁器口"
       city="Chongqing"
+      images={[
+        { src: 'https://picsum.photos/seed/ciqikou-1/800/500', alt: 'Ciqikou Ancient Town narrow stone alley in Chongqing' },
+        { src: 'https://picsum.photos/seed/ciqikou-2/800/500', alt: 'Traditional tea house at Ciqikou Ancient Town' },
+        { src: 'https://picsum.photos/seed/ciqikou-3/800/500', alt: 'Ciqikou Ancient Town entrance gate' },
+      ]}
       description="A 1,000-year-old trading town now converted into Chongqing's busiest tourist street. Narrow stone alleys lined with snack stalls, tea houses, and craft shops. Overwhelmingly crowded on weekends but genuinely atmospheric."
       hours="Open all day, best 9:00-18:00"
       price="Free entry"

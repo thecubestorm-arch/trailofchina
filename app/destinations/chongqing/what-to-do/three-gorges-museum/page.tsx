@@ -32,6 +32,11 @@ export default function ThreeGorgesMuseumPage() {
     ]}
       nameZh="三峡博物馆"
       city="Chongqing"
+      images={[
+        { src: 'https://picsum.photos/seed/three-gorges-museum-1/800/500', alt: 'Three Gorges Museum exterior in Chongqing' },
+        { src: 'https://picsum.photos/seed/three-gorges-museum-2/800/500', alt: 'Ancient bronze exhibit at Three Gorges Museum' },
+        { src: 'https://picsum.photos/seed/three-gorges-museum-3/800/500', alt: 'Three Gorges Dam model at Chongqing museum' },
+      ]}
       description="Chongqing's best museum and one of China's finest. Four floors covering the Three Gorges Dam project, Ba culture, Chongqing's WWII history as China's wartime capital, and a stunning collection of ancient bronzes and ceramics. Free entry, air-conditioned."
       hours="9:00-17:00 (closed Mondays)"
       price="Free (ID required)"

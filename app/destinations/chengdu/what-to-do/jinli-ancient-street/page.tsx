@@ -74,6 +74,11 @@ export default function JinliAncientStreetPage() {
       ]}
       nameZh="锦里"
       city="Chengdu"
+      images={[
+        { src: 'https://picsum.photos/seed/jinli-1/800/500', alt: 'Jinli Ancient Street red lanterns at night in Chengdu' },
+        { src: 'https://picsum.photos/seed/jinli-2/800/500', alt: 'Traditional wooden architecture at Jinli Ancient Street' },
+        { src: 'https://picsum.photos/seed/jinli-3/800/500', alt: 'Sugar painting artist at Jinli Ancient Street' },
+      ]}
       description={`Chengdu's most atmospheric pedestrian street — red lanterns, wooden architecture, snack stalls, and tea houses. Adjacent to Wuhou Shrine. Packed by day, magical at night. The perfect first stop in Chengdu for street food and souvenirs.`}
       hours="Open all day, best 10:00-22:00"
       price="Free entry"

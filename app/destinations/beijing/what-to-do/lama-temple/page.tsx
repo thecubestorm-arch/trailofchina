@@ -71,6 +71,11 @@ export default function LamaTemplePage() {
     ]}
       nameZh="雍和宫"
       city="Beijing"
+      images={[
+        { src: 'https://picsum.photos/seed/lama-temple-1/800/500', alt: 'Lama Temple red walls and golden roofs in Beijing' },
+        { src: 'https://picsum.photos/seed/lama-temple-2/800/500', alt: 'Lama Temple incense smoke at morning light' },
+        { src: 'https://picsum.photos/seed/lama-temple-3/800/500', alt: 'Prayer wheels at Lama Temple' },
+      ]}
       description={`Largest Tibetan Buddhist temple outside Tibet. Red walls, golden roofs, thick incense. The 18-meter Maitreya Buddha carved from single sandalwood tree. Visit early morning when monks chant.`}
       hours="9:00-16:30"
       price="¥25"

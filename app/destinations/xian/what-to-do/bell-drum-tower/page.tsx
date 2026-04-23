@@ -69,6 +69,11 @@ export default function BellDrumTowerPage() {
     ]}
       nameZh="钟楼与鼓楼"
       city="Xi'an"
+      images={[
+        { src: 'https://picsum.photos/seed/bell-drum-tower-1/800/500', alt: "Xi'an Bell Tower illuminated at night" },
+        { src: 'https://picsum.photos/seed/bell-drum-tower-2/800/500', alt: "Drum Tower traditional drum performance" },
+        { src: 'https://picsum.photos/seed/bell-drum-tower-3/800/500', alt: "Bell Tower and Drum Tower panoramic city view" },
+      ]}
       description={`Standing at the geographic and symbolic heart of Xi'an, the Bell Tower (钟楼) and Drum Tower (鼓楼) are the city's most recognizable landmarks. These magnificent Ming dynasty structures have watched over Xi'an for over 600 years, marking time for the ancient capital and serving as gathering points for celebrations, warnings, and daily life.
 
 The Bell Tower, built in 1384, sits in the middle of a bustling traffic circle where four main roads converge. Rising 36 meters on a square brick base, its three-tiered wooden structure features intricate brackets, green-glazed tiles, and golden finials that gleam in sunlight. Inside, you'll find ancient bells (no longer rung) and exhibits on the tower's history. Climb to the upper level for panoramic views of Xi'an radiating outward in four directions.

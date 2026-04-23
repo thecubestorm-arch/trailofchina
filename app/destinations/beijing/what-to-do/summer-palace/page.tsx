@@ -75,6 +75,11 @@ export default function SummerPalacePage() {
     ]}
       nameZh="颐和园"
       city="Beijing"
+      images={[
+        { src: 'https://picsum.photos/seed/summer-palace-1/800/500', alt: 'Summer Palace Long Corridor with painted beams in Beijing' },
+        { src: 'https://picsum.photos/seed/summer-palace-2/800/500', alt: 'Marble Boat on Kunming Lake at Summer Palace' },
+        { src: 'https://picsum.photos/seed/summer-palace-3/800/500', alt: 'Seventeen-Arch Bridge at Summer Palace' },
+      ]}
       description={`Imperial retreat with Kunming Lake, Longevity Hill, Long Corridor (728m of painted beams). Marble Boat symbol of Cixi\'s extravagance. Rent a rowboat in summer. UNESCO World Heritage Site.`}
       hours="6:00-18:00 (Nov-Mar to 17:00)"
       price="¥30 (park), ¥60 (all-inclusive)"

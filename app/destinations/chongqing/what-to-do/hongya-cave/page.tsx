@@ -78,6 +78,11 @@ export default function HongyaCavePage() {
     ]}
       nameZh="洪崖洞"
       city="Chongqing"
+      images={[
+        { src: 'https://picsum.photos/seed/hongya-cave-1/800/500', alt: 'Hongya Cave stilted building complex illuminated at night' },
+        { src: 'https://picsum.photos/seed/hongya-cave-2/800/500', alt: 'Hongya Cave overlooking Jialing River in Chongqing' },
+        { src: 'https://picsum.photos/seed/hongya-cave-3/800/500', alt: 'Hongya Cave traditional architecture and red lanterns' },
+      ]}
       description={`Hongya Cave (洪崖洞) is Chongqing\'s most iconic landmark — an 11-story stilted building complex built into the hillside overlooking the Jialing River. The structure resembles ancient Chaotianmen Gate but was rebuilt in 2006 with modern amenities.
 
 The building rises 15 stories in total, with 6 above ground and 5 descending into the hillside. Each level has a different theme: Level 1 is the entrance with food stalls, Level 2 has snacks, Level 3 has shopping, Level 4 has tea houses, Level 5 has performance venues, Level 6 has restaurants, Level 7 has entertainment, and Level 8-11 are observation decks and luxury suites.

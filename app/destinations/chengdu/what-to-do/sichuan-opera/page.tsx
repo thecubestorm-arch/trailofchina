@@ -57,6 +57,11 @@ export default function SichuanOperaPage() {
     ]}
       nameZh="川剧变脸"
       city="Chengdu"
+      images={[
+        { src: 'https://picsum.photos/seed/sichuan-opera-1/800/500', alt: 'Sichuan Opera face-changing performance on stage' },
+        { src: 'https://picsum.photos/seed/sichuan-opera-2/800/500', alt: 'Colorful opera masks at Chengdu Sichuan Opera' },
+        { src: 'https://picsum.photos/seed/sichuan-opera-3/800/500', alt: 'Sichuan Opera performer in traditional costume' },
+      ]}
       description={`Sichuan opera\'s face-changing (bianlian) is one of China\'s most spectacular traditional arts. Masks change in a fraction of a second — by sleight of hand that\'s been secret for centuries. Chengdu is the only place to see it performed live.`}
       hours="Evening shows 7:30-9:00 PM"
       price="¥120-280"

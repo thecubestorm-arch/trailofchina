@@ -35,6 +35,11 @@ export default function LizibaMonorailPage() {
     ]}
       nameZh="李子坝"
       city="Chongqing"
+      images={[
+        { src: 'https://picsum.photos/seed/liziba-monorail-1/800/500', alt: 'Liziba monorail train passing through apartment building' },
+        { src: 'https://picsum.photos/seed/liziba-monorail-2/800/500', alt: 'Chongqing monorail entering residential building at Liziba' },
+        { src: 'https://picsum.photos/seed/liziba-monorail-3/800/500', alt: 'Liziba Station viewing platform in Chongqing' },
+      ]}
       description="Chongqing's viral internet sensation — a monorail train passing straight through a residential apartment building. The train enters on floor 6 and exits on floor 7 while residents live on the other floors. It went viral in 2018 and now has its own viewing platform."
       hours="Viewing platform: all day, trains: 6:30-22:30"
       price="Free to watch, ¥2-7 to ride"

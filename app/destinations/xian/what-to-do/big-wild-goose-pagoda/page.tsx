@@ -69,6 +69,11 @@ export default function BigWildGoosePagodaPage() {
     ]}
       nameZh="大雁塔"
       city="Xi'an"
+      images={[
+        { src: 'https://picsum.photos/seed/big-wild-goose-pagoda-1/800/500', alt: "Big Wild Goose Pagoda at Da Ci'en Temple in Xi'an" },
+        { src: 'https://picsum.photos/seed/big-wild-goose-pagoda-2/800/500', alt: "North Square musical fountain show at Big Wild Goose Pagoda" },
+        { src: 'https://picsum.photos/seed/big-wild-goose-pagoda-3/800/500', alt: "Interior staircase of Big Wild Goose Pagoda with Buddhist relics" },
+      ]}
       description={`The Big Wild Goose Pagoda (大雁塔) is Xi'an's most iconic Buddhist monument and a towering symbol of the city's golden age as the eastern terminus of the Silk Road. Built in 652 AD during the Tang Dynasty, this seven-story brick pagoda was commissioned by the famous monk Xuanzang ( immortalized in Journey to the West) to house Buddhist scriptures and relics he brought back from his epic 17-year pilgrimage to India.
 
 Standing 64 meters tall, the pagoda exemplifies classic Tang dynasty architecture with its simple, elegant lines and slightly inward-sloping walls. Unlike many wooden pagodas that burned down over the centuries, this brick structure has survived earthquakes, wars, and 1,300 years of weathering. You can climb the interior stairs (steep and narrow) to each of the seven levels, where Buddhist statues and ancient inscriptions await. From the top, you'll enjoy sweeping views over Xi'an and the surrounding temple grounds.
