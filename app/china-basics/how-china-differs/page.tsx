@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import ChineseWatermark from '@/components/ChineseWatermark'
+import Breadcrumb from '@/components/Breadcrumb'
 
 export const metadata: Metadata = {
   title: 'How China Differs | Trail of China',
@@ -60,6 +61,7 @@ export default function HowChinaDiffersHub() {
     <div className="min-h-screen bg-white">
       <main className="mx-auto max-w-4xl px-4 py-12">
         <div className="relative">
+          <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'China Basics', href: '/china-basics' }, { label: 'How China Differs' }]} />
           <ChineseWatermark character="文化" />
           <h1 className="mb-6 text-4xl font-bold text-gray-900">How China Differs</h1>
         </div>

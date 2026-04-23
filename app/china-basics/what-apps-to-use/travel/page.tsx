@@ -10,6 +10,11 @@ export const metadata: Metadata = {
 export default function TravelAppsPage() {
   return (
     <GuideArticlePage
+      breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'China Basics', href: '/china-basics' }, { label: 'What Apps to Use', href: '/china-basics/what-apps-to-use' }, { label: 'Travel Booking' }]}
+      relatedArticles={[
+        { title: 'How to Get Around', description: 'Transportation overview: trains, planes, taxis, and more.', href: '/china-basics/how-to-get-around' },
+        { title: '12306 Train Booking', description: 'Book China train tickets directly like a local.', href: '/china-basics/how-to-get-around/12306' },
+      ]}
       category="What Apps to Use"
       title="Travel Apps: Trip.com and DiDi"
       intro="Trip.com is strong for flights, trains, and hotels in one account. DiDi is the default ride-hailing tool in many cities and makes airport transfers much easier."

@@ -10,6 +10,11 @@ export const metadata: Metadata = {
 export default function MapsAppsPage() {
   return (
     <GuideArticlePage
+      breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'China Basics', href: '/china-basics' }, { label: 'What Apps to Use', href: '/china-basics/what-apps-to-use' }, { label: 'Maps' }]}
+      relatedArticles={[
+        { title: 'How to Get Around', description: 'Navigation tips for trains, metro, and taxis.', href: '/china-basics/how-to-get-around' },
+        { title: 'Didi Guide', description: 'Ride-hailing with built-in navigation.', href: '/china-basics/what-apps-to-use/didi' },
+      ]}
       category="What Apps to Use"
       title="Maps Apps for China"
       intro="Standard global maps can miss details or use different naming conventions. A local-first map stack helps you find exact metro exits, shopping malls, and pickup points."

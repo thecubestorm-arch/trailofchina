@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import ChineseWatermark from '@/components/ChineseWatermark'
+import Breadcrumb from '@/components/Breadcrumb'
 import ContextualCTA from '@/components/ContextualCTA'
 
 export const metadata: Metadata = {
@@ -53,6 +54,7 @@ export default function InternetHub() {
     <div className="min-h-screen bg-white">
       <main className="mx-auto max-w-4xl px-4 py-12">
         <div className="relative">
+          <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'China Basics', href: '/china-basics' }, { label: 'How to Get Internet' }]} />
           <ChineseWatermark character="网络" />
           <h1 className="mb-6 text-4xl font-bold text-gray-900">How to Get Internet in China</h1>
         </div>

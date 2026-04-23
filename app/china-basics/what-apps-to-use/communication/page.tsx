@@ -10,6 +10,11 @@ export const metadata: Metadata = {
 export default function CommunicationAppsPage() {
   return (
     <GuideArticlePage
+      breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'China Basics', href: '/china-basics' }, { label: 'What Apps to Use', href: '/china-basics/what-apps-to-use' }, { label: 'Communication' }]}
+      relatedArticles={[
+        { title: 'WeChat Pay Guide', description: 'Set up WeChat Pay for payments, mini programs, and P2P transfers.', href: '/china-basics/what-apps-to-use/wechat-pay' },
+        { title: 'Payment Apps Overview', description: 'Why you need Alipay and WeChat Pay in cashless China.', href: '/china-basics/what-apps-to-use/payment' },
+      ]}
       category="What Apps to Use"
       title="Communication App: WeChat"
       intro="WeChat is much more than chat. Hotels, tour operators, and local contacts often coordinate schedules, tickets, and payments through it."

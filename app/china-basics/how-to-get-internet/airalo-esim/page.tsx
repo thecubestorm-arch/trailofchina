@@ -10,6 +10,11 @@ export const metadata: Metadata = {
 export default function AiraloEsimPage() {
   return (
     <GuideArticlePage
+      breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'China Basics', href: '/china-basics' }, { label: 'How to Get Internet', href: '/china-basics/how-to-get-internet' }, { label: 'Airalo eSIM' }]}
+      relatedArticles={[
+        { title: 'Holafly eSIM Guide', description: 'Compare with Holafly for unlimited data eSIM.', href: '/china-basics/how-to-get-internet/holafly-esim' },
+        { title: 'How to Get Internet', description: 'All connectivity options for China travelers.', href: '/china-basics/how-to-get-internet' },
+      ]}
       category="How to Get Internet"
       title="Airalo eSIM for China: Honest Review & Setup Guide (2025)"
       intro="Airalo is one of the most popular eSIM providers for China travelers, offering affordable data plans that activate instantly without swapping physical SIM cards. But how well does it actually work on the ground? Here is our honest, experience-based review."

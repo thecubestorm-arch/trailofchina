@@ -10,6 +10,11 @@ export const metadata: Metadata = {
 export default function MeituanPage() {
   return (
     <GuideArticlePage
+      breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'China Basics', href: '/china-basics' }, { label: 'What Apps to Use', href: '/china-basics/what-apps-to-use' }, { label: 'Meituan' }]}
+      relatedArticles={[
+        { title: 'Alipay Guide', description: 'Pay for Meituan orders with Alipay.', href: '/china-basics/what-apps-to-use/alipay' },
+        { title: 'Payment Apps Overview', description: 'Why you need Alipay and WeChat Pay in cashless China.', href: '/china-basics/what-apps-to-use/payment' },
+      ]}
       category="What Apps to Use"
       title="Meituan App Guide: Food Delivery, Hotels & Deals in China"
       intro="Meituan is China's super-app for food delivery, hotel bookings, movie tickets, and group buying deals. Often called the 'Everything App,' Meituan serves over 600 million users monthly and powers nearly half of China's food delivery orders. As a foreign traveler, Meituan is essential for finding authentic local food and securing discounted experiences."

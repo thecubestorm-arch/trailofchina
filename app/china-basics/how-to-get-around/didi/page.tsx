@@ -1,4 +1,6 @@
 import { Metadata } from 'next';
+import Breadcrumb from '@/components/Breadcrumb'
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
   title: 'DiDi Ride-Hailing in China | Trail of China',
@@ -10,6 +12,9 @@ export default function DidiPage() {
   return (
     <div className="min-h-screen bg-white">
       <main className="max-w-4xl mx-auto px-4 py-12">
+        <div className="mb-6">
+          <Breadcrumb items={[{label:'Home',href:'/'},{label:'China Basics',href:'/china-basics'},{label:'How to Get Around',href:'/china-basics/how-to-get-around'},{label:'Didi'}]} />
+        </div>
         <h1 className="text-4xl font-bold mb-6 text-gray-900">DiDi Ride-Hailing</h1>
         
         <section className="mb-8">
@@ -71,6 +76,7 @@ export default function DidiPage() {
             <li>• Emergency button in app if needed</li>
           </ul>
         </div>
+              <RelatedArticles articles={[{title:'Taxi Guide',description:'Traditional taxi tips and scams to watch for.',href:'/china-basics/how-to-get-around/taxi'},{title:'Didi App Guide',description:'Set up the Didi app for ride-hailing.',href:'/china-basics/what-apps-to-use/didi'}]} />
       </main>
     </div>
   );

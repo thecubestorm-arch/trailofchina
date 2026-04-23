@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import Breadcrumb from '@/components/Breadcrumb'
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
   title: 'WeChat Pay in China: The Ultimate Foreigner\'s Guide',
@@ -11,6 +13,9 @@ export default function WeChatPayPage() {
     <div className="min-h-screen bg-white">
       {/* Overview Section */}
       <section className="container-px mx-auto max-w-4xl py-12 md:py-16">
+        <div className="mb-6">
+          <Breadcrumb items={[{label:'Home',href:'/'},{label:'China Basics',href:'/china-basics'},{label:'What Apps to Use',href:'/china-basics/what-apps-to-use'},{label:'WeChat Pay'}]} />
+        </div>
         <p className="text-xs font-bold uppercase tracking-[0.2em] text-china-red">What Apps to Use</p>
         <h1 className="mt-3 text-4xl font-black tracking-tight text-slate-900 md:text-5xl">
           WeChat Pay in China: The Ultimate Foreigner's Guide
@@ -173,6 +178,7 @@ export default function WeChatPayPage() {
           </a>
         </div>
       </section>
-    </div>
+            <RelatedArticles articles={[{title:'Alipay Guide',description:'Set up Alipay as your backup payment method.',href:'/china-basics/what-apps-to-use/alipay'},{title:'Payment Apps Overview',description:'Why you need both payment apps in China.',href:'/china-basics/what-apps-to-use/payment'},{title:'Didi Guide',description:'Pay for rides with WeChat Pay via Didi.',href:'/china-basics/what-apps-to-use/didi'}]} />
+</div>
   )
 }

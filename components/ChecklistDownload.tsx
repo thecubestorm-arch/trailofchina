@@ -121,8 +121,8 @@ export default function ChecklistDownload() {
         <ChinaCheatSheet />
       </div>
 
-      <section className="rounded-[1.75rem] border border-[#ebe4d8] bg-[#fffaf3] px-5 py-6 shadow-[var(--shadow-soft)] sm:px-8 lg:px-10">
-        <div className="mx-auto max-w-3xl flex flex-col sm:flex-row sm:items-end sm:gap-8">
+      <section className="mx-auto max-w-4xl rounded-[1.75rem] border border-[#ebe4d8] bg-[#fffaf3] px-5 py-8 shadow-[var(--shadow-soft)] sm:px-8 lg:px-10">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:gap-8">
           <div className="sm:flex-1">
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#af5d32]">Free Download</p>
             <h2 className="mt-2 font-serif text-2xl leading-tight text-[#1f2933] sm:text-3xl">Download Your China Arrival Cheat Sheet</h2>

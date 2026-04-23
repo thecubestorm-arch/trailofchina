@@ -1,4 +1,6 @@
 import { Metadata } from 'next';
+import Breadcrumb from '@/components/Breadcrumb'
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
   title: 'High-Speed Trains in China | Trail of China',
@@ -10,6 +12,9 @@ export default function TrainPage() {
   return (
     <div className="min-h-screen bg-white">
       <main className="max-w-4xl mx-auto px-4 py-12">
+        <div className="mb-6">
+          <Breadcrumb items={[{label:'Home',href:'/'},{label:'China Basics',href:'/china-basics'},{label:'How to Get Around',href:'/china-basics/how-to-get-around'},{label:'Train'}]} />
+        </div>
         <h1 className="text-4xl font-bold mb-6 text-gray-900">High-Speed Trains</h1>
         
         <section className="mb-8">
@@ -98,6 +103,7 @@ export default function TrainPage() {
             <li>• Train stations are HUGE - allow extra time to find your platform</li>
           </ul>
         </div>
+              <RelatedArticles articles={[{title:'12306 Train Booking',description:'Book train tickets like a local.',href:'/china-basics/how-to-get-around/12306'},{title:'How to Get Around',description:'All transportation options in China.',href:'/china-basics/how-to-get-around'}]} />
       </main>
     </div>
   );

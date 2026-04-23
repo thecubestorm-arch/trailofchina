@@ -1,4 +1,6 @@
 import { Metadata } from 'next';
+import Breadcrumb from '@/components/Breadcrumb'
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
   title: 'Physical SIM Cards in China | Trail of China',
@@ -9,6 +11,9 @@ export default function PhysicalSimPage() {
   return (
     <div className="min-h-screen bg-white">
       <main className="max-w-4xl mx-auto px-4 py-12">
+        <div className="mb-6">
+          <Breadcrumb items={[{label:'Home',href:'/'},{label:'China Basics',href:'/china-basics'},{label:'How to Get Internet',href:'/china-basics/how-to-get-internet'},{label:'Physical SIM'}]} />
+        </div>
         <h1 className="text-4xl font-bold mb-6 text-gray-900">Physical SIM Cards in China</h1>
         
         <section className="mb-8">
@@ -87,6 +92,7 @@ export default function PhysicalSimPage() {
           <h3 className="font-semibold text-[var(--accent-strong)] mb-2">⚠️ Scam Alert</h3>
           <p className="text-[var(--foreground)]">Never buy from individuals approaching you at the airport. Only buy from official carrier stores with proper signage. Scammers sell used or fake cards.</p>
         </div>
+              <RelatedArticles articles={[{title:'eSIM Guide',description:'Compare eSIM options for easier setup.',href:'/china-basics/how-to-get-internet/esim'},{title:'How to Get Internet',description:'All connectivity options for China travelers.',href:'/china-basics/how-to-get-internet'}]} />
       </main>
     </div>
   );

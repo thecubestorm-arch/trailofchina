@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import RelatedArticles from '@/components/RelatedArticles';
 
 export const metadata: Metadata = {
   title: 'Payment Apps in China: Why You Need Alipay & WeChat Pay | Trail of China',
@@ -128,6 +129,11 @@ export default function PaymentAppsPage() {
             <li><strong>UnionPay (银联)</strong> — China's domestic card network. Some UnionPay cards work internationally; useful as backup</li>
           </ul>
         </section>
+        <RelatedArticles articles={[
+          { title: 'Alipay Setup Guide', description: 'Step-by-step Alipay setup for foreigners.', href: '/china-basics/what-apps-to-use/alipay' },
+          { title: 'WeChat Pay Guide', description: 'Complete WeChat Pay walkthrough.', href: '/china-basics/what-apps-to-use/wechat-pay' },
+          { title: 'Meituan Guide', description: 'Food delivery and deals with Meituan.', href: '/china-basics/what-apps-to-use/meituan' },
+        ]} />
       </main>
     </div>
   );

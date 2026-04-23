@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import ContextualCTA from '@/components/ContextualCTA';
+import Breadcrumb from '@/components/Breadcrumb'
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
   title: 'eSIM Cards for China | Trail of China',
@@ -10,6 +12,9 @@ export default function EsimPage() {
   return (
     <div className="min-h-screen bg-white">
       <main className="max-w-4xl mx-auto px-4 py-12">
+        <div className="mb-6">
+          <Breadcrumb items={[{label:'Home',href:'/'},{label:'China Basics',href:'/china-basics'},{label:'How to Get Internet',href:'/china-basics/how-to-get-internet'},{label:'eSIM'}]} />
+        </div>
         <h1 className="text-4xl font-bold mb-6 text-gray-900">eSIM Cards for China</h1>
         
         <section className="mb-8">
@@ -91,6 +96,7 @@ export default function EsimPage() {
             variant="primary"
           />
         </div>
+              <RelatedArticles articles={[{title:'Airalo eSIM Guide',description:'Budget-friendly eSIM with good China coverage.',href:'/china-basics/how-to-get-internet/airalo-esim'},{title:'Holafly eSIM Guide',description:'Unlimited data eSIM option for China.',href:'/china-basics/how-to-get-internet/holafly-esim'},{title:'How to Get Internet',description:'All connectivity options compared.',href:'/china-basics/how-to-get-internet'}]} />
       </main>
     </div>
   );

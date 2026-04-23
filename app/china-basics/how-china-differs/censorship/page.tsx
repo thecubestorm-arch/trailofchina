@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import ContextualCTA from '@/components/ContextualCTA';
+import Breadcrumb from '@/components/Breadcrumb'
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
   title: 'Censorship & The Great Firewall | Trail of China',
@@ -11,6 +13,9 @@ export default function CensorshipPage() {
   return (
     <div className="min-h-screen bg-white">
       <main className="max-w-4xl mx-auto px-4 py-12">
+        <div className="mb-6">
+          <Breadcrumb items={[{label:'Home',href:'/'},{label:'China Basics',href:'/china-basics'},{label:'How China Differs',href:'/china-basics/how-china-differs'},{label:'Censorship'}]} />
+        </div>
         <h1 className="text-4xl font-bold mb-6 text-gray-900">Censorship & The Great Firewall</h1>
         
         <section className="mb-8">
@@ -116,6 +121,7 @@ export default function CensorshipPage() {
             variant="primary"
           />
         </div>
+              <RelatedArticles articles={[{title:'VPN Guide',description:'Set up a VPN before you arrive in China.',href:'/china-basics/what-apps-to-use/vpn'},{title:'How to Get Internet',description:'eSIM and SIM options for staying connected.',href:'/china-basics/how-to-get-internet'}]} />
       </main>
     </div>
   );

@@ -66,6 +66,10 @@ export default function VisaGuidePage() {
         'Some visa agencies promise "guaranteed approval" — this is impossible. Visa decisions are always at the discretion of the consulate.',
         'Beware of fake invitation letters — using fraudulent documents can result in a permanent visa ban.',
       ]}
+      relatedArticles={[
+        { title: 'Passport Rules in China', description: 'Entry requirements, passport validity, and registration rules.', href: '/china-basics/how-china-differs/passport-rules' },
+        { title: 'How China Differs', description: 'Cultural differences, censorship, and safety standards.', href: '/china-basics/how-china-differs' },
+      ]}
       related={[
         { label: 'How China Differs', href: '/china-basics/how-china-differs' },
         { label: 'Passport Rules', href: '/china-basics/how-china-differs/passport-rules' },

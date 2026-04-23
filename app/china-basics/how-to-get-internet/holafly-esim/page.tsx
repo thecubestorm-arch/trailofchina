@@ -10,6 +10,11 @@ export const metadata: Metadata = {
 export default function HolaflyEsimPage() {
   return (
     <GuideArticlePage
+      breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'China Basics', href: '/china-basics' }, { label: 'How to Get Internet', href: '/china-basics/how-to-get-internet' }, { label: 'Holafly eSIM' }]}
+      relatedArticles={[
+        { title: 'Airalo eSIM Guide', description: 'Compare with Airalo for budget eSIM options.', href: '/china-basics/how-to-get-internet/airalo-esim' },
+        { title: 'How to Get Internet', description: 'All connectivity options for China travelers.', href: '/china-basics/how-to-get-internet' },
+      ]}
       category="How to Get Internet"
       title="Holafly eSIM for China: Review, Pricing & Is It Worth It? (2025)"
       intro="Holafly differentiates itself from other eSIM providers with one key feature: unlimited data. For travelers who do not want to worry about gigabyte limits, Holafly offers peace of mind — but is it worth the premium price? Here is our honest review based on real usage in China."

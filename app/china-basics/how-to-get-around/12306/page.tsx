@@ -10,6 +10,11 @@ export const metadata: Metadata = {
 export default function TrainBookingPage() {
   return (
     <GuideArticlePage
+      breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'China Basics', href: '/china-basics' }, { label: 'How to Get Around', href: '/china-basics/how-to-get-around' }, { label: '12306 Train Booking' }]}
+      relatedArticles={[
+        { title: 'Train Travel in China', description: 'Everything about high-speed rail and seat types.', href: '/china-basics/how-to-get-around/train' },
+        { title: 'Travel Booking Apps', description: 'Trip.com and other booking platforms.', href: '/china-basics/what-apps-to-use/travel' },
+      ]}
       category="How to Get Around"
       title="12306 Train Booking: How to Buy China Train Tickets Like a Local"
       intro="China's high-speed rail network is the world's largest and most efficient, connecting every major city at speeds up to 350 km/h. The 12306 app is the official booking platform — no markup, real-time availability, and the ability to pick your exact seat."

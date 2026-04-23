@@ -1,4 +1,6 @@
 import { Metadata } from 'next';
+import Breadcrumb from '@/components/Breadcrumb'
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
   title: 'Passport & Registration Rules | Trail of China',
@@ -10,6 +12,9 @@ export default function PassportRulesPage() {
   return (
     <div className="min-h-screen bg-white">
       <main className="max-w-4xl mx-auto px-4 py-12">
+        <div className="mb-6">
+          <Breadcrumb items={[{label:'Home',href:'/'},{label:'China Basics',href:'/china-basics'},{label:'How China Differs',href:'/china-basics/how-china-differs'},{label:'Passport Rules'}]} />
+        </div>
         <h1 className="text-4xl font-bold mb-6 text-gray-900">Passport & Registration Rules</h1>
         
         <section className="mb-8">
@@ -90,6 +95,7 @@ export default function PassportRulesPage() {
             or detention. Always comply with police requests politely.
           </p>
         </div>
+              <RelatedArticles articles={[{title:'Visa Guide',description:'Complete China visa walkthrough.',href:'/china-basics/how-china-differs/visa-guide'},{title:'Security Standards',description:'Safety and security tips for China.',href:'/china-basics/how-china-differs/security-standards'}]} />
       </main>
     </div>
   );

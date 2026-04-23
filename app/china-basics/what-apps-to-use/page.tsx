@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import ChineseWatermark from '@/components/ChineseWatermark'
+import Breadcrumb from '@/components/Breadcrumb'
 
 export const metadata: Metadata = {
   title: 'Essential Apps for China | Trail of China',
@@ -8,7 +9,18 @@ export const metadata: Metadata = {
     'Set up essential China travel apps before departure: Alipay, WeChat Pay, maps, travel booking, communication, and VPN access. Get started right.',
 }
 
-const sections = [
+type Section = {
+  category: string
+  icon: string
+  title: string
+  preview: string
+  tags: string[]
+  href: string
+  wechatNote?: string
+  wechatHref?: string
+}
+
+const sections: Section[] = [
   {
     category: 'China Basics',
     icon: '💳',
@@ -26,24 +38,6 @@ const sections = [
       'Step-by-step setup for Alipay: download, international card linking, verification, and first payment. Learn how to use Alipay for transit, shops, and street vendors with confidence.',
     tags: ['💰 Setup', '🔗 Card Linking', '📲 QR Payments', '🚇 Transit'],
     href: '/china-basics/what-apps-to-use/alipay',
-  },
-  {
-    category: 'China Basics',
-    icon: '🍔',
-    title: 'Meituan Guide',
-    preview:
-      'China\'s super-app for food delivery, hotels, movie tickets, and group deals. Learn how to order food, book hotels, and find discounted experiences with Meituan (美团).',
-    tags: ['🍕 Food Delivery', '🏨 Hotels', '🎬 Movie Tickets', '🎯 Group Deals'],
-    href: '/china-basics/what-apps-to-use/meituan',
-  },
-  {
-    category: 'China Basics',
-    icon: '🚕',
-    title: 'Didi Guide',
-    preview:
-      'China\'s Uber for ride-hailing, bike sharing, and bus routes. Setup guide, safety tips, and pricing for foreign travelers using Didi Chuxing (滴滴出行).',
-    tags: ['🚗 Ride-Hailing', '🚲 Bike Sharing', '📍 Navigation', '🛡️ Safety'],
-    href: '/china-basics/what-apps-to-use/didi',
   },
   {
     category: 'China Basics',
@@ -74,21 +68,41 @@ const sections = [
   },
   {
     category: 'China Basics',
-    icon: '💬',
-    title: 'Communication',
-    preview:
-      'WeChat is essential for messaging, service chats, and many day-to-day mini-program tasks. Configure your account and contacts before you fly so local coordination is easy on arrival. Add translation tools and saved phrase lists to handle routine conversations smoothly.',
-    tags: ['💬 WeChat', '🌐 Translation', '📇 Contacts', '🧠 Phrase Lists'],
-    href: '/china-basics/what-apps-to-use/communication',
-  },
-  {
-    category: 'China Basics',
     icon: '🔐',
     title: 'VPN Setup',
     preview:
       'Install and test your VPN before entering China, since provider websites and downloads may be blocked after arrival. Prepare at least one backup profile in case a server becomes unstable. Launch checks from airport Wi-Fi so your core apps work immediately when you land.',
     tags: ['🛡️ Access', '📶 Reliability', '🧪 Pre-Trip Test', '🧰 Backup Plan'],
     href: '/china-basics/what-apps-to-use/vpn',
+  },
+  {
+    category: 'China Basics',
+    icon: '💬',
+    title: 'Communication',
+    preview:
+      'WeChat is essential for messaging, service chats, and many day-to-day mini-program tasks. Configure your account and contacts before you fly so local coordination is easy on arrival. Add translation tools and saved phrase lists to handle routine conversations smoothly.',
+    tags: ['💬 WeChat', '🌐 Translation', '📇 Contacts', '🧠 Phrase Lists'],
+    href: '/china-basics/what-apps-to-use/communication',
+    wechatNote: 'WeChat is essential for messaging in China — see our WeChat Pay guide for full setup.',
+    wechatHref: '/china-basics/what-apps-to-use/wechat-pay',
+  },
+  {
+    category: 'China Basics',
+    icon: '🍔',
+    title: 'Meituan Guide',
+    preview:
+      "China's super-app for food delivery, hotels, movie tickets, and group deals. Learn how to order food, book hotels, and find discounted experiences with Meituan (美团).",
+    tags: ['🍕 Food Delivery', '🏨 Hotels', '🎬 Movie Tickets', '🎯 Group Deals'],
+    href: '/china-basics/what-apps-to-use/meituan',
+  },
+  {
+    category: 'China Basics',
+    icon: '🚕',
+    title: 'Didi Guide',
+    preview:
+      "China's Uber for ride-hailing, bike sharing, and bus routes. Setup guide, safety tips, and pricing for foreign travelers using Didi Chuxing (滴滴出行).",
+    tags: ['🚗 Ride-Hailing', '🚲 Bike Sharing', '📍 Navigation', '🛡️ Safety'],
+    href: '/china-basics/what-apps-to-use/didi',
   },
 ]
 
@@ -97,6 +111,7 @@ export default function WhatAppsToUsePage() {
     <div className="min-h-screen bg-white">
       <main className="mx-auto max-w-4xl px-4 py-12">
         <div className="relative">
+          <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'China Basics', href: '/china-basics' }, { label: 'What Apps to Use' }]} />
           <ChineseWatermark character="应用" />
           <h1 className="mb-6 text-4xl font-bold text-gray-900">What Apps to Use in China</h1>
         </div>
@@ -121,6 +136,12 @@ export default function WhatAppsToUsePage() {
                 {section.icon} {section.title}
               </h2>
               <p className="mt-3 text-base leading-relaxed text-[#4a5568] md:text-lg">{section.preview}</p>
+              {'wechatNote' in section && section.wechatNote && (
+                <p className="mt-2 text-sm text-[#af5d32]">
+                  💬 {section.wechatNote}{' '}
+                  <span className="underline">Read more →</span>
+                </p>
+              )}
               <div className="mt-4 flex flex-wrap gap-2">
                 {section.tags.map((tag) => (
                   <span

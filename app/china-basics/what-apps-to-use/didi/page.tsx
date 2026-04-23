@@ -10,6 +10,11 @@ export const metadata: Metadata = {
 export default function DidiPage() {
   return (
     <GuideArticlePage
+      breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'China Basics', href: '/china-basics' }, { label: 'What Apps to Use', href: '/china-basics/what-apps-to-use' }, { label: 'Didi' }]}
+      relatedArticles={[
+        { title: 'Alipay Guide', description: 'Pay for Didi rides and more with Alipay.', href: '/china-basics/what-apps-to-use/alipay' },
+        { title: 'How to Get Around', description: 'All transportation options in China.', href: '/china-basics/how-to-get-around' },
+      ]}
       category="What Apps to Use"
       title="Didi Chuxing Guide: China's Uber for Taxis & Ride-Hailing"
       intro="Didi Chuxing is China's dominant ride-hailing platform, serving over 300 million users and operating in more than 500 Chinese cities. Often called China's Uber, Didi offers everything from economy rides to premium chauffeured services and bike sharing. For travelers, Didi is the most reliable and affordable way to get around cities without owning a car or speaking fluent Chinese."

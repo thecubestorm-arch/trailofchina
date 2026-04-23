@@ -12,6 +12,7 @@ export default function VpnGuidePage() {
   return (
     <div>
       <GuideArticlePage
+      breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'China Basics', href: '/china-basics' }, { label: 'What Apps to Use', href: '/china-basics/what-apps-to-use' }, { label: 'VPN' }]}
       category="What Apps to Use"
       title="VPN Guide for China Travel"
       intro="If you rely on global services for work or communication, configure your VPN before arrival. Last-minute setup inside China can be unreliable."
@@ -50,6 +51,11 @@ export default function VpnGuidePage() {
       scamAlerts={[
         'Avoid unknown “free VPN” links shared in travel chat groups; many harvest data or credentials.',
         'Do not purchase VPN accounts from street vendors or unofficial QR posters.',
+      ]}
+      relatedArticles={[
+        { title: 'How to Get Internet in China', description: 'eSIM, physical SIM, and Wi-Fi options for staying connected.', href: '/china-basics/how-to-get-internet' },
+        { title: 'Censorship in China', description: 'What is blocked and how to prepare for the Great Firewall.', href: '/china-basics/how-china-differs/censorship' },
+        { title: 'Airalo eSIM Guide', description: 'Set up data before you land with an Airalo eSIM.', href: '/china-basics/how-to-get-internet/airalo-esim' },
       ]}
       related={[
         { label: 'How to Get Internet', href: '/china-basics/how-to-get-internet' },

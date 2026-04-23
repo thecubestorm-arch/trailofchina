@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import GuideArticlePage from '@/components/GuideArticlePage'
+import Breadcrumb from '@/components/Breadcrumb'
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
   title: 'Alipay in China: Complete Setup Guide for Foreigners',
@@ -12,6 +14,9 @@ export default function AlipayPage() {
     <div className="min-h-screen bg-white">
       {/* Overview Section */}
       <section className="container-px mx-auto max-w-4xl py-12 md:py-16">
+        <div className="mb-6">
+          <Breadcrumb items={[{label:'Home',href:'/'},{label:'China Basics',href:'/china-basics'},{label:'What Apps to Use',href:'/china-basics/what-apps-to-use'},{label:'Alipay'}]} />
+        </div>
         <p className="text-xs font-bold uppercase tracking-[0.2em] text-china-red">What Apps to Use</p>
         <h1 className="mt-3 text-4xl font-black tracking-tight text-slate-900 md:text-5xl">
           Alipay in China: Complete Setup Guide for Foreigners
@@ -172,6 +177,7 @@ export default function AlipayPage() {
           </a>
         </div>
       </section>
-    </div>
+            <RelatedArticles articles={[{title:'WeChat Pay Guide',description:'The other must-have payment app for China travelers.',href:'/china-basics/what-apps-to-use/wechat-pay'},{title:'Payment Apps Overview',description:'Why you need Alipay and WeChat Pay in cashless China.',href:'/china-basics/what-apps-to-use/payment'},{title:'Meituan Guide',description:'Order food delivery and book hotels with Meituan.',href:'/china-basics/what-apps-to-use/meituan'}]} />
+</div>
   )
 }
