@@ -84,26 +84,6 @@ export default function ShanghaiWhatToDoPage() {
             <li><strong>Shanghai Museum:</strong> Free entry, incredible ancient Chinese art</li>
           </ul>
         </section>
-
-        <div className="bg-amber-50 border-l-4 border-amber-400 p-4 mb-8">
-          <h3 className="font-semibold text-amber-800 mb-2">💡 Pro Tips</h3>
-          <ul className="text-amber-900 space-y-2">
-            <li>• Book Shanghai Tower tickets online to skip lines</li>
-            <li>• Visit Yu Garden early morning to avoid crowds</li>
-            <li>• Take the ferry across the river (¥2) for cheap skyline views</li>
-            <li>• The Bund gets crowded on weekends - visit on weekdays</li>
-          </ul>
-        </div>
-
-        <div className="bg-[var(--accent-soft)] border-l-4 border-[var(--accent)] p-4">
-          <h3 className="font-semibold text-[var(--accent-strong)] mb-2">⚠️ Tourist Traps to Avoid</h3>
-          <ul className="text-[var(--foreground)] space-y-2">
-            <li>• &quot;Tea ceremony&quot; invitations from strangers (expensive scam)</li>
-            <li>• Overpriced boats on the river - take the ferry instead</li>
-            <li>• Fake antiques in Yu Garden bazaar</li>
-          </ul>
-        </div>
-
         <div className="mt-8">
           <ContextualCTA
             icon="🗺️"

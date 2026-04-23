@@ -103,26 +103,6 @@ export default function ChongqingWhatToDoPage() {
             <li><strong>Night river cruise views:</strong> Better skyline framing than many observation decks</li>
           </ul>
         </section>
-
-        <div className="bg-amber-50 border-l-4 border-amber-400 p-4 mb-8">
-          <h3 className="font-semibold text-amber-800 mb-2">💡 Pro Tips</h3>
-          <ul className="text-amber-900 space-y-2">
-            <li>• Do Hongyadong and cable car near sunset for best light</li>
-            <li>• Use metro + walking bridges; road traffic is slower than it looks</li>
-            <li>• Carry comfortable shoes - stairs and elevation changes are constant</li>
-            <li>• Save offline map pins for entrances on different elevation levels</li>
-          </ul>
-        </div>
-
-        <div className="bg-[var(--accent-soft)] border-l-4 border-[var(--accent)] p-4 mb-8">
-          <h3 className="font-semibold text-[var(--accent-strong)] mb-2">⚠️ Tourist Traps to Avoid</h3>
-          <ul className="text-[var(--foreground)] space-y-2">
-            <li>• Paying premium rates for "private" Hongyadong photo spots</li>
-            <li>• Assuming one map pin equals one correct entrance level</li>
-            <li>• Taking taxi detours at peak hour instead of metro lines</li>
-          </ul>
-        </div>
-
         <div className="mt-8">
           <ContextualCTA
             icon="🗺️"

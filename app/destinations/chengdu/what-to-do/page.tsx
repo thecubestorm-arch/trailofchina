@@ -114,26 +114,6 @@ export default function ChengduWhatToDoPage() {
             <li><strong>Anshun Bridge at night (安顺廊桥):</strong> River reflections and easy evening strolls.</li>
           </ul>
         </section>
-
-        <div className="bg-amber-50 border-l-4 border-amber-400 p-4 mb-8">
-          <h3 className="font-semibold text-amber-800 mb-2">💡 Pro Tips</h3>
-          <ul className="text-amber-900 space-y-2">
-            <li>• Keep panda morning separate from late-night opera plans.</li>
-            <li>• Carry cashless payments and ID for quick ticket checks.</li>
-            <li>• Add food stops from our{' '}<Link href="/destinations/chengdu/where-to-eat" className="underline">Where to Eat guide</Link> near each attraction cluster.</li>
-            <li>• Weekday itineraries feel significantly calmer in Jinli and Kuanzhai.</li>
-          </ul>
-        </div>
-
-        <div className="bg-[var(--accent-soft)] border-l-4 border-[var(--accent)] p-4 mb-12">
-          <h3 className="font-semibold text-[var(--accent-strong)] mb-2">⚠️ Tourist Traps to Avoid</h3>
-          <ul className="text-[var(--foreground)] space-y-2">
-            <li>• Late panda arrival: after 10:30 AM most pandas are inactive or sleeping.</li>
-            <li>• Aggressive souvenir pricing in old streets: compare before buying.</li>
-            <li>• Unofficial "fast-entry" offers outside attractions.</li>
-          </ul>
-        </div>
-
         <div className="mt-8">
           <ContextualCTA
             icon="🗺️"

@@ -108,29 +108,6 @@ export default function XianWhatToDoPage() {
             <li><strong>Ancient City Wall morning walk:</strong> Enter right after opening for fewer cyclists.</li>
           </ul>
         </section>
-
-        <div className="bg-amber-50 border-l-4 border-amber-400 p-4 mb-8">
-          <h3 className="font-semibold text-amber-800 mb-2">💡 Pro Tips</h3>
-          <ul className="text-amber-900 space-y-2">
-            <li>• Pair Terracotta Warriors with a lighter city-center evening, not another major museum day.</li>
-            <li>• Do Bell/Drum Tower and Muslim Quarter together to minimize transit time.</li>
-            <li>• If your schedule is tight, prioritize Pit 1 + Pit 3 instead of rushing every hall.</li>
-            <li>
-              • Use this with <Link href="/destinations/xian/local-tips" className="underline">Local Tips</Link>{' '}
-              for bus details and scam avoidance.
-            </li>
-          </ul>
-        </div>
-
-        <div className="bg-[var(--accent-soft)] border-l-4 border-[var(--accent)] p-4 mb-8">
-          <h3 className="font-semibold text-[var(--accent-strong)] mb-2">⚠️ Tourist Traps to Avoid</h3>
-          <ul className="text-[var(--foreground)] space-y-2">
-            <li>• Fake Terracotta "factory tours" that are mostly shopping detours.</li>
-            <li>• Overpriced souvenir sets sold as "museum certified relics."</li>
-            <li>• Unofficial guides at station exits claiming "no queue" tickets.</li>
-          </ul>
-        </div>
-
         <div className="mt-8">
           <ContextualCTA
             icon="🗺️"

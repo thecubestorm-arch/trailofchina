@@ -171,35 +171,6 @@ export default function BeijingWhatToDoPage() {
             <li><strong>Old Summer Palace (圆明园):</strong> Less visited than the Summer Palace, more atmospheric. Ruined by British-French forces in 1860. The scattered stone columns of the European-style fountains are haunting. ¥25</li>
           </ul>
         </section>
-
-        <div className="bg-amber-50 border-l-4 border-amber-400 p-4 mb-8">
-          <h3 className="font-semibold text-amber-800 mb-2">💡 Pro Tips</h3>
-          <ul className="text-amber-900 space-y-2">
-            <li>• Forbidden City tickets sell out fast — book on their WeChat mini-program at midnight, 7 days before</li>
-            <li>• Enter the Forbidden City from the north gate to walk the route in reverse with fewer crowds</li>
-            <li>• Go to the Great Wall EARLY (before 8 AM) to beat tour groups. Mutianyu is the best balance of crowd vs. scenery</li>
-            <li>• Temple of Heaven at 6 AM: locals doing tai chi, sword dance, choir singing — the real Beijing</li>
-            <li>• 798 Art District: go on weekends (weekday many galleries closed). UCCA is the anchor gallery</li>
-            <li>• Carry toilet paper — most public restrooms don&apos;t provide any</li>
-            <li>• Download offline Baidu Maps — Google Maps is inaccurate for many Beijing addresses. See our{' '}
-              <Link href="/destinations/beijing/local-tips" className="underline">
-                Local Tips
-              </Link> for more
-            </li>
-          </ul>
-        </div>
-
-        <div className="bg-[var(--accent-soft)] border-l-4 border-[var(--accent)] p-4 mb-8">
-          <h3 className="font-semibold text-[var(--accent-strong)] mb-2">⚠️ Avoid These Mistakes</h3>
-          <ul className="text-[var(--foreground)] space-y-2">
-            <li>• Don&apos;t visit the Forbidden City without pre-booked tickets — they sell out and walk-ins are turned away</li>
-            <li>• Skip Wangfujing Snack Street — overpriced novelty foods, not where locals eat</li>
-            <li>• Don&apos;t take &quot;black taxis&quot; (黑车) from tourist sites — always use the official queue or DiDi app</li>
-            <li>• Ignore touts at Deshengmen bus station claiming Bus 877 is &quot;canceled&quot; — it&apos;s a scam to sell you a ¥150 private ride</li>
-            <li>• Don&apos;t visit Badaling on a Chinese national holiday — shoulder-to-shoulder crowds for miles</li>
-          </ul>
-        </div>
-
         <div className="mt-8">
           <ContextualCTA
             icon="🗺️"
