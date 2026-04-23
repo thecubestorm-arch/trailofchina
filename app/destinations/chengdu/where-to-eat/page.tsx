@@ -31,112 +31,95 @@ export default function ChengduWhereToEatPage() {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Must-Try Dishes and Spots</h2>
+          <h2 className="text-2xl font-semibold mb-2">Must-Try Foods</h2>
+          <p className="text-gray-600 mb-6">Click any dish for the full guide</p>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            <article className="border rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-2">1. Sichuan Hotpot (四川火锅)</h3>
+          <div className="space-y-4">
+            <Link href="/destinations/chengdu/where-to-eat/sichuan-hotpot" className="block border rounded-xl p-4 hover:shadow-md transition-all duration-200 cursor-pointer">
+              <h3 className="font-semibold">🌶️ Sichuan Hotpot (四川火锅)</h3>
               <p className="text-gray-700 mb-2">
                 Bubbling red broth loaded with chili and peppercorn. Order a split pot (鸳鸯锅) if you want
                 one mild side for recovery between spicy bites.
               </p>
-              <p className="text-sm text-gray-600">🕐 Best at dinner | 💰 Mid to high by ingredients | 📍 Popular across Jinjiang and Chunxi</p>
-            </article>
+              <p className="text-sm text-gray-600">📍 Jinjiang and Chunxi districts | 💰 Mid to high</p>
+              <span className="text-sm text-[var(--accent)] font-medium">→ Read more</span>
+            </Link>
 
-            <article className="border rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-2">2. Mapo Tofu (麻婆豆腐)</h3>
+            <Link href="/destinations/chengdu/where-to-eat/mapo-tofu" className="block border rounded-xl p-4 hover:shadow-md transition-all duration-200 cursor-pointer">
+              <h3 className="font-semibold">🧈 Mapo Tofu (麻婆豆腐)</h3>
               <p className="text-gray-700 mb-2">
                 Soft tofu in aromatic chili-bean sauce with minced meat and peppercorn fragrance.
                 One of the core dishes to judge a Sichuan kitchen.
               </p>
-              <p className="text-sm text-gray-600">🕐 Lunch or dinner | 💰 Budget friendly | 📍 Traditional Sichuan restaurants citywide</p>
-            </article>
+              <p className="text-sm text-gray-600">📍 Traditional Sichuan restaurants citywide | 💰 Budget friendly</p>
+              <span className="text-sm text-[var(--accent)] font-medium">→ Read more</span>
+            </Link>
 
-            <article className="border rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-2">3. Kung Pao Chicken (宫保鸡丁)</h3>
+            <Link href="/destinations/chengdu/where-to-eat/kung-pao-chicken" className="block border rounded-xl p-4 hover:shadow-md transition-all duration-200 cursor-pointer">
+              <h3 className="font-semibold">🥜 Kung Pao Chicken (宫保鸡丁)</h3>
               <p className="text-gray-700 mb-2">
                 The Chengdu original balances sweet, sour, chili heat, and roasted peanuts.
                 Local versions are usually more layered than overseas adaptations.
               </p>
-              <p className="text-sm text-gray-600">🕐 Lunch is ideal | 💰 Budget to mid | 📍 Family-style eateries near Wenshu and Wuhou</p>
-            </article>
+              <p className="text-sm text-gray-600">📍 Family-style eateries near Wenshu and Wuhou | 💰 Budget to mid</p>
+              <span className="text-sm text-[var(--accent)] font-medium">→ Read more</span>
+            </Link>
 
-            <article className="border rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-2">4. Dan Dan Noodles (担担面)</h3>
+            <Link href="/destinations/chengdu/where-to-eat/dan-dan-noodles" className="block border rounded-xl p-4 hover:shadow-md transition-all duration-200 cursor-pointer">
+              <h3 className="font-semibold">🍜 Dan Dan Noodles (担担面)</h3>
               <p className="text-gray-700 mb-2">
                 Wheat noodles with chili oil, sesame, pickled greens, and minced topping.
                 Portions are small, so pair with dumplings or cold dishes.
               </p>
-              <p className="text-sm text-gray-600">🕐 Great for breakfast or light lunch | 💰 Low cost | 📍 Local noodle shops everywhere</p>
-            </article>
-
-            <article className="border rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-2">5. Specific Restaurant Ideas</h3>
-              <p className="text-gray-700 mb-2">
-                Consider brands with strong local reputation such as Lao Ma Tou Hotpot (老码头火锅)
-                for classic style, or Ming Ting Fan Dian (明婷饭店) for home-style Sichuan intensity.
-              </p>
-              <p className="text-sm text-gray-600">🕐 Reserve peak hours | 💰 Varies by venue | 📍 Multiple districts</p>
-            </article>
-
-            <article className="border rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-2">6. Jinli Street Snacks (锦里小吃)</h3>
-              <p className="text-gray-700 mb-2">
-                Sample rabbit head (兔头), sweet rice cakes, and skewers. It is more touristy,
-                but still useful for quick tasting rounds.
-              </p>
-              <p className="text-sm text-gray-600">🕐 Late afternoon onward | 💰 Pay per snack | 📍 Jinli Ancient Street</p>
-            </article>
+              <p className="text-sm text-gray-600">📍 Local noodle shops everywhere | 💰 Low cost</p>
+              <span className="text-sm text-[var(--accent)] font-medium">→ Read more</span>
+            </Link>
           </div>
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Hidden Gems</h2>
-          <ul className="text-gray-700 list-disc pl-5 space-y-2">
-            <li><strong>Morning noodle lanes near Wenshu:</strong> Short menus, high turnover, very local taste.</li>
-            <li><strong>Community hotpot strips:</strong> Less polished decor, often better broth depth.</li>
-            <li><strong>Late-night chuanchuan (串串):</strong> Skewers priced by stick for budget variety.</li>
-            <li><strong>Tea + snack courtyards:</strong> Good way to cool down between spicy meals.</li>
-          </ul>
+          <h2 className="text-2xl font-semibold mb-4">Restaurant Recommendations</h2>
+
+          <div className="space-y-4">
+            <div className="bg-amber-50 rounded-lg p-4">
+              <h3 className="font-semibold">🌶️ Budget (Under ¥50)</h3>
+              <ul className="text-gray-700 mt-2">
+                <li><strong>Morning noodle lanes near Wenshu:</strong> Short menus, high turnover, very local taste</li>
+                <li><strong>Community hotpot strips:</strong> Less polished decor, often better broth depth</li>
+                <li><strong>Late-night chuanchuan (串串):</strong> Skewers priced by stick for budget variety</li>
+                <li><strong>Tea + snack courtyards:</strong> Good way to cool down between spicy meals</li>
+              </ul>
+            </div>
+
+            <div className="bg-blue-50 rounded-lg p-4">
+              <h3 className="font-semibold">🍽️ Mid-Range (¥50-200)</h3>
+              <ul className="text-gray-700 mt-2">
+                <li><strong>Lao Ma Tou Hotpot (老码头火锅)</strong> — Classic style hotpot, ¥80-130/person</li>
+                <li><strong>Ming Ting Fan Dian (明婷饭店)</strong> — Home-style Sichuan intensity, ¥50-90/person</li>
+                <li><strong>Jinli Street Snacks (锦里小吃)</strong> — Rabbit head, sweet rice cakes, skewers. Touristy but fun for sampling</li>
+              </ul>
+            </div>
+          </div>
         </section>
 
         <div className="bg-amber-50 border-l-4 border-amber-400 p-4 mb-8">
           <h3 className="font-semibold text-amber-800 mb-2">💡 Pro Tips</h3>
           <ul className="text-amber-900 space-y-2">
-            <li>• Ask for "wēi là" (微辣, mild spice) if you are new to Sichuan heat.</li>
+            <li>• Ask for &quot;wēi là&quot; (微辣, mild spice) if you are new to Sichuan heat.</li>
             <li>• Balance spicy dishes with iced soy milk or plum juice.</li>
             <li>• Use our <Link href="/destinations/chengdu/what-to-do" className="underline">What to Do page</Link> to eat near your sightseeing route.</li>
             <li>• Book dinner early on Fridays and Saturdays in central districts.</li>
           </ul>
         </div>
 
-        <div className="bg-[var(--accent-soft)] border-l-4 border-[var(--accent)] p-4 mb-12">
+        <div className="bg-[var(--accent-soft)] border-l-4 border-[var(--accent)] p-4">
           <h3 className="font-semibold text-[var(--accent-strong)] mb-2">⚠️ Tourist Traps to Avoid</h3>
           <ul className="text-[var(--foreground)] space-y-2">
             <li>• Menus without clear prices near top tourist lanes.</li>
-            <li>• "Authentic hotpot" spots with no local diners during prime dinner hours.</li>
+            <li>• &quot;Authentic hotpot&quot; spots with no local diners during prime dinner hours.</li>
             <li>• Ordering maximum spice on your first meal and losing the next day.</li>
           </ul>
         </div>
-
-
-        <section className="mt-8 pt-8 border-t" aria-labelledby="explore-in-detail">
-          <h2 id="explore-in-detail" className="text-xl font-semibold mb-3 text-gray-900">Explore in Detail</h2>
-          <div className="grid gap-4 md:grid-cols-2">
-            <Link href="/destinations/chengdu/where-to-eat/sichuan-hotpot" className="text-[var(--accent)] hover:underline">
-              Sichuan Hotpot →
-            </Link>
-            <Link href="/destinations/chengdu/where-to-eat/mapo-tofu" className="text-[var(--accent)] hover:underline">
-              Mapo Tofu →
-            </Link>
-            <Link href="/destinations/chengdu/where-to-eat/dan-dan-noodles" className="text-[var(--accent)] hover:underline">
-              Dan Dan Noodles →
-            </Link>
-            <Link href="/destinations/chengdu/where-to-eat/kung-pao-chicken" className="text-[var(--accent)] hover:underline">
-              Kung Pao Chicken →
-            </Link>
-          </div>
-        </section>
       </main>
     </div>
   );
