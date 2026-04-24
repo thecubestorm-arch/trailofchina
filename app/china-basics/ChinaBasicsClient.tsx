@@ -29,6 +29,7 @@ interface BasicsItem {
   icon: React.ElementType;
   imageSeed: string;
   category: FilterCategory;
+  topics: string[];
 }
 
 // ─── Data ───────────────────────────────────────────────────────
@@ -56,6 +57,7 @@ const prepareItems: BasicsItem[] = [
     icon: ShieldCheck,
     imageSeed: "china-visa-passport",
     category: "prepare",
+    topics: ["Visa", "Packing"],
   },
   {
     name: "eSIM & Internet",
@@ -64,6 +66,7 @@ const prepareItems: BasicsItem[] = [
     icon: Wifi,
     imageSeed: "china-esim-phone",
     category: "prepare",
+    topics: ["eSIM", "VPN"],
   },
   {
     name: "VPN",
@@ -72,6 +75,7 @@ const prepareItems: BasicsItem[] = [
     icon: Smartphone,
     imageSeed: "china-vpn-laptop",
     category: "prepare",
+    topics: ["VPN"],
   },
   {
     name: "Airalo eSIM",
@@ -80,6 +84,7 @@ const prepareItems: BasicsItem[] = [
     icon: Wifi,
     imageSeed: "china-airalo-esim",
     category: "prepare",
+    topics: ["eSIM"],
   },
   {
     name: "Holafly eSIM",
@@ -88,6 +93,7 @@ const prepareItems: BasicsItem[] = [
     icon: Wifi,
     imageSeed: "china-holafly-esim",
     category: "prepare",
+    topics: ["eSIM"],
   },
 ];
 
@@ -99,6 +105,7 @@ const appsMoneyItems: BasicsItem[] = [
     icon: CreditCard,
     imageSeed: "china-alipay-payment",
     category: "apps-money",
+    topics: ["Alipay", "WeChat Pay"],
   },
   {
     name: "WeChat Pay",
@@ -107,6 +114,7 @@ const appsMoneyItems: BasicsItem[] = [
     icon: CreditCard,
     imageSeed: "china-wechat-qr",
     category: "apps-money",
+    topics: ["WeChat Pay", "Alipay"],
   },
   {
     name: "Payment Overview",
@@ -115,6 +123,7 @@ const appsMoneyItems: BasicsItem[] = [
     icon: CreditCard,
     imageSeed: "china-payment-cashless",
     category: "apps-money",
+    topics: ["Alipay", "WeChat Pay"],
   },
   {
     name: "Maps",
@@ -123,6 +132,7 @@ const appsMoneyItems: BasicsItem[] = [
     icon: Map,
     imageSeed: "china-maps-navigation",
     category: "apps-money",
+    topics: [],
   },
   {
     name: "DiDi",
@@ -131,6 +141,7 @@ const appsMoneyItems: BasicsItem[] = [
     icon: Car,
     imageSeed: "china-didi-taxi",
     category: "apps-money",
+    topics: ["DiDi", "Metro"],
   },
   {
     name: "Trip.com",
@@ -139,6 +150,7 @@ const appsMoneyItems: BasicsItem[] = [
     icon: TrainFront,
     imageSeed: "china-trip-booking",
     category: "apps-money",
+    topics: ["12306", "High-Speed Rail"],
   },
   {
     name: "WeChat",
@@ -147,6 +159,7 @@ const appsMoneyItems: BasicsItem[] = [
     icon: Smartphone,
     imageSeed: "china-wechat-chat",
     category: "apps-money",
+    topics: ["WeChat Pay"],
   },
 ];
 
@@ -158,6 +171,7 @@ const gettingAroundItems: BasicsItem[] = [
     icon: TrainFront,
     imageSeed: "china-train-station",
     category: "getting-around",
+    topics: ["12306", "High-Speed Rail"],
   },
   {
     name: "Getting Around Overview",
@@ -166,6 +180,7 @@ const gettingAroundItems: BasicsItem[] = [
     icon: TrainFront,
     imageSeed: "china-transport-overview",
     category: "getting-around",
+    topics: ["Metro", "DiDi", "High-Speed Rail"],
   },
   {
     name: "High-Speed Rail",
@@ -174,6 +189,7 @@ const gettingAroundItems: BasicsItem[] = [
     icon: TrainFront,
     imageSeed: "china-bullet-train",
     category: "getting-around",
+    topics: ["High-Speed Rail", "12306"],
   },
   {
     name: "Flights",
@@ -182,6 +198,7 @@ const gettingAroundItems: BasicsItem[] = [
     icon: TrainFront,
     imageSeed: "china-airplane",
     category: "getting-around",
+    topics: [],
   },
   {
     name: "Metro",
@@ -190,6 +207,7 @@ const gettingAroundItems: BasicsItem[] = [
     icon: TrainFront,
     imageSeed: "china-metro-subway",
     category: "getting-around",
+    topics: ["Metro"],
   },
 ];
 
@@ -201,6 +219,7 @@ const knowBeforeItems: BasicsItem[] = [
     icon: ShieldCheck,
     imageSeed: "china-great-firewall",
     category: "know-before",
+    topics: ["VPN", "Safety"],
   },
   {
     name: "Cultural Differences",
@@ -209,6 +228,7 @@ const knowBeforeItems: BasicsItem[] = [
     icon: Lightbulb,
     imageSeed: "china-culture-tea",
     category: "know-before",
+    topics: ["Safety"],
   },
   {
     name: "Safety",
@@ -217,6 +237,7 @@ const knowBeforeItems: BasicsItem[] = [
     icon: ShieldCheck,
     imageSeed: "china-safe-street",
     category: "know-before",
+    topics: ["Safety"],
   },
   {
     name: "Passport Rules",
@@ -225,6 +246,7 @@ const knowBeforeItems: BasicsItem[] = [
     icon: ShieldCheck,
     imageSeed: "china-passport-rules",
     category: "know-before",
+    topics: ["Visa", "Safety"],
   },
 ];
 
@@ -235,12 +257,19 @@ const allItems: BasicsItem[] = [
   ...knowBeforeItems,
 ];
 
-const filterChips: { id: FilterCategory; label: string }[] = [
-  { id: "all", label: "All" },
-  { id: "prepare", label: "Prepare" },
-  { id: "apps-money", label: "Apps & Money" },
-  { id: "getting-around", label: "Transport" },
-  { id: "know-before", label: "Tips & Culture" },
+const topicChips = [
+  "All",
+  "Alipay",
+  "WeChat Pay",
+  "VPN",
+  "eSIM",
+  "Visa",
+  "12306",
+  "High-Speed Rail",
+  "DiDi",
+  "Metro",
+  "Packing",
+  "Safety",
 ];
 
 // ─── Shared Components ──────────────────────────────────────────
@@ -460,7 +489,7 @@ function KnowBeforeSection({ expanded = false }: { expanded?: boolean }) {
 export default function ChinaBasicsClient() {
   const [activeTab, setActiveTab] = useState<Tab>("overview");
   const [searchQuery, setSearchQuery] = useState("");
-  const [activeFilter, setActiveFilter] = useState<FilterCategory>("all");
+  const [activeFilter, setActiveFilter] = useState<string>("all");
   const isFiltering = searchQuery.length > 0 || activeFilter !== "all";
 
   // Hide the main site navbar on this hub page
@@ -478,7 +507,7 @@ export default function ChinaBasicsClient() {
   // Filter items based on search + active filter
   const filteredItems = allItems.filter((item) => {
     const matchesSearch = item.name.toLowerCase().includes(searchQuery.toLowerCase()) || item.subtitle.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesFilter = activeFilter === "all" || item.category === activeFilter;
+    const matchesFilter = activeFilter === "all" || item.topics.includes(activeFilter) || item.name.toLowerCase().includes(activeFilter.toLowerCase()) || item.subtitle.toLowerCase().includes(activeFilter.toLowerCase());
     return matchesSearch && matchesFilter;
   });
 
@@ -575,18 +604,18 @@ export default function ChinaBasicsClient() {
                 </button>
               )}
             </div>
-            <div className="flex flex-wrap gap-2">
-              {filterChips.map((chip) => (
+            <div className="flex overflow-x-auto gap-2 pb-2 scrollbar-hide">
+              {topicChips.map((chip) => (
                 <button
-                  key={chip.id}
-                  onClick={() => setActiveFilter(chip.id)}
-                  className={`px-2.5 py-1 text-xs font-medium rounded-full transition-colors ${
-                    activeFilter === chip.id
+                  key={chip}
+                  onClick={() => setActiveFilter(chip === "All" ? "all" : chip)}
+                  className={`px-3 py-1.5 text-xs font-medium rounded-full whitespace-nowrap transition-colors ${
+                    (chip === "All" && activeFilter === "all") || activeFilter === chip
                       ? "bg-[#af5d32] text-white"
                       : "bg-[#f5f1ea] text-[#1a3a4a] border border-[#ebe4d8] hover:border-[#af5d32]"
                   }`}
                 >
-                  {chip.label}
+                  {chip}
                 </button>
               ))}
             </div>

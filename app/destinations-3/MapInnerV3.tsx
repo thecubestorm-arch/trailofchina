@@ -33,6 +33,7 @@ const cities: City[] = [
     whereToEat: 6,
     imageSeed: 'beijing-map-thumb',
     href: '/destinations/beijing/what-to-do',
+    labelOffset: { x: 20, y: -5 },
   },
   {
     name: 'Shanghai',
@@ -44,6 +45,7 @@ const cities: City[] = [
     whereToEat: 5,
     imageSeed: 'shanghai-map-thumb',
     href: '/destinations/shanghai/what-to-do',
+    labelOffset: { x: 20, y: 0 },
   },
   {
     name: "Xi'an",
@@ -55,6 +57,7 @@ const cities: City[] = [
     whereToEat: 4,
     imageSeed: 'xian-map-thumb',
     href: '/destinations/xian/what-to-do',
+    labelOffset: { x: -60, y: 0 },
   },
   {
     name: 'Chengdu',
@@ -66,7 +69,7 @@ const cities: City[] = [
     whereToEat: 4,
     imageSeed: 'chengdu-map-thumb',
     href: '/destinations/chengdu/what-to-do',
-    labelOffset: { x: -12, y: 0 },
+    labelOffset: { x: -60, y: 0 },
   },
   {
     name: 'Chongqing',
@@ -78,7 +81,7 @@ const cities: City[] = [
     whereToEat: 3,
     imageSeed: 'chongqing-map-thumb',
     href: '/destinations/chongqing/what-to-do',
-    labelOffset: { x: 24, y: 0 },
+    labelOffset: { x: 20, y: 10 },
   },
   // ── Coming Soon cities ──────────────────────────────────────────
   {
@@ -92,6 +95,7 @@ const cities: City[] = [
     imageSeed: 'hangzhou-map-thumb',
     href: '#',
     comingSoon: true,
+    labelOffset: { x: -60, y: 20 },
   },
   {
     name: 'Suzhou',
@@ -104,6 +108,7 @@ const cities: City[] = [
     imageSeed: 'suzhou-map-thumb',
     href: '#',
     comingSoon: true,
+    labelOffset: { x: -80, y: 0 },
   },
   {
     name: 'Guilin',
@@ -116,6 +121,7 @@ const cities: City[] = [
     imageSeed: 'guilin-map-thumb',
     href: '#',
     comingSoon: true,
+    labelOffset: { x: 20, y: 0 },
   },
   {
     name: 'Guangzhou',
@@ -128,6 +134,7 @@ const cities: City[] = [
     imageSeed: 'guangzhou-map-thumb',
     href: '#',
     comingSoon: true,
+    labelOffset: { x: -80, y: 0 },
   },
   {
     name: 'Nanjing',
@@ -140,6 +147,7 @@ const cities: City[] = [
     imageSeed: 'nanjing-map-thumb',
     href: '#',
     comingSoon: true,
+    labelOffset: { x: -70, y: 0 },
   },
   {
     name: 'Lhasa',
@@ -152,6 +160,7 @@ const cities: City[] = [
     imageSeed: 'lhasa-map-thumb',
     href: '#',
     comingSoon: true,
+    labelOffset: { x: 20, y: 0 },
   },
   {
     name: 'Kunming',
@@ -171,7 +180,7 @@ const cities: City[] = [
 const cityIcon = (city: City, isHovered: boolean) => {
   const offsetX = city.labelOffset?.x ?? 20;
   const offsetY = city.labelOffset?.y ?? 0;
-  const dotSize = city.comingSoon ? 10 : 14;
+  const dotSize = city.comingSoon ? 8 : 14;
   const dotStyle = city.comingSoon
     ? `width: ${dotSize}px; height: ${dotSize}px; background: #94a3b8; border: 2px solid white;`
     : `width: ${dotSize}px; height: ${dotSize}px; background: #af5d32; border: 3px solid white;`;
@@ -180,14 +189,17 @@ const cityIcon = (city: City, isHovered: boolean) => {
   const comingSoonBadge = city.comingSoon
     ? '<span class="coming-soon-badge">Coming Soon</span>'
     : '';
+  const labelStyle = city.labelOffset
+    ? `left: ${offsetX}px; top: ${offsetY}px; transform: none;`
+    : `left: ${offsetX}px; top: 50%; transform: translateY(-50%);`;
 
   return L.divIcon({
-    className: 'custom-city-marker',
+    className: `custom-city-marker${city.comingSoon ? ' coming-soon-marker' : ''}`,
     html: `
       <div class="city-marker-wrapper" data-coming-soon="${city.comingSoon ? 'true' : 'false'}">
         <div class="city-marker-pulse ${isHovered ? 'pulsing' : ''}"></div>
         <div class="city-marker-dot" style="${dotStyle}"></div>
-        <div class="city-marker-label" style="left: ${offsetX}px; transform: translateY(-50%) translateY(${offsetY}px);">
+        <div class="city-marker-label" style="${labelStyle}">
           <span class="city-name" style="color: ${nameColor}">${city.name}</span>
           <span class="city-tag" style="color: ${tagColor}">${city.bestFor}</span>
           ${comingSoonBadge}
@@ -580,6 +592,30 @@ export default function MapInnerV3() {
           text-shadow: 0 0 4px white, 0 0 8px white;
           line-height: 1.3;
           letter-spacing: 0.02em;
+        }
+
+        .coming-soon-marker .city-name {
+          font-size: 10px;
+          padding: 0 3px;
+        }
+
+        .coming-soon-marker .city-tag {
+          font-size: 8px;
+          display: none;
+        }
+
+        .coming-soon-marker .coming-soon-badge {
+          display: none;
+        }
+
+        .coming-soon-marker .city-marker-dot {
+          width: 8px;
+          height: 8px;
+        }
+
+        .coming-soon-marker .city-marker-pulse {
+          width: 12px;
+          height: 12px;
         }
 
         /* Custom tooltip animation */
