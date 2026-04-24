@@ -13,6 +13,7 @@ import {
   Lightbulb,
   CloudRain,
   Car,
+  Calendar,
   Moon,
   Map,
   ArrowRight,
@@ -574,24 +575,33 @@ function FooterCTA() {
         </div>
 
         {/* Right: Quick info */}
-        <div className="md:col-span-2 bg-[#f5f1ea] p-6 md:p-10 flex flex-col justify-center">
+        <div className="md:col-span-2 bg-white border-l border-[#ebe4d8] p-6 md:p-10 flex flex-col justify-center">
+          <p className="text-xs font-semibold uppercase tracking-[0.15em] text-[#64748b] mb-5">Quick Reference</p>
           <div className="space-y-4">
             <div className="flex items-start gap-3">
-              <span className="text-lg">🗓️</span>
+              <div className="w-8 h-8 rounded-lg bg-[#f5f1ea] flex items-center justify-center flex-shrink-0">
+                <Calendar size={16} className="text-[#af5d32]" />
+              </div>
               <div>
                 <p className="text-sm font-semibold text-[#1a3a4a]">7–14 days recommended</p>
                 <p className="text-xs text-[#64748b]">Most travelers spend 5–7 days in Shanghai</p>
               </div>
             </div>
+            <div className="border-t border-[#ebe4d8]" />
             <div className="flex items-start gap-3">
-              <span className="text-lg">🌤️</span>
+              <div className="w-8 h-8 rounded-lg bg-[#f5f1ea] flex items-center justify-center flex-shrink-0">
+                <Sun size={16} className="text-[#af5d32]" />
+              </div>
               <div>
                 <p className="text-sm font-semibold text-[#1a3a4a]">Best time: Mar–May, Sep–Nov</p>
                 <p className="text-xs text-[#64748b]">Mild weather, fewer crowds</p>
               </div>
             </div>
+            <div className="border-t border-[#ebe4d8]" />
             <div className="flex items-start gap-3">
-              <span className="text-lg">💡</span>
+              <div className="w-8 h-8 rounded-lg bg-[#f5f1ea] flex items-center justify-center flex-shrink-0">
+                <Lightbulb size={16} className="text-[#af5d32]" />
+              </div>
               <div>
                 <p className="text-sm font-semibold text-[#1a3a4a]">First time?</p>
                 <p className="text-xs text-[#64748b]">Start with our <Link href="/plan-your-trip/preplanned-trips" className="text-[#af5d32] hover:underline">7-day route</Link></p>
