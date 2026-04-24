@@ -79,10 +79,27 @@ export default function PandaBasePage() {
       nameZh="成都大熊猫繁育研究基地"
       city="Chengdu"
       images={[
-        { src: 'https://picsum.photos/seed/panda-base-1/800/600', alt: 'Giant pandas eating bamboo' },
-        { src: 'https://picsum.photos/seed/panda-base-2/800/600', alt: 'Baby pandas in nursery' },
-        { src: 'https://picsum.photos/seed/panda-base-3/800/600', alt: 'Panda resting in tree' },
+        { src: 'https://picsum.photos/seed/panda-feeding/800/500', alt: 'Giant pandas eating bamboo during morning feeding' },
+        { src: 'https://picsum.photos/seed/panda-nursery/800/500', alt: 'Baby pandas in the nursery enclosure' },
+        { src: 'https://picsum.photos/seed/panda-bamboo/800/500', alt: 'Pandas surrounded by bamboo forest' },
+        { src: 'https://picsum.photos/seed/panda-red-panda/800/500', alt: 'Red pandas climbing in trees near the entrance' },
+        { src: 'https://picsum.photos/seed/panda-forest/800/500', alt: 'Bamboo forest walking path at Panda Base' },
       ]}
+      hook="See giant pandas up close — morning feeding at 9 AM is when they're most active."
+      quickInfo={{
+        price: '¥55',
+        hours: '7:30–18:00',
+        bestTime: 'Morning (9 AM feeding)',
+        metro: 'Panda Metro Line',
+      }}
+      whyYouLoveIt={`The panda nursery is where the magic happens — watching a 100-gram newborn being hand-fed by keepers is something you'll never forget. Most visitors walk past the nursery too quickly, but linger here and you'll see the youngest pandas in their incubators and playpens, an experience that makes the entire trip worth it.
+
+Don't miss the red panda section near the entrance — they're smaller, more active, and far less crowded than the giant pandas. These fiery little climbers move through the trees like squirrels and are much more likely to interact with visitors. The bamboo forest walking paths between enclosures are also surprisingly beautiful and almost empty after 10 AM when the tour buses leave.`}
+      practicalDetails={{
+        gettingThere: 'Panda Metro direct line, 30min',
+        whatToSkip: 'Afternoon — pandas sleep',
+        photographyTips: 'Morning feeding, no flash',
+      }}
       description={`Chengdu Panda Base (成都大熊猫繁育研究基地) is the world\'s most famous giant panda sanctuary, housing over 200 pandas at any given time. Opened in 1987, it was founded to rescue and breed giant pandas, which are critically endangered.
 
 The base covers 600 acres of bamboo forests and mountains, with multiple village areas containing pandas of different ages. Visitors can see newborns in the nursery, adolescents in the adolescents' home, and adults in various enclosures. The pandas sleep 10-16 hours daily and spend 12-16 hours eating — bamboo is their only food source.

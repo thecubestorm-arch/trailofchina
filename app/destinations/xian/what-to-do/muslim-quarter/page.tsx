@@ -69,11 +69,34 @@ export default function MuslimQuarterPage() {
     ]}
       nameZh="回民街"
       city="Xi'an"
+      hook="Chaos, smoke, and the best street food in China — roujiamo, biangbiang noodles, lamb skewers every 10 meters."
+      quickInfo={{
+        price: 'Free to wander',
+        hours: '11:00–23:00',
+        bestTime: 'Evening for atmosphere',
+        metro: 'Zhonglou (Line 2)',
+      }}
+      whyYouLoveIt={`The Muslim Quarter is sensory overload in the best possible way. Walk down Beiyuanmen at 7 PM and the air is thick with smoke from lamb skewers sizzling over charcoal, the slap of hand-pulled noodles against countertops, and vendors shouting prices in a mix of Mandarin and Hui dialect. This is not sanitized tourist food — this is a 1,000-year-old community cooking the same dishes their ancestors cooked when Xi'an was the eastern terminus of the Silk Road.
+
+The Hui Muslim culture here is unique in China. You'll see men in white skullcaps and women in headscarves, Arabic calligraphy on shop signs next to Chinese characters, and halal restaurants serving dishes you won't find anywhere else in the country. The Great Mosque, hidden behind a wooden gate that looks like a Chinese temple, is the oldest in China — built in 742 AD, it's a masterpiece of Chinese-Islamic architecture where upturned eaves meet prayer halls. This is Xi'an's beating heart, and you can feel the history in every bite.`}
       images={[
-        { src: 'https://picsum.photos/seed/muslim-quarter-1/800/500', alt: "Xi'an Muslim Quarter bustling street food stalls at night" },
-        { src: 'https://picsum.photos/seed/muslim-quarter-2/800/500', alt: "Great Mosque Chinese-Islamic architecture in Xi'an" },
-        { src: 'https://picsum.photos/seed/muslim-quarter-3/800/500', alt: "Roujiamo being prepared at Xi'an Muslim Quarter" },
+        { src: 'https://picsum.photos/seed/muslim-quarter-street/800/600', alt: "Bustling street in Xi'an Muslim Quarter at night" },
+        { src: 'https://picsum.photos/seed/muslim-quarter-food/800/600', alt: "Street food stalls with lamb skewers and roujiamo" },
+        { src: 'https://picsum.photos/seed/muslim-quarter-night/800/600', alt: "Muslim Quarter neon lights and crowds at night" },
+        { src: 'https://picsum.photos/seed/muslim-quarter-lamb/800/600', alt: "Lamb skewers grilling over charcoal" },
+        { src: 'https://picsum.photos/seed/muslim-quarter-noodles/800/600', alt: "Hand-pulled biangbiang noodles being made" },
       ]}
+      practicalDetails={{
+        gettingThere: `Metro Line 2 to Zhonglou (Bell Tower) Station. Take Exit B and walk west on West Street — you'll smell the Muslim Quarter before you see it. The main entrance is a grand wooden archway at the intersection with Beiyuanmen. The walk from the metro takes 3 minutes.
+
+The quarter is a maze of narrow lanes branching off Beiyuanmen. Don't worry about getting lost — the area is compact and every lane eventually loops back. The Great Mosque is about 200 meters down Huajue Lane, marked by a traditional Chinese-style wooden gate.`,
+        whatToSkip: `Cultural show restaurants on the main drag are tourist traps — they serve watered-down versions of local dishes at double the price while dancers perform generic "folk" routines. The real food is on the street. Follow the smoke and the longest queues of locals, not the neon signs.
+
+Avoid the souvenir shops selling "authentic" Silk Road trinkets — most are mass-produced in Yiwu. If you want to buy something, get dried fruit or spices from the food vendors instead. The persimmon cakes (柿子饼) from the stall near the Great Mosque are genuinely local and delicious.`,
+        photographyTips: `Night photography is where the Muslim Quarter shines. The neon signs, steam from food stalls, and crowds create a Blade Runner atmosphere. Shoot at f/1.8 or wider with a high ISO (3200–6400) to capture the energy without a flash — flash kills the mood and annoys vendors.
+
+For food close-ups, ask permission first (most vendors are proud of their work and will pose). The hand-pulled noodle stations are the most photogenic — the slap of the dough, the stretch of the strands, and the flour dust in the air make for dynamic action shots. The Great Mosque courtyards are peaceful and beautifully lit in late afternoon — perfect for architecture photography with the Chinese-Islamic fusion details.`,
+      }}
       description={`The Muslim Quarter (回民街) is Xi'an's beating heart of Hui Muslim culture and the street food capital of northwest China. This bustling network of narrow lanes, tucked behind the Drum Tower, has been home to Xi'an's Muslim community for over 1,000 years. The aromas here are intoxicating — cumin-spiced lamb sizzling over charcoal, hand-pulled noodles being slapped against countertops, and sweet osmanthus cakes steaming in bamboo baskets.
 
 The quarter's main drag, Beiyuanmen, is lined with food stalls, souvenir shops, and restaurants serving halal specialties. Must-try dishes include roujiamo (often called the world's first hamburger — spiced meat stuffed in crispy flatbread), yangroupaomo (shredded lamb soup where you tear your own bread into bite-sized pieces), and biangbiang noodles (wide, belt-like noodles with chili oil and garlic). For dessert, try persimmon cakes or sweet fermented rice drink.

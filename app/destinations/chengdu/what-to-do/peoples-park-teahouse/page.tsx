@@ -77,10 +77,27 @@ export default function PeoplesParkTeahousePage() {
       nameZh="人民公园茶馆"
       city="Chengdu"
       images={[
-        { src: 'https://picsum.photos/seed/peoples-park-1/800/500', alt: 'Heming Teahouse bamboo chairs under ginkgo trees in Chengdu' },
-        { src: 'https://picsum.photos/seed/peoples-park-2/800/500', alt: 'Tea master pouring long-stream water at People\'s Park' },
-        { src: 'https://picsum.photos/seed/peoples-park-3/800/500', alt: 'Golden ginkgo leaves at Chengdu People\'s Park teahouse' },
+        { src: 'https://picsum.photos/seed/peoples-park-tea/800/500', alt: 'Gaiwan tea being poured under banyan trees at People\'s Park' },
+        { src: 'https://picsum.photos/seed/peoples-park-ear/800/500', alt: 'Traditional ear-cleaning service in the teahouse' },
+        { src: 'https://picsum.photos/seed/peoples-park-bamboo/800/500', alt: 'Bamboo chairs arranged under ginkgo trees' },
+        { src: 'https://picsum.photos/seed/peoples-park-banyan/800/500', alt: 'Massive banyan tree canopy over the teahouse' },
+        { src: 'https://picsum.photos/seed/peoples-park-chess/800/500', alt: 'Locals playing chess and mahjong at bamboo tables' },
       ]}
+      hook="The most Chengdu experience — sit under a banyan tree, drink gaiwan tea, watch ear-cleaning specialists."
+      quickInfo={{
+        price: 'Free (tea from ¥15)',
+        hours: '6:00–22:00',
+        bestTime: 'Afternoon (2–5 PM)',
+        metro: 'People\'s Park (Line 2)',
+      }}
+      whyYouLoveIt={`This is where Chengdu's famous "slow living" becomes tangible — hundreds of bamboo chairs spread under massive banyan trees, each occupied by someone doing absolutely nothing productive. The ear-cleaning specialists wander between tables with their toolbox of metal picks and brushes, offering a 20-minute experience that sounds terrifying but is genuinely relaxing once you surrender to it.
+
+The tea itself is almost incidental — ¥15 gets you a gaiwan and a thermos of hot water that the staff refill all afternoon. What you're really paying for is permission to sit still in a city that never stops moving. Watch an old man teach his grandson chess, listen to retirees debate politics at the next table, and understand why Chengdu consistently ranks as China's happiest city.`}
+      practicalDetails={{
+        gettingThere: 'Line 2',
+        whatToSkip: 'Matchmaking corner',
+        photographyTips: 'Ear cleaners, tea pouring, bamboo chairs',
+      }}
       description={`The Heming Teahouse in People\'s Park is where Chengdu\'s slow-living culture peaks. Hundreds of bamboo chairs under ginkgo trees, ear-cleaning services, mahjong tables, and ¥15 tea refills. This single experience defines what makes Chengdu different from every other Chinese city.`}
       hours="7:00-22:00"
       price="¥15-25 for tea + seat"

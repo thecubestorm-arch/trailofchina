@@ -58,10 +58,27 @@ export default function SichuanOperaPage() {
       nameZh="川剧变脸"
       city="Chengdu"
       images={[
-        { src: 'https://picsum.photos/seed/sichuan-opera-1/800/500', alt: 'Sichuan Opera face-changing performance on stage' },
-        { src: 'https://picsum.photos/seed/sichuan-opera-2/800/500', alt: 'Colorful opera masks at Chengdu Sichuan Opera' },
-        { src: 'https://picsum.photos/seed/sichuan-opera-3/800/500', alt: 'Sichuan Opera performer in traditional costume' },
+        { src: 'https://picsum.photos/seed/sichuan-opera-face/800/500', alt: 'Face-changing performer mid-transformation on stage' },
+        { src: 'https://picsum.photos/seed/sichuan-opera-fire/800/500', alt: 'Fire-spitting act during Sichuan Opera show' },
+        { src: 'https://picsum.photos/seed/sichuan-opera-puppet/800/500', alt: 'Shadow puppetry performance in Sichuan Opera' },
+        { src: 'https://picsum.photos/seed/sichuan-opera-stage/800/500', alt: 'Elaborate stage set for Sichuan Opera performance' },
+        { src: 'https://picsum.photos/seed/sichuan-opera-costume/800/500', alt: 'Performer in ornate traditional opera costume' },
       ]}
+      hook="Face-changing, fire-spitting, shadow puppetry — 90 minutes of adrenaline, not your typical opera."
+      quickInfo={{
+        price: '¥150–280',
+        hours: 'Evening shows ~20:00',
+        bestTime: 'Book 1–2 days ahead',
+        metro: 'Varies by venue',
+      }}
+      whyYouLoveIt={`The face-changing reveal happens so fast your brain can't process it — one moment the performer wears a red demon mask, the next it's blue, then green, then gold, all in under a second. The technique is a closely guarded secret passed down through generations, and even sitting in the front row won't help you catch the switch. When the performer walks into the audience and changes masks inches from your face, the entire room gasps in unison.
+
+The fire-spitting act that precedes the face-changing finale is equally spectacular — performers literally breathe jets of flame across the stage while manipulating rolling lamps with their feet. Shadow puppetry segments tell classical Chinese stories with hand-cut leather figures projected onto a screen, providing a brief calm before the next explosion of theatrical energy. This isn't the opera you think you know — it's closer to a rock concert in traditional dress.`}
+      practicalDetails={{
+        gettingThere: 'Various venues, book on Trip.com',
+        whatToSkip: 'Cheapest seats — can\'t see',
+        photographyTips: 'No flash, mask change too fast to photograph',
+      }}
       description={`Sichuan opera\'s face-changing (bianlian) is one of China\'s most spectacular traditional arts. Masks change in a fraction of a second — by sleight of hand that\'s been secret for centuries. Chengdu is the only place to see it performed live.`}
       hours="Evening shows 7:30-9:00 PM"
       price="¥120-280"

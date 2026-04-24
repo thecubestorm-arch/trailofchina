@@ -69,11 +69,34 @@ export default function CityWallPage() {
     ]}
       nameZh="西安城墙"
       city="Xi'an"
+      hook="The most complete city wall in China — rent a bike and ride 14 km on top of 600-year-old fortifications."
+      quickInfo={{
+        price: '¥54',
+        hours: '8:00–22:00',
+        bestTime: 'Sunset for golden hour',
+        metro: 'Yongningmen (Line 2)',
+      }}
+      whyYouLoveIt={`Cycling the full 14-kilometer loop is the single best way to understand Xi'an. The wall is 12 meters high and 15 meters thick at the base — wide enough that you're literally riding on top of a 600-year-old fortress. The South Gate (Yongningmen) is the most grand, with a massive watchtower complex that looks like something from a war movie. Rent a bike there for ¥45 and give yourself two hours for the full loop, stopping at watchtowers along the way.
+
+Sunset is the absolute best time. The golden light hits the ancient bricks, the city begins to glow, and from the wall you can see the contrast between the old city within (traditional rooftops, the Muslim Quarter's minaret) and the modern metropolis beyond. At night, the wall is floodlit in warm amber and the watchtowers glow like lanterns. It's one of the most romantic things you can do in China, and almost no Western tourists know about it.`}
       images={[
-        { src: 'https://picsum.photos/seed/xian-city-wall-1/800/500', alt: "Xi'an City Wall South Gate watchtower" },
-        { src: 'https://picsum.photos/seed/xian-city-wall-2/800/500', alt: "Cycling on top of Xi'an ancient City Wall" },
-        { src: 'https://picsum.photos/seed/xian-city-wall-3/800/500', alt: "Xi'an City Wall illuminated at night" },
+        { src: 'https://picsum.photos/seed/city-wall-bike/800/600', alt: "Cycling on top of Xi'an ancient City Wall" },
+        { src: 'https://picsum.photos/seed/city-wall-sunset/800/600', alt: "Xi'an City Wall at golden hour" },
+        { src: 'https://picsum.photos/seed/city-wall-gate/800/600', alt: "South Gate watchtower of Xi'an City Wall" },
+        { src: 'https://picsum.photos/seed/city-wall-view/800/600', alt: "View of old and new Xi'an from the City Wall" },
+        { src: 'https://picsum.photos/seed/city-wall-moat/800/600', alt: "City Wall moat reflections at dusk" },
       ]}
+      practicalDetails={{
+        gettingThere: `Metro Line 2 to Yongningmen Station (South Gate). Use Exit C and you're literally at the base of the watchtower. This is the main entrance — the most grand, best lit, and the only one with full bike rental facilities. The other three gates (North, East, West) also have access but fewer amenities.
+
+If you enter from South Gate, walk through the tunnel under the wall and emerge into the inner courtyard. Ticket booths are on your right; bike rental is straight ahead past the archery range.`,
+        whatToSkip: `Electric golf carts (¥80) are a tourist trap — they drive slowly, the drivers talk nonstop in Chinese, and you miss the entire point of being on the wall. Rent a bicycle instead. The bikes are single-speed cruisers with baskets and are perfectly adequate for the flat, wide surface.
+
+The archery range inside the South Gate courtyard is overpriced (¥30 for 10 arrows) and not authentic — the bows are modern compound bows, not traditional Chinese recurve. Skip it unless you're traveling with kids who need a distraction.`,
+        photographyTips: `Sunset from any watchtower facing west is the money shot — the golden light on the ancient bricks with the modern city skyline behind. The best spot is the Southeast Corner Tower, which juts out at a 45-degree angle and gives you unobstructed views in three directions.
+
+For the "ancient vs modern" contrast shot, stop at the Northeast section where the wall runs parallel to the train tracks — you can frame a high-speed train passing below the 600-year-old fortification. At night, the moat reflections are stunning from the bridge just south of the South Gate. Bring a tripod for clean night shots.`,
+      }}
       description={`The Xi'an City Wall is the best-preserved ancient city wall in China, and cycling its 14-kilometer perimeter is the ultimate way to experience this 600-year-old Ming dynasty fortress. Built in 1370 during the reign of Emperor Zhu Yuanzhang, the wall originally protected the city from invaders and today stands as a testament to ancient Chinese military architecture.
 
 The wall is massive — 12 meters tall, 15 meters thick at the base, and wide enough on top for soldiers to march in formation. Today, it's wide enough for cyclists and pedestrians to enjoy leisurely laps while taking in panoramic views of Xi'an. From the wall, you can see the contrast between the old city within (with its traditional architecture and the Muslim Quarter) and the modern metropolis sprawling beyond.

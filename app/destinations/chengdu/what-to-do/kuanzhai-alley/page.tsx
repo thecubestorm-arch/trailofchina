@@ -58,10 +58,27 @@ export default function KuanzhaiAlleyPage() {
       nameZh="宽窄巷子"
       city="Chengdu"
       images={[
-        { src: 'https://picsum.photos/seed/kuanzhai-alley-1/800/500', alt: 'Kuanzhai Alley traditional Qing-dynasty architecture in Chengdu' },
-        { src: 'https://picsum.photos/seed/kuanzhai-alley-2/800/500', alt: 'Wide Alley tea house at Kuanzhai Alley' },
-        { src: 'https://picsum.photos/seed/kuanzhai-alley-3/800/500', alt: 'Brick art wall at Well Alley in Chengdu' },
+        { src: 'https://picsum.photos/seed/kuanzhai-wide/800/500', alt: 'Wide Alley traditional Qing-dynasty architecture' },
+        { src: 'https://picsum.photos/seed/kuanzhai-narrow/800/500', alt: 'Narrow Alley with boutique shops and bars' },
+        { src: 'https://picsum.photos/seed/kuanzhai-teahouse/800/500', alt: 'Traditional teahouse on Wide Alley' },
+        { src: 'https://picsum.photos/seed/kuanzhai-lanterns/800/500', alt: 'Evening lanterns illuminating Kuanzhai Alley' },
+        { src: 'https://picsum.photos/seed/kuanzhai-snacks/800/500', alt: 'Sichuan street snacks at Well Alley' },
       ]}
+      hook="Three alleys — Wide, Narrow, Well — restored into Chengdu's most charming neighborhood."
+      quickInfo={{
+        price: 'Free',
+        hours: 'Always open',
+        bestTime: 'Evening for lanterns',
+        metro: 'Kuanzhai Alley (Line 4)',
+      }}
+      whyYouLoveIt={`Wide Alley is where Chengdu's teahouse culture lives in its most polished form — sip gaiwan tea under a bamboo canopy while watching locals play mahjong for hours. The atmosphere here feels preserved rather than manufactured, with courtyard houses converted into tea gardens that still serve the same brews they did a century ago.
+
+Well Alley is the hidden gem most visitors miss — the brick art walls here are genuinely beautiful, and the snack stalls serve better Sichuan street food than the tourist traps on Jinli. Come at dusk when the lanterns turn on and the day-trippers leave; the alley becomes a glowing corridor of red light that feels like walking through old Chengdu.`}
+      practicalDetails={{
+        gettingThere: 'Line 4',
+        whatToSkip: 'Overpriced souvenir shops',
+        photographyTips: 'Evening lanterns, tea ceremonies',
+      }}
       description={`Three parallel Qing-dynasty alleys — Wide Alley (Kuan) for tea and culture, Narrow Alley (Zhai) for bars and boutiques, Well Alley (Jing) for local snacks and wall art. Chengdu's answer to Beijing's hutong but more polished. Packed but pretty.`}
       hours="Open all day, best 10:00-22:00"
       price="Free entry"

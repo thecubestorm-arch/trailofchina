@@ -78,11 +78,34 @@ export default function TerracottaWarriorsPage() {
     ]}
       nameZh="兵马俑"
       city="Xi'an"
+      hook="8,000 soldiers standing in formation for 2,200 years — every single one has a different face."
+      quickInfo={{
+        price: '¥120',
+        hours: '8:30–17:00',
+        bestTime: 'Morning, weekdays',
+        metro: 'Bus 306 from station',
+      }}
+      whyYouLoveIt={`Pit 1 is overwhelming the moment you step in. Six thousand soldiers stand in battle formation — infantry in front, chariots behind, flanked by cavalry. The scale is so large that photographs don't do it justice. You need to see it to understand why every Chinese schoolchild learns about this site. No two faces are the same. Archaeologists believe each warrior was modeled on a real soldier in Emperor Qin Shi Huang's army. The detail is staggering — mustaches, armor clasps, fingernails, even the tread pattern on the soles of their shoes.
+
+Pit 2 is where you'll find the cavalry and archers, including the famous kneeling archer whose armor plates overlap like fish scales. Pit 3 is tiny by comparison — just 89 soldiers — but it was the command center, and that makes it historically significant. Don't skip the Exhibition Hall: the bronze chariots are impossibly intricate, with gilded silver ornaments and working mechanical parts. One chariot alone took eight years to restore. This is not a museum of old pottery — this is the funeral guard of a man who believed he would rule in the afterlife exactly as he ruled on earth.`}
       images={[
-        { src: 'https://picsum.photos/seed/terracotta-1/800/600', alt: 'Terracotta Warriors in formation' },
-        { src: 'https://picsum.photos/seed/terracotta-2/800/600', alt: 'Close-up of warrior faces' },
-        { src: 'https://picsum.photos/seed/terracotta-3/800/600', alt: 'Pit 1 excavation site' },
+        { src: 'https://picsum.photos/seed/terracotta-pit1/800/600', alt: 'Terracotta Warriors in formation in Pit 1' },
+        { src: 'https://picsum.photos/seed/terracotta-face/800/600', alt: 'Close-up of unique warrior faces' },
+        { src: 'https://picsum.photos/seed/terracotta-formation/800/600', alt: 'Battle formation of terracotta soldiers' },
+        { src: 'https://picsum.photos/seed/terracotta-chariot/800/600', alt: 'Bronze chariot in the Exhibition Hall' },
+        { src: 'https://picsum.photos/seed/terracotta-horses/800/600', alt: 'Terracotta horses and cavalry' },
       ]}
+      practicalDetails={{
+        gettingThere: `Bus 306 from East Square of Xi'an Railway Station, 1 hour. The bus is clearly marked and departs every 10–15 minutes. Buy tickets at the window (¥7 one way) — ignore anyone offering "direct" shuttles, which are just overpriced taxis. The last bus back to Xi'an leaves around 19:00, so plan accordingly.
+
+If you prefer a faster route, DiDi (Chinese Uber) costs around ¥80–100 from the city center and takes 40 minutes. This is worth it if you're traveling in a group of 3–4.`,
+        whatToSkip: `Every tour bus stops at a "souvenir factory" on the way — this is a commission stop, not a cultural site. The factory sells replica warriors at inflated prices and eats up 45 minutes of your time. Tell your guide you want to skip it, or simply take the public bus which doesn't stop there.
+
+The audio guide (¥30) is not worth it — the narration is dry and out of sync with the exhibits. Instead, read the English signage or download a free podcast about the warriors before you go.`,
+        photographyTips: `Pit 1 panorama from the upper viewing platform is the money shot — arrive at opening time for the best light and fewer people. For warrior face close-ups, walk to the far end of the platform where the crowd thins and you can get clear shots without heads in the frame.
+
+Flash photography is prohibited and actively policed — the UV light damages the pigments that still cling to some warriors. Bring a lens with a wide aperture (f/2.8 or better) for low-light shots in Pit 2 and the Exhibition Hall. The bronze chariots are behind glass, so shoot at an angle to avoid reflections.`,
+      }}
       description={`The Terracotta Warriors (兵马俑) are the 2,200-year-old army of China\'s first emperor, Qin Shi Huang. Discovered in 1974 by farmers digging a well, the site contains over 8,000 life-sized soldiers, 130 chariots with 520 horses, and 150 cavalry horses.
 
 The warriors were buried with the emperor in 210-209 BC to protect him in the afterlife. Each warrior is unique — different facial features, heights, and uniforms indicating rank. They were originally painted in bright colors, but most pigment deteriorated upon exposure to air after excavation.

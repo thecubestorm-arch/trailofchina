@@ -3,13 +3,13 @@ import Link from 'next/link';
 import AttractionPage from '@/components/AttractionPage';
 
 export const metadata: Metadata = {
-  title: 'Hongya Cave (洪崖洞) - Chongqing\'s Stilted Wonder',
+  title: 'Hongya Cave (洪崖洞) - Chongqing\'s Stilted wonder',
   description:
-    'Chongqing\'s iconic 75-meter cliffside complex that lights up like a golden lantern at night. 11 stories of stilted buildings — the image that made Chongqing famous on Instagram.',
+    'Chongqing\'s iconic stilted building complex on the Jialing River. 11 stories of shops, restaurants, and views. Free to explore.',
   openGraph: {
-    title: 'Hongya Cave (洪崖洞) - Chongqing\'s Stilted Wonder',
+    title: 'Hongya Cave (洪崖洞) - Chongqing\'s Stilted wonder',
     description:
-      'Chongqing\'s iconic 75-meter cliffside complex that lights up like a golden lantern at night.',
+      'Chongqing\'s iconic stilted building complex on the Jialing River. 11 stories of shops, restaurants, and views. Free to explore.',
     url: 'https://trailofchina.com/destinations/chongqing/what-to-do/hongya-cave',
     type: 'website',
   },
@@ -82,10 +82,10 @@ export default function HongyaCavePage() {
       city="Chongqing"
       images={[
         { src: 'https://picsum.photos/seed/hongya-cave-night/800/600', alt: 'Hongya Cave illuminated at night like a golden lantern' },
-        { src: 'https://picsum.photos/seed/hongya-cave-lights/800/600', alt: 'Hongya Cave golden lights reflecting on the river' },
-        { src: 'https://picsum.photos/seed/hongya-cave-street/800/600', alt: 'Hongya Cave 4th floor street level entrance' },
+        { src: 'https://picsum.photos/seed/hongya-cave-lights/800/600', alt: 'Golden lights reflecting on the river below Hongya Cave' },
+        { src: 'https://picsum.photos/seed/hongya-cave-street/800/600', alt: '4th floor street entrance of Hongya Cave' },
         { src: 'https://picsum.photos/seed/hongya-cave-river/800/600', alt: 'Night panorama of Hongya Cave from across the river' },
-        { src: 'https://picsum.photos/seed/hongya-cave-stilts/800/600', alt: 'Layered stilted buildings of Hongya Cave rising from the cliff' },
+        { src: 'https://picsum.photos/seed/hongya-cave-stilts/800/600', alt: 'Layered stilted buildings of Hongya Cave climbing the cliff' },
       ]}
       hook="A 75-meter cliffside complex that lights up like a golden lantern at night — this is the image that made Chongqing famous on Instagram."
       quickInfo={{
@@ -96,7 +96,7 @@ export default function HongyaCavePage() {
       }}
       whyYouLoveIt={`You've seen this photo a thousand times before you even knew what it was called — a cascading stack of golden-lit buildings climbing up a cliffside, straight out of a Studio Ghibli film. Hongya Cave is that place, and the hype is actually justified. The complex is built in the traditional diaojiaolou style — stilted buildings layered into a 75-meter cliff face on the Jialing River. Eleven floors stacked on top of each other, with restaurants, teahouses, and narrow corridors that make you feel like you've wandered into a different era.
 
-The real magic happens after 8 PM when the lights come on. Every floor glows warm gold against the black cliff, and from across the river it looks like a palace carved from light. It's no coincidence this became Chongqing's most photographed spot — locals and tourists both just stand there, staring. And here's the thing most people miss: the "bottom" entrance is actually on the 4th floor, street level. The floors keep going down from there, deep into the cliff. Chongqing's verticality in a single building. Walk down to the river level, cross the Jialing River Bridge, and look back — that's the money shot, and it's completely free.`}
+The real magic happens after 8 PM when the lights come on. Every floor glows warm gold against the black cliff, and from across the river it looks like a palace carved from light. It's no coincidence this became Chongqing's most photographed spot — locals and tourists both just stand there, staring. And here's the thing most people miss: the "bottom" entrance is actually on the 4th floor, street level. The floors keep going down from there, deep into the cliff. This is Chongqing's verticality in a single building. Walk down to the river level, cross the Jialing River Bridge, and look back — that's the money shot, and it's completely free.`}
       description={`Hongya Cave (洪崖洞) is Chongqing's most iconic landmark — an 11-story stilted building complex built into the hillside overlooking the Jialing River. The structure resembles ancient Chaotianmen Gate but was rebuilt in 2006 with modern amenities.
 
 The building rises 15 stories in total, with 6 above ground and 5 descending into the hillside. Each level has a different theme: Level 1 is the entrance with food stalls, Level 2 has snacks, Level 3 has shopping, Level 4 has tea houses, Level 5 has performance venues, Level 6 has restaurants, Level 7 has entertainment, and Level 8-11 are observation decks and luxury suites.
@@ -106,12 +106,11 @@ The architecture is unique to Chongqing — stilted buildings (吊脚楼) have b
 It's free to explore and has become Chongqing's most popular tourist destination, attracting over 100 million visitors since opening. The nightly light shows and the view of the river and city make it a must-visit for any Chongqing traveler.`}
       hours="14:00-22:00 (levels open at different times)"
       price="Free (some attractions within have separate fees)"
-      nearestSubway="Xiaoshizi Station, Line 1"
-      bestTime="Night (after 8 PM for lights)"
+      nearestSubway="Linjiangmen Station, Line 1"
+      bestTime="Golden hour (sunset) and nighttime for the lights"
       mapUrl="https://www.openstreetmap.org/export/embed.html?bbox=106.5703%2C29.5621%2C106.5803%2C29.5681&layer=mapnik&marker=29.5651%2C106.5753"
       address="88 Jialingjiang Binjiang Road, Yuzhong District"
       addressZh="重庆市渝中区嘉陵江滨江路88号"
-
       relatedLinks={[]}
       relatedArticles={[
         { title: "Ciqikou Ancient Town", description: "Historic port town with cobblestone streets and traditional architecture.", href: "/destinations/chongqing/what-to-do/ciqikou" },
@@ -125,15 +124,15 @@ It's free to explore and has become Chongqing's most popular tourist destination
       ]}
       tips={[...tips, ...photoSpots]}
       practicalDetails={{
-        gettingThere: `Take Metro Line 1 to Xiaoshizi Station. Use the exit and walk toward the river — you'll see the golden building before you hear the crowds. The 4th-floor entrance is at street level (Cangbai Road), which is actually the easiest way in. Don't try to enter from the river side unless you want to climb 11 floors.
+        gettingThere: `Take Metro Line 1 to Xiaoshizi Station. Walk toward the river and you'll see the golden building before you hear the crowds. The 4th-floor entrance is at street level on Cangbai Road, which is actually the easiest way in. Don't try to enter from the river side unless you want to climb 11 floors.
 
-If you're coming from Hongya Cave itself, the building's multiple floor levels connect to different streets — the top connects to Cangbai Road, the middle connects to Binjiang Road, and the bottom connects to the riverbank. It's free to walk through, so you can treat it as a scenic passage even if you don't shop or eat inside.`,
+If you're already inside Hongya Cave, the building's multiple floor levels connect to different streets — the top connects to Cangbai Road, the middle connects to Binjiang Road, and the bottom connects to the riverbank. It's free to walk through, so you can treat it as a scenic passage even if you don't shop or eat inside.`,
         whatToSkip: `The shops inside are overwhelmingly touristy — generic trinkets, overpriced souvenirs, and the same dried meat you can find anywhere in China. Don't waste your money here. The hotpot restaurants inside are also overpriced and mediocre compared to the local joints you'll find on side streets. Eat elsewhere and come here for the architecture and the views.
 
 The elevators get insanely crowded at night when the lights turn on. If you can handle stairs, take them — or just plan to arrive before 7 PM and wait it out from a balcony. The crowds on weekends are genuinely overwhelming; if you're visiting during peak season, go on a Tuesday or Wednesday evening when you'll actually be able to move.`,
-        photographyTips: `The classic shot is from across the Jialing River — walk across the Qiansimen Bridge (千厮门大桥) and shoot from the middle. You'll get the full building, the river, and the reflection all in one frame. Best light is about 20 minutes after the lights turn on, when the sky is still deep blue instead of completely black.
+        photographyTips: `The classic shot is from across the Jialing River — walk across the Qiansimen Bridge and shoot from the middle. You'll get the full building, the river, and the reflection all in one frame. Best light is about 20 minutes after the lights turn on, when the sky is still deep blue instead of completely black.
 
-For a different angle, go down to the river level on the Hongya Cave side and shoot upward — you get the layered stilts climbing the cliff, which looks even more dramatic than the postcard view. Bring a tripod if you want sharp night shots; the area is dimly lit except for the building itself, so handholding will be a struggle at slower shutter speeds.
+For a different angle, go down to the river level on the Hongya Cave side and shoot upward — you get the layered stilts climbing the cliff, which looks even more dramatic than the postcard view. Bring a tripod if you want sharp night shots; the area is dimly lit except for the building itself.
 
 Inside, the narrow corridors and red lanterns on the lower floors make great detail shots. The contrast between the warm interior lighting and the dark cliff face outside is why photographers love this place.`,
       }}

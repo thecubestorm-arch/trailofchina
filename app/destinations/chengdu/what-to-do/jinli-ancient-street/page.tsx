@@ -75,10 +75,27 @@ export default function JinliAncientStreetPage() {
       nameZh="锦里"
       city="Chengdu"
       images={[
-        { src: 'https://picsum.photos/seed/jinli-1/800/500', alt: 'Jinli Ancient Street red lanterns at night in Chengdu' },
-        { src: 'https://picsum.photos/seed/jinli-2/800/500', alt: 'Traditional wooden architecture at Jinli Ancient Street' },
-        { src: 'https://picsum.photos/seed/jinli-3/800/500', alt: 'Sugar painting artist at Jinli Ancient Street' },
+        { src: 'https://picsum.photos/seed/jinli-lanterns/800/500', alt: 'Red lanterns illuminating Jinli Ancient Street at night' },
+        { src: 'https://picsum.photos/seed/jinli-food/800/500', alt: 'Sichuan street food stalls along Jinli alley' },
+        { src: 'https://picsum.photos/seed/jinli-alley/800/500', alt: 'Lantern-lit wooden alley in Jinli Ancient Street' },
+        { src: 'https://picsum.photos/seed/jinli-opera/800/500', alt: 'Face-changing opera performance in Jinli' },
+        { src: 'https://picsum.photos/seed/jinli-night/800/500', alt: 'Jinli Ancient Street glowing at night' },
       ]}
+      hook="Chengdu's snack street — lantern-lit alleys, face-changing performances, street food paradise."
+      quickInfo={{
+        price: 'Free',
+        hours: 'Always open',
+        bestTime: 'Evening for lanterns',
+        metro: 'Wuhou Shrine (Line 3)',
+      }}
+      whyYouLoveIt={`After dark, Jinli transforms from a crowded shopping street into something genuinely magical — thousands of red lanterns cast a warm glow over the wooden architecture, and the crowds thin out enough that you can actually hear the sizzle of street food being cooked at open-air stalls. The face-changing opera performances that happen in small theaters along the street are worth the ¥30 admission — watching a performer swap masks in a fraction of a second, inches from your face, never gets old.
+
+The snack selection here is the best in Chengdu — three-cannon tea (three sticky rice balls thrown onto a drum before being drenched in syrup), spicy rabbit heads (a local delicacy that tastes better than it sounds), and sugar paintings made to order by artists who create intricate designs with melted sugar. Skip the souvenir shops and focus on the food; this is Chengdu's most accessible introduction to Sichuan street cuisine.`}
+      practicalDetails={{
+        gettingThere: 'Line 3',
+        whatToSkip: 'Overpriced souvenirs',
+        photographyTips: 'Night lanterns, face-changing shows',
+      }}
       description={`Chengdu's most atmospheric pedestrian street — red lanterns, wooden architecture, snack stalls, and tea houses. Adjacent to Wuhou Shrine. Packed by day, magical at night. The perfect first stop in Chengdu for street food and souvenirs.`}
       hours="Open all day, best 10:00-22:00"
       price="Free entry"

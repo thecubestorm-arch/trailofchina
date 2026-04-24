@@ -69,11 +69,34 @@ export default function BigWildGoosePagodaPage() {
     ]}
       nameZh="大雁塔"
       city="Xi'an"
+      hook="A 1,300-year-old pagoda that leans slightly — Xi'an's own Pisa, with a nightly fountain show that's better than the pagoda."
+      quickInfo={{
+        price: '¥40 pagoda · ¥25 temple · Free fountain',
+        hours: '8:00–17:00 · Fountain ~20:00',
+        bestTime: 'Evening for fountain show',
+        metro: 'Dayanta (Line 3)',
+      }}
+      whyYouLoveIt={`The pagoda itself is ancient and beautiful — a seven-story brick tower built in 652 AD by the monk Xuanzang to house Buddhist scriptures he brought back from India. Xuanzang's journey inspired Journey to the West, one of China's most beloved novels, and standing at the base of the pagoda he built, you can feel the weight of that story. The tower leans slightly to the west (like Xi'an's own Pisa) and has survived earthquakes, wars, and 1,300 years of weathering. Climbing the narrow interior stairs to the top is steep but worth it for the views over the temple complex and the city beyond.
+
+But honestly? The nightly fountain show is the real star. Asia's largest musical fountain erupts in choreographed water jets synchronized to music, with the illuminated pagoda as the backdrop — and it's completely free. The show runs for about 20 minutes and draws crowds that fill the entire North Square. It's touristy, it's loud, it's unapologetically spectacular, and it's one of the most memorable things you'll do in Xi'an. Come for the history, stay for the fountain.`}
       images={[
-        { src: 'https://picsum.photos/seed/big-wild-goose-pagoda-1/800/500', alt: "Big Wild Goose Pagoda at Da Ci'en Temple in Xi'an" },
-        { src: 'https://picsum.photos/seed/big-wild-goose-pagoda-2/800/500', alt: "North Square musical fountain show at Big Wild Goose Pagoda" },
-        { src: 'https://picsum.photos/seed/big-wild-goose-pagoda-3/800/500', alt: "Interior staircase of Big Wild Goose Pagoda with Buddhist relics" },
+        { src: 'https://picsum.photos/seed/dayanta-pagoda/800/600', alt: "Big Wild Goose Pagoda at Da Ci'en Temple" },
+        { src: 'https://picsum.photos/seed/dayanta-fountain/800/600', alt: "North Square musical fountain show" },
+        { src: 'https://picsum.photos/seed/dayanta-night/800/600', alt: "Pagoda illuminated at night" },
+        { src: 'https://picsum.photos/seed/dayanta-temple/800/600', alt: "Da Ci'en Temple courtyard" },
+        { src: 'https://picsum.photos/seed/dayanta-park/800/600', alt: "Pagoda park and gardens" },
       ]}
+      practicalDetails={{
+        gettingThere: `Metro Line 3 to Dayanta (Big Wild Goose Pagoda) Station. Take Exit C and walk 5 minutes north — you'll see the pagoda as soon as you emerge. The station is literally named after the pagoda, so it's impossible to miss. The walk takes you through a pleasant pedestrian plaza with shops and cafes.
+
+If you're coming from the City Wall area, take Line 4 to Dayanta Station and transfer to Line 3, or just take a DiDi for ¥15–20 — it's faster and avoids the transfer.`,
+        whatToSkip: `Climbing the pagoda costs an extra ¥25 on top of the temple entry fee, and the view from the top is underwhelming — Xi'an's skyline is not particularly photogenic from up there, and the windows are small and dirty. The better view is from the ground looking up at the pagoda, or from the North Square fountain area where you get the full pagoda framed against the sky.
+
+The temple's "Buddhist relic exhibition" is a small room with replica artifacts and poor English signage. Skip it unless you're deeply interested in Buddhist history. The real value of the temple complex is the architecture, the courtyards, and the atmosphere — not the exhibits.`,
+        photographyTips: `The night fountain show is the money shot — the illuminated pagoda reflected in the fountain pools with water jets dancing in the foreground. Arrive 30 minutes early to stake out a spot near the center of North Square, about 50 meters back from the fountain edge. This distance gives you the full pagoda in frame with the fountain in the foreground. A tripod is essential for long-exposure water shots during the show.
+
+For the pagoda silhouette at sunset, position yourself at the south end of the North Square fountain pools just before the sun drops below the horizon. The pagoda backlit against an orange sky, with its reflection in the still water, is the single most beautiful shot in Xi'an. The best time is 15–20 minutes before sunset in summer, or 30 minutes before in winter.`,
+      }}
       description={`The Big Wild Goose Pagoda (大雁塔) is Xi'an's most iconic Buddhist monument and a towering symbol of the city's golden age as the eastern terminus of the Silk Road. Built in 652 AD during the Tang Dynasty, this seven-story brick pagoda was commissioned by the famous monk Xuanzang ( immortalized in Journey to the West) to house Buddhist scriptures and relics he brought back from his epic 17-year pilgrimage to India.
 
 Standing 64 meters tall, the pagoda exemplifies classic Tang dynasty architecture with its simple, elegant lines and slightly inward-sloping walls. Unlike many wooden pagodas that burned down over the centuries, this brick structure has survived earthquakes, wars, and 1,300 years of weathering. You can climb the interior stairs (steep and narrow) to each of the seven levels, where Buddhist statues and ancient inscriptions await. From the top, you'll enjoy sweeping views over Xi'an and the surrounding temple grounds.

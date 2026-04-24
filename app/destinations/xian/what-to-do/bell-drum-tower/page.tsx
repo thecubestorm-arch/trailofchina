@@ -69,11 +69,36 @@ export default function BellDrumTowerPage() {
     ]}
       nameZh="钟楼与鼓楼"
       city="Xi'an"
+      hook="Xi'an's twin landmarks — the Bell Tower marking dawn and the Drum Tower marking dusk, for 600 years."
+      quickInfo={{
+        price: '¥30 each or ¥50 combined',
+        hours: '8:30–21:30',
+        bestTime: 'Evening for illumination',
+        metro: 'Zhonglou (Line 2)',
+      }}
+      whyYouLoveIt={`For 600 years, the bells and drums of these towers regulated the rhythm of Xi'an. The Bell Tower — built in 1384 — rang at dawn to open the city gates. The Drum Tower — completed in 1380 — beat at dusk to close them. This wasn't just timekeeping; it was the heartbeat of an empire. When you climb to the top of either tower and look out over the city radiating in four directions, you're standing where emperors' officials once stood, watching over the Tang Dynasty capital.
+
+The view from the top is surprisingly good. Four main roads stretch out from the Bell Tower like spokes on a wheel, and the traffic circle below is a constant swirl of cars, buses, and scooters. At night, both towers are floodlit in warm gold and the green glazed tiles glow. The Drum Tower still hosts traditional drum performances every hour — the sound carries across the plaza and into the Muslim Quarter. You don't need to be a history buff to feel the weight of this place.`}
       images={[
-        { src: 'https://picsum.photos/seed/bell-drum-tower-1/800/500', alt: "Xi'an Bell Tower illuminated at night" },
-        { src: 'https://picsum.photos/seed/bell-drum-tower-2/800/500', alt: "Drum Tower traditional drum performance" },
-        { src: 'https://picsum.photos/seed/bell-drum-tower-3/800/500', alt: "Bell Tower and Drum Tower panoramic city view" },
+        { src: 'https://picsum.photos/seed/bell-tower-night/800/600', alt: "Xi'an Bell Tower illuminated at night" },
+        { src: 'https://picsum.photos/seed/drum-tower-dusk/800/600', alt: "Drum Tower at golden hour" },
+        { src: 'https://picsum.photos/seed/bell-tower-view/800/600', alt: "View from the top of Bell Tower" },
+        { src: 'https://picsum.photos/seed/drum-tower-interior/800/600', alt: "Interior of Drum Tower with traditional drums" },
+        { src: 'https://picsum.photos/seed/bell-tower-roundabout/800/600', alt: "Traffic circle around Bell Tower at night" },
       ]}
+      practicalDetails={{
+        gettingThere: `Metro Line 2 to Zhonglou (Bell Tower) Station — the exit puts you directly under the tower in the underground pedestrian passage. You literally cannot miss it. For the Drum Tower, use the same station and walk 300 meters northwest through the underground passage — it connects directly to the Drum Tower plaza.
+
+The underground passage is well-signed in English and is the only safe way to reach the Bell Tower — the traffic circle above is a chaotic roundabout with no pedestrian crossings.`,
+        whatToSkip: `Climbing both towers is unnecessary — the views are nearly identical since they're only 300 meters apart. Pick one. The Bell Tower has the better location (center of the traffic circle) and the more impressive exterior. The Drum Tower has the hourly drum performances, which are genuinely cool. If you only do one, choose based on whether you prefer architecture or live performance.
+
+The "combo ticket" marketing pushes you to buy both, but unless you're a completist, one is enough. The interiors of both towers are sparse — a few exhibits about bells and drums, some replica instruments, and a steep wooden staircase. The real value is the view from the top and the exterior architecture.`,
+        photographyTips: `Night illumination is the classic shot — the Bell Tower glowing gold against the black sky, reflected in the wet pavement after rain. The best vantage point is from the pedestrian bridge on the southeast side of the traffic circle, which gives you a clean, unobstructed angle.
+
+For traffic shots, set up on the upper level of either tower with a tripod and shoot long exposures of the roundabout below. The light trails from cars circling the tower create dynamic, colorful patterns. Blue hour (20–30 minutes after sunset) is the sweet spot — the sky still has color, the tower lights are on, and there's enough ambient light to balance the exposure.
+
+The Drum Tower at sunset is photographer's gold — the golden light hits the red pillars and green tiles from the west, creating warm, saturated colors. The traditional drum performances make great action shots if you shoot at 1/250s or faster to freeze the motion.`,
+      }}
       description={`Standing at the geographic and symbolic heart of Xi'an, the Bell Tower (钟楼) and Drum Tower (鼓楼) are the city's most recognizable landmarks. These magnificent Ming dynasty structures have watched over Xi'an for over 600 years, marking time for the ancient capital and serving as gathering points for celebrations, warnings, and daily life.
 
 The Bell Tower, built in 1384, sits in the middle of a bustling traffic circle where four main roads converge. Rising 36 meters on a square brick base, its three-tiered wooden structure features intricate brackets, green-glazed tiles, and golden finials that gleam in sunlight. Inside, you'll find ancient bells (no longer rung) and exhibits on the tower's history. Climb to the upper level for panoramic views of Xi'an radiating outward in four directions.
