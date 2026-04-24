@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, ChevronDown, Wifi, Shield, Smartphone, FileText, Briefcase } from 'lucide-react'
+import { ArrowRight, ChevronDown, Wifi, Shield, Smartphone, FileText, Briefcase, Home } from 'lucide-react'
 import ChecklistDownload from '@/components/ChecklistDownload'
 import FooterCTA from '@/components/FooterCTA'
 
@@ -82,7 +82,7 @@ const essentials = [
     icon: FileText,
     title: 'Visa & Documents',
     description: 'Requirements simplified',
-    href: '/china-basics/visa-requirements',
+    href: '/china-basics/how-china-differs/visa-guide',
   },
   {
     icon: Briefcase,
@@ -138,7 +138,7 @@ export default function HomeV1Client() {
       <section className="relative h-screen min-h-[600px] w-full overflow-hidden">
         <Image
           src="/images/hero/china-hero.jpg"
-          alt="China travel landscape"
+          alt="Scenic view of China — mountains, temples, and modern skylines"
           fill
           className="object-cover"
           priority
@@ -151,7 +151,7 @@ export default function HomeV1Client() {
               First-Trip China Travel Guide
             </p>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] mb-4 max-w-3xl">
-              China Doesn&apos;t Have<br />to Be Complicated
+              China Doesn&apos;t Have to Be Complicated
             </h1>
             <p className="text-white/80 text-base md:text-lg max-w-xl mb-8">
               Visa tips, app setup, itineraries — everything you need for a smooth first trip. Written by travelers who&apos;ve been there.
@@ -165,7 +165,7 @@ export default function HomeV1Client() {
                 <ArrowRight size={16} className="ml-2" />
               </Link>
               <Link
-                href="/china-basics/how-to-get-internet"
+                href="#cheat-sheet"
                 className="inline-flex items-center justify-center px-6 py-3 bg-white/10 backdrop-blur border border-white/20 text-white font-semibold rounded-xl hover:bg-white/20 transition-colors text-sm"
               >
                 Get Free Cheat Sheet
@@ -188,12 +188,12 @@ export default function HomeV1Client() {
           </div>
           <span className="text-[#ebe4d8]">·</span>
           <div className="flex items-center gap-2">
-            <span className="text-2xl font-bold text-[#1a3a4a]">中文</span>
+            <span className="text-2xl font-bold text-[#1a3a4a]">Fluent</span>
             <span className="text-xs text-[#64748b] uppercase tracking-wider">Mandarin</span>
           </div>
           <span className="text-[#ebe4d8]">·</span>
           <div className="flex items-center gap-2">
-            <span className="text-2xl font-bold text-[#1a3a4a]">🏠</span>
+            <Home size={20} className="text-[#1a3a4a]" />
             <span className="text-xs text-[#64748b] uppercase tracking-wider">Family in Beijing & Shanghai</span>
           </div>
           <span className="text-[#ebe4d8]">·</span>
@@ -311,21 +311,52 @@ export default function HomeV1Client() {
           </div>
           <Link
             href="/destinations"
-            className="mt-6 inline-flex items-center text-sm font-semibold text-[#af5d32] hover:underline"
+            className="mt-6 inline-flex items-center gap-2 px-5 py-2.5 bg-[#f5f1ea] border border-[#ebe4d8] rounded-xl text-sm font-semibold text-[#1a3a4a] hover:border-[#af5d32] transition-colors"
           >
-            View all destinations →
+            View all destinations <ArrowRight size={14} />
           </Link>
+          <div className="mt-6 flex flex-wrap gap-2 justify-center">
+            <span className="px-3 py-1.5 rounded-full bg-[#f5f1ea] border border-[#ebe4d8] text-xs text-[#64748b]">Hangzhou — Coming Soon</span>
+            <span className="px-3 py-1.5 rounded-full bg-[#f5f1ea] border border-[#ebe4d8] text-xs text-[#64748b]">Suzhou — Coming Soon</span>
+            <span className="px-3 py-1.5 rounded-full bg-[#f5f1ea] border border-[#ebe4d8] text-xs text-[#64748b]">Guilin — Coming Soon</span>
+          </div>
         </div>
       </section>
 
-      {/* ===== 4. How It Works — 3 Steps ===== */}
+      {/* ===== 4. China Essentials — Icon Strip ===== */}
+      <section className="py-12 md:py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#af5d32] mb-3">Essentials</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#1a3a4a] mb-8">Prepare Before You Fly</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+            {essentials.map((item) => {
+              const Icon = item.icon
+              return (
+                <Link
+                  key={item.title}
+                  href={item.href}
+                  className="group p-4 rounded-xl border border-[#ebe4d8] hover:border-[#af5d32] active:border-[#af5d32] transition-colors text-center"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-[#f5f1ea] flex items-center justify-center mx-auto mb-3">
+                    <Icon size={24} className="text-[#af5d32]" />
+                  </div>
+                  <h3 className="font-semibold text-[#1a3a4a] text-sm group-hover:text-[#af5d32]">{item.title}</h3>
+                  <p className="text-xs text-[#64748b] mt-1">{item.description}</p>
+                </Link>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== 5. How It Works — 3 Steps ===== */}
       <section className="py-12 md:py-16 bg-[#f5f1ea]">
         <div className="max-w-6xl mx-auto px-4">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#af5d32] mb-3">How It Works</p>
           <h2 className="text-3xl md:text-4xl font-bold text-[#1a3a4a] mb-10">Three Steps to China</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center">
-              <div className="w-14 h-14 rounded-full bg-[#af5d32] text-white flex items-center justify-center text-xl font-bold mx-auto mb-4">
+              <div className="w-14 h-14 rounded-full bg-[#f5f1ea] text-[#af5d32] border-2 border-[#af5d32] flex items-center justify-center text-xl font-bold mx-auto mb-4">
                 1
               </div>
               <h3 className="font-bold text-[#1a3a4a] text-lg mb-2">Get Connected</h3>
@@ -340,7 +371,7 @@ export default function HomeV1Client() {
               </Link>
             </div>
             <div className="text-center">
-              <div className="w-14 h-14 rounded-full bg-[#af5d32] text-white flex items-center justify-center text-xl font-bold mx-auto mb-4">
+              <div className="w-14 h-14 rounded-full bg-[#f5f1ea] text-[#af5d32] border-2 border-[#af5d32] flex items-center justify-center text-xl font-bold mx-auto mb-4">
                 2
               </div>
               <h3 className="font-bold text-[#1a3a4a] text-lg mb-2">Plan Your Route</h3>
@@ -355,7 +386,7 @@ export default function HomeV1Client() {
               </Link>
             </div>
             <div className="text-center">
-              <div className="w-14 h-14 rounded-full bg-[#af5d32] text-white flex items-center justify-center text-xl font-bold mx-auto mb-4">
+              <div className="w-14 h-14 rounded-full bg-[#f5f1ea] text-[#af5d32] border-2 border-[#af5d32] flex items-center justify-center text-xl font-bold mx-auto mb-4">
                 3
               </div>
               <h3 className="font-bold text-[#1a3a4a] text-lg mb-2">Explore Like a Local</h3>
@@ -373,34 +404,8 @@ export default function HomeV1Client() {
         </div>
       </section>
 
-      {/* ===== 5. China Essentials — Icon Strip ===== */}
-      <section className="py-12 md:py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#af5d32] mb-3">Essentials</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1a3a4a] mb-8">Prepare Before You Fly</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
-            {essentials.map((item) => {
-              const Icon = item.icon
-              return (
-                <Link
-                  key={item.title}
-                  href={item.href}
-                  className="group p-4 rounded-xl border border-[#ebe4d8] hover:border-[#af5d32] transition-colors text-center"
-                >
-                  <div className="w-12 h-12 rounded-xl bg-[#f5f1ea] flex items-center justify-center mx-auto mb-3">
-                    <Icon size={24} className="text-[#af5d32]" />
-                  </div>
-                  <h3 className="font-semibold text-[#1a3a4a] text-sm group-hover:text-[#af5d32]">{item.title}</h3>
-                  <p className="text-xs text-[#64748b] mt-1">{item.description}</p>
-                </Link>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* ===== 6. PDF Cheat Sheet ===== */}
-      <section className="py-12 md:py-16 bg-[#1a3a4a]">
+      <section id="cheat-sheet" className="py-12 md:py-16 bg-gradient-to-b from-[#1a3a4a] to-[#0f2930]">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#af5d32] mb-3">Free Download</p>
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">China Travel Cheat Sheet</h2>
@@ -412,7 +417,7 @@ export default function HomeV1Client() {
       </section>
 
       {/* ===== 7. FooterCTA ===== */}
-      <div className="py-8 bg-[#f5f1ea]">
+      <div className="bg-[#f5f1ea]">
         <div className="max-w-6xl mx-auto px-4">
           <FooterCTA
             title="Ready to Plan Your Trip?"
