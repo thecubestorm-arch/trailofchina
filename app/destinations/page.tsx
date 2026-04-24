@@ -115,7 +115,7 @@ export default function DestinationsHub() {
                     <p className="text-xs font-semibold uppercase tracking-widest text-[#af5d32]">
                       {section.category}
                     </p>
-                    <h3 className="mt-2 text-xl font-bold text-[#1f2933] md:text-2xl">
+                    <h3 className="mt-2 text-xl font-bold text-[#1a3a4a] md:text-2xl">
                       {section.icon} {section.title}
                     </h3>
                     <p className="mt-2 text-sm leading-relaxed text-[#4a5568] md:text-base">
@@ -125,7 +125,7 @@ export default function DestinationsHub() {
                       {section.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="inline-flex items-center gap-1.5 rounded-full bg-[#f5f1ea] px-3 py-1 text-xs text-[#1f2933] md:text-sm"
+                          className="inline-flex items-center gap-1.5 rounded-full bg-[#f5f1ea] px-3 py-1 text-xs text-[#1a3a4a] md:text-sm"
                         >
                           {tag}
                         </span>

@@ -100,7 +100,7 @@ export default function XianLocalExperiencesPage() {
 
         <div className="relative mb-6">
           <ChineseWatermark character="西" />
-          <h1 className="text-4xl font-bold text-gray-900">Local Experiences in Xi&apos;an</h1>
+          <h1 className="text-4xl font-bold text-[#1a3a4a]">Local Experiences in Xi&apos;an</h1>
           <p className="text-sm text-[var(--muted)] mt-1 font-serif">西安的本地体验 · 感受真正的西安</p>
         </div>
 

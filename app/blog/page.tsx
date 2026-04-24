@@ -29,12 +29,12 @@ export default function BlogPage() {
               <Link href="/" className="text-[#af5d32] hover:underline">Home</Link>
             </li>
             <li aria-hidden="true">›</li>
-            <li className="text-[#1f2933]" aria-current="page">Blog</li>
+            <li className="text-[#1a3a4a]" aria-current="page">Blog</li>
           </ol>
         </nav>
 
         <div className="mb-12 text-center">
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-[#1f2933] mb-4">
+          <h1 className="font-serif text-4xl md:text-5xl font-bold text-[#1a3a4a] mb-4">
             The Traveler's Journal
           </h1>
           <p className="text-lg text-[#5d6a73] max-w-2xl mx-auto">
@@ -69,7 +69,7 @@ export default function BlogPage() {
                         {formatDate(featuredPost.date)} · {featuredPost.readingTime}
                       </span>
                     </div>
-                    <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#1f2933] mb-3 group-hover:text-[#af5d32] transition-colors duration-200">
+                    <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#1a3a4a] mb-3 group-hover:text-[#af5d32] transition-colors duration-200">
                       {featuredPost.title}
                     </h2>
                     <p className="text-[#5d6a73] mb-4 leading-relaxed">
@@ -79,7 +79,7 @@ export default function BlogPage() {
                       {featuredPost.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="bg-white rounded-full px-3 py-1 text-sm text-[#1f2933]"
+                          className="bg-white rounded-full px-3 py-1 text-sm text-[#1a3a4a]"
                         >
                           {tag}
                         </span>
@@ -119,7 +119,7 @@ export default function BlogPage() {
                         {formatDate(post.date)} · {post.readingTime}
                       </span>
                     </div>
-                    <h2 className="font-serif text-xl md:text-2xl font-bold text-[#1f2933] mb-2 group-hover:text-[#af5d32] transition-colors duration-200">
+                    <h2 className="font-serif text-xl md:text-2xl font-bold text-[#1a3a4a] mb-2 group-hover:text-[#af5d32] transition-colors duration-200">
                       {post.title}
                     </h2>
                     <p className="text-[#5d6a73] mb-4 leading-relaxed flex-1">
@@ -129,7 +129,7 @@ export default function BlogPage() {
                       {post.tags.slice(0, 3).map((tag) => (
                         <span
                           key={tag}
-                          className="bg-white rounded-full px-3 py-1 text-sm text-[#1f2933]"
+                          className="bg-white rounded-full px-3 py-1 text-sm text-[#1a3a4a]"
                         >
                           {tag}
                         </span>

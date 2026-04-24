@@ -21,7 +21,7 @@ export default function ShanghaiWhereToStayPage() {
             { label: 'Where to Stay' },
           ]} />
         </div>
-        <h1 className="text-4xl font-bold mb-6 text-gray-900">Where to Stay in Shanghai</h1>
+        <h1 className="text-4xl font-bold mb-6 text-[#1a3a4a]">Where to Stay in Shanghai</h1>
 
         <section className="mb-8">
           <p className="text-lg text-gray-700 leading-relaxed">
@@ -46,7 +46,7 @@ export default function ShanghaiWhereToStayPage() {
                 The most photogenic location in Shanghai, but the most expensive and tourist-heavy.
                 Great for a 1-2 night splurge, then move somewhere more local.
               </p>
-              <p className="text-sm text-gray-600">💰 ¥800-3000/night | 🚇 Metro: East Nanjing Road (Line 2/10) | 🎯 Best for: Honeymoons, short splurges</p>
+              <p className="text-sm text-[#64748b]">💰 ¥800-3000/night | 🚇 Metro: East Nanjing Road (Line 2/10) | 🎯 Best for: Honeymoons, short splurges</p>
             </div>
 
             <div className="border-2 border-gray-200 rounded-xl p-6">
@@ -56,7 +56,7 @@ export default function ShanghaiWhereToStayPage() {
                 The most livable neighborhood — quiet lanes a block from buzzing nightlife.
                 Best for travelers who want to feel like locals, not tourists.
               </p>
-              <p className="text-sm text-gray-600">💰 ¥400-1500/night | 🚇 Metro: South Shaanxi Road (Line 1/10/12) | 🎯 Best for: Culture, food, atmosphere</p>
+              <p className="text-sm text-[#64748b]">💰 ¥400-1500/night | 🚇 Metro: South Shaanxi Road (Line 1/10/12) | 🎯 Best for: Culture, food, atmosphere</p>
             </div>
 
             <div className="border-2 border-gray-200 rounded-xl p-6">
@@ -66,7 +66,7 @@ export default function ShanghaiWhereToStayPage() {
                 great restaurants, and the best subway connections in the city.
                 Busy during the day but quieter than People's Square.
               </p>
-              <p className="text-sm text-gray-600">💰 ¥300-1000/night | 🚇 Metro: Jing’an Temple (Line 2/7) | 🎯 Best for: Convenience, shopping</p>
+              <p className="text-sm text-[#64748b]">💰 ¥300-1000/night | 🚇 Metro: Jing’an Temple (Line 2/7) | 🎯 Best for: Convenience, shopping</p>
             </div>
 
             <div className="border-2 border-gray-200 rounded-xl p-6">
@@ -76,7 +76,7 @@ export default function ShanghaiWhereToStayPage() {
                 Clean, walkable, and well-connected. Slightly sanitized but undeniably attractive.
                 Great for first-timers who want comfort and charm without rough edges.
               </p>
-              <p className="text-sm text-gray-600">💰 ¥500-2000/night | 🚇 Metro: Xintiandi (Line 10/13) | 🎯 Best for: Couples, short stays</p>
+              <p className="text-sm text-[#64748b]">💰 ¥500-2000/night | 🚇 Metro: Xintiandi (Line 10/13) | 🎯 Best for: Couples, short stays</p>
             </div>
 
             <div className="border-2 border-gray-200 rounded-xl p-6">
@@ -86,7 +86,7 @@ export default function ShanghaiWhereToStayPage() {
                 Shanghai Museum, and the Bund. Functional rather than atmospheric, but you can't beat
                 the location for sightseeing.
               </p>
-              <p className="text-sm text-gray-600">💰 ¥200-600/night | 🚇 Metro: People's Square (Line 1/2/8) | 🎯 Best for: Budget travelers, first-timers</p>
+              <p className="text-sm text-[#64748b]">💰 ¥200-600/night | 🚇 Metro: People's Square (Line 1/2/8) | 🎯 Best for: Budget travelers, first-timers</p>
             </div>
           </div>
         </section>

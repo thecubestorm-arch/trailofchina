@@ -46,7 +46,7 @@ export function RelatedArticleCard({
           <span className="text-xs font-medium uppercase tracking-wide text-[#af5d32]">{category}</span>
         )}
 
-        <h4 className="font-serif line-clamp-2 text-xl font-semibold text-[#1f2933] transition-colors group-hover:text-[#af5d32]">
+        <h4 className="font-serif line-clamp-2 text-xl font-semibold text-[#1a3a4a] transition-colors group-hover:text-[#af5d32]">
           {title}
         </h4>
 

@@ -56,7 +56,7 @@ export default function BeforeYouGoPage() {
         <div className="relative">
           <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'China Basics', href: '/china-basics' }, { label: 'Before You Go' }]} />
           <ChineseWatermark character="准备" />
-          <h1 className="mb-6 text-5xl font-bold text-gray-900">Before You Go</h1>
+          <h1 className="mb-6 text-5xl font-bold text-[#1a3a4a]">Before You Go</h1>
         </div>
 
         <section className="mb-8">
@@ -75,7 +75,7 @@ export default function BeforeYouGoPage() {
             >
               <article className="py-8 px-6 -mx-6 md:py-10">
                 <p className="text-xs font-semibold uppercase tracking-widest text-[#af5d32]">{section.category}</p>
-                <h3 className="mt-3 text-2xl font-bold text-[#1f2933] md:text-3xl">
+                <h3 className="mt-3 text-2xl font-bold text-[#1a3a4a] md:text-3xl">
                   {section.icon} {section.title}
                 </h3>
                 <p className="mt-3 text-base leading-relaxed text-[#4a5568] md:text-lg">{section.preview}</p>
@@ -83,7 +83,7 @@ export default function BeforeYouGoPage() {
                   {section.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="inline-flex items-center gap-1.5 rounded-full bg-[#f5f1ea] px-3 py-1 text-sm text-[#1f2933]"
+                      className="inline-flex items-center gap-1.5 rounded-full bg-[#f5f1ea] px-3 py-1 text-sm text-[#1a3a4a]"
                     >
                       {tag}
                     </span>

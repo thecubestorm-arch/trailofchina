@@ -100,7 +100,7 @@ export default function ShanghaiLocalExperiencesPage() {
 
         <div className="relative mb-6">
           <ChineseWatermark character="沪" />
-          <h1 className="text-4xl font-bold text-gray-900">Local Experiences in Shanghai</h1>
+          <h1 className="text-4xl font-bold text-[#1a3a4a]">Local Experiences in Shanghai</h1>
           <p className="text-sm text-[var(--muted)] mt-1 font-serif">上海的本地体验 · 感受真正的上海</p>
         </div>
 

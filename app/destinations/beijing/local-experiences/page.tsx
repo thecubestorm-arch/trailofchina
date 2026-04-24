@@ -106,7 +106,7 @@ export default function BeijingLocalExperiencesPage() {
 
         <div className="relative mb-6">
           <ChineseWatermark character="京" />
-          <h1 className="text-4xl font-bold text-gray-900">Local Experiences in Beijing</h1>
+          <h1 className="text-4xl font-bold text-[#1a3a4a]">Local Experiences in Beijing</h1>
           <p className="text-sm text-[var(--muted)] mt-1 font-serif">北京的本地体验 · 感受真正的北京</p>
         </div>
 

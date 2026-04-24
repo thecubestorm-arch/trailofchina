@@ -16,7 +16,7 @@ export default function CensorshipPage() {
         <div className="mb-6">
           <Breadcrumb items={[{label:'Home',href:'/'},{label:'China Basics',href:'/china-basics'},{label:'How China Differs',href:'/china-basics/how-china-differs'},{label:'Censorship'}]} />
         </div>
-        <h1 className="text-4xl font-bold mb-6 text-gray-900">Censorship & The Great Firewall</h1>
+        <h1 className="text-4xl font-bold mb-6 text-[#1a3a4a]">Censorship & The Great Firewall</h1>
         
         <section className="mb-8">
           <p className="text-lg text-gray-700 leading-relaxed">
@@ -32,35 +32,35 @@ export default function CensorshipPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
             <div className="bg-[var(--accent-soft)] rounded-lg p-4 text-center">
               <p className="font-semibold">Google</p>
-              <p className="text-sm text-gray-600">Search, Maps, Gmail</p>
+              <p className="text-sm text-[#64748b]">Search, Maps, Gmail</p>
             </div>
             <div className="bg-[var(--accent-soft)] rounded-lg p-4 text-center">
               <p className="font-semibold">Meta</p>
-              <p className="text-sm text-gray-600">Facebook, Instagram, WhatsApp</p>
+              <p className="text-sm text-[#64748b]">Facebook, Instagram, WhatsApp</p>
             </div>
             <div className="bg-[var(--accent-soft)] rounded-lg p-4 text-center">
               <p className="font-semibold">X/Twitter</p>
-              <p className="text-sm text-gray-600">Social media</p>
+              <p className="text-sm text-[#64748b]">Social media</p>
             </div>
             <div className="bg-[var(--accent-soft)] rounded-lg p-4 text-center">
               <p className="font-semibold">YouTube</p>
-              <p className="text-sm text-gray-600">Video streaming</p>
+              <p className="text-sm text-[#64748b]">Video streaming</p>
             </div>
             <div className="bg-[var(--accent-soft)] rounded-lg p-4 text-center">
               <p className="font-semibold">Netflix</p>
-              <p className="text-sm text-gray-600">Streaming</p>
+              <p className="text-sm text-[#64748b]">Streaming</p>
             </div>
             <div className="bg-[var(--accent-soft)] rounded-lg p-4 text-center">
               <p className="font-semibold">ChatGPT</p>
-              <p className="text-sm text-gray-600">AI assistant</p>
+              <p className="text-sm text-[#64748b]">AI assistant</p>
             </div>
             <div className="bg-[var(--accent-soft)] rounded-lg p-4 text-center">
               <p className="font-semibold">Dropbox</p>
-              <p className="text-sm text-gray-600">Cloud storage</p>
+              <p className="text-sm text-[#64748b]">Cloud storage</p>
             </div>
             <div className="bg-[var(--accent-soft)] rounded-lg p-4 text-center">
               <p className="font-semibold">BBC/CNN</p>
-              <p className="text-sm text-gray-600">News sites</p>
+              <p className="text-sm text-[#64748b]">News sites</p>
             </div>
           </div>
         </section>
@@ -81,14 +81,14 @@ export default function CensorshipPage() {
           <h2 className="text-2xl font-semibold mb-4">How to Bypass (VPN)</h2>
           <p className="text-gray-700 mb-4">A <a href="/china-basics/what-apps-to-use/vpn" className="text-[#af5d32] underline hover:text-[#8f431c]">VPN</a> is essential for accessing blocked services. See our <a href="/china-basics/what-apps-to-use/vpn" className="text-[#af5d32] underline hover:text-[#8f431c]">VPN guide</a> for setup instructions and recommended providers:</p>
           
-          <div className="bg-gray-50 rounded-lg p-6">
+          <div className="bg-[#f5f1ea] rounded-lg p-6">
             <h3 className="font-semibold mb-2">Recommended VPNs for China:</h3>
             <ul className="text-gray-700 space-y-2">
               <li>• <strong>ExpressVPN</strong> - Most reliable, works consistently</li>
               <li>• <strong>NordVPN</strong> - Good speeds, easy to use</li>
               <li>• <strong>Astrill</strong> - Popular among expats</li>
             </ul>
-            <p className="text-sm text-gray-600 mt-4 italic">Important: <a href="/china-basics/what-apps-to-use/vpn" className="text-[#af5d32] underline hover:text-[#8f431c]">Download and set up your VPN</a> BEFORE arriving in China.</p>
+            <p className="text-sm text-[#64748b] mt-4 italic">Important: <a href="/china-basics/what-apps-to-use/vpn" className="text-[#af5d32] underline hover:text-[#8f431c]">Download and set up your VPN</a> BEFORE arriving in China.</p>
           </div>
         </section>
 

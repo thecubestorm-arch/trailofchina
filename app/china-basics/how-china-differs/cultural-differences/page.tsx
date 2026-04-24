@@ -16,7 +16,7 @@ export default function CulturalDifferencesPage() {
         <div className="mb-6">
           <Breadcrumb items={[{label:'Home',href:'/'},{label:'China Basics',href:'/china-basics'},{label:'How China Differs',href:'/china-basics/how-china-differs'},{label:'Cultural Differences'}]} />
         </div>
-        <h1 className="text-4xl font-bold mb-6 text-gray-900">Cultural Differences in China</h1>
+        <h1 className="text-4xl font-bold mb-6 text-[#1a3a4a]">Cultural Differences in China</h1>
         
         <section className="mb-8">
           <p className="text-lg text-gray-700 leading-relaxed">

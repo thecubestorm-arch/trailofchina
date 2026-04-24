@@ -7,7 +7,7 @@ export default function ChinaCheatSheet() {
       style={{
         width: '794px',
         backgroundColor: '#faf7f2',
-        color: '#1f2933',
+        color: '#1a3a4a',
         fontFamily: 'system-ui, -apple-system, sans-serif',
       }}
     >

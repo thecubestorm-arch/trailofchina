@@ -100,7 +100,7 @@ export default function ChengduLocalExperiencesPage() {
 
         <div className="relative mb-6">
           <ChineseWatermark character="蓉" />
-          <h1 className="text-4xl font-bold text-gray-900">Local Experiences in Chengdu</h1>
+          <h1 className="text-4xl font-bold text-[#1a3a4a]">Local Experiences in Chengdu</h1>
           <p className="text-sm text-[var(--muted)] mt-1 font-serif">成都的本地体验 · 感受真正的成都</p>
         </div>
 

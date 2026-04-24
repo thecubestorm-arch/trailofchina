@@ -43,7 +43,7 @@ export default function InternetHub() {
         <div className="relative">
           <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'China Basics', href: '/china-basics' }, { label: 'How to Get Internet' }]} />
           <ChineseWatermark character="网络" />
-          <h1 className="mb-6 text-5xl font-bold text-gray-900">How to Get Internet in China</h1>
+          <h1 className="mb-6 text-5xl font-bold text-[#1a3a4a]">How to Get Internet in China</h1>
         </div>
 
         <section className="mb-8">
@@ -65,7 +65,7 @@ export default function InternetHub() {
               >
                 <article className="py-8 px-6 -mx-6 md:py-10">
                   <p className="text-xs font-semibold uppercase tracking-widest text-[#af5d32]">{section.category}</p>
-                  <h3 className="mt-3 text-2xl font-bold text-[#1f2933] md:text-3xl">
+                  <h3 className="mt-3 text-2xl font-bold text-[#1a3a4a] md:text-3xl">
                     {section.icon} {section.title}
                   </h3>
                   <p className="mt-3 text-base leading-relaxed text-[#4a5568] md:text-lg">{section.preview}</p>
@@ -73,7 +73,7 @@ export default function InternetHub() {
                     {section.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="inline-flex items-center gap-1.5 rounded-full bg-[#f5f1ea] px-3 py-1 text-sm text-[#1f2933]"
+                        className="inline-flex items-center gap-1.5 rounded-full bg-[#f5f1ea] px-3 py-1 text-sm text-[#1a3a4a]"
                       >
                         {tag}
                       </span>
@@ -90,7 +90,7 @@ export default function InternetHub() {
                     <Link
                       key={provider.href}
                       href={provider.href}
-                      className="inline-flex items-center gap-2 rounded-lg border border-[#e2dbd0] bg-white px-4 py-2.5 text-sm font-medium text-[#1f2933] shadow-sm transition-colors duration-200 hover:border-[#af5d32] hover:bg-[#fdf8f3] hover:text-[#af5d32]"
+                      className="inline-flex items-center gap-2 rounded-lg border border-[#e2dbd0] bg-white px-4 py-2.5 text-sm font-medium text-[#1a3a4a] shadow-sm transition-colors duration-200 hover:border-[#af5d32] hover:bg-[#fdf8f3] hover:text-[#af5d32]"
                     >
                       <span>{provider.icon}</span>
                       {provider.label}

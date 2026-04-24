@@ -21,7 +21,7 @@ export default function ChengduWhereToEatPage() {
             { label: 'Where to Eat' },
           ]} />
         </div>
-        <h1 className="text-4xl font-bold mb-6 text-gray-900">Where to Eat in Chengdu</h1>
+        <h1 className="text-4xl font-bold mb-6 text-[#1a3a4a]">Where to Eat in Chengdu</h1>
 
         <section className="mb-8">
           <p className="text-lg text-gray-700 leading-relaxed">
@@ -33,7 +33,7 @@ export default function ChengduWhereToEatPage() {
 
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-2">Must-Try Foods</h2>
-          <p className="text-gray-600 mb-6">Click any dish for the full guide</p>
+          <p className="text-[#64748b] mb-6">Click any dish for the full guide</p>
 
           <div className="space-y-4">
             <Link href="/destinations/chengdu/where-to-eat/sichuan-hotpot" className="block border rounded-xl p-4 hover:shadow-md transition-all duration-200 cursor-pointer">
@@ -42,7 +42,7 @@ export default function ChengduWhereToEatPage() {
                 Bubbling red broth loaded with chili and peppercorn. Order a split pot (鸳鸯锅) if you want
                 one mild side for recovery between spicy bites.
               </p>
-              <p className="text-sm text-gray-600">📍 Jinjiang and Chunxi districts | 💰 Mid to high</p>
+              <p className="text-sm text-[#64748b]">📍 Jinjiang and Chunxi districts | 💰 Mid to high</p>
               <span className="text-sm text-[var(--accent)] font-medium">→ Read more</span>
             </Link>
 
@@ -52,7 +52,7 @@ export default function ChengduWhereToEatPage() {
                 Soft tofu in aromatic chili-bean sauce with minced meat and peppercorn fragrance.
                 One of the core dishes to judge a Sichuan kitchen.
               </p>
-              <p className="text-sm text-gray-600">📍 Traditional Sichuan restaurants citywide | 💰 Budget friendly</p>
+              <p className="text-sm text-[#64748b]">📍 Traditional Sichuan restaurants citywide | 💰 Budget friendly</p>
               <span className="text-sm text-[var(--accent)] font-medium">→ Read more</span>
             </Link>
 
@@ -62,7 +62,7 @@ export default function ChengduWhereToEatPage() {
                 The Chengdu original balances sweet, sour, chili heat, and roasted peanuts.
                 Local versions are usually more layered than overseas adaptations.
               </p>
-              <p className="text-sm text-gray-600">📍 Family-style eateries near Wenshu and Wuhou | 💰 Budget to mid</p>
+              <p className="text-sm text-[#64748b]">📍 Family-style eateries near Wenshu and Wuhou | 💰 Budget to mid</p>
               <span className="text-sm text-[var(--accent)] font-medium">→ Read more</span>
             </Link>
 
@@ -72,7 +72,7 @@ export default function ChengduWhereToEatPage() {
                 Wheat noodles with chili oil, sesame, pickled greens, and minced topping.
                 Portions are small, so pair with dumplings or cold dishes.
               </p>
-              <p className="text-sm text-gray-600">📍 Local noodle shops everywhere | 💰 Low cost</p>
+              <p className="text-sm text-[#64748b]">📍 Local noodle shops everywhere | 💰 Low cost</p>
               <span className="text-sm text-[var(--accent)] font-medium">→ Read more</span>
             </Link>
           </div>

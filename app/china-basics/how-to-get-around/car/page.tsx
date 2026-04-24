@@ -14,7 +14,7 @@ export default function CarPage() {
         <div className="mb-6">
           <Breadcrumb items={[{label:'Home',href:'/'},{label:'China Basics',href:'/china-basics'},{label:'How to Get Around',href:'/china-basics/how-to-get-around'},{label:'Car'}]} />
         </div>
-        <h1 className="text-4xl font-bold mb-6 text-gray-900">Car Rental</h1>
+        <h1 className="text-4xl font-bold mb-6 text-[#1a3a4a]">Car Rental</h1>
         
         <section className="mb-8">
           <p className="text-lg text-gray-700 leading-relaxed">

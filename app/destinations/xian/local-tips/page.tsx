@@ -12,7 +12,7 @@ export default function XianLocalTipsPage() {
   return (
     <div className="min-h-screen bg-white">
       <main className="max-w-4xl mx-auto px-4 py-12">
-        <h1 className="text-4xl font-bold mb-6 text-gray-900">Xi&apos;an Local Tips</h1>
+        <h1 className="text-4xl font-bold mb-6 text-[#1a3a4a]">Xi&apos;an Local Tips</h1>
 
         <section className="mb-8">
           <p className="text-lg text-gray-700 leading-relaxed">
@@ -29,9 +29,9 @@ export default function XianLocalTipsPage() {
               Public transport is usually the best value. The 306 line is the standard budget route
               used by independent travelers heading to the Terracotta Warriors site.
             </p>
-            <p className="text-sm text-gray-600 mt-3">🕐 Leave early: target first departures around opening hours</p>
-            <p className="text-sm text-gray-600">💰 Cost: Much cheaper than private car hires</p>
-            <p className="text-sm text-gray-600">📍 Start point: Xi&apos;an Railway Station transport area</p>
+            <p className="text-sm text-[#64748b] mt-3">🕐 Leave early: target first departures around opening hours</p>
+            <p className="text-sm text-[#64748b]">💰 Cost: Much cheaper than private car hires</p>
+            <p className="text-sm text-[#64748b]">📍 Start point: Xi&apos;an Railway Station transport area</p>
           </div>
 
           <div className="border rounded-lg p-6">
@@ -40,9 +40,9 @@ export default function XianLocalTipsPage() {
               Arriving early avoids the biggest tour-group wave, improves museum-floor visibility,
               and makes photos easier in Pit 1.
             </p>
-            <p className="text-sm text-gray-600 mt-3">🕐 Target arrival: right at opening if possible</p>
-            <p className="text-sm text-gray-600">💰 Benefit: Better value from your ticket with fewer delays</p>
-            <p className="text-sm text-gray-600">📍 Priority route: Enter, then head straight to main viewing areas</p>
+            <p className="text-sm text-[#64748b] mt-3">🕐 Target arrival: right at opening if possible</p>
+            <p className="text-sm text-[#64748b]">💰 Benefit: Better value from your ticket with fewer delays</p>
+            <p className="text-sm text-[#64748b]">📍 Priority route: Enter, then head straight to main viewing areas</p>
           </div>
         </section>
 
@@ -55,9 +55,9 @@ export default function XianLocalTipsPage() {
                 Riding the wall is one of Xi&apos;an&apos;s best experiences. Check bike condition first and
                 avoid midday heat in summer.
               </p>
-              <p className="text-sm text-gray-600 mt-3">🕐 Best time: Morning or late afternoon</p>
-              <p className="text-sm text-gray-600">💰 Cost: Rental plus small deposit depending on operator</p>
-              <p className="text-sm text-gray-600">📍 Entry gates: South Gate is the easiest starting point</p>
+              <p className="text-sm text-[#64748b] mt-3">🕐 Best time: Morning or late afternoon</p>
+              <p className="text-sm text-[#64748b]">💰 Cost: Rental plus small deposit depending on operator</p>
+              <p className="text-sm text-[#64748b]">📍 Entry gates: South Gate is the easiest starting point</p>
             </div>
 
             <div className="border rounded-lg p-6">
@@ -66,9 +66,9 @@ export default function XianLocalTipsPage() {
                 Bargaining is expected in souvenir markets, not in restaurants or chain stores.
                 Stay polite, set your max price first, and walk away if needed.
               </p>
-              <p className="text-sm text-gray-600 mt-3">🕐 Best moment: Late day when sellers are more flexible</p>
-              <p className="text-sm text-gray-600">💰 Rule of thumb: Start below first quote and meet in the middle</p>
-              <p className="text-sm text-gray-600">📍 Where: Tourist souvenir lanes and market stalls</p>
+              <p className="text-sm text-[#64748b] mt-3">🕐 Best moment: Late day when sellers are more flexible</p>
+              <p className="text-sm text-[#64748b]">💰 Rule of thumb: Start below first quote and meet in the middle</p>
+              <p className="text-sm text-[#64748b]">📍 Where: Tourist souvenir lanes and market stalls</p>
             </div>
           </div>
         </section>

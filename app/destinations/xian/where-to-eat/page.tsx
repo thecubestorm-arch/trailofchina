@@ -21,7 +21,7 @@ export default function XianWhereToEatPage() {
             { label: 'Where to Eat' },
           ]} />
         </div>
-        <h1 className="text-4xl font-bold mb-6 text-gray-900">Where to Eat in Xi&apos;an</h1>
+        <h1 className="text-4xl font-bold mb-6 text-[#1a3a4a]">Where to Eat in Xi&apos;an</h1>
 
         <section className="mb-8">
           <p className="text-lg text-gray-700 leading-relaxed">
@@ -32,7 +32,7 @@ export default function XianWhereToEatPage() {
 
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-2">Must-Try Foods</h2>
-          <p className="text-gray-600 mb-6">Click any dish for the full guide</p>
+          <p className="text-[#64748b] mb-6">Click any dish for the full guide</p>
 
           <div className="space-y-4">
             <Link href="/destinations/xian/where-to-eat/yangroupaomo" className="block border rounded-xl p-4 hover:shadow-md transition-all duration-200 cursor-pointer">
@@ -41,7 +41,7 @@ export default function XianWhereToEatPage() {
                 A rich mutton broth served with torn flatbread. Traditional shops let you break the
                 bread pieces yourself before they add soup and lamb.
               </p>
-              <p className="text-sm text-gray-600">📍 Muslim Quarter side streets near Beiyuanmen | 💰 ¥25-45 per bowl</p>
+              <p className="text-sm text-[#64748b]">📍 Muslim Quarter side streets near Beiyuanmen | 💰 ¥25-45 per bowl</p>
               <span className="text-sm text-[var(--accent)] font-medium">→ Read more</span>
             </Link>
 
@@ -51,7 +51,7 @@ export default function XianWhereToEatPage() {
                 Crisp baked bun stuffed with chopped braised meat. Pork is most common, but in
                 Muslim areas you&apos;ll also find beef or lamb versions.
               </p>
-              <p className="text-sm text-gray-600">📍 Stalls around Bell Tower and Muslim Quarter | 💰 ¥10-20 each</p>
+              <p className="text-sm text-[#64748b]">📍 Stalls around Bell Tower and Muslim Quarter | 💰 ¥10-20 each</p>
               <span className="text-sm text-[var(--accent)] font-medium">→ Read more</span>
             </Link>
 
@@ -61,7 +61,7 @@ export default function XianWhereToEatPage() {
                 Cold wheat or rice noodles dressed with vinegar, chili oil, garlic, and cucumber.
                 Refreshing and spicy, especially useful in warmer months.
               </p>
-              <p className="text-sm text-gray-600">📍 Small noodle shops near universities and old town lanes | 💰 ¥8-18 per bowl</p>
+              <p className="text-sm text-[#64748b]">📍 Small noodle shops near universities and old town lanes | 💰 ¥8-18 per bowl</p>
               <span className="text-sm text-[var(--accent)] font-medium">→ Read more</span>
             </Link>
 
@@ -71,7 +71,7 @@ export default function XianWhereToEatPage() {
                 Wide hand-pulled noodles with chili, garlic, and vegetables, often topped with
                 braised meat. One of the defining Shaanxi comfort dishes.
               </p>
-              <p className="text-sm text-gray-600">📍 Casual noodle restaurants inside the City Wall | 💰 ¥18-35 per bowl</p>
+              <p className="text-sm text-[#64748b]">📍 Casual noodle restaurants inside the City Wall | 💰 ¥18-35 per bowl</p>
               <span className="text-sm text-[var(--accent)] font-medium">→ Read more</span>
             </Link>
           </div>

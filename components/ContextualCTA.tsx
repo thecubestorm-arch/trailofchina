@@ -26,7 +26,7 @@ export default function ContextualCTA({
       className={`rounded-xl p-6 md:p-8 ${
         isPrimary
           ? 'bg-[#af5d32] text-white'
-          : 'bg-[#f5f1ea] text-[#1f2933]'
+          : 'bg-[#f5f1ea] text-[#1a3a4a]'
       }`}
     >
       <div className="flex items-center gap-3 mb-3">

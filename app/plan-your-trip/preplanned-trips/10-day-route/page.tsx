@@ -10,7 +10,7 @@ export default function TenDayRoutePage() {
   return (
     <div className="min-h-screen bg-white">
       <main className="max-w-4xl mx-auto px-4 py-12">
-        <h1 className="text-4xl font-bold mb-6 text-gray-900">10-Day Extended China Route</h1>
+        <h1 className="text-4xl font-bold mb-6 text-[#1a3a4a]">10-Day Extended China Route</h1>
         
         <section className="mb-8">
           <p className="text-lg text-gray-700 leading-relaxed">
@@ -21,10 +21,10 @@ export default function TenDayRoutePage() {
 
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">Route Overview</h2>
-          <div className="bg-gray-50 rounded-lg p-6">
+          <div className="bg-[#f5f1ea] rounded-lg p-6">
             <p className="text-gray-700 font-medium">Beijing → Xi&apos;an → Chengdu → Yangshuo → Shanghai</p>
-            <p className="text-gray-600 mt-2">Duration: 10 days | Best for: Nature &amp; culture mix</p>
-            <p className="text-gray-600">Estimated budget: $1200-2000 per person</p>
+            <p className="text-[#64748b] mt-2">Duration: 10 days | Best for: Nature &amp; culture mix</p>
+            <p className="text-[#64748b]">Estimated budget: $1200-2000 per person</p>
           </div>
         </section>
 

@@ -15,7 +15,7 @@ export default function EsimPage() {
         <div className="mb-6">
           <Breadcrumb items={[{label:'Home',href:'/'},{label:'China Basics',href:'/china-basics'},{label:'How to Get Internet',href:'/china-basics/how-to-get-internet'},{label:'eSIM'}]} />
         </div>
-        <h1 className="text-4xl font-bold mb-6 text-gray-900">eSIM Cards for China</h1>
+        <h1 className="text-4xl font-bold mb-6 text-[#1a3a4a]">eSIM Cards for China</h1>
         
         <section className="mb-8">
           <p className="text-lg text-gray-700 leading-relaxed">
@@ -30,7 +30,7 @@ export default function EsimPage() {
           <div className="space-y-6">
             <div className="border rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-2">1. Airalo (Mosalink)</h3>
-              <p className="text-gray-600 mb-2">Best overall value. 1GB for 7 days: $5.50</p>
+              <p className="text-[#64748b] mb-2">Best overall value. 1GB for 7 days: $5.50</p>
               <ul className="text-gray-700 list-disc pl-5">
                 <li>Easy app-based setup</li>
                 <li>Multiple data plans (1GB to 20GB)</li>
@@ -40,7 +40,7 @@ export default function EsimPage() {
 
             <div className="border rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-2">2. Holafly</h3>
-              <p className="text-gray-600 mb-2">Best for unlimited data. 7 days: $19.00</p>
+              <p className="text-[#64748b] mb-2">Best for unlimited data. 7 days: $19.00</p>
               <ul className="text-gray-700 list-disc pl-5">
                 <li>Truly unlimited data (no throttling)</li>
                 <li>Longer trip plans available</li>
@@ -50,7 +50,7 @@ export default function EsimPage() {
 
             <div className="border rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-2">3. Ubigi</h3>
-              <p className="text-gray-600 mb-2">Best for multi-country trips. 1GB: $8.00</p>
+              <p className="text-[#64748b] mb-2">Best for multi-country trips. 1GB: $8.00</p>
               <ul className="text-gray-700 list-disc pl-5">
                 <li>Works across Asia</li>
                 <li>Easy top-up</li>

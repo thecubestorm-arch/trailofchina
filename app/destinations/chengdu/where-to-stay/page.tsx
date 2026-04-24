@@ -21,7 +21,7 @@ export default function ChengduWhereToStayPage() {
             { label: 'Where to Stay' },
           ]} />
         </div>
-        <h1 className="text-4xl font-bold mb-6 text-gray-900">Where to Stay in Chengdu</h1>
+        <h1 className="text-4xl font-bold mb-6 text-[#1a3a4a]">Where to Stay in Chengdu</h1>
 
         <section className="mb-8">
           <p className="text-lg text-gray-700 leading-relaxed">
@@ -41,7 +41,7 @@ export default function ChengduWhereToStayPage() {
                 Traditional, atmospheric quarter near Wuhou Shrine. Red lanterns, teahouses, Sichuan opera,
                 and backpacker hostels to mid-range hotels. Magical at night.
               </p>
-              <p className="text-sm text-gray-600">💰 ¥200-900/night | 🚇 Gaoshengqiao (Line 3) | 🎯 Best for: Culture, history, evening charm</p>
+              <p className="text-sm text-[#64748b]">💰 ¥200-900/night | 🚇 Gaoshengqiao (Line 3) | 🎯 Best for: Culture, history, evening charm</p>
             </Link>
 
             <Link href="/destinations/chengdu/where-to-stay/chunxi-road" className="block border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--primary)] hover:shadow-sm transition-all">
@@ -50,7 +50,7 @@ export default function ChengduWhereToStayPage() {
                 Central shopping and dining district with the IFS climbing panda. The most convenient base
                 in Chengdu with Line 2/3 crossing right here.
               </p>
-              <p className="text-sm text-gray-600">💰 ¥350-1200/night | 🚇 Chunxi Road (Line 2/3) | 🎯 Best for: First-timers, shoppers, convenience</p>
+              <p className="text-sm text-[#64748b]">💰 ¥350-1200/night | 🚇 Chunxi Road (Line 2/3) | 🎯 Best for: First-timers, shoppers, convenience</p>
             </Link>
 
             <Link href="/destinations/chengdu/where-to-stay/wide-narrow-alley" className="block border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--primary)] hover:shadow-sm transition-all">
@@ -59,7 +59,7 @@ export default function ChengduWhereToStayPage() {
                 Boutique courtyard hotels, hipster coffee shops, and traditional Qing-dynasty lanes.
                 The best of old and new Chengdu in one walkable area.
               </p>
-              <p className="text-sm text-gray-600">💰 ¥400-1500/night | 🚇 Kuanzhai Xiangzi (Line 4) | 🎯 Best for: Atmosphere, design hotels, coffee</p>
+              <p className="text-sm text-[#64748b]">💰 ¥400-1500/night | 🚇 Kuanzhai Xiangzi (Line 4) | 🎯 Best for: Atmosphere, design hotels, coffee</p>
             </Link>
 
             <div className="border rounded-lg p-6">
@@ -68,9 +68,9 @@ export default function ChengduWhereToStayPage() {
                 A very different side of Chengdu with Tibetan eateries, prayer flags, and small guesthouses.
                 Great for culture and value, though less polished than mainstream hotel districts.
               </p>
-              <p className="text-sm text-gray-600">🕐 Best for: repeat visitors and budget travelers</p>
-              <p className="text-sm text-gray-600">💰 Typical stay: ¥120-450/night</p>
-              <p className="text-sm text-gray-600">📍 Metro: Near Wenshu Monastery / north-central transfer routes</p>
+              <p className="text-sm text-[#64748b]">🕐 Best for: repeat visitors and budget travelers</p>
+              <p className="text-sm text-[#64748b]">💰 Typical stay: ¥120-450/night</p>
+              <p className="text-sm text-[#64748b]">📍 Metro: Near Wenshu Monastery / north-central transfer routes</p>
             </div>
           </div>
         </section>

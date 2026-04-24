@@ -21,7 +21,7 @@ export default function BeijingWhereToEatPage() {
             { label: 'Where to Eat' },
           ]} />
         </div>
-        <h1 className="text-4xl font-bold mb-6 text-gray-900">Where to Eat in Beijing</h1>
+        <h1 className="text-4xl font-bold mb-6 text-[#1a3a4a]">Where to Eat in Beijing</h1>
 
         <section className="mb-8">
           <p className="text-lg text-gray-700 leading-relaxed">
@@ -37,7 +37,7 @@ export default function BeijingWhereToEatPage() {
 
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-2">Must-Try Foods</h2>
-          <p className="text-gray-600 mb-6">Click any dish for the full guide</p>
+          <p className="text-[#64748b] mb-6">Click any dish for the full guide</p>
 
           <div className="space-y-4">
             <Link href="/destinations/beijing/where-to-eat/peking-duck" className="block border rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer">
@@ -46,7 +46,7 @@ export default function BeijingWhereToEatPage() {
                 Crispy lacquered skin, tender meat, wrapped in thin pancakes with scallion and sweet bean sauce.
                 The dish dates to the imperial court and remains Beijing&apos;s defining meal.
               </p>
-              <p className="text-sm text-gray-600">📍 Best: Quanjude (全聚德), Siji Minfu (四季民福), Da Dong (大董) | 💰 ¥150-300 per person</p>
+              <p className="text-sm text-[#64748b]">📍 Best: Quanjude (全聚德), Siji Minfu (四季民福), Da Dong (大董) | 💰 ¥150-300 per person</p>
             </Link>
 
             <Link href="/destinations/beijing/where-to-eat/jianbing" className="block border rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer">
@@ -55,7 +55,7 @@ export default function BeijingWhereToEatPage() {
                 Savory crepe with egg, scallions, cilantro, and a crispy cracker (薄脆) folded inside.
                 The best ones come from morning street carts near subway entrances.
               </p>
-              <p className="text-sm text-gray-600">📍 Street carts, 6:00-9:00 AM | 💰 ¥8-15</p>
+              <p className="text-sm text-[#64748b]">📍 Street carts, 6:00-9:00 AM | 💰 ¥8-15</p>
             </Link>
 
             <Link href="/destinations/beijing/where-to-eat/zhajiangmian" className="block border rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer">
@@ -64,7 +64,7 @@ export default function BeijingWhereToEatPage() {
                 Beijing&apos;s signature noodle bowl: hand-pulled wheat noodles topped with fermented soybean paste
                 and fresh vegetables (cucumber, bean sprouts, radish). Cheap, filling, and everywhere.
               </p>
-              <p className="text-sm text-gray-600">📍 Old Beijing Noodle King (老北京炸酱面) | 💰 ¥20-35</p>
+              <p className="text-sm text-[#64748b]">📍 Old Beijing Noodle King (老北京炸酱面) | 💰 ¥20-35</p>
             </Link>
 
             <Link href="/destinations/beijing/where-to-eat/lamb-skewers" className="block border rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer">
@@ -73,7 +73,7 @@ export default function BeijingWhereToEatPage() {
                 Cumin-dusted lamb skewers grilled over charcoal in the Niujie (Muslim Quarter) area.
                 Come after 6 PM when the smoke and crowds make it feel like a festival.
               </p>
-              <p className="text-sm text-gray-600">📍 Niujie (牛街), Xicheng | 💰 ¥3-5 per skewer</p>
+              <p className="text-sm text-[#64748b]">📍 Niujie (牛街), Xicheng | 💰 ¥3-5 per skewer</p>
             </Link>
 
             <Link href="/destinations/beijing/where-to-eat/baodu" className="block border rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer">
@@ -82,7 +82,7 @@ export default function BeijingWhereToEatPage() {
                 Sliced beef tripe blanched for seconds in boiling water, dipped in sesame paste.
                 An old Beijing snack that sounds intimidating but has a clean, bouncy texture.
               </p>
-              <p className="text-sm text-gray-600">📍 Baodu Feng (爆肚冯), Qianmen area | 💰 ¥25-40</p>
+              <p className="text-sm text-[#64748b]">📍 Baodu Feng (爆肚冯), Qianmen area | 💰 ¥25-40</p>
             </Link>
 
             <Link href="/destinations/beijing/where-to-eat/tanghulu" className="block border rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer">
@@ -91,7 +91,7 @@ export default function BeijingWhereToEatPage() {
                 Candied hawthorn berries on a stick — crunchy sugar shell, sour fruit inside.
                 Available from street vendors everywhere, especially around temple fairs and Wangfujing.
               </p>
-              <p className="text-sm text-gray-600">📍 Street vendors | 💰 ¥10-20</p>
+              <p className="text-sm text-[#64748b]">📍 Street vendors | 💰 ¥10-20</p>
             </Link>
           </div>
         </section>

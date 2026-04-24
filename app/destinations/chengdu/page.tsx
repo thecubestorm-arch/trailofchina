@@ -50,7 +50,7 @@ export default function ChengduPage() {
       <main className="max-w-4xl mx-auto px-4 py-12">
         <div className="relative">
           <ChineseWatermark character="成都" />
-          <h1 className="text-5xl font-bold mb-6 text-gray-900">Chengdu (成都) Travel Guide</h1>
+          <h1 className="text-5xl font-bold mb-6 text-[#1a3a4a]">Chengdu (成都) Travel Guide</h1>
         </div>
 
         <section className="mb-8">
@@ -66,13 +66,13 @@ export default function ChengduPage() {
             <Link key={section.href} href={section.href} className={`block cursor-pointer rounded-lg transition-colors duration-200 hover:bg-[#fdf8f3] ${index < sections.length - 1 ? 'border-b border-[#ebe4d8] pb-8 mb-8' : ''}`}>
               <article className="py-8 px-6 -mx-6 md:py-10">
               <p className="text-xs font-semibold uppercase tracking-widest text-[#af5d32]">{section.category}</p>
-              <h3 className="text-2xl md:text-3xl font-bold text-[#1f2933] mt-3">{section.title}</h3>
+              <h3 className="text-2xl md:text-3xl font-bold text-[#1a3a4a] mt-3">{section.title}</h3>
               <p className="text-base md:text-lg text-[#4a5568] leading-relaxed mt-3">{section.preview}</p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {section.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#f5f1ea] text-sm text-[#1f2933]"
+                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#f5f1ea] text-sm text-[#1a3a4a]"
                   >
                     {tag}
                   </span>
@@ -109,7 +109,7 @@ export default function ChengduPage() {
                 <li>🚄 <strong>Chengdu East Station</strong> — High-speed to Chongqing, Xi'an</li>
               </ul>
             </div>
-            <p className="text-gray-600">
+            <p className="text-[#64748b]">
               For inter-city routes, see our <Link href="/china-basics/how-to-get-around/city-to-city" className="text-[#af5d32] font-semibold underline">City-to-City Transport Guide</Link>.
             </p>
           </div>

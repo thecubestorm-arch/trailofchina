@@ -10,7 +10,7 @@ export default function PreplannedTripsPage() {
   return (
     <div className="min-h-screen bg-white">
       <main className="max-w-4xl mx-auto px-4 py-12">
-        <h1 className="text-4xl font-bold mb-6 text-gray-900">Preplanned Trips</h1>
+        <h1 className="text-4xl font-bold mb-6 text-[#1a3a4a]">Preplanned Trips</h1>
 
         <section className="mb-8">
           <p className="text-lg text-gray-700 leading-relaxed">
@@ -24,7 +24,7 @@ export default function PreplannedTripsPage() {
             <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all h-full">
               <div className="text-4xl mb-4">🧭</div>
               <h3 className="text-2xl font-semibold mb-2">7-Day Route</h3>
-              <p className="text-gray-600 mb-4">Beijing, Xi&apos;an, and Shanghai in one efficient week.</p>
+              <p className="text-[#64748b] mb-4">Beijing, Xi&apos;an, and Shanghai in one efficient week.</p>
               <ul className="text-sm text-gray-700 space-y-1">
                 <li>• 2 high-speed train legs</li>
                 <li>• Best for first visit, limited vacation days</li>
@@ -38,7 +38,7 @@ export default function PreplannedTripsPage() {
             <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all h-full">
               <div className="text-4xl mb-4">🐼</div>
               <h3 className="text-2xl font-semibold mb-2">10-Day Route</h3>
-              <p className="text-gray-600 mb-4">Adds Chengdu pandas and Yangshuo karst scenery.</p>
+              <p className="text-[#64748b] mb-4">Adds Chengdu pandas and Yangshuo karst scenery.</p>
               <ul className="text-sm text-gray-700 space-y-1">
                 <li>• Mix of train + one domestic flight</li>
                 <li>• Culture, food, and nature balance</li>
@@ -52,7 +52,7 @@ export default function PreplannedTripsPage() {
             <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-lg transition-all h-full">
               <div className="text-4xl mb-4">🏯</div>
               <h3 className="text-2xl font-semibold mb-2">14-Day Route</h3>
-              <p className="text-gray-600 mb-4">Grand loop with extra rest days and deeper city time.</p>
+              <p className="text-[#64748b] mb-4">Grand loop with extra rest days and deeper city time.</p>
               <ul className="text-sm text-gray-700 space-y-1">
                 <li>• Comfortable pace with buffer time</li>
                 <li>• Better for photographers and families</li>
@@ -65,7 +65,7 @@ export default function PreplannedTripsPage() {
 
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">How To Choose</h2>
-          <div className="bg-gray-50 rounded-lg p-6 overflow-x-auto">
+          <div className="bg-[#f5f1ea] rounded-lg p-6 overflow-x-auto">
             <table className="w-full min-w-[620px]">
               <thead>
                 <tr className="border-b">

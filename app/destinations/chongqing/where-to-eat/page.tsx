@@ -21,7 +21,7 @@ export default function ChongqingWhereToEatPage() {
             { label: 'Where to Eat' },
           ]} />
         </div>
-        <h1 className="text-4xl font-bold mb-6 text-gray-900">Where to Eat in Chongqing</h1>
+        <h1 className="text-4xl font-bold mb-6 text-[#1a3a4a]">Where to Eat in Chongqing</h1>
 
         <section className="mb-8">
           <p className="text-lg text-gray-700 leading-relaxed">
@@ -32,7 +32,7 @@ export default function ChongqingWhereToEatPage() {
 
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-2">Must-Try Foods</h2>
-          <p className="text-gray-600 mb-6">Click any dish for the full guide</p>
+          <p className="text-[#64748b] mb-6">Click any dish for the full guide</p>
 
           <div className="space-y-4">
             <Link href="/destinations/chongqing/where-to-eat/chongqing-hotpot" className="block border rounded-xl p-4 hover:shadow-md transition-all duration-200 cursor-pointer">
@@ -41,7 +41,7 @@ export default function ChongqingWhereToEatPage() {
                 The city&apos;s signature meal: rich red broth, intense chili, and numbing peppercorn heat.
                 Usually spicier and oilier than Chengdu-style versions.
               </p>
-              <p className="text-sm text-gray-600">📍 Jiefangbei, Guanyinqiao, Nanbin Road | 💰 ¥80-180/person</p>
+              <p className="text-sm text-[#64748b]">📍 Jiefangbei, Guanyinqiao, Nanbin Road | 💰 ¥80-180/person</p>
               <span className="text-sm text-[var(--accent)] font-medium">→ Read more</span>
             </Link>
 
@@ -51,7 +51,7 @@ export default function ChongqingWhereToEatPage() {
                 Everyday Chongqing noodles with chili oil, sesame, garlic, and pickled vegetables. Fast,
                 cheap, and ideal for breakfast or late lunch.
               </p>
-              <p className="text-sm text-gray-600">📍 Found in every neighborhood | 💰 ¥8-20</p>
+              <p className="text-sm text-[#64748b]">📍 Found in every neighborhood | 💰 ¥8-20</p>
               <span className="text-sm text-[var(--accent)] font-medium">→ Read more</span>
             </Link>
 
@@ -61,7 +61,7 @@ export default function ChongqingWhereToEatPage() {
                 Whole fish grilled then simmered in seasoned broth with vegetables, tofu, and noodles.
                 Great for groups and sharing.
               </p>
-              <p className="text-sm text-gray-600">📍 Popular on Nanbin Road | 💰 ¥70-180 per fish</p>
+              <p className="text-sm text-[#64748b]">📍 Popular on Nanbin Road | 💰 ¥70-180 per fish</p>
               <span className="text-sm text-[var(--accent)] font-medium">→ Read more</span>
             </Link>
           </div>

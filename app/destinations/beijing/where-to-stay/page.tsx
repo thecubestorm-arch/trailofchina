@@ -21,7 +21,7 @@ export default function BeijingWhereToStayPage() {
             { label: 'Where to Stay' },
           ]} />
         </div>
-        <h1 className="text-4xl font-bold mb-6 text-gray-900">Where to Stay in Beijing</h1>
+        <h1 className="text-4xl font-bold mb-6 text-[#1a3a4a]">Where to Stay in Beijing</h1>
 
         <section className="mb-8">
           <p className="text-lg text-gray-700 leading-relaxed">
@@ -48,7 +48,7 @@ export default function BeijingWhereToStayPage() {
                 walking distance to the Forbidden City, Tiananmen, and Temple of Heaven.
                 The most atmospheric place to stay, but streets are narrow and rooms can be small.
               </p>
-              <p className="text-sm text-gray-600">💰 ¥300-2000/night | 🚇 Metro: Dongdan, Dengshikou (Line 1) | 🎯 Best for: First-time visitors, culture lovers</p>
+              <p className="text-sm text-[#64748b]">💰 ¥300-2000/night | 🚇 Metro: Dongdan, Dengshikou (Line 1) | 🎯 Best for: First-time visitors, culture lovers</p>
             </div>
 
             <div className="border-2 border-gray-200 rounded-xl p-6">
@@ -58,7 +58,7 @@ export default function BeijingWhereToStayPage() {
                 Large hotels, international restaurants, and easy transport links.
                 Convenient but commercial — feels more like a business district than old Beijing.
               </p>
-              <p className="text-sm text-gray-600">💰 ¥400-2500/night | 🚇 Metro: Wangfujing (Line 1) | 🎯 Best for: Convenience, families</p>
+              <p className="text-sm text-[#64748b]">💰 ¥400-2500/night | 🚇 Metro: Wangfujing (Line 1) | 🎯 Best for: Convenience, families</p>
             </div>
 
             <div className="border-2 border-gray-200 rounded-xl p-6">
@@ -68,7 +68,7 @@ export default function BeijingWhereToStayPage() {
                 and the famous Sanlitun Soho complex. Great for evenings, but a 30-min subway ride
                 to the Forbidden City. The area around Taikoo Li is clean and modern.
               </p>
-              <p className="text-sm text-gray-600">💰 ¥400-3000/night | 🚇 Metro: Tuanjiehu (Line 10) | 🎯 Best for: Nightlife, younger travelers</p>
+              <p className="text-sm text-[#64748b]">💰 ¥400-3000/night | 🚇 Metro: Tuanjiehu (Line 10) | 🎯 Best for: Nightlife, younger travelers</p>
             </div>
 
             <div className="border-2 border-gray-200 rounded-xl p-6">
@@ -78,7 +78,7 @@ export default function BeijingWhereToStayPage() {
                 bookshops, and the Summer Palace nearby. Far from the city center but authentic
                 and affordable. Good if you have a second week to explore the western sights.
               </p>
-              <p className="text-sm text-gray-600">💰 ¥200-800/night | 🚇 Metro: Peking University East Gate (Line 4) | 🎯 Best for: Budget, return visitors</p>
+              <p className="text-sm text-[#64748b]">💰 ¥200-800/night | 🚇 Metro: Peking University East Gate (Line 4) | 🎯 Best for: Budget, return visitors</p>
             </div>
 
             <div className="border-2 border-gray-200 rounded-xl p-6">
@@ -88,7 +88,7 @@ export default function BeijingWhereToStayPage() {
                 Headquarters building is here. Great if you&apos;re on a business trip or want Western-style
                 comfort. Far from hutong culture but closest to Beijing&apos;s contemporary face.
               </p>
-              <p className="text-sm text-gray-600">💰 ¥600-3500/night | 🚇 Metro: Guomao (Line 1/10) | 🎯 Best for: Business travelers, luxury</p>
+              <p className="text-sm text-[#64748b]">💰 ¥600-3500/night | 🚇 Metro: Guomao (Line 1/10) | 🎯 Best for: Business travelers, luxury</p>
             </div>
           </div>
         </section>

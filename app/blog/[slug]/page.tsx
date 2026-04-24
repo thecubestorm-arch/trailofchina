@@ -39,7 +39,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
     return (
       <div className="min-h-screen bg-white">
         <div className="max-w-4xl mx-auto px-4 py-12 text-center">
-          <h1 className="font-serif text-3xl font-bold text-[#1f2933] mb-4">Post not found</h1>
+          <h1 className="font-serif text-3xl font-bold text-[#1a3a4a] mb-4">Post not found</h1>
         </div>
       </div>
     )
@@ -83,7 +83,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
               <Link href="/blog" className="text-[#af5d32] hover:underline">Blog</Link>
             </li>
             <li aria-hidden="true">›</li>
-            <li className="text-[#1f2933] line-clamp-1" aria-current="page">{post.title}</li>
+            <li className="text-[#1a3a4a] line-clamp-1" aria-current="page">{post.title}</li>
           </ol>
         </nav>
 
@@ -100,7 +100,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
             </span>
           </div>
 
-          <h1 className="font-serif text-3xl md:text-4xl font-bold text-[#1f2933] mb-6 leading-tight">
+          <h1 className="font-serif text-3xl md:text-4xl font-bold text-[#1a3a4a] mb-6 leading-tight">
             {post.title}
           </h1>
 
@@ -125,7 +125,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
               {post.description}
             </p>
 
-            <div className="markdown-body text-[#1f2933]">
+            <div className="markdown-body text-[#1a3a4a]">
               <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
                 components={{
@@ -172,7 +172,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
               {post.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="bg-[#f5f1ea] rounded-full px-3 py-1 text-sm text-[#1f2933]"
+                  className="bg-[#f5f1ea] rounded-full px-3 py-1 text-sm text-[#1a3a4a]"
                 >
                   {tag}
                 </span>

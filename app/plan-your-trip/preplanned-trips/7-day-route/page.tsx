@@ -10,7 +10,7 @@ export default function SevenDayRoutePage() {
   return (
     <div className="min-h-screen bg-white">
       <main className="max-w-4xl mx-auto px-4 py-12">
-        <h1 className="text-4xl font-bold mb-6 text-gray-900">7-Day Route: Beijing → Xi&apos;an → Shanghai</h1>
+        <h1 className="text-4xl font-bold mb-6 text-[#1a3a4a]">7-Day Route: Beijing → Xi&apos;an → Shanghai</h1>
 
         <section className="mb-8">
           <p className="text-lg text-gray-700 leading-relaxed mb-4">
@@ -26,31 +26,31 @@ export default function SevenDayRoutePage() {
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">Day-by-Day Itinerary</h2>
           <div className="space-y-4 text-gray-700">
-            <div className="bg-gray-50 rounded-lg p-4">
+            <div className="bg-[#f5f1ea] rounded-lg p-4">
               <h3 className="font-semibold text-lg mb-2">Day 1 - Arrive in Beijing</h3>
               <p>Check in near Dongcheng or Wangfujing, light walk around hutongs, early dinner, reset for jet lag.</p>
             </div>
-            <div className="bg-gray-50 rounded-lg p-4">
+            <div className="bg-[#f5f1ea] rounded-lg p-4">
               <h3 className="font-semibold text-lg mb-2">Day 2 - Forbidden City + Jingshan + Wangfujing</h3>
               <p>Start at Tiananmen/Forbidden City in the morning; sunset city view from Jingshan Park.</p>
             </div>
-            <div className="bg-gray-50 rounded-lg p-4">
+            <div className="bg-[#f5f1ea] rounded-lg p-4">
               <h3 className="font-semibold text-lg mb-2">Day 3 - Great Wall (Mutianyu) + Overnight Train Prep</h3>
               <p>Half-day or full-day wall trip. Return to city, collect luggage, head to Beijing West station.</p>
             </div>
-            <div className="bg-gray-50 rounded-lg p-4">
+            <div className="bg-[#f5f1ea] rounded-lg p-4">
               <h3 className="font-semibold text-lg mb-2">Day 4 - Xi&apos;an City Walls + Muslim Quarter</h3>
               <p>Morning high-speed train arrival. Afternoon bike/walk on city wall, evening food crawl.</p>
             </div>
-            <div className="bg-gray-50 rounded-lg p-4">
+            <div className="bg-[#f5f1ea] rounded-lg p-4">
               <h3 className="font-semibold text-lg mb-2">Day 5 - Terracotta Warriors + Train to Shanghai</h3>
               <p>Early tour to warriors, then high-speed train to Shanghai in the evening.</p>
             </div>
-            <div className="bg-gray-50 rounded-lg p-4">
+            <div className="bg-[#f5f1ea] rounded-lg p-4">
               <h3 className="font-semibold text-lg mb-2">Day 6 - The Bund + Yu Garden + French Concession</h3>
               <p>Historic Shanghai and skyline day. Night river walk on the Bund.</p>
             </div>
-            <div className="bg-gray-50 rounded-lg p-4">
+            <div className="bg-[#f5f1ea] rounded-lg p-4">
               <h3 className="font-semibold text-lg mb-2">Day 7 - Museum / Shopping / Departure</h3>
               <p>Flexible final day. Keep 4-5 hours buffer before your international departure.</p>
             </div>
@@ -69,7 +69,7 @@ export default function SevenDayRoutePage() {
 
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">Estimated Costs (per person, 7 days)</h2>
-          <div className="bg-gray-50 rounded-lg p-6">
+          <div className="bg-[#f5f1ea] rounded-lg p-6">
             <ul className="space-y-2 text-gray-700">
               <li><strong>Accommodation:</strong> ¥2,100-¥4,900 (mid-range hotels)</li>
               <li><strong>Intercity transport:</strong> ¥1,200-¥1,900</li>
@@ -77,7 +77,7 @@ export default function SevenDayRoutePage() {
               <li><strong>Attractions and tours:</strong> ¥900-¥1,700</li>
               <li><strong>Local transport + incidentals:</strong> ¥500-¥900</li>
             </ul>
-            <p className="mt-4 font-semibold text-gray-900">Typical total: ¥5,750-¥11,500 (about $790-$1,580)</p>
+            <p className="mt-4 font-semibold text-[#1a3a4a]">Typical total: ¥5,750-¥11,500 (about $790-$1,580)</p>
           </div>
         </section>
 

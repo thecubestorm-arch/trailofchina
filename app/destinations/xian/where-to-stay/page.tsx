@@ -12,7 +12,7 @@ export default function XianWhereToStayPage() {
   return (
     <div className="min-h-screen bg-white">
       <main className="max-w-4xl mx-auto px-4 py-12">
-        <h1 className="text-4xl font-bold mb-6 text-gray-900">Where to Stay in Xi&apos;an</h1>
+        <h1 className="text-4xl font-bold mb-6 text-[#1a3a4a]">Where to Stay in Xi&apos;an</h1>
 
         <section className="mb-8">
           <p className="text-lg text-gray-700 leading-relaxed">
@@ -30,7 +30,7 @@ export default function XianWhereToStayPage() {
                 Most central base for first-time visitors. Great transport links and quick access to
                 the wall gates, food streets, and major downtown landmarks.
               </p>
-              <p className="text-sm text-gray-600">💰 ¥300-900/night | 🚇 Zhonglou (Line 2) | 🎯 Best for: First-timers, walk everywhere</p>
+              <p className="text-sm text-[#64748b]">💰 ¥300-900/night | 🚇 Zhonglou (Line 2) | 🎯 Best for: First-timers, walk everywhere</p>
             </Link>
 
             <Link href="/destinations/xian/where-to-stay/muslim-quarter" className="block border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--primary)] hover:shadow-sm transition-all">
@@ -39,7 +39,7 @@ export default function XianWhereToStayPage() {
                 Food heaven and the city&apos;s most vibrant neighborhood. Walk to the Bell Tower, Drum Tower,
                 and Great Mosque. Pick hotels one block off the main lanes to reduce night noise.
               </p>
-              <p className="text-sm text-gray-600">💰 ¥220-700/night | 🚇 Zhonglou (Line 2) | 🎯 Best for: Food lovers, atmosphere seekers</p>
+              <p className="text-sm text-[#64748b]">💰 ¥220-700/night | 🚇 Zhonglou (Line 2) | 🎯 Best for: Food lovers, atmosphere seekers</p>
             </Link>
           </div>
         </section>
@@ -53,7 +53,7 @@ export default function XianWhereToStayPage() {
                 Modern district with malls, newer business hotels, and easier access to Big Wild
                 Goose Pagoda and museum areas. Clean, quiet, and family-friendly.
               </p>
-              <p className="text-sm text-gray-600">💰 ¥280-1200/night | 🚇 Dayan Pagoda (Line 3), Xiaozhai (Line 2/3) | 🎯 Best for: Families, longer stays</p>
+              <p className="text-sm text-[#64748b]">💰 ¥280-1200/night | 🚇 Dayan Pagoda (Line 3), Xiaozhai (Line 2/3) | 🎯 Best for: Families, longer stays</p>
             </Link>
 
             <div className="border rounded-lg p-6">
@@ -62,9 +62,9 @@ export default function XianWhereToStayPage() {
                 Practical and budget-friendly for early departures or short stopovers. Choose newer
                 properties and read recent reviews for street comfort at night.
               </p>
-              <p className="text-sm text-gray-600 mt-3">🕐 Best for: One-night transit stays</p>
-              <p className="text-sm text-gray-600">💰 Typical range: ¥140-450 per night</p>
-              <p className="text-sm text-gray-600">📍 Nearby: Xi&apos;an Railway Station, bus links to attractions</p>
+              <p className="text-sm text-[#64748b] mt-3">🕐 Best for: One-night transit stays</p>
+              <p className="text-sm text-[#64748b]">💰 Typical range: ¥140-450 per night</p>
+              <p className="text-sm text-[#64748b]">📍 Nearby: Xi&apos;an Railway Station, bus links to attractions</p>
             </div>
           </div>
         </section>

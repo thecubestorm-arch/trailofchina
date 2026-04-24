@@ -15,7 +15,7 @@ export default function TrainPage() {
         <div className="mb-6">
           <Breadcrumb items={[{label:'Home',href:'/'},{label:'China Basics',href:'/china-basics'},{label:'How to Get Around',href:'/china-basics/how-to-get-around'},{label:'Train'}]} />
         </div>
-        <h1 className="text-4xl font-bold mb-6 text-gray-900">High-Speed Trains</h1>
+        <h1 className="text-4xl font-bold mb-6 text-[#1a3a4a]">High-Speed Trains</h1>
         
         <section className="mb-8">
           <p className="text-lg text-gray-700 leading-relaxed">
@@ -70,7 +70,7 @@ export default function TrainPage() {
             <li><strong>First Class (一等座):</strong> 2+2 seating, spacious - 1.5x base price</li>
             <li><strong>Second Class (二等座):</strong> 2+3 seating, standard - base price</li>
           </ul>
-          <p className="text-gray-600 mt-4 italic">Sleeper trains: Soft sleeper (4 beds), Hard sleeper (6 beds)</p>
+          <p className="text-[#64748b] mt-4 italic">Sleeper trains: Soft sleeper (4 beds), Hard sleeper (6 beds)</p>
         </section>
 
         <section className="mb-8">

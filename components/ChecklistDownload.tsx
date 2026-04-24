@@ -126,7 +126,7 @@ export default function ChecklistDownload() {
 
       <div>
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#af5d32]">Free Download</p>
-        <p className="mt-1 font-serif text-lg leading-tight text-[#1f2933]">China Arrival Cheat Sheet</p>
+        <p className="mt-1 font-serif text-lg leading-tight text-[#1a3a4a]">China Arrival Cheat Sheet</p>
 
         <form onSubmit={handleSubmit} className="mt-3 flex flex-col gap-2 sm:flex-row sm:items-start">
           <label htmlFor="cheat-sheet-email" className="sr-only">
@@ -138,7 +138,7 @@ export default function ChecklistDownload() {
             value={email}
             onChange={(event) => setEmail(event.target.value)}
             placeholder="you@example.com"
-            className="w-full rounded-lg border border-[#d9d0c2] bg-white px-3 py-2 text-sm text-[#1f2933] outline-none transition focus:border-[#af5d32] focus:ring-2 focus:ring-[#af5d32]/30 sm:min-w-[220px]"
+            className="w-full rounded-lg border border-[#d9d0c2] bg-white px-3 py-2 text-sm text-[#1a3a4a] outline-none transition focus:border-[#af5d32] focus:ring-2 focus:ring-[#af5d32]/30 sm:min-w-[220px]"
             autoComplete="email"
             required
           />

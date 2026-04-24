@@ -68,7 +68,7 @@ export default function ChinaBasicsPage() {
         </div>
         <div className="relative">
           <ChineseWatermark character="中国" />
-          <h1 className="mb-6 text-6xl font-bold text-gray-900">China Basics</h1>
+          <h1 className="mb-6 text-6xl font-bold text-[#1a3a4a]">China Basics</h1>
         </div>
 
         <section className="mb-8 overflow-hidden rounded-2xl shadow-sm">
@@ -97,7 +97,7 @@ export default function ChinaBasicsPage() {
             >
               <article className="py-8 px-6 -mx-6 md:py-10">
                 <p className="text-xs font-semibold uppercase tracking-widest text-[#af5d32]">{section.category}</p>
-                <h3 className="mt-3 text-2xl font-bold text-[#1f2933] md:text-3xl">
+                <h3 className="mt-3 text-2xl font-bold text-[#1a3a4a] md:text-3xl">
                   {section.icon} {section.title}
                 </h3>
                 <p className="mt-3 text-base leading-relaxed text-[#4a5568] md:text-lg">{section.preview}</p>
@@ -105,7 +105,7 @@ export default function ChinaBasicsPage() {
                   {section.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="inline-flex items-center gap-1.5 rounded-full bg-[#f5f1ea] px-3 py-1 text-sm text-[#1f2933]"
+                      className="inline-flex items-center gap-1.5 rounded-full bg-[#f5f1ea] px-3 py-1 text-sm text-[#1a3a4a]"
                     >
                       {tag}
                     </span>

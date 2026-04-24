@@ -100,7 +100,7 @@ export default function ChongqingLocalExperiencesPage() {
 
         <div className="relative mb-6">
           <ChineseWatermark character="渝" />
-          <h1 className="text-4xl font-bold text-gray-900">Local Experiences in Chongqing</h1>
+          <h1 className="text-4xl font-bold text-[#1a3a4a]">Local Experiences in Chongqing</h1>
           <p className="text-sm text-[var(--muted)] mt-1 font-serif">重庆的本地体验 · 感受真正的重庆</p>
         </div>
 

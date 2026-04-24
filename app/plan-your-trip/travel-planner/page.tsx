@@ -9,7 +9,7 @@ export default function TravelPlannerPage() {
   return (
     <div className="min-h-screen bg-white">
       <main className="max-w-4xl mx-auto px-4 py-12">
-        <h1 className="text-4xl font-bold mb-6 text-gray-900">Travel Planner</h1>
+        <h1 className="text-4xl font-bold mb-6 text-[#1a3a4a]">Travel Planner</h1>
         
         <section className="mb-8">
           <p className="text-lg text-gray-700 leading-relaxed">
@@ -23,7 +23,7 @@ export default function TravelPlannerPage() {
               <label className="block text-lg font-semibold mb-3">Which cities do you want to visit?</label>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                 {['Beijing', 'Shanghai', 'Xi\u0026apos;an', 'Chengdu', 'Guilin/Yangshuo', 'Hong Kong'].map((city) => (
-                  <label key={city} className="flex items-center space-x-2 border rounded-lg p-3 cursor-pointer hover:bg-gray-50">
+                  <label key={city} className="flex items-center space-x-2 border rounded-lg p-3 cursor-pointer hover:bg-[#f5f1ea]">
                     <input type="checkbox" className="w-4 h-4" />
                     <span>{city}</span>
                   </label>
@@ -45,7 +45,7 @@ export default function TravelPlannerPage() {
               <label className="block text-lg font-semibold mb-3">What are you most interested in?</label>
               <div className="flex flex-wrap gap-2">
                 {['History & Culture', 'Food & Dining', 'Nature & Scenery', 'Modern Cities', 'Adventure', 'Relaxation'].map((interest) => (
-                  <label key={interest} className="border rounded-full px-4 py-2 cursor-pointer hover:bg-gray-50">
+                  <label key={interest} className="border rounded-full px-4 py-2 cursor-pointer hover:bg-[#f5f1ea]">
                     <input type="checkbox" className="hidden" />
                     <span>{interest}</span>
                   </label>
@@ -76,9 +76,9 @@ export default function TravelPlannerPage() {
           </form>
         </section>
 
-        <div className="bg-gray-50 border rounded-lg p-6">
+        <div className="bg-[#f5f1ea] border rounded-lg p-6">
           <h3 className="font-semibold mb-2">Note</h3>
-          <p className="text-gray-600">
+          <p className="text-[#64748b]">
             This is a demo form. Full functionality with personalized itinerary generation coming soon. 
             For now, check our <a href="/plan-your-trip/preplanned-trips" className="text-[var(--accent)] underline">pre-planned trips</a>.
           </p>

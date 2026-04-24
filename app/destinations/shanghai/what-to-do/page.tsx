@@ -25,7 +25,7 @@ export default function ShanghaiWhatToDoPage() {
         </div>
         <div className="relative mb-6">
           <LanternWatermark className="-top-4 -right-8" />
-          <h1 className="text-4xl font-bold text-gray-900">What to Do in Shanghai</h1>
+          <h1 className="text-4xl font-bold text-[#1a3a4a]">What to Do in Shanghai</h1>
         </div>
         
         <section className="mb-8">
@@ -40,39 +40,39 @@ export default function ShanghaiWhatToDoPage() {
           
           <div className="space-y-4">
             <Link href="/destinations/shanghai/what-to-do/bund" className="block border rounded-xl p-6 transition-all duration-200 hover:shadow-md hover:bg-[#fdf8f3]">
-              <h3 className="text-xl font-semibold mb-2 text-[#1f2933]">1. The Bund (外滩) <span className="text-[#af5d32] text-sm font-normal">→ Read more</span></h3>
+              <h3 className="text-xl font-semibold mb-2 text-[#1a3a4a]">1. The Bund (外滩) <span className="text-[#af5d32] text-sm font-normal">→ Read more</span></h3>
               <p className="text-gray-700 mb-2">
                 Shanghai&apos;s iconic waterfront promenade lined with colonial-era buildings. 
                 Best visited at night when Pudong&apos;s skyline lights up across the river.
               </p>
-              <p className="text-sm text-gray-600">🕐 Evening is best | 💰 Free | 📍 Metro: East Nanjing Road</p>
+              <p className="text-sm text-[#64748b]">🕐 Evening is best | 💰 Free | 📍 Metro: East Nanjing Road</p>
             </Link>
 
             <Link href="/destinations/shanghai/what-to-do/yu-garden" className="block border rounded-xl p-6 transition-all duration-200 hover:shadow-md hover:bg-[#fdf8f3]">
-              <h3 className="text-xl font-semibold mb-2 text-[#1f2933]">2. Yu Garden (豫园) <span className="text-[#af5d32] text-sm font-normal">→ Read more</span></h3>
+              <h3 className="text-xl font-semibold mb-2 text-[#1a3a4a]">2. Yu Garden (豫园) <span className="text-[#af5d32] text-sm font-normal">→ Read more</span></h3>
               <p className="text-gray-700 mb-2">
                 A 400-year-old classical Chinese garden with pavilions, rockeries, and ponds. 
                 Surrounded by a bustling bazaar perfect for souvenirs.
               </p>
-              <p className="text-sm text-gray-600">🕐 8:30-17:00 | 💰 ¥40 | 📍 Old City</p>
+              <p className="text-sm text-[#64748b]">🕐 8:30-17:00 | 💰 ¥40 | 📍 Old City</p>
             </Link>
 
             <Link href="/destinations/shanghai/what-to-do/french-concession" className="block border rounded-xl p-6 transition-all duration-200 hover:shadow-md hover:bg-[#fdf8f3]">
-              <h3 className="text-xl font-semibold mb-2 text-[#1f2933]">3. French Concession <span className="text-[#af5d32] text-sm font-normal">→ Read more</span></h3>
+              <h3 className="text-xl font-semibold mb-2 text-[#1a3a4a]">3. French Concession <span className="text-[#af5d32] text-sm font-normal">→ Read more</span></h3>
               <p className="text-gray-700 mb-2">
                 Tree-lined streets with European architecture, boutiques, and cafes. 
                 Perfect for a leisurely afternoon walk.
               </p>
-              <p className="text-sm text-gray-600">🕐 Anytime | 💰 Free | 📍 Metro: South Shaanxi Road</p>
+              <p className="text-sm text-[#64748b]">🕐 Anytime | 💰 Free | 📍 Metro: South Shaanxi Road</p>
             </Link>
 
             <Link href="/destinations/shanghai/what-to-do/shanghai-tower" className="block border rounded-xl p-6 transition-all duration-200 hover:shadow-md hover:bg-[#fdf8f3]">
-              <h3 className="text-xl font-semibold mb-2 text-[#1f2933]">4. Shanghai Tower Observation Deck <span className="text-[#af5d32] text-sm font-normal">→ Read more</span></h3>
+              <h3 className="text-xl font-semibold mb-2 text-[#1a3a4a]">4. Shanghai Tower Observation Deck <span className="text-[#af5d32] text-sm font-normal">→ Read more</span></h3>
               <p className="text-gray-700 mb-2">
                 The world&apos;s second-tallest building with breathtaking 360° views from 546 meters. 
                 The elevator reaches 74 km/h.
               </p>
-              <p className="text-sm text-gray-600">🕐 8:30-22:00 | 💰 ¥180 | 📍 Lujiazui</p>
+              <p className="text-sm text-[#64748b]">🕐 8:30-22:00 | 💰 ¥180 | 📍 Lujiazui</p>
             </Link>
           </div>
         </section>
@@ -88,7 +88,7 @@ export default function ShanghaiWhatToDoPage() {
         </section>
 
         <section className="mb-8 bg-[#fdf8f3] rounded-xl p-6">
-          <h2 className="text-xl font-semibold mb-2 text-[#1f2933]">Want something more authentic?</h2>
+          <h2 className="text-xl font-semibold mb-2 text-[#1a3a4a]">Want something more authentic?</h2>
           <p className="text-gray-700 mb-3">
             Explore Shanghai with locals — shikumen walks with preservationists, French Concession food tours, Art Deco architecture tours, and water town day trips.
           </p>

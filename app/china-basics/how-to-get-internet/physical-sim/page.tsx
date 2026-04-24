@@ -14,7 +14,7 @@ export default function PhysicalSimPage() {
         <div className="mb-6">
           <Breadcrumb items={[{label:'Home',href:'/'},{label:'China Basics',href:'/china-basics'},{label:'How to Get Internet',href:'/china-basics/how-to-get-internet'},{label:'Physical SIM'}]} />
         </div>
-        <h1 className="text-4xl font-bold mb-6 text-gray-900">Physical SIM Cards in China</h1>
+        <h1 className="text-4xl font-bold mb-6 text-[#1a3a4a]">Physical SIM Cards in China</h1>
         
         <section className="mb-8">
           <p className="text-lg text-gray-700 leading-relaxed">
@@ -31,7 +31,7 @@ export default function PhysicalSimPage() {
             <li><strong>Shanghai (PVG/SHA):</strong> Terminal 1 & 2 arrival areas</li>
             <li><strong>Guangzhou (CAN):</strong> Terminal 2, after customs</li>
           </ul>
-          <p className="text-gray-600 mt-4 italic">Look for official stores: 中国移动 (China Mobile), 中国联通 (China Unicom), or 中国电信 (China Telecom)</p>
+          <p className="text-[#64748b] mt-4 italic">Look for official stores: 中国移动 (China Mobile), 中国联通 (China Unicom), or 中国电信 (China Telecom)</p>
         </section>
 
         <section className="mb-8">
@@ -40,19 +40,19 @@ export default function PhysicalSimPage() {
           <div className="grid md:grid-cols-3 gap-4 mb-6">
             <div className="border rounded-lg p-4">
               <h3 className="font-semibold text-lg mb-2">China Mobile</h3>
-              <p className="text-sm text-gray-600">Best coverage, slightly pricier</p>
+              <p className="text-sm text-[#64748b]">Best coverage, slightly pricier</p>
               <p className="text-green-600 font-medium mt-2">¥100-150/month</p>
             </div>
             
             <div className="border rounded-lg p-4">
               <h3 className="font-semibold text-lg mb-2">China Unicom</h3>
-              <p className="text-sm text-gray-600">Best for foreigners, good value</p>
+              <p className="text-sm text-[#64748b]">Best for foreigners, good value</p>
               <p className="text-green-600 font-medium mt-2">¥80-120/month</p>
             </div>
             
             <div className="border rounded-lg p-4">
               <h3 className="font-semibold text-lg mb-2">China Telecom</h3>
-              <p className="text-sm text-gray-600">Good coverage, competitive prices</p>
+              <p className="text-sm text-[#64748b]">Good coverage, competitive prices</p>
               <p className="text-green-600 font-medium mt-2">¥80-130/month</p>
             </div>
           </div>

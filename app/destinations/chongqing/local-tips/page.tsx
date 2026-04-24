@@ -21,7 +21,7 @@ export default function ChongqingLocalTipsPage() {
             { label: 'Local Tips' },
           ]} />
         </div>
-        <h1 className="text-4xl font-bold mb-6 text-gray-900">Chongqing Local Tips</h1>
+        <h1 className="text-4xl font-bold mb-6 text-[#1a3a4a]">Chongqing Local Tips</h1>
 
         <section className="mb-8">
           <p className="text-lg text-gray-700 leading-relaxed">
@@ -40,7 +40,7 @@ export default function ChongqingLocalTipsPage() {
                 A destination may be directly above or below you with no direct staircase. Always verify the
                 correct street level and entrance side.
               </p>
-              <p className="text-sm text-gray-600">🕐 Check before every transfer | 💰 Free habit | 📍 Most critical in Yuzhong</p>
+              <p className="text-sm text-[#64748b]">🕐 Check before every transfer | 💰 Free habit | 📍 Most critical in Yuzhong</p>
             </div>
 
             <div className="border rounded-lg p-6">
@@ -49,7 +49,7 @@ export default function ChongqingLocalTipsPage() {
                 The city often has low-visibility days, especially in cooler seasons. Plan flexible skyline
                 slots and prioritize indoor attractions on foggy mornings.
               </p>
-              <p className="text-sm text-gray-600">🕐 Most common in winter/spring | 💰 N/A | 📍 Affects river viewpoints</p>
+              <p className="text-sm text-[#64748b]">🕐 Most common in winter/spring | 💰 N/A | 📍 Affects river viewpoints</p>
             </div>
 
             <div className="border rounded-lg p-6">
@@ -58,7 +58,7 @@ export default function ChongqingLocalTipsPage() {
                 Even reduced-heat dishes can be intense for newcomers. Ask for minimal chili and use a split
                 broth at hotpot if you&apos;re uncertain.
               </p>
-              <p className="text-sm text-gray-600">🕐 Every meal matters | 💰 Same price either way | 📍 Hotpot and xiaomian shops</p>
+              <p className="text-sm text-[#64748b]">🕐 Every meal matters | 💰 Same price either way | 📍 Hotpot and xiaomian shops</p>
             </div>
 
             <div className="border rounded-lg p-6">
@@ -67,7 +67,7 @@ export default function ChongqingLocalTipsPage() {
                 Use off-peak windows to visit Liziba and central transfer stations. Peak rush can make short
                 rides significantly slower.
               </p>
-              <p className="text-sm text-gray-600">🕐 Aim for 10:00-16:30 | 💰 Metro fares are low | 📍 Line 2 and interchanges</p>
+              <p className="text-sm text-[#64748b]">🕐 Aim for 10:00-16:30 | 💰 Metro fares are low | 📍 Line 2 and interchanges</p>
             </div>
 
             <div className="border rounded-lg p-6">
@@ -76,7 +76,7 @@ export default function ChongqingLocalTipsPage() {
                 Keep DiDi ready for late-night returns, bad weather, or confusing multi-level drop-offs where
                 walking routes become inefficient.
               </p>
-              <p className="text-sm text-gray-600">🕐 Especially after 21:00 | 💰 Usually reasonable in-city | 📍 Use precise pickup pins</p>
+              <p className="text-sm text-[#64748b]">🕐 Especially after 21:00 | 💰 Usually reasonable in-city | 📍 Use precise pickup pins</p>
             </div>
           </div>
         </section>

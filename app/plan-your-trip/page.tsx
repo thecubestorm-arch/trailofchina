@@ -52,7 +52,7 @@ export default function PlanYourTripPage() {
       <main className="mx-auto max-w-4xl px-4 py-12">
         <div className="relative">
           <ChineseWatermark character="计划" />
-          <h1 className="mb-6 text-6xl font-bold text-gray-900">Plan Your Trip</h1>
+          <h1 className="mb-6 text-6xl font-bold text-[#1a3a4a]">Plan Your Trip</h1>
         </div>
 
         <section className="mb-8">
@@ -70,7 +70,7 @@ export default function PlanYourTripPage() {
             >
               <article className="py-8 px-6 -mx-6 md:py-10">
                 <p className="text-xs font-semibold uppercase tracking-widest text-[#af5d32]">{section.category}</p>
-                <h3 className="mt-3 text-2xl font-bold text-[#1f2933] md:text-3xl">
+                <h3 className="mt-3 text-2xl font-bold text-[#1a3a4a] md:text-3xl">
                   {section.icon} {section.title}
                 </h3>
                 <p className="mt-3 text-base leading-relaxed text-[#4a5568] md:text-lg">{section.preview}</p>
@@ -78,7 +78,7 @@ export default function PlanYourTripPage() {
                   {section.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="inline-flex items-center gap-1.5 rounded-full bg-[#f5f1ea] px-3 py-1 text-sm text-[#1f2933]"
+                      className="inline-flex items-center gap-1.5 rounded-full bg-[#f5f1ea] px-3 py-1 text-sm text-[#1a3a4a]"
                     >
                       {tag}
                     </span>

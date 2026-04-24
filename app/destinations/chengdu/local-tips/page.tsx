@@ -21,7 +21,7 @@ export default function ChengduLocalTipsPage() {
             { label: 'Local Tips' },
           ]} />
         </div>
-        <h1 className="text-4xl font-bold mb-6 text-gray-900">Chengdu Local Tips</h1>
+        <h1 className="text-4xl font-bold mb-6 text-[#1a3a4a]">Chengdu Local Tips</h1>
 
         <section className="mb-8">
           <p className="text-lg text-gray-700 leading-relaxed">
@@ -40,9 +40,9 @@ export default function ChengduLocalTipsPage() {
                 Arrive at opening time for active pandas. Most pandas nap once the day warms up,
                 and crowd density rises sharply by mid-morning.
               </p>
-              <p className="text-sm text-gray-600">🕐 Go at: 8:00 AM (crowds build by around 10:00 AM)</p>
-              <p className="text-sm text-gray-600">💰 Budget: extra for shuttle carts inside the base</p>
-              <p className="text-sm text-gray-600">📍 Access: combine metro + bus/taxi depending on your hotel</p>
+              <p className="text-sm text-[#64748b]">🕐 Go at: 8:00 AM (crowds build by around 10:00 AM)</p>
+              <p className="text-sm text-[#64748b]">💰 Budget: extra for shuttle carts inside the base</p>
+              <p className="text-sm text-[#64748b]">📍 Access: combine metro + bus/taxi depending on your hotel</p>
             </div>
 
             <div className="border rounded-lg p-6">
@@ -51,9 +51,9 @@ export default function ChengduLocalTipsPage() {
                 Don&apos;t over-schedule. Tea houses, park walks, and long meals are part of the city&apos;s culture.
                 Plan fewer sights per day than you would in Shanghai or Beijing.
               </p>
-              <p className="text-sm text-gray-600">🕐 Rhythm: leave buffer time every afternoon</p>
-              <p className="text-sm text-gray-600">💰 Budget: tea house sessions can be low-cost and long</p>
-              <p className="text-sm text-gray-600">📍 Best spots: People&apos;s Park, riverside neighborhoods</p>
+              <p className="text-sm text-[#64748b]">🕐 Rhythm: leave buffer time every afternoon</p>
+              <p className="text-sm text-[#64748b]">💰 Budget: tea house sessions can be low-cost and long</p>
+              <p className="text-sm text-[#64748b]">📍 Best spots: People&apos;s Park, riverside neighborhoods</p>
             </div>
 
             <div className="border rounded-lg p-6">
@@ -62,9 +62,9 @@ export default function ChengduLocalTipsPage() {
                 Massage is mainstream in Chengdu, and many respected clinics employ blind masseurs
                 with strong reputations for therapeutic treatment.
               </p>
-              <p className="text-sm text-gray-600">🕐 Typical session: 60-90 minutes</p>
-              <p className="text-sm text-gray-600">💰 Typical cost: ¥80-260 depending on venue</p>
-              <p className="text-sm text-gray-600">📍 Tip: ask hotel staff for trusted local clinics</p>
+              <p className="text-sm text-[#64748b]">🕐 Typical session: 60-90 minutes</p>
+              <p className="text-sm text-[#64748b]">💰 Typical cost: ¥80-260 depending on venue</p>
+              <p className="text-sm text-[#64748b]">📍 Tip: ask hotel staff for trusted local clinics</p>
             </div>
 
             <div className="border rounded-lg p-6">
@@ -73,9 +73,9 @@ export default function ChengduLocalTipsPage() {
                 DiDi is usually simpler than street taxis for non-Chinese speakers. Rain can slow traffic,
                 so build buffer time and pre-book Sichuan Opera seats in high season.
               </p>
-              <p className="text-sm text-gray-600">🕐 Book opera: at least 1 day ahead, 2-3 days on weekends</p>
-              <p className="text-sm text-gray-600">💰 Ride cost: DiDi often comparable to metered taxis</p>
-              <p className="text-sm text-gray-600">📍 Compare: Jinli is lively-touristy, Kuanzhai is polished-historic</p>
+              <p className="text-sm text-[#64748b]">🕐 Book opera: at least 1 day ahead, 2-3 days on weekends</p>
+              <p className="text-sm text-[#64748b]">💰 Ride cost: DiDi often comparable to metered taxis</p>
+              <p className="text-sm text-[#64748b]">📍 Compare: Jinli is lively-touristy, Kuanzhai is polished-historic</p>
             </div>
           </div>
         </section>
