@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Breadcrumb from './Breadcrumb';
 import RelatedArticles from './RelatedArticles';
+import TableOfContents, { TOCItem } from './TableOfContents';
 
 type Step = {
   title: string
@@ -33,6 +34,7 @@ type GuideArticlePageProps = {
   hook?: string
   quickInfo?: string
   children?: React.ReactNode
+  tocItems?: TOCItem[]
 }
 
 export default function GuideArticlePage({
@@ -50,11 +52,19 @@ export default function GuideArticlePage({
   hook,
   quickInfo,
   children,
+  tocItems,
 }: GuideArticlePageProps) {
-  return (
-    <section className="container-px mx-auto max-w-4xl py-12 md:py-16" style={{
+  const content = (
+    <section className="mx-auto py-12 md:py-16" style={{
       background: 'linear-gradient(0deg, rgba(245,241,234,0.02) 0%, rgba(245,241,234,0.02) 100%), #ffffff',
     }}>
+      {/* Mobile TOC */}
+      {tocItems && tocItems.length > 0 && (
+        <div className="md:hidden">
+          <TableOfContents items={tocItems} />
+        </div>
+      )}
+
       {/* Breadcrumb */}
       <div className="mb-6">
         <Breadcrumb items={breadcrumbs || []} />
@@ -167,5 +177,26 @@ export default function GuideArticlePage({
         </div>
       )}
     </section>
-  )
+  );
+
+  if (tocItems && tocItems.length > 0) {
+    return (
+      <div className="container-px mx-auto max-w-6xl">
+        <div className="md:grid md:grid-cols-3 md:gap-10">
+          <div className="md:col-span-2 max-w-4xl">
+            {content}
+          </div>
+          <div className="md:col-span-1">
+            <TableOfContents items={tocItems} className="mt-12" />
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="container-px mx-auto max-w-4xl">
+      {content}
+    </div>
+  );
 }

@@ -63,6 +63,13 @@ const setupSteps = [
   { num: '⑤', text: "You're ready for China!", icon: '🇨🇳' },
 ]
 
+const tocItems = [
+  { id: 'why-need-vpn', title: 'Why You Need a VPN' },
+  { id: 'best-vpns', title: 'Best VPNs for China' },
+  { id: 'setup', title: 'Setup Guide' },
+  { id: 'alternatives', title: 'Alternatives' },
+]
+
 export default function VpnGuidePage() {
   return (
     <div>
@@ -75,6 +82,7 @@ export default function VpnGuidePage() {
         intro="If you are heading to China and rely on Google Maps, WhatsApp, Instagram, or Gmail, you need a VPN. The Great Firewall blocks most Western apps and websites, and once you are inside China, you can not even visit VPN websites to download one. Set it up before you leave."
         hook="You need a VPN in China. The internet is censored — Google, WhatsApp, Instagram, and YouTube are all blocked. Download and install BEFORE you land, because you can not access VPN websites from inside China."
         quickInfo="Free plans available · iOS + Android + Desktop · Must download before arrival"
+        tocItems={tocItems}
         relatedArticles={[
           { title: 'How to Get Internet in China', description: 'eSIM, physical SIM, and Wi-Fi options for staying connected.', href: '/china-basics/how-to-get-internet' },
           { title: 'Censorship in China', description: 'What is blocked and how to prepare for the Great Firewall.', href: '/china-basics/how-china-differs/censorship' },
@@ -89,7 +97,7 @@ export default function VpnGuidePage() {
         {
           <>
             <div>
-              <h2 className="text-2xl font-extrabold text-slate-900">Why you need a VPN in China</h2>
+              <h2 id="why-need-vpn" className="text-2xl font-extrabold text-slate-900">Why you need a VPN in China</h2>
               <p className="mt-4 text-sm leading-relaxed text-slate-700 md:text-base">
                 China blocks most of the internet you use every day. Google, Gmail, Google Maps, YouTube, Instagram, WhatsApp, Facebook, Twitter, and even Wikipedia are inaccessible without a VPN. I have been to China four times, and every single time I have watched other travelers panic at the airport because nothing on their phone works anymore.
               </p>
@@ -102,7 +110,7 @@ export default function VpnGuidePage() {
             </div>
 
             <div className="mt-8">
-              <h2 className="text-2xl font-extrabold text-slate-900">Best VPNs for China</h2>
+              <h2 id="best-vpns" className="text-2xl font-extrabold text-slate-900">Best VPNs for China</h2>
               <p className="mt-4 text-sm leading-relaxed text-slate-700 md:text-base">
                 These four VPNs have the best track record for working inside China. Prices and reliability change over time — the Great Firewall evolves constantly — so what works today might need a protocol tweak tomorrow. All four offer money-back guarantees, so you can test risk-free.
               </p>
@@ -142,7 +150,7 @@ export default function VpnGuidePage() {
             </div>
 
             <div className="mt-8">
-              <h2 className="text-2xl font-extrabold text-slate-900">How to set up your VPN before you travel</h2>
+              <h2 id="setup" className="text-2xl font-extrabold text-slate-900">How to set up your VPN before you travel</h2>
               <div className="mt-4 flex flex-col items-start gap-0">
                 {setupSteps.map((step, i) => (
                   <div key={i} className="flex w-full items-start">
@@ -172,10 +180,8 @@ export default function VpnGuidePage() {
 
             </div>
 
-
-
             <div className="mt-8">
-              <h2 className="text-2xl font-extrabold text-slate-900">Alternatives if you can not get a VPN working</h2>
+              <h2 id="alternatives" className="text-2xl font-extrabold text-slate-900">Alternatives if you can not get a VPN working</h2>
               <p className="mt-4 text-sm leading-relaxed text-slate-700 md:text-base">
                 Another option is roaming with your home SIM card. If your carrier offers international roaming in China, your traffic routes through your home network and bypasses the Great Firewall entirely. The downside is cost — roaming data is expensive, and speeds can be slow. It is useful as an emergency backup to check email or send a WhatsApp message, but not for everyday browsing.
               </p>
