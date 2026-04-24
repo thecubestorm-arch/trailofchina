@@ -23,14 +23,14 @@ type Tab =
   | "things-to-do"
   | "where-to-eat"
   | "where-to-stay"
-  | "know-before-you-go";
+  | "essentials";
 
 const tabs = [
   { id: "overview" as Tab, label: "Overview", mobileLabel: "Overview" },
   { id: "things-to-do" as Tab, label: "Things to Do", mobileLabel: "To Do" },
   { id: "where-to-eat" as Tab, label: "Where to Eat", mobileLabel: "Eat" },
   { id: "where-to-stay" as Tab, label: "Where to Stay", mobileLabel: "Stay" },
-  { id: "know-before-you-go" as Tab, label: "Before You Go", mobileLabel: "Tips" },
+  { id: "essentials" as Tab, label: "Essentials", mobileLabel: "Essentials" },
 ];
 
 const quickInfoPills = [
@@ -586,7 +586,7 @@ export default function ShanghaiHubClient() {
       </section>
 
       {/* ========== STICKY TAB NAV ========== */}
-      <nav className="sticky top-[44px] z-40 bg-white border-b border-[#ebe4d8]">
+      <nav className="sticky top-0 z-50 bg-white border-b border-[#ebe4d8] shadow-sm">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex overflow-x-auto scrollbar-hide">
             {tabs.map((tab) => {
@@ -693,7 +693,7 @@ export default function ShanghaiHubClient() {
           </div>
         )}
 
-        {activeTab === "know-before-you-go" && (
+        {activeTab === "essentials" && (
           <div className="space-y-12 md:space-y-16">
             <KnowBeforeYouGoSection expanded />
             <LocalTipsSection />
