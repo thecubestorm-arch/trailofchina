@@ -544,28 +544,68 @@ function CompactIconCard({
 
 function FooterCTA() {
   return (
-    <section className="bg-[#af5d32] rounded-2xl p-6 md:p-10 text-center">
-      <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
-        Plan Your Shanghai Trip
-      </h2>
-      <p className="text-white/80 text-sm md:text-base max-w-lg mx-auto mb-6">
-        Get a ready-made itinerary or build your own with our travel planner.
-        Everything you need for a smooth trip to Shanghai.
-      </p>
-      <div className="flex flex-col sm:flex-row gap-3 justify-center">
-        <Link
-          href="/plan-your-trip/preplanned-trips"
-          className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-[#af5d32] font-semibold rounded-xl hover:bg-[#f5f1ea] transition-colors text-sm"
-        >
-          Find Your Perfect Trip
-          <ArrowRight size={16} />
-        </Link>
-        <Link
-          href="/plan-your-trip/travel-planner"
-          className="inline-flex items-center justify-center px-6 py-3 bg-transparent border border-white text-white font-semibold rounded-xl hover:bg-white/10 transition-colors text-sm"
-        >
-          Plan Your Own Trip
-        </Link>
+    <section className="rounded-xl overflow-hidden border border-[#ebe4d8]">
+      <div className="grid md:grid-cols-5 gap-0">
+        {/* Left: Main CTA */}
+        <div className="md:col-span-3 bg-[#1a3a4a] p-6 md:p-10">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#af5d32] mb-3">
+            Plan Your Trip
+          </p>
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
+            Ready to Explore Shanghai?
+          </h2>
+          <p className="text-white/70 text-sm md:text-base max-w-md mb-6">
+            From visa tips to day-by-day itineraries — everything you need for a smooth, unforgettable trip.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <Link
+              href="/plan-your-trip/preplanned-trips"
+              className="inline-flex items-center gap-2 text-[#f5f1ea] hover:text-white font-semibold text-sm transition-colors"
+            >
+              View Itineraries <ArrowRight size={16} />
+            </Link>
+            <Link
+              href="/plan-your-trip/travel-planner"
+              className="inline-flex items-center gap-2 text-white/70 hover:text-white font-semibold text-sm transition-colors"
+            >
+              Custom Planner <ArrowRight size={16} />
+            </Link>
+          </div>
+        </div>
+
+        {/* Right: Quick info */}
+        <div className="md:col-span-2 bg-[#f5f1ea] p-6 md:p-10 flex flex-col justify-center">
+          <div className="space-y-4">
+            <div className="flex items-start gap-3">
+              <span className="text-lg">🗓️</span>
+              <div>
+                <p className="text-sm font-semibold text-[#1a3a4a]">7–14 days recommended</p>
+                <p className="text-xs text-[#64748b]">Most travelers spend 5–7 days in Shanghai</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="text-lg">🌤️</span>
+              <div>
+                <p className="text-sm font-semibold text-[#1a3a4a]">Best time: Mar–May, Sep–Nov</p>
+                <p className="text-xs text-[#64748b]">Mild weather, fewer crowds</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="text-lg">💡</span>
+              <div>
+                <p className="text-sm font-semibold text-[#1a3a4a]">First time?</p>
+                <p className="text-xs text-[#64748b]">Start with our <Link href="/plan-your-trip/preplanned-trips" className="text-[#af5d32] hover:underline">7-day route</Link></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Trust bar */}
+      <div className="bg-[#1a3a4a] border-t border-white/10 px-6 py-3 text-center">
+        <p className="text-white/50 text-xs">
+          Trusted by 1,000+ China travelers · Free itineraries · Local tips
+        </p>
       </div>
     </section>
   );
