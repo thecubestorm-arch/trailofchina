@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -537,6 +537,18 @@ function LocalTipsSection() {
 
 export default function ShanghaiHubClient() {
   const [activeTab, setActiveTab] = useState<Tab>("overview");
+
+  // Hide the main site navbar on this hub page so the hub tab nav takes over
+  useEffect(() => {
+    const header = document.querySelector('header');
+    if (header) {
+      (header as HTMLElement).style.position = 'relative';
+    }
+    return () => {
+      const h = document.querySelector('header');
+      if (h) (h as HTMLElement).style.position = '';
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-white">
