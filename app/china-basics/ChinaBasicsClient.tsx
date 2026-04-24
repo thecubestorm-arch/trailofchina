@@ -17,6 +17,8 @@ import {
   X,
 } from "lucide-react";
 
+import FooterCTA from "@/components/FooterCTA";
+
 // ─── Types ────────────────────────────────────────────────────────
 
 type Tab = "overview" | "prepare" | "apps-money" | "getting-around" | "know-before";
@@ -336,58 +338,6 @@ function PhotoCard({
   );
 }
 
-function FooterCTA() {
-  return (
-    <section className="rounded-xl overflow-hidden border border-[#ebe4d8]">
-      <div className="grid md:grid-cols-5 gap-0">
-        <div className="md:col-span-3 bg-[#1a3a4a] p-6 md:p-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#af5d32] mb-3">Plan Your Trip</p>
-          <h2 className="text-xl md:text-2xl font-bold text-white mb-3">Ready to Explore China?</h2>
-          <p className="text-white/70 text-sm max-w-md mb-5">From visa tips to day-by-day itineraries — everything you need for a smooth trip.</p>
-          <div className="flex flex-wrap gap-4">
-            <Link href="/plan-your-trip/preplanned-trips" className="inline-flex items-center gap-2 text-[#f5f1ea] hover:text-white font-semibold text-sm transition-colors">
-              View Itineraries
-              <ArrowRight size={16} />
-            </Link>
-            <Link href="/plan-your-trip/travel-planner" className="inline-flex items-center gap-2 text-white/70 hover:text-white font-semibold text-sm transition-colors">
-              Custom Planner
-              <ArrowRight size={16} />
-            </Link>
-          </div>
-        </div>
-        <div className="md:col-span-2 bg-[#f5f1ea] p-6 md:p-8 flex flex-col justify-center">
-          <div className="space-y-3">
-            <div className="flex items-start gap-3">
-              <span className="text-lg">🛂</span>
-              <div>
-                <p className="text-sm font-semibold text-[#1a3a4a]">15–30 days visa-free</p>
-                <p className="text-xs text-[#64748b]">Most Western nationals</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <span className="text-lg">📱</span>
-              <div>
-                <p className="text-sm font-semibold text-[#1a3a4a]">Set up apps before you fly</p>
-                <p className="text-xs text-[#64748b]">Alipay, VPN, eSIM — do it at home</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <span className="text-lg">💡</span>
-              <div>
-                <p className="text-sm font-semibold text-[#1a3a4a]">First time?</p>
-                <p className="text-xs text-[#64748b]">Start with our <Link href="/china-basics/how-to-get-internet" className="text-[#af5d32] hover:underline">internet guide</Link></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="bg-[#1a3a4a] border-t border-white/10 px-6 py-3 text-center">
-        <p className="text-white/50 text-xs">Free guides · Updated regularly · Written by China travelers</p>
-      </div>
-    </section>
-  );
-}
-
 // ─── Section Components ────────────────────────────────────────
 
 function PrepareSection({ expanded = false }: { expanded?: boolean }) {
@@ -699,35 +649,80 @@ export default function ChinaBasicsClient() {
             <KnowBeforeSection expanded />
 
             {/* Footer CTA */}
-            <FooterCTA />
+            <FooterCTA
+              title="Ready to Explore China?"
+              subtitle="From visa tips to day-by-day itineraries — everything you need for a smooth trip."
+              quickInfo={[
+                { icon: ShieldCheck, title: "15–30 days visa-free", description: "Most Western nationals" },
+                { icon: Smartphone, title: "Set up apps before you fly", description: "Alipay, VPN, eSIM — do it at home" },
+                { icon: Lightbulb, title: "First time?", description: "Start with our", link: { href: "/china-basics/how-to-get-internet", label: "internet guide" } },
+              ]}
+              trustText="Free guides · Updated regularly · Written by China travelers"
+            />
           </div>
         )}
 
         {activeTab === "prepare" && !isFiltering && (
           <div className="space-y-8 md:space-y-10">
             <PrepareSection expanded />
-            <FooterCTA />
+            <FooterCTA
+              title="Ready to Explore China?"
+              subtitle="From visa tips to day-by-day itineraries — everything you need for a smooth trip."
+              quickInfo={[
+                { icon: ShieldCheck, title: "15–30 days visa-free", description: "Most Western nationals" },
+                { icon: Smartphone, title: "Set up apps before you fly", description: "Alipay, VPN, eSIM — do it at home" },
+                { icon: Lightbulb, title: "First time?", description: "Start with our", link: { href: "/china-basics/how-to-get-internet", label: "internet guide" } },
+              ]}
+              trustText="Free guides · Updated regularly · Written by China travelers"
+            />
           </div>
         )}
 
         {activeTab === "apps-money" && !isFiltering && (
           <div className="space-y-8 md:space-y-10">
             <AppsMoneySection expanded />
-            <FooterCTA />
+            <FooterCTA
+              title="Ready to Explore China?"
+              subtitle="From visa tips to day-by-day itineraries — everything you need for a smooth trip."
+              quickInfo={[
+                { icon: ShieldCheck, title: "15–30 days visa-free", description: "Most Western nationals" },
+                { icon: Smartphone, title: "Set up apps before you fly", description: "Alipay, VPN, eSIM — do it at home" },
+                { icon: Lightbulb, title: "First time?", description: "Start with our", link: { href: "/china-basics/how-to-get-internet", label: "internet guide" } },
+              ]}
+              trustText="Free guides · Updated regularly · Written by China travelers"
+            />
           </div>
         )}
 
         {activeTab === "getting-around" && !isFiltering && (
           <div className="space-y-8 md:space-y-10">
             <GettingAroundSection expanded />
-            <FooterCTA />
+            <FooterCTA
+              title="Ready to Explore China?"
+              subtitle="From visa tips to day-by-day itineraries — everything you need for a smooth trip."
+              quickInfo={[
+                { icon: ShieldCheck, title: "15–30 days visa-free", description: "Most Western nationals" },
+                { icon: Smartphone, title: "Set up apps before you fly", description: "Alipay, VPN, eSIM — do it at home" },
+                { icon: Lightbulb, title: "First time?", description: "Start with our", link: { href: "/china-basics/how-to-get-internet", label: "internet guide" } },
+              ]}
+              trustText="Free guides · Updated regularly · Written by China travelers"
+            />
           </div>
         )}
 
         {activeTab === "know-before" && !isFiltering && (
           <div className="space-y-8 md:space-y-10">
             <KnowBeforeSection expanded />
-            <FooterCTA />
+            <FooterCTA
+              title="Ready to Explore China?"
+              subtitle="From visa tips to day-by-day itineraries — everything you need for a smooth trip."
+              quickInfo={[
+                { icon: ShieldCheck, title: "15–30 days visa-free", description: "Most Western nationals" },
+                { icon: Smartphone, title: "Set up apps before you fly", description: "Alipay, VPN, eSIM — do it at home" },
+                { icon: Lightbulb, title: "First time?", description: "Start with our", link: { href: "/china-basics/how-to-get-internet", label: "internet guide" } },
+              ]}
+              trustText="Free guides · Updated regularly · Written by China travelers"
+            />
           </div>
         )}
       </main>
