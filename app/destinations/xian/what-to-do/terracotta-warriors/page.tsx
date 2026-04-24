@@ -15,6 +15,8 @@ export const metadata: Metadata = {
   },
 };
 
+const searchQuery = encodeURIComponent("Terracotta Warriors private tour Xi'an");
+
 export default function TerracottaWarriorsPage() {
   const tips = [
     {
@@ -132,6 +134,31 @@ The site is a UNESCO World Heritage site and one of China\'s most famous attract
         { title: "Big Wild Goose Pagoda", description: "Explore Big Wild Goose Pagoda, one of Xi'an's top attractions.", href: "/destinations/xian/what-to-do/big-wild-geese-pagoda" },
       ]}
       tips={[...tips, ...photoSpots]}
+      customToursCTA={
+        <section className="mb-10">
+          <div className="rounded-2xl border-2 border-[#ebe4d8] bg-[#faf8f4] p-6 sm:p-8 text-center shadow-sm">
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-3 text-[var(--foreground)]">
+              Want More Than a Quick Warrior Snapshot?
+            </h2>
+            <p className="text-[var(--muted)] mb-6 max-w-2xl mx-auto leading-relaxed">
+              Understand the army. Book a private tour with an expert guide who reveals Pit 2 details, tells the story of the farmer who found them, and gets you skip-the-line access.
+            </p>
+            <a
+              href={`https://www.viator.com/searchResults/allText?text=${searchQuery}`}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="inline-block rounded-xl bg-[#af5d32] px-8 py-4 text-lg font-semibold text-white shadow-md hover:bg-[#8f4d28] hover:shadow-lg transition-all"
+            >
+              Book a Private Tour →
+            </a>
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-4 text-xs text-[var(--muted)]">
+              <span>✓ Pit 2 details & insights</span>
+              <span>✓ Story of the farmer who found them</span>
+              <span>✓ Skip-the-line access</span>
+            </div>
+          </div>
+        </section>
+      }
     />
   );
 }

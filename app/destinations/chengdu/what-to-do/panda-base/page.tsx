@@ -15,6 +15,8 @@ export const metadata: Metadata = {
   },
 };
 
+const searchQuery = encodeURIComponent('Chengdu panda base tour');
+
 export default function PandaBasePage() {
   const tips = [
     {
@@ -127,6 +129,31 @@ The base is also home to red pandas (smaller, squirrel-like relatives) and other
         { title: "Wuhou Temple", description: "Explore Wuhou Temple, one of Chengdu's top attractions.", href: "/destinations/chengdu/what-to-do/wuhou-temple" },
       ]}
       tips={[...tips, ...photoSpots]}
+      customToursCTA={
+        <section className="mb-10">
+          <div className="rounded-2xl border-2 border-[#ebe4d8] bg-[#faf8f4] p-6 sm:p-8 text-center shadow-sm">
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-3 text-[var(--foreground)]">
+              Want More Than Just Panda Photos?
+            </h2>
+            <p className="text-[var(--muted)] mb-6 max-w-2xl mx-auto leading-relaxed">
+              See the pandas the right way. Book a guided tour that includes red panda viewing, behind-the-scenes breeding center access, and volunteer program options.
+            </p>
+            <a
+              href={`https://www.viator.com/searchResults/allText?text=${searchQuery}`}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="inline-block rounded-xl bg-[#af5d32] px-8 py-4 text-lg font-semibold text-white shadow-md hover:bg-[#8f4d28] hover:shadow-lg transition-all"
+            >
+              Book a Panda Tour →
+            </a>
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-4 text-xs text-[var(--muted)]">
+              <span>✓ Red panda viewing included</span>
+              <span>✓ Breeding center access</span>
+              <span>✓ Volunteer program options</span>
+            </div>
+          </div>
+        </section>
+      }
     />
   );
 }

@@ -20,6 +20,8 @@ export const metadata: Metadata = {
   },
 };
 
+const searchQuery = encodeURIComponent('798 Art District tour Beijing');
+
 export default function ArtDistrict798Page() {
   const tips = [
     {
@@ -117,6 +119,31 @@ The giant sculptures scattered throughout the district are designed to be photog
         { title: "Beijing Guide", description: "Complete guide to planning your Beijing trip.", href: "/destinations/beijing" },
       ]}
       tips={[...tips, ...photoSpots]}
+      customToursCTA={
+        <section className="mb-10">
+          <div className="rounded-2xl border-2 border-[#ebe4d8] bg-[#faf8f4] p-6 sm:p-8 text-center shadow-sm">
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-3 text-[var(--foreground)]">
+              Want to Really Understand 798's Art Scene?
+            </h2>
+            <p className="text-[var(--muted)] mb-6 max-w-2xl mx-auto leading-relaxed">
+              Go beyond the selfies. Book a gallery tour with insider access to artist studios, meetups with local creators, and hidden exhibitions.
+            </p>
+            <a
+              href={`https://www.viator.com/searchResults/allText?text=${searchQuery}`}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="inline-block rounded-xl bg-[#af5d32] px-8 py-4 text-lg font-semibold text-white shadow-md hover:bg-[#8f4d28] hover:shadow-lg transition-all"
+            >
+              Book a Gallery Tour →
+            </a>
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-4 text-xs text-[var(--muted)]">
+              <span>✓ Gallery insider access</span>
+              <span>✓ Artist meetups</span>
+              <span>✓ Hidden studios & exhibitions</span>
+            </div>
+          </div>
+        </section>
+      }
     />
   );
 }

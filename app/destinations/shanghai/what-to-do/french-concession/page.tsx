@@ -14,6 +14,8 @@ export const metadata: Metadata = {
   },
 };
 
+const searchQuery = encodeURIComponent('French Concession Shanghai walking tour');
+
 export default function FrenchConcessionPage() {
   const tips = [
     {
@@ -126,6 +128,31 @@ Tianzifang, while charming, is also touristy and overpriced. Go once for the atm
 
 For something different, shoot the hidden alleyways and lane house courtyards. Push through the iron gates on side streets and you'll find 1930s architecture, hanging laundry, potted plants on balconies — the real texture of the neighborhood. The narrow lanes of Tianzifang are colorful but crowded; go early morning for clean shots without tourists.`,
       }}
+      customToursCTA={
+        <section className="mb-10">
+          <div className="rounded-2xl border-2 border-[#ebe4d8] bg-[#faf8f4] p-6 sm:p-8 text-center shadow-sm">
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-3 text-[var(--foreground)]">
+              Want More Than a Standard French Concession Walk?
+            </h2>
+            <p className="text-[var(--muted)] mb-6 max-w-2xl mx-auto leading-relaxed">
+              Skip the obvious streets. Book a private walking tour through hidden lane houses, Art Deco villas, and local food stops that most visitors never find.
+            </p>
+            <a
+              href={`https://www.viator.com/searchResults/allText?text=${searchQuery}`}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="inline-block rounded-xl bg-[#af5d32] px-8 py-4 text-lg font-semibold text-white shadow-md hover:bg-[#8f4d28] hover:shadow-lg transition-all"
+            >
+              Book a Walking Tour →
+            </a>
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-4 text-xs text-[var(--muted)]">
+              <span>✓ Hidden lane houses & courtyards</span>
+              <span>✓ Art Deco architecture focus</span>
+              <span>✓ Local food stops included</span>
+            </div>
+          </div>
+        </section>
+      }
     />
   );
 }

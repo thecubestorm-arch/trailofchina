@@ -14,6 +14,8 @@ export const metadata: Metadata = {
   },
 };
 
+const searchQuery = encodeURIComponent("Xi'an City Wall cycling tour");
+
 export default function CityWallPage() {
   const tips = [
     {
@@ -124,6 +126,31 @@ The wall is especially magical at sunset when the golden light bathes the ancien
         { title: "Xi'an Guide", description: "Complete guide to planning your Xi'an trip.", href: "/destinations/xian" },
       ]}
       tips={[...tips, ...photoSpots]}
+      customToursCTA={
+        <section className="mb-10">
+          <div className="rounded-2xl border-2 border-[#ebe4d8] bg-[#faf8f4] p-6 sm:p-8 text-center shadow-sm">
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-3 text-[var(--foreground)]">
+              Want More Than a Standard Wall Walk?
+            </h2>
+            <p className="text-[var(--muted)] mb-6 max-w-2xl mx-auto leading-relaxed">
+              Ride the wall at sunset. Book a cycling tour that includes the best gate views, historical context for each section, and the magic of the city at night.
+            </p>
+            <a
+              href={`https://www.viator.com/searchResults/allText?text=${searchQuery}`}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="inline-block rounded-xl bg-[#af5d32] px-8 py-4 text-lg font-semibold text-white shadow-md hover:bg-[#8f4d28] hover:shadow-lg transition-all"
+            >
+              Book a Cycling Tour →
+            </a>
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-4 text-xs text-[var(--muted)]">
+              <span>✓ Sunset cycling experience</span>
+              <span>✓ Gate history explained</span>
+              <span>✓ Night views included</span>
+            </div>
+          </div>
+        </section>
+      }
     />
   );
 }

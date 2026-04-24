@@ -14,6 +14,8 @@ export const metadata: Metadata = {
   },
 };
 
+const searchQuery = encodeURIComponent("Big Wild Goose Pagoda tour Xi'an");
+
 export default function BigWildGoosePagodaPage() {
   const tips = [
     {
@@ -123,6 +125,31 @@ Just north of the temple lies the North Square, home to Asia's largest musical f
         { title: "Xi'an Guide", description: "Complete guide to planning your Xi'an trip.", href: "/destinations/xian" },
       ]}
       tips={[...tips, ...photoSpots]}
+      customToursCTA={
+        <section className="mb-10">
+          <div className="rounded-2xl border-2 border-[#ebe4d8] bg-[#faf8f4] p-6 sm:p-8 text-center shadow-sm">
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-3 text-[var(--foreground)]">
+              Want More Than Just the Pagoda View?
+            </h2>
+            <p className="text-[var(--muted)] mb-6 max-w-2xl mx-auto leading-relaxed">
+              Discover the full story. Book a tour that covers the Buddhist history, includes the evening fountain show, and gets you access to the monastery grounds beyond the tourist areas.
+            </p>
+            <a
+              href={`https://www.viator.com/searchResults/allText?text=${searchQuery}`}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="inline-block rounded-xl bg-[#af5d32] px-8 py-4 text-lg font-semibold text-white shadow-md hover:bg-[#8f4d28] hover:shadow-lg transition-all"
+            >
+              Book a Guided Tour →
+            </a>
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-4 text-xs text-[var(--muted)]">
+              <span>✓ Buddhist history deep dive</span>
+              <span>✓ Evening fountain show</span>
+              <span>✓ Monastery ground access</span>
+            </div>
+          </div>
+        </section>
+      }
     />
   );
 }

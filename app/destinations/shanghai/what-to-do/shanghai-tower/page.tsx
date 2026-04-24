@@ -14,6 +14,8 @@ export const metadata: Metadata = {
   },
 };
 
+const searchQuery = encodeURIComponent('Shanghai Tower observation deck tour');
+
 export default function ShanghaiTowerPage() {
   const tips = [
     {
@@ -126,6 +128,31 @@ The same goes for Jin Mao Tower's observation deck. It's the cheapest option but
 
 The deck has free binoculars scattered around — use them to frame close-up shots of specific buildings on the Bund or across the river. For night shots, the reflections in the Huangpu River from this height create interesting patterns. Bring a small tripod or use a bean bag on the window ledge for stability — the low light will cause blur on handheld shots.`,
       }}
+      customToursCTA={
+        <section className="mb-10">
+          <div className="rounded-2xl border-2 border-[#ebe4d8] bg-[#faf8f4] p-6 sm:p-8 text-center shadow-sm">
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-3 text-[var(--foreground)]">
+              Want More Than Just the Observation Deck?
+            </h2>
+            <p className="text-[var(--muted)] mb-6 max-w-2xl mx-auto leading-relaxed">
+              Skip the long lines. Book a guided architecture tour that includes neighborhood context, skyline stories, and priority access to the observation deck.
+            </p>
+            <a
+              href={`https://www.viator.com/searchResults/allText?text=${searchQuery}`}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="inline-block rounded-xl bg-[#af5d32] px-8 py-4 text-lg font-semibold text-white shadow-md hover:bg-[#8f4d28] hover:shadow-lg transition-all"
+            >
+              Book a Priority Tour →
+            </a>
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-4 text-xs text-[var(--muted)]">
+              <span>✓ Skip-the-line access</span>
+              <span>✓ Neighborhood context & stories</span>
+              <span>✓ Architecture focus</span>
+            </div>
+          </div>
+        </section>
+      }
     />
   );
 }

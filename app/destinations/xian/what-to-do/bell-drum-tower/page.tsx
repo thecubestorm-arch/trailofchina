@@ -14,6 +14,8 @@ export const metadata: Metadata = {
   },
 };
 
+const searchQuery = encodeURIComponent("Xi'an Bell Tower Drum Tower tour");
+
 export default function BellDrumTowerPage() {
   const tips = [
     {
@@ -125,6 +127,31 @@ Both towers are beautifully illuminated at night, creating a magical atmosphere 
         { title: "Xi'an Guide", description: "Complete guide to planning your Xi'an trip.", href: "/destinations/xian" },
       ]}
       tips={[...tips, ...photoSpots]}
+      customToursCTA={
+        <section className="mb-10">
+          <div className="rounded-2xl border-2 border-[#ebe4d8] bg-[#faf8f4] p-6 sm:p-8 text-center shadow-sm">
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-3 text-[var(--foreground)]">
+              Want to Understand Xi'an's Ancient Center?
+            </h2>
+            <p className="text-[var(--muted)] mb-6 max-w-2xl mx-auto leading-relaxed">
+              Hear the towers come alive. Book a guided visit that explains the acoustic design, the history of time-keeping in imperial China, and access to rooftop views at sunset.
+            </p>
+            <a
+              href={`https://www.viator.com/searchResults/allText?text=${searchQuery}`}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="inline-block rounded-xl bg-[#af5d32] px-8 py-4 text-lg font-semibold text-white shadow-md hover:bg-[#8f4d28] hover:shadow-lg transition-all"
+            >
+              Book a Guided Visit →
+            </a>
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-4 text-xs text-[var(--muted)]">
+              <span>✓ Acoustic design explained</span>
+              <span>✓ Time-keeping history</span>
+              <span>✓ Rooftop sunset views</span>
+            </div>
+          </div>
+        </section>
+      }
     />
   );
 }

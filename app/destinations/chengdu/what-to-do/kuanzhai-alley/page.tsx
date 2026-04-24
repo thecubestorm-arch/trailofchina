@@ -20,6 +20,8 @@ export const metadata: Metadata = {
   },
 };
 
+const searchQuery = encodeURIComponent('Kuanzhai Alley Chengdu tour');
+
 export default function KuanzhaiAlleyPage() {
   const tips = [
     {
@@ -96,6 +98,31 @@ Well Alley is the hidden gem most visitors miss — the brick art walls here are
         { title: "Where to Eat in Chengdu", description: "Discover Chengdu's best local dishes and restaurants.", href: "/destinations/chengdu/where-to-eat" },
         { title: "Chengdu Guide", description: "Complete guide to planning your Chengdu trip.", href: "/destinations/chengdu" },
       ]}
+      customToursCTA={
+        <section className="mb-10">
+          <div className="rounded-2xl border-2 border-[#ebe4d8] bg-[#faf8f4] p-6 sm:p-8 text-center shadow-sm">
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-3 text-[var(--foreground)]">
+              Want to See Beyond the Renovated Alley?
+            </h2>
+            <p className="text-[var(--muted)] mb-6 max-w-2xl mx-auto leading-relaxed">
+              Look deeper than the storefronts. Book a guided walk through courtyard culture, traditional teahouses, and the local art scene that most visitors miss.
+            </p>
+            <a
+              href={`https://www.viator.com/searchResults/allText?text=${searchQuery}`}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="inline-block rounded-xl bg-[#af5d32] px-8 py-4 text-lg font-semibold text-white shadow-md hover:bg-[#8f4d28] hover:shadow-lg transition-all"
+            >
+              Book a Walking Tour →
+            </a>
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-4 text-xs text-[var(--muted)]">
+              <span>✓ Courtyard culture explained</span>
+              <span>✓ Traditional teahouse visits</span>
+              <span>✓ Local art scene access</span>
+            </div>
+          </div>
+        </section>
+      }
     />
   );
 }

@@ -20,6 +20,8 @@ export const metadata: Metadata = {
   },
 };
 
+const searchQuery = encodeURIComponent('Jinli Ancient Street Chengdu tour');
+
 export default function JinliAncientStreetPage() {
   const tips = [
     {
@@ -113,6 +115,31 @@ The snack selection here is the best in Chengdu — three-cannon tea (three stic
         { title: "Where to Eat in Chengdu", description: "Discover Chengdu's best local dishes and restaurants.", href: "/destinations/chengdu/where-to-eat" },
       ]}
       tips={[...tips, ...photoSpots]}
+      customToursCTA={
+        <section className="mb-10">
+          <div className="rounded-2xl border-2 border-[#ebe4d8] bg-[#faf8f4] p-6 sm:p-8 text-center shadow-sm">
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-3 text-[var(--foreground)]">
+              Want More Than a Crowded Jinli Walk?
+            </h2>
+            <p className="text-[var(--muted)] mb-6 max-w-2xl mx-auto leading-relaxed">
+              Experience Jinli after dark. Book an evening tour with a local guide who knows the hidden snack stalls, the best Sichuan opera spots, and the stories behind the lanterns.
+            </p>
+            <a
+              href={`https://www.viator.com/searchResults/allText?text=${searchQuery}`}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="inline-block rounded-xl bg-[#af5d32] px-8 py-4 text-lg font-semibold text-white shadow-md hover:bg-[#8f4d28] hover:shadow-lg transition-all"
+            >
+              Book an Evening Tour →
+            </a>
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-4 text-xs text-[var(--muted)]">
+              <span>✓ Evening atmosphere & lanterns</span>
+              <span>✓ Hidden snack stalls</span>
+              <span>✓ Sichuan opera access</span>
+            </div>
+          </div>
+        </section>
+      }
     />
   );
 }

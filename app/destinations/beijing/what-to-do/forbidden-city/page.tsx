@@ -20,6 +20,8 @@ export const metadata: Metadata = {
   },
 };
 
+const searchQuery = encodeURIComponent('Forbidden City private tour Beijing');
+
 export default function ForbiddenCityPage() {
   const tips = [
     {
@@ -141,6 +143,31 @@ The layout reflects ancient Chinese cosmology, with the Three Great Halls (Supre
         { title: 'Where to Eat in Beijing', description: "Discover Beijing's best local dishes and restaurants.", href: '/destinations/beijing/where-to-eat' },
       ]}
       tips={[...tips, ...photoSpots]}
+      customToursCTA={
+        <section className="mb-10">
+          <div className="rounded-2xl border-2 border-[#ebe4d8] bg-[#faf8f4] p-6 sm:p-8 text-center shadow-sm">
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-3 text-[var(--foreground)]">
+              Want More Than a Standard Forbidden City Visit?
+            </h2>
+            <p className="text-[var(--muted)] mb-6 max-w-2xl mx-auto leading-relaxed">
+              Skip the crowds. Book a private tour with skip-the-line access that dives into 600 years of imperial history and visits restricted areas.
+            </p>
+            <a
+              href={`https://www.viator.com/searchResults/allText?text=${searchQuery}`}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="inline-block rounded-xl bg-[#af5d32] px-8 py-4 text-lg font-semibold text-white shadow-md hover:bg-[#8f4d28] hover:shadow-lg transition-all"
+            >
+              Book a Private Tour →
+            </a>
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-4 text-xs text-[var(--muted)]">
+              <span>✓ Skip-the-line access</span>
+              <span>✓ 600 years of history explained</span>
+              <span>✓ Restricted areas visited</span>
+            </div>
+          </div>
+        </section>
+      }
     />
   );
 }
