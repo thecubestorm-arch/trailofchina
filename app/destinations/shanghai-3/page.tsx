@@ -8,14 +8,8 @@ export const metadata: Metadata = {
     "Colonial elegance meets tomorrow's skyline. Discover top things to do, where to eat, where to stay, and local tips for Shanghai, China.",
 };
 
-// ─── Color Palette (Tailwind classes) ─────────────────────────────
-// Terracotta: #af5d32  → text-[#af5d32] / bg-[#af5d32]
-// Cream:     #f5f1ea  → bg-[#f5f1ea]
-// Dark Teal: #1a3a4a  → text-[#1a3a4a] / bg-[#1a3a4a]
-// Slate:     #64748b  → text-[#64748b]
-// Border:    #ebe4d8  → border-[#ebe4d8]
-
 // ─── Data ─────────────────────────────────────────────────────────
+
 const quickInfoPills = [
   { icon: '🛜', label: 'Internet:', text: 'VPN required' },
   { icon: '💰', label: '', text: 'Cashless society' },
@@ -222,11 +216,75 @@ function SectionHeader({
   );
 }
 
-function PriceTag({ text }: { text: string }) {
+function PhotoCard({
+  href,
+  imageSeed,
+  title,
+  subtitle,
+  tag,
+  alt,
+}: {
+  href: string;
+  imageSeed: string;
+  title: string;
+  subtitle: string;
+  tag?: string;
+  alt: string;
+}) {
   return (
-    <span className="inline-block px-2 py-0.5 text-xs font-semibold rounded-full bg-[#f5f1ea] text-[#1a3a4a]">
-      {text}
-    </span>
+    <Link href={href} className="group block">
+      <div className="bg-white rounded-xl overflow-hidden border border-[#ebe4d8] shadow-sm hover:shadow-md transition-shadow">
+        <div className="relative aspect-[3/2] overflow-hidden">
+          <Image
+            src={`https://picsum.photos/seed/${imageSeed}/600/400`}
+            alt={alt}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div className="p-4">
+          <div className="flex items-center justify-between gap-2 mb-1">
+            <h3 className="font-bold text-[#1a3a4a] group-hover:text-[#af5d32] transition-colors truncate">
+              {title}
+            </h3>
+            {tag && (
+              <span className="inline-block px-2 py-0.5 text-xs font-semibold rounded-full bg-[#f5f1ea] text-[#1a3a4a] whitespace-nowrap flex-shrink-0">
+                {tag}
+              </span>
+            )}
+          </div>
+          <p className="text-sm text-[#64748b] line-clamp-1">{subtitle}</p>
+        </div>
+      </div>
+    </Link>
+  );
+}
+
+function EmojiCard({
+  href,
+  icon,
+  title,
+  subtitle,
+}: {
+  href: string;
+  icon: string;
+  title: string;
+  subtitle: string;
+}) {
+  return (
+    <Link href={href} className="group block">
+      <div className="bg-white rounded-xl overflow-hidden border border-[#ebe4d8] shadow-sm hover:shadow-md transition-shadow">
+        <div className="aspect-[3/2] bg-[#f5f1ea] flex items-center justify-center text-5xl">
+          {icon}
+        </div>
+        <div className="p-4">
+          <h3 className="font-bold text-[#1a3a4a] group-hover:text-[#af5d32] transition-colors mb-1">
+            {title}
+          </h3>
+          <p className="text-sm text-[#64748b] line-clamp-2">{subtitle}</p>
+        </div>
+      </div>
+    </Link>
   );
 }
 
@@ -286,27 +344,24 @@ export default function ShanghaiTripAdvisorPage() {
       <nav className="sticky top-0 z-50 bg-white border-b border-[#ebe4d8] shadow-sm">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex overflow-x-auto scrollbar-hide">
-            <div className="flex gap-6 md:gap-8 py-3 min-w-max">
-              {navTabs.map((tab) => {
-                const isAnchor = tab.href.startsWith('#');
-                const content = (
-                  <span
-                    className="block pb-1 text-sm font-medium text-[#64748b] border-b-2 border-transparent hover:text-[#1a3a4a] hover:border-[#af5d32] transition-colors whitespace-nowrap"
-                  >
-                    {tab.label}
-                  </span>
-                );
-                return isAnchor ? (
-                  <a key={tab.id} href={tab.href}>
-                    {content}
-                  </a>
-                ) : (
-                  <Link key={tab.id} href={tab.href}>
-                    {content}
-                  </Link>
-                );
-              })}
-            </div>
+            {navTabs.map((tab) => {
+              const isAnchor = tab.href.startsWith('#');
+              const isActive = tab.id === 'overview';
+              const className = `px-3 md:px-4 py-2 text-sm font-medium border-b-2 transition-colors whitespace-nowrap ${
+                isActive
+                  ? 'border-[#af5d32] text-[#1a3a4a]'
+                  : 'border-transparent text-[#64748b] hover:border-[#af5d32] hover:text-[#1a3a4a]'
+              }`;
+              return isAnchor ? (
+                <a key={tab.id} href={tab.href} className={className}>
+                  {tab.label}
+                </a>
+              ) : (
+                <Link key={tab.id} href={tab.href} className={className}>
+                  {tab.label}
+                </Link>
+              );
+            })}
           </div>
         </div>
       </nav>
@@ -320,34 +375,18 @@ export default function ShanghaiTripAdvisorPage() {
             href="/destinations/shanghai/what-to-do"
           />
 
-          {/* Horizontal scroll: 6 cards */}
-          <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 -mx-4 px-4 scrollbar-hide">
+          <div className="flex overflow-x-auto gap-4 pb-4 -mx-4 px-4 scrollbar-hide">
             {attractions.map((attr) => (
-              <Link
-                key={attr.name}
-                href={attr.href}
-                className="snap-start flex-shrink-0 w-[280px] md:w-[320px] group"
-              >
-                <div className="bg-white rounded-xl overflow-hidden border border-[#ebe4d8] shadow-sm hover:shadow-md transition-shadow">
-                  <div className="relative aspect-[4/3] overflow-hidden">
-                    <Image
-                      src={`https://picsum.photos/seed/${attr.imageSeed}/600/450`}
-                      alt={attr.name}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <div className="p-4">
-                    <div className="flex items-center justify-between mb-1.5">
-                      <h3 className="font-bold text-[#1a3a4a] group-hover:text-[#af5d32] transition-colors">
-                        {attr.name}
-                      </h3>
-                      <PriceTag text={attr.tag} />
-                    </div>
-                    <p className="text-sm text-[#64748b] leading-relaxed">{attr.hook}</p>
-                  </div>
-                </div>
-              </Link>
+              <div key={attr.name} className="w-[260px] md:w-[300px] flex-shrink-0">
+                <PhotoCard
+                  href={attr.href}
+                  imageSeed={attr.imageSeed}
+                  title={attr.name}
+                  subtitle={attr.hook}
+                  tag={attr.tag}
+                  alt={attr.name}
+                />
+              </div>
             ))}
           </div>
         </section>
@@ -359,29 +398,17 @@ export default function ShanghaiTripAdvisorPage() {
             href="/destinations/shanghai/where-to-eat"
           />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {foodCards.map((food) => (
-              <Link key={food.name} href={food.href} className="group">
-                <div className="bg-white rounded-xl overflow-hidden border border-[#ebe4d8] shadow-sm hover:shadow-md transition-shadow">
-                  <div className="relative aspect-[4/3] overflow-hidden">
-                    <Image
-                      src={`https://picsum.photos/seed/${food.imageSeed}/600/450`}
-                      alt={food.name}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <div className="p-4">
-                    <div className="flex items-center justify-between mb-1.5">
-                      <h3 className="font-bold text-[#1a3a4a] group-hover:text-[#af5d32] transition-colors">
-                        {food.name}
-                      </h3>
-                      <PriceTag text={food.tag} />
-                    </div>
-                    <p className="text-sm text-[#64748b] leading-relaxed">{food.sub}</p>
-                  </div>
-                </div>
-              </Link>
+              <PhotoCard
+                key={food.name}
+                href={food.href}
+                imageSeed={food.imageSeed}
+                title={food.name}
+                subtitle={food.sub}
+                tag={food.tag}
+                alt={food.name}
+              />
             ))}
           </div>
         </section>
@@ -393,27 +420,16 @@ export default function ShanghaiTripAdvisorPage() {
             href="/destinations/shanghai/where-to-stay"
           />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {neighborhoods.map((n) => (
-              <Link key={n.name} href={n.href} className="group">
-                <div className="bg-white rounded-xl overflow-hidden border border-[#ebe4d8] shadow-sm hover:shadow-md transition-shadow">
-                  <div className="relative aspect-[4/3] overflow-hidden">
-                    <Image
-                      src={`https://picsum.photos/seed/${n.imageSeed}/600/450`}
-                      alt={n.name}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="font-bold text-[#1a3a4a] group-hover:text-[#af5d32] transition-colors mb-0.5">
-                      {n.name}
-                    </h3>
-                    <p className="text-sm text-[#64748b] mb-2">{n.vibe}</p>
-                    <p className="text-sm text-[#64748b] leading-relaxed">{n.desc}</p>
-                  </div>
-                </div>
-              </Link>
+              <PhotoCard
+                key={n.name}
+                href={n.href}
+                imageSeed={n.imageSeed}
+                title={n.name}
+                subtitle={n.vibe}
+                alt={n.name}
+              />
             ))}
           </div>
         </section>
@@ -424,15 +440,13 @@ export default function ShanghaiTripAdvisorPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {knowBeforeCards.map((card) => (
-              <Link key={card.title} href={card.href} className="group">
-                <div className="bg-[#f5f1ea] rounded-xl border border-[#ebe4d8] shadow-sm hover:shadow-md transition-shadow p-5 flex flex-col items-center text-center">
-                  <span className="text-4xl mb-3">{card.icon}</span>
-                  <h3 className="font-bold text-[#1a3a4a] group-hover:text-[#af5d32] transition-colors text-sm mb-2">
-                    {card.title}
-                  </h3>
-                  <p className="text-sm text-[#64748b] leading-relaxed">{card.text}</p>
-                </div>
-              </Link>
+              <EmojiCard
+                key={card.title}
+                href={card.href}
+                icon={card.icon}
+                title={card.title}
+                subtitle={card.text}
+              />
             ))}
           </div>
         </section>
@@ -444,20 +458,15 @@ export default function ShanghaiTripAdvisorPage() {
             href="/destinations/shanghai/local-tips"
           />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {localTips.map((tip) => (
-              <Link
+              <EmojiCard
                 key={tip.title}
                 href="/destinations/shanghai/local-tips"
-                className="group"
-              >
-                <div className="bg-white rounded-xl border border-[#ebe4d8] shadow-sm hover:shadow-md transition-shadow p-5">
-                  <h3 className="font-bold text-[#1a3a4a] group-hover:text-[#af5d32] transition-colors text-sm mb-2">
-                    {tip.title}
-                  </h3>
-                  <p className="text-sm text-[#64748b] leading-relaxed">{tip.text}</p>
-                </div>
-              </Link>
+                icon="💡"
+                title={tip.title}
+                subtitle={tip.text}
+              />
             ))}
           </div>
         </section>
