@@ -5,6 +5,9 @@ import ChineseWatermark from '@/components/ChineseWatermark'
 export const metadata: Metadata = {
   title: 'Plan Your Trip | Trail of China',
   description: 'Plan your China trip with pre-made itineraries and custom travel planning tools.',
+  alternates: {
+    canonical: '/plan-your-trip',
+  },
 }
 
 const sections = [

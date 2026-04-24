@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Destinations | Trail of China",
   description:
     "Explore the best destinations in China. Detailed guides for Shanghai, Beijing, Xi'an, Chengdu, Chongqing and more cities.",
+  alternates: {
+    canonical: '/destinations',
+  },
 }
 
 const sections = [

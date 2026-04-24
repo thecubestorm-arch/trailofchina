@@ -74,6 +74,21 @@ const beforeYouGo = [
 export default function HomePage() {
   const t = useTranslations()
 
+  const organizationLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Trail of China',
+    url: 'https://trailofchina.com',
+    description: 'First-trip China travel planning for Western tourists',
+  };
+
+  const websiteLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Trail of China',
+    url: 'https://trailofchina.com',
+  };
+
   const faqStructuredData = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -89,6 +104,8 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen py-8 sm:py-10" style={{ backgroundColor: '#f5f1ea' }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }} />
       <div className="container-px mx-auto w-full max-w-7xl space-y-16 sm:space-y-20" style={{ backgroundColor: '#f5f1ea' }}>
         <FadeIn>
           <section className="relative overflow-hidden rounded-[1.75rem] border border-[var(--line)] bg-[linear-gradient(135deg,rgba(255,250,243,0.96),rgba(235,228,216,0.94))] px-5 py-10 shadow-[var(--shadow-soft)] sm:rounded-[2rem] sm:px-10 sm:py-14 lg:px-14 lg:py-20">

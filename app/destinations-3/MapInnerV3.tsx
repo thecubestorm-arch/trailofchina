@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { MapContainer, TileLayer, Marker, Polyline } from 'react-leaflet';
 import L from 'leaflet';
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 import 'leaflet/dist/leaflet.css';
 
 // ── Data ─────────────────────────────────────────────────────────────
@@ -92,21 +93,47 @@ const trainRoutes: TrainRoute[] = [
   { from: 'Chengdu', to: 'Chongqing', time: '1h', color: '#ebe4d8', weight: 1.5 },
 ];
 
-// ── Custom terracotta marker icon with pulsing animation ────────────
-const cityIcon = (isHovered: boolean) =>
+// ── Custom city marker icon with visible name + tag ────────────────
+const cityIcon = (city: City, isHovered: boolean) =>
   L.divIcon({
     className: 'custom-city-marker',
     html: `
-      <div class="city-marker-dot ${isHovered ? 'pulsing' : ''}"></div>
-      <div class="city-marker-label">
-        <div class="city-marker-name"></div>
-        <div class="city-marker-tag"></div>
+      <div class="city-marker-wrapper">
+        <div class="city-marker-pulse ${isHovered ? 'pulsing' : ''}"></div>
+        <div class="city-marker-dot"></div>
+        <div class="city-marker-label">
+          <span class="city-name">${city.name}</span>
+          <span class="city-tag">${city.bestFor}</span>
+        </div>
       </div>
     `,
-    iconSize: [20, 20],
-    iconAnchor: [10, 10],
-    popupAnchor: [0, -12],
+    iconSize: [14, 14],
+    iconAnchor: [7, 7],
   });
+
+// ── Route time label at midpoint ──────────────────────────────────
+function RouteTimeLabel({
+  from,
+  to,
+  time,
+}: {
+  from: [number, number];
+  to: [number, number];
+  time: string;
+}) {
+  const midpoint: [number, number] = [(from[0] + to[0]) / 2, (from[1] + to[1]) / 2];
+  return (
+    <Marker
+      position={midpoint}
+      icon={L.divIcon({
+        className: 'route-label',
+        html: `<div class="route-time">${time}</div>`,
+        iconSize: [0, 0],
+      })}
+      interactive={false}
+    />
+  );
+}
 
 // ── PhotoCard component ─────────────────────────────────────────────
 function PhotoCard({
@@ -156,15 +183,19 @@ function PhotoCard({
   );
 }
 
-// ── Hover Tooltip (custom HTML overlay) ──────────────────────────────
+// ── Hover Tooltip (positioned above marker, clickable) ─────────────
 function HoverTooltip({
   city,
   position,
   mapRef,
+  onMouseEnter,
+  onMouseLeave,
 }: {
   city: City;
   position: L.LatLng;
   mapRef: React.RefObject<L.Map | null>;
+  onMouseEnter: () => void;
+  onMouseLeave: () => void;
 }) {
   const [coords, setCoords] = useState<{ x: number; y: number } | null>(null);
 
@@ -186,30 +217,43 @@ function HoverTooltip({
 
   if (!coords) return null;
 
-  // Keep tooltip inside map bounds
   const tooltipWidth = 260;
   const tooltipHeight = 220;
-  const padding = 16;
+  const gap = 8;
+  const padding = 12;
 
-  let left = coords.x + 20;
-  let top = coords.y - tooltipHeight / 2;
+  // Position above the marker by default
+  let left = coords.x - tooltipWidth / 2;
+  let top = coords.y - tooltipHeight - gap;
 
-  if (left + tooltipWidth > (mapRef.current?.getContainer().offsetWidth || 800) - padding) {
-    left = coords.x - tooltipWidth - 20;
+  const mapContainer = mapRef.current?.getContainer();
+  const cw = mapContainer?.offsetWidth || 800;
+  const ch = mapContainer?.offsetHeight || 500;
+
+  // Horizontal clamp
+  left = Math.max(padding, Math.min(left, cw - tooltipWidth - padding));
+
+  // If tooltip goes above the map, place it below the marker
+  if (top < padding) {
+    top = coords.y + gap + 14; // 14px = marker dot radius
   }
-  if (top < padding) top = padding;
-  if (top + tooltipHeight > (mapRef.current?.getContainer().offsetHeight || 500) - padding) {
-    top = (mapRef.current?.getContainer().offsetHeight || 500) - tooltipHeight - padding;
+  // Ensure it doesn't go below the map
+  if (top + tooltipHeight > ch - padding) {
+    top = ch - tooltipHeight - padding;
   }
 
   return (
     <div
-      className="pointer-events-none absolute z-[900] rounded-xl border border-[#ebe4d8] bg-white p-3 shadow-xl transition-opacity duration-150"
+      className="absolute z-[900] rounded-xl border border-[#ebe4d8] bg-white p-3 shadow-xl transition-opacity duration-150"
       style={{
         left,
         top,
         width: tooltipWidth,
+        pointerEvents: 'auto',
+        animation: 'tooltip-fade-in 0.2s ease',
       }}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
       <img
         src={`https://picsum.photos/seed/${city.imageSeed}/400/200`}
@@ -229,28 +273,29 @@ function HoverTooltip({
           {city.whereToEat} where to eat
         </span>
       </div>
-      <div className="mt-2 text-sm font-semibold text-[#af5d32]">
+      <Link
+        href={city.href}
+        className="mt-2 inline-block text-sm font-semibold text-[#af5d32] hover:underline"
+      >
         Explore →
-      </div>
+      </Link>
     </div>
   );
 }
 
-// ── Most Popular Route Indicator ────────────────────────────────────
+// ── Most Popular Route Indicator (clickable card) ───────────────────
 function RouteIndicator() {
   return (
-    <div className="pointer-events-none absolute bottom-4 left-4 z-[800] max-w-xs rounded-xl border border-[#ebe4d8] bg-white/95 px-4 py-3 shadow-md backdrop-blur-sm">
-      <p className="text-xs font-semibold uppercase tracking-wider text-[#af5d32]">
-        Most Popular Route
-      </p>
-      <p className="mt-1 text-sm font-medium text-[#1a3a4a]">
+    <Link
+      href="/plan-your-trip/preplanned-trips"
+      className="absolute bottom-4 left-4 z-[1000] max-w-[220px] rounded-xl border border-[#ebe4d8] bg-white/95 p-3 shadow-lg backdrop-blur transition-shadow hover:shadow-md"
+    >
+      <p className="mb-1 text-xs font-semibold text-[#af5d32]">Most Popular Route</p>
+      <p className="text-[10px] leading-snug text-[#64748b]">
         Beijing → Xi'an → Chengdu → Chongqing → Shanghai
       </p>
-      <div className="mt-2 flex items-center gap-1 text-xs text-[#64748b]">
-        <span className="inline-block h-0.5 w-4 bg-[#af5d32]" />
-        <span>by bullet train</span>
-      </div>
-    </div>
+      <p className="mt-1 text-[10px] font-medium text-[#af5d32]">View itinerary →</p>
+    </Link>
   );
 }
 
@@ -259,9 +304,15 @@ export default function MapInnerV3() {
   const [mounted, setMounted] = useState(false);
   const [hoveredCity, setHoveredCity] = useState<string | null>(null);
   const mapRef = useRef<L.Map | null>(null);
+  const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     setMounted(true);
+    return () => {
+      if (closeTimeoutRef.current) {
+        clearTimeout(closeTimeoutRef.current);
+      }
+    };
   }, []);
 
   // Resolve city coordinates for polylines
@@ -285,6 +336,33 @@ export default function MapInnerV3() {
     if (!hoveredCityData) return null;
     return new L.LatLng(hoveredCityData.lat, hoveredCityData.lng);
   }, [hoveredCityData]);
+
+  const handleMarkerEnter = (name: string) => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+    setHoveredCity(name);
+  };
+
+  const handleMarkerLeave = () => {
+    closeTimeoutRef.current = setTimeout(() => {
+      setHoveredCity(null);
+    }, 300);
+  };
+
+  const handleTooltipEnter = () => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+  };
+
+  const handleTooltipLeave = () => {
+    closeTimeoutRef.current = setTimeout(() => {
+      setHoveredCity(null);
+    }, 300);
+  };
 
   const cityCards = useMemo(
     () => [
@@ -364,51 +442,93 @@ export default function MapInnerV3() {
           white-space: nowrap;
         }
 
-        .city-marker-dot {
+        .city-marker-wrapper {
+          position: relative;
+        }
+
+        .city-marker-pulse {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
           width: 20px;
           height: 20px;
+          border-radius: 50%;
+          background: rgba(175, 93, 50, 0.4);
+          opacity: 0;
+          transition: opacity 0.2s ease;
+        }
+
+        .city-marker-pulse.pulsing {
+          opacity: 1;
+          animation: map-pulse 2s ease-out infinite;
+        }
+
+        .city-marker-dot {
+          position: relative;
+          width: 14px;
+          height: 14px;
           background: #af5d32;
           border: 3px solid white;
           border-radius: 50%;
           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+          z-index: 2;
           transition: transform 0.15s ease;
+          cursor: pointer;
         }
 
         .city-marker-dot:hover {
           transform: scale(1.15);
         }
 
-        .city-marker-dot.pulsing {
-          animation: map-pulse 2s infinite;
-        }
-
-        /* Always-visible city name label */
         .city-marker-label {
           position: absolute;
-          left: 50%;
-          top: 26px;
-          transform: translateX(-50%);
-          text-align: center;
+          left: 20px;
+          top: 50%;
+          transform: translateY(-50%);
+          white-space: nowrap;
           pointer-events: none;
+          z-index: 3;
         }
 
-        .city-marker-name {
-          font-family: system-ui, -apple-system, sans-serif;
-          font-size: 11px;
+        .city-name {
+          display: block;
+          font-size: 13px;
           font-weight: 700;
           color: #1a3a4a;
-          text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9), 0 0 4px rgba(255, 255, 255, 0.8);
-          line-height: 1.2;
+          text-shadow: 0 0 4px white, 0 0 8px white;
+          background: rgba(255, 255, 255, 0.85);
+          padding: 1px 6px;
+          border-radius: 4px;
+          line-height: 1.3;
         }
 
-        .city-marker-tag {
-          font-family: system-ui, -apple-system, sans-serif;
-          font-size: 9px;
+        .city-tag {
+          display: block;
+          font-size: 10px;
           font-weight: 600;
           color: #af5d32;
           margin-top: 1px;
-          text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9), 0 0 4px rgba(255, 255, 255, 0.8);
-          line-height: 1.2;
+          text-shadow: 0 0 4px white, 0 0 8px white;
+          line-height: 1.3;
+        }
+
+        /* Route time labels */
+        .route-label {
+          background: transparent !important;
+          border: none !important;
+        }
+
+        .route-time {
+          font-size: 10px;
+          font-weight: 600;
+          color: #64748b;
+          background: rgba(255, 255, 255, 0.9);
+          padding: 2px 6px;
+          border-radius: 4px;
+          border: 1px solid #ebe4d8;
+          white-space: nowrap;
+          transform: translate(-50%, -50%);
         }
 
         /* Dashed line for train routes */
@@ -474,15 +594,25 @@ export default function MapInnerV3() {
                   />
                 ))}
 
-                {/* City markers — no popups, hover triggers tooltip */}
+                {/* Route time labels at midpoints */}
+                {routePolylines.map((route, i) => (
+                  <RouteTimeLabel
+                    key={`time-${i}`}
+                    from={route.from}
+                    to={route.to}
+                    time={route.time}
+                  />
+                ))}
+
+                {/* City markers — hover triggers tooltip */}
                 {cities.map((city) => (
                   <Marker
                     key={city.name}
                     position={[city.lat, city.lng]}
-                    icon={cityIcon(hoveredCity === city.name)}
+                    icon={cityIcon(city, hoveredCity === city.name)}
                     eventHandlers={{
-                      mouseover: () => setHoveredCity(city.name),
-                      mouseout: () => setHoveredCity(null),
+                      mouseover: () => handleMarkerEnter(city.name),
+                      mouseout: () => handleMarkerLeave(),
                     }}
                   />
                 ))}
@@ -494,6 +624,8 @@ export default function MapInnerV3() {
                   city={hoveredCityData}
                   position={hoveredLatLng}
                   mapRef={mapRef}
+                  onMouseEnter={handleTooltipEnter}
+                  onMouseLeave={handleTooltipLeave}
                 />
               )}
 
@@ -505,17 +637,29 @@ export default function MapInnerV3() {
 
         {/* ── Plan Your Trip CTA ── */}
         <section className="mt-8">
-          <Link
-            href="/plan-your-trip/preplanned-trips"
-            className="flex items-center justify-center gap-2 rounded-xl bg-[#1a3a4a] px-6 py-4 text-center text-white transition-colors hover:bg-[#0f252f] md:py-5"
-          >
-            <span className="text-base font-semibold md:text-lg">
-              Ready to plan?
-            </span>
-            <span className="text-base text-[#af5d32] md:text-lg">
-              → Find your perfect China itinerary
-            </span>
-          </Link>
+          <div className="rounded-2xl bg-[#1a3a4a] p-6 text-center md:p-10">
+            <h2 className="mb-3 text-2xl font-bold text-white md:text-3xl">
+              Ready to Explore China?
+            </h2>
+            <p className="mx-auto mb-6 max-w-lg text-sm text-white/70 md:text-base">
+              Get a ready-made itinerary or build your own with our travel planner.
+            </p>
+            <div className="flex flex-col justify-center gap-3 sm:flex-row">
+              <Link
+                href="/plan-your-trip/preplanned-trips"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#af5d32] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#9a4f28]"
+              >
+                Find Your Perfect Trip
+                <ArrowRight size={16} />
+              </Link>
+              <Link
+                href="/plan-your-trip/travel-planner"
+                className="inline-flex items-center justify-center rounded-xl border border-white/30 bg-transparent px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+              >
+                Plan Your Own Trip
+              </Link>
+            </div>
+          </div>
         </section>
 
         {/* ── Browse by City ── */}
