@@ -272,8 +272,8 @@ function PhotoCard({
   alt: string;
 }) {
   return (
-    <Link href={href} className="group block">
-      <div className="rounded-xl overflow-hidden border border-[#ebe4d8] shadow-sm hover:shadow-md transition-shadow bg-white">
+    <Link href={href} className="group block h-full">
+      <div className="rounded-xl overflow-hidden border border-[#ebe4d8] shadow-sm hover:shadow-md transition-shadow bg-white h-full">
         <div className="relative aspect-[3/2] overflow-hidden">
           <Image
             src={`https://picsum.photos/seed/${imageSeed}/600/400`}
@@ -312,8 +312,8 @@ function IconCard({
   subtitle: string;
 }) {
   return (
-    <Link href={href} className="group block">
-      <div className="rounded-xl overflow-hidden border border-[#ebe4d8] shadow-sm hover:shadow-md transition-shadow bg-white">
+    <Link href={href} className="group block h-full">
+      <div className="rounded-xl overflow-hidden border border-[#ebe4d8] border-t-2 border-t-[#af5d32] shadow-sm hover:shadow-md transition-shadow bg-white h-full">
         <div className="aspect-[3/2] bg-[#f5f1ea] flex items-center justify-center">
           <Icon className="text-[#1a3a4a]" size={48} />
         </div>
@@ -321,7 +321,7 @@ function IconCard({
           <h3 className="font-bold text-[#1a3a4a] group-hover:text-[#af5d32] transition-colors mb-1">
             {title}
           </h3>
-          <p className="text-sm text-[#64748b] line-clamp-2">{subtitle}</p>
+          <p className="text-sm text-[#64748b] line-clamp-1">{subtitle}</p>
         </div>
       </div>
     </Link>
@@ -340,8 +340,8 @@ function TipCard({
   subtitle: string;
 }) {
   return (
-    <Link href={href} className="group block">
-      <div className="rounded-xl overflow-hidden border border-[#ebe4d8] shadow-sm hover:shadow-md transition-shadow bg-white">
+    <Link href={href} className="group block h-full">
+      <div className="rounded-xl overflow-hidden border border-[#ebe4d8] border-t-2 border-t-[#af5d32] shadow-sm hover:shadow-md transition-shadow bg-white h-full">
         <div className="aspect-[3/2] bg-[#f5f1ea] flex items-center justify-center">
           <Icon className="text-[#1a3a4a]" size={48} />
         </div>
@@ -349,7 +349,7 @@ function TipCard({
           <h3 className="font-bold text-[#1a3a4a] group-hover:text-[#af5d32] transition-colors mb-1">
             {title}
           </h3>
-          <p className="text-sm text-[#64748b] line-clamp-2">{subtitle}</p>
+          <p className="text-sm text-[#64748b] line-clamp-1">{subtitle}</p>
         </div>
       </div>
     </Link>
@@ -586,7 +586,7 @@ export default function ShanghaiHubClient() {
       </section>
 
       {/* ========== STICKY TAB NAV ========== */}
-      <nav className="sticky top-0 z-50 bg-white border-b border-[#ebe4d8]">
+      <nav className="sticky top-[44px] z-40 bg-white border-b border-[#ebe4d8]">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex overflow-x-auto scrollbar-hide">
             {tabs.map((tab) => {
@@ -662,7 +662,7 @@ export default function ShanghaiHubClient() {
             <WhereToStaySection />
 
             {/* Know Before You Go */}
-            <KnowBeforeYouGoSection />
+            <KnowBeforeYouGoSection expanded />
 
             {/* Local Tips */}
             <LocalTipsSection />
