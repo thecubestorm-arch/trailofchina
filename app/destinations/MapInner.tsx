@@ -320,7 +320,11 @@ function HoverTooltip({
 
   return (
     <div
-      className="absolute z-[900] rounded-xl border border-[#ebe4d8] bg-white p-3 shadow-xl transition-opacity duration-150"
+      className={`absolute z-[900] rounded-xl border border-[#ebe4d8] bg-white p-3 shadow-xl transition-all duration-150 ${
+        city.comingSoon
+          ? ''
+          : 'cursor-pointer hover:shadow-2xl hover:border-[#af5d32]'
+      }`}
       style={{
         left,
         top,
@@ -331,37 +335,46 @@ function HoverTooltip({
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      <img
-        src={`https://picsum.photos/seed/${city.imageSeed}/400/200`}
-        alt={city.name}
-        className="mb-2 h-[60px] w-full rounded-lg object-cover"
-        loading="eager"
-      />
-      <h4 className="text-base font-bold text-[#1a3a4a]">{city.name}</h4>
-      <p className="mt-0.5 text-xs font-semibold text-[#af5d32]">{city.bestFor}</p>
-      <p className="mt-1 text-sm leading-snug text-[#64748b]">{city.hook}</p>
-      {!city.comingSoon && (
-        <div className="mt-2 flex items-center gap-2 text-xs text-[#64748b]">
-          <span className="rounded-full bg-[#f5f1ea] px-2 py-0.5 font-medium text-[#1a3a4a]">
-            {city.thingsToDo} things to do
-          </span>
-          <span>·</span>
-          <span className="rounded-full bg-[#f5f1ea] px-2 py-0.5 font-medium text-[#1a3a4a]">
-            {city.whereToEat} where to eat
-          </span>
-        </div>
-      )}
-      {city.comingSoon ? (
-        <span className="mt-2 inline-block rounded-full bg-[#f5f1ea] px-2 py-0.5 text-xs font-semibold text-[#94a3b8]">
-          Coming Soon
-        </span>
-      ) : (
-        <Link
-          href={city.href}
-          className="mt-2 inline-block text-sm font-semibold text-[#af5d32] hover:underline"
-        >
-          Explore →
+      {!city.comingSoon ? (
+        <Link href={city.href} className="block">
+          <img
+            src={`https://picsum.photos/seed/${city.imageSeed}/400/200`}
+            alt={city.name}
+            className="mb-2 h-[60px] w-full rounded-lg object-cover"
+            loading="eager"
+          />
+          <h4 className="text-base font-bold text-[#1a3a4a]">{city.name}</h4>
+          <p className="mt-0.5 text-xs font-semibold text-[#af5d32]">
+            {city.bestFor}
+          </p>
+          <p className="mt-1 text-sm leading-snug text-[#64748b]">{city.hook}</p>
+          <div className="mt-2 flex items-center gap-2 text-xs text-[#64748b]">
+            <span className="rounded-full bg-[#f5f1ea] px-2 py-0.5 font-medium text-[#1a3a4a]">
+              {city.thingsToDo} things to do
+            </span>
+            <span>·</span>
+            <span className="rounded-full bg-[#f5f1ea] px-2 py-0.5 font-medium text-[#1a3a4a]">
+              {city.whereToEat} where to eat
+            </span>
+          </div>
         </Link>
+      ) : (
+        <>
+          <img
+            src={`https://picsum.photos/seed/${city.imageSeed}/400/200`}
+            alt={city.name}
+            className="mb-2 h-[60px] w-full rounded-lg object-cover"
+            loading="eager"
+          />
+          <h4 className="text-base font-bold text-[#1a3a4a]">{city.name}</h4>
+          <p className="mt-0.5 text-xs font-semibold text-[#af5d32]">
+            {city.bestFor}
+          </p>
+          <p className="mt-1 text-sm leading-snug text-[#64748b]">{city.hook}</p>
+          <span className="mt-2 inline-block rounded-full bg-[#f5f1ea] px-2 py-0.5 text-xs font-semibold text-[#94a3b8]">
+            Coming Soon
+          </span>
+        </>
       )}
     </div>
   );
