@@ -1,81 +1,73 @@
-import { Metadata } from 'next';
-import Breadcrumb from '@/components/Breadcrumb'
-import RelatedArticles from '@/components/RelatedArticles'
+import type { Metadata } from 'next'
+import GuideArticlePage from '@/components/GuideArticlePage'
+import ContextualCTA from '@/components/ContextualCTA'
 
 export const metadata: Metadata = {
   title: 'Public Buses in China | Trail of China',
   description:
     'Guide to using public buses in China. Routes, payment with Alipay/WeChat, bus etiquette, and when buses are the best option.',
-};
+}
 
 export default function BusPage() {
   return (
-    <div className="min-h-screen bg-white">
-      <main className="max-w-4xl mx-auto px-4 py-12">
-        <div className="mb-6">
-          <Breadcrumb items={[{label:'Home',href:'/'},{label:'China Basics',href:'/china-basics'},{label:'How to Get Around',href:'/china-basics/how-to-get-around'},{label:'Bus'}]} />
-        </div>
-        <h1 className="text-4xl font-bold mb-6 text-[#1a3a4a]">Public Buses</h1>
-        
-        <section className="mb-8">
-          <p className="text-lg text-gray-700 leading-relaxed">
-            Buses are the cheapest way to get around but can be confusing for tourists. 
-            They're best used when you know the route or have a local to guide you.
-          </p>
-        </section>
+    <div>
+      <GuideArticlePage
+        icon="🚌"
+        heroImage={{ src: 'https://picsum.photos/seed/bus-china/800/400', alt: 'Public bus in a Chinese city' }}
+        breadcrumbs={[
+          { label: 'Home', href: '/' },
+          { label: 'China Basics', href: '/china-basics' },
+          { label: 'How to Get Around', href: '/china-basics/how-to-get-around' },
+          { label: 'Bus' },
+        ]}
+        category="How to Get Around"
+        title="Public Buses"
+        intro="Buses are the cheapest way to get around but can be confusing for tourists. They are best used when you know the route or have a local to guide you."
+        whyYouNeedThis={[
+          'Buses cost only ¥2–4 per ride — the cheapest transport option in any Chinese city.',
+          'Airport express buses are reliable and much cheaper than taxis.',
+          'Tourist shuttle buses reach major attractions that the metro does not.',
+          'Some cities have scenic tour buses that double as sightseeing experiences.',
+        ]}
+        setupSteps={[
+          { title: 'Find your route', description: 'Use Baidu Maps or apps like Moovit to plan your bus route before heading out.' },
+          { title: 'Get to the stop', description: 'Bus stop signs show routes in Chinese. Major stops have English announcements.' },
+          { title: 'Pay your fare', description: 'Tap a transport card, scan Alipay/WeChat QR, or pay exact cash (coins or small bills).' },
+          { title: 'Board and ride', description: 'Enter through the front door, exit through the back. Watch for your stop on the display.' },
+          { title: 'Know when to get off', description: 'Press the stop button or the driver may not stop. Have your destination written in Chinese.',
+        },
+        ]}
+        proTips={[
+          'Airport express buses are reliable and cheap — check routes before you land.',
+          'Baidu Maps shows bus routes with real-time arrival info.',
+          'Keep exact change if paying cash — drivers do not give change.',
+          'Buses can get extremely crowded during rush hour (7–9 AM, 5–7 PM).',
+          'Last buses often end early (20:00–22:00) — check schedules in advance.',
+          'Give up your seat for elderly, pregnant, or disabled passengers.',
+        ]}
+        related={[
+          { label: 'Train Travel', href: '/china-basics/how-to-get-around/train' },
+          { label: 'Getting Around Hub', href: '/china-basics/how-to-get-around' },
+          { label: 'Alipay Guide', href: '/china-basics/what-apps-to-use/alipay' },
+        ]}
+        relatedArticles={[
+          { title: 'Train Travel', description: 'High-speed rail between Chinese cities.', href: '/china-basics/how-to-get-around/train' },
+          { title: 'Metro & Subway', description: 'Navigate Chinese city subways.', href: '/china-basics/how-to-get-around/metro-subway' },
+          { title: 'Getting Around', description: 'All transport options for China travelers.', href: '/china-basics/how-to-get-around' },
+          { title: 'Alipay Guide', description: 'Pay for buses, metro, and everything else.', href: '/china-basics/what-apps-to-use/alipay' },
+        ]}
+      />
 
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">How to Pay</h2>
-          <ul className="text-gray-700 list-disc pl-5 space-y-2">
-            <li><strong>Transport card:</strong> Tap when boarding</li>
-            <li><strong>Alipay/WeChat:</strong> QR code scan</li>
-            <li><strong>Cash:</strong> Exact change only (coins or small bills)</li>
-            <li><strong>Price:</strong> Usually ¥2-4 per ride</li>
-          </ul>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Finding Routes</h2>
-          <ul className="text-gray-700 list-disc pl-5 space-y-2">
-            <li>Baidu Maps shows bus routes with real-time info</li>
-            <li>Bus stop signs show routes in Chinese</li>
-            <li>Major stops have English announcements</li>
-            <li>Apps like "Bus" or "Moovit" help with planning</li>
-          </ul>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Bus Etiquette</h2>
-          <ul className="text-gray-700 list-disc pl-5 space-y-2">
-            <li>Board through front door, exit through back</li>
-            <li>Give up seat for elderly, pregnant, disabled</li>
-            <li>No smoking or eating</li>
-            <li>Keep voice down</li>
-            <li>Can get extremely crowded during rush hour</li>
-          </ul>
-        </section>
-
-        <div className="bg-amber-50 border-l-4 border-amber-400 p-4 mb-8">
-          <h3 className="font-semibold text-amber-800 mb-2">💡 When to Use Buses</h3>
-          <ul className="text-amber-900 space-y-2">
-            <li>• Airport express buses are reliable and cheap</li>
-            <li>• Tourist shuttle buses to major attractions</li>
-            <li>• When metro doesn't reach your destination</li>
-            <li>• For scenic routes (some cities have tour buses)</li>
-          </ul>
-        </div>
-
-        <div className="bg-[var(--accent-soft)] border-l-4 border-[var(--accent)] p-4">
-          <h3 className="font-semibold text-[var(--accent-strong)] mb-2">⚠️ Challenges</h3>
-          <ul className="text-[var(--foreground)] space-y-2">
-            <li>• Routes and stops are mostly in Chinese only</li>
-            <li>• Traffic can make buses slow</li>
-            <li>• Crowded during rush hour</li>
-            <li>• Last buses often end early (20:00-22:00)</li>
-          </ul>
-        </div>
-              <RelatedArticles articles={[{title:'Train Travel',description:'High-speed rail between Chinese cities.',href:'/china-basics/how-to-get-around/train'},{title:'Metro & Subway',description:'Navigate Chinese city subways.',href:'/china-basics/how-to-get-around/metro-subway'}]} />
-      </main>
+      <div className="max-w-4xl mx-auto px-4 mt-8">
+        <ContextualCTA
+          icon="🚄"
+          title="Traveling Between Cities?"
+          description="China's high-speed rail is fast, affordable, and connects every major city. Book tickets online with 12306."
+          buttonText="Train Travel Guide →"
+          buttonHref="/china-basics/how-to-get-around/train"
+          variant="secondary"
+        />
+      </div>
     </div>
-  );
+  )
 }

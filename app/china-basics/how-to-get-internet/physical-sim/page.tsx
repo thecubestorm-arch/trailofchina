@@ -1,96 +1,72 @@
-import { Metadata } from 'next';
-import Breadcrumb from '@/components/Breadcrumb'
-import RelatedArticles from '@/components/RelatedArticles'
+import type { Metadata } from 'next'
+import GuideArticlePage from '@/components/GuideArticlePage'
+import ContextualCTA from '@/components/ContextualCTA'
 
 export const metadata: Metadata = {
   title: 'Physical SIM Cards in China | Trail of China',
-  description: 'Complete guide to buying physical SIM cards at Chinese airports. Best carriers, pricing, requirements, and setup.',
-};
+  description:
+    'Complete guide to buying physical SIM cards at Chinese airports. Best carriers, pricing, requirements, and setup.',
+}
 
 export default function PhysicalSimPage() {
   return (
-    <div className="min-h-screen bg-white">
-      <main className="max-w-4xl mx-auto px-4 py-12">
-        <div className="mb-6">
-          <Breadcrumb items={[{label:'Home',href:'/'},{label:'China Basics',href:'/china-basics'},{label:'How to Get Internet',href:'/china-basics/how-to-get-internet'},{label:'Physical SIM'}]} />
-        </div>
-        <h1 className="text-4xl font-bold mb-6 text-[#1a3a4a]">Physical SIM Cards in China</h1>
-        
-        <section className="mb-8">
-          <p className="text-lg text-gray-700 leading-relaxed">
-            Physical SIM cards offer the best value and fastest speeds in China. 
-            You can buy them at any major airport from official carrier stores.
-          </p>
-        </section>
+    <div>
+      <GuideArticlePage
+        icon="📲"
+        heroImage={{ src: 'https://picsum.photos/seed/sim-card-china/800/400', alt: 'Buying a physical SIM card in China' }}
+        breadcrumbs={[
+          { label: 'Home', href: '/' },
+          { label: 'China Basics', href: '/china-basics' },
+          { label: 'How to Get Internet', href: '/china-basics/how-to-get-internet' },
+          { label: 'Physical SIM' },
+        ]}
+        category="How to Get Internet"
+        title="Physical SIM Cards in China"
+        intro="Physical SIM cards offer the best value and fastest speeds in China. You can buy them at any major airport from official carrier stores."
+        whyYouNeedThis={[
+          'Physical SIMs give you a real local number and access to China\'s fastest mobile networks.',
+          'Data plans are generous and cheap compared to roaming or eSIM options.',
+          'You get better speeds than eSIM roaming, which matters for maps and video calls.',
+          'A local number lets you receive SMS from Chinese services like Alipay and WeChat.',
+        ]}
+        setupSteps={[
+          { title: 'Find the carrier store', description: 'Look for official stores after customs: 中国移动 (China Mobile), 中国联通 (China Unicom), or 中国电信 (China Telecom).' },
+          { title: 'Show your passport', description: 'Chinese law requires passport registration for all SIM cards. The staff will handle this for you.' },
+          { title: 'Choose a plan', description: 'Ask for a tourism SIM (旅游卡) for short stays. China Unicom is the most foreigner-friendly.' },
+          { title: 'Staff installs it', description: 'They will insert the SIM, activate it, and make sure it works before you leave.' },
+          { title: 'Test before leaving', description: 'Open a browser and check that data works. Keep the receipt for any issues.' },
+        ]}
+        proTips={[
+          'China Unicom is the most foreigner-friendly carrier with the best balance of price and coverage.',
+          'Ask for a "tourism SIM" (旅游卡) for short stays — these have shorter commitments.',
+          'Keep your home SIM in your luggage, not your phone, to avoid confusion.',
+          'Download offline maps before swapping SIMs, just in case.',
+          'Bring cash or have Alipay/WeChat ready — both are accepted at carrier stores.',
+        ]}
+        related={[
+          { label: 'eSIM Guide', href: '/china-basics/how-to-get-internet/esim' },
+          { label: 'Airalo eSIM', href: '/china-basics/how-to-get-internet/airalo-esim' },
+          { label: 'How to Get Internet', href: '/china-basics/how-to-get-internet' },
+          { label: 'VPN Guide', href: '/china-basics/what-apps-to-use/vpn' },
+        ]}
+        relatedArticles={[
+          { title: 'eSIM Guide', description: 'Compare eSIM options for easier setup.', href: '/china-basics/how-to-get-internet/esim' },
+          { title: 'Airalo eSIM Guide', description: 'Budget-friendly eSIM with good China coverage.', href: '/china-basics/how-to-get-internet/airalo-esim' },
+          { title: 'How to Get Internet', description: 'All connectivity options for China travelers.', href: '/china-basics/how-to-get-internet' },
+          { title: 'VPN Guide', description: 'Access blocked sites with a reliable VPN.', href: '/china-basics/what-apps-to-use/vpn' },
+        ]}
+      />
 
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Where to Buy</h2>
-          <p className="text-gray-700 mb-4">All major Chinese airports have official carrier stores:</p>
-          <ul className="text-gray-700 list-disc pl-5 space-y-2">
-            <li><strong>Beijing (PEK/PKX):</strong> International arrivals hall</li>
-            <li><strong>Shanghai (PVG/SHA):</strong> Terminal 1 & 2 arrival areas</li>
-            <li><strong>Guangzhou (CAN):</strong> Terminal 2, after customs</li>
-          </ul>
-          <p className="text-[#64748b] mt-4 italic">Look for official stores: 中国移动 (China Mobile), 中国联通 (China Unicom), or 中国电信 (China Telecom)</p>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Top Carriers Compared</h2>
-          
-          <div className="grid md:grid-cols-3 gap-4 mb-6">
-            <div className="border rounded-lg p-4">
-              <h3 className="font-semibold text-lg mb-2">China Mobile</h3>
-              <p className="text-sm text-[#64748b]">Best coverage, slightly pricier</p>
-              <p className="text-green-600 font-medium mt-2">¥100-150/month</p>
-            </div>
-            
-            <div className="border rounded-lg p-4">
-              <h3 className="font-semibold text-lg mb-2">China Unicom</h3>
-              <p className="text-sm text-[#64748b]">Best for foreigners, good value</p>
-              <p className="text-green-600 font-medium mt-2">¥80-120/month</p>
-            </div>
-            
-            <div className="border rounded-lg p-4">
-              <h3 className="font-semibold text-lg mb-2">China Telecom</h3>
-              <p className="text-sm text-[#64748b]">Good coverage, competitive prices</p>
-              <p className="text-green-600 font-medium mt-2">¥80-130/month</p>
-            </div>
-          </div>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">What You Need</h2>
-          <ul className="text-gray-700 list-disc pl-5 space-y-2">
-            <li><strong>Passport:</strong> Required for registration (mandatory by law)</li>
-            <li><strong>Unlocked phone:</strong> Must accept foreign SIMs</li>
-            <li><strong>Cash or card:</strong> WeChat Pay, Alipay, or cash accepted</li>
-          </ul>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Step-by-Step Process</h2>
-          <ol className="list-decimal pl-6 space-y-3 text-gray-700">
-            <li>Find official carrier store after customs</li>
-            <li>Show passport and say "SIM card" + point to plan</li>
-            <li>Staff will install and activate it for you</li>
-            <li>Test internet before leaving the store</li>
-            <li>Keep receipt for any issues</li>
-          </ol>
-        </section>
-
-        <div className="bg-amber-50 border-l-4 border-amber-400 p-4 mb-8">
-          <h3 className="font-semibold text-amber-800 mb-2">💡 Pro Tips</h3>
-          <ul className="text-amber-900 space-y-2">
-            <li>• China Unicom is most foreigner-friendly</li>
-            <li>• Ask for "tourism SIM" (旅游卡) for short stays</li>
-            <li>• Keep your home SIM in your luggage (not phone)</li>
-            <li>• Download offline maps before swapping SIMs</li>
-          </ul>
-        </div>
-
-
-              <RelatedArticles articles={[{title:'eSIM Guide',description:'Compare eSIM options for easier setup.',href:'/china-basics/how-to-get-internet/esim'},{title:'How to Get Internet',description:'All connectivity options for China travelers.',href:'/china-basics/how-to-get-internet'}]} />
-      </main>
+      <div className="max-w-4xl mx-auto px-4 mt-8">
+        <ContextualCTA
+          icon="📱"
+          title="Want Zero Airport Hassle?"
+          description="Set up an eSIM before you fly and skip the carrier store queue entirely."
+          buttonText="See eSIM Options →"
+          buttonHref="/china-basics/how-to-get-internet/esim"
+          variant="secondary"
+        />
+      </div>
     </div>
-  );
+  )
 }

@@ -1,103 +1,71 @@
-import { Metadata } from 'next';
-import ContextualCTA from '@/components/ContextualCTA';
-import Breadcrumb from '@/components/Breadcrumb'
-import RelatedArticles from '@/components/RelatedArticles'
+import type { Metadata } from 'next'
+import GuideArticlePage from '@/components/GuideArticlePage'
+import ContextualCTA from '@/components/ContextualCTA'
 
 export const metadata: Metadata = {
   title: 'eSIM Cards for China | Trail of China',
-  description: 'Best eSIM providers for China travel: Airalo, Holafly, Ubigi. Setup guide, pricing, and recommendations.',
-};
+  description:
+    'Best eSIM providers for China travel: Airalo, Holafly, Ubigi. Setup guide, pricing, and recommendations.',
+}
 
 export default function EsimPage() {
   return (
-    <div className="min-h-screen bg-white">
-      <main className="max-w-4xl mx-auto px-4 py-12">
-        <div className="mb-6">
-          <Breadcrumb items={[{label:'Home',href:'/'},{label:'China Basics',href:'/china-basics'},{label:'How to Get Internet',href:'/china-basics/how-to-get-internet'},{label:'eSIM'}]} />
-        </div>
-        <h1 className="text-4xl font-bold mb-6 text-[#1a3a4a]">eSIM Cards for China</h1>
-        
-        <section className="mb-8">
-          <p className="text-lg text-gray-700 leading-relaxed">
-            eSIMs are the easiest way to get internet in China. Activate before you leave home 
-            and have data the moment you land. No airport queues, no language barriers.
-          </p>
-        </section>
+    <div>
+      <GuideArticlePage
+        icon="📱"
+        heroImage={{ src: 'https://picsum.photos/seed/esim-china/800/400', alt: 'eSIM card setup for China travel' }}
+        breadcrumbs={[
+          { label: 'Home', href: '/' },
+          { label: 'China Basics', href: '/china-basics' },
+          { label: 'How to Get Internet', href: '/china-basics/how-to-get-internet' },
+          { label: 'eSIM' },
+        ]}
+        category="How to Get Internet"
+        title="eSIM Cards for China"
+        intro="eSIMs are the easiest way to get internet in China. Activate before you leave home and have data the moment you land. No airport queues, no language barriers."
+        whyYouNeedThis={[
+          'You need internet for maps, translation, ride-hailing, and mobile payments — all essential in China.',
+          'eSIMs let you set up data before you travel, so you are connected the moment you land.',
+          'No need to find a store, show your passport, or deal with language barriers at the airport.',
+          'eSIMs use roaming networks, which means they bypass the Great Firewall — Google Maps and Gmail work without a VPN.',
+        ]}
+        setupSteps={[
+          { title: 'Download the app', description: 'Get Airalo, Holafly, or Ubigi from your app store before you travel.' },
+          { title: 'Purchase a plan', description: 'Select a China plan that matches your trip length and data needs.' },
+          { title: 'Install the eSIM', description: 'Follow the app\'s QR code instructions to install the eSIM profile on your phone.' },
+          { title: 'Enable data roaming', description: 'Turn on data roaming in your phone settings before you land in China.' },
+          { title: 'Connect automatically', description: 'Your phone connects to a network as soon as you arrive — no further steps needed.' },
+        ]}
+        proTips={[
+          'Install your eSIM 1 day before travel so you can test it.',
+          'Screenshot your QR code as a backup in case you need to reinstall.',
+          'Buy slightly more data than you think you need — top-ups are instant if you run low.',
+          'eSIMs use roaming networks, so speeds may be slower than local SIMs. A VPN is still recommended for full internet access.',
+        ]}
+        related={[
+          { label: 'Physical SIM', href: '/china-basics/how-to-get-internet/physical-sim' },
+          { label: 'Airalo eSIM', href: '/china-basics/how-to-get-internet/airalo-esim' },
+          { label: 'Holafly eSIM', href: '/china-basics/how-to-get-internet/holafly-esim' },
+          { label: 'VPN Guide', href: '/china-basics/what-apps-to-use/vpn' },
+        ]}
+        relatedArticles={[
+          { title: 'Airalo eSIM Guide', description: 'Budget-friendly eSIM with good China coverage.', href: '/china-basics/how-to-get-internet/airalo-esim' },
+          { title: 'Holafly eSIM Guide', description: 'Unlimited data eSIM option for China.', href: '/china-basics/how-to-get-internet/holafly-esim' },
+          { title: 'How to Get Internet', description: 'All connectivity options compared.', href: '/china-basics/how-to-get-internet' },
+          { title: 'VPN Guide', description: 'Access blocked sites with a reliable VPN.', href: '/china-basics/what-apps-to-use/vpn' },
+        ]}
+      />
 
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Top eSIM Providers</h2>
-          
-          <div className="space-y-6">
-            <div className="border rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-2">1. Airalo (Mosalink)</h3>
-              <p className="text-[#64748b] mb-2">Best overall value. 1GB for 7 days: $5.50</p>
-              <ul className="text-gray-700 list-disc pl-5">
-                <li>Easy app-based setup</li>
-                <li>Multiple data plans (1GB to 20GB)</li>
-                <li>Works immediately after landing</li>
-              </ul>
-            </div>
-
-            <div className="border rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-2">2. Holafly</h3>
-              <p className="text-[#64748b] mb-2">Best for unlimited data. 7 days: $19.00</p>
-              <ul className="text-gray-700 list-disc pl-5">
-                <li>Truly unlimited data (no throttling)</li>
-                <li>Longer trip plans available</li>
-                <li>24/7 support</li>
-              </ul>
-            </div>
-
-            <div className="border rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-2">3. Ubigi</h3>
-              <p className="text-[#64748b] mb-2">Best for multi-country trips. 1GB: $8.00</p>
-              <ul className="text-gray-700 list-disc pl-5">
-                <li>Works across Asia</li>
-                <li>Easy top-up</li>
-                <li>Reliable coverage</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Step-by-Step Setup</h2>
-          <ol className="list-decimal pl-6 space-y-3 text-gray-700">
-            <li><strong>Before you travel:</strong> Download the provider's app (Airalo, Holafly, etc.)</li>
-            <li><strong>Purchase plan:</strong> Select China plan, complete payment</li>
-            <li><strong>Install eSIM:</strong> Follow app's QR code instructions</li>
-            <li><strong>Activate:</strong> Enable data roaming before landing</li>
-            <li><strong>Connect:</strong> Your phone connects automatically upon arrival</li>
-          </ol>
-        </section>
-
-        <div className="bg-amber-50 border-l-4 border-amber-400 p-4 mb-8">
-          <h3 className="font-semibold text-amber-800 mb-2">💡 Pro Tips</h3>
-          <ul className="text-amber-900 space-y-2">
-            <li>• Install your eSIM 1 day before travel</li>
-            <li>• Screenshot your QR code as backup</li>
-            <li>• Buy slightly more data than you think you need</li>
-            <li>• Top-ups are instant if you run low</li>
-          </ul>
-        </div>
-
-        <div className="bg-[var(--accent-soft)] border-l-4 border-[var(--accent)] p-4">
-          <h3 className="font-semibold text-[var(--accent-strong)] mb-2">⚠️ Important Limitations</h3>
-          <p className="text-[var(--foreground)]">eSIMs use roaming networks, so they bypass the Great Firewall. However, speeds may be slower than local SIMs. VPN still recommended for full internet access.</p>
-        </div>
-
-        <div className="mt-8">
-          <ContextualCTA
-            icon="🔒"
-            title="Don't Forget a VPN"
-            description="A VPN is essential in China — install it before you arrive."
-            buttonText="Get a VPN for China →"
-            buttonHref="/china-basics/what-apps-to-use/vpn"
-            variant="primary"
-          />
-        </div>
-              <RelatedArticles articles={[{title:'Airalo eSIM Guide',description:'Budget-friendly eSIM with good China coverage.',href:'/china-basics/how-to-get-internet/airalo-esim'},{title:'Holafly eSIM Guide',description:'Unlimited data eSIM option for China.',href:'/china-basics/how-to-get-internet/holafly-esim'},{title:'How to Get Internet',description:'All connectivity options compared.',href:'/china-basics/how-to-get-internet'}]} />
-      </main>
+      <div className="max-w-4xl mx-auto px-4 mt-8">
+        <ContextualCTA
+          icon="🔒"
+          title="Don't Forget a VPN"
+          description="A VPN is essential in China — install it before you arrive."
+          buttonText="Get a VPN for China →"
+          buttonHref="/china-basics/what-apps-to-use/vpn"
+          variant="primary"
+        />
+      </div>
     </div>
-  );
+  )
 }
