@@ -29,7 +29,7 @@ export default function Navigation() {
   const closeMenu = () => setMenuOpen(false)
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[var(--line)] bg-[#f5f1ea]/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-[100] border-b border-[var(--line)] bg-[#f5f1ea]/80 backdrop-blur-xl">
       <div className="container-px mx-auto flex w-full max-w-7xl items-center justify-between py-3 md:py-4">
         <Link href="/" className="flex flex-col">
           <span className="font-serif text-2xl leading-none tracking-[0.08em] text-[var(--foreground)]">
@@ -67,7 +67,7 @@ export default function Navigation() {
           aria-label={menuOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((prev) => !prev)}
-          className="relative z-[60] flex h-11 w-11 items-center justify-center rounded-full md:hidden"
+          className="relative z-[100] flex h-11 w-11 items-center justify-center rounded-full md:hidden"
         >
           {menuOpen ? (
             /* X Close Icon */
@@ -105,7 +105,7 @@ export default function Navigation() {
       {/* Mobile Overlay */}
       {menuOpen && (
         <div
-          className="fixed inset-0 z-50 bg-black/30 backdrop-blur-sm md:hidden"
+          className="fixed inset-0 z-[100] bg-black/30 backdrop-blur-sm md:hidden"
           onClick={closeMenu}
           aria-hidden="true"
         />
@@ -113,7 +113,7 @@ export default function Navigation() {
 
       {/* Mobile Slide-out Menu */}
       <div
-        className={`fixed inset-y-0 right-0 z-50 w-[min(20rem,85vw)] transform bg-[#f5f1ea] shadow-2xl transition-transform duration-300 ease-out md:hidden ${
+        className={`fixed inset-y-0 right-0 z-[100] w-[min(20rem,85vw)] transform bg-[#f5f1ea] shadow-2xl transition-transform duration-300 ease-out md:hidden ${
           menuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
         aria-hidden={!menuOpen}

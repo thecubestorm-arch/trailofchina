@@ -12,7 +12,7 @@ export default function TravelPlannerPage() {
         <h1 className="text-4xl font-bold mb-6 text-[#1a3a4a]">Travel Planner</h1>
         
         <section className="mb-8">
-          <p className="text-lg text-gray-700 leading-relaxed">
+          <p className="text-base md:text-sm text-gray-700 leading-relaxed">
             Create your perfect China trip. Answer a few questions and we&apos;ll suggest a personalized itinerary.
           </p>
         </section>
@@ -23,8 +23,8 @@ export default function TravelPlannerPage() {
               <label className="block text-lg font-semibold mb-3">Which cities do you want to visit?</label>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                 {['Beijing', 'Shanghai', 'Xi\u0026apos;an', 'Chengdu', 'Guilin/Yangshuo', 'Hong Kong'].map((city) => (
-                  <label key={city} className="flex items-center space-x-2 border rounded-lg p-3 cursor-pointer hover:bg-[#f5f1ea]">
-                    <input type="checkbox" className="w-4 h-4" />
+                  <label key={city} className="flex items-center gap-3 min-h-[44px] border rounded-lg p-3 cursor-pointer hover:bg-[#f5f1ea]">
+                    <input type="checkbox" className="w-6 h-6 rounded" />
                     <span>{city}</span>
                   </label>
                 ))}
@@ -45,7 +45,7 @@ export default function TravelPlannerPage() {
               <label className="block text-lg font-semibold mb-3">What are you most interested in?</label>
               <div className="flex flex-wrap gap-2">
                 {['History & Culture', 'Food & Dining', 'Nature & Scenery', 'Modern Cities', 'Adventure', 'Relaxation'].map((interest) => (
-                  <label key={interest} className="border rounded-full px-4 py-2 cursor-pointer hover:bg-[#f5f1ea]">
+                  <label key={interest} className="border rounded-full px-4 py-2 cursor-pointer hover:bg-[#f5f1ea] min-h-[44px] flex items-center">
                     <input type="checkbox" className="hidden" />
                     <span>{interest}</span>
                   </label>
@@ -57,7 +57,7 @@ export default function TravelPlannerPage() {
               <label className="block text-lg font-semibold mb-3">Budget level</label>
               <div className="flex gap-4">
                 {['Budget', 'Mid-range', 'Luxury'].map((budget) => (
-                  <label key={budget} className="flex items-center space-x-2">
+                  <label key={budget} className="flex items-center gap-3 min-h-[44px]">
                     <input type="radio" name="budget" className="w-4 h-4" />
                     <span>{budget}</span>
                   </label>

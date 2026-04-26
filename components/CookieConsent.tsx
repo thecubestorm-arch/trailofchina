@@ -23,7 +23,7 @@ export default function CookieConsent() {
   }
 
   return (
-    <div className="fixed inset-x-0 bottom-0 z-[60] border-t border-[var(--line)] bg-[#f5f1ea]/95 backdrop-blur">
+    <div className="fixed inset-x-0 bottom-0 z-[90] border-t border-[var(--line)] bg-[#f5f1ea]/95 backdrop-blur">
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-3 px-4 py-4 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm leading-6 text-[var(--muted)]">
           This site uses cookies to support essential functionality, analytics, and affiliate attribution.

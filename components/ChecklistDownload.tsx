@@ -145,7 +145,7 @@ export default function ChecklistDownload() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="inline-flex h-9 shrink-0 items-center justify-center rounded-lg bg-[#af5d32] px-4 text-sm font-semibold text-white transition hover:bg-[#8f431c] disabled:cursor-not-allowed disabled:opacity-75"
+            className="inline-flex h-11 shrink-0 items-center justify-center rounded-lg bg-[#af5d32] px-4 text-sm font-semibold text-white transition hover:bg-[#8f431c] disabled:cursor-not-allowed disabled:opacity-75"
           >
             {isSubmitting ? 'Preparing...' : 'Get My Free Cheat Sheet'}
           </button>

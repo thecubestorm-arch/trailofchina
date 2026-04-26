@@ -58,6 +58,15 @@ a {
   background: #af5d3233;
 }
 
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 @layer utilities {
   .container-px {
     @apply px-5 sm:px-6 lg:px-8;

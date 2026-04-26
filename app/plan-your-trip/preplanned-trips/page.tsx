@@ -65,8 +65,9 @@ export default function PreplannedTripsPage() {
 
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">How To Choose</h2>
-          <div className="bg-[#f5f1ea] rounded-lg p-6 overflow-x-auto">
-            <table className="w-full min-w-[620px]">
+          <div className="bg-[#f5f1ea] rounded-lg p-6">
+            <div className="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0">
+              <table className="w-full min-w-[620px]">
               <thead>
                 <tr className="border-b">
                   <th className="text-left py-2">Trip</th>
@@ -97,7 +98,8 @@ export default function PreplannedTripsPage() {
               </tbody>
             </table>
           </div>
-        </section>
+        </div>
+      </section>
 
         <div className="bg-amber-50 border-l-4 border-amber-400 p-4 mb-8">
           <h3 className="font-semibold text-amber-800 mb-2">💡 Pro Tips</h3>

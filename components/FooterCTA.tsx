@@ -36,13 +36,13 @@ export default function FooterCTA({
           <div className="flex flex-wrap gap-4">
             <Link
               href="/plan-your-trip/preplanned-trips"
-              className="inline-flex items-center gap-2 text-[#f5f1ea] hover:text-white font-semibold text-sm transition-colors"
+              className="inline-flex items-center gap-2 text-[#f5f1ea] hover:text-white font-semibold text-sm transition-colors py-2 px-3 min-h-[44px]"
             >
               View Itineraries <ArrowRight size={16} />
             </Link>
             <Link
               href="/plan-your-trip/travel-planner"
-              className="inline-flex items-center gap-2 text-white/70 hover:text-white font-semibold text-sm transition-colors"
+              className="inline-flex items-center gap-2 text-white/70 hover:text-white font-semibold text-sm transition-colors py-2 px-3 min-h-[44px]"
             >
               Custom Planner <ArrowRight size={16} />
             </Link>
@@ -76,7 +76,7 @@ export default function FooterCTA({
                             {info.description}{' '}
                             <Link
                               href={info.link.href}
-                              className="text-[#af5d32] hover:underline"
+                              className="text-[#af5d32] hover:underline inline-flex items-center py-2 px-1 min-h-[44px]"
                             >
                               {info.link.label}
                             </Link>

@@ -199,7 +199,7 @@ export default function ShanghaiFilterClient() {
       </section>
 
       {/* Search + Filter Bar */}
-      <div className="sticky top-0 z-50 bg-white border-b border-[#ebe4d8] shadow-sm">
+      <div className="sticky top-0 z-[40] bg-white border-b border-[#ebe4d8] shadow-sm">
         <div className="max-w-6xl mx-auto px-4 py-3">
           <div className="flex items-center gap-3 mb-3">
             <Search className="text-[#64748b] flex-shrink-0" size={20} />

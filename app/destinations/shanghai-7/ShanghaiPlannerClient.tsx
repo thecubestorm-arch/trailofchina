@@ -183,7 +183,7 @@ export default function ShanghaiPlannerClient() {
       </div>
 
       {/* Tab Nav */}
-      <div className="sticky top-0 z-50 bg-white border-b border-[#ebe4d8]">
+      <div className="sticky top-0 z-[40] bg-white border-b border-[#ebe4d8]">
         <div className="max-w-4xl mx-auto px-4 flex gap-0">
           {(["planner", "essentials"] as const).map((tab) => (
             <button key={tab} onClick={() => setActiveTab(tab)} className={`px-4 py-2.5 text-sm font-medium min-h-[44px] border-b-[3px] transition-colors ${activeTab === tab ? "text-[#1a3a4a] font-semibold border-[#af5d32]" : "text-[#64748b] border-transparent hover:text-[#1a3a4a]"}`}>

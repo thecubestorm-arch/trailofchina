@@ -506,7 +506,7 @@ export default function ChinaBasicsClient() {
       </section>
 
       {/* ========== STICKY TAB NAV + SEARCH/FILTER ========== */}
-      <div className="sticky top-0 z-50 bg-white border-b border-[#ebe4d8] shadow-sm">
+      <div className="sticky top-0 z-[40] bg-white border-b border-[#ebe4d8] shadow-sm">
         {/* Tab Nav */}
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex overflow-x-auto scrollbar-hide">
@@ -541,7 +541,7 @@ export default function ChinaBasicsClient() {
               <input
                 type="text"
                 placeholder="Search China basics..."
-                className="flex-1 text-sm text-[#1a3a4a] placeholder:text-[#64748b]/60 outline-none bg-transparent"
+                className="flex-1 text-sm text-[#1a3a4a] placeholder:text-[#64748b]/60 outline-none bg-transparent min-h-[44px]"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
@@ -559,7 +559,7 @@ export default function ChinaBasicsClient() {
                 <button
                   key={chip}
                   onClick={() => setActiveFilter(chip === "All" ? "all" : chip)}
-                  className={`px-3 py-1.5 text-xs font-medium rounded-full whitespace-nowrap transition-colors ${
+                  className={`px-4 py-2 min-h-[44px] text-xs font-medium rounded-full whitespace-nowrap transition-colors ${
                     (chip === "All" && activeFilter === "all") || activeFilter === chip
                       ? "bg-[#af5d32] text-white"
                       : "bg-[#f5f1ea] text-[#1a3a4a] border border-[#ebe4d8] hover:border-[#af5d32]"

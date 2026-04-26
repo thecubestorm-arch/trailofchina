@@ -979,7 +979,7 @@ export default function ShanghaiSuperClient() {
       </section>
 
       {/* ========== STICKY TAB NAV + SEARCH/FILTER ========== */}
-      <div className="sticky top-0 z-50 bg-white border-b border-[#ebe4d8] shadow-sm">
+      <div className="sticky top-0 z-[40] bg-white border-b border-[#ebe4d8] shadow-sm">
         {/* Tab Nav */}
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex overflow-x-auto scrollbar-hide">

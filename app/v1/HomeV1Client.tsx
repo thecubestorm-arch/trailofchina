@@ -135,7 +135,7 @@ export default function HomeV1Client() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }} />
 
       {/* ===== 1. Full-Bleed Hero ===== */}
-      <section className="relative h-screen min-h-[600px] w-full overflow-hidden">
+      <section className="relative h-dvh min-h-[600px] w-full overflow-hidden">
         <Image
           src="/images/hero/china-hero.jpg"
           alt="Scenic view of China — mountains, temples, and modern skylines"
@@ -150,7 +150,7 @@ export default function HomeV1Client() {
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#af5d32] mb-4">
               First-Trip China Travel Guide
             </p>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] mb-4 max-w-3xl">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-4 max-w-3xl">
               China Doesn&apos;t Have to Be Complicated
             </h1>
             <p className="text-white/80 text-base md:text-lg max-w-xl mb-8">
@@ -181,22 +181,19 @@ export default function HomeV1Client() {
 
       {/* ===== 2. Trust Bar ===== */}
       <div className="bg-white border-b border-[#ebe4d8] py-6">
-        <div className="max-w-5xl mx-auto px-4 flex flex-wrap justify-center items-center gap-x-8 gap-y-3">
+        <div className="max-w-5xl mx-auto px-4 flex flex-wrap justify-center items-center gap-x-6 gap-y-3">
           <div className="flex items-center gap-2">
             <span className="text-2xl font-bold text-[#1a3a4a]">4+</span>
             <span className="text-xs text-[#64748b] uppercase tracking-wider">China Trips</span>
           </div>
-          <span className="text-[#ebe4d8]">·</span>
           <div className="flex items-center gap-2">
             <span className="text-2xl font-bold text-[#1a3a4a]">Fluent</span>
             <span className="text-xs text-[#64748b] uppercase tracking-wider">Mandarin</span>
           </div>
-          <span className="text-[#ebe4d8]">·</span>
           <div className="flex items-center gap-2">
             <Home size={20} className="text-[#1a3a4a]" />
             <span className="text-xs text-[#64748b] uppercase tracking-wider">Family in Beijing & Shanghai</span>
           </div>
-          <span className="text-[#ebe4d8]">·</span>
           <div className="flex items-center gap-2">
             <span className="text-2xl font-bold text-[#1a3a4a]">15+</span>
             <span className="text-xs text-[#64748b] uppercase tracking-wider">Cities</span>

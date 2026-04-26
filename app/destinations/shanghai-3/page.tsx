@@ -341,7 +341,7 @@ export default function ShanghaiTripAdvisorPage() {
       </section>
 
       {/* ========== STICKY TAB NAV ========== */}
-      <nav className="sticky top-0 z-50 bg-white border-b border-[#ebe4d8] shadow-sm">
+      <nav className="sticky top-0 z-[40] bg-white border-b border-[#ebe4d8] shadow-sm">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex overflow-x-auto scrollbar-hide">
             {navTabs.map((tab) => {

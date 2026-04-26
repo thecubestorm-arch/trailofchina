@@ -193,12 +193,17 @@ const cityIcon = (city: City, isHovered: boolean) => {
     ? `left: ${offsetX}px; top: ${offsetY}px; transform: none;`
     : `left: ${offsetX}px; top: 50%; transform: translateY(-50%);`;
 
+  const iconSize = city.comingSoon ? [32, 32] : [44, 44];
+  const iconAnchor = city.comingSoon ? [16, 16] : [22, 22];
+
   return L.divIcon({
     className: `custom-city-marker${city.comingSoon ? ' coming-soon-marker' : ''}`,
     html: `
       <div class="city-marker-wrapper" data-coming-soon="${city.comingSoon ? 'true' : 'false'}">
-        <div class="city-marker-pulse ${isHovered ? 'pulsing' : ''}"></div>
-        <div class="city-marker-dot" style="${dotStyle}"></div>
+        <div style="position: relative; width: ${iconSize[0]}px; height: ${iconSize[1]}px; display: flex; align-items: center; justify-content: center;">
+          <div class="city-marker-pulse ${isHovered ? 'pulsing' : ''}"></div>
+          <div class="city-marker-dot" style="${dotStyle}"></div>
+        </div>
         <div class="city-marker-label" style="${labelStyle}">
           <span class="city-name" style="color: ${nameColor}">${city.name}</span>
           <span class="city-tag" style="color: ${tagColor}">${city.bestFor}</span>
@@ -206,8 +211,8 @@ const cityIcon = (city: City, isHovered: boolean) => {
         </div>
       </div>
     `,
-    iconSize: [dotSize, dotSize],
-    iconAnchor: [dotSize / 2, dotSize / 2],
+    iconSize: iconSize as [number, number],
+    iconAnchor: iconAnchor as [number, number],
   });
 };
 
@@ -320,7 +325,7 @@ function HoverTooltip({
 
   return (
     <div
-      className={`absolute z-[900] rounded-xl border border-[#ebe4d8] bg-white p-3 shadow-xl transition-all duration-150 ${
+      className={`absolute z-[80] rounded-xl border border-[#ebe4d8] bg-white p-3 shadow-xl transition-all duration-150 ${
         city.comingSoon
           ? ''
           : 'cursor-pointer hover:shadow-2xl hover:border-[#af5d32]'
@@ -384,6 +389,7 @@ function HoverTooltip({
 export default function MapInnerV3() {
   const [mounted, setMounted] = useState(false);
   const [hoveredCity, setHoveredCity] = useState<string | null>(null);
+  const [tappedCity, setTappedCity] = useState<string | null>(null);
   const mapRef = useRef<L.Map | null>(null);
   const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -396,15 +402,17 @@ export default function MapInnerV3() {
     };
   }, []);
 
-  const hoveredCityData = useMemo(
-    () => cities.find((c) => c.name === hoveredCity) || null,
-    [hoveredCity]
+  const activeTooltipCity = hoveredCity || tappedCity;
+
+  const activeCityData = useMemo(
+    () => cities.find((c) => c.name === activeTooltipCity) || null,
+    [activeTooltipCity]
   );
 
-  const hoveredLatLng = useMemo(() => {
-    if (!hoveredCityData) return null;
-    return new L.LatLng(hoveredCityData.lat, hoveredCityData.lng);
-  }, [hoveredCityData]);
+  const activeLatLng = useMemo(() => {
+    if (!activeCityData) return null;
+    return new L.LatLng(activeCityData.lat, activeCityData.lng);
+  }, [activeCityData]);
 
   const handleMarkerEnter = (name: string) => {
     if (closeTimeoutRef.current) {
@@ -418,6 +426,14 @@ export default function MapInnerV3() {
     closeTimeoutRef.current = setTimeout(() => {
       setHoveredCity(null);
     }, 300);
+  };
+
+  const handleMarkerClick = (name: string) => {
+    setTappedCity((prev) => (prev === name ? null : name));
+  };
+
+  const handleMapBackgroundClick = () => {
+    setTappedCity(null);
   };
 
   const handleTooltipEnter = () => {
@@ -668,13 +684,14 @@ export default function MapInnerV3() {
         {/* ── Leaflet Map ── */}
         <section className="mt-10 md:mt-14">
           <div className="overflow-hidden rounded-xl border border-[#ebe4d8] shadow-sm">
-            <div className="relative h-[400px] w-full md:h-[500px] z-10">
+            <div className="relative h-[350px] w-full md:h-[450px] lg:h-[500px] z-10">
               <MapContainer
                 center={[33, 108]}
                 zoom={4}
                 minZoom={3}
                 maxZoom={10}
                 scrollWheelZoom={true}
+                touchZoom={true}
                 style={{ height: '100%', width: '100%' }}
                 ref={mapRef}
               >
@@ -683,34 +700,40 @@ export default function MapInnerV3() {
                   url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
                 />
 
-                {/* City markers — hover triggers tooltip */}
+                {/* City markers — hover + tap triggers tooltip */}
                 {cities.map((city) => (
                   <Marker
                     key={city.name}
                     position={[city.lat, city.lng]}
-                    icon={cityIcon(city, hoveredCity === city.name)}
+                    icon={cityIcon(city, activeTooltipCity === city.name)}
                     eventHandlers={{
                       mouseover: () => handleMarkerEnter(city.name),
                       mouseout: () => handleMarkerLeave(),
-                      click: (e) => {
-                        if (city.comingSoon) {
-                          e.originalEvent.preventDefault();
-                        }
+                      click: () => {
+                        handleMarkerClick(city.name);
                       },
                     }}
                   />
                 ))}
               </MapContainer>
 
-              {/* Custom hover tooltip overlay */}
-              {hoveredCityData && hoveredLatLng && mapRef.current && (
-                <HoverTooltip
-                  city={hoveredCityData}
-                  position={hoveredLatLng}
-                  mapRef={mapRef}
-                  onMouseEnter={handleTooltipEnter}
-                  onMouseLeave={handleTooltipLeave}
-                />
+              {/* Custom hover/tap tooltip overlay */}
+              {activeCityData && activeLatLng && mapRef.current && (
+                <div
+                  className="absolute inset-0 z-[900]"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleMapBackgroundClick();
+                  }}
+                >
+                  <HoverTooltip
+                    city={activeCityData}
+                    position={activeLatLng}
+                    mapRef={mapRef}
+                    onMouseEnter={handleTooltipEnter}
+                    onMouseLeave={handleTooltipLeave}
+                  />
+                </div>
               )}
             </div>
           </div>
