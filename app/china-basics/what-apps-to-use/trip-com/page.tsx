@@ -531,7 +531,7 @@ export default function TripComPage() {
         </>
       </GuideArticlePage>
 
-      <div className="max-w-4xl mx-auto px-4 mt-8">
+      <div className="max-w-6xl mx-auto px-4 mt-8">
         <ContextualCTA
           icon="🔒"
           title="Access Blocked Apps in China"

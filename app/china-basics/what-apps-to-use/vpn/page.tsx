@@ -190,7 +190,7 @@ export default function VpnGuidePage() {
         }
       </GuideArticlePage>
 
-      <div className="max-w-4xl mx-auto px-4 mt-8">
+      <div className="max-w-6xl mx-auto px-4 mt-8">
         <ContextualCTA
           icon="🔒"
           title="Don't Wait Until You Land"

@@ -52,7 +52,7 @@ const sections = [
 export default function PlanYourTripPage() {
   return (
     <div className="min-h-screen bg-white">
-      <main className="mx-auto max-w-4xl px-4 py-12">
+      <main className="mx-auto max-w-6xl px-4 py-12">
         <div className="relative">
           <ChineseWatermark character="计划" />
           <h1 className="mb-6 text-6xl font-bold text-[#1a3a4a]">Plan Your Trip</h1>

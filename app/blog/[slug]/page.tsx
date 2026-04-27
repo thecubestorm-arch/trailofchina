@@ -38,7 +38,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
   if (!post) {
     return (
       <div className="min-h-screen bg-white">
-        <div className="max-w-4xl mx-auto px-4 py-12 text-center">
+        <div className="max-w-6xl mx-auto px-4 py-12 text-center">
           <h1 className="font-serif text-3xl font-bold text-[#1a3a4a] mb-4">Post not found</h1>
         </div>
       </div>
@@ -71,7 +71,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="max-w-4xl mx-auto px-4 py-12">
+      <div className="max-w-6xl mx-auto px-4 py-12">
         {/* Breadcrumb */}
         <nav aria-label="breadcrumb" className="mb-8">
           <ol className="flex items-center gap-2 text-sm text-[#64748b]">

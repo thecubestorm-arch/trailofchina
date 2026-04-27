@@ -173,7 +173,7 @@ const totalCount = phases.reduce((acc, p) => acc + p.apps.length, 0)
 export default function WhatAppsToUseV2Page() {
   return (
     <div className="min-h-screen bg-white">
-      <main className="mx-auto max-w-4xl px-4 py-12">
+      <main className="mx-auto max-w-6xl px-4 py-12">
         <div className="relative">
           <Breadcrumb
             items={[

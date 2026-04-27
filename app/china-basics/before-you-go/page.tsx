@@ -57,7 +57,7 @@ export default function BeforeYouGoPage() {
         ]}
       />
 
-      <div className="max-w-4xl mx-auto px-4 mt-8">
+      <div className="max-w-6xl mx-auto px-4 mt-8">
         <ContextualCTA
           icon="📱"
           title="Get Your Apps Ready"

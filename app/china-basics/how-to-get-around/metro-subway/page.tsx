@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function MetroPage() {
   return (
     <div className="min-h-screen bg-white">
-      <main className="max-w-4xl mx-auto px-4 py-12">
+      <main className="max-w-6xl mx-auto px-4 py-12">
         <div className="mb-6">
           <Breadcrumb items={[{label:'Home',href:'/'},{label:'China Basics',href:'/china-basics'},{label:'How to Get Around',href:'/china-basics/how-to-get-around'},{label:'Metro & Subway'}]} />
         </div>

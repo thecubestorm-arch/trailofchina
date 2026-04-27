@@ -60,7 +60,7 @@ export default function MapsAppsPage() {
         { label: 'Shanghai Local Tips', href: '/destinations/shanghai/local-tips' },
       ]}
     />
-    <div className="max-w-4xl mx-auto px-4 mt-8">
+    <div className="max-w-6xl mx-auto px-4 mt-8">
       <ContextualCTA
         icon="🌐"
         title="Need Internet in China?"

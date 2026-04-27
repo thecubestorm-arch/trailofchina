@@ -86,7 +86,7 @@ export default function PackingListPage() {
         { label: 'VPN Setup', href: '/china-basics/what-apps-to-use/vpn' },
       ]}
     />
-    <div className="max-w-4xl mx-auto px-4 mt-8">
+    <div className="max-w-6xl mx-auto px-4 mt-8">
       <ContextualCTA
         icon="🌐"
         title="Get an eSIM Before You Go"

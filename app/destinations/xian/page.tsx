@@ -47,7 +47,7 @@ const sections = [
 export default function XianPage() {
   return (
     <div className="min-h-screen bg-white">
-      <main className="max-w-4xl mx-auto px-4 py-12">
+      <main className="max-w-6xl mx-auto px-4 py-12">
         <div className="relative">
           <ChineseWatermark character="西安" />
           <h1 className="text-5xl font-bold mb-6 text-[#1a3a4a]">Xi&apos;an</h1>

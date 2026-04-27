@@ -71,7 +71,7 @@ export default function ShanghaiStoryClient() {
       <section className="relative h-[500px] md:h-[600px] w-full overflow-hidden">
         <Image src="https://picsum.photos/seed/shanghai-skyline/1400/700" alt="Shanghai skyline" fill className="object-cover" priority />
         <div className="absolute inset-0 bg-gradient-to-t from-[#1a3a4a] via-[#1a3a4a]/30 to-transparent" />
-        <div className="absolute inset-0 flex flex-col justify-end px-4 pb-10 md:pb-16 max-w-4xl mx-auto w-full">
+        <div className="absolute inset-0 flex flex-col justify-end px-4 pb-10 md:pb-16 max-w-6xl mx-auto w-full">
           <p className="text-white/70 text-sm mb-2 tracking-widest uppercase">上海 · China Travel Guide</p>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-3 tracking-tight leading-tight">Shanghai</h1>
           <p className="text-white/90 text-lg md:text-xl max-w-xl leading-relaxed">Colonial elegance meets tomorrow&apos;s skyline. Here&apos;s how to experience it like a local.</p>
@@ -80,7 +80,7 @@ export default function ShanghaiStoryClient() {
 
       {/* Quick Info Bar */}
       <div className="bg-[#1a3a4a]">
-        <div className="max-w-4xl mx-auto px-4 py-3">
+        <div className="max-w-6xl mx-auto px-4 py-3">
           <div className="flex flex-wrap gap-3">
             {quickInfoPills.map((pill) => {
               const PillIcon = pill.icon;
@@ -97,7 +97,7 @@ export default function ShanghaiStoryClient() {
       </div>
 
       {/* Editorial Intro */}
-      <div className="max-w-4xl mx-auto px-4 py-10 md:py-14">
+      <div className="max-w-6xl mx-auto px-4 py-10 md:py-14">
         <div className="max-w-2xl">
           <p className="text-lg md:text-xl text-[#1a3a4a] leading-relaxed">
             Shanghai is a city that moves fast but rewards those who slow down. The Bund at dawn, a quiet bowl of noodles at a street stall, the Art Deco lanes of the French Concession — these moments don&apos;t appear in guidebooks. <strong className="text-[#af5d32]">Here&apos;s your insider guide.</strong>
@@ -105,7 +105,7 @@ export default function ShanghaiStoryClient() {
         </div>
       </div>
 
-      <main className="max-w-4xl mx-auto px-4 space-y-16 md:space-y-24 pb-16">
+      <main className="max-w-6xl mx-auto px-4 space-y-16 md:space-y-24 pb-16">
         {/* ── Featured: The Bund ── */}
         <section>
           <Link href="/destinations/shanghai/what-to-do/bund" className="group block">
@@ -158,7 +158,7 @@ export default function ShanghaiStoryClient() {
           <div className="relative h-[250px] md:h-[350px] overflow-hidden rounded-none md:rounded-2xl">
             <Image src="https://picsum.photos/seed/shanghai-food-scene/1200/400" alt="Shanghai food scene" fill className="object-cover" />
             <div className="absolute inset-0 bg-gradient-to-r from-[#1a3a4a]/80 to-transparent" />
-            <div className="absolute inset-0 flex items-center px-6 md:px-10 max-w-4xl mx-auto w-full">
+            <div className="absolute inset-0 flex items-center px-6 md:px-10 max-w-6xl mx-auto w-full">
               <div>
                 <p className="text-white/70 text-xs tracking-widest uppercase mb-2">Food & Drink</p>
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">Eat Like a Local</h2>

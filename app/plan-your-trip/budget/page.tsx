@@ -94,7 +94,7 @@ export default function BudgetGuidePage() {
         { label: 'Alipay Guide', href: '/china-basics/what-apps-to-use/alipay' },
       ]}
     />
-    <div className="max-w-4xl mx-auto px-4 mt-8">
+    <div className="max-w-6xl mx-auto px-4 mt-8">
       <ContextualCTA
         icon="🚄"
         title="Book on Trip.com for the Best Prices"

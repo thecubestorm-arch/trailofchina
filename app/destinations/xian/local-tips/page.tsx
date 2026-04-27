@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function XianLocalTipsPage() {
   return (
     <div className="min-h-screen bg-white">
-      <main className="max-w-4xl mx-auto px-4 py-12">
+      <main className="max-w-6xl mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold mb-6 text-[#1a3a4a]">Xi&apos;an Local Tips</h1>
 
         <section className="mb-8">

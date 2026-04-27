@@ -141,7 +141,7 @@ export default function ShanghaiPlannerClient() {
       <section className="relative h-[350px] md:h-[420px] w-full overflow-hidden">
         <Image src="https://picsum.photos/seed/shanghai-skyline/1200/500" alt="Shanghai" fill className="object-cover" priority />
         <div className="absolute inset-0 bg-gradient-to-t from-[#1a3a4a]/90 via-[#1a3a4a]/40 to-transparent" />
-        <div className="absolute inset-0 flex flex-col justify-end px-4 pb-6 md:pb-10 max-w-4xl mx-auto w-full">
+        <div className="absolute inset-0 flex flex-col justify-end px-4 pb-6 md:pb-10 max-w-6xl mx-auto w-full">
           <p className="text-white/70 text-xs tracking-widest uppercase mb-1">Plan Your Trip</p>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-2 tracking-tight">Shanghai</h1>
           <p className="text-white/90 text-base md:text-lg max-w-xl">Your day-by-day guide to the perfect trip</p>
@@ -150,7 +150,7 @@ export default function ShanghaiPlannerClient() {
 
       {/* Quick Info */}
       <div className="bg-[#f5f1ea] border-b border-[#ebe4d8]">
-        <div className="max-w-4xl mx-auto px-4 py-3">
+        <div className="max-w-6xl mx-auto px-4 py-3">
           <div className="flex flex-wrap gap-2">
             {quickInfoPills.map((pill) => {
               const PillIcon = pill.icon;
@@ -168,7 +168,7 @@ export default function ShanghaiPlannerClient() {
 
       {/* Budget Bar */}
       <div className="bg-white border-b border-[#ebe4d8]">
-        <div className="max-w-4xl mx-auto px-4 py-4">
+        <div className="max-w-6xl mx-auto px-4 py-4">
           <p className="text-xs tracking-widest uppercase text-[#af5d32] font-semibold mb-3">Daily Budget</p>
           <div className="grid grid-cols-3 gap-3">
             {budgetRanges.map((b) => (
@@ -184,7 +184,7 @@ export default function ShanghaiPlannerClient() {
 
       {/* Tab Nav */}
       <div className="sticky top-0 z-[40] bg-white border-b border-[#ebe4d8]">
-        <div className="max-w-4xl mx-auto px-4 flex gap-0">
+        <div className="max-w-6xl mx-auto px-4 flex gap-0">
           {(["planner", "essentials"] as const).map((tab) => (
             <button key={tab} onClick={() => setActiveTab(tab)} className={`px-4 py-2.5 text-sm font-medium min-h-[44px] border-b-[3px] transition-colors ${activeTab === tab ? "text-[#1a3a4a] font-semibold border-[#af5d32]" : "text-[#64748b] border-transparent hover:text-[#1a3a4a]"}`}>
               {tab === "planner" ? "Day Planner" : "Essentials"}
@@ -194,7 +194,7 @@ export default function ShanghaiPlannerClient() {
       </div>
 
       {/* Content */}
-      <main className="max-w-4xl mx-auto px-4 py-8 md:py-12">
+      <main className="max-w-6xl mx-auto px-4 py-8 md:py-12">
         {activeTab === "planner" && (
           <div className="space-y-6">
             <div className="mb-8">

@@ -183,7 +183,7 @@ export default function GuideArticlePage({
     return (
       <div className="container-px mx-auto max-w-6xl">
         <div className="md:grid md:grid-cols-3 md:gap-10">
-          <div className="md:col-span-2 max-w-4xl">
+          <div className="md:col-span-2 max-w-none">
             {content}
           </div>
           <div className="md:col-span-1">
@@ -195,7 +195,7 @@ export default function GuideArticlePage({
   }
 
   return (
-    <div className="container-px mx-auto max-w-4xl">
+    <div className="container-px mx-auto max-w-6xl">
       {content}
     </div>
   );

@@ -48,7 +48,7 @@ export default function InteractiveMapClient() {
 
   return (
     <div className="min-h-screen bg-white">
-      <main className="max-w-4xl mx-auto px-4 py-12 md:py-20 text-center">
+      <main className="max-w-6xl mx-auto px-4 py-12 md:py-20 text-center">
         <div className="mb-8">
           <MapPin className="mx-auto text-[#af5d32]" size={64} />
         </div>

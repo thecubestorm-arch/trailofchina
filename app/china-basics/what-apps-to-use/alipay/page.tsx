@@ -13,7 +13,7 @@ export default function AlipayPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Overview Section */}
-      <section className="container-px mx-auto max-w-4xl py-12 md:py-16">
+      <section className="container-px mx-auto max-w-6xl py-12 md:py-16">
         <div className="mb-6">
           <Breadcrumb items={[{label:'Home',href:'/'},{label:'China Basics',href:'/china-basics'},{label:'What Apps to Use',href:'/china-basics/what-apps-to-use'},{label:'Alipay'}]} />
         </div>
@@ -29,7 +29,7 @@ export default function AlipayPage() {
       </section>
 
       {/* Payment Setup Section with Anchor */}
-      <section id="payment" className="container-px mx-auto max-w-4xl py-12 md:py-16">
+      <section id="payment" className="container-px mx-auto max-w-6xl py-12 md:py-16">
         <h2 className="text-3xl font-bold text-slate-900 mb-6">Payment Setup</h2>
         <div className="card-base">
           <h3 className="text-2xl font-extrabold text-slate-900 mb-4">Why you need this</h3>
@@ -90,7 +90,7 @@ export default function AlipayPage() {
       </section>
 
       {/* Mini-Apps Section */}
-      <section className="container-px mx-auto max-w-4xl py-12 md:py-16">
+      <section className="container-px mx-auto max-w-6xl py-12 md:py-16">
         <h2 className="text-3xl font-bold text-slate-900 mb-6">Mini-Apps — Your Gateway to Chinese Services</h2>
         <p className="text-lg text-slate-700 mb-6">
           Alipay is more than just payments — it houses hundreds of mini-apps (小程序) that turn it into a gateway for hundreds of services:
@@ -116,7 +116,7 @@ export default function AlipayPage() {
       </section>
 
       {/* Transit Section */}
-      <section className="container-px mx-auto max-w-4xl py-12 md:py-16">
+      <section className="container-px mx-auto max-w-6xl py-12 md:py-16">
         <h2 className="text-3xl font-bold text-slate-900 mb-6">Transit — Using Alipay on Subway and Buses</h2>
         <p className="text-lg text-slate-700 mb-6">
           Most major Chinese cities have integrated Alipay into their public transit systems. Here's how it works:
@@ -139,7 +139,7 @@ export default function AlipayPage() {
       </section>
 
       {/* Pro Tips Section */}
-      <div className="container-px mx-auto max-w-4xl py-12 md:py-16 rounded-2xl border border-amber-200 bg-amber-50 p-6">
+      <div className="container-px mx-auto max-w-6xl py-12 md:py-16 rounded-2xl border border-amber-200 bg-amber-50 p-6">
         <h2 className="text-2xl font-black text-slate-900">Pro Tips</h2>
         <ul className="mt-3 space-y-2">
           <li className="text-sm leading-relaxed text-slate-700 md:text-base">• Enable "Auto-Translate" in Alipay settings to auto-translate merchant names and product descriptions.</li>
@@ -150,7 +150,7 @@ export default function AlipayPage() {
       </div>
 
 
-      <div className="container-px mx-auto max-w-4xl py-8 md:py-12">
+      <div className="container-px mx-auto max-w-6xl py-8 md:py-12">
         <ContextualCTA
           icon="🌐"
           title="Need Internet in China?"
@@ -161,7 +161,7 @@ export default function AlipayPage() {
         />
       </div>
 
-      <div className="container-px mx-auto max-w-4xl py-12 md:py-16">
+      <div className="container-px mx-auto max-w-6xl py-12 md:py-16">
       <RelatedArticles articles={[{title:'WeChat Pay Guide',description:'The other must-have payment app for China travelers.',href:'/china-basics/what-apps-to-use/wechat-pay'},{title:'Payment Apps Overview',description:'Why you need Alipay and WeChat Pay in cashless China.',href:'/china-basics/what-apps-to-use/payment'},{title:'Meituan Guide',description:'Order food delivery and book hotels with Meituan.',href:'/china-basics/what-apps-to-use/meituan'}]} />
       </div>
 </div>

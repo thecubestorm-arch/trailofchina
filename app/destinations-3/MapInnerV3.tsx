@@ -640,7 +640,7 @@ export default function MapInnerV3() {
         }
       `}</style>
 
-      <main className="mx-auto max-w-4xl px-4 py-12">
+      <main className="mx-auto max-w-6xl px-4 py-12">
         {/* ── Hero ── */}
         <div className="text-center md:text-left">
           <h1 className="mb-4 text-4xl font-bold text-[#1a3a4a] md:text-6xl">

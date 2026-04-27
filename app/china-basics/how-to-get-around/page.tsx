@@ -106,7 +106,7 @@ const sections = [
 export default function HowToGetAroundHub() {
   return (
     <div className="min-h-screen bg-white">
-      <main className="mx-auto max-w-4xl px-4 py-12">
+      <main className="mx-auto max-w-6xl px-4 py-12">
         <div className="relative">
           <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'China Basics', href: '/china-basics' }, { label: 'How to Get Around' }]} />
           <ChineseWatermark character="交通" />
