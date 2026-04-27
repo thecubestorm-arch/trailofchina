@@ -17,6 +17,9 @@ type AppItem = {
   id: string
   title: string
   icon: string
+  logoLetter: string
+  logoBg: string
+  logoColor: string
   whyThisApp: string
   setupTime: string
   difficulty: 'easy' | 'medium'
@@ -51,6 +54,9 @@ const phases: Phase[] = [
         id: 'vpn',
         title: 'VPN Setup',
         icon: '🔐',
+        logoLetter: 'VPN',
+        logoBg: '#1a3a4a',
+        logoColor: '#ffffff',
         whyThisApp: 'Google, WhatsApp, Instagram — all blocked in China. Install your VPN before arrival because VPN websites are blocked at the border.',
         setupTime: '5 min',
         difficulty: 'easy',
@@ -62,6 +68,9 @@ const phases: Phase[] = [
         id: 'alipay',
         title: 'Alipay',
         icon: '📱',
+        logoLetter: '支',
+        logoBg: '#1677ff',
+        logoColor: '#ffffff',
         whyThisApp: '95% of China is cashless. Alipay works at street vendors, subway gates, and even temple donation boxes. Link your foreign card before departure.',
         setupTime: '10 min + ID verification',
         difficulty: 'medium',
@@ -73,6 +82,9 @@ const phases: Phase[] = [
         id: 'wechat',
         title: 'WeChat (Pay + Messaging)',
         icon: '💬',
+        logoLetter: '微',
+        logoBg: '#07c160',
+        logoColor: '#ffffff',
         whyThisApp: 'WeChat is both your messaging app and your backup payment method. Chinese businesses prefer WeChat — you need it for group chats, mini-programs, and hotel check-ins.',
         setupTime: '10 min + ID verification',
         difficulty: 'medium',
@@ -84,6 +96,9 @@ const phases: Phase[] = [
         id: 'esim',
         title: 'eSIM / Internet',
         icon: '📶',
+        logoLetter: 'eS',
+        logoBg: '#af5d32',
+        logoColor: '#ffffff',
         whyThisApp: 'Buy and install your eSIM before departure so you have data the moment you land. Roaming is expensive; local SIM takes time.',
         setupTime: '5 min',
         difficulty: 'easy',
@@ -108,6 +123,9 @@ const phases: Phase[] = [
         id: 'maps',
         title: 'Maps & Navigation',
         icon: '🗺️',
+        logoLetter: '📍',
+        logoBg: '#34a853',
+        logoColor: '#ffffff',
         whyThisApp: 'Google Maps doesn\'t work reliably in China. Apple Maps works without VPN. Download offline maps for your first city before you go.',
         setupTime: '5 min',
         difficulty: 'easy',
@@ -119,6 +137,9 @@ const phases: Phase[] = [
         id: 'translation',
         title: 'Translation App',
         icon: '🌐',
+        logoLetter: 'G',
+        logoBg: '#4285f4',
+        logoColor: '#ffffff',
         whyThisApp: 'Download Google Translate with offline Chinese language pack. Essential for menus, signs, and asking directions. Works offline — no data needed.',
         setupTime: '5 min',
         difficulty: 'easy',
@@ -130,6 +151,9 @@ const phases: Phase[] = [
         id: 'didi',
         title: 'Didi (Ride-Hailing)',
         icon: '🚕',
+        logoLetter: '滴',
+        logoBg: '#ff6c00',
+        logoColor: '#ffffff',
         whyThisApp: 'China\'s Uber. Book rides, share bikes, and check bus routes. English interface available. Cheaper than taxis and avoids language barriers.',
         setupTime: '5 min',
         difficulty: 'easy',
@@ -154,6 +178,9 @@ const phases: Phase[] = [
         id: 'trip-com',
         title: 'Trip.com',
         icon: '🎫',
+        logoLetter: 'T',
+        logoBg: '#003580',
+        logoColor: '#ffffff',
         whyThisApp: 'Book high-speed trains, hotels, flights, and attraction tickets — all in English with foreign card support. The easiest booking platform for foreigners.',
         setupTime: '5 min',
         difficulty: 'easy',
@@ -165,6 +192,9 @@ const phases: Phase[] = [
         id: 'meituan',
         title: 'Meituan',
         icon: '🍔',
+        logoLetter: '美',
+        logoBg: '#ffc300',
+        logoColor: '#1a1a1a',
         whyThisApp: 'China\'s everything app: food delivery, hotel deals, movie tickets, group discounts. Mostly Chinese interface — best for adventurous travelers staying 1+ weeks.',
         setupTime: '10 min',
         difficulty: 'medium',
@@ -284,9 +314,13 @@ export default function WhatAppsToUseV2Page() {
                         : 'border-l-4 border-l-[#ebe4d8] border-[#ebe4d8]'
                     }`}
                   >
-                    {/* App Icon */}
-                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-[#f5f1ea] text-2xl">
-                      {app.icon}
+                    {/* App Logo Placeholder */}
+                    <div
+                      className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl text-lg font-bold shadow-sm"
+                      style={{ backgroundColor: app.logoBg, color: app.logoColor }}
+                      title={`Replace with ${app.title} logo`}
+                    >
+                      {app.logoLetter}
                     </div>
 
                     {/* Content */}
