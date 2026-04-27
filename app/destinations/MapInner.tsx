@@ -20,6 +20,7 @@ interface City {
   href: string;
   comingSoon?: boolean;
   labelOffset?: { x: number; y: number };
+  photos: string[];
 }
 
 const cities: City[] = [
@@ -34,6 +35,11 @@ const cities: City[] = [
     imageSeed: 'beijing-map-thumb',
     href: '/destinations/beijing/what-to-do',
     labelOffset: { x: 20, y: -5 },
+    photos: [
+      'https://picsum.photos/seed/beijing-map-thumb-1/400/250',
+      'https://picsum.photos/seed/beijing-map-thumb-2/400/250',
+      'https://picsum.photos/seed/beijing-map-thumb-3/400/250',
+    ],
   },
   {
     name: 'Shanghai',
@@ -46,6 +52,11 @@ const cities: City[] = [
     imageSeed: 'shanghai-map-thumb',
     href: '/destinations/shanghai/what-to-do',
     labelOffset: { x: 20, y: 0 },
+    photos: [
+      'https://picsum.photos/seed/shanghai-map-thumb-1/400/250',
+      'https://picsum.photos/seed/shanghai-map-thumb-2/400/250',
+      'https://picsum.photos/seed/shanghai-map-thumb-3/400/250',
+    ],
   },
   {
     name: "Xi'an",
@@ -58,6 +69,11 @@ const cities: City[] = [
     imageSeed: 'xian-map-thumb',
     href: '/destinations/xian/what-to-do',
     labelOffset: { x: -60, y: 0 },
+    photos: [
+      'https://picsum.photos/seed/xian-map-thumb-1/400/250',
+      'https://picsum.photos/seed/xian-map-thumb-2/400/250',
+      'https://picsum.photos/seed/xian-map-thumb-3/400/250',
+    ],
   },
   {
     name: 'Chengdu',
@@ -70,6 +86,11 @@ const cities: City[] = [
     imageSeed: 'chengdu-map-thumb',
     href: '/destinations/chengdu/what-to-do',
     labelOffset: { x: -60, y: 0 },
+    photos: [
+      'https://picsum.photos/seed/chengdu-map-thumb-1/400/250',
+      'https://picsum.photos/seed/chengdu-map-thumb-2/400/250',
+      'https://picsum.photos/seed/chengdu-map-thumb-3/400/250',
+    ],
   },
   {
     name: 'Chongqing',
@@ -82,6 +103,11 @@ const cities: City[] = [
     imageSeed: 'chongqing-map-thumb',
     href: '/destinations/chongqing/what-to-do',
     labelOffset: { x: 20, y: 10 },
+    photos: [
+      'https://picsum.photos/seed/chongqing-map-thumb-1/400/250',
+      'https://picsum.photos/seed/chongqing-map-thumb-2/400/250',
+      'https://picsum.photos/seed/chongqing-map-thumb-3/400/250',
+    ],
   },
   // ── Coming Soon cities ──────────────────────────────────────────
   {
@@ -96,6 +122,10 @@ const cities: City[] = [
     href: '#',
     comingSoon: true,
     labelOffset: { x: -60, y: 20 },
+    photos: [
+      'https://picsum.photos/seed/hangzhou-map-thumb-1/400/250',
+      'https://picsum.photos/seed/hangzhou-map-thumb-2/400/250',
+    ],
   },
   {
     name: 'Suzhou',
@@ -109,6 +139,10 @@ const cities: City[] = [
     href: '#',
     comingSoon: true,
     labelOffset: { x: -80, y: 0 },
+    photos: [
+      'https://picsum.photos/seed/suzhou-map-thumb-1/400/250',
+      'https://picsum.photos/seed/suzhou-map-thumb-2/400/250',
+    ],
   },
   {
     name: 'Guilin',
@@ -122,6 +156,10 @@ const cities: City[] = [
     href: '#',
     comingSoon: true,
     labelOffset: { x: 20, y: 0 },
+    photos: [
+      'https://picsum.photos/seed/guilin-map-thumb-1/400/250',
+      'https://picsum.photos/seed/guilin-map-thumb-2/400/250',
+    ],
   },
   {
     name: 'Guangzhou',
@@ -135,6 +173,10 @@ const cities: City[] = [
     href: '#',
     comingSoon: true,
     labelOffset: { x: -80, y: 0 },
+    photos: [
+      'https://picsum.photos/seed/guangzhou-map-thumb-1/400/250',
+      'https://picsum.photos/seed/guangzhou-map-thumb-2/400/250',
+    ],
   },
   {
     name: 'Nanjing',
@@ -148,6 +190,10 @@ const cities: City[] = [
     href: '#',
     comingSoon: true,
     labelOffset: { x: -70, y: 0 },
+    photos: [
+      'https://picsum.photos/seed/nanjing-map-thumb-1/400/250',
+      'https://picsum.photos/seed/nanjing-map-thumb-2/400/250',
+    ],
   },
   {
     name: 'Lhasa',
@@ -161,6 +207,10 @@ const cities: City[] = [
     href: '#',
     comingSoon: true,
     labelOffset: { x: 20, y: 0 },
+    photos: [
+      'https://picsum.photos/seed/lhasa-map-thumb-1/400/250',
+      'https://picsum.photos/seed/lhasa-map-thumb-2/400/250',
+    ],
   },
   {
     name: 'Kunming',
@@ -173,6 +223,10 @@ const cities: City[] = [
     imageSeed: 'kunming-map-thumb',
     href: '#',
     comingSoon: true,
+    photos: [
+      'https://picsum.photos/seed/kunming-map-thumb-1/400/250',
+      'https://picsum.photos/seed/kunming-map-thumb-2/400/250',
+    ],
   },
 ];
 
@@ -299,7 +353,7 @@ function HoverTooltip({
   if (!coords) return null;
 
   const tooltipWidth = 260;
-  const tooltipHeight = city.comingSoon ? 180 : 220;
+  const tooltipHeight = city.comingSoon ? 180 : 280;
   const gap = 8;
   const padding = 12;
 
@@ -345,10 +399,22 @@ function HoverTooltip({
           <img
             src={`https://picsum.photos/seed/${city.imageSeed}/400/200`}
             alt={city.name}
-            className="mb-2 h-[60px] w-full rounded-lg object-cover"
+            className="h-[60px] w-full rounded-lg object-cover"
             loading="eager"
           />
-          <h4 className="text-base font-bold text-[#1a3a4a]">{city.name}</h4>
+          {/* Scrollable photo thumbnails */}
+          <div className="mt-1.5 flex h-[60px] gap-1.5 overflow-x-auto scrollbar-hide">
+            {city.photos?.map((photo, i) => (
+              <img
+                key={i}
+                src={photo}
+                alt={`${city.name} ${i + 1}`}
+                className="h-[60px] w-[80px] shrink-0 rounded-lg object-cover"
+                loading="lazy"
+              />
+            ))}
+          </div>
+          <h4 className="mt-1.5 text-base font-bold text-[#1a3a4a]">{city.name}</h4>
           <p className="mt-0.5 text-xs font-semibold text-[#af5d32]">
             {city.bestFor}
           </p>
@@ -362,6 +428,9 @@ function HoverTooltip({
               {city.whereToEat} where to eat
             </span>
           </div>
+          <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-[#af5d32]">
+            Explore →
+          </span>
         </Link>
       ) : (
         <>

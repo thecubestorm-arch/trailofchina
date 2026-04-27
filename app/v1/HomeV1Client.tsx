@@ -2,9 +2,10 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, ChevronDown, Wifi, Shield, Smartphone, FileText, Briefcase, Home } from 'lucide-react'
+import { ArrowRight, ChevronDown, Search, Wifi, Shield, Smartphone, FileText, Briefcase, Home } from 'lucide-react'
 import ChecklistDownload from '@/components/ChecklistDownload'
 import FooterCTA from '@/components/FooterCTA'
+import { useState } from 'react'
 
 const destinations = [
   {
@@ -113,7 +114,21 @@ const footerQuickInfo = [
   },
 ]
 
+const quickAnswers = [
+  { label: 'Do I need a visa?', href: '/china-basics/how-china-differs/visa-guide' },
+  { label: 'Is China safe?', href: '/china-basics/before-you-go/is-china-safe' },
+  { label: 'How to pay?', href: '/china-basics/what-apps-to-use/payment' },
+  { label: 'Internet in China', href: '/china-basics/how-to-get-internet' },
+  { label: 'Best VPN', href: '/china-basics/what-apps-to-use/vpn' },
+  { label: 'Apps checklist', href: '/china-basics/what-apps-to-use' },
+  { label: 'Train tickets', href: '/china-basics/how-to-get-around/12306' },
+  { label: 'Packing list', href: '/china-basics/before-you-go/packing-list' },
+  { label: 'China censorship', href: '/china-basics/how-china-differs/censorship' },
+  { label: 'eSIM vs SIM', href: '/china-basics/how-to-get-internet/esim' },
+]
+
 export default function HomeV1Client() {
+  const [searchQuery, setSearchQuery] = useState('')
   const orgLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -156,7 +171,7 @@ export default function HomeV1Client() {
             <p className="text-white/80 text-base md:text-lg max-w-xl mb-8">
               Visa tips, app setup, itineraries — everything you need for a smooth first trip. Written by travelers who&apos;ve been there.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row gap-3 mb-6">
               <Link
                 href="/china-basics"
                 className="inline-flex items-center justify-center px-6 py-3 bg-[#af5d32] text-white font-semibold rounded-xl hover:bg-[#9a4f28] transition-colors text-sm"
@@ -171,6 +186,33 @@ export default function HomeV1Client() {
                 Get Free Cheat Sheet
               </Link>
             </div>
+            {/* Search Bar */}
+            <form
+              onSubmit={(e) => {
+                e.preventDefault()
+                if (searchQuery.trim()) {
+                  window.location.href = `/china-basics?q=${encodeURIComponent(searchQuery.trim())}`
+                }
+              }}
+              className="max-w-xl"
+            >
+              <div className="flex items-center bg-white/10 backdrop-blur border border-white/20 rounded-xl overflow-hidden">
+                <Search size={18} className="text-white/50 ml-4" />
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Search destinations, guides, tips..."
+                  className="flex-1 bg-transparent px-3 py-3 text-white placeholder:text-white/40 text-sm outline-none"
+                />
+                <button
+                  type="submit"
+                  className="px-4 py-3 bg-[#af5d32] text-white text-sm font-semibold hover:bg-[#9a4f28] transition-colors"
+                >
+                  Search
+                </button>
+              </div>
+            </form>
           </div>
         </div>
         {/* Scroll indicator */}
@@ -179,7 +221,22 @@ export default function HomeV1Client() {
         </div>
       </section>
 
-      {/* ===== 2. Trust Bar ===== */}
+      {/* ===== 2. Quick Answers ===== */}
+      <div className="bg-[#f5f1ea] border-b border-[#ebe4d8] py-4 overflow-x-auto scrollbar-hide">
+        <div className="max-w-6xl mx-auto px-4 flex gap-2 whitespace-nowrap">
+          {quickAnswers.map((qa) => (
+            <Link
+              key={qa.label}
+              href={qa.href}
+              className="px-4 py-2 rounded-full bg-white border border-[#ebe4d8] text-sm text-[#1a3a4a] font-medium hover:border-[#af5d32] hover:text-[#af5d32] transition-colors"
+            >
+              {qa.label}
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      {/* ===== 3. Trust Bar ===== */}
       <div className="bg-white border-b border-[#ebe4d8] py-6">
         <div className="max-w-5xl mx-auto px-4 flex flex-wrap justify-center items-center gap-x-6 gap-y-3">
           <div className="flex items-center gap-2">
@@ -201,7 +258,7 @@ export default function HomeV1Client() {
         </div>
       </div>
 
-      {/* ===== 3. Destinations — Featured + Grid ===== */}
+      {/* ===== 4. Destinations — Featured + Grid ===== */}
       <section className="py-12 md:py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#af5d32] mb-3">Destinations</p>
@@ -320,7 +377,7 @@ export default function HomeV1Client() {
         </div>
       </section>
 
-      {/* ===== 4. China Essentials — Icon Strip ===== */}
+      {/* ===== 5. China Essentials — Icon Strip ===== */}
       <section className="py-12 md:py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#af5d32] mb-3">Essentials</p>
@@ -332,13 +389,17 @@ export default function HomeV1Client() {
                 <Link
                   key={item.title}
                   href={item.href}
-                  className="group p-4 rounded-xl border border-[#ebe4d8] hover:border-[#af5d32] active:border-[#af5d32] transition-colors text-center"
+                  className="group p-4 rounded-xl border border-[#ebe4d8] hover:border-[#af5d32] active:border-[#af5d32] transition-colors text-center relative"
                 >
+                  {(item.title === 'VPN Setup' || item.title === 'Alipay & WeChat') && (
+                    <span className="absolute top-2 right-2 px-2 py-0.5 bg-[#af5d32] text-white text-[10px] font-bold rounded-full uppercase">Popular</span>
+                  )}
                   <div className="w-12 h-12 rounded-xl bg-[#f5f1ea] flex items-center justify-center mx-auto mb-3">
                     <Icon size={24} className="text-[#af5d32]" />
                   </div>
                   <h3 className="font-semibold text-[#1a3a4a] text-sm group-hover:text-[#af5d32]">{item.title}</h3>
                   <p className="text-xs text-[#64748b] mt-1">{item.description}</p>
+                  <ArrowRight size={14} className="text-[#af5d32] opacity-0 group-hover:opacity-100 transition-opacity mx-auto mt-2" />
                 </Link>
               )
             })}
@@ -346,7 +407,7 @@ export default function HomeV1Client() {
         </div>
       </section>
 
-      {/* ===== 5. How It Works — 3 Steps ===== */}
+      {/* ===== 6. How It Works — 3 Steps ===== */}
       <section className="py-12 md:py-16 bg-[#f5f1ea]">
         <div className="max-w-6xl mx-auto px-4">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#af5d32] mb-3">How It Works</p>
@@ -401,7 +462,7 @@ export default function HomeV1Client() {
         </div>
       </section>
 
-      {/* ===== 6. PDF Cheat Sheet ===== */}
+      {/* ===== 7. PDF Cheat Sheet ===== */}
       <section id="cheat-sheet" className="py-12 md:py-16 bg-gradient-to-b from-[#1a3a4a] to-[#0f2930]">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#af5d32] mb-3">Free Download</p>
@@ -413,7 +474,7 @@ export default function HomeV1Client() {
         </div>
       </section>
 
-      {/* ===== 7. FooterCTA ===== */}
+      {/* ===== 8. FooterCTA ===== */}
       <div className="bg-[#f5f1ea]">
         <div className="max-w-6xl mx-auto px-4">
           <FooterCTA
