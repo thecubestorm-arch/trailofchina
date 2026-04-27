@@ -231,16 +231,16 @@ export default function WhatAppsToUseV2Page() {
           </p>
         </div>
 
-        {/* ⚠️ VPN WARNING CALLOUT — #1 most critical action */}
-        <div className="mt-8 rounded-xl border-2 border-[#dc2626] bg-red-50 p-5 md:p-6">
+        {/* ⚠️ VPN WARNING CALLOUT */}
+        <div className="mt-8 rounded-xl border-2 border-[#92400e] bg-amber-50 p-5 md:p-6">
           <div className="flex items-start gap-3">
-            <span className="text-2xl flex-shrink-0">🚨</span>
+            <span className="text-2xl flex-shrink-0">⚠️</span>
             <div>
-              <h3 className="text-lg font-bold text-[#991b1b]">Before Anything Else: Install Your VPN</h3>
-              <p className="mt-1 text-sm leading-relaxed text-[#7f1d1d]">
+              <h3 className="text-lg font-bold text-[#92400e]">Before Anything Else: Install Your VPN</h3>
+              <p className="mt-1 text-sm leading-relaxed text-[#78350f]">
                 China blocks Google, WhatsApp, Instagram, YouTube, and most Western sites at the border. <strong>You cannot download a VPN once you&apos;re in China</strong> — VPN websites are blocked too. Install and <em>test</em> yours before departure.
               </p>
-              <Link href="/china-basics/what-apps-to-use/vpn" className="mt-3 inline-flex items-center gap-1.5 rounded-lg bg-[#dc2626] px-4 py-2 text-sm font-semibold text-white hover:bg-[#b91c1c] transition-colors">
+              <Link href="/china-basics/what-apps-to-use/vpn" className="mt-3 inline-flex items-center gap-1.5 rounded-lg bg-[#92400e] px-4 py-2 text-sm font-semibold text-white hover:bg-[#78350f] transition-colors">
                 🛡️ VPN Setup Guide — 5 min
               </Link>
             </div>
@@ -385,8 +385,8 @@ export default function WhatAppsToUseV2Page() {
                         {app.whyThisApp}
                       </p>
                       {app.isEssential && app.id !== 'vpn' && (
-                        <p className="mt-1.5 text-xs text-[#dc2626] font-medium">
-                          ⚠️ {app.id === 'alipay' ? 'Without this, you\u0026apos;re stuck with cash in a cashless country' : app.id === 'wechat' ? 'Hotels and locals often require WeChat for communication and check-in' : app.id === 'esim' ? 'Roaming costs $10-15/day — this saves you money immediately' : app.id === 'maps' ? 'Google Maps doesn\u0026apos;t work reliably in China' : app.id === 'translation' ? 'Menus, signs, directions — all in Chinese characters' : ''}
+                        <p className="mt-1.5 text-xs text-[#92400e] font-medium">
+                          💡 {app.id === 'alipay' ? 'Without this, you\u0026apos;re stuck with cash in a cashless country' : app.id === 'wechat' ? 'Hotels and locals often require WeChat for communication and check-in' : app.id === 'esim' ? 'Roaming costs $10-15/day — this saves you money immediately' : app.id === 'maps' ? 'Google Maps doesn\u0026apos;t work reliably in China' : app.id === 'translation' ? 'Menus, signs, directions — all in Chinese characters' : ''}
                         </p>
                       )}
                       <div className="mt-2.5 flex flex-wrap gap-1.5">
