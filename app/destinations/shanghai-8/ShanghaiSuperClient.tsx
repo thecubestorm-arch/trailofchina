@@ -974,6 +974,23 @@ export default function ShanghaiSuperClient() {
                 </span>
               ))}
             </div>
+            {/* Open Map Buttons */}
+            <div className="mt-2 flex gap-2">
+              <Link
+                href="/destinations/shanghai-map"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#1a3a4a] text-white text-sm font-semibold hover:bg-[#2d5a6a] transition-colors"
+              >
+                <Map size={16} />
+                Open Map
+              </Link>
+              <Link
+                href="/destinations/shanghai-map-gl"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#ebe4d8] text-[#1a3a4a] text-sm font-semibold hover:bg-[#f5f1ea] transition-colors"
+              >
+                <Map size={16} />
+                Map (WebGL)
+              </Link>
+            </div>
           </div>
         </div>
       </section>
