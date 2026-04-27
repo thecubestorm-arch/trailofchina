@@ -231,8 +231,24 @@ export default function WhatAppsToUseV2Page() {
           </p>
         </div>
 
+        {/* ⚠️ VPN WARNING CALLOUT — #1 most critical action */}
+        <div className="mt-8 rounded-xl border-2 border-[#dc2626] bg-red-50 p-5 md:p-6">
+          <div className="flex items-start gap-3">
+            <span className="text-2xl flex-shrink-0">🚨</span>
+            <div>
+              <h3 className="text-lg font-bold text-[#991b1b]">Before Anything Else: Install Your VPN</h3>
+              <p className="mt-1 text-sm leading-relaxed text-[#7f1d1d]">
+                China blocks Google, WhatsApp, Instagram, YouTube, and most Western sites at the border. <strong>You cannot download a VPN once you&apos;re in China</strong> — VPN websites are blocked too. Install and <em>test</em> yours before departure.
+              </p>
+              <Link href="/china-basics/what-apps-to-use/vpn" className="mt-3 inline-flex items-center gap-1.5 rounded-lg bg-[#dc2626] px-4 py-2 text-sm font-semibold text-white hover:bg-[#b91c1c] transition-colors">
+                🛡️ VPN Setup Guide — 5 min
+              </Link>
+            </div>
+          </div>
+        </div>
+
         {/* Quick Summary Box */}
-        <div className="mt-8 rounded-xl border border-[#ebe4d8] bg-[#f5f1ea] p-5 md:p-6">
+        <div className="mt-4 rounded-xl border border-[#ebe4d8] bg-[#f5f1ea] p-5 md:p-6">
           <div className="grid gap-4 sm:grid-cols-3">
             <div className="flex items-start gap-3">
               <span className="text-xl">📱</span>
@@ -259,7 +275,7 @@ export default function WhatAppsToUseV2Page() {
         </div>
 
         {/* Trust line */}
-        <div className="mt-4 flex items-center gap-2 text-sm text-[#64748b]">
+        <div className="mt-4 flex flex-wrap items-center gap-2 text-sm text-[#64748b]">
           <span className="inline-flex items-center gap-1 rounded-full bg-white border border-[#ebe4d8] px-3 py-1 text-xs font-medium text-[#1a3a4a]">
             ✍️ Written by travelers with 4+ China trips
           </span>
@@ -269,12 +285,32 @@ export default function WhatAppsToUseV2Page() {
           <span className="inline-flex items-center gap-1 rounded-full bg-white border border-[#ebe4d8] px-3 py-1 text-xs font-medium text-[#1a3a4a]">
             🏠 Family in Beijing & Shanghai
           </span>
+          <span className="inline-flex items-center gap-1 rounded-full bg-white border border-[#ebe4d8] px-3 py-1 text-xs font-medium text-[#1a3a4a]">
+            🔄 Updated April 2026
+          </span>
         </div>
+
+        {/* Table of Contents */}
+        <nav className="mt-6 rounded-xl border border-[#ebe4d8] bg-white p-5">
+          <h3 className="text-sm font-bold uppercase tracking-wider text-[#64748b] mb-3">In this guide</h3>
+          <div className="grid gap-2 sm:grid-cols-3">
+            {phases.map((phase, i) => (
+              <a
+                key={phase.id}
+                href={`#${phase.id}`}
+                className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-[#1a3a4a] hover:bg-[#f5f1ea] transition-colors"
+              >
+                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#1a3a4a] text-[10px] font-bold text-white">{i + 1}</span>
+                {phase.label}
+              </a>
+            ))}
+          </div>
+        </nav>
 
         {/* Phase sections */}
         <div className="mt-12 space-y-16">
           {phases.map((phase) => (
-            <section key={phase.id}>
+            <section key={phase.id} id={phase.id} className="scroll-mt-24">
               {/* Phase Header */}
               <div className="mb-6">
                 <div className="flex items-center gap-3 mb-2">
@@ -348,6 +384,11 @@ export default function WhatAppsToUseV2Page() {
                       <p className="mt-1.5 text-sm leading-relaxed text-[#64748b]">
                         {app.whyThisApp}
                       </p>
+                      {app.isEssential && app.id !== 'vpn' && (
+                        <p className="mt-1.5 text-xs text-[#dc2626] font-medium">
+                          ⚠️ {app.id === 'alipay' ? 'Without this, you\u0026apos;re stuck with cash in a cashless country' : app.id === 'wechat' ? 'Hotels and locals often require WeChat for communication and check-in' : app.id === 'esim' ? 'Roaming costs $10-15/day — this saves you money immediately' : app.id === 'maps' ? 'Google Maps doesn\u0026apos;t work reliably in China' : app.id === 'translation' ? 'Menus, signs, directions — all in Chinese characters' : ''}
+                        </p>
+                      )}
                       <div className="mt-2.5 flex flex-wrap gap-1.5">
                         {app.tags.map((tag) => (
                           <span
@@ -369,6 +410,90 @@ export default function WhatAppsToUseV2Page() {
               </div>
             </section>
           ))}
+        </div>
+
+        {/* What Happens If You Don't */}
+        <div className="mt-16 rounded-xl border-2 border-[#1a3a4a] bg-[#1a3a4a] p-5 md:p-8 text-white">
+          <h2 className="text-xl md:text-2xl font-bold mb-4">⚠️ What Happens If You Don't?</h2>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div className="rounded-lg bg-white/10 p-4">
+              <p className="font-bold text-white">No VPN?</p>
+              <p className="text-sm text-white/70 mt-1">Google, WhatsApp, Instagram, YouTube — ALL blocked. You can't search, navigate, or message home.</p>
+            </div>
+            <div className="rounded-lg bg-white/10 p-4">
+              <p className="font-bold text-white">No Alipay?</p>
+              <p className="text-sm text-white/70 mt-1">You're the person fumbling with cash while 50 people queue behind you. Some places simply don't accept cash.</p>
+            </div>
+            <div className="rounded-lg bg-white/10 p-4">
+              <p className="font-bold text-white">No eSIM?</p>
+              <p className="text-sm text-white/70 mt-1">Roaming costs $10-15/day. A $5 eSIM gives you data for your whole trip.</p>
+            </div>
+            <div className="rounded-lg bg-white/10 p-4">
+              <p className="font-bold text-white">No Translation?</p>
+              <p className="text-sm text-white/70 mt-1">Menus, signs, directions — all in Chinese. Pointing works, but a translation app saves hours of confusion.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* FAQ Section */}
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold text-[#1a3a4a] mb-6">Frequently Asked Questions</h2>
+          <div className="space-y-3">
+            <details className="group rounded-xl border border-[#ebe4d8] bg-white">
+              <summary className="flex cursor-pointer items-center justify-between p-4 font-semibold text-[#1a3a4a] hover:bg-[#f5f1ea] rounded-xl transition-colors">
+                Can I use my foreign credit card with Alipay?
+                <span className="text-[#af5d32] group-open:rotate-180 transition-transform">▼</span>
+              </summary>
+              <div className="px-4 pb-4 text-sm leading-relaxed text-[#64748b]">
+                Yes! Alipay now supports international cards through its "Tour Pass" feature. You'll need to verify your identity (passport photo + selfie) during setup. We recommend doing this <strong>before departure</strong> because the verification process requires a stable connection.
+              </div>
+            </details>
+            <details className="group rounded-xl border border-[#ebe4d8] bg-white">
+              <summary className="flex cursor-pointer items-center justify-between p-4 font-semibold text-[#1a3a4a] hover:bg-[#f5f1ea] rounded-xl transition-colors">
+                Does WeChat Pay work with non-Chinese phones?
+                <span className="text-[#af5d32] group-open:rotate-180 transition-transform">▼</span>
+              </summary>
+              <div className="px-4 pb-4 text-sm leading-relaxed text-[#64748b]">
+                Yes, WeChat supports international phone numbers and foreign cards. The setup is similar to Alipay — passport verification required. Pro tip: WeChat is also your messaging app, so you need it regardless.
+              </div>
+            </details>
+            <details className="group rounded-xl border border-[#ebe4d8] bg-white">
+              <summary className="flex cursor-pointer items-center justify-between p-4 font-semibold text-[#1a3a4a] hover:bg-[#f5f1ea] rounded-xl transition-colors">
+                Do I need both Alipay AND WeChat Pay?
+                <span className="text-[#af5d32] group-open:rotate-180 transition-transform">▼</span>
+              </summary>
+              <div className="px-4 pb-4 text-sm leading-relaxed text-[#64748b]">
+                Strongly recommended. Some merchants only accept one or the other. Street vendors often prefer WeChat, while larger stores lean Alipay. Having both means you're never stuck.
+              </div>
+            </details>
+            <details className="group rounded-xl border border-[#ebe4d8] bg-white">
+              <summary className="flex cursor-pointer items-center justify-between p-4 font-semibold text-[#1a3a4a] hover:bg-[#f5f1ea] rounded-xl transition-colors">
+                Which VPN actually works in China?
+                <span className="text-[#af5d32] group-open:rotate-180 transition-transform">▼</span>
+              </summary>
+              <div className="px-4 pb-4 text-sm leading-relaxed text-[#64748b]">
+                VPN performance changes frequently as China updates its firewall. As of 2026, the most reliable options include Astrill, ExpressVPN, and NordVPN. <strong>Always install and test your VPN before departure</strong> — you can't download one once in China. See our <a href="/china-basics/what-apps-to-use/vpn" className="text-[#af5d32] underline">full VPN guide</a>.
+              </div>
+            </details>
+            <details className="group rounded-xl border border-[#ebe4d8] bg-white">
+              <summary className="flex cursor-pointer items-center justify-between p-4 font-semibold text-[#1a3a4a] hover:bg-[#f5f1ea] rounded-xl transition-colors">
+                Can I just use cash instead of mobile payments?
+                <span className="text-[#af5d32] group-open:rotate-180 transition-transform">▼</span>
+              </summary>
+              <div className="px-4 pb-4 text-sm leading-relaxed text-[#64748b]">
+                Technically yes, but it's increasingly difficult. Many small restaurants, street vendors, and even some hotels are cashless. You'll also need exact change — vendors often can't break large bills. Mobile payment is simply how China works now.
+              </div>
+            </details>
+            <details className="group rounded-xl border border-[#ebe4d8] bg-white">
+              <summary className="flex cursor-pointer items-center justify-between p-4 font-semibold text-[#1a3a4a] hover:bg-[#f5f1ea] rounded-xl transition-colors">
+                What about Apple Maps vs Google Maps vs Baidu Maps?
+                <span className="text-[#af5d32] group-open:rotate-180 transition-transform">▼</span>
+              </summary>
+              <div className="px-4 pb-4 text-sm leading-relaxed text-[#64748b]">
+                <strong>Apple Maps</strong> works without VPN in China and is your best bet for iPhone users. <strong>Google Maps</strong> requires VPN and has inaccuracies. <strong>Baidu Maps</strong> is most accurate but Chinese-only. Our recommendation: Apple Maps for quick navigation, download offline Google Maps as backup.
+              </div>
+            </details>
+          </div>
         </div>
 
         {/* Related articles */}
