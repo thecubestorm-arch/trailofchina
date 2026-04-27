@@ -15,6 +15,7 @@ import {
   ArrowRight,
   Search,
   X,
+  SlidersHorizontal,
 } from "lucide-react";
 
 import FooterCTA from "@/components/FooterCTA";
@@ -533,14 +534,14 @@ export default function ChinaBasicsClient() {
           </div>
         </div>
 
-        {/* Search + Filter Bar */}
+        {/* Filter Bar */}
         <div className="border-t border-[#ebe4d8]">
           <div className="max-w-6xl mx-auto px-4 py-3">
             <div className="flex items-center gap-3 mb-3">
-              <Search className="text-[#64748b] flex-shrink-0" size={20} />
+              <SlidersHorizontal className="text-[#64748b] flex-shrink-0" size={20} />
               <input
                 type="text"
-                placeholder="Search China basics..."
+                placeholder="Filter topics..."
                 className="flex-1 text-sm text-[#1a3a4a] placeholder:text-[#64748b]/60 outline-none bg-transparent min-h-[44px]"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
@@ -582,7 +583,7 @@ export default function ChinaBasicsClient() {
             </div>
             {filteredItems.length === 0 ? (
               <div className="text-center py-16">
-                <Search className="mx-auto text-[#64748b] mb-4" size={48} />
+                <SlidersHorizontal className="mx-auto text-[#64748b] mb-4" size={48} />
                 <p className="text-[#1a3a4a] font-semibold mb-1">
                   No matches found
                 </p>

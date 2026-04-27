@@ -3,6 +3,7 @@
 import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import {
   Wifi,
   CreditCard,
@@ -16,9 +17,11 @@ import {
   Calendar,
   Moon,
   Map,
+  List,
   ArrowRight,
   Search,
   X,
+  SlidersHorizontal,
   Sunrise,
   Sun,
   Sunset,
@@ -28,6 +31,11 @@ import {
   ChevronUp,
 } from "lucide-react";
 import FooterCTA from "@/components/FooterCTA";
+
+const MapViewSection = dynamic(
+  () => import("./MapViewSection"),
+  { ssr: false }
+);
 
 // ─── Types ────────────────────────────────────────────────────────
 
@@ -62,6 +70,8 @@ interface FilterableItem {
   type: "attraction" | "food" | "stay" | "info" | "tip";
   icon?: React.ElementType;
   filters: FilterTag[];
+  lat?: number;
+  lng?: number;
 }
 
 interface ItineraryStop {
@@ -119,6 +129,8 @@ const attractions = [
     tag: "Free",
     imageSeed: "shanghai-bund",
     href: "/destinations/shanghai/what-to-do/bund",
+    lat: 31.24,
+    lng: 121.49,
   },
   {
     name: "Yu Garden",
@@ -126,6 +138,8 @@ const attractions = [
     tag: "¥40",
     imageSeed: "shanghai-yugarden",
     href: "/destinations/shanghai/what-to-do/yu-garden",
+    lat: 31.227,
+    lng: 121.492,
   },
   {
     name: "French Concession",
@@ -133,6 +147,8 @@ const attractions = [
     tag: "Free",
     imageSeed: "shanghai-frenchconcession",
     href: "/destinations/shanghai/what-to-do/french-concession",
+    lat: 31.21,
+    lng: 121.46,
   },
   {
     name: "Shanghai Tower",
@@ -140,6 +156,8 @@ const attractions = [
     tag: "¥180",
     imageSeed: "shanghai-tower",
     href: "/destinations/shanghai/what-to-do/shanghai-tower",
+    lat: 31.2355,
+    lng: 121.5015,
   },
   {
     name: "Tianzifang",
@@ -147,6 +165,8 @@ const attractions = [
     tag: "Free",
     imageSeed: "shanghai-tianzifang",
     href: "/destinations/shanghai/what-to-do",
+    lat: 31.203,
+    lng: 121.468,
   },
   {
     name: "Jade Buddha Temple",
@@ -154,6 +174,8 @@ const attractions = [
     tag: "¥20",
     imageSeed: "shanghai-jadebuddha",
     href: "/destinations/shanghai/what-to-do",
+    lat: 31.223,
+    lng: 121.442,
   },
 ];
 
@@ -164,6 +186,8 @@ const foodCards = [
     tag: "Street Food · ¥30",
     imageSeed: "xiaolongbao",
     href: "/destinations/shanghai/where-to-eat/xiaolongbao",
+    lat: 31.225,
+    lng: 121.475,
   },
   {
     name: "Shengjianbao",
@@ -171,6 +195,8 @@ const foodCards = [
     tag: "Street Food · ¥15",
     imageSeed: "shengjianbao",
     href: "/destinations/shanghai/where-to-eat/shengjianbao",
+    lat: 31.238,
+    lng: 121.488,
   },
   {
     name: "Hairy Crab",
@@ -178,6 +204,8 @@ const foodCards = [
     tag: "Seasonal · ¥200+",
     imageSeed: "hairy-crab",
     href: "/destinations/shanghai/where-to-eat/hairy-crab",
+    lat: 31.215,
+    lng: 121.49,
   },
   {
     name: "Scallion Oil Noodles",
@@ -185,6 +213,8 @@ const foodCards = [
     tag: "Restaurant · ¥25–40",
     imageSeed: "scallion-noodles",
     href: "/destinations/shanghai/where-to-eat/scallion-oil-noodles",
+    lat: 31.232,
+    lng: 121.455,
   },
 ];
 
@@ -195,6 +225,8 @@ const neighborhoods = [
     desc: "Perfect for first-timers who want postcard views and easy river access.",
     imageSeed: "shanghai-bund-area",
     href: "/destinations/shanghai/where-to-stay/bund-area",
+    lat: 31.245,
+    lng: 121.492,
   },
   {
     name: "French Concession",
@@ -202,6 +234,8 @@ const neighborhoods = [
     desc: "The most walkable neighborhood with strong metro links and charm.",
     imageSeed: "shanghai-french-concession-stay",
     href: "/destinations/shanghai/where-to-stay/french-concession",
+    lat: 31.208,
+    lng: 121.458,
   },
   {
     name: "Jing'an",
@@ -209,6 +243,8 @@ const neighborhoods = [
     desc: "A central, down-to-earth base with top transport connections.",
     imageSeed: "shanghai-jingan",
     href: "/destinations/shanghai/where-to-stay/jingan",
+    lat: 31.234,
+    lng: 121.446,
   },
   {
     name: "Xintiandi",
@@ -216,6 +252,8 @@ const neighborhoods = [
     desc: "Sleek dining, high-end hotels, and a polished night-out scene.",
     imageSeed: "shanghai-xintiandi",
     href: "/destinations/shanghai/where-to-stay/xintiandi",
+    lat: 31.219,
+    lng: 121.475,
   },
 ];
 
@@ -283,22 +321,22 @@ const localTips = [
 
 const allItems: FilterableItem[] = [
   // Attractions
-  { name: "The Bund", subtitle: "Shanghai's most iconic waterfront promenade with skyline views.", tag: "Free", imageSeed: "shanghai-bund", href: "/destinations/shanghai/what-to-do/bund", type: "attraction", filters: ["free", "historic", "modern", "nightlife", "landmark"] },
-  { name: "Yu Garden", subtitle: "A 400-year-old classical garden surrounded by a lively bazaar.", tag: "¥40", imageSeed: "shanghai-yugarden", href: "/destinations/shanghai/what-to-do/yu-garden", type: "attraction", filters: ["budget", "historic", "family", "landmark"] },
-  { name: "French Concession", subtitle: "Tree-lined avenues, Art Deco villas, and charming cafés.", tag: "Free", imageSeed: "shanghai-frenchconcession", href: "/destinations/shanghai/what-to-do/french-concession", type: "attraction", filters: ["free", "local", "historic", "landmark"] },
-  { name: "Shanghai Tower", subtitle: "The world's second-tallest building with a jaw-dropping observation deck.", tag: "¥180", imageSeed: "shanghai-tower", href: "/destinations/shanghai/what-to-do/shanghai-tower", type: "attraction", filters: ["premium", "modern", "landmark"] },
-  { name: "Tianzifang", subtitle: "Winding alleyways packed with studios, galleries, and craft shops.", tag: "Free", imageSeed: "shanghai-tianzifang", href: "/destinations/shanghai/what-to-do", type: "attraction", filters: ["free", "local", "historic"] },
-  { name: "Jade Buddha Temple", subtitle: "Serene Buddhist temple housing two stunning white jade Buddhas.", tag: "¥20", imageSeed: "shanghai-jadebuddha", href: "/destinations/shanghai/what-to-do", type: "attraction", filters: ["budget", "historic", "landmark"] },
+  { name: "The Bund", subtitle: "Shanghai's most iconic waterfront promenade with skyline views.", tag: "Free", imageSeed: "shanghai-bund", href: "/destinations/shanghai/what-to-do/bund", type: "attraction", filters: ["free", "historic", "modern", "nightlife", "landmark"], lat: 31.24, lng: 121.49 },
+  { name: "Yu Garden", subtitle: "A 400-year-old classical garden surrounded by a lively bazaar.", tag: "¥40", imageSeed: "shanghai-yugarden", href: "/destinations/shanghai/what-to-do/yu-garden", type: "attraction", filters: ["budget", "historic", "family", "landmark"], lat: 31.227, lng: 121.492 },
+  { name: "French Concession", subtitle: "Tree-lined avenues, Art Deco villas, and charming cafés.", tag: "Free", imageSeed: "shanghai-frenchconcession", href: "/destinations/shanghai/what-to-do/french-concession", type: "attraction", filters: ["free", "local", "historic", "landmark"], lat: 31.21, lng: 121.46 },
+  { name: "Shanghai Tower", subtitle: "The world's second-tallest building with a jaw-dropping observation deck.", tag: "¥180", imageSeed: "shanghai-tower", href: "/destinations/shanghai/what-to-do/shanghai-tower", type: "attraction", filters: ["premium", "modern", "landmark"], lat: 31.2355, lng: 121.5015 },
+  { name: "Tianzifang", subtitle: "Winding alleyways packed with studios, galleries, and craft shops.", tag: "Free", imageSeed: "shanghai-tianzifang", href: "/destinations/shanghai/what-to-do", type: "attraction", filters: ["free", "local", "historic"], lat: 31.203, lng: 121.468 },
+  { name: "Jade Buddha Temple", subtitle: "Serene Buddhist temple housing two stunning white jade Buddhas.", tag: "¥20", imageSeed: "shanghai-jadebuddha", href: "/destinations/shanghai/what-to-do", type: "attraction", filters: ["budget", "historic", "landmark"], lat: 31.223, lng: 121.442 },
   // Food
-  { name: "Xiaolongbao", subtitle: "Shanghai's iconic soup dumplings", tag: "Street Food · ¥30", imageSeed: "xiaolongbao", href: "/destinations/shanghai/where-to-eat/xiaolongbao", type: "food", filters: ["budget", "local", "food"] },
-  { name: "Shengjianbao", subtitle: "Pan-fried buns with a crispy bottom", tag: "Street Food · ¥15", imageSeed: "shengjianbao", href: "/destinations/shanghai/where-to-eat/shengjianbao", type: "food", filters: ["budget", "local", "food"] },
-  { name: "Hairy Crab", subtitle: "Autumn delicacy from nearby Yangcheng Lake", tag: "Seasonal · ¥200+", imageSeed: "hairy-crab", href: "/destinations/shanghai/where-to-eat/hairy-crab", type: "food", filters: ["premium", "food"] },
-  { name: "Scallion Oil Noodles", subtitle: "Simple, fragrant, and deeply comforting", tag: "Restaurant · ¥25–40", imageSeed: "scallion-noodles", href: "/destinations/shanghai/where-to-eat/scallion-oil-noodles", type: "food", filters: ["budget", "local", "food"] },
+  { name: "Xiaolongbao", subtitle: "Shanghai's iconic soup dumplings", tag: "Street Food · ¥30", imageSeed: "xiaolongbao", href: "/destinations/shanghai/where-to-eat/xiaolongbao", type: "food", filters: ["budget", "local", "food"], lat: 31.225, lng: 121.475 },
+  { name: "Shengjianbao", subtitle: "Pan-fried buns with a crispy bottom", tag: "Street Food · ¥15", imageSeed: "shengjianbao", href: "/destinations/shanghai/where-to-eat/shengjianbao", type: "food", filters: ["budget", "local", "food"], lat: 31.238, lng: 121.488 },
+  { name: "Hairy Crab", subtitle: "Autumn delicacy from nearby Yangcheng Lake", tag: "Seasonal · ¥200+", imageSeed: "hairy-crab", href: "/destinations/shanghai/where-to-eat/hairy-crab", type: "food", filters: ["premium", "food"], lat: 31.215, lng: 121.49 },
+  { name: "Scallion Oil Noodles", subtitle: "Simple, fragrant, and deeply comforting", tag: "Restaurant · ¥25–40", imageSeed: "scallion-noodles", href: "/destinations/shanghai/where-to-eat/scallion-oil-noodles", type: "food", filters: ["budget", "local", "food"], lat: 31.232, lng: 121.455 },
   // Stay
-  { name: "Bund Area", subtitle: "Iconic skyline · Historic architecture · Perfect for first-timers", imageSeed: "shanghai-bund-area", href: "/destinations/shanghai/where-to-stay/bund-area", type: "stay", filters: ["midrange", "historic", "nightlife", "stay"] },
-  { name: "French Concession", subtitle: "Cafés & boutiques · Tree-lined streets · Most walkable", imageSeed: "shanghai-french-concession-stay", href: "/destinations/shanghai/where-to-stay/french-concession", type: "stay", filters: ["midrange", "local", "historic", "stay"] },
-  { name: "Jing'an", subtitle: "Local life · Metro hub · Central base", imageSeed: "shanghai-jingan", href: "/destinations/shanghai/where-to-stay/jingan", type: "stay", filters: ["budget", "local", "stay"] },
-  { name: "Xintiandi", subtitle: "Modern luxury · Nightlife · Sleek dining", imageSeed: "shanghai-xintiandi", href: "/destinations/shanghai/where-to-stay/xintiandi", type: "stay", filters: ["premium", "modern", "nightlife", "stay"] },
+  { name: "Bund Area", subtitle: "Iconic skyline · Historic architecture · Perfect for first-timers", imageSeed: "shanghai-bund-area", href: "/destinations/shanghai/where-to-stay/bund-area", type: "stay", filters: ["midrange", "historic", "nightlife", "stay"], lat: 31.245, lng: 121.492 },
+  { name: "French Concession", subtitle: "Cafés & boutiques · Tree-lined streets · Most walkable", imageSeed: "shanghai-french-concession-stay", href: "/destinations/shanghai/where-to-stay/french-concession", type: "stay", filters: ["midrange", "local", "historic", "stay"], lat: 31.208, lng: 121.458 },
+  { name: "Jing'an", subtitle: "Local life · Metro hub · Central base", imageSeed: "shanghai-jingan", href: "/destinations/shanghai/where-to-stay/jingan", type: "stay", filters: ["budget", "local", "stay"], lat: 31.234, lng: 121.446 },
+  { name: "Xintiandi", subtitle: "Modern luxury · Nightlife · Sleek dining", imageSeed: "shanghai-xintiandi", href: "/destinations/shanghai/where-to-stay/xintiandi", type: "stay", filters: ["premium", "modern", "nightlife", "stay"], lat: 31.219, lng: 121.475 },
   // Info
   { name: "Internet", subtitle: "VPNs required. Download before landing.", imageSeed: "", href: "/china-basics/how-to-get-internet", type: "info", icon: Wifi, filters: ["practical"] },
   { name: "Payment", subtitle: "Alipay & WeChat Pay dominate. Cash rarely needed.", imageSeed: "", href: "/china-basics/what-apps-to-use/payment", type: "info", icon: CreditCard, filters: ["practical"] },
@@ -874,6 +912,7 @@ function LocalTipsSection() {
 
 export default function ShanghaiSuperClient() {
   const [activeTab, setActiveTab] = useState<Tab>("overview");
+  const [isMapView, setIsMapView] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [activeFilters, setActiveFilters] = useState<FilterTag[]>([]);
   const isFiltering = searchQuery.length > 0 || activeFilters.length > 0;
@@ -974,23 +1013,6 @@ export default function ShanghaiSuperClient() {
                 </span>
               ))}
             </div>
-            {/* Open Map Buttons */}
-            <div className="mt-2 flex gap-2">
-              <Link
-                href="/destinations/shanghai-map"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#1a3a4a] text-white text-sm font-semibold hover:bg-[#2d5a6a] transition-colors"
-              >
-                <Map size={16} />
-                Open Map
-              </Link>
-              <Link
-                href="/destinations/shanghai-map-gl"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#ebe4d8] text-[#1a3a4a] text-sm font-semibold hover:bg-[#f5f1ea] transition-colors"
-              >
-                <Map size={16} />
-                Map (WebGL)
-              </Link>
-            </div>
           </div>
         </div>
       </section>
@@ -999,38 +1021,58 @@ export default function ShanghaiSuperClient() {
       <div className="sticky top-0 z-[40] bg-white border-b border-[#ebe4d8] shadow-sm">
         {/* Tab Nav */}
         <div className="max-w-6xl mx-auto px-4">
-          <div className="flex overflow-x-auto scrollbar-hide">
-            {tabs.map((tab) => {
-              const isActive = activeTab === tab.id;
-              return (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`
-                    px-3 md:px-4 py-2 text-sm whitespace-nowrap min-h-[44px] flex items-center transition-colors cursor-pointer
-                    ${
-                      isActive
-                        ? "text-[#1a3a4a] font-semibold bg-[#f5f1ea]/50 rounded-t-lg border-b-[3px] border-[#af5d32]"
-                        : "text-[#64748b] font-medium hover:text-[#1a3a4a] border-b-[3px] border-transparent"
-                    }
-                  `}
-                >
-                  <span className="hidden md:inline">{tab.label}</span>
-                  <span className="md:hidden">{tab.mobileLabel}</span>
-                </button>
-              );
-            })}
+          <div className="flex items-center overflow-x-auto scrollbar-hide">
+            <div className="flex flex-1 overflow-x-auto scrollbar-hide">
+              {tabs.map((tab) => {
+                const isActive = !isMapView && activeTab === tab.id;
+                return (
+                  <button
+                    key={tab.id}
+                    onClick={() => {
+                      setIsMapView(false);
+                      setActiveTab(tab.id);
+                    }}
+                    className={`
+                      px-3 md:px-4 py-2 text-sm whitespace-nowrap min-h-[44px] flex items-center transition-colors cursor-pointer
+                      ${
+                        isActive
+                          ? "text-[#1a3a4a] font-semibold bg-[#f5f1ea]/50 rounded-t-lg border-b-[3px] border-[#af5d32]"
+                          : "text-[#64748b] font-medium hover:text-[#1a3a4a] border-b-[3px] border-transparent"
+                      }
+                    `}
+                  >
+                    <span className="hidden md:inline">{tab.label}</span>
+                    <span className="md:hidden">{tab.mobileLabel}</span>
+                  </button>
+                );
+              })}
+            </div>
+            {/* Map View Toggle */}
+            <button
+              onClick={() => setIsMapView((v) => !v)}
+              className={`ml-2 flex-shrink-0 flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-semibold transition-colors ${
+                isMapView
+                  ? "bg-[#1a3a4a] text-white"
+                  : "bg-[#f5f1ea] text-[#1a3a4a] hover:bg-[#ebe4d8]"
+              }`}
+            >
+              {isMapView ? <List size={16} /> : <Map size={16} />}
+              <span className="hidden md:inline">
+                {isMapView ? "List View" : "Map View"}
+              </span>
+              <span className="md:hidden">{isMapView ? "List" : "Map"}</span>
+            </button>
           </div>
         </div>
 
-        {/* Search + Filter Bar */}
+        {/* Filter Bar */}
         <div className="border-t border-[#ebe4d8]">
           <div className="max-w-6xl mx-auto px-4 py-3">
             <div className="flex items-center gap-3 mb-3">
-              <Search className="text-[#64748b] flex-shrink-0" size={20} />
+              <SlidersHorizontal className="text-[#64748b] flex-shrink-0" size={20} />
               <input
                 type="text"
-                placeholder='Search Shanghai... (e.g. "bund", "dumplings", "free")'
+                placeholder='Filter Shanghai... (e.g. "bund", "dumplings", "free")'
                 className="flex-1 text-sm text-[#1a3a4a] placeholder:text-[#64748b]/60 outline-none bg-transparent"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
@@ -1072,14 +1114,24 @@ export default function ShanghaiSuperClient() {
 
       {/* ========== MAIN CONTENT ========== */}
       <main className="max-w-6xl mx-auto px-4 py-8 md:py-12">
-        {isFiltering && (
+        {isMapView && (
+          <div className="space-y-4">
+            <MapViewSection
+              allItems={allItems}
+              searchQuery={searchQuery}
+              activeFilters={activeFilters}
+            />
+          </div>
+        )}
+
+        {!isMapView && isFiltering && (
           <>
             <div className="mb-6 text-sm text-[#64748b]">
               Showing {filteredItems.length} of {allItems.length} items
             </div>
             {filteredItems.length === 0 ? (
               <div className="text-center py-16">
-                <Search className="mx-auto text-[#64748b] mb-4" size={48} />
+                <SlidersHorizontal className="mx-auto text-[#64748b] mb-4" size={48} />
                 <p className="text-[#1a3a4a] font-semibold mb-1">
                   No matches found
                 </p>
@@ -1121,7 +1173,7 @@ export default function ShanghaiSuperClient() {
           </>
         )}
 
-        {!isFiltering && activeTab === "overview" && (
+        {!isMapView && !isFiltering && activeTab === "overview" && (
           <div className="space-y-8 md:space-y-10">
             {/* Things to Do - horizontal scroll */}
             <div className="relative">
@@ -1190,7 +1242,7 @@ export default function ShanghaiSuperClient() {
           </div>
         )}
 
-        {!isFiltering && activeTab === "things-to-do" && (
+        {!isMapView && !isFiltering && activeTab === "things-to-do" && (
           <div className="space-y-8 md:space-y-10">
             <ThingsToDoSection expanded />
             <FooterCTA
@@ -1206,7 +1258,7 @@ export default function ShanghaiSuperClient() {
           </div>
         )}
 
-        {!isFiltering && activeTab === "where-to-eat" && (
+        {!isMapView && !isFiltering && activeTab === "where-to-eat" && (
           <div className="space-y-8 md:space-y-10">
             <WhereToEatSection />
             <FooterCTA
@@ -1222,7 +1274,7 @@ export default function ShanghaiSuperClient() {
           </div>
         )}
 
-        {!isFiltering && activeTab === "where-to-stay" && (
+        {!isMapView && !isFiltering && activeTab === "where-to-stay" && (
           <div className="space-y-8 md:space-y-10">
             <WhereToStaySection />
             <FooterCTA
@@ -1238,7 +1290,7 @@ export default function ShanghaiSuperClient() {
           </div>
         )}
 
-        {!isFiltering && activeTab === "essentials" && (
+        {!isMapView && !isFiltering && activeTab === "essentials" && (
           <div className="space-y-8 md:space-y-10">
             <KnowBeforeYouGoSection expanded />
             <LocalTipsSection />

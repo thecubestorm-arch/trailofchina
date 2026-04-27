@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { Search } from 'lucide-react'
+import { useSearch } from '@/components/SearchProvider'
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -13,6 +15,7 @@ const navLinks = [
 
 export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const { openSearch } = useSearch()
 
   // Lock body scroll when menu is open
   useEffect(() => {
@@ -59,47 +62,70 @@ export default function Navigation() {
               )}
             </Link>
           ))}
+
+          {/* Search Trigger */}
+          <button
+            type="button"
+            onClick={openSearch}
+            aria-label="Search"
+            className="flex items-center gap-2 rounded-full border border-[var(--line)] bg-white/50 px-3 py-2 text-sm text-[var(--muted)] hover:bg-[var(--surface-strong)] hover:text-[var(--foreground)] transition-colors"
+          >
+            <Search size={16} />
+            <span className="text-xs text-[#64748b]">⌘K</span>
+          </button>
         </nav>
 
-        {/* Mobile Hamburger Button */}
-        <button
-          type="button"
-          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-          aria-expanded={menuOpen}
-          onClick={() => setMenuOpen((prev) => !prev)}
-          className="relative z-[100] flex h-11 w-11 items-center justify-center rounded-full md:hidden"
-        >
-          {menuOpen ? (
-            /* X Close Icon */
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#af5d32"
-              strokeWidth="2"
-              strokeLinecap="round"
-            >
-              <line x1="4" y1="4" x2="20" y2="20" />
-              <line x1="20" y1="4" x2="4" y2="20" />
-            </svg>
-          ) : (
-            /* Hamburger Icon */
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#af5d32"
-              strokeWidth="2"
-              strokeLinecap="round"
-            >
-              <line x1="3" y1="6" x2="21" y2="6" />
-              <line x1="3" y1="12" x2="21" y2="12" />
-              <line x1="3" y1="18" x2="21" y2="18" />
-            </svg>
-          )}
-        </button>
+        {/* Mobile: Search + Hamburger */}
+        <div className="flex items-center gap-1 md:hidden">
+          <button
+            type="button"
+            onClick={openSearch}
+            aria-label="Search"
+            className="flex h-11 w-11 items-center justify-center rounded-full"
+          >
+            <Search size={20} className="text-[#af5d32]" />
+          </button>
+
+          {/* Mobile Hamburger Button */}
+          <button
+            type="button"
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen((prev) => !prev)}
+            className="relative z-[100] flex h-11 w-11 items-center justify-center rounded-full md:hidden"
+          >
+            {menuOpen ? (
+              /* X Close Icon */
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#af5d32"
+                strokeWidth="2"
+                strokeLinecap="round"
+              >
+                <line x1="4" y1="4" x2="20" y2="20" />
+                <line x1="20" y1="4" x2="4" y2="20" />
+              </svg>
+            ) : (
+              /* Hamburger Icon */
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#af5d32"
+                strokeWidth="2"
+                strokeLinecap="round"
+              >
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="18" x2="21" y2="18" />
+              </svg>
+            )}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Overlay */}

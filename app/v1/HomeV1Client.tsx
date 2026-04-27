@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, ChevronDown, Search, Wifi, Shield, Smartphone, FileText, Briefcase, Home } from 'lucide-react'
+import { ArrowRight, ChevronDown, Wifi, Shield, Smartphone, FileText, Briefcase, Home } from 'lucide-react'
 import ChecklistDownload from '@/components/ChecklistDownload'
 import FooterCTA from '@/components/FooterCTA'
 import { useState } from 'react'
@@ -128,7 +128,6 @@ const quickAnswers = [
 ]
 
 export default function HomeV1Client() {
-  const [searchQuery, setSearchQuery] = useState('')
   const orgLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -186,33 +185,6 @@ export default function HomeV1Client() {
                 Get Free Cheat Sheet
               </Link>
             </div>
-            {/* Search Bar */}
-            <form
-              onSubmit={(e) => {
-                e.preventDefault()
-                if (searchQuery.trim()) {
-                  window.location.href = `/china-basics?q=${encodeURIComponent(searchQuery.trim())}`
-                }
-              }}
-              className="max-w-xl"
-            >
-              <div className="flex items-center bg-white/10 backdrop-blur border border-white/20 rounded-xl overflow-hidden">
-                <Search size={18} className="text-white/50 ml-4" />
-                <input
-                  type="text"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Search destinations, guides, tips..."
-                  className="flex-1 bg-transparent px-3 py-3 text-white placeholder:text-white/40 text-sm outline-none"
-                />
-                <button
-                  type="submit"
-                  className="px-4 py-3 bg-[#af5d32] text-white text-sm font-semibold hover:bg-[#9a4f28] transition-colors"
-                >
-                  Search
-                </button>
-              </div>
-            </form>
           </div>
         </div>
         {/* Scroll indicator */}

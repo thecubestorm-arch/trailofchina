@@ -6,6 +6,7 @@ import Image from "next/image";
 import {
   Search, X, Wifi, CreditCard, TrainFront, Smartphone,
   ShieldCheck, Thermometer, CloudRain, Car, Moon, Map, ArrowRight,
+  SlidersHorizontal,
 } from "lucide-react";
 
 // ─── Data ─────────────────────────────────────────────────────────
@@ -202,8 +203,8 @@ export default function ShanghaiFilterClient() {
       <div className="sticky top-0 z-[40] bg-white border-b border-[#ebe4d8] shadow-sm">
         <div className="max-w-6xl mx-auto px-4 py-3">
           <div className="flex items-center gap-3 mb-3">
-            <Search className="text-[#64748b] flex-shrink-0" size={20} />
-            <input type="text" placeholder='Search Shanghai... (e.g. "bund", "dumplings", "free")' className="flex-1 text-sm text-[#1a3a4a] placeholder:text-[#64748b]/60 outline-none bg-transparent" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
+            <SlidersHorizontal className="text-[#64748b] flex-shrink-0" size={20} />
+            <input type="text" placeholder='Filter Shanghai... (e.g. "bund", "dumplings", "free")' className="flex-1 text-sm text-[#1a3a4a] placeholder:text-[#64748b]/60 outline-none bg-transparent" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
             {isFiltering && (
               <button onClick={clearFilters} className="flex items-center gap-1 text-xs font-medium text-[#af5d32] hover:underline">
                 <X size={14} /> Clear
@@ -235,7 +236,7 @@ export default function ShanghaiFilterClient() {
 
         {filteredItems.length === 0 ? (
           <div className="text-center py-16">
-            <Search className="mx-auto text-[#64748b] mb-4" size={48} />
+            <SlidersHorizontal className="mx-auto text-[#64748b] mb-4" size={48} />
             <p className="text-[#1a3a4a] font-semibold mb-1">No matches found</p>
             <p className="text-sm text-[#64748b]">Try removing a filter or searching for something else</p>
             <button onClick={clearFilters} className="mt-3 text-sm text-[#af5d32] font-medium hover:underline">Clear all filters</button>
