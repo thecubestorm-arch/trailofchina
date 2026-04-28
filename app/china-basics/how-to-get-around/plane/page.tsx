@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
-import Breadcrumb from '@/components/Breadcrumb'
-import RelatedArticles from '@/components/RelatedArticles'
+import GuideArticlePage from '@/components/GuideArticlePage';
 
 export const metadata: Metadata = {
   title: 'Domestic Flights in China | Trail of China',
@@ -10,75 +9,87 @@ export const metadata: Metadata = {
 
 export default function PlanePage() {
   return (
-    <div className="min-h-screen bg-white">
-      <main className="max-w-6xl mx-auto px-4 py-12">
-        <div className="mb-6">
-          <Breadcrumb items={[{label:'Home',href:'/'},{label:'China Basics',href:'/china-basics'},{label:'How to Get Around',href:'/china-basics/how-to-get-around'},{label:'Plane'}]} />
-        </div>
-        <h1 className="text-4xl font-bold mb-6 text-[#1a3a4a]">Domestic Flights</h1>
-        
-        <section className="mb-8">
-          <p className="text-lg text-gray-700 leading-relaxed">
-            For long distances or remote destinations like Tibet and Xinjiang, domestic flights 
-            are often the best option. China's airline network is extensive and flights are 
-            frequently cheaper than high-speed trains.
-          </p>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Major Airlines</h2>
-          <ul className="text-gray-700 list-disc pl-5 space-y-2">
-            <li><strong>Air China:</strong> Flag carrier, extensive network, good service</li>
-            <li><strong>China Eastern:</strong> Based in Shanghai, competitive prices</li>
-            <li><strong>China Southern:</strong> Largest fleet, good for southern routes</li>
-            <li><strong>Hainan Airlines:</strong> Premium service, often rated best in China</li>
-            <li><strong>Spring Airlines:</strong> Budget option, basic but cheap</li>
+    <div>
+      <GuideArticlePage
+        icon="✈️"
+        heroImage={{ src: 'https://picsum.photos/seed/china-domestic-flight/800/400', alt: 'Domestic Flights in China' }}
+        breadcrumbs={[
+          { label: 'Home', href: '/' },
+          { label: 'China Basics', href: '/china-basics' },
+          { label: 'How to Get Around', href: '/china-basics/how-to-get-around' },
+          { label: 'Plane' },
+        ]}
+        category="How to Get Around"
+        title="Domestic Flights"
+        intro="For long distances or remote destinations like Tibet and Xinjiang, domestic flights are often the best option. China's airline network is extensive and flights are frequently cheaper than high-speed trains."
+        proTips={[
+          'Book 2-3 weeks ahead for best prices',
+          'Tuesday/Wednesday flights are usually cheaper',
+          'Consider bullet trains for routes under 4 hours',
+          'Join airline loyalty programs for lounge access',
+          'Shanghai-Beijing flight is only worth it if you live far from train stations',
+        ]}
+        related={[
+          { label: 'Train Travel', href: '/china-basics/how-to-get-around/train' },
+          { label: 'How to Get Around', href: '/china-basics/how-to-get-around' },
+        ]}
+        relatedArticles={[
+          { title: 'Train Travel', description: 'Often faster and more convenient than flights.', href: '/china-basics/how-to-get-around/train' },
+          { title: 'How to Get Around', description: 'All transportation options in China.', href: '/china-basics/how-to-get-around' },
+        ]}
+        tocItems={[
+          { id: 'major-airlines', title: 'Major Airlines' },
+          { id: 'how-to-book', title: 'How to Book' },
+          { id: 'at-the-airport', title: 'At the Airport' },
+          { id: 'common-issues', title: 'Common Issues' },
+        ]}
+      >
+        {/* Major Airlines */}
+        <div id="major-airlines" className="card-base">
+          <h2 className="text-2xl font-extrabold text-slate-900">Major Airlines</h2>
+          <ul className="mt-4 space-y-3">
+            <li className="text-sm leading-relaxed text-slate-700 md:text-base">• <strong>Air China:</strong> Flag carrier, extensive network, good service</li>
+            <li className="text-sm leading-relaxed text-slate-700 md:text-base">• <strong>China Eastern:</strong> Based in Shanghai, competitive prices</li>
+            <li className="text-sm leading-relaxed text-slate-700 md:text-base">• <strong>China Southern:</strong> Largest fleet, good for southern routes</li>
+            <li className="text-sm leading-relaxed text-slate-700 md:text-base">• <strong>Hainan Airlines:</strong> Premium service, often rated best in China</li>
+            <li className="text-sm leading-relaxed text-slate-700 md:text-base">• <strong>Spring Airlines:</strong> Budget option, basic but cheap</li>
           </ul>
-        </section>
+        </div>
 
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">How to Book</h2>
-          <ol className="list-decimal pl-6 space-y-3 text-gray-700">
-            <li><strong>Trip.com:</strong> English interface, foreigner-friendly</li>
-            <li><strong>Ctrip:</strong> Chinese app with better prices (need Chinese skills)</li>
-            <li><strong>Airline websites:</strong> Direct booking often cheapest</li>
-            <li><strong>Travel agents:</strong> For complex itineraries</li>
+        {/* How to Book */}
+        <div id="how-to-book" className="card-base">
+          <h2 className="text-2xl font-extrabold text-slate-900">How to Book</h2>
+          <ol className="mt-4 space-y-2 list-decimal pl-5">
+            <li className="text-sm leading-relaxed text-slate-700 md:text-base"><strong>Trip.com:</strong> English interface, foreigner-friendly</li>
+            <li className="text-sm leading-relaxed text-slate-700 md:text-base"><strong>Ctrip:</strong> Chinese app with better prices (need Chinese skills)</li>
+            <li className="text-sm leading-relaxed text-slate-700 md:text-base"><strong>Airline websites:</strong> Direct booking often cheapest</li>
+            <li className="text-sm leading-relaxed text-slate-700 md:text-base"><strong>Travel agents:</strong> For complex itineraries</li>
           </ol>
-        </section>
+        </div>
 
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">At the Airport</h2>
-          <ul className="text-gray-700 list-disc pl-5 space-y-2">
-            <li>Arrive 2 hours early for domestic flights</li>
-            <li>Security is strict - similar to international</li>
-            <li>Power banks must be carried on, not checked</li>
-            <li>Keep passport handy for multiple checks</li>
-            <li>Delays are common - download airline app for updates</li>
-          </ul>
-        </section>
-
-        <div className="bg-amber-50 border-l-4 border-amber-400 p-4 mb-8">
-          <h3 className="font-semibold text-amber-800 mb-2">💡 Pro Tips</h3>
-          <ul className="text-amber-900 space-y-2">
-            <li>• Book 2-3 weeks ahead for best prices</li>
-            <li>• Tuesday/Wednesday flights are usually cheaper</li>
-            <li>• Consider bullet trains for routes under 4 hours</li>
-            <li>• Join airline loyalty programs for lounge access</li>
-            <li>• Shanghai-Beijing flight is only worth it if you live far from train stations</li>
+        {/* At the Airport */}
+        <div id="at-the-airport" className="card-base">
+          <h2 className="text-2xl font-extrabold text-slate-900">At the Airport</h2>
+          <ul className="mt-4 space-y-3">
+            <li className="text-sm leading-relaxed text-slate-700 md:text-base">• Arrive 2 hours early for domestic flights</li>
+            <li className="text-sm leading-relaxed text-slate-700 md:text-base">• Security is strict — similar to international</li>
+            <li className="text-sm leading-relaxed text-slate-700 md:text-base">• Power banks must be carried on, not checked</li>
+            <li className="text-sm leading-relaxed text-slate-700 md:text-base">• Keep passport handy for multiple checks</li>
+            <li className="text-sm leading-relaxed text-slate-700 md:text-base">• Delays are common — download airline app for updates</li>
           </ul>
         </div>
 
-        <div className="bg-[var(--accent-soft)] border-l-4 border-[var(--accent)] p-4">
-          <h3 className="font-semibold text-[var(--accent-strong)] mb-2">⚠️ Common Issues</h3>
-          <ul className="text-[var(--foreground)] space-y-2">
-            <li>• Weather delays in winter (smog/fog) and summer (storms)</li>
-            <li>• Chinese airlines rarely announce delays in English</li>
-            <li>• Airport food is overpriced - eat before you go</li>
-            <li>• Some smaller airports are far from city centers</li>
+        {/* Common Issues */}
+        <div id="common-issues" className="rounded-xl border border-red-200 bg-red-50 p-5">
+          <h3 className="font-semibold text-red-800 mb-2">⚠️ Common Issues</h3>
+          <ul className="text-red-800 space-y-2">
+            <li className="text-sm leading-relaxed md:text-base">• Weather delays in winter (smog/fog) and summer (storms)</li>
+            <li className="text-sm leading-relaxed md:text-base">• Chinese airlines rarely announce delays in English</li>
+            <li className="text-sm leading-relaxed md:text-base">• Airport food is overpriced — eat before you go</li>
+            <li className="text-sm leading-relaxed md:text-base">• Some smaller airports are far from city centers</li>
           </ul>
         </div>
-              <RelatedArticles articles={[{title:'Train Travel',description:'Often faster and more convenient than flights.',href:'/china-basics/how-to-get-around/train'},{title:'How to Get Around',description:'All transportation options in China.',href:'/china-basics/how-to-get-around'}]} />
-      </main>
+      </GuideArticlePage>
     </div>
   );
 }
