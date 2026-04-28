@@ -5,8 +5,9 @@ import './globals.css'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import CookieConsent from '@/components/CookieConsent'
-import { SearchProvider } from '@/components/SearchProvider'
-import SearchCommandPalette from '@/components/SearchCommandPalette'
+// Search temporarily disabled — will be re-enabled after review
+// import { SearchProvider } from '@/components/SearchProvider'
+// import SearchCommandPalette from '@/components/SearchCommandPalette'
 
 export const metadata: Metadata = {
   title: {
@@ -37,15 +38,12 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className="antialiased" style={{ backgroundColor: '#f5f1ea' }}>
         <NextIntlClientProvider locale={defaultLocale}>
-          <SearchProvider>
-            <div className="relative min-h-screen" style={{ backgroundColor: '#f5f1ea' }}>
-              <Navigation />
-              <main style={{ backgroundColor: '#f5f1ea' }}>{children}</main>
-              <Footer />
-              <CookieConsent />
-              <SearchCommandPalette />
-            </div>
-          </SearchProvider>
+          <div className="relative min-h-screen" style={{ backgroundColor: '#f5f1ea' }}>
+            <Navigation />
+            <main style={{ backgroundColor: '#f5f1ea' }}>{children}</main>
+            <Footer />
+            <CookieConsent />
+          </div>
         </NextIntlClientProvider>
       </body>
     </html>

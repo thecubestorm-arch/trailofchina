@@ -2,8 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Search } from 'lucide-react'
-import { useSearch } from '@/components/SearchProvider'
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -15,7 +13,6 @@ const navLinks = [
 
 export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const { openSearch } = useSearch()
 
   // Lock body scroll when menu is open
   useEffect(() => {
@@ -62,31 +59,10 @@ export default function Navigation() {
               )}
             </Link>
           ))}
-
-          {/* Search Trigger */}
-          <button
-            type="button"
-            onClick={openSearch}
-            aria-label="Search"
-            className="flex items-center gap-2 rounded-full border border-[var(--line)] bg-white/50 px-3 py-2 text-sm text-[var(--muted)] hover:bg-[var(--surface-strong)] hover:text-[var(--foreground)] transition-colors"
-          >
-            <Search size={16} />
-            <span className="text-xs text-[#64748b]">⌘K</span>
-          </button>
         </nav>
 
-        {/* Mobile: Search + Hamburger */}
+        {/* Mobile: Hamburger */}
         <div className="flex items-center gap-1 md:hidden">
-          <button
-            type="button"
-            onClick={openSearch}
-            aria-label="Search"
-            className="flex h-11 w-11 items-center justify-center rounded-full"
-          >
-            <Search size={20} className="text-[#af5d32]" />
-          </button>
-
-          {/* Mobile Hamburger Button */}
           <button
             type="button"
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
