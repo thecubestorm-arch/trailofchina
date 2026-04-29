@@ -29,6 +29,8 @@ export default function AlipayPage() {
         category="What Apps to Use"
         title="Alipay in China: Complete Setup Guide for Foreigners"
         intro="Alipay is China's most widely used payment platform, accepted by over 10 million merchants nationwide. As a foreigner, you can now link international Visa and Mastercard cards directly — making it possible to pay for almost everything without cash."
+        keyTakeaway="Foreigners can now link international Visa and Mastercard directly in Alipay — no Chinese bank account needed."
+        updatedAt="April 2025"
         whyYouNeedThis={[
           'Over 90% of merchants in China accept Alipay, from street food stalls to high-speed train bookings.',
           'Many smaller businesses no longer accept cash or prefer not to deal with change.',
@@ -62,114 +64,143 @@ export default function AlipayPage() {
         ]}
       >
         <>
-          <div>
-            <h2 id="payment-setup" className="text-2xl font-extrabold text-slate-900">Payment Setup</h2>
+          <section aria-labelledby="payment-setup" className="border-t border-[#ebe4d8] pt-10">
+            <h2 id="payment-setup" className="font-serif text-2xl font-bold text-[#1a3a4a] md:text-3xl">
+              Payment Setup
+            </h2>
 
-            <div className="mt-6 card-base">
-              <h3 className="text-2xl font-extrabold text-slate-900">Step-by-step setup guide</h3>
-              <ol className="mt-5 space-y-4">
-                <li className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-                  <p className="text-xs font-bold uppercase tracking-wide text-china-red">Step 1</p>
-                  <h4 className="mt-1 text-lg font-extrabold text-slate-900">Download &amp; Install</h4>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-700 md:text-base">
-                    Download Alipay from your app store (iOS App Store or Google Play). On first launch, switch the language
-                    to English in Settings (Me → Settings → General → Language). The English interface covers all essential functions.
-                  </p>
+            <ol className="mt-8 space-y-8">
+              {[
+                {
+                  title: 'Download and install',
+                  description:
+                    'Download Alipay from the iOS App Store or Google Play. On first launch, switch the language to English in Settings via Me → Settings → General → Language. The English interface now covers the essential payment and travel features most visitors need.',
+                },
+                {
+                  title: 'Link your Visa or Mastercard',
+                  description:
+                    'Go to Me → Bank Cards → Add Card and choose the international card option. Enter the card details exactly as they appear on your passport. Alipay supports foreign-issued Visa and Mastercard directly, although transactions over ¥200 may include a small surcharge.',
+                },
+                {
+                  title: 'Complete passport verification',
+                  description:
+                    'Open Me → Identity Verification and upload your passport details. This unlocks higher payment limits and features such as ride-hailing and broader service access. Approval can be instant, but some passports take one to three business days.',
+                },
+                {
+                  title: 'Make a small test payment',
+                  description:
+                    'Try a low-stakes purchase at a convenience store such as FamilyMart, 7-Eleven, or Lawson. Tap Scan in Alipay and point your camera at the merchant QR code. A successful first payment confirms your card, identity, and app permissions are all working together.',
+                },
+                {
+                  title: 'Troubleshoot common issues',
+                  description:
+                    'If a card is declined, try another international card first. If verification stalls, double-check that your passport name matches your card profile exactly, then contact Alipay support with your verification details. Resolve this before relying on Alipay for transit or larger purchases.',
+                },
+              ].map((step, index, steps) => (
+                <li key={step.title} className="grid grid-cols-[auto_1fr] gap-4 md:gap-6">
+                  <div className="relative flex justify-center">
+                    <span className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full bg-[#fcfaf6] font-serif text-lg font-bold text-[#af5d32] ring-1 ring-[#af5d32]/20">
+                      {index + 1}
+                    </span>
+                    {index < steps.length - 1 && (
+                      <span
+                        aria-hidden="true"
+                        className="absolute left-1/2 top-10 h-[calc(100%+2rem)] w-px -translate-x-1/2 bg-[#ebe4d8]"
+                      />
+                    )}
+                  </div>
+                  <div>
+                    <h3 className="font-serif text-xl font-bold text-[#1a3a4a] md:text-2xl">{step.title}</h3>
+                    <p className="mt-2 text-base leading-8 text-[#5d6a73] md:text-lg">{step.description}</p>
+                  </div>
                 </li>
-                <li className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-                  <p className="text-xs font-bold uppercase tracking-wide text-china-red">Step 2</p>
-                  <h4 className="mt-1 text-lg font-extrabold text-slate-900">Link Foreign Visa/Mastercard</h4>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-700 md:text-base">
-                    Go to Me → Bank Cards → Add Card. Select &quot;International Card&quot; and enter your Visa or Mastercard details.
-                    The name must match your passport exactly. Alipay now supports foreign cards through a partnership with Adyen,
-                    though a small 3% surcharge may apply on transactions over ¥200.
-                  </p>
-                </li>
-                <li className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-                  <p className="text-xs font-bold uppercase tracking-wide text-china-red">Step 3</p>
-                  <h4 className="mt-1 text-lg font-extrabold text-slate-900">Identity Verification (Passport)</h4>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-700 md:text-base">
-                    Go to Me → Identity Verification and upload photos of your passport. This is required for payments above ¥1,000
-                    and for features like ride-hailing. Verification typically takes 1-3 business days but can be instant for some passports.
-                  </p>
-                </li>
-                <li className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-                  <p className="text-xs font-bold uppercase tracking-wide text-china-red">Step 4</p>
-                  <h4 className="mt-1 text-lg font-extrabold text-slate-900">First Payment (QR Scan)</h4>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-700 md:text-base">
-                    Try buying a bottle of water at a convenience store (FamilyMart, 7-Eleven, Lawson). Open Alipay, tap Scan,
-                    and point your camera at the merchant QR code. The payment should process in seconds.
-                  </p>
-                </li>
-                <li className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-                  <p className="text-xs font-bold uppercase tracking-wide text-china-red">Step 5</p>
-                  <h4 className="mt-1 text-lg font-extrabold text-slate-900">Common Issues &amp; Fixes</h4>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-700 md:text-base">
-                    If your card gets declined, try a different card or use the &quot;Tour Pass&quot; feature which lets you preload
-                    a balance from your credit card. If verification stalls, email support@alipay.com with your passport details.
-                    Alipay support is generally responsive to foreign users.
-                  </p>
-                </li>
-              </ol>
-            </div>
-          </div>
+              ))}
+            </ol>
+          </section>
 
-          <div className="mt-8">
-            <h2 id="mini-apps" className="text-2xl font-extrabold text-slate-900">Mini-Apps — Your Gateway to Chinese Services</h2>
-            <p className="mt-4 text-sm leading-relaxed text-slate-700 md:text-base">
-              Alipay is more than just payments — it houses hundreds of mini-apps (小程序) that turn it into a gateway for hundreds of services:
+          <section aria-labelledby="mini-apps" className="border-t border-[#ebe4d8] pt-10">
+            <h2 id="mini-apps" className="font-serif text-2xl font-bold text-[#1a3a4a] md:text-3xl">
+              Mini-Apps: Your Gateway to Chinese Services
+            </h2>
+            <p className="mt-4 text-base leading-8 text-[#5d6a73] md:text-lg">
+              Alipay is more than a payment wallet. Its mini-app ecosystem turns one familiar app into a practical control
+              center for transport, deliveries, healthcare, and daily logistics across China.
             </p>
-            <div className="mt-6 grid gap-6 md:grid-cols-2">
-              <div className="card-base rounded-xl p-6">
-                <h3 className="text-xl font-bold text-slate-900 mb-3">Transit Tickets</h3>
-                <p className="text-slate-700">Buy subway, bus, and train tickets directly in Alipay. Many cities now scan QR codes at turnstiles — no separate ticket needed.</p>
+            <div className="mt-8 grid gap-0 md:grid-cols-2">
+              <div className="border-t border-[#ebe4d8] bg-[#f5f1ea] px-6 py-6 md:px-8">
+                <h3 className="font-serif text-xl font-bold text-[#1a3a4a] md:text-2xl">Transit tickets</h3>
+                <p className="mt-3 text-base leading-8 text-[#5d6a73] md:text-lg">
+                  Buy subway, bus, and train tickets directly in Alipay. In many cities, your transit QR code becomes the only
+                  ticket you need at the gate.
+                </p>
               </div>
-              <div className="card-base rounded-xl p-6">
-                <h3 className="text-xl font-bold text-slate-900 mb-3">Meituan Food Delivery</h3>
-                <p className="text-slate-700">Order from 100,000+ restaurants via the Meituan mini-app inside Alipay. Includes meals, desserts, and groceries.</p>
+              <div className="border-t border-[#ebe4d8] bg-white px-6 py-6 md:px-8">
+                <h3 className="font-serif text-xl font-bold text-[#1a3a4a] md:text-2xl">Meituan food delivery</h3>
+                <p className="mt-3 text-base leading-8 text-[#5d6a73] md:text-lg">
+                  Order meals, desserts, and groceries through the Meituan mini-app without juggling a second account or a separate app download.
+                </p>
               </div>
-              <div className="card-base rounded-xl p-6">
-                <h3 className="text-xl font-bold text-slate-900 mb-3">Hospital Booking</h3>
-                <p className="text-slate-700">Book doctor appointments, pay medical bills, and check lab results — widely used by locals for daily healthcare.</p>
+              <div className="border-t border-[#ebe4d8] bg-white px-6 py-6 md:px-8">
+                <h3 className="font-serif text-xl font-bold text-[#1a3a4a] md:text-2xl">Hospital booking</h3>
+                <p className="mt-3 text-base leading-8 text-[#5d6a73] md:text-lg">
+                  Many hospitals let you book appointments, pay bills, and check results inside Alipay, which is why locals rely on it for everyday healthcare tasks.
+                </p>
               </div>
-              <div className="card-base rounded-xl p-6">
-                <h3 className="text-xl font-bold text-slate-900 mb-3">Bike Sharing</h3>
-                <p className="text-slate-700">Unlock shared bikes from HelloBike and other providers. Scan the QR on the bike to start your ride.</p>
+              <div className="border-t border-[#ebe4d8] bg-[#f5f1ea] px-6 py-6 md:px-8">
+                <h3 className="font-serif text-xl font-bold text-[#1a3a4a] md:text-2xl">Bike sharing</h3>
+                <p className="mt-3 text-base leading-8 text-[#5d6a73] md:text-lg">
+                  Unlock shared bikes from HelloBike and similar providers by scanning the QR code on the bike, then pay automatically through your linked card.
+                </p>
               </div>
             </div>
-          </div>
+          </section>
 
-          <div className="mt-8">
-            <h2 id="transit" className="text-2xl font-extrabold text-slate-900">Transit — Using Alipay on Subway and Buses</h2>
-            <p className="mt-4 text-sm leading-relaxed text-slate-700 md:text-base">
-              Most major Chinese cities have integrated Alipay into their public transit systems. Here&apos;s how it works:
+          <section aria-labelledby="transit" className="border-t border-[#ebe4d8] pt-10">
+            <h2 id="transit" className="font-serif text-2xl font-bold text-[#1a3a4a] md:text-3xl">
+              Transit: Using Alipay on Subway and Buses
+            </h2>
+            <p className="mt-4 text-base leading-8 text-[#5d6a73] md:text-lg">
+              Most major Chinese cities now integrate Alipay directly into public transport. Once activated for the city you are in,
+              it becomes one of the fastest ways to move through stations and onto buses without buying separate tickets.
             </p>
-            <div className="mt-6 card-base rounded-xl p-6">
-              <h3 className="text-xl font-bold text-slate-900 mb-4">Subway</h3>
-              <p className="text-slate-700">
-                In cities like Beijing, Shanghai, Guangzhou, and Shenzhen, you can activate transit in Alipay:
-                Open Alipay → Transit → Select City → Activate. Once activated, simply scan your QR code at the turnstile —
-                payment is automatic and often faster than buying tickets.
-              </p>
-            </div>
-            <div className="mt-6 card-base rounded-xl p-6">
-              <h3 className="text-xl font-bold text-slate-900 mb-4">Buses</h3>
-              <p className="text-slate-700">
-                For buses, the process is similar — activate transit in Alipay for your city, then scan the QR code at the bus door.
-                Some cities also support NFC tapping with your phone, but QR scanning works everywhere.
-              </p>
+
+            <div className="mt-8 space-y-8">
+              <div>
+                <h3 className="font-serif text-xl font-bold text-[#1a3a4a] md:text-2xl">Subway</h3>
+                <p className="mt-3 text-base leading-8 text-[#5d6a73] md:text-lg">
+                  In cities such as Beijing, Shanghai, Guangzhou, and Shenzhen, open Alipay, go to Transit, select your city,
+                  and activate the local transit code. After that, scan your QR code at the turnstile and the fare is charged automatically.
+                  It is often quicker than buying a single-use ticket, especially during rush hour.
+                </p>
+              </div>
+
+              <div className="border-t border-[#ebe4d8] pt-8">
+                <h3 className="font-serif text-xl font-bold text-[#1a3a4a] md:text-2xl">Buses</h3>
+                <p className="mt-3 text-base leading-8 text-[#5d6a73] md:text-lg">
+                  Buses usually use the same city transit activation. Show the QR code when boarding and scan it at the door reader.
+                  Some cities also support NFC, but QR remains the most broadly reliable option for visitors using foreign cards.
+                </p>
+              </div>
             </div>
 
-            <div className="mt-8 rounded-2xl border border-amber-200 bg-amber-50 p-6">
-              <h2 className="text-xl font-black text-slate-900">Pro Tips</h2>
-              <ul className="mt-3 space-y-2">
-                <li className="text-sm leading-relaxed text-slate-700 md:text-base">• Enable &quot;Auto-Translate&quot; in Alipay settings to auto-translate merchant names and product descriptions.</li>
-                <li className="text-sm leading-relaxed text-slate-700 md:text-base">• Use Alipay mini-programs for DiDi (ride-hailing), Meituan (food delivery), and 12306 (train tickets) — all in English inside Alipay.</li>
-                <li className="text-sm leading-relaxed text-slate-700 md:text-base">• Take a screenshot of your payment QR code before entering areas with poor signal (subway stations, rural areas).</li>
-                <li className="text-sm leading-relaxed text-slate-700 md:text-base">• Alipay works offline for showing your QR code — the merchant scans it and payment processes when signal returns.</li>
+            <div className="mt-10 border-l-4 border-[#af5d32] bg-[#fcfaf6] py-5 pl-5 md:pl-6">
+              <h2 className="font-serif text-xl font-bold text-[#1a3a4a] md:text-2xl">Pro Tips</h2>
+              <ul className="mt-4 space-y-3">
+                <li className="text-base leading-8 text-[#5d6a73] md:text-lg">
+                  Enable auto-translate in Alipay settings so merchant names and product listings are easier to understand at a glance.
+                </li>
+                <li className="text-base leading-8 text-[#5d6a73] md:text-lg">
+                  Use Alipay mini-apps for DiDi, Meituan, and 12306 when possible, since that keeps your transport, delivery, and payment flow inside one familiar interface.
+                </li>
+                <li className="text-base leading-8 text-[#5d6a73] md:text-lg">
+                  Save a screenshot of your payment QR code before entering stations or rural areas where mobile data may be unreliable.
+                </li>
+                <li className="text-base leading-8 text-[#5d6a73] md:text-lg">
+                  Remember that showing your QR code can work even with weak signal, because the merchant can scan first and process the charge once connectivity catches up.
+                </li>
               </ul>
             </div>
-          </div>
+          </section>
         </>
       </GuideArticlePage>
 
