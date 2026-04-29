@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useMemo, useCallback } from "react";
+import { useState, useEffect, useMemo, useCallback, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -14,8 +14,9 @@ import {
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { Search, List, Map } from "lucide-react";
+import type { MarkerLocation } from "../shanghai/types";
 
-type POICategory = "attraction" | "food" | "stay";
+type POICategory = "attraction" | "eat" | "stay";
 type FilterTag =
   | "free"
   | "budget"
@@ -32,6 +33,8 @@ type FilterTag =
   | "practical";
 
 interface FilterableItem {
+  id: string;
+  markerId?: string;
   name: string;
   subtitle: string;
   tag?: string;
@@ -39,14 +42,12 @@ interface FilterableItem {
   href: string;
   type: "attraction" | "food" | "stay" | "info" | "tip";
   filters: FilterTag[];
-  lat?: number;
-  lng?: number;
 }
 
 interface POIItem {
+  id: string;
+  markerId: string;
   name: string;
-  lat: number;
-  lng: number;
   category: POICategory;
   hook: string;
   tag?: string;
@@ -59,7 +60,7 @@ const categoryConfig: Record<
   { emoji: string; color: string; label: string }
 > = {
   attraction: { emoji: "🏛️", color: "#af5d32", label: "Attractions" },
-  food: { emoji: "🍜", color: "#f97316", label: "Food" },
+  eat: { emoji: "🍜", color: "#f97316", label: "Food" },
   stay: { emoji: "🏨", color: "#3b82f6", label: "Stay" },
 };
 
@@ -82,22 +83,48 @@ const shanghaiBoundary: [number, number][] = [
   [31.4, 121.2],
 ];
 
-const poiMarkerIcon = (category: POICategory) => {
+const getItemCategory = (itemType: FilterableItem["type"]): POICategory | null => {
+  if (itemType === "food") return "eat";
+  if (itemType === "attraction" || itemType === "stay") return itemType;
+  return null;
+};
+
+const poiMarkerIcon = (category: POICategory, isHovered: boolean) => {
   const cfg = categoryConfig[category];
+  const size = isHovered ? 40 : 32;
+  const borderWidth = isHovered ? 3 : 2;
+  const borderColor = isHovered ? "#af5d32" : "white";
+  const scale = isHovered ? "transform: scale(1.4); transform-origin: center;" : "";
   return L.divIcon({
     className: "",
-    html: `<div style="position:relative;width:32px;height:32px">
-      <div style="position:absolute;inset:5px;background:${cfg.color};border:2px solid white;border-radius:50%;box-shadow:0 2px 6px rgba(0,0,0,0.25);display:flex;align-items:center;justify-content:center;font-size:14px">${cfg.emoji}</div>
+    html: `<div style="position:relative;width:${size}px;height:${size}px;${scale}transition:transform 0.2s ease;">
+      <div style="position:absolute;inset:${isHovered ? 2 : 5}px;background:${cfg.color};border:${borderWidth}px solid ${borderColor};border-radius:50%;box-shadow:0 2px 6px rgba(0,0,0,0.25);display:flex;align-items:center;justify-content:center;font-size:${isHovered ? 16 : 14}px">${cfg.emoji}</div>
     </div>`,
-    iconSize: [32, 32],
-    iconAnchor: [16, 16],
+    iconSize: [size, size],
+    iconAnchor: [size / 2, size / 2],
   });
 };
 
-const poiLabelIcon = (name: string) =>
+const dimmedPoiMarkerIcon = (category: POICategory, isHovered: boolean) => {
+  const cfg = categoryConfig[category];
+  const size = isHovered ? 40 : 32;
+  const borderWidth = isHovered ? 3 : 2;
+  const borderColor = isHovered ? "#af5d32" : "rgba(255,255,255,0.75)";
+  const scale = isHovered ? "transform: scale(1.4); transform-origin: center;" : "";
+  return L.divIcon({
+    className: "",
+    html: `<div style="position:relative;width:${size}px;height:${size}px;${scale}opacity:${isHovered ? "0.9" : "0.45"};transition:transform 0.2s ease, opacity 0.2s ease;">
+      <div style="position:absolute;inset:${isHovered ? 2 : 5}px;background:${cfg.color};border:${borderWidth}px solid ${borderColor};border-radius:50%;box-shadow:0 2px 6px rgba(0,0,0,0.18);display:flex;align-items:center;justify-content:center;font-size:${isHovered ? 16 : 14}px">${cfg.emoji}</div>
+    </div>`,
+    iconSize: [size, size],
+    iconAnchor: [size / 2, size / 2],
+  });
+};
+
+const poiLabelIcon = (name: string, isHovered: boolean, isActive: boolean) =>
   L.divIcon({
     className: "",
-    html: `<div style="background:white;padding:2px 8px;border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,0.15);font-size:11px;font-weight:600;color:#1a3a4a;white-space:nowrap;">${name}</div>`,
+    html: `<div style="background:white;padding:2px 8px;border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,0.15);font-size:11px;font-weight:600;color:#1a3a4a;white-space:nowrap;border:1.5px solid ${isHovered ? "#af5d32" : "transparent"};opacity:${isActive ? "1" : "0.55"};transition:border-color 0.2s ease, opacity 0.2s ease;">${name}</div>`,
     iconSize: [80, 20],
     iconAnchor: [-12, 10],
   });
@@ -111,36 +138,38 @@ function ZoomTracker({ onZoom }: { onZoom: (z: number) => void }) {
 
 export default function MapViewSection({
   allItems,
+  markers = [],
   searchQuery,
   activeFilters,
+  hoveredItem = null,
+  onHoverEnter = () => {},
+  onHoverLeave = () => {},
 }: {
   allItems: FilterableItem[];
+  markers?: MarkerLocation[];
   searchQuery: string;
   activeFilters: FilterTag[];
+  hoveredItem?: string | null;
+  onHoverEnter?: (markerId: string) => void;
+  onHoverLeave?: () => void;
 }) {
   const [mounted, setMounted] = useState(false);
   const [activeCategories, setActiveCategories] = useState<Set<POICategory>>(
-    new Set(["attraction", "food", "stay"])
+    new Set(["attraction", "eat", "stay"])
   );
   const [zoom, setZoom] = useState(13);
-  const [hovered, setHovered] = useState<string | null>(null);
   const [mobileView, setMobileView] = useState<"list" | "map">("map");
+  const listRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  const filteredPois = useMemo(() => {
+  const filteredItems = useMemo(() => {
     const pois: POIItem[] = [];
     for (const item of allItems) {
-      if (!item.lat || !item.lng) continue;
-      if (
-        item.type !== "attraction" &&
-        item.type !== "food" &&
-        item.type !== "stay"
-      )
-        continue;
-      if (!activeCategories.has(item.type)) continue;
+      const category = getItemCategory(item.type);
+      if (!category || !item.markerId || !activeCategories.has(category)) continue;
 
       if (searchQuery) {
         const q = searchQuery.toLowerCase();
@@ -156,10 +185,10 @@ export default function MapViewSection({
       }
 
       pois.push({
+        id: item.id,
+        markerId: item.markerId,
         name: item.name,
-        lat: item.lat,
-        lng: item.lng,
-        category: item.type as POICategory,
+        category,
         hook: item.subtitle,
         tag: item.tag,
         href: item.href,
@@ -181,19 +210,52 @@ export default function MapViewSection({
     });
   }, []);
 
+  const filteredMarkers = useMemo(() => {
+    const visibleMarkerIds = new Set(filteredItems.map((item) => item.markerId));
+    return markers
+      .filter((marker) => visibleMarkerIds.has(marker.id))
+      .map((marker) => ({
+        ...marker,
+        displayCategory:
+          (["attraction", "eat", "stay"] as POICategory[]).find(
+            (category) =>
+              marker.categories.includes(category) &&
+              filteredItems.some(
+                (item) => item.markerId === marker.id && item.category === category
+              )
+          ) ?? marker.categories[0],
+        isActive: marker.categories.some((category) => activeCategories.has(category)),
+        primaryItem:
+          filteredItems.find(
+            (item) =>
+              item.markerId === marker.id && activeCategories.has(item.category)
+          ) ??
+          filteredItems.find((item) => item.markerId === marker.id) ??
+          null,
+      }));
+  }, [activeCategories, filteredItems, markers]);
+
   const groupPoisByCategory = useMemo(() => {
     const groups: Record<POICategory, POIItem[]> = {
       attraction: [],
-      food: [],
+      eat: [],
       stay: [],
     };
-    for (const poi of filteredPois) {
+    for (const poi of filteredItems) {
       groups[poi.category].push(poi);
     }
     return (Object.keys(categoryConfig) as POICategory[])
       .filter((c) => activeCategories.has(c) && groups[c].length > 0)
       .map((c) => ({ category: c, pois: groups[c] }));
-  }, [filteredPois, activeCategories]);
+  }, [filteredItems, activeCategories]);
+
+  useEffect(() => {
+    if (!hoveredItem) return;
+    const card = listRef.current?.querySelector(`[data-marker-id="${hoveredItem}"]`);
+    if (card) {
+      card.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+  }, [hoveredItem]);
 
   if (!mounted) {
     return (
@@ -214,11 +276,11 @@ export default function MapViewSection({
       >
         <div className="p-3 border-b border-[#ebe4d8] bg-[#faf8f4]">
           <p className="text-xs text-[#64748b] font-medium">
-            {filteredPois.length} places found
+            {filteredItems.length} places found
           </p>
         </div>
-        <div className="flex-1 overflow-y-auto p-3 space-y-4">
-          {filteredPois.length === 0 && (
+        <div ref={listRef} className="flex-1 overflow-y-auto p-3 space-y-4">
+          {filteredItems.length === 0 && (
             <div className="text-center py-12">
               <Search className="mx-auto text-[#64748b] mb-3" size={32} />
               <p className="text-sm text-[#1a3a4a] font-semibold mb-1">No matches</p>
@@ -236,11 +298,16 @@ export default function MapViewSection({
                 <div className="space-y-2">
                   {group.pois.map((poi) => (
                     <Link
-                      key={poi.name}
+                      key={poi.id}
                       href={poi.href}
-                      className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-[#f5f1ea] transition-colors group"
-                      onMouseEnter={() => setHovered(poi.name)}
-                      onMouseLeave={() => setHovered(null)}
+                      className={`flex items-start gap-3 p-2.5 rounded-xl border-l-[3px] border-y border-r transition-all group ${
+                        hoveredItem === poi.markerId
+                          ? "bg-[#faf4ea] border-l-[#af5d32] border-y-[#ebe4d8] border-r-[#ebe4d8]"
+                          : "border-l-transparent border-y-transparent border-r-transparent hover:bg-[#f5f1ea]"
+                      }`}
+                      onMouseEnter={() => onHoverEnter(poi.markerId)}
+                      onMouseLeave={onHoverLeave}
+                      data-marker-id={poi.markerId}
                     >
                       <div className="relative w-14 h-14 rounded-lg overflow-hidden flex-shrink-0 bg-[#ebe4d8]">
                         {poi.imageSeed ? (
@@ -316,33 +383,44 @@ export default function MapViewSection({
             }}
           />
           {zoom >= 13 &&
-            filteredPois.map((poi) => (
+            filteredMarkers.map((marker) => (
               <Marker
-                key={`label-${poi.name}`}
-                position={[poi.lat, poi.lng]}
-                icon={poiLabelIcon(poi.name)}
+                key={`label-${marker.id}`}
+                position={[marker.lat, marker.lng]}
+                icon={poiLabelIcon(
+                  marker.name,
+                  hoveredItem === marker.id,
+                  marker.isActive
+                )}
                 zIndexOffset={-100}
               />
             ))}
-          {filteredPois.map((poi) => (
+          {filteredMarkers.map((marker) => (
             <Marker
-              key={`marker-${poi.name}`}
-              position={[poi.lat, poi.lng]}
-              icon={poiMarkerIcon(poi.category)}
+              key={`marker-${marker.id}`}
+              position={[marker.lat, marker.lng]}
+              icon={
+                marker.isActive
+                  ? poiMarkerIcon(marker.displayCategory, hoveredItem === marker.id)
+                  : dimmedPoiMarkerIcon(
+                      marker.displayCategory,
+                      hoveredItem === marker.id
+                    )
+              }
               eventHandlers={{
-                mouseover: () => setHovered(poi.name),
-                mouseout: () => setHovered(null),
+                mouseover: () => onHoverEnter(marker.id),
+                mouseout: onHoverLeave,
               }}
             >
               <Popup>
                 <Link
-                  href={poi.href}
+                  href={marker.primaryItem?.href ?? "#"}
                   className="block no-underline"
                   style={{ minWidth: 200 }}
                 >
                   <img
-                    src={`https://picsum.photos/seed/${poi.imageSeed}/400/200`}
-                    alt={poi.name}
+                    src={`https://picsum.photos/seed/${marker.primaryItem?.imageSeed ?? marker.id}/400/200`}
+                    alt={marker.name}
                     style={{
                       width: "100%",
                       height: 100,
@@ -353,10 +431,10 @@ export default function MapViewSection({
                   />
                   <div className="flex items-center gap-1.5">
                     <span style={{ fontSize: 16 }}>
-                      {categoryConfig[poi.category].emoji}
+                      {categoryConfig[marker.displayCategory].emoji}
                     </span>
                     <strong style={{ color: "#1a3a4a", fontSize: 14 }}>
-                      {poi.name}
+                      {marker.name}
                     </strong>
                   </div>
                   <p
@@ -366,9 +444,9 @@ export default function MapViewSection({
                       margin: "4px 0",
                     }}
                   >
-                    {poi.hook}
+                    {marker.primaryItem?.hook ?? ""}
                   </p>
-                  {poi.tag && (
+                  {marker.primaryItem?.tag && (
                     <span
                       style={{
                         fontSize: 11,
@@ -376,7 +454,7 @@ export default function MapViewSection({
                         fontWeight: 600,
                       }}
                     >
-                      {poi.tag}
+                      {marker.primaryItem.tag}
                     </span>
                   )}
                   <div

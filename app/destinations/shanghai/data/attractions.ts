@@ -1,4 +1,4 @@
-import type { UnifiedLocation } from "../types";
+import type { MarkerLocation, UnifiedLocation } from "../types";
 
 export const unifiedLocations: UnifiedLocation[] = [
   // ── Things to Do ────────────────────────────────────────────────
@@ -193,5 +193,92 @@ export const unifiedLocations: UnifiedLocation[] = [
       },
     },
     defaultCategory: "where-to-stay",
+  },
+];
+
+export const markers: MarkerLocation[] = [
+  {
+    id: "bund",
+    name: "The Bund",
+    lat: 31.24,
+    lng: 121.49,
+    categories: ["attraction", "stay"],
+  },
+  {
+    id: "yu-garden",
+    name: "Yu Garden",
+    lat: 31.227,
+    lng: 121.492,
+    categories: ["attraction"],
+  },
+  {
+    id: "french-concession",
+    name: "French Concession",
+    lat: 31.21,
+    lng: 121.46,
+    categories: ["attraction", "stay"],
+  },
+  {
+    id: "shanghai-tower",
+    name: "Shanghai Tower",
+    lat: 31.2355,
+    lng: 121.5015,
+    categories: ["attraction"],
+  },
+  {
+    id: "tianzifang",
+    name: "Tianzifang",
+    lat: 31.203,
+    lng: 121.468,
+    categories: ["attraction"],
+  },
+  {
+    id: "jade-buddha",
+    name: "Jade Buddha Temple",
+    lat: 31.223,
+    lng: 121.442,
+    categories: ["attraction"],
+  },
+  {
+    id: "xiaolongbao",
+    name: "Xiaolongbao",
+    lat: 31.225,
+    lng: 121.475,
+    categories: ["eat"],
+  },
+  {
+    id: "shengjianbao",
+    name: "Shengjianbao",
+    lat: 31.238,
+    lng: 121.488,
+    categories: ["eat"],
+  },
+  {
+    id: "hairy-crab",
+    name: "Hairy Crab",
+    lat: 31.215,
+    lng: 121.49,
+    categories: ["eat"],
+  },
+  {
+    id: "scallion-oil-noodles",
+    name: "Scallion Oil Noodles",
+    lat: 31.232,
+    lng: 121.455,
+    categories: ["eat"],
+  },
+  {
+    id: "jingan",
+    name: "Jing'an",
+    lat: 31.234,
+    lng: 121.446,
+    categories: ["stay"],
+  },
+  {
+    id: "xintiandi",
+    name: "Xintiandi",
+    lat: 31.219,
+    lng: 121.475,
+    categories: ["stay"],
   },
 ];

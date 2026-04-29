@@ -2,14 +2,19 @@ import type { Metadata } from 'next'
 import HomeV2Client from './HomeV2Client'
 
 export const metadata: Metadata = {
-  title: 'Trail of China — First-Trip China Travel Guide',
+  title: 'China Travel Guide V2 | Trail of China',
   description:
-    'Practical guides, honest advice, and ready-made itineraries for Western travelers exploring China for the first time.',
+    'Your first trip to China, simplified. Visa-free updates, practical trip planning, destination ideas, and essential China basics for first-time travelers.',
   openGraph: {
-    title: 'Trail of China — First-Trip China Travel Guide',
+    title: 'China Travel Guide V2 | Trail of China',
     description:
-      'Practical guides, honest advice, and ready-made itineraries for Western travelers exploring China for the first time.',
+      'Your first trip to China, simplified. Visa-free updates, practical trip planning, destination ideas, and essential China basics for first-time travelers.',
     type: 'website',
+    images: ['/images/hero/china-hero.jpg'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/images/hero/china-hero.jpg'],
   },
 }
 

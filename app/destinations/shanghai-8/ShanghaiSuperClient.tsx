@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useRef, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import dynamic from "next/dynamic";
@@ -31,6 +31,7 @@ import {
   ChevronUp,
 } from "lucide-react";
 import FooterCTA from "@/components/FooterCTA";
+import type { MarkerLocation } from "../shanghai/types";
 
 const MapViewSection = dynamic(
   () => import("./MapViewSection"),
@@ -62,6 +63,8 @@ type FilterTag =
   | "practical";
 
 interface FilterableItem {
+  id: string;
+  markerId?: string;
   name: string;
   subtitle: string;
   tag?: string;
@@ -70,8 +73,6 @@ interface FilterableItem {
   type: "attraction" | "food" | "stay" | "info" | "tip";
   icon?: React.ElementType;
   filters: FilterTag[];
-  lat?: number;
-  lng?: number;
 }
 
 interface ItineraryStop {
@@ -124,136 +125,136 @@ const quickInfoPills = [
 
 const attractions = [
   {
+    id: "bund",
+    markerId: "bund",
     name: "The Bund",
     hook: "Shanghai's most iconic waterfront promenade with skyline views.",
     tag: "Free",
     imageSeed: "shanghai-bund",
     href: "/destinations/shanghai/what-to-do/bund",
-    lat: 31.24,
-    lng: 121.49,
   },
   {
+    id: "yu-garden",
+    markerId: "yu-garden",
     name: "Yu Garden",
     hook: "A 400-year-old classical garden surrounded by a lively bazaar.",
     tag: "¥40",
     imageSeed: "shanghai-yugarden",
     href: "/destinations/shanghai/what-to-do/yu-garden",
-    lat: 31.227,
-    lng: 121.492,
   },
   {
+    id: "french-concession",
+    markerId: "french-concession",
     name: "French Concession",
     hook: "Tree-lined avenues, Art Deco villas, and charming cafés.",
     tag: "Free",
     imageSeed: "shanghai-frenchconcession",
     href: "/destinations/shanghai/what-to-do/french-concession",
-    lat: 31.21,
-    lng: 121.46,
   },
   {
+    id: "shanghai-tower",
+    markerId: "shanghai-tower",
     name: "Shanghai Tower",
     hook: "The world's second-tallest building with a jaw-dropping observation deck.",
     tag: "¥180",
     imageSeed: "shanghai-tower",
     href: "/destinations/shanghai/what-to-do/shanghai-tower",
-    lat: 31.2355,
-    lng: 121.5015,
   },
   {
+    id: "tianzifang",
+    markerId: "tianzifang",
     name: "Tianzifang",
     hook: "Winding alleyways packed with studios, galleries, and craft shops.",
     tag: "Free",
     imageSeed: "shanghai-tianzifang",
     href: "/destinations/shanghai/what-to-do",
-    lat: 31.203,
-    lng: 121.468,
   },
   {
+    id: "jade-buddha",
+    markerId: "jade-buddha",
     name: "Jade Buddha Temple",
     hook: "Serene Buddhist temple housing two stunning white jade Buddhas.",
     tag: "¥20",
     imageSeed: "shanghai-jadebuddha",
     href: "/destinations/shanghai/what-to-do",
-    lat: 31.223,
-    lng: 121.442,
   },
 ];
 
 const foodCards = [
   {
+    id: "xiaolongbao",
+    markerId: "xiaolongbao",
     name: "Xiaolongbao",
     sub: "Shanghai's iconic soup dumplings",
     tag: "Street Food · ¥30",
     imageSeed: "xiaolongbao",
     href: "/destinations/shanghai/where-to-eat/xiaolongbao",
-    lat: 31.225,
-    lng: 121.475,
   },
   {
+    id: "shengjianbao",
+    markerId: "shengjianbao",
     name: "Shengjianbao",
     sub: "Pan-fried buns with a crispy bottom",
     tag: "Street Food · ¥15",
     imageSeed: "shengjianbao",
     href: "/destinations/shanghai/where-to-eat/shengjianbao",
-    lat: 31.238,
-    lng: 121.488,
   },
   {
+    id: "hairy-crab",
+    markerId: "hairy-crab",
     name: "Hairy Crab",
     sub: "Autumn delicacy from nearby Yangcheng Lake",
     tag: "Seasonal · ¥200+",
     imageSeed: "hairy-crab",
     href: "/destinations/shanghai/where-to-eat/hairy-crab",
-    lat: 31.215,
-    lng: 121.49,
   },
   {
+    id: "scallion-oil-noodles",
+    markerId: "scallion-oil-noodles",
     name: "Scallion Oil Noodles",
     sub: "Simple, fragrant, and deeply comforting",
     tag: "Restaurant · ¥25–40",
     imageSeed: "scallion-noodles",
     href: "/destinations/shanghai/where-to-eat/scallion-oil-noodles",
-    lat: 31.232,
-    lng: 121.455,
   },
 ];
 
 const neighborhoods = [
   {
+    id: "bund-area",
+    markerId: "bund",
     name: "Bund Area",
     vibe: "Iconic skyline · Historic architecture",
     desc: "Perfect for first-timers who want postcard views and easy river access.",
     imageSeed: "shanghai-bund-area",
     href: "/destinations/shanghai/where-to-stay/bund-area",
-    lat: 31.245,
-    lng: 121.492,
   },
   {
+    id: "french-concession-stay",
+    markerId: "french-concession",
     name: "French Concession",
     vibe: "Cafés & boutiques · Tree-lined streets",
     desc: "The most walkable neighborhood with strong metro links and charm.",
     imageSeed: "shanghai-french-concession-stay",
     href: "/destinations/shanghai/where-to-stay/french-concession",
-    lat: 31.208,
-    lng: 121.458,
   },
   {
+    id: "jingan",
+    markerId: "jingan",
     name: "Jing'an",
     vibe: "Local life · Metro hub",
     desc: "A central, down-to-earth base with top transport connections.",
     imageSeed: "shanghai-jingan",
     href: "/destinations/shanghai/where-to-stay/jingan",
-    lat: 31.234,
-    lng: 121.446,
   },
   {
+    id: "xintiandi",
+    markerId: "xintiandi",
     name: "Xintiandi",
     vibe: "Modern luxury · Nightlife",
     desc: "Sleek dining, high-end hotels, and a polished night-out scene.",
     imageSeed: "shanghai-xintiandi",
     href: "/destinations/shanghai/where-to-stay/xintiandi",
-    lat: 31.219,
-    lng: 121.475,
   },
 ];
 
@@ -321,34 +322,121 @@ const localTips = [
 
 const allItems: FilterableItem[] = [
   // Attractions
-  { name: "The Bund", subtitle: "Shanghai's most iconic waterfront promenade with skyline views.", tag: "Free", imageSeed: "shanghai-bund", href: "/destinations/shanghai/what-to-do/bund", type: "attraction", filters: ["free", "historic", "modern", "nightlife", "landmark"], lat: 31.24, lng: 121.49 },
-  { name: "Yu Garden", subtitle: "A 400-year-old classical garden surrounded by a lively bazaar.", tag: "¥40", imageSeed: "shanghai-yugarden", href: "/destinations/shanghai/what-to-do/yu-garden", type: "attraction", filters: ["budget", "historic", "family", "landmark"], lat: 31.227, lng: 121.492 },
-  { name: "French Concession", subtitle: "Tree-lined avenues, Art Deco villas, and charming cafés.", tag: "Free", imageSeed: "shanghai-frenchconcession", href: "/destinations/shanghai/what-to-do/french-concession", type: "attraction", filters: ["free", "local", "historic", "landmark"], lat: 31.21, lng: 121.46 },
-  { name: "Shanghai Tower", subtitle: "The world's second-tallest building with a jaw-dropping observation deck.", tag: "¥180", imageSeed: "shanghai-tower", href: "/destinations/shanghai/what-to-do/shanghai-tower", type: "attraction", filters: ["premium", "modern", "landmark"], lat: 31.2355, lng: 121.5015 },
-  { name: "Tianzifang", subtitle: "Winding alleyways packed with studios, galleries, and craft shops.", tag: "Free", imageSeed: "shanghai-tianzifang", href: "/destinations/shanghai/what-to-do", type: "attraction", filters: ["free", "local", "historic"], lat: 31.203, lng: 121.468 },
-  { name: "Jade Buddha Temple", subtitle: "Serene Buddhist temple housing two stunning white jade Buddhas.", tag: "¥20", imageSeed: "shanghai-jadebuddha", href: "/destinations/shanghai/what-to-do", type: "attraction", filters: ["budget", "historic", "landmark"], lat: 31.223, lng: 121.442 },
+  { id: "bund-attraction", markerId: "bund", name: "The Bund", subtitle: "Shanghai's most iconic waterfront promenade with skyline views.", tag: "Free", imageSeed: "shanghai-bund", href: "/destinations/shanghai/what-to-do/bund", type: "attraction", filters: ["free", "historic", "modern", "nightlife", "landmark"] },
+  { id: "yu-garden-attraction", markerId: "yu-garden", name: "Yu Garden", subtitle: "A 400-year-old classical garden surrounded by a lively bazaar.", tag: "¥40", imageSeed: "shanghai-yugarden", href: "/destinations/shanghai/what-to-do/yu-garden", type: "attraction", filters: ["budget", "historic", "family", "landmark"] },
+  { id: "french-concession-attraction", markerId: "french-concession", name: "French Concession", subtitle: "Tree-lined avenues, Art Deco villas, and charming cafés.", tag: "Free", imageSeed: "shanghai-frenchconcession", href: "/destinations/shanghai/what-to-do/french-concession", type: "attraction", filters: ["free", "local", "historic", "landmark"] },
+  { id: "shanghai-tower-attraction", markerId: "shanghai-tower", name: "Shanghai Tower", subtitle: "The world's second-tallest building with a jaw-dropping observation deck.", tag: "¥180", imageSeed: "shanghai-tower", href: "/destinations/shanghai/what-to-do/shanghai-tower", type: "attraction", filters: ["premium", "modern", "landmark"] },
+  { id: "tianzifang-attraction", markerId: "tianzifang", name: "Tianzifang", subtitle: "Winding alleyways packed with studios, galleries, and craft shops.", tag: "Free", imageSeed: "shanghai-tianzifang", href: "/destinations/shanghai/what-to-do", type: "attraction", filters: ["free", "local", "historic"] },
+  { id: "jade-buddha-attraction", markerId: "jade-buddha", name: "Jade Buddha Temple", subtitle: "Serene Buddhist temple housing two stunning white jade Buddhas.", tag: "¥20", imageSeed: "shanghai-jadebuddha", href: "/destinations/shanghai/what-to-do", type: "attraction", filters: ["budget", "historic", "landmark"] },
   // Food
-  { name: "Xiaolongbao", subtitle: "Shanghai's iconic soup dumplings", tag: "Street Food · ¥30", imageSeed: "xiaolongbao", href: "/destinations/shanghai/where-to-eat/xiaolongbao", type: "food", filters: ["budget", "local", "food"], lat: 31.225, lng: 121.475 },
-  { name: "Shengjianbao", subtitle: "Pan-fried buns with a crispy bottom", tag: "Street Food · ¥15", imageSeed: "shengjianbao", href: "/destinations/shanghai/where-to-eat/shengjianbao", type: "food", filters: ["budget", "local", "food"], lat: 31.238, lng: 121.488 },
-  { name: "Hairy Crab", subtitle: "Autumn delicacy from nearby Yangcheng Lake", tag: "Seasonal · ¥200+", imageSeed: "hairy-crab", href: "/destinations/shanghai/where-to-eat/hairy-crab", type: "food", filters: ["premium", "food"], lat: 31.215, lng: 121.49 },
-  { name: "Scallion Oil Noodles", subtitle: "Simple, fragrant, and deeply comforting", tag: "Restaurant · ¥25–40", imageSeed: "scallion-noodles", href: "/destinations/shanghai/where-to-eat/scallion-oil-noodles", type: "food", filters: ["budget", "local", "food"], lat: 31.232, lng: 121.455 },
+  { id: "xiaolongbao-food", markerId: "xiaolongbao", name: "Xiaolongbao", subtitle: "Shanghai's iconic soup dumplings", tag: "Street Food · ¥30", imageSeed: "xiaolongbao", href: "/destinations/shanghai/where-to-eat/xiaolongbao", type: "food", filters: ["budget", "local", "food"] },
+  { id: "shengjianbao-food", markerId: "shengjianbao", name: "Shengjianbao", subtitle: "Pan-fried buns with a crispy bottom", tag: "Street Food · ¥15", imageSeed: "shengjianbao", href: "/destinations/shanghai/where-to-eat/shengjianbao", type: "food", filters: ["budget", "local", "food"] },
+  { id: "hairy-crab-food", markerId: "hairy-crab", name: "Hairy Crab", subtitle: "Autumn delicacy from nearby Yangcheng Lake", tag: "Seasonal · ¥200+", imageSeed: "hairy-crab", href: "/destinations/shanghai/where-to-eat/hairy-crab", type: "food", filters: ["premium", "food"] },
+  { id: "scallion-noodles-food", markerId: "scallion-oil-noodles", name: "Scallion Oil Noodles", subtitle: "Simple, fragrant, and deeply comforting", tag: "Restaurant · ¥25–40", imageSeed: "scallion-noodles", href: "/destinations/shanghai/where-to-eat/scallion-oil-noodles", type: "food", filters: ["budget", "local", "food"] },
   // Stay
-  { name: "Bund Area", subtitle: "Iconic skyline · Historic architecture · Perfect for first-timers", imageSeed: "shanghai-bund-area", href: "/destinations/shanghai/where-to-stay/bund-area", type: "stay", filters: ["midrange", "historic", "nightlife", "stay"], lat: 31.245, lng: 121.492 },
-  { name: "French Concession", subtitle: "Cafés & boutiques · Tree-lined streets · Most walkable", imageSeed: "shanghai-french-concession-stay", href: "/destinations/shanghai/where-to-stay/french-concession", type: "stay", filters: ["midrange", "local", "historic", "stay"], lat: 31.208, lng: 121.458 },
-  { name: "Jing'an", subtitle: "Local life · Metro hub · Central base", imageSeed: "shanghai-jingan", href: "/destinations/shanghai/where-to-stay/jingan", type: "stay", filters: ["budget", "local", "stay"], lat: 31.234, lng: 121.446 },
-  { name: "Xintiandi", subtitle: "Modern luxury · Nightlife · Sleek dining", imageSeed: "shanghai-xintiandi", href: "/destinations/shanghai/where-to-stay/xintiandi", type: "stay", filters: ["premium", "modern", "nightlife", "stay"], lat: 31.219, lng: 121.475 },
+  { id: "bund-area-stay", markerId: "bund", name: "Bund Area", subtitle: "Iconic skyline · Historic architecture · Perfect for first-timers", imageSeed: "shanghai-bund-area", href: "/destinations/shanghai/where-to-stay/bund-area", type: "stay", filters: ["midrange", "historic", "nightlife", "stay"] },
+  { id: "french-concession-stay", markerId: "french-concession", name: "French Concession", subtitle: "Cafés & boutiques · Tree-lined streets · Most walkable", imageSeed: "shanghai-french-concession-stay", href: "/destinations/shanghai/where-to-stay/french-concession", type: "stay", filters: ["midrange", "local", "historic", "stay"] },
+  { id: "jingan-stay", markerId: "jingan", name: "Jing'an", subtitle: "Local life · Metro hub · Central base", imageSeed: "shanghai-jingan", href: "/destinations/shanghai/where-to-stay/jingan", type: "stay", filters: ["budget", "local", "stay"] },
+  { id: "xintiandi-stay", markerId: "xintiandi", name: "Xintiandi", subtitle: "Modern luxury · Nightlife · Sleek dining", imageSeed: "shanghai-xintiandi", href: "/destinations/shanghai/where-to-stay/xintiandi", type: "stay", filters: ["premium", "modern", "nightlife", "stay"] },
   // Info
-  { name: "Internet", subtitle: "VPNs required. Download before landing.", imageSeed: "", href: "/china-basics/how-to-get-internet", type: "info", icon: Wifi, filters: ["practical"] },
-  { name: "Payment", subtitle: "Alipay & WeChat Pay dominate. Cash rarely needed.", imageSeed: "", href: "/china-basics/what-apps-to-use/payment", type: "info", icon: CreditCard, filters: ["practical"] },
-  { name: "Transport", subtitle: "Metro is excellent. DiDi for taxis.", imageSeed: "", href: "/china-basics/how-to-get-around", type: "info", icon: TrainFront, filters: ["practical"] },
-  { name: "Apps", subtitle: "Download Alipay, DiDi, Amap before you go.", imageSeed: "", href: "/china-basics/what-apps-to-use", type: "info", icon: Smartphone, filters: ["practical"] },
-  { name: "Visa", subtitle: "Most Western nationals: 15–30 day visa-free or e-visa.", imageSeed: "", href: "/china-basics/how-china-differs/visa-guide", type: "info", icon: ShieldCheck, filters: ["practical"] },
-  { name: "Weather", subtitle: "Best time: March–May, September–November.", imageSeed: "", href: "/plan-your-trip/best-time-to-visit", type: "info", icon: Thermometer, filters: ["practical"] },
+  { id: "info-internet", name: "Internet", subtitle: "VPNs required. Download before landing.", imageSeed: "", href: "/china-basics/how-to-get-internet", type: "info", icon: Wifi, filters: ["practical"] },
+  { id: "info-payment", name: "Payment", subtitle: "Alipay & WeChat Pay dominate. Cash rarely needed.", imageSeed: "", href: "/china-basics/what-apps-to-use/payment", type: "info", icon: CreditCard, filters: ["practical"] },
+  { id: "info-transport", name: "Transport", subtitle: "Metro is excellent. DiDi for taxis.", imageSeed: "", href: "/china-basics/how-to-get-around", type: "info", icon: TrainFront, filters: ["practical"] },
+  { id: "info-apps", name: "Apps", subtitle: "Download Alipay, DiDi, Amap before you go.", imageSeed: "", href: "/china-basics/what-apps-to-use", type: "info", icon: Smartphone, filters: ["practical"] },
+  { id: "info-visa", name: "Visa", subtitle: "Most Western nationals: 15–30 day visa-free or e-visa.", imageSeed: "", href: "/china-basics/how-china-differs/visa-guide", type: "info", icon: ShieldCheck, filters: ["practical"] },
+  { id: "info-weather", name: "Weather", subtitle: "Best time: March–May, September–November.", imageSeed: "", href: "/plan-your-trip/best-time-to-visit", type: "info", icon: Thermometer, filters: ["practical"] },
   // Tips
-  { name: "Plum Rain Season", subtitle: "June–July brings muggy, rainy weather. Pack extra socks and a travel umbrella.", imageSeed: "", href: "/destinations/shanghai/local-tips", type: "tip", icon: CloudRain, filters: ["practical"] },
-  { name: "Taxi Pro Tip", subtitle: "Shanghai taxis are cheap, but drivers rarely speak English. Use DiDi with English interface instead.", imageSeed: "", href: "/destinations/shanghai/local-tips", type: "tip", icon: Car, filters: ["practical"] },
-  { name: "Bund After Dark", subtitle: "The Bund is free and best at night. Skip the overpriced tourist tunnel — walk or take the metro instead.", imageSeed: "", href: "/destinations/shanghai/local-tips", type: "tip", icon: Moon, filters: ["free", "nightlife", "practical"] },
-  { name: "Metro & Maps", subtitle: "Metro stops have English signs. Google Maps works with a VPN; Amap is the best local alternative.", imageSeed: "", href: "/destinations/shanghai/local-tips", type: "tip", icon: Map, filters: ["practical"] },
+  { id: "tip-plum-rain", name: "Plum Rain Season", subtitle: "June–July brings muggy, rainy weather. Pack extra socks and a travel umbrella.", imageSeed: "", href: "/destinations/shanghai/local-tips", type: "tip", icon: CloudRain, filters: ["practical"] },
+  { id: "tip-taxi", name: "Taxi Pro Tip", subtitle: "Shanghai taxis are cheap, but drivers rarely speak English. Use DiDi with English interface instead.", imageSeed: "", href: "/destinations/shanghai/local-tips", type: "tip", icon: Car, filters: ["practical"] },
+  { id: "tip-bund-night", name: "Bund After Dark", subtitle: "The Bund is free and best at night. Skip the overpriced tourist tunnel — walk or take the metro instead.", imageSeed: "", href: "/destinations/shanghai/local-tips", type: "tip", icon: Moon, filters: ["free", "nightlife", "practical"] },
+  { id: "tip-metro-maps", name: "Metro & Maps", subtitle: "Metro stops have English signs. Google Maps works with a VPN; Amap is the best local alternative.", imageSeed: "", href: "/destinations/shanghai/local-tips", type: "tip", icon: Map, filters: ["practical"] },
+];
+
+const mapMarkers: MarkerLocation[] = [
+  {
+    id: "bund",
+    name: "The Bund",
+    lat: 31.24,
+    lng: 121.49,
+    categories: ["attraction", "stay"],
+  },
+  {
+    id: "yu-garden",
+    name: "Yu Garden",
+    lat: 31.227,
+    lng: 121.492,
+    categories: ["attraction"],
+  },
+  {
+    id: "french-concession",
+    name: "French Concession",
+    lat: 31.21,
+    lng: 121.46,
+    categories: ["attraction", "stay"],
+  },
+  {
+    id: "shanghai-tower",
+    name: "Shanghai Tower",
+    lat: 31.2355,
+    lng: 121.5015,
+    categories: ["attraction"],
+  },
+  {
+    id: "tianzifang",
+    name: "Tianzifang",
+    lat: 31.203,
+    lng: 121.468,
+    categories: ["attraction"],
+  },
+  {
+    id: "jade-buddha",
+    name: "Jade Buddha Temple",
+    lat: 31.223,
+    lng: 121.442,
+    categories: ["attraction"],
+  },
+  {
+    id: "xiaolongbao",
+    name: "Xiaolongbao",
+    lat: 31.225,
+    lng: 121.475,
+    categories: ["eat"],
+  },
+  {
+    id: "shengjianbao",
+    name: "Shengjianbao",
+    lat: 31.238,
+    lng: 121.488,
+    categories: ["eat"],
+  },
+  {
+    id: "hairy-crab",
+    name: "Hairy Crab",
+    lat: 31.215,
+    lng: 121.49,
+    categories: ["eat"],
+  },
+  {
+    id: "scallion-oil-noodles",
+    name: "Scallion Oil Noodles",
+    lat: 31.232,
+    lng: 121.455,
+    categories: ["eat"],
+  },
+  {
+    id: "jingan",
+    name: "Jing'an",
+    lat: 31.234,
+    lng: 121.446,
+    categories: ["stay"],
+  },
+  {
+    id: "xintiandi",
+    name: "Xintiandi",
+    lat: 31.219,
+    lng: 121.475,
+    categories: ["stay"],
+  },
 ];
 
 const filterGroups = [
@@ -915,6 +1003,8 @@ export default function ShanghaiSuperClient() {
   const [isMapView, setIsMapView] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [activeFilters, setActiveFilters] = useState<FilterTag[]>([]);
+  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+  const hoverTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const isFiltering = searchQuery.length > 0 || activeFilters.length > 0;
 
   // Hide the main site navbar on this hub page
@@ -969,6 +1059,23 @@ export default function ShanghaiSuperClient() {
       .filter((t) => groups[t]?.length)
       .map((t) => ({ type: t, label: typeLabels[t], items: groups[t] }));
   }, [filteredItems]);
+
+  const handleHoverEnter = useCallback((key: string) => {
+    if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
+    setHoveredItem(key);
+  }, []);
+
+  const handleHoverLeave = useCallback(() => {
+    hoverTimeoutRef.current = setTimeout(() => {
+      setHoveredItem(null);
+    }, 300);
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-white">
@@ -1118,8 +1225,12 @@ export default function ShanghaiSuperClient() {
           <div className="space-y-4">
             <MapViewSection
               allItems={allItems}
+              markers={mapMarkers}
               searchQuery={searchQuery}
               activeFilters={activeFilters}
+              hoveredItem={hoveredItem}
+              onHoverEnter={handleHoverEnter}
+              onHoverLeave={handleHoverLeave}
             />
           </div>
         )}

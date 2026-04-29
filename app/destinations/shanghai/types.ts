@@ -16,6 +16,16 @@ export interface UnifiedLocation {
   defaultCategory: CategoryKey;
 }
 
+export type MarkerCategory = "attraction" | "eat" | "stay";
+
+export interface MarkerLocation {
+  id: string;
+  name: string;
+  lat: number;
+  lng: number;
+  categories: MarkerCategory[];
+}
+
 export interface MetroStation {
   name: string;
   lat: number;
