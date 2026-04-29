@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
-import GuideArticlePage from '@/components/GuideArticlePage'
+import Link from 'next/link'
+import Breadcrumb from '@/components/Breadcrumb'
+import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
 
 export const metadata: Metadata = {
@@ -11,186 +13,222 @@ export const metadata: Metadata = {
 const vpnProviders = [
   {
     name: 'ExpressVPN',
-    initials: 'EX',
-    color: 'bg-red-600',
-    badge: '⭐ Best for China',
-    badgeColor: 'bg-amber-100 text-amber-800',
-    platforms: '📱📱💻',
-    price: '$6.67–$12.95/month',
+    price: '$6.67-$12.95/month',
     description:
       'The most reliable option for China. ExpressVPN has dedicated teams monitoring the Great Firewall and pushing updates within hours when blocks happen. Speeds are fast enough for video calls and streaming. It works on iOS, Android, Windows, macOS, and even routers.',
   },
   {
     name: 'NordVPN',
-    initials: 'NR',
-    color: 'bg-blue-600',
-    badge: '',
-    badgeColor: '',
-    platforms: '📱📱💻',
-    price: '$3.79–$12.99/month',
+    price: '$3.79-$12.99/month',
     description:
-      'A solid alternative with obfuscated servers specifically designed to hide VPN traffic from deep-packet inspection. NordVPN is slightly cheaper than ExpressVPN and offers a huge server network. Turn on "Obfuscated Servers" in the settings before you connect from China.',
+      'A solid alternative with obfuscated servers specifically designed to hide VPN traffic from deep-packet inspection. NordVPN is slightly cheaper than ExpressVPN and offers a huge server network. Turn on obfuscated servers in the settings before you connect from China.',
   },
   {
     name: 'Surfshark',
-    initials: 'SS',
-    color: 'bg-teal-500',
-    badge: '💰 Budget Pick',
-    badgeColor: 'bg-green-100 text-green-800',
-    platforms: '📱📱💻',
-    price: '$2.19–$15.45/month',
+    price: '$2.19-$15.45/month',
     description:
       'The best budget pick. Surfshark allows unlimited devices on one account, so you can share it with your travel partner. It uses Camouflage Mode to mask VPN traffic. Speeds are decent, though slightly less consistent than ExpressVPN during peak blocking periods.',
   },
   {
     name: 'Astrill',
-    initials: 'AS',
-    color: 'bg-indigo-600',
-    badge: '🛡️ Best Backup',
-    badgeColor: 'bg-purple-100 text-purple-800',
-    platforms: '📱📱💻',
-    price: '$10.00–$30.00/month',
+    price: '$10.00-$30.00/month',
     description:
       'Expensive, but when nothing else works, Astrill usually still connects. It is the go-to VPN for expats living in China long-term. The StealthVPN and OpenWeb protocols are specifically built to evade the Great Firewall. If you are traveling during a politically sensitive period or other VPNs are down, Astrill is your backup plan.',
   },
 ]
 
 const setupSteps = [
-  { num: '①', text: 'Download BEFORE you fly', icon: '✈️' },
-  { num: '②', text: 'Install on ALL devices', icon: '📱💻' },
-  { num: '③', text: 'Test connection', icon: '✓' },
-  { num: '④', text: 'Screenshot your login', icon: '📸' },
-  { num: '⑤', text: "You're ready for China!", icon: '🇨🇳' },
+  'Download the VPN before you fly. Once you are in China, VPN websites are blocked, so you will not be able to sign up or download the installer.',
+  'Install it on every device you plan to use, including your phone, laptop, and tablet.',
+  'Log in and test the connection while you still have uncensored internet. Make sure you can connect to a server, browse a blocked site like Google, and get decent speeds.',
+  'Screenshot your login credentials and any support contact info, then save them somewhere accessible offline.',
+  'Write down the server locations that worked best. Japan, Singapore, and Hong Kong are usually the fastest from mainland China.',
 ]
 
-const tocItems = [
-  { id: 'why-need-vpn', title: 'Why You Need a VPN' },
-  { id: 'best-vpns', title: 'Best VPNs for China' },
-  { id: 'setup', title: 'Setup Guide' },
-  { id: 'alternatives', title: 'Alternatives' },
+const relatedArticles = [
+  {
+    title: 'How to Get Internet in China',
+    description: 'eSIM, physical SIM, and Wi-Fi options for staying connected.',
+    href: '/china-basics/how-to-get-internet',
+  },
+  {
+    title: 'Censorship in China',
+    description: 'What is blocked and how to prepare for the Great Firewall.',
+    href: '/china-basics/how-china-differs/censorship',
+  },
+  {
+    title: 'Airalo eSIM Guide',
+    description: 'Set up data before you land with an Airalo eSIM.',
+    href: '/china-basics/how-to-get-internet/airalo-esim',
+  },
 ]
 
 export default function VpnGuidePage() {
   return (
-    <div>
-      <GuideArticlePage
-        icon="/images/icons/expressvpn.svg"
-        heroImage={{ src: "https://picsum.photos/seed/vpn-china-travel/800/400", alt: "Using VPN in China" }}
-        breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'China Basics', href: '/china-basics' }, { label: 'What Apps to Use', href: '/china-basics/what-apps-to-use' }, { label: 'VPN' }]}
-        category="What Apps to Use"
-        title="VPN Guide for China"
-        intro="If you are heading to China and rely on Google Maps, WhatsApp, Instagram, or Gmail, you need a VPN. The Great Firewall blocks most Western apps and websites, and once you are inside China, you can not even visit VPN websites to download one. Set it up before you leave."
-        hook="You need a VPN in China. The internet is censored — Google, WhatsApp, Instagram, and YouTube are all blocked. Download and install BEFORE you land, because you can not access VPN websites from inside China."
-        quickInfo="Free plans available · iOS + Android + Desktop · Must download before arrival"
-        tocItems={tocItems}
-        relatedArticles={[
-          { title: 'How to Get Internet in China', description: 'eSIM, physical SIM, and Wi-Fi options for staying connected.', href: '/china-basics/how-to-get-internet' },
-          { title: 'Censorship in China', description: 'What is blocked and how to prepare for the Great Firewall.', href: '/china-basics/how-china-differs/censorship' },
-          { title: 'Airalo eSIM Guide', description: 'Set up data before you land with an Airalo eSIM.', href: '/china-basics/how-to-get-internet/airalo-esim' },
-        ]}
-        related={[
-          { label: 'How to Get Internet', href: '/china-basics/how-to-get-internet' },
-          { label: 'eSIM Guide', href: '/china-basics/how-to-get-internet/esim' },
-          { label: 'Communication App', href: '/china-basics/what-apps-to-use/communication' },
-        ]}
-      >
-        {
-          <>
-            <div>
-              <h2 id="why-need-vpn" className="text-2xl font-extrabold text-slate-900">Why you need a VPN in China</h2>
-              <p className="mt-4 text-sm leading-relaxed text-slate-700 md:text-base">
-                China blocks most of the internet you use every day. Google, Gmail, Google Maps, YouTube, Instagram, WhatsApp, Facebook, Twitter, and even Wikipedia are inaccessible without a VPN. I have been to China four times, and every single time I have watched other travelers panic at the airport because nothing on their phone works anymore.
-              </p>
-              <p className="mt-4 text-sm leading-relaxed text-slate-700 md:text-base">
-                It is not just social media. If you use Google Maps for navigation, you will be lost without a VPN — literally. Your WhatsApp messages to family back home will not go through. Work emails on Gmail will not sync. You will try to look up a restaurant review and hit a dead wall. A VPN is not a nice-to-have in China; it is the difference between a smooth trip and a frustrating one.
-              </p>
-              <p className="mt-4 text-sm leading-relaxed text-slate-700 md:text-base">
-                Here is the catch: not every VPN works in China. The Great Firewall actively detects and blocks VPN traffic, and cheap or free VPNs are usually the first to go down. You need a provider that invests in staying ahead of the blocks. I will list the ones that have worked reliably for me and other travelers below.
-              </p>
-            </div>
+    <div
+      className="min-h-screen"
+      style={{
+        background:
+          'linear-gradient(0deg, rgba(245,241,234,0.02) 0%, rgba(245,241,234,0.02) 100%), #ffffff',
+      }}
+    >
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <div className="mb-6">
+          <Breadcrumb
+            items={[
+              { label: 'Home', href: '/' },
+              { label: 'China Basics', href: '/china-basics' },
+              { label: 'What Apps to Use', href: '/china-basics/what-apps-to-use' },
+              { label: 'VPN' },
+            ]}
+          />
+        </div>
 
-            <div className="mt-8">
-              <h2 id="best-vpns" className="text-2xl font-extrabold text-slate-900">Best VPNs for China</h2>
-              <p className="mt-4 text-sm leading-relaxed text-slate-700 md:text-base">
-                These four VPNs have the best track record for working inside China. Prices and reliability change over time — the Great Firewall evolves constantly — so what works today might need a protocol tweak tomorrow. All four offer money-back guarantees, so you can test risk-free.
-              </p>
+        <header className="mb-8 relative">
+          <ChineseWatermark character="网" />
+          <h1 className="relative z-10 mb-3 text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-[var(--foreground)]">
+            VPN Guide for China
+          </h1>
+          <div className="relative z-10 mt-3 flex items-center gap-2 text-[var(--muted)]">
+            <span className="text-2xl">翻墙</span>
+            <span className="text-lg">• China Basics • What Apps to Use</span>
+          </div>
+        </header>
 
-              <div className="mt-6 space-y-4">
-                {vpnProviders.map((vpn) => (
-                  <div key={vpn.name} className="rounded-xl border border-slate-200 bg-slate-50 p-5">
-                    <div className="flex items-center gap-3">
-                      <div className={`flex h-12 w-12 items-center justify-center rounded-xl ${vpn.color} text-sm font-bold text-white`}>
-                        {vpn.initials}
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2">
-                          <h3 className="text-lg font-extrabold text-slate-900">{vpn.name}</h3>
-                          {vpn.badge && (
-                            <span className={`rounded-full px-3 py-0.5 text-xs font-bold ${vpn.badgeColor}`}>
-                              {vpn.badge}
-                            </span>
-                          )}
-                        </div>
-                      </div>
-                    </div>
-                    <p className="mt-3 text-sm leading-relaxed text-slate-700 md:text-base">
-                      {vpn.description}
-                    </p>
-                    <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-slate-600">
-                      <span className="font-bold text-slate-800">{vpn.price}</span>
-                      <span className="flex items-center gap-1">{vpn.platforms}</span>
-                    </div>
-                  </div>
-                ))}
+        <div className="mb-6 flex flex-wrap items-center gap-x-2 gap-y-1 rounded-lg border border-[var(--line)] bg-[var(--surface)] px-4 py-3 text-sm sm:text-base text-[var(--foreground)]">
+          <span className="font-medium">Free plans available</span>
+          <span className="text-[var(--muted)]">·</span>
+          <span>iOS + Android + Desktop</span>
+          <span className="text-[var(--muted)]">·</span>
+          <span>Must download before arrival</span>
+        </div>
+
+        <p className="mb-10 max-w-4xl text-lg sm:text-xl leading-relaxed italic text-[var(--muted)]">
+          You need a VPN in China. The internet is censored, and Google, WhatsApp, Instagram, and YouTube are all blocked.
+          Download and install before you land, because you cannot access VPN websites from inside China.
+        </p>
+
+        <div className="mb-10">
+          <img
+            src="https://picsum.photos/seed/vpn-china-travel/1600/900"
+            alt="Using VPN in China"
+            className="h-64 w-full rounded-lg object-cover md:h-96"
+          />
+          <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
+        </div>
+
+        <section className="mb-10">
+          <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">Why You Need This</h2>
+          <div className="prose prose-lg max-w-none text-[var(--foreground)]">
+            <p>
+              China blocks most of the internet you use every day. Google, Gmail, Google Maps, YouTube, Instagram,
+              WhatsApp, Facebook, Twitter, and even Wikipedia are inaccessible without a VPN. Travelers often realize this
+              only after landing, when the apps they rely on suddenly stop working.
+            </p>
+            <p>
+              It is not just social media. If you use Google Maps for navigation, you will be lost without a VPN. Your
+              WhatsApp messages to family back home will not go through. Work emails on Gmail will not sync. Looking up a
+              restaurant review or finding a saved place can turn into a dead end.
+            </p>
+            <p>
+              The catch is that not every VPN works in China. The Great Firewall actively detects and blocks VPN traffic, and
+              cheap or free VPNs are usually the first to fail. You need a provider that treats China as a serious support
+              case rather than an afterthought.
+            </p>
+          </div>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">Best VPNs for China</h2>
+          <div className="prose prose-lg max-w-none text-[var(--foreground)]">
+            <p>
+              These four VPNs have the best track record for working inside China. Prices and reliability change over time,
+              so treat these as the short list to start with and test before departure.
+            </p>
+          </div>
+
+          {vpnProviders.map((vpn) => (
+            <div key={vpn.name} className="mt-8">
+              <h3 className="mb-3 text-xl sm:text-2xl font-serif font-bold text-[var(--foreground)]">{vpn.name}</h3>
+              <div className="prose prose-lg max-w-none text-[var(--foreground)]">
+                <p>
+                  <strong>Price:</strong> {vpn.price}
+                </p>
+                <p>{vpn.description}</p>
               </div>
-
-              <p className="mt-5 text-sm italic text-slate-500">
-                VPN reliability in China changes constantly. Providers that work today may face blocks tomorrow. That is why having a backup VPN installed is smart.
-              </p>
             </div>
+          ))}
 
-            <div className="mt-8">
-              <h2 id="setup" className="text-2xl font-extrabold text-slate-900">How to set up your VPN before you travel</h2>
-              <div className="mt-4 flex flex-col items-start gap-0">
-                {setupSteps.map((step, i) => (
-                  <div key={i} className="flex w-full items-start">
-                    <div className="flex flex-col items-center">
-                      <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-china-red bg-red-50 text-xl font-black text-china-red shadow-sm">
-                        <span>{step.num}</span>
-                      </div>
-                      {i < setupSteps.length - 1 && (
-                        <div className="h-8 w-0.5 bg-china-red/40" />
-                      )}
-                    </div>
-                    <div className="ml-4 flex-1 rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-                      <div className="flex items-center gap-2">
-                        <span className="text-lg">{step.icon}</span>
-                        <span className="text-sm font-bold text-slate-800 md:text-base">{step.text}</span>
-                      </div>
-                    </div>
+          <blockquote className="mt-8 border-l-4 border-[var(--primary)] pl-4 italic text-[var(--muted)]">
+            VPN reliability in China changes constantly. Having a backup VPN installed is smart, especially during holidays
+            or politically sensitive periods.
+          </blockquote>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">
+            How to Set Up Your VPN Before You Travel
+          </h2>
+          <ol className="list-decimal pl-6 space-y-4 text-[var(--foreground)]">
+            {setupSteps.map((step, index) => (
+              <li key={step} className="leading-relaxed">
+                <p>{step}</p>
+                {index === 1 && (
+                  <div className="mt-3">
+                    <img
+                      src="https://picsum.photos/seed/vpn-install-devices/800/1200"
+                      alt="VPN installed on multiple devices"
+                      className="mx-auto w-full max-w-md rounded-lg object-cover"
+                    />
+                    <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
                   </div>
-                ))}
-              </div>
-              <p className="mt-6 text-sm leading-relaxed text-slate-700 md:text-base">
-                Download your VPN app before you leave home. Once you are in China, VPN websites are blocked — you will not be able to sign up or download the installer. Install the app on every device you plan to use: your phone, your laptop, and your tablet if you have one.
-              </p>
-              <p className="mt-4 text-sm leading-relaxed text-slate-700 md:text-base">
-                After installing, log in and test the connection while you still have uncensored internet. Make sure you can connect to a server, browse a blocked site like Google, and get decent speeds. Screenshot the login credentials and any support contact info, and save them somewhere accessible offline. Write down the server locations that worked best — Japan, Singapore, and Hong Kong are usually the fastest from mainland China.
-              </p>
+                )}
+                {index === 2 && (
+                  <div className="mt-3">
+                    <img
+                      src="https://picsum.photos/seed/vpn-test-connection/800/1200"
+                      alt="Testing VPN connection before travel"
+                      className="mx-auto w-full max-w-md rounded-lg object-cover"
+                    />
+                    <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
+                  </div>
+                )}
+              </li>
+            ))}
+          </ol>
+        </section>
 
-            </div>
+        <section className="mb-10">
+          <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">
+            Alternatives If You Cannot Get a VPN Working
+          </h2>
+          <div className="prose prose-lg max-w-none text-[var(--foreground)]">
+            <p>
+              Another option is roaming with your home SIM card. If your carrier offers international roaming in China, your
+              traffic routes through your home network and bypasses the Great Firewall entirely. The downside is cost:
+              roaming data is expensive, and speeds can be slow.
+            </p>
+            <p>
+              It works well as an emergency backup to check email or send a WhatsApp message, but it is not the best setup
+              for daily browsing, navigation, or streaming. Use it as the fallback plan, not the plan.
+            </p>
+          </div>
+        </section>
 
-            <div className="mt-8">
-              <h2 id="alternatives" className="text-2xl font-extrabold text-slate-900">Alternatives if you can not get a VPN working</h2>
-              <p className="mt-4 text-sm leading-relaxed text-slate-700 md:text-base">
-                Another option is roaming with your home SIM card. If your carrier offers international roaming in China, your traffic routes through your home network and bypasses the Great Firewall entirely. The downside is cost — roaming data is expensive, and speeds can be slow. It is useful as an emergency backup to check email or send a WhatsApp message, but not for everyday browsing.
-              </p>
-            </div>
-          </>
-        }
-      </GuideArticlePage>
+        <section className="border-t border-[#ebe4d8] pt-8">
+          <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">Related Articles</h2>
+          <div className="divide-y divide-[#ebe4d8]">
+            {relatedArticles.map((article) => (
+              <Link key={article.href} href={article.href} className="block py-4 transition-opacity hover:opacity-80">
+                <h3 className="text-lg font-serif font-bold text-[var(--foreground)]">{article.title}</h3>
+                <p className="mt-1 text-[var(--muted)]">{article.description}</p>
+              </Link>
+            ))}
+          </div>
+        </section>
+      </main>
 
-      <div className="max-w-6xl mx-auto px-4 mt-8">
+      <div className="mx-auto mt-8 max-w-6xl px-4">
         <ContextualCTA
           icon="🔒"
           title="Don't Wait Until You Land"
