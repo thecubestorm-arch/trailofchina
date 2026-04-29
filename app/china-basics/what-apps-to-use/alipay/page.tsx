@@ -100,6 +100,15 @@ export default function AlipayPage() {
           Foreigners can now link international Visa and Mastercard directly in Alipay, with no Chinese bank account needed.
         </p>
 
+        <div className="mb-10">
+          <img
+            src="https://picsum.photos/seed/alipay-hero/1600/900"
+            alt="Alipay app interface"
+            className="h-64 w-full rounded-lg object-cover md:h-96"
+          />
+          <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
+        </div>
+
         <section className="mb-10">
           <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)] mb-4">
             Why You Need This
@@ -128,11 +137,41 @@ export default function AlipayPage() {
             Step-by-Step Setup
           </h2>
           <ol className="list-decimal pl-6 space-y-4 text-[var(--foreground)]">
-            {setupSteps.map((step) => (
+            {setupSteps.map((step, index) => (
               <li key={step.title} className="leading-relaxed">
                 <p>
                   <strong>{step.title}.</strong> {step.description}
                 </p>
+                {index === 1 && (
+                  <div className="mt-3">
+                    <img
+                      src="https://picsum.photos/seed/alipay-add-card/800/1200"
+                      alt="Alipay Add Card screen"
+                      className="mx-auto w-full max-w-md rounded-lg object-cover"
+                    />
+                    <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
+                  </div>
+                )}
+                {index === 2 && (
+                  <div className="mt-3">
+                    <img
+                      src="https://picsum.photos/seed/alipay-verification/800/1200"
+                      alt="Alipay identity verification screen"
+                      className="mx-auto w-full max-w-md rounded-lg object-cover"
+                    />
+                    <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
+                  </div>
+                )}
+                {index === 3 && (
+                  <div className="mt-3">
+                    <img
+                      src="https://picsum.photos/seed/alipay-qr-scan/800/1200"
+                      alt="Alipay QR payment screen"
+                      className="mx-auto w-full max-w-md rounded-lg object-cover"
+                    />
+                    <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
+                  </div>
+                )}
               </li>
             ))}
           </ol>
@@ -147,6 +186,15 @@ export default function AlipayPage() {
               Alipay is more than a payment wallet. Its mini-app ecosystem turns one familiar app into a practical control
               center for transport, deliveries, healthcare, and daily logistics across China.
             </p>
+          </div>
+
+          <div className="mt-6">
+            <img
+              src="https://picsum.photos/seed/alipay-miniapps/1600/900"
+              alt="Alipay mini-apps overview"
+              className="h-48 w-full rounded-lg object-cover md:h-64"
+            />
+            <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
           </div>
 
           <h3 className="text-xl sm:text-2xl font-serif font-bold text-[var(--foreground)] mt-8 mb-3">Transit tickets</h3>
@@ -203,6 +251,15 @@ export default function AlipayPage() {
               and activate the local transit code. After that, scan your QR code at the turnstile and the fare is charged
               automatically. It is often quicker than buying a single-use ticket, especially during rush hour.
             </p>
+          </div>
+
+          <div className="mt-6">
+            <img
+              src="https://picsum.photos/seed/alipay-transit-qr/640/960"
+              alt="Alipay transit QR code at subway turnstile"
+              className="mx-auto w-full max-w-sm rounded-lg object-cover"
+            />
+            <p className="mt-1 text-center text-xs text-[var(--muted)]">Replace with app screenshot</p>
           </div>
 
           <h3 className="text-xl sm:text-2xl font-serif font-bold text-[var(--foreground)] mt-8 mb-3">Buses</h3>
