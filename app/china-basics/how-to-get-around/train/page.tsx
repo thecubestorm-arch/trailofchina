@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
-import GuideArticlePage from '@/components/GuideArticlePage'
+import Link from 'next/link'
+import Breadcrumb from '@/components/Breadcrumb'
+import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
 
 export const metadata: Metadata = {
@@ -8,117 +10,205 @@ export const metadata: Metadata = {
     "Complete guide to booking and riding China's high-speed rail network. G-trains, D-trains, seat classes, booking, and station tips.",
 }
 
+const bookingSteps = [
+  'Download 12306 app. It is the official railway app, though the experience can still feel clunky for visitors.',
+  'Use Trip.com if you want an English option for foreigners and are willing to pay a small booking fee.',
+  'Buy at the station with your passport if needed, but queues can be long and popular departures may already be gone.',
+  'Book 30 days in advance on busy routes because the most convenient departures do sell out.',
+]
+
+const relatedArticles = [
+  {
+    title: '12306 Train Booking',
+    description: 'Book train tickets like a local.',
+    href: '/china-basics/how-to-get-around/12306',
+  },
+  {
+    title: 'How to Get Around',
+    description: 'All transportation options in China.',
+    href: '/china-basics/how-to-get-around',
+  },
+]
+
 export default function TrainPage() {
   return (
-    <div>
-      <GuideArticlePage
-        icon="🚄"
-        heroImage={{ src: 'https://picsum.photos/seed/china-high-speed-train/800/400', alt: 'High-speed train travel in China' }}
-        breadcrumbs={[
-          { label: 'Home', href: '/' },
-          { label: 'China Basics', href: '/china-basics' },
-          { label: 'How to Get Around', href: '/china-basics/how-to-get-around' },
-          { label: 'Train' },
-        ]}
-        category="How to Get Around"
-        title="High-Speed Trains"
-        intro="China's high-speed rail is the world's largest network, connecting virtually every major city. Trains reach 350 km/h (217 mph), making them faster than flying for many routes."
-        whyYouNeedThis={[
-          "China's high-speed rail is the world's largest network",
-          'It connects virtually every major city',
-          'Trains reach 350 km/h (217 mph)',
-          'For many routes, trains are faster than flying',
-        ]}
-        proTips={[
-          'Download offline maps before departure (tunnels block signal)',
-          'Bring snacks - station food is expensive',
-          'Second class is perfectly comfortable for most trips',
-          'Shanghai-Beijing: 4.5 hours by G-train vs 2.5 hour flight + airport time',
-          'Bullet trains are often MORE reliable than flights',
-        ]}
-        quickInfo="Best for intercity travel · Book up to 30 days ahead · Platforms close 5 minutes before departure"
-        tocItems={[
-          { id: 'train-types-explained', title: 'Train Types Explained' },
-          { id: 'how-to-book-tickets', title: 'How to Book Tickets' },
-          { id: 'seat-classes', title: 'Seat Classes' },
-          { id: 'at-the-station', title: 'At the Station' },
-          { id: 'watch-out-for', title: 'Watch Out For' },
-        ]}
-        relatedArticles={[
-          {
-            title: '12306 Train Booking',
-            description: 'Book train tickets like a local.',
-            href: '/china-basics/how-to-get-around/12306',
-          },
-          {
-            title: 'How to Get Around',
-            description: 'All transportation options in China.',
-            href: '/china-basics/how-to-get-around',
-          },
-        ]}
-      >
-        <section id="train-types-explained" className="space-y-4">
-          <h2 className="text-2xl font-extrabold text-slate-900">Train Types Explained</h2>
+    <div
+      className="min-h-screen"
+      style={{
+        background:
+          'linear-gradient(0deg, rgba(245,241,234,0.02) 0%, rgba(245,241,234,0.02) 100%), #ffffff',
+      }}
+    >
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <div className="mb-6">
+          <Breadcrumb
+            items={[
+              { label: 'Home', href: '/' },
+              { label: 'China Basics', href: '/china-basics' },
+              { label: 'How to Get Around', href: '/china-basics/how-to-get-around' },
+              { label: 'Train' },
+            ]}
+          />
+        </div>
 
-          <div className="space-y-4">
-            <div className="rounded-lg bg-green-50 p-4">
-              <h3 className="mb-2 text-lg font-semibold text-slate-900">🚄 G-Trains (Gaotie)</h3>
-              <p className="text-slate-700">Fastest trains - up to 350 km/h. Premium comfort, most expensive.</p>
-            </div>
+        <header className="mb-8 relative">
+          <ChineseWatermark character="车" />
+          <h1 className="relative z-10 mb-3 text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-[var(--foreground)]">
+            High-Speed Trains
+          </h1>
+          <div className="relative z-10 mt-3 flex items-center gap-2 text-[var(--muted)]">
+            <span className="text-2xl">高铁</span>
+            <span className="text-lg">• China Basics • How to Get Around</span>
+          </div>
+        </header>
 
-            <div className="rounded-lg bg-blue-50 p-4">
-              <h3 className="mb-2 text-lg font-semibold text-slate-900">🚅 D-Trains (Dongche)</h3>
-              <p className="text-slate-700">High-speed - up to 250 km/h. Good balance of speed and price.</p>
-            </div>
+        <div className="mb-6 flex flex-wrap items-center gap-x-2 gap-y-1 rounded-lg border border-[var(--line)] bg-[var(--surface)] px-4 py-3 text-sm sm:text-base text-[var(--foreground)]">
+          <span className="font-medium">Best for intercity travel</span>
+          <span className="text-[var(--muted)]">·</span>
+          <span>Book up to 30 days ahead</span>
+          <span className="text-[var(--muted)]">·</span>
+          <span>Platforms close 5 minutes before departure</span>
+        </div>
 
-            <div className="rounded-lg bg-amber-50 p-4">
-              <h3 className="mb-2 text-lg font-semibold text-slate-900">🚃 C/K/T/Z Trains</h3>
-              <p className="text-slate-700">Regular/sleeper trains. Slower but much cheaper. Good for overnight trips.</p>
+        <p className="mb-10 max-w-4xl text-lg sm:text-xl leading-relaxed italic text-[var(--muted)]">
+          China&apos;s high-speed rail is the world&apos;s largest network, connecting virtually every major city at speeds up to
+          350 km/h, and for many routes it beats flying once airport time is included.
+        </p>
+
+        <div className="mb-10">
+          <img
+            src="https://picsum.photos/seed/china-high-speed-train/1600/900"
+            alt="High-speed train travel in China"
+            className="h-64 w-full rounded-lg object-cover md:h-96"
+          />
+          <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
+        </div>
+
+        <section className="mb-10">
+          <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">Why You Need This</h2>
+          <div className="prose prose-lg max-w-none text-[var(--foreground)]">
+            <p>
+              China&apos;s high-speed rail is the world&apos;s largest network, and it connects virtually every major city in a way
+              that feels built for travelers who want efficiency rather than airport friction.
+            </p>
+            <p>
+              Trains reach 350 km/h, stations are usually closer to city centers than airports, and boarding is far more
+              predictable once you understand the system. For many common tourist routes, the train is simply the fastest
+              door-to-door option.
+            </p>
+          </div>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">Train Types Explained</h2>
+
+          <h3 className="mb-3 text-xl sm:text-2xl font-serif font-bold text-[var(--foreground)]">G-Trains (Gaotie)</h3>
+          <div className="prose prose-lg max-w-none text-[var(--foreground)]">
+            <p>These are the fastest trains, reaching up to 350 km/h. They offer premium comfort and the highest fares.</p>
+          </div>
+
+          <h3 className="mt-8 mb-3 text-xl sm:text-2xl font-serif font-bold text-[var(--foreground)]">D-Trains (Dongche)</h3>
+          <div className="prose prose-lg max-w-none text-[var(--foreground)]">
+            <p>These run up to 250 km/h and usually strike the best balance between speed and price for most travelers.</p>
+          </div>
+
+          <h3 className="mt-8 mb-3 text-xl sm:text-2xl font-serif font-bold text-[var(--foreground)]">C, K, T, and Z Trains</h3>
+          <div className="prose prose-lg max-w-none text-[var(--foreground)]">
+            <p>
+              These are regular or sleeper trains. They are slower but much cheaper, and they can make sense for overnight
+              routes where saving on a hotel matters more than speed.
+            </p>
+          </div>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">How to Book Tickets</h2>
+          <ol className="list-decimal pl-6 space-y-4 text-[var(--foreground)]">
+            {bookingSteps.map((step) => (
+              <li key={step} className="leading-relaxed">
+                {step}
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        <section className="mb-10">
+          <div className="mb-6">
+            <img
+              src="https://picsum.photos/seed/china-train-station/1600/900"
+              alt="China train station departure hall"
+              className="h-48 w-full rounded-lg object-cover md:h-64"
+            />
+            <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
+          </div>
+
+          <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">Seat Classes</h2>
+          <div className="prose prose-lg max-w-none text-[var(--foreground)]">
+            <p>
+              <strong>Business (商务座):</strong> lie-flat style seats, premium service, and prices that often start above
+              ¥1,000 on major routes.
+            </p>
+            <p>
+              <strong>First Class (一等座):</strong> a roomier 2+2 layout with more space, usually around 1.5 times the base
+              fare.
+            </p>
+            <p>
+              <strong>Second Class (二等座):</strong> the standard 2+3 layout and the default choice for most travelers because
+              it is comfortable and cost-effective.
+            </p>
+            <p>
+              On sleeper services, expect <strong>soft sleeper</strong> compartments with four beds or <strong>hard sleeper</strong>{' '}
+              compartments with six beds.
+            </p>
+          </div>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">At the Station</h2>
+          <ul className="list-disc pl-6 space-y-2 text-[var(--foreground)]">
+            <li>Arrive 30 minutes early, or 45 minutes early for very large stations.</li>
+            <li>Security screening is required and feels similar to an airport check.</li>
+            <li>Platform gates close 5 minutes before departure, so do not cut timing too fine.</li>
+            <li>Keep your ticket details available until arrival because checks can happen again on exit.</li>
+            <li>Food carts and hot water are available on all trains, which helps on longer rides.</li>
+          </ul>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">Pro Tips</h2>
+          <blockquote className="space-y-4 border-l-4 border-[var(--primary)] pl-4 italic text-[var(--muted)]">
+            <p>Download offline maps before departure because tunnels often block signal.</p>
+            <p>Bring snacks because station food is expensive.</p>
+            <p>Second class is perfectly comfortable for most trips.</p>
+            <p>Shanghai to Beijing takes about 4.5 hours by G-train versus a 2.5 hour flight plus airport transfers.</p>
+            <p>Bullet trains are often more reliable than flights.</p>
+          </blockquote>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">Watch Out For</h2>
+          <blockquote className="space-y-4 border-l-4 border-[var(--primary)] pl-4 italic text-[var(--muted)]">
+            <p>Booking through unofficial apps can cause ticketing problems or cancellations.</p>
+            <p>Train stations are huge, so allow extra time to find the correct hall and platform gate.</p>
+          </blockquote>
+        </section>
+
+        <section className="mb-10 border-t border-[#ebe4d8]">
+          <div className="pt-6">
+            <h2 className="mb-4 text-sm font-bold uppercase tracking-wider text-[var(--primary)]">Related Articles</h2>
+            <div className="divide-y divide-[#ebe4d8]">
+              {relatedArticles.map((article) => (
+                <Link key={article.href} href={article.href} className="block py-4 transition-colors hover:bg-[#faf8f4]">
+                  <h3 className="font-serif text-lg font-semibold text-[var(--foreground)] transition-colors hover:text-[var(--primary)]">
+                    {article.title}
+                  </h3>
+                  <p className="text-[var(--muted)] leading-relaxed">{article.description}</p>
+                </Link>
+              ))}
             </div>
           </div>
         </section>
 
-        <section id="how-to-book-tickets" className="space-y-4">
-          <h2 className="text-2xl font-extrabold text-slate-900">How to Book Tickets</h2>
-          <ol className="list-decimal space-y-3 pl-6 text-slate-700">
-            <li><strong>Download 12306 app</strong> - Official railway app (Chinese only)</li>
-            <li><strong>Use Trip.com</strong> - English option for foreigners, small fee</li>
-            <li><strong>Buy at station</strong> - Bring passport, queues can be long</li>
-            <li><strong>Book 30 days in advance</strong> - Popular routes sell out</li>
-          </ol>
-        </section>
-
-        <section id="seat-classes" className="space-y-4">
-          <h2 className="text-2xl font-extrabold text-slate-900">Seat Classes</h2>
-          <ul className="list-disc space-y-2 pl-5 text-slate-700">
-            <li><strong>Business (商务座):</strong> Lie-flat seats, premium service - ¥1,000+</li>
-            <li><strong>First Class (一等座):</strong> 2+2 seating, spacious - 1.5x base price</li>
-            <li><strong>Second Class (二等座):</strong> 2+3 seating, standard - base price</li>
-          </ul>
-          <p className="italic text-[#64748b]">Sleeper trains: Soft sleeper (4 beds), Hard sleeper (6 beds)</p>
-        </section>
-
-        <section id="at-the-station" className="space-y-4">
-          <h2 className="text-2xl font-extrabold text-slate-900">At the Station</h2>
-          <ul className="list-disc space-y-2 pl-5 text-slate-700">
-            <li>Arrive 30 minutes early (45 min for big stations)</li>
-            <li>Security check required - like airports</li>
-            <li>Platform gates close 5 minutes before departure</li>
-            <li>Keep ticket until arrival (checked on exit)</li>
-            <li>Food carts and hot water available on all trains</li>
-          </ul>
-        </section>
-
-        <section id="watch-out-for" className="rounded-2xl border border-[var(--accent)] bg-[var(--accent-soft)] p-6">
-          <h2 className="text-2xl font-extrabold text-[var(--accent-strong)]">Watch Out For</h2>
-          <ul className="mt-4 space-y-2 text-[var(--foreground)]">
-            <li>• Booking through unofficial apps cancels your seat</li>
-            <li>• Train stations are HUGE - allow extra time to find your platform</li>
-          </ul>
-        </section>
-      </GuideArticlePage>
-
-      <div className="mx-auto mt-8 max-w-6xl px-4">
         <ContextualCTA
           icon="🎫"
           title="Book Trains the Easy Way"
@@ -127,7 +217,7 @@ export default function TrainPage() {
           buttonHref="/china-basics/how-to-get-around/12306"
           variant="secondary"
         />
-      </div>
+      </main>
     </div>
   )
 }

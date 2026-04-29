@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
-import GuideArticlePage from '@/components/GuideArticlePage'
+import Link from 'next/link'
+import Breadcrumb from '@/components/Breadcrumb'
+import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
 
 export const metadata: Metadata = {
@@ -7,95 +9,157 @@ export const metadata: Metadata = {
   description: 'How to take traditional taxis in China. Tips for hailing, payment, and getting around.',
 }
 
+const relatedArticles = [
+  {
+    title: 'Didi Ride-Hailing',
+    description: "China's Uber — book rides from your phone.",
+    href: '/china-basics/how-to-get-around/didi',
+  },
+  {
+    title: 'How to Get Around',
+    description: 'All transportation options in China.',
+    href: '/china-basics/how-to-get-around',
+  },
+]
+
 export default function TaxiPage() {
   return (
-    <div>
-      <GuideArticlePage
-        icon="🚕"
-        heroImage={{ src: 'https://picsum.photos/seed/china-traditional-taxi/800/400', alt: 'Traditional taxis in China' }}
-        breadcrumbs={[
-          { label: 'Home', href: '/' },
-          { label: 'China Basics', href: '/china-basics' },
-          { label: 'How to Get Around', href: '/china-basics/how-to-get-around' },
-          { label: 'Taxi' },
-        ]}
-        category="How to Get Around"
-        title="Traditional Taxis"
-        intro="While DiDi (ride-hailing) is more convenient, traditional taxis are still plentiful and useful to know about, especially when your phone battery is low or you need a taxi immediately."
-        whyYouNeedThis={[
-          'Traditional taxis are still plentiful',
-          'They are useful when your phone battery is low',
-          'They are useful when you need a taxi immediately',
-          'They are a practical backup when DiDi is less convenient',
-        ]}
-        proTips={[
-          'Have your destination written in Chinese',
-          'Get a hotel business card to show drivers',
-          'Use Baidu Maps to follow the route',
-          'Rush hour (7-9am, 5-7pm) is hard to find taxis',
-          'Flag down taxis on streets going your direction',
-        ]}
-        quickInfo="Useful backup to DiDi · Cash always accepted · No tipping required"
-        tocItems={[
-          { id: 'types-of-taxis', title: 'Types of Taxis' },
-          { id: 'how-to-hail-a-taxi', title: 'How to Hail a Taxi' },
-          { id: 'payment-and-tipping', title: 'Payment & Tipping' },
-          { id: 'tips', title: 'Tips' },
-        ]}
-        relatedArticles={[
-          {
-            title: 'Didi Ride-Hailing',
-            description: "China's Uber — book rides from your phone.",
-            href: '/china-basics/how-to-get-around/didi',
-          },
-          {
-            title: 'How to Get Around',
-            description: 'All transportation options in China.',
-            href: '/china-basics/how-to-get-around',
-          },
-        ]}
-      >
-        <section id="types-of-taxis" className="space-y-4">
-          <h2 className="text-2xl font-extrabold text-slate-900">Types of Taxis</h2>
-          <ul className="list-disc space-y-2 pl-5 text-slate-700">
-            <li><strong>Standard taxis:</strong> Most common, different colors per city</li>
-            <li><strong>Electric taxis:</strong> Growing number, quieter, often newer</li>
-            <li><strong>Luxury taxis:</strong> Black with gold stripe, higher rates</li>
-            <li><strong>Minivans:</strong> For groups or lots of luggage</li>
-          </ul>
+    <div
+      className="min-h-screen"
+      style={{
+        background:
+          'linear-gradient(0deg, rgba(245,241,234,0.02) 0%, rgba(245,241,234,0.02) 100%), #ffffff',
+      }}
+    >
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <div className="mb-6">
+          <Breadcrumb
+            items={[
+              { label: 'Home', href: '/' },
+              { label: 'China Basics', href: '/china-basics' },
+              { label: 'How to Get Around', href: '/china-basics/how-to-get-around' },
+              { label: 'Taxi' },
+            ]}
+          />
+        </div>
+
+        <header className="mb-8 relative">
+          <ChineseWatermark character="的" />
+          <h1 className="relative z-10 mb-3 text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-[var(--foreground)]">
+            Traditional Taxis
+          </h1>
+          <div className="relative z-10 mt-3 flex items-center gap-2 text-[var(--muted)]">
+            <span className="text-2xl">出租车</span>
+            <span className="text-lg">• China Basics • How to Get Around</span>
+          </div>
+        </header>
+
+        <div className="mb-6 flex flex-wrap items-center gap-x-2 gap-y-1 rounded-lg border border-[var(--line)] bg-[var(--surface)] px-4 py-3 text-sm sm:text-base text-[var(--foreground)]">
+          <span className="font-medium">Useful backup to Didi</span>
+          <span className="text-[var(--muted)]">·</span>
+          <span>Cash always accepted</span>
+          <span className="text-[var(--muted)]">·</span>
+          <span>No tipping required</span>
+        </div>
+
+        <p className="mb-10 max-w-4xl text-lg sm:text-xl leading-relaxed italic text-[var(--muted)]">
+          When your battery is low, your app is acting up, or you need a ride immediately, knowing how traditional taxis work
+          is still useful even in a Didi-first travel routine.
+        </p>
+
+        <div className="mb-10">
+          <img
+            src="https://picsum.photos/seed/china-traditional-taxi/1600/900"
+            alt="Traditional taxis in China"
+            className="h-64 w-full rounded-lg object-cover md:h-96"
+          />
+          <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
+        </div>
+
+        <section className="mb-10">
+          <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">Why You Need This</h2>
+          <div className="prose prose-lg max-w-none text-[var(--foreground)]">
+            <p>
+              Traditional taxis are still plentiful in China, and they remain a practical fallback when ride-hailing is slow,
+              your phone battery is dying, or you need to leave immediately without waiting for a match.
+            </p>
+            <p>
+              They are also useful in moments when app-based destination entry becomes harder than simply showing a Chinese
+              address card to a driver.
+            </p>
+          </div>
         </section>
 
-        <section id="how-to-hail-a-taxi" className="space-y-4">
-          <h2 className="text-2xl font-extrabold text-slate-900">How to Hail a Taxi</h2>
-          <ol className="list-decimal space-y-3 pl-6 text-slate-700">
-            <li><strong>Hotel stands:</strong> Most reliable, drivers registered</li>
-            <li><strong>Street hailing:</strong> Wave at empty taxis (red light on dashboard)</li>
-            <li><strong>Taxi stands:</strong> At airports, train stations, major attractions</li>
-            <li><strong>Show destination:</strong> Have address in Chinese characters ready</li>
+        <section className="mb-10">
+          <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">Types of Taxis</h2>
+          <div className="prose prose-lg max-w-none text-[var(--foreground)]">
+            <p>
+              <strong>Standard taxis</strong> are the most common and often come in city-specific colors.
+              <strong> Electric taxis</strong> are increasingly common and tend to be quieter and newer.
+            </p>
+            <p>
+              <strong>Luxury taxis</strong> are often black with a gold stripe and charge higher rates, while
+              <strong> minivans</strong> are useful if you have a group or a lot of luggage.
+            </p>
+          </div>
+        </section>
+
+        <section className="mb-10">
+          <div className="mb-6">
+            <img
+              src="https://picsum.photos/seed/china-taxi-stand/1600/900"
+              alt="Taxi stand in China"
+              className="h-48 w-full rounded-lg object-cover md:h-64"
+            />
+            <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
+          </div>
+
+          <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">How to Hail a Taxi</h2>
+          <ol className="list-decimal pl-6 space-y-4 text-[var(--foreground)]">
+            <li>Use hotel taxi stands when possible because they are the most reliable and drivers are usually easier to coordinate with.</li>
+            <li>Wave at empty taxis on the street and check for the red dashboard light that shows the cab is available.</li>
+            <li>Look for official taxi stands at airports, train stations, and major attractions.</li>
+            <li>Have your destination ready in Chinese characters before you get in.</li>
           </ol>
         </section>
 
-        <section id="payment-and-tipping" className="space-y-4">
-          <h2 className="text-2xl font-extrabold text-slate-900">Payment &amp; Tipping</h2>
-          <ul className="list-disc space-y-2 pl-5 text-slate-700">
-            <li>Cash always accepted</li>
-            <li>WeChat Pay/Alipay increasingly common</li>
-            <li>Credit cards rarely accepted</li>
-            <li><strong>No tipping required</strong> - not part of Chinese culture</li>
-            <li>Round up to nearest yuan if you want to be nice</li>
+        <section className="mb-10">
+          <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">Payment &amp; Tipping</h2>
+          <ul className="list-disc pl-6 space-y-2 text-[var(--foreground)]">
+            <li>Cash is always accepted.</li>
+            <li>WeChat Pay and Alipay are increasingly common.</li>
+            <li>Credit cards are rarely accepted.</li>
+            <li>No tipping is required because it is not part of normal taxi culture.</li>
+            <li>If you want to be nice, rounding up to the nearest yuan is enough.</li>
           </ul>
         </section>
 
-        <section id="tips" className="rounded-2xl border border-[var(--accent)] bg-[var(--accent-soft)] p-6">
-          <h2 className="text-2xl font-extrabold text-[var(--accent-strong)]">Tips</h2>
-          <ul className="mt-4 space-y-2 text-[var(--foreground)]">
-            <li>• Insist on meter use - &quot;Dǎ biǎo&quot; (打表)</li>
-            <li>• Flag down taxis on streets going your direction</li>
-          </ul>
+        <section className="mb-10">
+          <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">Tips</h2>
+          <blockquote className="space-y-4 border-l-4 border-[var(--primary)] pl-4 italic text-[var(--muted)]">
+            <p>Have your destination written in Chinese and carry a hotel business card.</p>
+            <p>Use Baidu Maps to follow the route if you want extra confidence.</p>
+            <p>Rush hour from 7 to 9 AM and 5 to 7 PM can make street hailing much harder.</p>
+            <p>Flag down taxis on streets already moving in your direction, and insist on the meter with “Dǎ biǎo” (打表).</p>
+          </blockquote>
         </section>
-      </GuideArticlePage>
 
-      <div className="mx-auto mt-8 max-w-6xl px-4">
+        <section className="mb-10 border-t border-[#ebe4d8]">
+          <div className="pt-6">
+            <h2 className="mb-4 text-sm font-bold uppercase tracking-wider text-[var(--primary)]">Related Articles</h2>
+            <div className="divide-y divide-[#ebe4d8]">
+              {relatedArticles.map((article) => (
+                <Link key={article.href} href={article.href} className="block py-4 transition-colors hover:bg-[#faf8f4]">
+                  <h3 className="font-serif text-lg font-semibold text-[var(--foreground)] transition-colors hover:text-[var(--primary)]">
+                    {article.title}
+                  </h3>
+                  <p className="text-[var(--muted)] leading-relaxed">{article.description}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <ContextualCTA
           icon="📱"
           title="Use DiDi When You Can"
@@ -104,7 +168,7 @@ export default function TaxiPage() {
           buttonHref="/china-basics/how-to-get-around/didi"
           variant="secondary"
         />
-      </div>
+      </main>
     </div>
   )
 }

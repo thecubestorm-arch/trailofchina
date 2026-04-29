@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
-import GuideArticlePage from '@/components/GuideArticlePage'
+import Link from 'next/link'
+import Breadcrumb from '@/components/Breadcrumb'
+import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
 
 export const metadata: Metadata = {
@@ -7,148 +9,178 @@ export const metadata: Metadata = {
   description: 'Guide to renting a car in China. Requirements, rental companies, and driving tips.',
 }
 
-const tocItems = [
-  { id: 'requirements', title: 'Requirements' },
-  { id: 'rental-companies', title: 'Rental Companies' },
-  { id: 'driving-in-china', title: 'Driving in China' },
-  { id: 'costs', title: 'Costs' },
-  { id: 'when-to-rent', title: 'When to Rent' },
-  { id: 'consider-carefully', title: 'Consider Carefully' },
-]
-
-const quickInfoPills = [
-  'Economy car: ¥200-400 per day',
-  'Insurance: ¥50-100 per day',
-  'Best for remote areas',
+const relatedArticles = [
+  {
+    title: 'Didi Ride-Hailing',
+    description: 'Skip self-driving and let Didi handle it.',
+    href: '/china-basics/how-to-get-around/didi',
+  },
+  {
+    title: 'How to Get Around',
+    description: 'All transportation options in China.',
+    href: '/china-basics/how-to-get-around',
+  },
 ]
 
 export default function CarPage() {
   return (
-    <div>
-      <GuideArticlePage
-        icon="🚗"
-        heroImage={{ src: 'https://picsum.photos/seed/china-car-rental/800/400', alt: 'Car rental and driving in China' }}
-        breadcrumbs={[
-          { label: 'Home', href: '/' },
-          { label: 'China Basics', href: '/china-basics' },
-          { label: 'How to Get Around', href: '/china-basics/how-to-get-around' },
-          { label: 'Car' },
-        ]}
-        category="How to Get Around"
-        title="Car Rental"
-        intro="Renting a car gives maximum flexibility but is challenging in China. Most travelers prefer trains and ride-hailing, but cars are useful for remote areas."
-        whyYouNeedThis={[
-          'A rental car gives you maximum flexibility when public transport does not reach your destination well.',
-          'It is one of the few practical ways to visit remote rural areas, small villages, and scenic routes on your own schedule.',
-          'Families or groups may find private transport more convenient than coordinating trains, buses, and taxis.',
-          'Driving in China comes with major legal and practical hurdles, so you need to understand the tradeoffs before committing.',
-        ]}
-        related={[
-          { label: 'Didi Ride-Hailing', href: '/china-basics/how-to-get-around/didi' },
-          { label: 'How to Get Around', href: '/china-basics/how-to-get-around' },
-        ]}
-        relatedArticles={[
-          {
-            title: 'Didi Ride-Hailing',
-            description: 'Skip self-driving and let Didi handle it.',
-            href: '/china-basics/how-to-get-around/didi',
-          },
-          {
-            title: 'How to Get Around',
-            description: 'All transportation options in China.',
-            href: '/china-basics/how-to-get-around',
-          },
-        ]}
-        tocItems={tocItems}
-      >
-        <>
-          <div className="flex flex-wrap gap-3">
-            {quickInfoPills.map((pill) => (
-              <span
-                key={pill}
-                className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-semibold text-slate-700"
-              >
-                {pill}
-              </span>
-            ))}
+    <div
+      className="min-h-screen"
+      style={{
+        background:
+          'linear-gradient(0deg, rgba(245,241,234,0.02) 0%, rgba(245,241,234,0.02) 100%), #ffffff',
+      }}
+    >
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <div className="mb-6">
+          <Breadcrumb
+            items={[
+              { label: 'Home', href: '/' },
+              { label: 'China Basics', href: '/china-basics' },
+              { label: 'How to Get Around', href: '/china-basics/how-to-get-around' },
+              { label: 'Car' },
+            ]}
+          />
+        </div>
+
+        <header className="mb-8 relative">
+          <ChineseWatermark character="驾" />
+          <h1 className="relative z-10 mb-3 text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-[var(--foreground)]">
+            Car Rental
+          </h1>
+          <div className="relative z-10 mt-3 flex items-center gap-2 text-[var(--muted)]">
+            <span className="text-2xl">自驾</span>
+            <span className="text-lg">• China Basics • How to Get Around</span>
+          </div>
+        </header>
+
+        <div className="mb-6 flex flex-wrap items-center gap-x-2 gap-y-1 rounded-lg border border-[var(--line)] bg-[var(--surface)] px-4 py-3 text-sm sm:text-base text-[var(--foreground)]">
+          <span className="font-medium">Economy car ¥200 to ¥400 per day</span>
+          <span className="text-[var(--muted)]">·</span>
+          <span>Insurance ¥50 to ¥100 per day</span>
+          <span className="text-[var(--muted)]">·</span>
+          <span>Best for remote areas</span>
+        </div>
+
+        <p className="mb-10 max-w-4xl text-lg sm:text-xl leading-relaxed italic text-[var(--muted)]">
+          Renting a car gives maximum flexibility, but China is one of the places where the practical barriers matter enough
+          that most visitors should question the idea before committing.
+        </p>
+
+        <div className="mb-10">
+          <img
+            src="https://picsum.photos/seed/china-car-rental/1600/900"
+            alt="Car rental and driving in China"
+            className="h-64 w-full rounded-lg object-cover md:h-96"
+          />
+          <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
+        </div>
+
+        <section className="mb-10">
+          <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">Why You Need This</h2>
+          <div className="prose prose-lg max-w-none text-[var(--foreground)]">
+            <p>
+              A rental car gives you maximum flexibility when public transport does not reach your destination cleanly, and it
+              can make sense for remote rural areas, scenic routes, and small villages.
+            </p>
+            <p>
+              Families and groups sometimes find private transport more convenient than coordinating multiple trains, buses, and
+              taxis, but the legal and practical hurdles in China are significant enough that this is rarely the easiest option.
+            </p>
+          </div>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">Requirements</h2>
+          <ul className="list-disc pl-6 space-y-2 text-[var(--foreground)]">
+            <li>A valid foreign license plus an official translation.</li>
+            <li>Or a Chinese driver&apos;s license, which is difficult for short-term travelers to obtain.</li>
+            <li>A passport for registration.</li>
+            <li>A credit card for the deposit.</li>
+            <li>Minimum age requirements, often somewhere from 21 to 25 depending on the company.</li>
+          </ul>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">Rental Companies</h2>
+          <div className="prose prose-lg max-w-none text-[var(--foreground)]">
+            <p>
+              International chains like <strong>Avis</strong>, <strong>Hertz</strong>, and <strong>Enterprise</strong> are the
+              obvious starting point, especially at airports.
+            </p>
+            <p>
+              Local players like <strong>eHi (一嗨租车)</strong> and <strong>Shouqi (首汽租车)</strong> are often more relevant on the
+              ground, and Alipay also exposes some rental options through its own ecosystem.
+            </p>
+          </div>
+        </section>
+
+        <section className="mb-10">
+          <div className="mb-6">
+            <img
+              src="https://picsum.photos/seed/china-highway-driving/1600/900"
+              alt="Driving on a Chinese highway"
+              className="h-48 w-full rounded-lg object-cover md:h-64"
+            />
+            <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
           </div>
 
-          <div>
-            <h2 id="requirements" className="text-2xl font-extrabold text-slate-900">
-              Requirements
-            </h2>
-            <ul className="mt-4 space-y-3 text-sm leading-relaxed text-slate-700 md:text-base">
-              <li><strong>Valid foreign license</strong> plus official translation</li>
-              <li><strong>OR Chinese driver&apos;s license</strong> (difficult to obtain)</li>
-              <li><strong>Passport</strong> for registration</li>
-              <li><strong>Credit card</strong> for deposit</li>
-              <li><strong>Age:</strong> Usually 21-25+ depending on company</li>
-            </ul>
-          </div>
+          <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">Driving in China</h2>
+          <ul className="list-disc pl-6 space-y-2 text-[var(--foreground)]">
+            <li>You drive on the right side.</li>
+            <li>Traffic can be aggressive, so expect the unexpected.</li>
+            <li>GPS navigation is essential, with Baidu Maps often being the practical choice.</li>
+            <li>Speed cameras are everywhere.</li>
+            <li>Parking in cities can be frustrating.</li>
+            <li>Highways are generally excellent and well marked.</li>
+          </ul>
+        </section>
 
-          <div>
-            <h2 id="rental-companies" className="text-2xl font-extrabold text-slate-900">
-              Rental Companies
-            </h2>
-            <ul className="mt-4 space-y-3 text-sm leading-relaxed text-slate-700 md:text-base">
-              <li><strong>Avis, Hertz, Enterprise:</strong> International chains, airport locations</li>
-              <li><strong>eHi (一嗨租车):</strong> Major local company, English website</li>
-              <li><strong>Shouqi (首汽租车):</strong> Government-backed, reliable</li>
-              <li><strong>Alibaba&apos;s car rental:</strong> Through Alipay app</li>
-            </ul>
-          </div>
+        <section className="mb-10">
+          <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">Costs</h2>
+          <ul className="list-disc pl-6 space-y-2 text-[var(--foreground)]">
+            <li>Economy car: roughly ¥200 to ¥400 per day.</li>
+            <li>Insurance: roughly ¥50 to ¥100 per day and highly recommended.</li>
+            <li>Toll roads: around ¥0.5 to ¥1 per kilometer on highways.</li>
+            <li>Gas: broadly similar to US or European prices.</li>
+            <li>Parking: about ¥10 to ¥50 per day in cities.</li>
+          </ul>
+        </section>
 
-          <div>
-            <h2 id="driving-in-china" className="text-2xl font-extrabold text-slate-900">
-              Driving in China
-            </h2>
-            <ul className="mt-4 space-y-3 text-sm leading-relaxed text-slate-700 md:text-base">
-              <li>Drive on the <strong>right</strong> side</li>
-              <li>Traffic is aggressive - expect the unexpected</li>
-              <li>GPS navigation essential (Baidu Maps)</li>
-              <li>Speed cameras everywhere</li>
-              <li>Parking can be challenging in cities</li>
-              <li>Highways are excellent and well-marked</li>
-            </ul>
-          </div>
+        <section className="mb-10">
+          <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">When to Rent</h2>
+          <blockquote className="space-y-4 border-l-4 border-[var(--primary)] pl-4 italic text-[var(--muted)]">
+            <p>Rent a car for rural areas such as parts of Guilin, Yunnan, or other scenic regions where public transport is patchy.</p>
+            <p>It can also make sense for families or for itineraries that involve multiple small villages.</p>
+            <p>Avoid it if you are staying mainly in big cities because the tradeoff is rarely worth it.</p>
+          </blockquote>
+        </section>
 
-          <div>
-            <h2 id="costs" className="text-2xl font-extrabold text-slate-900">
-              Costs
-            </h2>
-            <ul className="mt-4 space-y-3 text-sm leading-relaxed text-slate-700 md:text-base">
-              <li>Economy car: ¥200-400 per day</li>
-              <li>Insurance: ¥50-100 per day (highly recommended)</li>
-              <li>Toll roads: ¥0.5-1 per km on highways</li>
-              <li>Gas: Similar to US/European prices</li>
-              <li>Parking: ¥10-50 per day in cities</li>
-            </ul>
-          </div>
+        <section className="mb-10">
+          <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">Consider Carefully</h2>
+          <blockquote className="space-y-4 border-l-4 border-[var(--primary)] pl-4 italic text-[var(--muted)]">
+            <p>Traffic accidents are common, and local driving style can feel chaotic if you are not used to it.</p>
+            <p>Road signs are still often Chinese-first, and some cities have traffic restrictions tied to license plate rules.</p>
+            <p>For many travelers, hiring a driver for roughly ¥500 to ¥800 per day is the better compromise.</p>
+          </blockquote>
+        </section>
 
-          <div id="when-to-rent" className="rounded-2xl border border-amber-200 bg-amber-50 p-6">
-            <h2 className="text-2xl font-extrabold text-amber-900">When to Rent</h2>
-            <ul className="mt-4 space-y-3 text-sm leading-relaxed text-amber-950 md:text-base">
-              <li>Exploring rural areas (Guilin, Yunnan, Tibet)</li>
-              <li>Traveling with family (more convenient)</li>
-              <li>Visiting multiple small villages</li>
-              <li>Avoid if staying mainly in big cities</li>
-            </ul>
+        <section className="mb-10 border-t border-[#ebe4d8]">
+          <div className="pt-6">
+            <h2 className="mb-4 text-sm font-bold uppercase tracking-wider text-[var(--primary)]">Related Articles</h2>
+            <div className="divide-y divide-[#ebe4d8]">
+              {relatedArticles.map((article) => (
+                <Link key={article.href} href={article.href} className="block py-4 transition-colors hover:bg-[#faf8f4]">
+                  <h3 className="font-serif text-lg font-semibold text-[var(--foreground)] transition-colors hover:text-[var(--primary)]">
+                    {article.title}
+                  </h3>
+                  <p className="text-[var(--muted)] leading-relaxed">{article.description}</p>
+                </Link>
+              ))}
+            </div>
           </div>
+        </section>
 
-          <div id="consider-carefully" className="rounded-2xl border border-[#ebe4d8] bg-[#faf8f4] p-6">
-            <h2 className="text-2xl font-extrabold text-slate-900">Consider Carefully</h2>
-            <ul className="mt-4 space-y-3 text-sm leading-relaxed text-slate-700 md:text-base">
-              <li>Traffic accidents are common</li>
-              <li>Chinese driving style is chaotic</li>
-              <li>Road signs mostly in Chinese</li>
-              <li>Cities have traffic restrictions (license plate rules)</li>
-              <li>Alternative: Hire a driver (¥500-800/day)</li>
-            </ul>
-          </div>
-        </>
-      </GuideArticlePage>
-
-      <div className="max-w-6xl mx-auto px-4 mt-8">
         <ContextualCTA
           icon="🚕"
           title="Prefer Not to Drive Yourself?"
@@ -157,7 +189,7 @@ export default function CarPage() {
           buttonHref="/china-basics/how-to-get-around/didi"
           variant="secondary"
         />
-      </div>
+      </main>
     </div>
   )
 }

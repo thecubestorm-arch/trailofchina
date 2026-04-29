@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
+import Breadcrumb from '@/components/Breadcrumb'
+import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
-import GuideArticlePage from '@/components/GuideArticlePage'
 
 export const metadata: Metadata = {
   title: 'Getting Between Cities in China | Trail of China',
@@ -8,174 +10,210 @@ export const metadata: Metadata = {
     "High-speed train routes, flight comparisons, and booking tips for traveling between Beijing, Shanghai, Xi'an, Chengdu, and Chongqing.",
 }
 
-const tocItems = [
-  { id: 'why-high-speed-rail-wins', title: 'Why High-Speed Rail Wins' },
-  { id: 'top-routes-for-tourists', title: 'Top Routes for Tourists' },
-  { id: 'pro-tips', title: 'Pro Tips' },
-  { id: 'watch-out-for', title: 'Watch Out For' },
-]
-
-const quickInfoPills = [
-  'Best for routes under 5 hours',
-  'Book 15 days ahead',
-  'Trip.com is easiest for foreigners',
+const relatedArticles = [
+  {
+    title: 'Trip.com Booking',
+    description: 'Book hotels, trains, and flights in English with foreign cards.',
+    href: '/plan-your-trip/booking/trip',
+  },
+  {
+    title: '12306 Train Booking',
+    description: 'Book train tickets like a local.',
+    href: '/china-basics/how-to-get-around/12306',
+  },
+  {
+    title: 'High-Speed Trains',
+    description: 'Complete guide to G-trains, D-trains, seat classes, and station tips.',
+    href: '/china-basics/how-to-get-around/train',
+  },
+  {
+    title: 'Preplanned Trips',
+    description: 'Ready-made itineraries with city-to-city routes included.',
+    href: '/plan-your-trip/preplanned-trips',
+  },
 ]
 
 export default function CityToCityPage() {
   return (
-    <div>
-      <GuideArticlePage
-        icon="🚄"
-        heroImage={{ src: 'https://picsum.photos/seed/china-city-to-city-rail/800/400', alt: 'High-speed rail travel between Chinese cities' }}
-        breadcrumbs={[
-          { label: 'Home', href: '/' },
-          { label: 'China Basics', href: '/china-basics' },
-          { label: 'How to Get Around', href: '/china-basics/how-to-get-around' },
-          { label: 'City-to-City' },
-        ]}
-        category="How to Get Around"
-        title="Getting Between Cities"
-        intro="China's high-speed rail network is the world's largest and most efficient way to travel between cities. Here are the most popular routes for tourists, with times, prices, and booking tips."
-        whyYouNeedThis={[
-          "China's intercity transport system can save huge amounts of time if you choose the right mode for each route.",
-          'High-speed rail is often faster door-to-door than flying once airport transfers and security are included.',
-          'Popular tourist corridors have frequent service, but tickets can still sell out quickly around weekends and holidays.',
-          'Knowing which routes are best by train versus plane helps you avoid expensive and unnecessary travel friction.',
-        ]}
-        relatedArticles={[
-          {
-            title: 'Trip.com Booking',
-            description: 'Book hotels, trains, and flights in English with foreign cards.',
-            href: '/plan-your-trip/booking/trip',
-          },
-          {
-            title: '12306 Train Booking',
-            description: 'Book train tickets like a local.',
-            href: '/china-basics/how-to-get-around/12306',
-          },
-          {
-            title: 'High-Speed Trains',
-            description: 'Complete guide to G-trains, D-trains, seat classes, and station tips.',
-            href: '/china-basics/how-to-get-around/train',
-          },
-          {
-            title: 'Preplanned Trips',
-            description: 'Ready-made itineraries with city-to-city routes included.',
-            href: '/plan-your-trip/preplanned-trips',
-          },
-        ]}
-        tocItems={tocItems}
-      >
-        <>
-          <div className="flex flex-wrap gap-3">
-            {quickInfoPills.map((pill) => (
-              <span
-                key={pill}
-                className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-semibold text-slate-700"
-              >
-                {pill}
-              </span>
-            ))}
+    <div
+      className="min-h-screen"
+      style={{
+        background:
+          'linear-gradient(0deg, rgba(245,241,234,0.02) 0%, rgba(245,241,234,0.02) 100%), #ffffff',
+      }}
+    >
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <div className="mb-6">
+          <Breadcrumb
+            items={[
+              { label: 'Home', href: '/' },
+              { label: 'China Basics', href: '/china-basics' },
+              { label: 'How to Get Around', href: '/china-basics/how-to-get-around' },
+              { label: 'City-to-City' },
+            ]}
+          />
+        </div>
+
+        <header className="mb-8 relative">
+          <ChineseWatermark character="城" />
+          <h1 className="relative z-10 mb-3 text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-[var(--foreground)]">
+            Getting Between Cities
+          </h1>
+          <div className="relative z-10 mt-3 flex items-center gap-2 text-[var(--muted)]">
+            <span className="text-2xl">城际</span>
+            <span className="text-lg">• China Basics • How to Get Around</span>
+          </div>
+        </header>
+
+        <div className="mb-6 flex flex-wrap items-center gap-x-2 gap-y-1 rounded-lg border border-[var(--line)] bg-[var(--surface)] px-4 py-3 text-sm sm:text-base text-[var(--foreground)]">
+          <span className="font-medium">Best for routes under 5 hours</span>
+          <span className="text-[var(--muted)]">·</span>
+          <span>Book 15 days ahead</span>
+          <span className="text-[var(--muted)]">·</span>
+          <span>Trip.com is easiest for foreigners</span>
+        </div>
+
+        <p className="mb-10 max-w-4xl text-lg sm:text-xl leading-relaxed italic text-[var(--muted)]">
+          China&apos;s intercity transport is good enough that the wrong decision usually comes from overestimating flights and
+          underestimating how efficient high-speed rail is once you include the entire trip, not just the scheduled travel time.
+        </p>
+
+        <div className="mb-10">
+          <img
+            src="https://picsum.photos/seed/china-city-to-city-rail/1600/900"
+            alt="High-speed rail travel between Chinese cities"
+            className="h-64 w-full rounded-lg object-cover md:h-96"
+          />
+          <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
+        </div>
+
+        <section className="mb-10">
+          <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">Why You Need This</h2>
+          <div className="prose prose-lg max-w-none text-[var(--foreground)]">
+            <p>
+              China&apos;s intercity network can save huge amounts of time if you choose the right mode for each route. High-speed
+              rail is often faster door-to-door than flying once airport transfers and security are counted honestly.
+            </p>
+            <p>
+              Popular tourist corridors run frequently, but tickets still sell out around weekends and holidays, so knowing when
+              the train wins and when the plane actually makes sense prevents avoidable friction.
+            </p>
+          </div>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">Why High-Speed Rail Wins</h2>
+          <div className="prose prose-lg max-w-none text-[var(--foreground)]">
+            <p>
+              High-speed trains are usually the right call for routes under five hours. Second class is comfortable enough that
+              first class is not worth the upgrade for most travelers, and stations are typically far more central than airports.
+            </p>
+            <p>
+              Trip.com is the easiest way for foreigners to book in English with foreign credit cards, but the core advantage is
+              the network itself rather than the app: frequent departures and city-center arrival points change the equation.
+            </p>
+          </div>
+        </section>
+
+        <section className="mb-10">
+          <div className="mb-6">
+            <img
+              src="https://picsum.photos/seed/china-route-board/1600/900"
+              alt="Intercity route board in China"
+              className="h-48 w-full rounded-lg object-cover md:h-64"
+            />
+            <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
           </div>
 
-          <div>
-            <h2 id="why-high-speed-rail-wins" className="text-2xl font-extrabold text-slate-900">
-              Why High-Speed Rail Wins
-            </h2>
-            <ul className="mt-4 space-y-3 text-sm leading-relaxed text-slate-700 md:text-base">
-              <li>🚄 High-speed trains are faster than flying for routes under 5 hours (including airport time)</li>
-              <li>💺 Second class is comfortable — first class isn&apos;t worth the upgrade for most routes</li>
-              <li>📱 Book on Trip.com in English with foreign credit cards</li>
-              <li>🏛️ Train stations are central — airports are 30-60 minutes outside the city</li>
-            </ul>
+          <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">Top Routes for Tourists</h2>
+
+          <h3 className="mb-3 text-xl sm:text-2xl font-serif font-bold text-[var(--foreground)]">Beijing ↔ Shanghai</h3>
+          <div className="prose prose-lg max-w-none text-[var(--foreground)]">
+            <p>
+              The high-speed train takes about 4.5 hours and roughly ¥550 to ¥1,750 from second class to business class, with
+              G-trains departing every 15 to 30 minutes. Flights take about 2 hours and can run from ¥400 to ¥1,200, but once
+              you add airport time, the train usually wins for convenience.
+            </p>
           </div>
 
-          <div>
-            <h2 id="top-routes-for-tourists" className="text-2xl font-extrabold text-slate-900">
-              Top Routes for Tourists
-            </h2>
+          <h3 className="mt-8 mb-3 text-xl sm:text-2xl font-serif font-bold text-[var(--foreground)]">Beijing ↔ Xi&apos;an</h3>
+          <div className="prose prose-lg max-w-none text-[var(--foreground)]">
+            <p>
+              High-speed rail takes about 4.5 to 6 hours and roughly ¥515 to ¥1,650. Flights take about 2 hours and often run
+              from ¥300 to ¥800, but the train is usually the better tourist choice because it goes directly city-center to
+              city-center and gives you a more relaxed trip.
+            </p>
+          </div>
 
-            <div className="mt-4 space-y-4">
-              <div className="rounded-lg bg-green-50 p-4">
-                <h3 className="text-lg font-semibold text-slate-900">🚄 Beijing ↔ Shanghai</h3>
-                <ul className="mt-2 space-y-1 text-sm leading-relaxed text-slate-700 md:text-base">
-                  <li><strong>High-speed train:</strong> 4.5 hours, ¥550-1,750 (second class to business)</li>
-                  <li>G-trains depart every 15-30 minutes</li>
-                  <li><strong>Flight:</strong> 2 hours, ¥400-1,200 — but add 2+ hours for airports</li>
-                  <li><strong>Winner:</strong> Train for convenience, flight only if continuing south</li>
-                </ul>
-              </div>
+          <h3 className="mt-8 mb-3 text-xl sm:text-2xl font-serif font-bold text-[var(--foreground)]">Shanghai ↔ Hangzhou</h3>
+          <div className="prose prose-lg max-w-none text-[var(--foreground)]">
+            <p>
+              The high-speed train takes about 1 hour and roughly ¥70 to ¥220, with departures every 5 to 10 minutes during
+              the day. This is a train route every time. Flying is not a serious competitor.
+            </p>
+          </div>
 
-              <div className="rounded-lg bg-blue-50 p-4">
-                <h3 className="text-lg font-semibold text-slate-900">🚄 Beijing ↔ Xi&apos;an</h3>
-                <ul className="mt-2 space-y-1 text-sm leading-relaxed text-slate-700 md:text-base">
-                  <li><strong>High-speed train:</strong> 4.5-6 hours, ¥515-1,650</li>
-                  <li><strong>Flight:</strong> 2 hours, ¥300-800</li>
-                  <li><strong>Winner:</strong> Train (direct to city center, scenic views)</li>
-                </ul>
-              </div>
+          <h3 className="mt-8 mb-3 text-xl sm:text-2xl font-serif font-bold text-[var(--foreground)]">Chengdu ↔ Chongqing</h3>
+          <div className="prose prose-lg max-w-none text-[var(--foreground)]">
+            <p>
+              The train takes about 1.5 hours and roughly ¥150 to ¥460 with frequent departures across several station pairs.
+              This is another route where the train is the clear answer.
+            </p>
+          </div>
 
-              <div className="rounded-lg bg-amber-50 p-4">
-                <h3 className="text-lg font-semibold text-slate-900">🚄 Shanghai ↔ Hangzhou</h3>
-                <ul className="mt-2 space-y-1 text-sm leading-relaxed text-slate-700 md:text-base">
-                  <li><strong>High-speed train:</strong> 1 hour, ¥70-220</li>
-                  <li>Every 5-10 minutes during the day</li>
-                  <li><strong>Winner:</strong> Always train — faster than flying even counting airport time</li>
-                </ul>
-              </div>
+          <h3 className="mt-8 mb-3 text-xl sm:text-2xl font-serif font-bold text-[var(--foreground)]">Xi&apos;an ↔ Chengdu</h3>
+          <div className="prose prose-lg max-w-none text-[var(--foreground)]">
+            <p>
+              High-speed rail takes about 3.5 to 4 hours and roughly ¥263 to ¥790, while flights take about 1.5 hours and can
+              cost around ¥300 to ¥700. Either works here: choose the train for scenery and simplicity, or the flight if every
+              hour matters.
+            </p>
+          </div>
 
-              <div className="rounded-lg bg-purple-50 p-4">
-                <h3 className="text-lg font-semibold text-slate-900">🚄 Chengdu ↔ Chongqing</h3>
-                <ul className="mt-2 space-y-1 text-sm leading-relaxed text-slate-700 md:text-base">
-                  <li><strong>High-speed train:</strong> 1.5 hours, ¥150-460</li>
-                  <li>Frequent departures, multiple station pairs</li>
-                  <li><strong>Winner:</strong> Always train</li>
-                </ul>
-              </div>
+          <h3 className="mt-8 mb-3 text-xl sm:text-2xl font-serif font-bold text-[var(--foreground)]">Beijing ↔ Chengdu</h3>
+          <div className="prose prose-lg max-w-none text-[var(--foreground)]">
+            <p>
+              The train takes about 7.5 hours and roughly ¥560 to ¥1,780, while flights take about 2.5 hours and can cost
+              around ¥400 to ¥1,200. This is one of the routes where flying usually makes more sense unless you specifically
+              want the long rail journey.
+            </p>
+          </div>
+        </section>
 
-              <div className="rounded-lg bg-teal-50 p-4">
-                <h3 className="text-lg font-semibold text-slate-900">🚄 Xi&apos;an ↔ Chengdu</h3>
-                <ul className="mt-2 space-y-1 text-sm leading-relaxed text-slate-700 md:text-base">
-                  <li><strong>High-speed train:</strong> 3.5-4 hours, ¥263-790</li>
-                  <li>Scenic mountain route</li>
-                  <li><strong>Flight:</strong> 1.5 hours, ¥300-700</li>
-                  <li><strong>Winner:</strong> Either works — train for scenery, flight for speed</li>
-                </ul>
-              </div>
+        <section className="mb-10">
+          <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">Pro Tips</h2>
+          <blockquote className="space-y-4 border-l-4 border-[var(--primary)] pl-4 italic text-[var(--muted)]">
+            <p>Book train tickets 15 days ahead because they sell out fast, especially on weekends and holidays.</p>
+            <p>G-trains are the fastest, while D-trains are slower but sometimes cheaper.</p>
+            <p>Always arrive at the station 30 to 45 minutes early because security checks take time.</p>
+            <p>Chinese train stations are huge, so check the departure hall number on the boards.</p>
+          </blockquote>
+        </section>
 
-              <div className="rounded-lg bg-red-50 p-4">
-                <h3 className="text-lg font-semibold text-slate-900">🚄 Beijing ↔ Chengdu</h3>
-                <ul className="mt-2 space-y-1 text-sm leading-relaxed text-slate-700 md:text-base">
-                  <li><strong>High-speed train:</strong> 7.5 hours, ¥560-1,780</li>
-                  <li><strong>Flight:</strong> 2.5 hours, ¥400-1,200</li>
-                  <li><strong>Winner:</strong> Flight (train too long unless you want the scenery)</li>
-                </ul>
-              </div>
+        <section className="mb-10">
+          <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">Watch Out For</h2>
+          <blockquote className="space-y-4 border-l-4 border-[var(--primary)] pl-4 italic text-[var(--muted)]">
+            <p>Beijing has multiple major train stations, so verify the exact departure station carefully.</p>
+            <p>Shanghai Hongqiao Station is for trains, not the airport itself, even though the two are connected.</p>
+          </blockquote>
+        </section>
+
+        <section className="mb-10 border-t border-[#ebe4d8]">
+          <div className="pt-6">
+            <h2 className="mb-4 text-sm font-bold uppercase tracking-wider text-[var(--primary)]">Related Articles</h2>
+            <div className="divide-y divide-[#ebe4d8]">
+              {relatedArticles.map((article) => (
+                <Link key={article.href} href={article.href} className="block py-4 transition-colors hover:bg-[#faf8f4]">
+                  <h3 className="font-serif text-lg font-semibold text-[var(--foreground)] transition-colors hover:text-[var(--primary)]">
+                    {article.title}
+                  </h3>
+                  <p className="text-[var(--muted)] leading-relaxed">{article.description}</p>
+                </Link>
+              ))}
             </div>
           </div>
+        </section>
 
-          <div id="pro-tips" className="rounded-2xl border border-amber-200 bg-amber-50 p-6">
-            <h2 className="text-2xl font-extrabold text-amber-900">Pro Tips</h2>
-            <ul className="mt-4 space-y-3 text-sm leading-relaxed text-amber-950 md:text-base">
-              <li>Book train tickets 15 days ahead — they sell out fast, especially weekends and holidays</li>
-              <li>G-trains (G字头) are the fastest, D-trains (D字头) are slower but cheaper</li>
-              <li>Trip.com is the easiest way for foreigners to book — English interface, foreign cards accepted</li>
-              <li>Always arrive at the station 30-45 minutes early — security checks take time</li>
-              <li>Chinese train stations are HUGE — check your departure hall (候车厅) number on the screens</li>
-            </ul>
-          </div>
-
-          <div id="watch-out-for" className="rounded-2xl border border-[#ebe4d8] bg-[#faf8f4] p-6">
-            <h2 className="text-2xl font-extrabold text-slate-900">Watch Out For</h2>
-            <ul className="mt-4 space-y-3 text-sm leading-relaxed text-slate-700 md:text-base">
-              <li>Beijing has multiple train stations — check which one your train departs from</li>
-              <li>Shanghai Hongqiao Station is for trains, not the airport (though they&apos;re connected)</li>
-            </ul>
-          </div>
-        </>
-      </GuideArticlePage>
-
-      <div className="max-w-6xl mx-auto px-4 mt-8">
         <ContextualCTA
           icon="🚄"
           title="Book Trains Easily with Trip.com"
@@ -184,7 +222,7 @@ export default function CityToCityPage() {
           buttonHref="/china-basics/what-apps-to-use/trip-com"
           variant="secondary"
         />
-      </div>
+      </main>
     </div>
   )
 }

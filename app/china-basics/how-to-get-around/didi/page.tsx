@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
-import GuideArticlePage from '@/components/GuideArticlePage'
+import Link from 'next/link'
+import Breadcrumb from '@/components/Breadcrumb'
+import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
 
 export const metadata: Metadata = {
@@ -8,129 +10,171 @@ export const metadata: Metadata = {
     "Complete guide to using DiDi, China's Uber equivalent. Setup, payment, car types, and safety tips for foreign travelers.",
 }
 
-const tocItems = [
-  { id: 'app-setup', title: 'App Setup' },
-  { id: 'how-to-use', title: 'How to Use' },
-  { id: 'car-types', title: 'Car Types' },
-  { id: 'pro-tips', title: 'Pro Tips' },
-  { id: 'safety-first', title: 'Safety First' },
-]
-
-const quickInfoPills = [
-  'Usually under 2 minutes to match',
-  'Express is the cheapest option',
-  'Foreign cards now accepted',
+const relatedArticles = [
+  {
+    title: 'Taxi Guide',
+    description: 'Traditional taxi tips and getting around.',
+    href: '/china-basics/how-to-get-around/taxi',
+  },
+  {
+    title: 'Didi App Guide',
+    description: 'Set up the Didi app for ride-hailing.',
+    href: '/china-basics/what-apps-to-use/didi',
+  },
 ]
 
 export default function DidiPage() {
   return (
-    <div>
-      <GuideArticlePage
-        icon="🚕"
-        heroImage={{ src: 'https://picsum.photos/seed/china-didi-transport/800/400', alt: 'Didi ride-hailing in China' }}
-        breadcrumbs={[
-          { label: 'Home', href: '/' },
-          { label: 'China Basics', href: '/china-basics' },
-          { label: 'How to Get Around', href: '/china-basics/how-to-get-around' },
-          { label: 'Didi' },
-        ]}
-        category="How to Get Around"
-        title="DiDi Ride-Hailing"
-        intro="DiDi is China's Uber - essential for getting around cities conveniently. It's cheaper than taxis, eliminates language barriers, and works in every major city."
-        whyYouNeedThis={[
-          'DiDi is the default ride-hailing option in major Chinese cities and is often easier than flagging taxis.',
-          'The app removes a lot of the language friction by handling pickup, destination, and payment inside the platform.',
-          'It is typically cheaper and more predictable than traditional taxis, especially for travelers unfamiliar with local routes.',
-          'Knowing the car types and safety basics makes city travel much smoother, especially on arrival day.',
-        ]}
-        relatedArticles={[
-          {
-            title: 'Taxi Guide',
-            description: 'Traditional taxi tips and getting around.',
-            href: '/china-basics/how-to-get-around/taxi',
-          },
-          {
-            title: 'Didi App Guide',
-            description: 'Set up the Didi app for ride-hailing.',
-            href: '/china-basics/what-apps-to-use/didi',
-          },
-        ]}
-        tocItems={tocItems}
-      >
-        <>
-          <div className="flex flex-wrap gap-3">
-            {quickInfoPills.map((pill) => (
-              <span
-                key={pill}
-                className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-semibold text-slate-700"
-              >
-                {pill}
-              </span>
-            ))}
+    <div
+      className="min-h-screen"
+      style={{
+        background:
+          'linear-gradient(0deg, rgba(245,241,234,0.02) 0%, rgba(245,241,234,0.02) 100%), #ffffff',
+      }}
+    >
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <div className="mb-6">
+          <Breadcrumb
+            items={[
+              { label: 'Home', href: '/' },
+              { label: 'China Basics', href: '/china-basics' },
+              { label: 'How to Get Around', href: '/china-basics/how-to-get-around' },
+              { label: 'Didi' },
+            ]}
+          />
+        </div>
+
+        <header className="mb-8 relative">
+          <ChineseWatermark character="滴" />
+          <h1 className="relative z-10 mb-3 text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-[var(--foreground)]">
+            DiDi Ride-Hailing
+          </h1>
+          <div className="relative z-10 mt-3 flex items-center gap-2 text-[var(--muted)]">
+            <span className="text-2xl">滴滴</span>
+            <span className="text-lg">• China Basics • How to Get Around</span>
+          </div>
+        </header>
+
+        <div className="mb-6 flex flex-wrap items-center gap-x-2 gap-y-1 rounded-lg border border-[var(--line)] bg-[var(--surface)] px-4 py-3 text-sm sm:text-base text-[var(--foreground)]">
+          <span className="font-medium">Usually under 2 minutes to match</span>
+          <span className="text-[var(--muted)]">·</span>
+          <span>Express is the cheapest option</span>
+          <span className="text-[var(--muted)]">·</span>
+          <span>Foreign cards now accepted</span>
+        </div>
+
+        <p className="mb-10 max-w-4xl text-lg sm:text-xl leading-relaxed italic text-[var(--muted)]">
+          DiDi is the default ride-hailing tool in Chinese cities. It removes the language friction of street taxis and is
+          often the easiest way to get from airport, station, hotel, and restaurant without negotiation.
+        </p>
+
+        <div className="mb-10">
+          <img
+            src="https://picsum.photos/seed/china-didi-transport/1600/900"
+            alt="Didi ride-hailing in China"
+            className="h-64 w-full rounded-lg object-cover md:h-96"
+          />
+          <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
+        </div>
+
+        <section className="mb-10">
+          <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">Why You Need This</h2>
+          <div className="prose prose-lg max-w-none text-[var(--foreground)]">
+            <p>
+              DiDi is usually easier than flagging taxis because the app handles pickup, destination entry, and payment in one
+              place. That removes a lot of the language friction that can slow down first-time visitors.
+            </p>
+            <p>
+              It is also often cheaper and more predictable than a traditional taxi, especially if you are unfamiliar with the
+              city or arriving late.
+            </p>
+          </div>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">App Setup</h2>
+          <ol className="list-decimal pl-6 space-y-4 text-[var(--foreground)]">
+            <li>Download DiDi from the App Store or Google Play.</li>
+            <li>Register with your foreign phone number and verification code.</li>
+            <li>Link payment, since international credit cards are now accepted.</li>
+            <li>Add a profile photo if you want it to be easier for drivers to identify you at pickup.</li>
+          </ol>
+        </section>
+
+        <section className="mb-10">
+          <div className="mb-6">
+            <img
+              src="https://picsum.photos/seed/didi-pickup-map/800/1200"
+              alt="Didi pickup map screen"
+              className="mx-auto w-full max-w-md rounded-lg object-cover"
+            />
+            <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
           </div>
 
-          <div>
-            <h2 id="app-setup" className="text-2xl font-extrabold text-slate-900">
-              App Setup
-            </h2>
-            <ol className="mt-4 space-y-3 text-sm leading-relaxed text-slate-700 md:text-base">
-              <li><strong>Download DiDi:</strong> Available on App Store/Google Play</li>
-              <li><strong>Register:</strong> Use foreign phone number + verification code</li>
-              <li><strong>Link payment:</strong> International credit cards now accepted</li>
-              <li><strong>Set up profile:</strong> Add photo for driver identification</li>
-            </ol>
-          </div>
+          <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">How to Use It</h2>
+          <ul className="list-disc pl-6 space-y-2 text-[var(--foreground)]">
+            <li>Enter your destination. English often works in major cities, but pins are more reliable than text alone.</li>
+            <li>Select a car type. Express (快车) is the cheapest and most common choice.</li>
+            <li>Wait for driver assignment, which is often under two minutes.</li>
+            <li>Check the license plate before getting in.</li>
+            <li>Let payment run automatically after the ride.</li>
+          </ul>
+        </section>
 
-          <div>
-            <h2 id="how-to-use" className="text-2xl font-extrabold text-slate-900">
-              How to Use
-            </h2>
-            <ul className="mt-4 space-y-3 text-sm leading-relaxed text-slate-700 md:text-base">
-              <li>Enter destination (English works in major cities)</li>
-              <li>Select car type: Express (快车) is cheapest</li>
-              <li>Wait for driver assignment (usually under 2 minutes)</li>
-              <li>Check license plate before getting in</li>
-              <li>Payment is automatic after ride</li>
-            </ul>
+        <section className="mb-10">
+          <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">Car Types</h2>
+          <div className="prose prose-lg max-w-none text-[var(--foreground)]">
+            <p>
+              <strong>Express (快车)</strong> is the standard private-car option and the cheapest default.
+            </p>
+            <p>
+              <strong>Premier (专车)</strong> gives you higher-end vehicles and more professional drivers, while
+              <strong> Taxi (出租车)</strong> lets you call a traditional taxi through the app itself.
+            </p>
+            <p>
+              <strong>Six-seater (六座)</strong> is the useful option for groups or travelers carrying a lot of luggage.
+            </p>
           </div>
+        </section>
 
-          <div>
-            <h2 id="car-types" className="text-2xl font-extrabold text-slate-900">
-              Car Types
-            </h2>
-            <ul className="mt-4 space-y-3 text-sm leading-relaxed text-slate-700 md:text-base">
-              <li><strong>Express (快车):</strong> Standard private cars, cheapest</li>
-              <li><strong>Premier (专车):</strong> Higher-end cars, professional drivers</li>
-              <li><strong>Taxi (出租车):</strong> Traditional taxis via app</li>
-              <li><strong>Six-seater (六座):</strong> For groups or lots of luggage</li>
-            </ul>
+        <section className="mb-10">
+          <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">Pro Tips</h2>
+          <blockquote className="space-y-4 border-l-4 border-[var(--primary)] pl-4 italic text-[var(--muted)]">
+            <p>Take a screenshot of the driver info before the ride.</p>
+            <p>Share the trip with a friend using the in-app feature.</p>
+            <p>Pin your location carefully because sloppy pickup pins are a common source of confusion.</p>
+            <p>Learn “I am here” in Chinese: “Wǒ zài zhèlǐ” (我在这里).</p>
+            <p>Rate drivers honestly because the system does respond to ratings.</p>
+          </blockquote>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">Safety First</h2>
+          <blockquote className="space-y-4 border-l-4 border-[var(--primary)] pl-4 italic text-[var(--muted)]">
+            <p>Always check that the license plate matches the app.</p>
+            <p>Sit in the back seat rather than the front.</p>
+            <p>Share your trip with someone if possible.</p>
+            <p>Use the official DiDi app only and ignore clones or side-loaded copies.</p>
+            <p>The emergency button is built into the app if you need it.</p>
+          </blockquote>
+        </section>
+
+        <section className="mb-10 border-t border-[#ebe4d8]">
+          <div className="pt-6">
+            <h2 className="mb-4 text-sm font-bold uppercase tracking-wider text-[var(--primary)]">Related Articles</h2>
+            <div className="divide-y divide-[#ebe4d8]">
+              {relatedArticles.map((article) => (
+                <Link key={article.href} href={article.href} className="block py-4 transition-colors hover:bg-[#faf8f4]">
+                  <h3 className="font-serif text-lg font-semibold text-[var(--foreground)] transition-colors hover:text-[var(--primary)]">
+                    {article.title}
+                  </h3>
+                  <p className="text-[var(--muted)] leading-relaxed">{article.description}</p>
+                </Link>
+              ))}
+            </div>
           </div>
+        </section>
 
-          <div id="pro-tips" className="rounded-2xl border border-amber-200 bg-amber-50 p-6">
-            <h2 className="text-2xl font-extrabold text-amber-900">Pro Tips</h2>
-            <ul className="mt-4 space-y-3 text-sm leading-relaxed text-amber-950 md:text-base">
-              <li>Take screenshot of driver info before ride</li>
-              <li>Share trip with friends via app feature</li>
-              <li>Rate drivers honestly - it matters</li>
-              <li>Pin your location accurately on map</li>
-              <li>Learn &quot;I am here&quot; in Chinese: &quot;Wǒ zài zhèlǐ&quot; (我在这里)</li>
-            </ul>
-          </div>
-
-          <div id="safety-first" className="rounded-2xl border border-[#ebe4d8] bg-[#faf8f4] p-6">
-            <h2 className="text-2xl font-extrabold text-slate-900">Safety First</h2>
-            <ul className="mt-4 space-y-3 text-sm leading-relaxed text-slate-700 md:text-base">
-              <li>Always check license plate matches app</li>
-              <li>Sit in back seat, not front</li>
-              <li>Share your trip with someone</li>
-              <li>Use official DiDi app only (no clones)</li>
-              <li>Emergency button in app if needed</li>
-            </ul>
-          </div>
-        </>
-      </GuideArticlePage>
-
-      <div className="max-w-6xl mx-auto px-4 mt-8">
         <ContextualCTA
           icon="📱"
           title="Set Up the App Before You Need It"
@@ -139,7 +183,7 @@ export default function DidiPage() {
           buttonHref="/china-basics/what-apps-to-use/didi"
           variant="secondary"
         />
-      </div>
+      </main>
     </div>
   )
 }
