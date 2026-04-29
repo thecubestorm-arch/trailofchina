@@ -30,7 +30,7 @@ export default function ExploreChinaSection() {
       </div>
 
       <div className="relative rounded-[2rem] border border-[#1a3a4a]/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.76),rgba(255,255,255,0.92))] p-3 shadow-[0_24px_60px_rgba(26,58,74,0.08)] sm:p-4">
-        <div className="flex flex-col gap-4 lg:grid lg:grid-cols-[380px_minmax(0,1fr)]">
+        <div className="flex flex-col gap-4 lg:grid lg:grid-cols-[420px_minmax(0,1fr)]">
           <div
             className={`rounded-[1.75rem] border border-[#1a3a4a]/10 bg-white/90 p-3 lg:h-[640px] lg:overflow-y-auto ${
               mobileView === 'map' ? 'hidden lg:block' : 'block'
@@ -43,52 +43,55 @@ export default function ExploreChinaSection() {
                 return (
                   <article
                     key={city.key}
-                    className={`overflow-hidden rounded-[1.5rem] border transition-all ${
+                    className={`rounded-[1.5rem] border p-3 transition-all ${
                       isActive
                         ? 'border-[#af5d32]/35 bg-[#fcfaf6] shadow-[0_16px_36px_rgba(175,93,50,0.12)]'
                         : 'border-[#1a3a4a]/8 bg-white hover:border-[#af5d32]/25'
                     }`}
                     onMouseEnter={() => setActiveCityKey(city.key)}
                   >
-                    <div className="relative aspect-[16/10] overflow-hidden">
+                    <div className="flex gap-3">
                       <img
-                        src={`https://picsum.photos/seed/${city.imageSeed}/800/500`}
+                        src={`https://picsum.photos/seed/${city.imageSeed}/240/240`}
                         alt={`${city.name} travel preview`}
-                        className="h-full w-full object-cover"
+                        className="h-20 w-20 shrink-0 rounded-2xl object-cover"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#1a3a4a]/65 via-transparent to-transparent" />
-                      {city.popular ? (
-                        <span className="absolute left-3 top-3 rounded-full bg-[#af5d32] px-3 py-1 text-xs font-semibold text-white shadow-sm">
-                          ⭐ Popular
-                        </span>
-                      ) : null}
-                    </div>
-                    <div className="p-5">
-                      <div className="flex items-start justify-between gap-3">
-                        <div>
-                          <h3 className="text-xl font-semibold text-[#1a3a4a]">{city.name}</h3>
-                          <p className="mt-1 text-sm font-medium text-[#af5d32]">{city.nameZh}</p>
+                      <div className="min-w-0 flex-1">
+                        <div className="flex items-start justify-between gap-3">
+                          <div className="min-w-0">
+                            <div className="flex items-center gap-2">
+                              <h3 className="text-base font-semibold text-[#1a3a4a]">{city.name}</h3>
+                              {city.popular ? (
+                                <span className="rounded-full bg-[#af5d32]/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#af5d32]">
+                                  Popular
+                                </span>
+                              ) : null}
+                            </div>
+                            <p className="mt-0.5 text-sm font-medium text-[#af5d32]">{city.nameZh}</p>
+                          </div>
+                          <Link
+                            href={city.href}
+                            className="inline-flex shrink-0 items-center gap-1 text-xs font-semibold text-[#af5d32] transition-colors hover:text-[#8f4a28]"
+                          >
+                            Explore
+                            <ArrowRight size={13} />
+                          </Link>
+                        </div>
+                        <p className="mt-2 line-clamp-2 text-sm leading-5 text-[#1a3a4a]/72">
+                          {city.hook}
+                        </p>
+                        <div className="mt-3 flex flex-wrap items-center gap-2">
+                          <span className="rounded-full bg-[#f5f1ea] px-2.5 py-1 text-[11px] font-semibold text-[#1a3a4a]/80">
+                            {city.duration}
+                          </span>
+                          <span className="rounded-full bg-[#f5f1ea] px-2.5 py-1 text-[11px] font-semibold text-[#1a3a4a]/80">
+                            {city.price}
+                          </span>
+                          <span className="rounded-full bg-[#f5f1ea] px-2.5 py-1 text-[11px] font-semibold text-[#1a3a4a]/80">
+                            {city.season}
+                          </span>
                         </div>
                       </div>
-                      <p className="mt-3 text-sm leading-6 text-[#1a3a4a]/70">{city.hook}</p>
-                      <div className="mt-4 flex flex-wrap gap-2">
-                        <span className="rounded-full border border-[#1a3a4a]/10 bg-[#f5f1ea] px-3 py-1 text-xs font-semibold text-[#1a3a4a]/78">
-                          {city.duration}
-                        </span>
-                        <span className="rounded-full border border-[#1a3a4a]/10 bg-[#f5f1ea] px-3 py-1 text-xs font-semibold text-[#1a3a4a]/78">
-                          {city.price}
-                        </span>
-                        <span className="rounded-full border border-[#1a3a4a]/10 bg-[#f5f1ea] px-3 py-1 text-xs font-semibold text-[#1a3a4a]/78">
-                          {city.season}
-                        </span>
-                      </div>
-                      <Link
-                        href={city.href}
-                        className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#af5d32] transition-colors hover:text-[#8f4a28]"
-                      >
-                        Explore
-                        <ArrowRight size={15} />
-                      </Link>
                     </div>
                   </article>
                 )

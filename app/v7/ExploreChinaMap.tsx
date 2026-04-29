@@ -1,9 +1,12 @@
 'use client'
 
-import { useMemo } from 'react'
-import { MapContainer, Marker, Polygon, TileLayer, Tooltip } from 'react-leaflet'
+import { useMemo, useRef, useState } from 'react'
+import dynamic from 'next/dynamic'
+import Link from 'next/link'
+import type { DivIcon, Map as LeafletMap, Marker as LeafletMarker } from 'leaflet'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
+import { Minus, Plus } from 'lucide-react'
 import {
   chinaBoundary,
   exploreCities,
@@ -17,12 +20,22 @@ type ExploreChinaMapProps = {
   onActiveCityChange: (key: string) => void
 }
 
+const MapContainer = dynamic(
+  () => import('react-leaflet').then((mod) => mod.MapContainer),
+  { ssr: false }
+)
+const Marker = dynamic(() => import('react-leaflet').then((mod) => mod.Marker), { ssr: false })
+const Polygon = dynamic(() => import('react-leaflet').then((mod) => mod.Polygon), { ssr: false })
+const Popup = dynamic(() => import('react-leaflet').then((mod) => mod.Popup), { ssr: false })
+const TileLayer = dynamic(() => import('react-leaflet').then((mod) => mod.TileLayer), { ssr: false })
+const Tooltip = dynamic(() => import('react-leaflet').then((mod) => mod.Tooltip), { ssr: false })
+
 const chinaFillStyle = {
   fillColor: '#f5f1ea',
   fillOpacity: 0.75,
   color: '#af5d32',
-  weight: 2,
-  opacity: 0.95,
+  weight: 1.5,
+  opacity: 0.9,
 }
 
 const surroundingAreaStyle = {
@@ -33,20 +46,23 @@ const surroundingAreaStyle = {
   opacity: 0.35,
 }
 
-function createCityMarker(name: string, active: boolean) {
-  const dotSize = active ? 14 : 10
-  const labelBorder = active ? '#af5d32' : 'rgba(26,58,74,0.08)'
+function createCityMarker(name: string, active: boolean): DivIcon {
+  const dotSize = active ? 16 : 12
+  const dotShadow = active ? '0 6px 16px rgba(175,93,50,0.32)' : '0 4px 10px rgba(26,58,74,0.18)'
+  const labelBorder = active ? 'rgba(175,93,50,0.28)' : 'rgba(26,58,74,0.08)'
+  const labelBackground = active ? 'rgba(245,241,234,0.98)' : 'rgba(255,255,255,0.96)'
 
   return L.divIcon({
     className: '',
     html: `
-      <div style="display:flex;align-items:center;gap:6px;white-space:nowrap;transform:translateY(-50%);">
-        <div style="width:${dotSize}px;height:${dotSize}px;border-radius:999px;background:#af5d32;border:2px solid white;box-shadow:0 2px 8px rgba(0,0,0,0.22);"></div>
-        <div style="padding:4px 9px;border-radius:999px;background:rgba(255,255,255,0.96);border:1px solid ${labelBorder};box-shadow:0 2px 8px rgba(26,58,74,0.10);font-size:12px;font-weight:600;color:#1a3a4a;">${name}</div>
+      <div style="display:flex;align-items:center;gap:8px;white-space:nowrap;transform:translateY(-50%);">
+        <div style="width:${dotSize}px;height:${dotSize}px;border-radius:999px;background:#af5d32;border:2px solid #f5f1ea;box-shadow:${dotShadow};"></div>
+        <div style="padding:5px 10px;border-radius:999px;background:${labelBackground};border:1px solid ${labelBorder};box-shadow:0 2px 8px rgba(26,58,74,0.10);font-size:12px;font-weight:700;color:#1a3a4a;">${name}</div>
       </div>
     `,
-    iconSize: [150, 32],
-    iconAnchor: [8, 8],
+    iconSize: [156, 36],
+    iconAnchor: [10, 10],
+    popupAnchor: [60, -10],
   })
 }
 
@@ -54,13 +70,44 @@ export default function ExploreChinaMap({
   activeCityKey,
   onActiveCityChange,
 }: ExploreChinaMapProps) {
-  const markerIcons = useMemo(
+  const [selectedCityKey, setSelectedCityKey] = useState<string | null>(null)
+  const mapRef = useRef<LeafletMap | null>(null)
+  const markerRefs = useRef<Record<string, LeafletMarker | null>>({})
+
+  const markerIcons = useMemo<Record<string, DivIcon>>(
     () =>
       Object.fromEntries(
         exploreCities.map((city) => [city.key, createCityMarker(city.name, city.key === activeCityKey)])
       ),
     [activeCityKey]
   )
+
+  const handleMarkerClick = (cityKey: string) => {
+    const city = exploreCities.find((entry) => entry.key === cityKey)
+    if (!city) return
+
+    onActiveCityChange(city.key)
+    setSelectedCityKey(city.key)
+    mapRef.current?.flyTo([city.lat, city.lng], 8, {
+      animate: true,
+      duration: 1.1,
+    })
+    window.setTimeout(() => {
+      markerRefs.current[city.key]?.openPopup()
+    }, 180)
+  }
+
+  const adjustZoom = (delta: 1 | -1) => {
+    const map = mapRef.current
+    if (!map) return
+
+    if (delta > 0) {
+      map.zoomIn()
+      return
+    }
+
+    map.zoomOut()
+  }
 
   return (
     <div className="relative h-full min-h-[420px] w-full overflow-hidden rounded-[1.75rem] border border-[#1a3a4a]/10 bg-white">
@@ -75,6 +122,9 @@ export default function ExploreChinaMap({
         touchZoom
         zoomControl={false}
         style={{ height: '100%', width: '100%' }}
+        ref={(instance: LeafletMap | null) => {
+          mapRef.current = instance
+        }}
       >
         <TileLayer
           attribution="&copy; OpenStreetMap contributors &copy; CARTO"
@@ -89,9 +139,15 @@ export default function ExploreChinaMap({
             key={city.key}
             position={[city.lat, city.lng]}
             icon={markerIcons[city.key]}
+            ref={(instance: LeafletMarker | null) => {
+              markerRefs.current[city.key] = instance
+            }}
             eventHandlers={{
               mouseover: () => onActiveCityChange(city.key),
-              click: () => onActiveCityChange(city.key),
+              click: () => handleMarkerClick(city.key),
+              popupclose: () => {
+                setSelectedCityKey((current) => (current === city.key ? null : current))
+              },
             }}
           >
             <Tooltip
@@ -105,6 +161,46 @@ export default function ExploreChinaMap({
               </div>
               <div className="mt-1 text-[11px] text-[#1a3a4a]/70">{city.hook}</div>
             </Tooltip>
+            <Popup closeButton={false} offset={[0, -10]} className="explore-city-popup">
+              <div className="w-[220px] overflow-hidden rounded-[1.1rem] bg-[#f5f1ea] text-[#1a3a4a]">
+                <img
+                  src={`https://picsum.photos/seed/${city.imageSeed}/480/280`}
+                  alt={`${city.name} city preview`}
+                  className="h-28 w-full object-cover"
+                />
+                <div className="p-3">
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <h3 className="text-sm font-semibold text-[#1a3a4a]">{city.name}</h3>
+                      <p className="mt-0.5 text-xs font-medium text-[#af5d32]">{city.nameZh}</p>
+                    </div>
+                    {city.popular ? (
+                      <span className="rounded-full bg-[#af5d32] px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-white">
+                        Popular
+                      </span>
+                    ) : null}
+                  </div>
+                  <p className="mt-2 text-xs leading-5 text-[#1a3a4a]/75">{city.hook}</p>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    <span className="rounded-full bg-white px-2.5 py-1 text-[10px] font-semibold text-[#1a3a4a]/78">
+                      {city.duration}
+                    </span>
+                    <span className="rounded-full bg-white px-2.5 py-1 text-[10px] font-semibold text-[#1a3a4a]/78">
+                      {city.price}
+                    </span>
+                    <span className="rounded-full bg-white px-2.5 py-1 text-[10px] font-semibold text-[#1a3a4a]/78">
+                      {city.season}
+                    </span>
+                  </div>
+                  <Link
+                    href={city.href}
+                    className="mt-3 inline-flex items-center text-sm font-semibold text-[#af5d32] transition-colors hover:text-[#8f4a28]"
+                  >
+                    Explore →
+                  </Link>
+                </div>
+              </div>
+            </Popup>
           </Marker>
         ))}
       </MapContainer>
@@ -114,6 +210,25 @@ export default function ExploreChinaMap({
           <span className="text-[11px] font-bold uppercase tracking-[0.18em]">N</span>
           <span className="text-base leading-none">↑</span>
         </div>
+      </div>
+
+      <div className="absolute right-5 top-20 z-[500] flex flex-col gap-2">
+        <button
+          type="button"
+          onClick={() => adjustZoom(1)}
+          className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#af5d32] text-white shadow-[0_14px_24px_rgba(175,93,50,0.26)] transition-colors hover:bg-[#8f4a28]"
+          aria-label="Zoom in"
+        >
+          <Plus size={18} />
+        </button>
+        <button
+          type="button"
+          onClick={() => adjustZoom(-1)}
+          className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#af5d32] text-white shadow-[0_14px_24px_rgba(175,93,50,0.26)] transition-colors hover:bg-[#8f4a28]"
+          aria-label="Zoom out"
+        >
+          <Minus size={18} />
+        </button>
       </div>
     </div>
   )
