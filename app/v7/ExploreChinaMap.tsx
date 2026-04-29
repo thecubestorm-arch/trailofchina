@@ -162,7 +162,10 @@ export default function ExploreChinaMap({
               <div className="mt-1 text-[11px] text-[#1a3a4a]/70">{city.hook}</div>
             </Tooltip>
             <Popup closeButton={false} offset={[0, -10]} className="explore-city-popup">
-              <div className="w-[220px] overflow-hidden rounded-[1.1rem] bg-[#f5f1ea] text-[#1a3a4a]">
+              <Link
+                href={city.href}
+                className="block w-[220px] cursor-pointer overflow-hidden rounded-[1.1rem] bg-[#f5f1ea] text-[#1a3a4a] no-underline transition-transform hover:scale-[1.01]"
+              >
                 <img
                   src={`https://picsum.photos/seed/${city.imageSeed}/480/280`}
                   alt={`${city.name} city preview`}
@@ -192,14 +195,8 @@ export default function ExploreChinaMap({
                       {city.season}
                     </span>
                   </div>
-                  <Link
-                    href={city.href}
-                    className="mt-3 inline-flex items-center text-sm font-semibold text-[#af5d32] transition-colors hover:text-[#8f4a28]"
-                  >
-                    Explore →
-                  </Link>
                 </div>
-              </div>
+              </Link>
             </Popup>
           </Marker>
         ))}

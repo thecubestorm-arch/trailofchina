@@ -1,20 +1,6 @@
-import { Metadata } from 'next'
-import HomeV1Client from './v1/HomeV1Client'
-
-export const metadata: Metadata = {
-  title: 'Trail of China – First-Trip China Travel Guide',
-  description: 'Visa tips, app setup, itineraries — everything you need for a smooth first trip to China. Written by travelers who\'ve been there.',
-  openGraph: {
-    title: 'Trail of China – First-Trip China Travel Guide',
-    description: 'Visa tips, app setup, itineraries — everything you need for a smooth first trip to China. Written by travelers who\'ve been there.',
-    images: ['/images/hero/china-hero.jpg'],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    images: ['/images/hero/china-hero.jpg'],
-  },
-}
+export { metadata } from './v7/page'
+import HomeV7Client from './v7/HomeV7Client'
 
 export default function HomePage() {
-  return <HomeV1Client />
+  return <HomeV7Client />
 }
