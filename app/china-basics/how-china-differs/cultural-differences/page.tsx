@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
-import GuideArticlePage from '@/components/GuideArticlePage'
+import Link from 'next/link'
+import Breadcrumb from '@/components/Breadcrumb'
+import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
 
 export const metadata: Metadata = {
@@ -8,110 +10,195 @@ export const metadata: Metadata = {
     'Essential etiquette, customs, and social norms for travelers in China. Dining, greetings, gift giving, and public behavior explained.',
 }
 
-const tocItems = [
-  { id: 'greetings-interactions', title: 'Greetings & Interactions' },
-  { id: 'dining-etiquette', title: 'Dining Etiquette' },
-  { id: 'gift-giving', title: 'Gift Giving' },
-  { id: 'public-behavior', title: 'Public Behavior' },
+const relatedArticles = [
+  {
+    title: 'Censorship in China',
+    description: 'What to expect from the Great Firewall.',
+    href: '/china-basics/how-china-differs/censorship',
+  },
+  {
+    title: 'How China Differs',
+    description: 'Overview of key differences for travelers.',
+    href: '/china-basics/how-china-differs',
+  },
+  {
+    title: 'Before You Go',
+    description: 'Core prep steps before your first trip to China.',
+    href: '/china-basics/before-you-go',
+  },
 ]
 
 export default function CulturalDifferencesPage() {
   return (
-    <div>
-      <GuideArticlePage
-        icon="🙏"
-        heroImage={{ src: 'https://picsum.photos/seed/china-cultural-differences/800/400', alt: 'Cultural differences in China' }}
-        breadcrumbs={[
-          { label: 'Home', href: '/' },
-          { label: 'China Basics', href: '/china-basics' },
-          { label: 'How China Differs', href: '/china-basics/how-china-differs' },
-          { label: 'Cultural Differences' },
-        ]}
-        category="How China Differs"
-        title="Cultural Differences in China"
-        intro="China has unique cultural norms that differ significantly from Western countries. Understanding these will help you show respect and avoid unintentional offense."
-        whyYouNeedThis={[
-          'Basic etiquette signals respect quickly, even when you do not speak much Chinese.',
-          'Dining, greetings, and gift-giving norms can be very different from Western expectations.',
-          'Some behaviors that feel ordinary at home can come across poorly in China.',
-          'Understanding common public behavior patterns helps you interpret situations more accurately and react calmly.',
-        ]}
-        quickInfo="Dining etiquette matters · Tipping uncommon · Curiosity about foreigners is normal"
-        tocItems={tocItems}
-        related={[
-          { label: 'Censorship', href: '/china-basics/how-china-differs/censorship' },
-          { label: 'How China Differs', href: '/china-basics/how-china-differs' },
-          { label: 'Before You Go', href: '/china-basics/before-you-go' },
-        ]}
-        relatedArticles={[
-          {
-            title: 'Censorship in China',
-            description: 'What to expect from the Great Firewall.',
-            href: '/china-basics/how-china-differs/censorship',
-          },
-          {
-            title: 'How China Differs',
-            description: 'Overview of key differences for travelers.',
-            href: '/china-basics/how-china-differs',
-          },
-        ]}
-      >
-        <>
-          <div>
-            <h2 id="greetings-interactions" className="text-2xl font-extrabold text-slate-900">Greetings &amp; Interactions</h2>
-            <ul className="mt-4 list-disc pl-5 space-y-2 text-gray-700">
-              <li><strong>Handshakes:</strong> Light handshake is acceptable; bowing is not common</li>
-              <li><strong>Business cards:</strong> Receive with both hands, read it, then put away respectfully</li>
-              <li><strong>Personal space:</strong> Less than Western countries; queuing is different</li>
-              <li><strong>Eye contact:</strong> Moderate eye contact is fine; prolonged staring is rude</li>
-            </ul>
+    <div
+      className="min-h-screen"
+      style={{
+        background:
+          'linear-gradient(0deg, rgba(245,241,234,0.02) 0%, rgba(245,241,234,0.02) 100%), #ffffff',
+      }}
+    >
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <div className="mb-6">
+          <Breadcrumb
+            items={[
+              { label: 'Home', href: '/' },
+              { label: 'China Basics', href: '/china-basics' },
+              { label: 'How China Differs', href: '/china-basics/how-china-differs' },
+              { label: 'Cultural Differences' },
+            ]}
+          />
+        </div>
+
+        <header className="mb-8 relative">
+          <ChineseWatermark character="文" />
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-3 text-[var(--foreground)] relative z-10">
+            Cultural Differences in China
+          </h1>
+          <div className="flex items-center gap-2 text-[var(--muted)] mt-3 relative z-10">
+            <span className="text-2xl">文化</span>
+            <span className="text-lg">• China Basics • How China Differs</span>
+          </div>
+        </header>
+
+        <div className="mb-6 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm sm:text-base text-[var(--foreground)] bg-[var(--surface)] border border-[var(--line)] rounded-lg px-4 py-3">
+          <span className="font-medium">Dining etiquette matters</span>
+          <span className="text-[var(--muted)]">·</span>
+          <span>Tipping uncommon</span>
+          <span className="text-[var(--muted)]">·</span>
+          <span>Curiosity about foreigners is normal</span>
+        </div>
+
+        <p className="text-lg sm:text-xl text-[var(--muted)] italic leading-relaxed max-w-4xl mb-10">
+          China feels most welcoming when you can read the social signals that locals take for granted.
+        </p>
+
+        <div className="mb-10">
+          <img
+            src="https://picsum.photos/seed/china-cultural-differences/1600/900"
+            alt="Cultural differences in China"
+            className="h-64 w-full rounded-lg object-cover md:h-96"
+          />
+          <p className="mt-1 text-xs text-[var(--muted)]">Replace with street or dining scene</p>
+        </div>
+
+        <section className="mb-10">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)] mb-4">
+            Why Cultural Context Helps
+          </h2>
+          <div className="prose prose-lg max-w-none text-[var(--foreground)]">
+            <p>
+              China has unique cultural norms that differ significantly from Western countries. Understanding these will
+              help you show respect and avoid unintentional offense, especially when you do not speak much Chinese.
+            </p>
+            <p>
+              Dining, greetings, and gift-giving norms can be very different from Western expectations. Some behaviors that
+              feel ordinary at home can come across poorly in China, while other things that may seem abrupt or unusual are
+              often completely normal in context.
+            </p>
+            <p>
+              Understanding common public behavior patterns helps you interpret situations more accurately and react
+              calmly.
+            </p>
+          </div>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)] mb-4">
+            Greetings &amp; Interactions
+          </h2>
+          <div className="prose prose-lg max-w-none text-[var(--foreground)]">
+            <p>
+              Light handshakes are acceptable, while bowing is not a common expectation in everyday modern China. Business
+              cards should be received with both hands, glanced at respectfully, and put away carefully rather than stuffed
+              into a pocket immediately.
+            </p>
+            <p>
+              Personal space is often tighter than in many Western countries, especially in queues, transit stations, and
+              busy markets. Moderate eye contact is fine, but prolonged staring at someone during conversation can feel rude.
+            </p>
+          </div>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)] mb-4">Dining Etiquette</h2>
+          <div className="prose prose-lg max-w-none text-[var(--foreground)]">
+            <p>
+              Never stick chopsticks upright in a bowl of rice, because it resembles funeral incense. When someone pours
+              tea for you, tapping the table twice with two fingers is a common way to say thanks in some regions.
+            </p>
+            <p>
+              Most dishes are shared, so take modest portions and let the table rotate. Leaving a little food can suggest
+              you are satisfied, while completely emptying every plate may imply the host did not provide enough. Fighting
+              over the bill is often treated as polite theater, and splitting the bill is less common than in the West.
+            </p>
           </div>
 
-          <div className="mt-8">
-            <h2 id="dining-etiquette" className="text-2xl font-extrabold text-slate-900">Dining Etiquette</h2>
-            <ul className="mt-4 list-disc pl-5 space-y-2 text-gray-700">
-              <li><strong>Chopsticks:</strong> Never stick upright in rice (resembles funeral incense)</li>
-              <li><strong>Tapping:</strong> Tap table twice to say thanks when tea is poured</li>
-              <li><strong>Sharing:</strong> Dishes are communal; take small portions</li>
-              <li><strong>Finishing:</strong> Leave a little food to show you&apos;re satisfied (not still hungry)</li>
-              <li><strong>Bill:</strong> Fighting over the bill is polite; splitting is rare</li>
-            </ul>
+          <div className="mt-6">
+            <img
+              src="https://picsum.photos/seed/china-dining-etiquette/1600/900"
+              alt="Chinese dining table"
+              className="h-48 w-full rounded-lg object-cover md:h-64"
+            />
+            <p className="mt-1 text-xs text-[var(--muted)]">Replace with restaurant table image</p>
           </div>
+        </section>
 
-          <div className="mt-8">
-            <h2 id="gift-giving" className="text-2xl font-extrabold text-slate-900">Gift Giving</h2>
-            <ul className="mt-4 list-disc pl-5 space-y-2 text-gray-700">
-              <li><strong>Accept gifts:</strong> Receive with both hands</li>
-              <li><strong>Avoid:</strong> Clocks (death association), white flowers (funerals), sharp objects</li>
-              <li><strong>Number 4:</strong> Sounds like &quot;death&quot; in Chinese; avoid in gifts</li>
-              <li><strong>Colors:</strong> Red = lucky, White = funerals, Black = death</li>
-            </ul>
+        <section className="mb-10">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)] mb-4">Gift Giving</h2>
+          <div className="prose prose-lg max-w-none text-[var(--foreground)]">
+            <p>
+              Gifts should be given and received with both hands. Avoid clocks, white flowers, and sharp objects, since
+              they carry associations with death, funerals, or severed relationships. The number four is also avoided
+              because it sounds like the word for death in Chinese.
+            </p>
+            <p>
+              Color carries meaning too. Red reads as lucky and celebratory, while white is heavily associated with funerals.
+              If you are bringing something small from home, choose something thoughtful rather than expensive.
+            </p>
           </div>
+        </section>
 
-          <div className="mt-8">
-            <h2 id="public-behavior" className="text-2xl font-extrabold text-slate-900">Public Behavior</h2>
-            <ul className="mt-4 list-disc pl-5 space-y-2 text-gray-700">
-              <li><strong>Spitting:</strong> Common in some areas; carry tissues</li>
-              <li><strong>Smoking:</strong> Very common; designated areas exist</li>
-              <li><strong>Queue jumping:</strong> Common; stay firm but polite</li>
-              <li><strong>Staring:</strong> Common for foreigners; usually curiosity, not rudeness</li>
-              <li><strong>Photos:</strong> Ask before photographing people</li>
-            </ul>
+        <section className="mb-10">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)] mb-4">Public Behavior</h2>
+          <div className="prose prose-lg max-w-none text-[var(--foreground)]">
+            <p>
+              Some public habits can surprise first-time visitors. Smoking remains common, queue jumping does happen, and
+              foreigners may attract curious looks or direct questions about age, salary, or relationship status. In most
+              cases, that curiosity is not meant as hostility.
+            </p>
+            <p>
+              Ask before photographing people, stay firm but polite in busy lines, and do not assume Western tipping norms
+              apply. In many places, tipping is not expected and may even be refused.
+            </p>
+          </div>
+        </section>
 
-            <div className="mt-8 rounded-2xl border border-amber-200 bg-amber-50 p-6">
-              <h2 className="text-xl font-black text-slate-900">Pro Tips</h2>
-              <ul className="mt-3 space-y-2">
-                <li className="text-sm leading-relaxed text-slate-700 md:text-base">• Learn basic phrases: &quot;Ni hao&quot; (hello), &quot;Xie xie&quot; (thank you), &quot;Bu yao&quot; (I don&apos;t want)</li>
-                <li className="text-sm leading-relaxed text-slate-700 md:text-base">• Smile goes a long way despite language barriers</li>
-                <li className="text-sm leading-relaxed text-slate-700 md:text-base">• Don&apos;t be offended by direct questions about age, salary, marriage</li>
-                <li className="text-sm leading-relaxed text-slate-700 md:text-base">• Tipping is not expected (and sometimes refused)</li>
-              </ul>
+        <section className="mb-10">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)] mb-4">Pro Tips</h2>
+          <blockquote className="border-l-4 border-[var(--primary)] pl-4 italic text-[var(--muted)] space-y-4">
+            <p>Learn a few basic phrases like &quot;Ni hao,&quot; &quot;Xie xie,&quot; and &quot;Bu yao.&quot;</p>
+            <p>A calm smile often carries you through awkward moments better than perfect language.</p>
+            <p>Do not be offended by direct personal questions that would feel intrusive elsewhere.</p>
+            <p>If you are unsure, watch what locals do first and copy the rhythm of the room.</p>
+          </blockquote>
+        </section>
+
+        <section className="mb-10 border-t border-[#ebe4d8]">
+          <div className="pt-6">
+            <h2 className="text-sm font-bold uppercase tracking-wider text-[var(--primary)] mb-4">Related Articles</h2>
+            <div className="divide-y divide-[#ebe4d8]">
+              {relatedArticles.map((article) => (
+                <Link key={article.href} href={article.href} className="block py-4 hover:bg-[#faf8f4] transition-colors">
+                  <h3 className="font-serif text-lg font-semibold text-[var(--foreground)] hover:text-[var(--primary)] transition-colors">
+                    {article.title}
+                  </h3>
+                  <p className="text-[var(--muted)] leading-relaxed">{article.description}</p>
+                </Link>
+              ))}
             </div>
           </div>
-        </>
-      </GuideArticlePage>
+        </section>
 
-      <div className="max-w-6xl mx-auto px-4 mt-8">
         <ContextualCTA
           icon="📋"
           title="Download Our Free China Cheat Sheet"
@@ -120,7 +207,7 @@ export default function CulturalDifferencesPage() {
           buttonHref="#cheat-sheet"
           variant="secondary"
         />
-      </div>
+      </main>
     </div>
   )
 }

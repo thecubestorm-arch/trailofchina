@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
-import GuideArticlePage from '@/components/GuideArticlePage'
+import Link from 'next/link'
+import Breadcrumb from '@/components/Breadcrumb'
+import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
 
 export const metadata: Metadata = {
@@ -8,154 +10,193 @@ export const metadata: Metadata = {
     'Hotel registration, police checks, and passport requirements for travelers in China. Visa overstays and lost passport procedures.',
 }
 
-const tocItems = [
-  { id: 'carrying-your-passport', title: 'Carrying Your Passport' },
-  { id: 'hotel-registration', title: 'Hotel Registration' },
-  { id: 'police-registration', title: 'Police Registration' },
-  { id: 'visa-overstays', title: 'Visa Overstays' },
-  { id: 'lost-passport', title: 'Lost Passport' },
-]
-
-const quickInfoPills = [
-  'Original passport required',
-  'Register within 24 hours',
-  'Overstay fine: ¥500/day',
+const relatedArticles = [
+  {
+    title: 'Visa Guide',
+    description: 'Complete China visa walkthrough.',
+    href: '/china-basics/how-china-differs/visa-guide',
+  },
+  {
+    title: 'Security Standards',
+    description: 'Safety and security tips for China.',
+    href: '/china-basics/how-china-differs/security-standards',
+  },
+  {
+    title: 'How China Differs',
+    description: 'The broader context behind rules that surprise travelers.',
+    href: '/china-basics/how-china-differs',
+  },
 ]
 
 export default function PassportRulesPage() {
   return (
-    <div>
-      <GuideArticlePage
-        icon="🛂"
-        heroImage={{ src: 'https://picsum.photos/seed/china-passport-rules/800/400', alt: 'Passport and registration rules in China' }}
-        breadcrumbs={[
-          { label: 'Home', href: '/' },
-          { label: 'China Basics', href: '/china-basics' },
-          { label: 'How China Differs', href: '/china-basics/how-china-differs' },
-          { label: 'Passport Rules' },
-        ]}
-        category="How China Differs"
-        title="Passport & Registration Rules"
-        intro="Chinese law requires foreigners to carry their passport at all times and register with police when staying overnight. Here's what you need to know."
-        whyYouNeedThis={[
-          'Chinese law requires foreigners to carry their original passport, not just a photocopy.',
-          'Hotels, trains, attractions, and police checks can all require your passport at short notice.',
-          'If you stay outside a licensed hotel, you must complete temporary residence registration within 24 hours.',
-          'Overstays or missing registration can lead to fines, future visa problems, or detention.',
-        ]}
-        proTips={[
-          'Screenshot your passport info page (as backup, not replacement)',
-          'Keep photocopies in separate location from passport',
-          'Set phone reminders for visa expiry dates',
-          'Carry hotel business card in Chinese',
-          "Don't let anyone keep your passport (except hotels briefly during check-in)",
-        ]}
-        related={[
-          { label: 'Visa Guide', href: '/china-basics/how-china-differs/visa-guide' },
-          { label: 'Security Standards', href: '/china-basics/how-china-differs/security-standards' },
-          { label: 'How China Differs', href: '/china-basics/how-china-differs' },
-        ]}
-        relatedArticles={[
-          {
-            title: 'Visa Guide',
-            description: 'Complete China visa walkthrough.',
-            href: '/china-basics/how-china-differs/visa-guide',
-          },
-          {
-            title: 'Security Standards',
-            description: 'Safety and security tips for China.',
-            href: '/china-basics/how-china-differs/security-standards',
-          },
-        ]}
-        tocItems={tocItems}
-      >
-        <>
-          <div className="flex flex-wrap gap-3">
-            {quickInfoPills.map((pill) => (
-              <span
-                key={pill}
-                className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-semibold text-slate-700"
-              >
-                {pill}
-              </span>
-            ))}
-          </div>
+    <div
+      className="min-h-screen"
+      style={{
+        background:
+          'linear-gradient(0deg, rgba(245,241,234,0.02) 0%, rgba(245,241,234,0.02) 100%), #ffffff',
+      }}
+    >
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <div className="mb-6">
+          <Breadcrumb
+            items={[
+              { label: 'Home', href: '/' },
+              { label: 'China Basics', href: '/china-basics' },
+              { label: 'How China Differs', href: '/china-basics/how-china-differs' },
+              { label: 'Passport Rules' },
+            ]}
+          />
+        </div>
 
-          <div>
-            <h2 id="carrying-your-passport" className="text-2xl font-extrabold text-slate-900">
-              Carrying Your Passport
-            </h2>
-            <ul className="mt-4 space-y-3 text-sm leading-relaxed text-slate-700 md:text-base">
-              <li><strong>Always carry:</strong> Original passport (not photocopies)</li>
-              <li><strong>Police checks:</strong> Can happen anywhere, especially near borders</li>
-              <li><strong>Hotels:</strong> Required for check-in</li>
-              <li><strong>Attractions:</strong> Some require ID for tickets</li>
-              <li><strong>Trains:</strong> Required for tickets and boarding</li>
-            </ul>
+        <header className="mb-8 relative">
+          <ChineseWatermark character="护" />
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-3 text-[var(--foreground)] relative z-10">
+            Passport &amp; Registration Rules
+          </h1>
+          <div className="flex items-center gap-2 text-[var(--muted)] mt-3 relative z-10">
+            <span className="text-2xl">护照</span>
+            <span className="text-lg">• China Basics • How China Differs</span>
           </div>
+        </header>
 
-          <div>
-            <h2 id="hotel-registration" className="text-2xl font-extrabold text-slate-900">
-              Hotel Registration
-            </h2>
-            <ul className="mt-4 space-y-3 text-sm leading-relaxed text-slate-700 md:text-base">
-              <li><strong>Automatic:</strong> Licensed hotels register you electronically</li>
-              <li><strong>Receipt:</strong> Keep hotel registration slip they provide</li>
-              <li><strong>Airbnb:</strong> Host must register you within 24 hours</li>
-              <li><strong>Unlicensed hotels:</strong> Cannot legally register foreigners</li>
-              <li><strong>Duration:</strong> Registration valid for your stay</li>
-            </ul>
-          </div>
+        <div className="mb-6 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm sm:text-base text-[var(--foreground)] bg-[var(--surface)] border border-[var(--line)] rounded-lg px-4 py-3">
+          <span className="font-medium">Original passport required</span>
+          <span className="text-[var(--muted)]">·</span>
+          <span>Register within 24 hours</span>
+          <span className="text-[var(--muted)]">·</span>
+          <span>Overstay fine: ¥500/day</span>
+        </div>
 
-          <div>
-            <h2 id="police-registration" className="text-2xl font-extrabold text-slate-900">
-              Police Registration (for non-hotel stays)
-            </h2>
-            <p className="mt-4 text-sm leading-relaxed text-slate-700 md:text-base">
-              If staying with friends/family, you must register within 24 hours:
+        <p className="text-lg sm:text-xl text-[var(--muted)] italic leading-relaxed max-w-4xl mb-10">
+          In China, identity rules are not a formality. Your passport is part of how the system expects you to move.
+        </p>
+
+        <div className="mb-10">
+          <img
+            src="https://picsum.photos/seed/china-passport-rules/1600/900"
+            alt="Passport and registration rules in China"
+            className="h-64 w-full rounded-lg object-cover md:h-96"
+          />
+          <p className="mt-1 text-xs text-[var(--muted)]">Replace with passport or hotel check-in image</p>
+        </div>
+
+        <section className="mb-10">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)] mb-4">
+            Why These Rules Matter
+          </h2>
+          <div className="prose prose-lg max-w-none text-[var(--foreground)]">
+            <p>
+              Chinese law requires foreigners to carry their original passport, not just a photocopy. Hotels, trains,
+              attractions, and police checks can all require your passport at short notice, and the expectation is stricter
+              than in many other countries.
             </p>
-            <ol className="mt-4 space-y-3 text-sm leading-relaxed text-slate-700 md:text-base">
-              <li>1. Go to local police station (派出所) with your host</li>
-              <li>2. Bring: Passport, visa, host&apos;s ID card, rental agreement (if applicable)</li>
-              <li>3. Fill out temporary residence form</li>
-              <li>4. Keep the receipt they give you</li>
-            </ol>
-          </div>
-
-          <div>
-            <h2 id="visa-overstays" className="text-2xl font-extrabold text-slate-900">
-              Visa Overstays
-            </h2>
-            <ul className="mt-4 space-y-3 text-sm leading-relaxed text-slate-700 md:text-base">
-              <li><strong>Fine:</strong> ¥500 per day overstayed</li>
-              <li><strong>Records:</strong> May affect future visa applications</li>
-              <li><strong>Action:</strong> Go to Exit-Entry Bureau immediately if overstayed</li>
-              <li><strong>Extension:</strong> Possible at local PSB before expiry</li>
-            </ul>
-          </div>
-
-          <div>
-            <h2 id="lost-passport" className="text-2xl font-extrabold text-slate-900">
-              Lost Passport
-            </h2>
-            <ol className="mt-4 space-y-3 text-sm leading-relaxed text-slate-700 md:text-base">
-              <li>1. File police report immediately</li>
-              <li>2. Contact your embassy/consulate</li>
-              <li>3. Apply for emergency travel document</li>
-              <li>4. Visit Exit-Entry Bureau to update records</li>
-            </ol>
-          </div>
-
-          <div className="rounded-xl border border-amber-200 bg-amber-50 p-5">
-            <h3 className="text-lg font-extrabold text-amber-900">Important</h3>
-            <p className="mt-2 text-sm leading-relaxed text-amber-950 md:text-base">
-              Failure to register or carry your passport can result in fines (¥2,000+) or detention. Always comply with police requests politely.
+            <p>
+              If you stay outside a licensed hotel, you must complete temporary residence registration within 24 hours.
+              Overstays or missing registration can lead to fines, future visa problems, or detention.
             </p>
           </div>
-        </>
-      </GuideArticlePage>
+        </section>
 
-      <div className="max-w-6xl mx-auto px-4 mt-8">
+        <section className="mb-10">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)] mb-4">
+            Carrying Your Passport
+          </h2>
+          <div className="prose prose-lg max-w-none text-[var(--foreground)]">
+            <p>
+              Always carry your original passport, not just a digital image or paper copy. Police checks can happen
+              anywhere, especially near borders, train stations, and sensitive areas. Hotels need it for check-in, some
+              attractions need it for ticketing, and trains can require it both when buying tickets and when boarding.
+            </p>
+          </div>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)] mb-4">Hotel Registration</h2>
+          <div className="prose prose-lg max-w-none text-[var(--foreground)]">
+            <p>
+              Licensed hotels register you electronically as part of check-in. Keep any registration slip or printout they
+              provide. If you are booking a guesthouse or smaller property, confirm in advance that they are licensed to host
+              foreigners, because unlicensed hotels cannot legally register you.
+            </p>
+            <p>
+              If you stay in an Airbnb or apartment, the host is still responsible for making sure registration happens
+              within the required time window.
+            </p>
+          </div>
+
+          <div className="mt-6">
+            <img
+              src="https://picsum.photos/seed/china-hotel-registration/1600/900"
+              alt="Hotel front desk registration"
+              className="h-48 w-full rounded-lg object-cover md:h-64"
+            />
+            <p className="mt-1 text-xs text-[var(--muted)]">Replace with hotel registration image</p>
+          </div>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)] mb-4">
+            Police Registration for Non-Hotel Stays
+          </h2>
+          <div className="prose prose-lg max-w-none text-[var(--foreground)]">
+            <p>
+              If you stay with friends or family, you must register within 24 hours at the local police station
+              (派出所), usually with your host present. Bring your passport, visa, the host&apos;s ID card, and a rental
+              agreement if applicable. Fill out the temporary residence form and keep the receipt.
+            </p>
+          </div>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)] mb-4">Visa Overstays</h2>
+          <div className="prose prose-lg max-w-none text-[var(--foreground)]">
+            <p>
+              The listed fine is typically ¥500 per day overstayed, and the consequences can extend beyond the payment
+              itself. Overstays may affect future visa applications. If you realize you have overstayed, go to the local
+              Exit-Entry Bureau immediately. If you need more time, request an extension before your current permission
+              expires.
+            </p>
+          </div>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)] mb-4">Lost Passport</h2>
+          <div className="prose prose-lg max-w-none text-[var(--foreground)]">
+            <p>
+              If your passport is lost, file a police report immediately, contact your embassy or consulate, apply for an
+              emergency travel document, and then visit the Exit-Entry Bureau to update your status. Moving fast matters
+              because hotels and onward transport may not accept improvised proof of identity.
+            </p>
+          </div>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)] mb-4">Pro Tips</h2>
+          <blockquote className="border-l-4 border-[var(--primary)] pl-4 italic text-[var(--muted)] space-y-4">
+            <p>Screenshot your passport info page as backup, but never treat that as a replacement.</p>
+            <p>Keep photocopies separate from the passport itself so one loss does not wipe out both.</p>
+            <p>Set phone reminders for your visa expiry date and any registration deadlines.</p>
+            <p>Do not let anyone keep your passport except hotels briefly during check-in or authorities when required.</p>
+          </blockquote>
+        </section>
+
+        <section className="mb-10 border-t border-[#ebe4d8]">
+          <div className="pt-6">
+            <h2 className="text-sm font-bold uppercase tracking-wider text-[var(--primary)] mb-4">Related Articles</h2>
+            <div className="divide-y divide-[#ebe4d8]">
+              {relatedArticles.map((article) => (
+                <Link key={article.href} href={article.href} className="block py-4 hover:bg-[#faf8f4] transition-colors">
+                  <h3 className="font-serif text-lg font-semibold text-[var(--foreground)] hover:text-[var(--primary)] transition-colors">
+                    {article.title}
+                  </h3>
+                  <p className="text-[var(--muted)] leading-relaxed">{article.description}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <ContextualCTA
           icon="📄"
           title="Check Your Visa Status Too"
@@ -164,7 +205,7 @@ export default function PassportRulesPage() {
           buttonHref="/china-basics/how-china-differs/visa-guide"
           variant="secondary"
         />
-      </div>
+      </main>
     </div>
   )
 }
