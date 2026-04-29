@@ -17,6 +17,7 @@ import {
   Waypoints,
 } from 'lucide-react'
 import FooterCTA from '@/components/FooterCTA'
+import ExploreChinaSection from '@/app/v4/ExploreChinaSection'
 
 const trustSignals = [
   '4+ Trips to China',
@@ -166,7 +167,7 @@ const footerQuickInfo = [
   },
 ]
 
-function HomeV2ClientInner() {
+function HomeV4ClientInner() {
   const [openFaq, setOpenFaq] = useState(0)
 
   return (
@@ -292,6 +293,8 @@ function HomeV2ClientInner() {
           })}
         </div>
       </section>
+
+      <ExploreChinaSection />
 
       <section className="bg-[#1a3a4a] py-14 text-white md:py-20">
         <div className="mx-auto grid max-w-6xl gap-8 px-4 md:px-6 lg:grid-cols-[0.72fr_1.28fr]">
@@ -450,7 +453,7 @@ function HomeV2ClientInner() {
   )
 }
 
-const HomeV2Client = dynamic(() => Promise.resolve(HomeV2ClientInner), {
+const HomeV4Client = dynamic(() => Promise.resolve(HomeV4ClientInner), {
   ssr: false,
   loading: () => (
     <main className="min-h-screen bg-[#f5f1ea]">
@@ -461,4 +464,4 @@ const HomeV2Client = dynamic(() => Promise.resolve(HomeV2ClientInner), {
   ),
 })
 
-export default HomeV2Client
+export default HomeV4Client
