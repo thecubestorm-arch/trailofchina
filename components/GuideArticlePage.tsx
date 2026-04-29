@@ -102,14 +102,14 @@ export default function GuideArticlePage({
     if (cards.length === 0) return null;
 
     return (
-      <div className="mt-6 space-y-4">
+      <div className="mt-8 space-y-4">
         {cards.map((cta) => (
           <div
             key={`${position}-${cta.href}-${cta.title}`}
-            className="rounded-xl border border-[#af5d32]/20 bg-[#fcfaf6] p-4"
+            className="border-l-4 border-[#af5d32] bg-[#fcfaf6] px-5 py-4 md:px-6"
           >
-            <p className="text-lg font-bold text-[#1a3a4a]">{cta.title}</p>
-            <p className="mt-1 text-sm leading-relaxed text-[#1a3a4a]/75 md:text-base">
+            <p className="font-serif text-xl font-bold text-[#1a3a4a] md:text-2xl">{cta.title}</p>
+            <p className="mt-2 text-base leading-8 text-[#5d6a73] md:text-lg">
               {cta.description}
             </p>
             <Link
@@ -141,6 +141,7 @@ export default function GuideArticlePage({
         <Breadcrumb items={breadcrumbs || []} />
       </div>
 
+      <div className="max-w-none text-[#1a3a4a]">
       <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#af5d32]">{category}</p>
       <div className="mt-3 flex items-center">
         {icon && (
@@ -150,36 +151,36 @@ export default function GuideArticlePage({
             className="mr-3 h-10 w-10 rounded-xl bg-white shadow-sm"
           />
         )}
-        <h1 className="text-4xl font-black tracking-tight text-slate-900 md:text-5xl relative">
+        <h1 className="relative font-serif text-4xl font-bold leading-tight text-[#1a3a4a] md:text-5xl">
           {title}
         </h1>
       </div>
-      <p className="mt-3 text-sm text-[#1a3a4a]/60">
+      <p className="mt-3 text-sm text-[#5d6a73]">
         {metaParts.join(' · ')}
       </p>
-      <p className="mt-4 text-base leading-relaxed text-slate-600 md:text-lg">{intro}</p>
+      <p className="mt-6 max-w-3xl text-lg leading-8 text-[#5d6a73] md:text-xl">{intro}</p>
 
       {heroImage && (
         <img
           src={heroImage.src}
           alt={heroImage.alt}
-          className="mt-8 mb-8 h-48 w-full rounded-2xl object-cover md:h-64"
+          className="mt-10 mb-10 h-56 w-full rounded-2xl object-cover md:h-80"
         />
       )}
 
       {hook && (
-        <div className="mt-6 rounded-xl border border-red-200 bg-red-50 p-5">
-          <p className="text-sm font-semibold leading-relaxed text-red-800 md:text-base">
+        <div className="mt-8 border-l-4 border-[#af5d32] pl-5">
+          <p className="text-base leading-8 text-[#1a3a4a] md:text-lg">
             {hook}
           </p>
         </div>
       )}
 
       {quickInfo && (
-        <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 rounded-xl border border-slate-200 bg-slate-50 px-5 py-3 text-sm text-slate-600">
+        <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-[#5d6a73] md:text-base">
           {quickInfo.split(' · ').map((item, i) => (
             <span key={i} className="flex items-center gap-2">
-              <span className="inline-block h-1.5 w-1.5 rounded-full bg-china-red" />
+              {i > 0 && <span aria-hidden="true" className="inline-block h-1.5 w-1.5 rounded-full bg-[#af5d32]" />}
               {item.trim()}
             </span>
           ))}
@@ -187,10 +188,9 @@ export default function GuideArticlePage({
       )}
 
       {keyTakeaway && (
-        <div className="mt-6 rounded-xl border-l-4 border-[#af5d32] bg-[#fcfaf6] px-5 py-4">
-          <p className="flex items-start gap-3 text-sm font-semibold leading-relaxed text-[#1a3a4a] md:text-base">
-            <span aria-hidden="true" className="text-[#af5d32]">✓</span>
-            <span>{keyTakeaway}</span>
+        <div className="mt-8 border-l-4 border-[#af5d32] bg-[#fcfaf6] px-6 py-5">
+          <p className="text-base leading-8 text-[#1a3a4a] md:text-lg">
+            {keyTakeaway}
           </p>
         </div>
       )}
@@ -198,18 +198,19 @@ export default function GuideArticlePage({
       {renderInlineCtas('after-intro')}
 
       {children && (
-        <div className="mt-10 space-y-8">
+        <div className="mt-12 space-y-12 text-[#1a3a4a] [&_h1]:font-serif [&_h1]:text-4xl [&_h1]:font-bold [&_h1]:leading-tight [&_h1]:text-[#1a3a4a] [&_h2]:font-serif [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:text-[#1a3a4a] md:[&_h2]:text-3xl [&_h3]:font-serif [&_h3]:text-xl [&_h3]:font-bold [&_h3]:text-[#1a3a4a] md:[&_h3]:text-2xl [&_p]:text-base [&_p]:leading-8 [&_p]:text-[#1a3a4a] md:[&_p]:text-lg [&_ul]:space-y-4 [&_ol]:space-y-4 [&_li]:text-base [&_li]:leading-8 [&_li]:text-[#1a3a4a] md:[&_li]:text-lg [&_hr]:border-[#ebe4d8]">
           {children}
         </div>
       )}
 
       {whyYouNeedThis && whyYouNeedThis.length > 0 && (
-        <div className="mt-10 card-base">
-          <h2 className="text-2xl font-extrabold text-slate-900">Why you need this</h2>
-          <ul className="mt-4 space-y-3">
+        <div className="mt-12 border-t border-[#ebe4d8] pt-10">
+          <h2 className="font-serif text-2xl font-bold text-[#1a3a4a] md:text-3xl">Why you need this</h2>
+          <ul className="mt-6 space-y-4">
             {whyYouNeedThis.map((item) => (
-              <li key={item} className="text-sm leading-relaxed text-slate-700 md:text-base">
-                • {item}
+              <li key={item} className="flex items-start gap-3 text-base leading-8 text-[#1a3a4a] md:text-lg">
+                <span aria-hidden="true" className="mt-3 inline-block h-2 w-2 rounded-full bg-[#af5d32]" />
+                <span>{item}</span>
               </li>
             ))}
           </ul>
@@ -219,14 +220,26 @@ export default function GuideArticlePage({
       {renderInlineCtas('before-steps')}
 
       {setupSteps && setupSteps.length > 0 && (
-        <div className="mt-8 card-base">
-          <h2 className="text-2xl font-extrabold text-slate-900">Step-by-step setup guide</h2>
-          <ol className="mt-5 space-y-4">
+        <div className="mt-12 border-t border-[#ebe4d8] pt-10">
+          <h2 className="font-serif text-2xl font-bold text-[#1a3a4a] md:text-3xl">Step-by-step setup guide</h2>
+          <ol className="mt-8 space-y-8">
             {setupSteps.map((step, index) => (
-              <li key={step.title} className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-                <p className="text-xs font-bold uppercase tracking-wide text-china-red">Step {index + 1}</p>
-                <h3 className="mt-1 text-lg font-extrabold text-slate-900">{step.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-700 md:text-base">{step.description}</p>
+              <li key={step.title} className="grid grid-cols-[auto_1fr] gap-4 md:gap-6">
+                <div className="relative flex justify-center">
+                  <span className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full bg-[#fcfaf6] font-serif text-lg font-bold text-[#af5d32] ring-1 ring-[#af5d32]/20">
+                    {index + 1}
+                  </span>
+                  {index < setupSteps.length - 1 && (
+                    <span
+                      aria-hidden="true"
+                      className="absolute left-1/2 top-10 h-[calc(100%+2rem)] w-px -translate-x-1/2 bg-[#ebe4d8]"
+                    />
+                  )}
+                </div>
+                <div className="pb-1">
+                  <h3 className="font-serif text-xl font-bold text-[#1a3a4a] md:text-2xl">{step.title}</h3>
+                  <p className="mt-2 text-base leading-8 text-[#1a3a4a] md:text-lg">{step.description}</p>
+                </div>
               </li>
             ))}
           </ol>
@@ -236,12 +249,12 @@ export default function GuideArticlePage({
       {renderInlineCtas('after-steps')}
 
       {proTips && proTips.length > 0 && (
-        <div className="mt-8 rounded-2xl border border-amber-200 bg-amber-50 p-6">
-          <h2 className="text-xl font-black text-slate-900">Pro Tips</h2>
-          <ul className="mt-3 space-y-2">
+        <div className="mt-12 border-l-4 border-[#af5d32] bg-[#fcfaf6] py-1 pl-5 md:pl-6">
+          <h2 className="font-serif text-xl font-bold text-[#1a3a4a] md:text-2xl">Pro Tips</h2>
+          <ul className="mt-4 space-y-3">
             {proTips.map((tip) => (
-              <li key={tip} className="text-sm leading-relaxed text-slate-700 md:text-base">
-                • {tip}
+              <li key={tip} className="text-base leading-8 text-[#5d6a73] md:text-lg">
+                {tip}
               </li>
             ))}
           </ul>
@@ -254,17 +267,18 @@ export default function GuideArticlePage({
       )}
 
       {related && related.length > 0 && (
-        <div className="mt-8 card-base">
-          <h2 className="text-2xl font-extrabold text-slate-900">Related pages</h2>
+        <div className="mt-12 border-t border-[#ebe4d8] pt-8">
+          <h2 className="font-serif text-2xl font-bold text-[#1a3a4a] md:text-3xl">Related pages</h2>
           <div className="mt-4 flex flex-wrap gap-3">
             {related.map((link) => (
-              <Link key={link.href} href={link.href} className="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-china-red hover:text-china-red">
+              <Link key={link.href} href={link.href} className="rounded-full bg-[#f5f1ea] px-4 py-2 text-sm font-semibold text-[#5d6a73] transition hover:bg-[#efe5d8] hover:text-[#af5d32]">
                 {link.label}
               </Link>
             ))}
           </div>
         </div>
       )}
+      </div>
     </section>
   );
 
