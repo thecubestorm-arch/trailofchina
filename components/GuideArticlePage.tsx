@@ -19,6 +19,14 @@ type Related = {
   href: string
 }
 
+type InlineCta = {
+  position: 'after-intro' | 'before-steps' | 'after-steps'
+  title: string
+  description: string
+  href: string
+  label: string
+}
+
 type GuideArticlePageProps = {
   breadcrumbs?: readonly { label: string; href?: string }[];
   category: string
@@ -33,6 +41,10 @@ type GuideArticlePageProps = {
   heroImage?: { src: string; alt: string }
   hook?: string
   quickInfo?: string
+  keyTakeaway?: string
+  updatedAt?: string
+  readTime?: string
+  inlineCtas?: InlineCta[]
   children?: React.ReactNode
   tocItems?: TOCItem[]
 }
@@ -51,9 +63,68 @@ export default function GuideArticlePage({
   heroImage,
   hook,
   quickInfo,
+  keyTakeaway,
+  updatedAt,
+  readTime,
+  inlineCtas,
   children,
   tocItems,
 }: GuideArticlePageProps) {
+  const estimateReadTime = () => {
+    if (readTime) return readTime;
+
+    const words = [
+      intro,
+      hook,
+      quickInfo,
+      ...(whyYouNeedThis || []),
+      ...(setupSteps || []).flatMap((step) => [step.title, step.description]),
+      ...(proTips || []),
+    ]
+      .filter(Boolean)
+      .join(' ')
+      .trim()
+      .split(/\s+/)
+      .filter(Boolean).length;
+
+    const minutes = Math.max(1, Math.ceil(words / 200));
+    return `${minutes} min read`;
+  };
+
+  const metaParts = ['By Trail of China'];
+  if (updatedAt) {
+    metaParts.push(`Updated ${updatedAt}`);
+  }
+  metaParts.push(estimateReadTime());
+
+  const renderInlineCtas = (position: InlineCta['position']) => {
+    const cards = inlineCtas?.filter((cta) => cta.position === position) || [];
+    if (cards.length === 0) return null;
+
+    return (
+      <div className="mt-6 space-y-4">
+        {cards.map((cta) => (
+          <div
+            key={`${position}-${cta.href}-${cta.title}`}
+            className="rounded-xl border border-[#af5d32]/20 bg-[#fcfaf6] p-4"
+          >
+            <p className="text-lg font-bold text-[#1a3a4a]">{cta.title}</p>
+            <p className="mt-1 text-sm leading-relaxed text-[#1a3a4a]/75 md:text-base">
+              {cta.description}
+            </p>
+            <Link
+              href={cta.href}
+              className="mt-3 inline-flex items-center text-sm font-semibold text-[#af5d32] transition hover:text-[#8f4b28] md:text-base"
+            >
+              {cta.label}
+              <span aria-hidden="true" className="ml-1">→</span>
+            </Link>
+          </div>
+        ))}
+      </div>
+    );
+  };
+
   const content = (
     <section className="mx-auto py-12 md:py-16" style={{
       background: 'linear-gradient(0deg, rgba(245,241,234,0.02) 0%, rgba(245,241,234,0.02) 100%), #ffffff',
@@ -70,7 +141,7 @@ export default function GuideArticlePage({
         <Breadcrumb items={breadcrumbs || []} />
       </div>
 
-      <p className="text-xs font-bold uppercase tracking-[0.2em] text-china-red">{category}</p>
+      <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#af5d32]">{category}</p>
       <div className="mt-3 flex items-center">
         {icon && (
           <img
@@ -83,6 +154,9 @@ export default function GuideArticlePage({
           {title}
         </h1>
       </div>
+      <p className="mt-3 text-sm text-[#1a3a4a]/60">
+        {metaParts.join(' · ')}
+      </p>
       <p className="mt-4 text-base leading-relaxed text-slate-600 md:text-lg">{intro}</p>
 
       {heroImage && (
@@ -112,6 +186,17 @@ export default function GuideArticlePage({
         </div>
       )}
 
+      {keyTakeaway && (
+        <div className="mt-6 rounded-xl border-l-4 border-[#af5d32] bg-[#fcfaf6] px-5 py-4">
+          <p className="flex items-start gap-3 text-sm font-semibold leading-relaxed text-[#1a3a4a] md:text-base">
+            <span aria-hidden="true" className="text-[#af5d32]">✓</span>
+            <span>{keyTakeaway}</span>
+          </p>
+        </div>
+      )}
+
+      {renderInlineCtas('after-intro')}
+
       {children && (
         <div className="mt-10 space-y-8">
           {children}
@@ -131,6 +216,8 @@ export default function GuideArticlePage({
         </div>
       )}
 
+      {renderInlineCtas('before-steps')}
+
       {setupSteps && setupSteps.length > 0 && (
         <div className="mt-8 card-base">
           <h2 className="text-2xl font-extrabold text-slate-900">Step-by-step setup guide</h2>
@@ -145,6 +232,8 @@ export default function GuideArticlePage({
           </ol>
         </div>
       )}
+
+      {renderInlineCtas('after-steps')}
 
       {proTips && proTips.length > 0 && (
         <div className="mt-8 rounded-2xl border border-amber-200 bg-amber-50 p-6">
