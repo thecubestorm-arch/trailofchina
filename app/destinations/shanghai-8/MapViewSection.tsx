@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useMemo, useCallback, useRef } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -15,8 +15,10 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { Search, List, Map } from "lucide-react";
 import type { MarkerLocation } from "../shanghai/types";
+import shanghaiBoundary from "../data/shanghai-boundary";
 
 type POICategory = "attraction" | "eat" | "stay";
+type CategoryView = "overview" | "things-to-do" | "where-to-eat" | "where-to-stay";
 type FilterTag =
   | "free"
   | "budget"
@@ -57,31 +59,17 @@ interface POIItem {
 
 const categoryConfig: Record<
   POICategory,
-  { emoji: string; color: string; label: string }
+  { emoji: string; color: string; label: string; shortLabel: string }
 > = {
-  attraction: { emoji: "🏛️", color: "#af5d32", label: "Attractions" },
-  eat: { emoji: "🍜", color: "#f97316", label: "Food" },
-  stay: { emoji: "🏨", color: "#3b82f6", label: "Stay" },
+  attraction: {
+    emoji: "🏛️",
+    color: "#af5d32",
+    label: "Attractions",
+    shortLabel: "Things to Do",
+  },
+  eat: { emoji: "🍜", color: "#f97316", label: "Food", shortLabel: "Food" },
+  stay: { emoji: "🏨", color: "#3b82f6", label: "Stay", shortLabel: "Stay" },
 };
-
-const shanghaiBoundary: [number, number][] = [
-  [31.4, 121.2],
-  [31.42, 121.35],
-  [31.38, 121.5],
-  [31.35, 121.6],
-  [31.3, 121.65],
-  [31.25, 121.7],
-  [31.2, 121.75],
-  [31.15, 121.7],
-  [31.1, 121.6],
-  [31.05, 121.5],
-  [31.02, 121.35],
-  [31.05, 121.2],
-  [31.1, 121.1],
-  [31.2, 121.05],
-  [31.3, 121.08],
-  [31.4, 121.2],
-];
 
 const getItemCategory = (itemType: FilterableItem["type"]): POICategory | null => {
   if (itemType === "food") return "eat";
@@ -89,35 +77,59 @@ const getItemCategory = (itemType: FilterableItem["type"]): POICategory | null =
   return null;
 };
 
-const poiMarkerIcon = (category: POICategory, isHovered: boolean) => {
-  const cfg = categoryConfig[category];
-  const size = isHovered ? 40 : 32;
-  const borderWidth = isHovered ? 3 : 2;
-  const borderColor = isHovered ? "#af5d32" : "white";
-  const scale = isHovered ? "transform: scale(1.4); transform-origin: center;" : "";
-  return L.divIcon({
-    className: "",
-    html: `<div style="position:relative;width:${size}px;height:${size}px;${scale}transition:transform 0.2s ease;">
-      <div style="position:absolute;inset:${isHovered ? 2 : 5}px;background:${cfg.color};border:${borderWidth}px solid ${borderColor};border-radius:50%;box-shadow:0 2px 6px rgba(0,0,0,0.25);display:flex;align-items:center;justify-content:center;font-size:${isHovered ? 16 : 14}px">${cfg.emoji}</div>
-    </div>`,
-    iconSize: [size, size],
-    iconAnchor: [size / 2, size / 2],
-  });
+const viewToCategories: Record<CategoryView, POICategory[]> = {
+  overview: ["attraction", "eat", "stay"],
+  "things-to-do": ["attraction"],
+  "where-to-eat": ["eat"],
+  "where-to-stay": ["stay"],
 };
 
-const dimmedPoiMarkerIcon = (category: POICategory, isHovered: boolean) => {
-  const cfg = categoryConfig[category];
-  const size = isHovered ? 40 : 32;
-  const borderWidth = isHovered ? 3 : 2;
-  const borderColor = isHovered ? "#af5d32" : "rgba(255,255,255,0.75)";
-  const scale = isHovered ? "transform: scale(1.4); transform-origin: center;" : "";
+const categoryFilterButtons: { id: CategoryView; label: string }[] = [
+  { id: "overview", label: "Overview" },
+  { id: "things-to-do", label: "Things to Do" },
+  { id: "where-to-eat", label: "Where to Eat" },
+  { id: "where-to-stay", label: "Where to Stay" },
+];
+
+const viewHighlightCategory: Partial<Record<CategoryView, POICategory>> = {
+  "things-to-do": "attraction",
+  "where-to-eat": "eat",
+  "where-to-stay": "stay",
+};
+
+const poiMarkerIcon = (
+  categories: POICategory[],
+  highlightedCategory: POICategory | null,
+  isHovered: boolean,
+  isDimmed: boolean
+) => {
+  const visibleCategories: POICategory[] =
+    categories.length > 0 ? categories : ["attraction"];
+  const pillCount = visibleCategories.length;
+  const pillSize = isHovered ? 30 : 24;
+  const gap = 4;
+  const width = pillCount * pillSize + Math.max(0, pillCount - 1) * gap + 10;
+  const height = pillSize + 10;
+  const borderColor = isHovered ? "#af5d32" : "white";
+  const borderWidth = isHovered ? 2.5 : 2;
+  const opacity = isDimmed ? (isHovered ? 0.85 : 0.45) : 1;
+  const scale = isHovered ? "scale(1.08)" : "scale(1)";
+
+  const pills = visibleCategories
+    .map((category) => {
+      const cfg = categoryConfig[category];
+      const isHighlighted = highlightedCategory === null || highlightedCategory === category;
+      return `<div style="width:${pillSize}px;height:${pillSize}px;background:${cfg.color};border:${borderWidth}px solid ${borderColor};border-radius:999px;box-shadow:0 2px 6px rgba(0,0,0,0.22);display:flex;align-items:center;justify-content:center;font-size:${isHovered ? 14 : 13}px;line-height:1;opacity:${isHighlighted ? 1 : 0.4};transform:${isHighlighted ? "scale(1)" : "scale(0.94)"};transition:opacity 0.2s ease, transform 0.2s ease;">${cfg.emoji}</div>`;
+    })
+    .join("");
+
   return L.divIcon({
     className: "",
-    html: `<div style="position:relative;width:${size}px;height:${size}px;${scale}opacity:${isHovered ? "0.9" : "0.45"};transition:transform 0.2s ease, opacity 0.2s ease;">
-      <div style="position:absolute;inset:${isHovered ? 2 : 5}px;background:${cfg.color};border:${borderWidth}px solid ${borderColor};border-radius:50%;box-shadow:0 2px 6px rgba(0,0,0,0.18);display:flex;align-items:center;justify-content:center;font-size:${isHovered ? 16 : 14}px">${cfg.emoji}</div>
+    html: `<div style="width:${width}px;height:${height}px;display:flex;align-items:center;justify-content:center;opacity:${opacity};transform:${scale};transform-origin:center;transition:transform 0.2s ease, opacity 0.2s ease;">
+      <div style="display:flex;align-items:center;gap:${gap}px;padding:5px;">${pills}</div>
     </div>`,
-    iconSize: [size, size],
-    iconAnchor: [size / 2, size / 2],
+    iconSize: [width, height],
+    iconAnchor: [width / 2, height / 2],
   });
 };
 
@@ -154,9 +166,7 @@ export default function MapViewSection({
   onHoverLeave?: () => void;
 }) {
   const [mounted, setMounted] = useState(false);
-  const [activeCategories, setActiveCategories] = useState<Set<POICategory>>(
-    new Set(["attraction", "eat", "stay"])
-  );
+  const [activeView, setActiveView] = useState<CategoryView>("overview");
   const [zoom, setZoom] = useState(13);
   const [mobileView, setMobileView] = useState<"list" | "map">("map");
   const listRef = useRef<HTMLDivElement>(null);
@@ -165,11 +175,16 @@ export default function MapViewSection({
     setMounted(true);
   }, []);
 
-  const filteredItems = useMemo(() => {
+  const activeCategories = useMemo(
+    () => new Set(viewToCategories[activeView]),
+    [activeView]
+  );
+
+  const matchedItems = useMemo(() => {
     const pois: POIItem[] = [];
     for (const item of allItems) {
       const category = getItemCategory(item.type);
-      if (!category || !item.markerId || !activeCategories.has(category)) continue;
+      if (!category || !item.markerId) continue;
 
       if (searchQuery) {
         const q = searchQuery.toLowerCase();
@@ -196,44 +211,61 @@ export default function MapViewSection({
       });
     }
     return pois;
-  }, [allItems, searchQuery, activeFilters, activeCategories]);
+  }, [allItems, searchQuery, activeFilters]);
 
-  const toggleCategory = useCallback((cat: POICategory) => {
-    setActiveCategories((prev) => {
-      const next = new Set(prev);
-      if (next.has(cat)) {
-        if (next.size > 1) next.delete(cat);
-      } else {
-        next.add(cat);
-      }
-      return next;
-    });
-  }, []);
+  const filteredItems = useMemo(
+    () =>
+      matchedItems.filter((item) => activeCategories.has(item.category)),
+    [matchedItems, activeCategories]
+  );
 
   const filteredMarkers = useMemo(() => {
-    const visibleMarkerIds = new Set(filteredItems.map((item) => item.markerId));
+    const itemsByMarker = matchedItems.reduce<Record<string, POIItem[]>>(
+      (acc, item) => {
+        if (!acc[item.markerId]) acc[item.markerId] = [];
+        acc[item.markerId].push(item);
+        return acc;
+      },
+      {}
+    );
+    const highlightedCategory = viewHighlightCategory[activeView] ?? null;
+
     return markers
-      .filter((marker) => visibleMarkerIds.has(marker.id))
+      .map((marker) => {
+        const markerItems = itemsByMarker[marker.id] ?? [];
+        const visibleCategories = marker.categories.filter((category) =>
+          markerItems.some((item) => item.category === category)
+        );
+        const activeMarkerCategories = visibleCategories.filter((category) =>
+          activeCategories.has(category)
+        );
+        const primaryItem =
+          markerItems.find(
+            (item) =>
+              item.category === highlightedCategory &&
+              activeCategories.has(item.category)
+          ) ??
+          markerItems.find((item) => activeCategories.has(item.category)) ??
+          markerItems[0] ??
+          null;
+
+        return {
+          ...marker,
+          displayCategories: visibleCategories,
+          activeMarkerCategories,
+          highlightCategory:
+            highlightedCategory &&
+            visibleCategories.includes(highlightedCategory)
+              ? highlightedCategory
+              : null,
+          primaryItem,
+        };
+      })
+      .filter((marker) => marker.activeMarkerCategories.length > 0)
       .map((marker) => ({
         ...marker,
-        displayCategory:
-          (["attraction", "eat", "stay"] as POICategory[]).find(
-            (category) =>
-              marker.categories.includes(category) &&
-              filteredItems.some(
-                (item) => item.markerId === marker.id && item.category === category
-              )
-          ) ?? marker.categories[0],
-        isActive: marker.categories.some((category) => activeCategories.has(category)),
-        primaryItem:
-          filteredItems.find(
-            (item) =>
-              item.markerId === marker.id && activeCategories.has(item.category)
-          ) ??
-          filteredItems.find((item) => item.markerId === marker.id) ??
-          null,
       }));
-  }, [activeCategories, filteredItems, markers]);
+  }, [activeCategories, activeView, markers, matchedItems]);
 
   const groupPoisByCategory = useMemo(() => {
     const groups: Record<POICategory, POIItem[]> = {
@@ -266,7 +298,28 @@ export default function MapViewSection({
   }
 
   return (
-    <div className="flex flex-col md:flex-row -mx-4 md:-mx-0 md:rounded-2xl overflow-hidden border border-[#ebe4d8] bg-white" style={{ minHeight: 600 }}>
+    <div className="space-y-4">
+      <div className="relative z-40 flex flex-wrap gap-2">
+        {categoryFilterButtons.map((filter) => {
+          const isActive = activeView === filter.id;
+          return (
+            <button
+              key={filter.id}
+              type="button"
+              onClick={() => setActiveView(filter.id)}
+              className={`rounded-full border px-4 py-2 text-sm font-semibold transition-colors ${
+                isActive
+                  ? "border-[#af5d32] bg-[#af5d32] text-white"
+                  : "border-[#d9c8b5] bg-white text-[#1a3a4a] hover:border-[#af5d32]"
+              }`}
+            >
+              {filter.label}
+            </button>
+          );
+        })}
+      </div>
+
+      <div className="relative z-0 flex flex-col md:flex-row -mx-4 md:-mx-0 md:rounded-2xl overflow-hidden border border-[#ebe4d8] bg-white" style={{ minHeight: 600 }}>
       {/* Left: POI List (desktop 35%) */}
       <div
         className={`${
@@ -303,7 +356,7 @@ export default function MapViewSection({
                       className={`flex items-start gap-3 p-2.5 rounded-xl border-l-[3px] border-y border-r transition-all group ${
                         hoveredItem === poi.markerId
                           ? "bg-[#faf4ea] border-l-[#af5d32] border-y-[#ebe4d8] border-r-[#ebe4d8]"
-                          : "border-l-transparent border-y-transparent border-r-transparent hover:bg-[#f5f1ea]"
+                          : "border-l-transparent border-y-transparent border-r-transparent hover:border-l-[#af5d32] hover:border-y-[#ebe4d8] hover:border-r-[#ebe4d8] hover:bg-[#faf4ea]"
                       }`}
                       onMouseEnter={() => onHoverEnter(poi.markerId)}
                       onMouseLeave={onHoverLeave}
@@ -355,10 +408,11 @@ export default function MapViewSection({
       <div
         className={`${
           mobileView === "map" ? "flex" : "hidden md:flex"
-        } md:w-[65%] w-full relative`}
+        } md:w-[65%] w-full relative z-0 overflow-hidden`}
         style={{ minHeight: 400 }}
       >
         <MapContainer
+          className="shanghai-hub-map z-0"
           center={[31.23, 121.47]}
           zoom={13}
           minZoom={11}
@@ -376,10 +430,9 @@ export default function MapViewSection({
             pathOptions={{
               fillColor: "#1a3a4a",
               fillOpacity: 0.05,
-              color: "#1a3a4a",
-              weight: 1.5,
-              dashArray: "6, 6",
-              opacity: 0.4,
+              color: "#af5d32",
+              weight: 2,
+              opacity: 0.6,
             }}
           />
           {zoom >= 13 &&
@@ -390,23 +443,21 @@ export default function MapViewSection({
                 icon={poiLabelIcon(
                   marker.name,
                   hoveredItem === marker.id,
-                  marker.isActive
+                  marker.displayCategories.length > 0
                 )}
                 zIndexOffset={-100}
               />
             ))}
           {filteredMarkers.map((marker) => (
             <Marker
-              key={`marker-${marker.id}`}
-              position={[marker.lat, marker.lng]}
-              icon={
-                marker.isActive
-                  ? poiMarkerIcon(marker.displayCategory, hoveredItem === marker.id)
-                  : dimmedPoiMarkerIcon(
-                      marker.displayCategory,
-                      hoveredItem === marker.id
-                    )
-              }
+                key={`marker-${marker.id}`}
+                position={[marker.lat, marker.lng]}
+                icon={poiMarkerIcon(
+                  marker.displayCategories,
+                  marker.highlightCategory,
+                  hoveredItem === marker.id,
+                  marker.activeMarkerCategories.length === 0
+                )}
               eventHandlers={{
                 mouseover: () => onHoverEnter(marker.id),
                 mouseout: onHoverLeave,
@@ -430,13 +481,50 @@ export default function MapViewSection({
                     }}
                   />
                   <div className="flex items-center gap-1.5">
-                    <span style={{ fontSize: 16 }}>
-                      {categoryConfig[marker.displayCategory].emoji}
-                    </span>
                     <strong style={{ color: "#1a3a4a", fontSize: 14 }}>
                       {marker.name}
                     </strong>
                   </div>
+                  {marker.displayCategories.length > 0 && (
+                    <div style={{ display: "flex", gap: 6, marginTop: 6 }}>
+                      {marker.displayCategories.map((category) => (
+                        <span
+                          key={category}
+                          style={{
+                            display: "inline-flex",
+                            alignItems: "center",
+                            gap: 4,
+                            padding: "2px 8px",
+                            borderRadius: 999,
+                            backgroundColor:
+                              marker.highlightCategory === null ||
+                              marker.highlightCategory === category
+                                ? `${categoryConfig[category].color}15`
+                                : "#f8fafc",
+                            color:
+                              marker.highlightCategory === null ||
+                              marker.highlightCategory === category
+                                ? categoryConfig[category].color
+                                : "#94a3b8",
+                            fontSize: 11,
+                            fontWeight: 600,
+                            border:
+                              marker.highlightCategory === category
+                                ? `1px solid ${categoryConfig[category].color}40`
+                                : "1px solid #e2e8f0",
+                            opacity:
+                              marker.highlightCategory === null ||
+                              marker.highlightCategory === category
+                                ? 1
+                                : 0.75,
+                          }}
+                        >
+                          <span>{categoryConfig[category].emoji}</span>
+                          <span>{categoryConfig[category].shortLabel}</span>
+                        </span>
+                      ))}
+                    </div>
+                  )}
                   <p
                     style={{
                       fontSize: 12,
@@ -494,6 +582,22 @@ export default function MapViewSection({
             )}
           </button>
         </div>
+      </div>
+      <style jsx global>{`
+        .shanghai-hub-map,
+        .shanghai-hub-map.leaflet-container {
+          z-index: 0;
+        }
+
+        .shanghai-hub-map .leaflet-pane {
+          z-index: 1;
+        }
+
+        .shanghai-hub-map .leaflet-top,
+        .shanghai-hub-map .leaflet-bottom {
+          z-index: 2;
+        }
+      `}</style>
       </div>
     </div>
   );

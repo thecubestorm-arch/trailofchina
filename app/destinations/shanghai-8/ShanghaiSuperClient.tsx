@@ -1125,9 +1125,9 @@ export default function ShanghaiSuperClient() {
       </section>
 
       {/* ========== STICKY TAB NAV + SEARCH/FILTER ========== */}
-      <div className="sticky top-0 z-[40] bg-white border-b border-[#ebe4d8] shadow-sm">
+      <div className="sticky top-0 z-40 bg-white border-b border-[#ebe4d8] shadow-sm">
         {/* Tab Nav */}
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="relative z-50 max-w-6xl mx-auto px-4">
           <div className="flex items-center overflow-x-auto scrollbar-hide">
             <div className="flex flex-1 overflow-x-auto scrollbar-hide">
               {tabs.map((tab) => {
@@ -1173,7 +1173,7 @@ export default function ShanghaiSuperClient() {
         </div>
 
         {/* Filter Bar */}
-        <div className="border-t border-[#ebe4d8]">
+        <div className="relative z-40 border-t border-[#ebe4d8]">
           <div className="max-w-6xl mx-auto px-4 py-3">
             <div className="flex items-center gap-3 mb-3">
               <SlidersHorizontal className="text-[#64748b] flex-shrink-0" size={20} />

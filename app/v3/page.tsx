@@ -2,48 +2,22 @@ import type { Metadata } from 'next'
 import HomeV3Client from './HomeV3Client'
 
 export const metadata: Metadata = {
-  title: 'Trail of China — First-Trip China Travel Guide',
+  title: 'China Travel Guide V3 | Trail of China',
   description:
-    'Practical China travel guides for first-time visitors. Destinations, visas, apps, itineraries — everything you need for a smooth first trip.',
-  keywords: [
-    'China travel guide',
-    'first trip to China',
-    'China itinerary',
-    'China visa',
-    'China apps',
-    'Shanghai travel',
-    'Beijing travel',
-    'China travel tips',
-  ],
-  alternates: {
-    canonical: 'https://trailofchina.com',
-  },
+    'Your first trip to China, simplified. Includes a mini-map hero, practical trip planning, destination ideas, and essential China basics for first-time travelers.',
   openGraph: {
-    title: 'Trail of China — First-Trip China Travel Guide',
+    title: 'China Travel Guide V3 | Trail of China',
     description:
-      'Practical guides, honest advice, and ready-made itineraries. Everything you need for a smooth first trip to China.',
-    url: 'https://trailofchina.com',
-    siteName: 'Trail of China',
-    images: [
-      {
-        url: 'https://trailofchina.com/images/og/home.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Trail of China — First-Trip China Travel Guide',
-      },
-    ],
-    locale: 'en_US',
+      'Your first trip to China, simplified. Includes a mini-map hero, practical trip planning, destination ideas, and essential China basics for first-time travelers.',
     type: 'website',
+    images: ['/images/hero/china-hero.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Trail of China — First-Trip China Travel Guide',
-    description:
-      'Practical guides, honest advice, and ready-made itineraries. Everything you need for a smooth first trip to China.',
-    images: ['https://trailofchina.com/images/og/home.jpg'],
+    images: ['/images/hero/china-hero.jpg'],
   },
 }
 
-export default function HomePageV3() {
+export default function HomeV3Page() {
   return <HomeV3Client />
 }

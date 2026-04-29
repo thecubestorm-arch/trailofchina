@@ -387,7 +387,15 @@ function MapLayers({
 // ── Main Component ───────────────────────────────────────────────
 export default function DestinationsMapInner() {
   const [mounted, setMounted] = useState(false)
-  const [viewMode, setViewMode] = useState<'list' | 'split'>('list')
+  const [viewMode, setViewMode] = useState<'list' | 'split'>(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('destinations-view-mode')
+      if (saved === 'split') return 'split'
+      const params = new URLSearchParams(window.location.search)
+      if (params.get('view') === 'split') return 'split'
+    }
+    return 'list'
+  })
   const [hoveredCity, setHoveredCity] = useState<string | null>(null)
   const [activePopupCity, setActivePopupCity] = useState<string | null>(null)
   const [mobileMapOpen, setMobileMapOpen] = useState(false)
@@ -471,7 +479,7 @@ export default function DestinationsMapInner() {
             </div>
             <div className="flex rounded-lg border border-[#ebe4d8] overflow-hidden bg-white flex-shrink-0">
               <button
-                onClick={() => setViewMode('list')}
+                onClick={() => { setViewMode('list'); localStorage.setItem('destinations-view-mode', 'list'); }}
                 className={`px-4 py-2 text-sm font-semibold flex items-center gap-1.5 transition-colors ${
                   viewMode === 'list'
                     ? 'bg-[#1a3a4a] text-white'
@@ -481,7 +489,7 @@ export default function DestinationsMapInner() {
                 <List size={14} /> List
               </button>
               <button
-                onClick={() => setViewMode('split')}
+                onClick={() => { setViewMode('split'); localStorage.setItem('destinations-view-mode', 'split'); }}
                 className={`px-4 py-2 text-sm font-semibold flex items-center gap-1.5 transition-colors ${
                   viewMode === 'split'
                     ? 'bg-[#1a3a4a] text-white'

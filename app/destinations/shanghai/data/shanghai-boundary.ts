@@ -109,6 +109,8 @@ export const shanghaiBoundary: [number, number][] = [
   [31.530, 121.200],
 ];
 
+export default shanghaiBoundary;
+
 // Compute maxBounds from boundary (with padding)
 export const shanghaiMaxBounds: [[number, number], [number, number]] = [
   [31.020, 121.120], // SW corner (with padding)
