@@ -100,6 +100,8 @@ const viewHighlightCategory: Partial<Record<CategoryView, POICategory>> = {
 const poiMarkerIcon = (
   categories: POICategory[],
   highlightedCategory: POICategory | null,
+  name: string,
+  showLabel: boolean,
   isHovered: boolean,
   isDimmed: boolean
 ) => {
@@ -108,7 +110,14 @@ const poiMarkerIcon = (
   const pillCount = visibleCategories.length;
   const pillSize = isHovered ? 30 : 24;
   const gap = 4;
-  const width = pillCount * pillSize + Math.max(0, pillCount - 1) * gap + 10;
+  const pillsWidth = pillCount * pillSize + Math.max(0, pillCount - 1) * gap;
+  const labelGap = showLabel ? 4 : 0;
+  const labelHorizontalPadding = 16;
+  const estimatedLabelTextWidth = Math.max(36, Math.ceil(name.length * 6.4));
+  const labelWidth = showLabel
+    ? estimatedLabelTextWidth + labelHorizontalPadding
+    : 0;
+  const width = pillsWidth + 10 + labelGap + labelWidth;
   const height = pillSize + 10;
   const borderColor = isHovered ? "#af5d32" : "white";
   const borderWidth = isHovered ? 2.5 : 2;
@@ -123,23 +132,22 @@ const poiMarkerIcon = (
     })
     .join("");
 
+  const labelHtml = showLabel
+    ? `<div style="background:white;padding:2px 8px;border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,0.15);font-size:11px;font-weight:600;color:#1a3a4a;white-space:nowrap;border:1.5px solid ${isHovered ? "#af5d32" : "transparent"};opacity:${opacity};transition:border-color 0.2s ease, opacity 0.2s ease;">${name}</div>`
+    : "";
+
   return L.divIcon({
     className: "",
-    html: `<div style="width:${width}px;height:${height}px;display:flex;align-items:center;justify-content:center;opacity:${opacity};transform:${scale};transform-origin:center;transition:transform 0.2s ease, opacity 0.2s ease;">
-      <div style="display:flex;align-items:center;gap:${gap}px;padding:5px;">${pills}</div>
+    html: `<div style="width:${width}px;height:${height}px;display:flex;align-items:center;justify-content:flex-start;opacity:${opacity};transform:${scale};transform-origin:center;transition:transform 0.2s ease, opacity 0.2s ease;">
+      <div style="display:flex;align-items:center;gap:${labelGap}px;padding:5px;">
+        <div style="display:flex;align-items:center;gap:${gap}px;">${pills}</div>
+        ${labelHtml}
+      </div>
     </div>`,
     iconSize: [width, height],
     iconAnchor: [width / 2, height / 2],
   });
 };
-
-const poiLabelIcon = (name: string, isHovered: boolean, isActive: boolean) =>
-  L.divIcon({
-    className: "",
-    html: `<div style="background:white;padding:2px 8px;border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,0.15);font-size:11px;font-weight:600;color:#1a3a4a;white-space:nowrap;border:1.5px solid ${isHovered ? "#af5d32" : "transparent"};opacity:${isActive ? "1" : "0.55"};transition:border-color 0.2s ease, opacity 0.2s ease;">${name}</div>`,
-    iconSize: [80, 20],
-    iconAnchor: [-12, 10],
-  });
 
 function ZoomTracker({ onZoom }: { onZoom: (z: number) => void }) {
   useMapEvents({
@@ -453,19 +461,6 @@ export default function MapViewSection({
               opacity: 0.6,
             }}
           />
-          {zoom >= 13 &&
-            filteredMarkers.map((marker) => (
-              <Marker
-                key={`label-${marker.id}`}
-                position={[marker.lat, marker.lng]}
-                icon={poiLabelIcon(
-                  marker.name,
-                  hoveredItem === marker.id,
-                  marker.displayCategories.length > 0
-                )}
-                zIndexOffset={-100}
-              />
-            ))}
           {filteredMarkers.map((marker) => (
             <Marker
                 key={`marker-${marker.id}`}
@@ -473,6 +468,8 @@ export default function MapViewSection({
                 icon={poiMarkerIcon(
                   marker.displayCategories,
                   marker.highlightCategory,
+                  marker.name,
+                  zoom >= 13,
                   hoveredItem === marker.id,
                   marker.activeMarkerCategories.length === 0
                 )}
