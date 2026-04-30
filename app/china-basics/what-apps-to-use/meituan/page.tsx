@@ -103,7 +103,6 @@ export default function MeituanPage() {
             alt="Ordering food with Meituan"
             className="h-64 w-full rounded-lg object-cover md:h-96"
           />
-          <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
         </div>
 
         <section className="mb-10">
@@ -140,7 +139,6 @@ export default function MeituanPage() {
                       alt="Meituan payment setup"
                       className="mx-auto w-full max-w-md rounded-lg object-cover"
                     />
-                    <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
                   </div>
                 )}
                 {index === 4 && (
@@ -150,7 +148,6 @@ export default function MeituanPage() {
                       alt="Meituan food order screen"
                       className="mx-auto w-full max-w-md rounded-lg object-cover"
                     />
-                    <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
                   </div>
                 )}
               </li>
@@ -184,7 +181,6 @@ export default function MeituanPage() {
               alt="Meituan local deals screen"
               className="h-48 w-full rounded-lg object-cover md:h-64"
             />
-            <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
           </div>
 
           <h3 className="mt-8 mb-3 text-xl sm:text-2xl font-serif font-bold text-[var(--foreground)]">Bike sharing</h3>

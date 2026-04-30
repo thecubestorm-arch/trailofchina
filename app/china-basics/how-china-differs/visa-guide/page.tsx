@@ -106,7 +106,6 @@ export default function VisaGuidePage() {
             alt="China visa guide"
             className="h-64 w-full rounded-lg object-cover md:h-96"
           />
-          <p className="mt-1 text-xs text-[var(--muted)]">Replace with visa application or passport image</p>
         </div>
 
         <section className="mb-10">
@@ -139,7 +138,6 @@ export default function VisaGuidePage() {
                       alt="China visa documents"
                       className="mx-auto w-full max-w-md rounded-lg object-cover"
                     />
-                    <p className="mt-1 text-xs text-[var(--muted)]">Replace with visa document checklist image</p>
                   </div>
                 )}
               </li>

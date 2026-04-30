@@ -99,7 +99,6 @@ export default function CensorshipPage() {
             alt="The Great Firewall of China"
             className="h-64 w-full rounded-lg object-cover md:h-96"
           />
-          <p className="mt-1 text-xs text-[var(--muted)]">Replace with a China internet access image</p>
         </div>
 
         <section className="mb-10">
@@ -159,7 +158,6 @@ export default function CensorshipPage() {
               alt="Chinese local apps on a phone"
               className="h-48 w-full rounded-lg object-cover md:h-64"
             />
-            <p className="mt-1 text-xs text-[var(--muted)]">Replace with local app collage</p>
           </div>
         </section>
 

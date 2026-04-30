@@ -73,7 +73,6 @@ export default function TaxiPage() {
             alt="Traditional taxis in China"
             className="h-64 w-full rounded-lg object-cover md:h-96"
           />
-          <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
         </div>
 
         <section className="mb-10">
@@ -111,7 +110,6 @@ export default function TaxiPage() {
               alt="Taxi stand in China"
               className="h-48 w-full rounded-lg object-cover md:h-64"
             />
-            <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
           </div>
 
           <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">How to Hail a Taxi</h2>

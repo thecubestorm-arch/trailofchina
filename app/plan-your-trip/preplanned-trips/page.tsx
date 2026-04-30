@@ -95,7 +95,6 @@ export default function PreplannedTripsPage() {
             alt="China trip planning map"
             className="h-64 w-full rounded-lg object-cover md:h-96"
           />
-          <p className="mt-1 text-xs text-[var(--muted)]">Replace with China route planning image</p>
         </div>
 
         <section className="mb-10">

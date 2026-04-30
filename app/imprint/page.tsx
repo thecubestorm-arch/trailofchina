@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: { absolute: 'Imprint | Trail of China' },
   description:
-    'Imprint and legal notice for Trail of China, including publisher details, contact placeholders, and Swiss law governance notice.',
+    'Imprint and legal notice for Trail of China, including publisher details, contact information, and Swiss law governance notice.',
 }
 
 export default function ImprintPage() {
@@ -29,10 +29,10 @@ export default function ImprintPage() {
             <h2 className="text-xl md:text-2xl font-bold text-[#1a3a4a] mb-3 border-b border-[#ebe4d8] pb-2">Publisher Information</h2>
             <div className="space-y-4 mt-4">
               <p className="text-[#64748b]">
-                <strong>Company:</strong> Trail of China, [City], Switzerland
+                <strong>Company:</strong> Trail of China, Zurich, Switzerland
               </p>
               <p className="text-[#64748b]">
-                <strong>Contact Email:</strong> [contact@trailofchina.com]
+                <strong>Contact Email:</strong> hello@trailofchina.com
               </p>
               <p className="text-[#64748b]">
                 <strong>Responsible Person:</strong> [Full Name]

@@ -81,7 +81,6 @@ export default function TrainPage() {
             alt="High-speed train travel in China"
             className="h-64 w-full rounded-lg object-cover md:h-96"
           />
-          <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
         </div>
 
         <section className="mb-10">
@@ -139,7 +138,6 @@ export default function TrainPage() {
               alt="China train station departure hall"
               className="h-48 w-full rounded-lg object-cover md:h-64"
             />
-            <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
           </div>
 
           <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">Seat Classes</h2>

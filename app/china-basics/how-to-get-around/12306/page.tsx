@@ -122,7 +122,6 @@ export default function TrainBookingPage() {
             alt="Train travel in China"
             className="h-64 w-full rounded-lg object-cover md:h-96"
           />
-          <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
         </div>
 
         <section className="mb-10">
@@ -155,7 +154,6 @@ export default function TrainBookingPage() {
                       alt="12306 app language settings"
                       className="mx-auto w-full max-w-md rounded-lg object-cover"
                     />
-                    <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
                   </div>
                 )}
                 {index === 2 && (
@@ -165,7 +163,6 @@ export default function TrainBookingPage() {
                       alt="12306 passport verification screen"
                       className="mx-auto w-full max-w-md rounded-lg object-cover"
                     />
-                    <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
                   </div>
                 )}
                 {index === 5 && (
@@ -175,7 +172,6 @@ export default function TrainBookingPage() {
                       alt="12306 e-ticket confirmation"
                       className="mx-auto w-full max-w-md rounded-lg object-cover"
                     />
-                    <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
                   </div>
                 )}
               </li>

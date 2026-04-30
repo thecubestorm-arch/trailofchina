@@ -106,7 +106,6 @@ export default function AlipayPage() {
             alt="Alipay app interface"
             className="h-64 w-full rounded-lg object-cover md:h-96"
           />
-          <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
         </div>
 
         <section className="mb-10">
@@ -149,7 +148,6 @@ export default function AlipayPage() {
                       alt="Alipay Add Card screen"
                       className="mx-auto w-full max-w-md rounded-lg object-cover"
                     />
-                    <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
                   </div>
                 )}
                 {index === 2 && (
@@ -159,7 +157,6 @@ export default function AlipayPage() {
                       alt="Alipay identity verification screen"
                       className="mx-auto w-full max-w-md rounded-lg object-cover"
                     />
-                    <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
                   </div>
                 )}
                 {index === 3 && (
@@ -169,7 +166,6 @@ export default function AlipayPage() {
                       alt="Alipay QR payment screen"
                       className="mx-auto w-full max-w-md rounded-lg object-cover"
                     />
-                    <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
                   </div>
                 )}
               </li>
@@ -194,7 +190,6 @@ export default function AlipayPage() {
               alt="Alipay mini-apps overview"
               className="h-48 w-full rounded-lg object-cover md:h-64"
             />
-            <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
           </div>
 
           <h3 className="text-xl sm:text-2xl font-serif font-bold text-[var(--foreground)] mt-8 mb-3">Transit tickets</h3>
@@ -259,7 +254,6 @@ export default function AlipayPage() {
               alt="Alipay transit QR code at subway turnstile"
               className="mx-auto w-full max-w-sm rounded-lg object-cover"
             />
-            <p className="mt-1 text-center text-xs text-[var(--muted)]">Replace with app screenshot</p>
           </div>
 
           <h3 className="text-xl sm:text-2xl font-serif font-bold text-[var(--foreground)] mt-8 mb-3">Buses</h3>

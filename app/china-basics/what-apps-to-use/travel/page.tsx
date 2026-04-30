@@ -97,7 +97,6 @@ export default function TravelAppsPage() {
             alt="Travel apps in China"
             className="h-64 w-full rounded-lg object-cover md:h-96"
           />
-          <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
         </div>
 
         <section className="mb-10">
@@ -134,7 +133,6 @@ export default function TravelAppsPage() {
                       alt="Trip.com account profile setup"
                       className="mx-auto w-full max-w-md rounded-lg object-cover"
                     />
-                    <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
                   </div>
                 )}
                 {index === 1 && (
@@ -144,7 +142,6 @@ export default function TravelAppsPage() {
                       alt="Didi location and payment setup"
                       className="mx-auto w-full max-w-md rounded-lg object-cover"
                     />
-                    <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
                   </div>
                 )}
               </li>

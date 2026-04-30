@@ -197,7 +197,6 @@ export default function TripComPage() {
             alt="Trip.com travel app for China"
             className="h-64 w-full rounded-lg object-cover md:h-96"
           />
-          <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
         </div>
 
         <section className="mb-10">
@@ -246,7 +245,6 @@ export default function TripComPage() {
               alt="Trip.com high-speed train booking"
               className="h-48 w-full rounded-lg object-cover md:h-64"
             />
-            <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
           </div>
 
           <h3 className="mt-10 mb-3 text-xl sm:text-2xl font-serif font-bold text-[var(--foreground)]">
@@ -320,7 +318,6 @@ export default function TripComPage() {
               alt="Trip.com eSIM purchase flow"
               className="mx-auto w-full max-w-md rounded-lg object-cover"
             />
-            <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
           </div>
 
           <h3 className="mt-10 mb-3 text-xl sm:text-2xl font-serif font-bold text-[var(--foreground)]">

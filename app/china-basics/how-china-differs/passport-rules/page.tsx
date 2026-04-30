@@ -78,7 +78,6 @@ export default function PassportRulesPage() {
             alt="Passport and registration rules in China"
             className="h-64 w-full rounded-lg object-cover md:h-96"
           />
-          <p className="mt-1 text-xs text-[var(--muted)]">Replace with passport or hotel check-in image</p>
         </div>
 
         <section className="mb-10">
@@ -131,7 +130,6 @@ export default function PassportRulesPage() {
               alt="Hotel front desk registration"
               className="h-48 w-full rounded-lg object-cover md:h-64"
             />
-            <p className="mt-1 text-xs text-[var(--muted)]">Replace with hotel registration image</p>
           </div>
         </section>
 

@@ -102,7 +102,6 @@ export default function DidiPage() {
             alt="Didi ride-hailing in China"
             className="h-64 w-full rounded-lg object-cover md:h-96"
           />
-          <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
         </div>
 
         <section className="mb-10">
@@ -139,7 +138,6 @@ export default function DidiPage() {
                       alt="Didi payment setup screen"
                       className="mx-auto w-full max-w-md rounded-lg object-cover"
                     />
-                    <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
                   </div>
                 )}
                 {index === 4 && (
@@ -149,7 +147,6 @@ export default function DidiPage() {
                       alt="Didi ride booking screen"
                       className="mx-auto w-full max-w-md rounded-lg object-cover"
                     />
-                    <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
                   </div>
                 )}
               </li>

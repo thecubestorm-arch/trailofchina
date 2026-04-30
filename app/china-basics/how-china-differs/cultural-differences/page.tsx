@@ -78,7 +78,6 @@ export default function CulturalDifferencesPage() {
             alt="Cultural differences in China"
             className="h-64 w-full rounded-lg object-cover md:h-96"
           />
-          <p className="mt-1 text-xs text-[var(--muted)]">Replace with street or dining scene</p>
         </div>
 
         <section className="mb-10">
@@ -139,7 +138,6 @@ export default function CulturalDifferencesPage() {
               alt="Chinese dining table"
               className="h-48 w-full rounded-lg object-cover md:h-64"
             />
-            <p className="mt-1 text-xs text-[var(--muted)]">Replace with restaurant table image</p>
           </div>
         </section>
 

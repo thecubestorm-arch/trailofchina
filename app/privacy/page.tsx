@@ -31,10 +31,10 @@ export default function PrivacyPage() {
             <h2 className="text-xl md:text-2xl font-bold text-[#1a3a4a] mb-3 border-b border-[#ebe4d8] pb-2">Data Controller</h2>
             <div className="space-y-4 mt-4">
               <p className="text-[#64748b]">
-                <strong>Controller:</strong> Trail of China, [City], Switzerland
+                <strong>Controller:</strong> Trail of China, Zurich, Switzerland
               </p>
               <p className="text-[#64748b]">
-                <strong>Email:</strong> [privacy@trailofchina.com]
+                <strong>Email:</strong> hello@trailofchina.com
               </p>
               <p className="text-[#64748b] leading-7">
                 For data protection inquiries, requests, or complaints, please contact us via the email address above.
@@ -86,7 +86,7 @@ export default function PrivacyPage() {
               <li>Restriction or objection to specific processing activities.</li>
             </ul>
             <p className="text-[#64748b] leading-7 mt-4">
-              To exercise these rights, contact us at [privacy@trailofchina.com].
+              To exercise these rights, contact us at hello@trailofchina.com.
             </p>
           </section>
 
@@ -101,7 +101,7 @@ export default function PrivacyPage() {
           <section className="mb-8">
             <h2 className="text-xl md:text-2xl font-bold text-[#1a3a4a] mb-3 border-b border-[#ebe4d8] pb-2">Privacy Contact</h2>
             <p className="text-[#64748b] leading-7 mt-4">
-              For all privacy inquiries, rights requests, or complaints, contact: [privacy@trailofchina.com].
+              For all privacy inquiries, rights requests, or complaints, contact: hello@trailofchina.com.
             </p>
           </section>
 

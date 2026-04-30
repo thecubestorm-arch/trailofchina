@@ -112,7 +112,6 @@ export default function WeChatPayPage() {
             alt="WeChat Pay in China"
             className="h-64 w-full rounded-lg object-cover md:h-96"
           />
-          <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
         </div>
 
         <section className="mb-10">
@@ -148,7 +147,6 @@ export default function WeChatPayPage() {
                       alt="WeChat Pay wallet setup screen"
                       className="mx-auto w-full max-w-md rounded-lg object-cover"
                     />
-                    <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
                   </div>
                 )}
                 {index === 2 && (
@@ -158,7 +156,6 @@ export default function WeChatPayPage() {
                       alt="WeChat identity verification screen"
                       className="mx-auto w-full max-w-md rounded-lg object-cover"
                     />
-                    <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
                   </div>
                 )}
                 {index === 4 && (
@@ -168,7 +165,6 @@ export default function WeChatPayPage() {
                       alt="WeChat QR payment mode"
                       className="mx-auto w-full max-w-md rounded-lg object-cover"
                     />
-                    <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
                   </div>
                 )}
               </li>

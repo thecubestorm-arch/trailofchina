@@ -78,7 +78,6 @@ export default function SecurityStandardsPage() {
             alt="Safety and security in China"
             className="h-64 w-full rounded-lg object-cover md:h-96"
           />
-          <p className="mt-1 text-xs text-[var(--muted)]">Replace with city street safety image</p>
         </div>
 
         <section className="mb-10">
@@ -114,7 +113,6 @@ export default function SecurityStandardsPage() {
               alt="Traveler in a busy Chinese transport hub"
               className="h-48 w-full rounded-lg object-cover md:h-64"
             />
-            <p className="mt-1 text-xs text-[var(--muted)]">Replace with station or street scene</p>
           </div>
         </section>
 

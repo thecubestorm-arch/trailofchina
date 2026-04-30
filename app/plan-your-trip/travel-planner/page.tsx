@@ -1,25 +1,13 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
+import TravelPlannerForm from './TravelPlannerForm'
 
 export const metadata: Metadata = {
   title: 'Travel Planner | Trail of China',
   description: 'Build your custom China itinerary. Select cities, duration, interests, and budget.',
 }
-
-const cities = ['Beijing', 'Shanghai', "Xi'an", 'Chengdu', 'Guilin/Yangshuo', 'Hong Kong']
-const durations = ['7 days', '10 days', '14 days', '21+ days']
-const interests = [
-  'History & Culture',
-  'Food & Dining',
-  'Nature & Scenery',
-  'Modern Cities',
-  'Adventure',
-  'Relaxation',
-]
-const budgets = ['Budget', 'Mid-range', 'Luxury']
 
 export default function TravelPlannerPage() {
   return (
@@ -63,108 +51,14 @@ export default function TravelPlannerPage() {
           <div className="prose prose-lg max-w-none text-[var(--foreground)]">
             <p>
               This planner helps you think through the essentials of a China itinerary: where you want to go, how long you
-              have, what kind of experiences matter most, and how you want to budget the trip. It is still a demo, but the
-              form below reflects the structure the full itinerary builder will use.
+              have, what kind of experiences matter most, and how you want to budget the trip. Share your preferences
+              below and we will turn them into a tailored route.
             </p>
           </div>
         </section>
 
         <section className="mb-10">
-          <form className="space-y-8 rounded-xl border border-[var(--line)] bg-white/60 p-6 md:p-8 backdrop-blur-sm">
-            <div>
-              <label className="block text-xl sm:text-2xl font-serif font-bold text-[var(--foreground)] mb-4">
-                Which cities do you want to visit?
-              </label>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                {cities.map((city) => (
-                  <label
-                    key={city}
-                    className="flex items-center gap-3 border border-[var(--line)] rounded-lg p-3 hover:bg-[var(--surface)] cursor-pointer text-[var(--foreground)] min-h-[52px] transition-colors"
-                  >
-                    <input type="checkbox" name="cities" value={city} className="h-4 w-4 accent-[var(--primary)]" />
-                    <span>{city}</span>
-                  </label>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <label
-                htmlFor="duration"
-                className="block text-xl sm:text-2xl font-serif font-bold text-[var(--foreground)] mb-4"
-              >
-                Trip duration
-              </label>
-              <select
-                id="duration"
-                name="duration"
-                defaultValue=""
-                className="w-full md:w-1/2 border border-[var(--line)] rounded-lg p-3 bg-transparent text-[var(--foreground)]"
-              >
-                <option value="" disabled>
-                  Select a trip length
-                </option>
-                {durations.map((duration) => (
-                  <option key={duration} value={duration}>
-                    {duration}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            <div>
-              <label className="block text-xl sm:text-2xl font-serif font-bold text-[var(--foreground)] mb-4">
-                What are you most interested in?
-              </label>
-              <div className="flex flex-wrap gap-3">
-                {interests.map((interest) => (
-                  <label
-                    key={interest}
-                    className="border border-[var(--line)] rounded-full px-4 py-2 text-[var(--foreground)] hover:bg-[var(--surface)] cursor-pointer min-h-[44px] inline-flex items-center transition-colors"
-                  >
-                    <input type="checkbox" name="interests" value={interest} className="sr-only" />
-                    <span>{interest}</span>
-                  </label>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <label className="block text-xl sm:text-2xl font-serif font-bold text-[var(--foreground)] mb-4">
-                Budget level
-              </label>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                {budgets.map((budget) => (
-                  <label
-                    key={budget}
-                    className="flex items-center gap-3 border border-[var(--line)] rounded-lg p-3 hover:bg-[var(--surface)] cursor-pointer text-[var(--foreground)] min-h-[52px] transition-colors"
-                  >
-                    <input type="radio" name="budget" value={budget} className="h-4 w-4 accent-[var(--primary)]" />
-                    <span>{budget}</span>
-                  </label>
-                ))}
-              </div>
-            </div>
-
-            <div className="pt-2">
-              <button
-                type="submit"
-                disabled
-                title="Coming soon: itinerary generation is not live yet."
-                aria-disabled="true"
-                className="bg-[var(--primary)] text-white rounded-full px-8 py-3 font-semibold opacity-60 cursor-not-allowed"
-              >
-                Generate My Itinerary
-              </button>
-              <p className="mt-3 text-sm text-[var(--muted)]">
-                Demo mode only. For now, explore{' '}
-                <Link href="/plan-your-trip/preplanned-trips" className="underline decoration-[var(--primary)] underline-offset-2">
-                  preplanned trips
-                </Link>
-                .
-              </p>
-            </div>
-          </form>
+          <TravelPlannerForm />
         </section>
 
         <section className="mb-10">

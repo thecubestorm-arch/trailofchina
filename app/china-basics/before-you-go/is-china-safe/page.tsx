@@ -138,7 +138,6 @@ export default function IsChinaSafePage() {
             alt="Safe evening street scene in China"
             className="h-64 w-full rounded-lg object-cover md:h-96"
           />
-          <p className="mt-1 text-xs text-[var(--muted)]">Replace with destination safety image</p>
         </div>
 
         <section className="mb-10">

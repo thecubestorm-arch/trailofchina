@@ -109,7 +109,6 @@ export default function PhysicalSimPage() {
             alt="Buying a physical SIM card in China"
             className="h-64 w-full rounded-lg object-cover md:h-96"
           />
-          <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
         </div>
 
         <section className="mb-10">
@@ -146,7 +145,6 @@ export default function PhysicalSimPage() {
                       alt="Carrier counter at a Chinese airport"
                       className="mx-auto w-full max-w-md rounded-lg object-cover"
                     />
-                    <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
                   </div>
                 )}
               </li>
@@ -188,7 +186,6 @@ export default function PhysicalSimPage() {
               alt="Activating a physical SIM in China"
               className="h-56 w-full rounded-lg object-cover md:h-80"
             />
-            <p className="mt-1 text-xs text-[var(--muted)]">Replace with app screenshot</p>
           </div>
 
           <blockquote className="mt-8 border-l-4 border-[var(--primary)] pl-4 italic text-[var(--muted)]">
