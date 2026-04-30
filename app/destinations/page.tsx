@@ -1,11 +1,11 @@
-import { Metadata } from 'next';
-import DestinationsMapClient from './DestinationsMapClient';
+import type { Metadata } from 'next'
+import DestinationsV8Client from './DestinationsV8Client'
 
 export const metadata: Metadata = {
-  title: 'Destinations — Interactive Map | Trail of China',
-  description: 'Explore China destinations on an interactive map. Beijing, Shanghai, Xi\'an, Chengdu, Chongqing.',
-};
+  title: 'Explore China Destinations | Trail of China',
+  description: "Discover China's top destinations — Shanghai, Beijing, Xi'an, Chengdu, and Chongqing. Interactive map with photo galleries and city previews.",
+}
 
 export default function DestinationsPage() {
-  return <DestinationsMapClient />;
+  return <DestinationsV8Client />
 }
