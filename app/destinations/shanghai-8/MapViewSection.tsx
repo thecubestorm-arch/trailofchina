@@ -283,10 +283,28 @@ export default function MapViewSection({
 
   useEffect(() => {
     if (!hoveredItem) return;
-    const card = listRef.current?.querySelector(`[data-marker-id="${hoveredItem}"]`);
-    if (card) {
-      card.scrollIntoView({ behavior: "smooth", block: "nearest" });
-    }
+    const container = listRef.current;
+    if (!container) return;
+
+    const cards = Array.from(
+      container.querySelectorAll<HTMLElement>(`[data-marker-id="${hoveredItem}"]`)
+    );
+    if (cards.length === 0) return;
+
+    const cardToScroll =
+      cards.length === 1
+        ? cards[0]
+        : cards.reduce((closestCard, currentCard) => {
+            const currentDistance = Math.abs(
+              currentCard.offsetTop - container.scrollTop
+            );
+            const closestDistance = Math.abs(
+              closestCard.offsetTop - container.scrollTop
+            );
+            return currentDistance < closestDistance ? currentCard : closestCard;
+          });
+
+    cardToScroll.scrollIntoView({ behavior: "smooth", block: "nearest" });
   }, [hoveredItem]);
 
   if (!mounted) {
