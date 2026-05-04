@@ -34,7 +34,7 @@ export default function PrivacyPage() {
                 <strong>Controller:</strong> Trail of China, Zurich, Switzerland
               </p>
               <p className="text-[#64748b]">
-                <strong>Email:</strong> hello@trailofchina.com
+                <strong>Email:</strong> buetikoferdigital@gmail.com
               </p>
               <p className="text-[#64748b] leading-7">
                 For data protection inquiries, requests, or complaints, please contact us via the email address above.
@@ -86,7 +86,7 @@ export default function PrivacyPage() {
               <li>Restriction or objection to specific processing activities.</li>
             </ul>
             <p className="text-[#64748b] leading-7 mt-4">
-              To exercise these rights, contact us at hello@trailofchina.com.
+              To exercise these rights, contact us at buetikoferdigital@gmail.com.
             </p>
           </section>
 
@@ -101,7 +101,7 @@ export default function PrivacyPage() {
           <section className="mb-8">
             <h2 className="text-xl md:text-2xl font-bold text-[#1a3a4a] mb-3 border-b border-[#ebe4d8] pb-2">Privacy Contact</h2>
             <p className="text-[#64748b] leading-7 mt-4">
-              For all privacy inquiries, rights requests, or complaints, contact: hello@trailofchina.com.
+              For all privacy inquiries, rights requests, or complaints, contact: buetikoferdigital@gmail.com.
             </p>
           </section>
 

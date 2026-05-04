@@ -32,10 +32,10 @@ export default function ImprintPage() {
                 <strong>Company:</strong> Trail of China, Zurich, Switzerland
               </p>
               <p className="text-[#64748b]">
-                <strong>Contact Email:</strong> hello@trailofchina.com
+                <strong>Contact Email:</strong> buetikoferdigital@gmail.com
               </p>
               <p className="text-[#64748b]">
-                <strong>Responsible Person:</strong> [Full Name]
+                <strong>Responsible Person:</strong> BuetikoferDigital
               </p>
             </div>
           </section>
