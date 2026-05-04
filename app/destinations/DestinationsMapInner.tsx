@@ -285,7 +285,7 @@ function MapPopup({
                     e.stopPropagation()
                     imagesRef.current?.scrollBy({ left: -120, behavior: 'smooth' })
                   }}
-                  className="absolute left-0 top-1/2 z-10 flex h-6 w-6 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#1a3a4a] shadow transition-opacity hover:bg-[#f8f5ef] opacity-0 group-hover/images:opacity-100"
+                  className="absolute left-0 top-1/2 z-10 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#1a3a4a] shadow transition-opacity hover:bg-[#f8f5ef] opacity-100"
                   aria-label={`Scroll ${city.name} images left`}
                 >
                   <ChevronLeft size={14} />
@@ -299,7 +299,7 @@ function MapPopup({
                     e.stopPropagation()
                     imagesRef.current?.scrollBy({ left: 120, behavior: 'smooth' })
                   }}
-                  className="absolute right-0 top-1/2 z-10 flex h-6 w-6 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#1a3a4a] shadow transition-opacity hover:bg-[#f8f5ef] opacity-0 group-hover/images:opacity-100"
+                  className="absolute right-0 top-1/2 z-10 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#1a3a4a] shadow transition-opacity hover:bg-[#f8f5ef] opacity-100"
                   aria-label={`Scroll ${city.name} images right`}
                 >
                   <ChevronRight size={14} />

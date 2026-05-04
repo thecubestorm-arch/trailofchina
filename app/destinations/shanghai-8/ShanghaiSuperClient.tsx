@@ -1142,79 +1142,76 @@ export default function ShanghaiSuperClient() {
     <div className="min-h-screen bg-white">
       {/* ========== HERO ========== */}
       <section className="relative w-full">
-        <div className="bg-gradient-to-br from-[#f8f3ea] via-[#f5f1ea] to-[#efe4d1]">
-          <div className="relative max-w-6xl mx-auto px-4 pt-6 md:pt-8 pb-6 md:pb-8 group/hero">
-            <div
-              ref={heroGalleryRef}
-              onScroll={updateHeroGalleryState}
-              data-scroll-left={heroGalleryScrollLeft > 0 ? "true" : "false"}
-              className="flex snap-x snap-mandatory gap-3 overflow-x-auto scroll-smooth scrollbar-hide"
-            >
-              {shanghaiGallerySeeds.map((seed, index) => (
-                <div
-                  key={seed}
-                  className="relative h-[220px] md:h-[350px] basis-[66.666%] md:basis-[calc((100%_-_1.5rem)/3)] shrink-0 snap-start overflow-hidden rounded-xl"
-                >
-                  <Image
-                    src={`https://picsum.photos/seed/${seed}/900/600`}
-                    alt={`Shanghai gallery image ${index + 1}`}
-                    fill
-                    priority={index < 3}
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a3a4a]/70 via-[#1a3a4a]/25 to-transparent" />
-                </div>
-              ))}
-            </div>
-            {heroCanScrollLeft && (
-              <button
-                type="button"
-                onClick={() => heroGalleryRef.current?.scrollBy({ left: -320, behavior: "smooth" })}
-                className="absolute left-6 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white/95 text-[#1a3a4a] shadow-md transition-opacity hover:bg-white opacity-0 group-hover/hero:opacity-100"
-                aria-label="Scroll Shanghai gallery left"
+        <div className="relative group/hero">
+          <div
+            ref={heroGalleryRef}
+            onScroll={updateHeroGalleryState}
+            data-scroll-left={heroGalleryScrollLeft > 0 ? "true" : "false"}
+            className="flex h-[280px] snap-x snap-mandatory overflow-x-auto scroll-smooth scrollbar-hide md:h-[400px]"
+          >
+            {shanghaiGallerySeeds.map((seed, index) => (
+              <div
+                key={seed}
+                className="relative h-full basis-[82%] shrink-0 snap-start md:basis-[74%]"
               >
-                <ChevronLeft size={18} />
-              </button>
-            )}
-            {heroCanScrollRight && (
-              <button
-                type="button"
-                onClick={() => heroGalleryRef.current?.scrollBy({ left: 320, behavior: "smooth" })}
-                className="absolute right-6 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white/95 text-[#1a3a4a] shadow-md transition-opacity hover:bg-white opacity-0 group-hover/hero:opacity-100"
-                aria-label="Scroll Shanghai gallery right"
-              >
-                <ChevronRight size={18} />
-              </button>
-            )}
-            <div className="pointer-events-none absolute inset-x-4 bottom-6 md:bottom-8">
-              <div className="flex flex-col justify-end rounded-xl bg-gradient-to-t from-[#1a3a4a]/70 via-[#1a3a4a]/25 to-transparent px-5 pb-5 pt-16 md:px-8 md:pb-8 md:pt-24">
-                <p className="text-white/80 text-sm md:text-base font-medium mb-1">
-                  上海, China
-                </p>
-                <h1 className="text-4xl md:text-6xl font-bold text-white mb-2 md:mb-3 tracking-tight">
-                  Shanghai
-                </h1>
-                <p className="text-white/90 text-base md:text-lg max-w-xl">
-                  Colonial elegance meets tomorrow&apos;s skyline
-                </p>
-              </div>
-            </div>
-            <div className="mt-4 flex items-center justify-center gap-2">
-              {shanghaiGallerySeeds.map((seed, index) => (
-                <button
-                  key={`${seed}-dot`}
-                  type="button"
-                  onClick={() => {
-                    const slide = heroGalleryRef.current?.children[index] as HTMLElement | undefined;
-                    slide?.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
-                  }}
-                  className={`h-2 rounded-full transition-all ${
-                    activeHeroImage === index ? "w-6 bg-[#af5d32]" : "w-2 bg-[#d2c3ad]"
-                  }`}
-                  aria-label={`Go to Shanghai gallery image ${index + 1}`}
+                <Image
+                  src={`https://picsum.photos/seed/${seed}/1600/900`}
+                  alt={`Shanghai gallery image ${index + 1}`}
+                  fill
+                  priority={index < 2}
+                  className="object-cover"
                 />
-              ))}
-            </div>
+              </div>
+            ))}
+          </div>
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#09131a]/55 via-[#09131a]/18 to-transparent" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#09131a]/70 via-[#09131a]/30 to-transparent md:h-40" />
+          {heroCanScrollLeft && (
+            <button
+              type="button"
+              onClick={() => heroGalleryRef.current?.scrollBy({ left: -640, behavior: "smooth" })}
+              className="absolute left-4 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/95 text-[#1a3a4a] shadow-xl transition hover:bg-white md:left-16"
+              aria-label="Scroll Shanghai gallery left"
+            >
+              <ChevronLeft size={22} />
+            </button>
+          )}
+          {heroCanScrollRight && (
+            <button
+              type="button"
+              onClick={() => heroGalleryRef.current?.scrollBy({ left: 640, behavior: "smooth" })}
+              className="absolute right-4 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/95 text-[#1a3a4a] shadow-xl transition hover:bg-white md:right-16"
+              aria-label="Scroll Shanghai gallery right"
+            >
+              <ChevronRight size={22} />
+            </button>
+          )}
+          <div className="pointer-events-none absolute bottom-6 left-5 z-10 max-w-[min(32rem,calc(100vw-5rem))] md:bottom-9 md:left-12">
+            <p className="mb-1 text-sm font-medium text-white/80 md:text-base">
+              上海, China
+            </p>
+            <h1 className="mb-2 text-4xl font-bold tracking-tight text-white md:mb-3 md:text-6xl">
+              Shanghai
+            </h1>
+            <p className="text-sm text-white/90 md:text-lg">
+              Colonial elegance meets tomorrow&apos;s skyline
+            </p>
+          </div>
+          <div className="absolute bottom-5 left-1/2 z-10 flex -translate-x-1/2 items-center justify-center gap-2 md:bottom-7">
+            {shanghaiGallerySeeds.map((seed, index) => (
+              <button
+                key={`${seed}-dot`}
+                type="button"
+                onClick={() => {
+                  const slide = heroGalleryRef.current?.children[index] as HTMLElement | undefined;
+                  slide?.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
+                }}
+                className={`h-2.5 rounded-full transition-all ${
+                  activeHeroImage === index ? "w-6 bg-[#af5d32]" : "w-2.5 bg-white/50"
+                }`}
+                aria-label={`Go to Shanghai gallery image ${index + 1}`}
+              />
+            ))}
           </div>
         </div>
 
