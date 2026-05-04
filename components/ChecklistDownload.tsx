@@ -122,8 +122,8 @@ export default function ChecklistDownload() {
           top: 0,
           zIndex: -1,
           overflow: 'hidden',
-          width: 0,
-          height: 0,
+          width: '800px',
+          height: 'auto',
         }}
       >
         <ChinaCheatSheet />
