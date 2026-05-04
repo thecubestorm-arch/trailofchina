@@ -3,12 +3,15 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
+import { makeMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makeMetadata({
   title: 'Getting Between Cities in China | Trail of China',
   description:
     "High-speed train routes, flight comparisons, and booking tips for traveling between Beijing, Shanghai, Xi'an, Chengdu, and Chongqing.",
-}
+
+  path: '/china-basics/how-to-get-around/city-to-city',
+})
 
 const relatedArticles = [
   {

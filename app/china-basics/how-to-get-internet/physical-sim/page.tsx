@@ -3,12 +3,15 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
+import { makeMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makeMetadata({
   title: 'Physical SIM Cards in China | Trail of China',
   description:
     'Complete guide to buying physical SIM cards at Chinese airports. Best carriers, pricing, requirements, and setup.',
-}
+
+  path: '/china-basics/how-to-get-internet/physical-sim',
+})
 
 const setupSteps = [
   {

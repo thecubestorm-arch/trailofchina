@@ -3,12 +3,15 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
+import { makeMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makeMetadata({
   title: 'Cultural Differences in China | Trail of China',
   description:
     'Essential etiquette, customs, and social norms for travelers in China. Dining, greetings, gift giving, and public behavior explained.',
-}
+
+  path: '/china-basics/how-china-differs/cultural-differences',
+})
 
 const relatedArticles = [
   {

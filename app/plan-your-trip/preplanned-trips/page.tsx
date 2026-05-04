@@ -3,12 +3,15 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
+import { makeMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makeMetadata({
   title: 'Preplanned China Trips | Trail of China',
   description:
     'Choose a ready-made China itinerary for 7, 10, or 14 days with realistic transport, pacing, and budget guidance.',
-}
+
+  path: '/plan-your-trip/preplanned-trips',
+})
 
 const tripPages = [
   {

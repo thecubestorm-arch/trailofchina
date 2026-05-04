@@ -3,12 +3,15 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
+import { makeMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makeMetadata({
   title: "Is China Safe? A Traveler's Safety Guide | Trail of China",
   description:
     "China is one of the safest countries for tourists. Learn about crime rates, common scams, women's safety, food safety, emergency numbers, and what to watch out for.",
-}
+
+  path: '/china-basics/before-you-go/is-china-safe',
+})
 
 const safetyPoints = [
   'China has very low violent crime rates, making it safer than most Western cities for tourists.',

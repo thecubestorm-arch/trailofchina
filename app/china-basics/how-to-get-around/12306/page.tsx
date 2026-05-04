@@ -3,12 +3,15 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
+import { makeMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makeMetadata({
   title: '12306 Train Booking: How to Buy China Train Tickets Like a Local',
   description:
     "Master the 12306 app — China's official train booking platform. Step-by-step guide for foreigners to book high-speed rail tickets, pick seats, and book with confidence.",
-}
+
+  path: '/china-basics/how-to-get-around/12306',
+})
 
 const setupSteps = [
   {

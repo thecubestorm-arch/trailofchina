@@ -3,12 +3,15 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
+import { makeMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makeMetadata({
   title: 'Travel Apps: Trip.com and DiDi',
   description:
     'How to use Trip.com and DiDi for flights, trains, hotels, and local rides across China with fewer booking mistakes.',
-}
+
+  path: '/china-basics/what-apps-to-use/travel',
+})
 
 const setupSteps = [
   {

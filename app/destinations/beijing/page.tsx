@@ -2,11 +2,14 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import ChineseWatermark from '@/components/ChineseWatermark';
 import RelatedArticles from '@/components/RelatedArticles'
+import { makeMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makeMetadata({
   title: 'Beijing Travel Guide | Trail of China',
   description: 'Complete guide to Beijing: Forbidden City, Great Wall, hutongs, and more in China\'s historic capital.',
-};
+
+  path: '/destinations/beijing',
+});
 
 const sections = [
   {

@@ -3,12 +3,15 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
+import { makeMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makeMetadata({
   title: 'Safety & Security in China | Trail of China',
   description:
     'Safety tips and how to stay secure while traveling in China. General safety, digital security, and emergency contacts.',
-}
+
+  path: '/china-basics/how-china-differs/security-standards',
+})
 
 const relatedArticles = [
   {

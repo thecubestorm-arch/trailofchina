@@ -3,12 +3,15 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
+import { makeMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makeMetadata({
   title: 'Holafly eSIM for China: Review, Pricing & Is It Worth It? ',
   description:
     'Holafly eSIM for China — detailed review of unlimited data plans, speeds, and reliability. Compare with Airalo and find the best eSIM for your China trip.',
-}
+
+  path: '/china-basics/how-to-get-internet/holafly-esim',
+})
 
 const setupSteps = [
   {

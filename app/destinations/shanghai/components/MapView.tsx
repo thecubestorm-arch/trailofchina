@@ -33,8 +33,7 @@ export default function MapView({
 }: MapViewProps) {
   return (
     <MapContainer
-      center={[31.23, 121.47]}
-      zoom={12}
+      bounds={shanghaiMaxBounds}
       minZoom={10}
       maxZoom={18}
       maxBounds={shanghaiMaxBounds}

@@ -3,12 +3,15 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
+import { makeMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makeMetadata({
   title: 'Communication App: WeChat',
   description:
     'Set up WeChat for messaging, service mini-programs, and travel coordination in China.',
-}
+
+  path: '/china-basics/what-apps-to-use/communication',
+})
 
 const setupSteps = [
   {

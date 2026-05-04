@@ -3,11 +3,14 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
+import { makeMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makeMetadata({
   title: 'Taxis in China | Trail of China',
   description: 'How to take traditional taxis in China. Tips for hailing, payment, and getting around.',
-}
+
+  path: '/china-basics/how-to-get-around/taxi',
+})
 
 const relatedArticles = [
   {

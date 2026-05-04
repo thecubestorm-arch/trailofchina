@@ -3,12 +3,15 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
+import { makeMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makeMetadata({
   title: 'Airalo eSIM for China: Honest Review & Setup Guide ',
   description:
     'Airalo eSIM for China — honest review of coverage, speed, pricing, and setup. Is it the best eSIM for China travelers? Pros, cons, and alternatives.',
-}
+
+  path: '/china-basics/how-to-get-internet/airalo-esim',
+})
 
 const setupSteps = [
   {

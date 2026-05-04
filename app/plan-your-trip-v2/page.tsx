@@ -7,8 +7,9 @@ import ChineseWatermark from '@/components/ChineseWatermark'
 export const metadata: Metadata = {
   title: 'Plan Your Trip Variant 2 | Trail of China',
   description: 'Decision-first Plan Your Trip hub variant that helps travelers choose the right planning path.',
-  alternates: {
-    canonical: '/plan-your-trip-v2',
+  robots: {
+    index: false,
+    follow: false,
   },
 }
 

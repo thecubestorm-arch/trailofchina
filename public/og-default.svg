@@ -1,0 +1,12 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#F4E8D6"/>
+  <rect x="46" y="46" width="1108" height="538" rx="28" fill="#FFF8EE" stroke="#D8B28C" stroke-width="4"/>
+  <circle cx="146" cy="146" r="64" fill="#AF5D32" fill-opacity="0.14"/>
+  <circle cx="1042" cy="498" r="110" fill="#C9874E" fill-opacity="0.16"/>
+  <path d="M140 434C240 340 350 292 474 292C566 292 648 320 740 320C844 320 940 284 1048 206" stroke="#AF5D32" stroke-width="12" stroke-linecap="round"/>
+  <path d="M140 486C248 398 340 362 446 362C542 362 652 394 754 394C856 394 946 356 1046 282" stroke="#1A3A4A" stroke-opacity="0.18" stroke-width="8" stroke-linecap="round"/>
+  <text x="120" y="222" fill="#AF5D32" font-family="Georgia, 'Times New Roman', serif" font-size="34" letter-spacing="8">TRAIL OF CHINA</text>
+  <text x="120" y="330" fill="#1A3A4A" font-family="Georgia, 'Times New Roman', serif" font-size="78" font-weight="700">China Travel</text>
+  <text x="120" y="414" fill="#1A3A4A" font-family="Georgia, 'Times New Roman', serif" font-size="78" font-weight="700">Without Confusion</text>
+  <text x="122" y="494" fill="#5D6A73" font-family="Arial, sans-serif" font-size="30">Practical guides for first-time visitors.</text>
+</svg>

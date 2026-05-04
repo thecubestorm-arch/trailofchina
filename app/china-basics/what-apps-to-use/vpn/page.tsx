@@ -3,12 +3,15 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
+import { makeMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makeMetadata({
   title: 'VPN Guide for China Travel',
   description:
     'The best VPNs that actually work in China, plus setup tips and backup plans for when the Great Firewall blocks your connection.',
-}
+
+  path: '/china-basics/what-apps-to-use/vpn',
+})
 
 const vpnProviders = [
   {

@@ -3,12 +3,15 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
+import { makeMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makeMetadata({
   title: 'How to Get Internet in China | Trail of China',
   description:
     'Complete guide to getting internet in China: eSIM vs physical SIM cards, best providers, setup instructions, and pricing.',
-}
+
+  path: '/china-basics/how-to-get-internet',
+})
 
 const internetReasons = [
   'Google Maps, WhatsApp, Instagram, and Gmail are blocked in China unless you have the right workaround.',

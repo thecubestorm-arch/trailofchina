@@ -3,11 +3,14 @@ import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
 import TravelPlannerForm from './TravelPlannerForm'
+import { makeMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makeMetadata({
   title: 'Travel Planner | Trail of China',
   description: 'Build your custom China itinerary. Select cities, duration, interests, and budget.',
-}
+
+  path: '/plan-your-trip/travel-planner',
+})
 
 export default function TravelPlannerPage() {
   return (

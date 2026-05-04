@@ -6,11 +6,13 @@ import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import CookieConsent from '@/components/CookieConsent'
 import AnalyticsTracker from '@/components/AnalyticsTracker'
+import VPNeSIMToast from '@/components/VPNeSIMToast'
 // Search temporarily disabled — will be re-enabled after review
 // import { SearchProvider } from '@/components/SearchProvider'
 // import SearchCommandPalette from '@/components/SearchCommandPalette'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://trailofchina.com'),
   title: {
     default: 'Travel China Without Confusion',
     template: '%s | Trail of China',
@@ -26,6 +28,13 @@ export const metadata: Metadata = {
     ],
     apple: '/apple-touch-icon.png',
   },
+  openGraph: {
+    images: [{ url: '/og-default.jpg', width: 1200, height: 630, alt: 'Trail of China' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/og-default.jpg'],
+  },
 }
 
 export const dynamic = 'force-static'
@@ -35,11 +44,22 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const organizationJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Trail of China',
+    url: 'https://trailofchina.com',
+    logo: 'https://trailofchina.com/favicon.svg',
+    email: 'buetikoferdigital@gmail.com',
+    sameAs: [],
+  }
+
   return (
     <html lang="en" className="scroll-smooth">
       <head>
         <script defer src="https://umami-analytics-wuzf.srv1019856.hstgr.cloud/script.js" data-website-id="e6431fc1-db47-401c-96c4-a4d794d0e4fe" />
         <script type="text/javascript" dangerouslySetInnerHTML={{ __html: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "wlqd442wnx");` }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }} />
       </head>
       <body className="antialiased" style={{ backgroundColor: '#f5f1ea' }}>
         <NextIntlClientProvider locale={defaultLocale}>
@@ -49,6 +69,7 @@ export default function RootLayout({
             <Footer />
             <CookieConsent />
             <AnalyticsTracker />
+            <VPNeSIMToast />
           </div>
         </NextIntlClientProvider>
       </body>

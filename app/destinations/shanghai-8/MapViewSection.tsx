@@ -15,7 +15,10 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { Search, List, Map } from "lucide-react";
 import type { MarkerLocation } from "../shanghai/types";
-import shanghaiBoundary from "../data/shanghai-boundary";
+import {
+  shanghaiBoundary,
+  shanghaiMaxBounds,
+} from "../data/shanghai-boundary";
 
 type POICategory = "attraction" | "eat" | "stay";
 type CategoryView = "overview" | "things-to-do" | "where-to-eat" | "where-to-stay";
@@ -439,10 +442,11 @@ export default function MapViewSection({
       >
         <MapContainer
           className="shanghai-hub-map z-0"
-          center={[31.23, 121.47]}
-          zoom={13}
+          bounds={shanghaiMaxBounds}
           minZoom={11}
           maxZoom={18}
+          maxBounds={shanghaiMaxBounds}
+          maxBoundsViscosity={0.9}
           scrollWheelZoom
           style={{ height: "100%", width: "100%", minHeight: 500 }}
         >

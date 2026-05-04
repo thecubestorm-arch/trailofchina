@@ -3,12 +3,15 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
+import { makeMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makeMetadata({
   title: 'eSIM Cards for China | Trail of China',
   description:
     'Best eSIM providers for China travel: Airalo, Holafly, Ubigi. Setup guide, pricing, and recommendations.',
-}
+
+  path: '/china-basics/how-to-get-internet/esim',
+})
 
 const setupSteps = [
   { title: 'Download the app', description: 'Get Airalo, Holafly, or Ubigi from your app store before you travel.' },

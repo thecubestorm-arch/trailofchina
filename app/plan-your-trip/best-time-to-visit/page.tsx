@@ -3,8 +3,9 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
+import { makeMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makeMetadata({
   title: 'Best Time to Visit China — Month-by-Month Guide  | Trail of China',
   description:
     'When is the best time to visit China? Month-by-month climate guide, peak seasons, holidays to avoid, and the ideal months for every region.',
@@ -14,7 +15,9 @@ export const metadata: Metadata = {
       'From cherry-blossom spring to golden autumn — find the perfect season for your China trip.',
     type: 'article',
   },
-}
+
+  path: '/plan-your-trip/best-time-to-visit',
+})
 
 const relatedArticles = [
   {

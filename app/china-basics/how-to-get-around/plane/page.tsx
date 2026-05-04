@@ -3,12 +3,15 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
+import { makeMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makeMetadata({
   title: 'Domestic Flights in China | Trail of China',
   description:
     'Guide to booking and flying domestic flights in China. Airlines, airports, booking tips, and what to expect at security checks.',
-}
+
+  path: '/china-basics/how-to-get-around/plane',
+})
 
 const relatedArticles = [
   {

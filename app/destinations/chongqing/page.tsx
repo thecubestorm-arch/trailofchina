@@ -2,12 +2,15 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import ChineseWatermark from '@/components/ChineseWatermark';
 import RelatedArticles from '@/components/RelatedArticles'
+import { makeMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makeMetadata({
   title: 'Chongqing Travel Guide | Trail of China',
   description:
     'Complete guide to Chongqing: top attractions, spicy food, best neighborhoods, and practical local tips for China\'s 3D mountain megacity.',
-};
+
+  path: '/destinations/chongqing',
+});
 
 const sections = [
   {

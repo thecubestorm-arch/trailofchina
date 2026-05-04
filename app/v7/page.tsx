@@ -2,11 +2,14 @@ import type { Metadata } from 'next'
 import HomeV7Client from './HomeV7Client'
 
 export const metadata: Metadata = {
-  title: 'Travel China Without Confusion',
+  title: 'China Travel Guide - First Trip Planning',
   description:
     'Your first trip to China, simplified. Visa-free updates, practical trip planning, destination ideas, and essential China basics for first-time travelers.',
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
-    title: 'Trail of China — Travel China Without Confusion',
+    title: 'China Travel Guide - First Trip Planning | Trail of China',
     description:
       'Your first trip to China, simplified. Visa-free updates, practical trip planning, destination ideas, and essential China basics for first-time travelers.',
     type: 'website',

@@ -3,12 +3,15 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
+import { makeMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makeMetadata({
   title: 'Maps Apps for China',
   description:
     'Choose the best map tools for China travel, including local app options, offline backups, and translation tactics.',
-}
+
+  path: '/china-basics/what-apps-to-use/maps',
+})
 
 const setupSteps = [
   {

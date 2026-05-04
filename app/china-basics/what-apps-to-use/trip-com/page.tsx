@@ -3,8 +3,9 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
+import { makeMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makeMetadata({
   title: 'Trip.com Guide for China Travelers',
   description:
     'Complete guide to Trip.com for China travel: book high-speed train tickets, hotels, domestic flights, attraction tickets, eSIMs, and airport transfers — all in English with foreign card support.',
@@ -14,7 +15,9 @@ export const metadata: Metadata = {
       'Book trains, flights, hotels, eSIMs, attraction tickets, and airport transfers — all in English, with foreign card support.',
     type: 'article',
   },
-}
+
+  path: '/china-basics/what-apps-to-use/trip-com',
+})
 
 const capabilities = ['High-Speed Trains', 'Hotels', 'Flights', 'Attraction Tickets', 'eSIM', 'Airport Transfers']
 

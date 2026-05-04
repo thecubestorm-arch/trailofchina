@@ -3,12 +3,15 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
+import { makeMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makeMetadata({
   title: 'Censorship & The Great Firewall | Trail of China',
   description:
     'Understanding the Great Firewall of China: blocked websites, VPNs, and how to stay connected. Google, WhatsApp, Instagram blocked in China.',
-}
+
+  path: '/china-basics/how-china-differs/censorship',
+})
 
 const blockedServices = [
   'Google services including Search, Maps, and Gmail',

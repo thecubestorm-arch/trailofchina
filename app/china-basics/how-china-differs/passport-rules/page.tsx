@@ -3,12 +3,15 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
+import { makeMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makeMetadata({
   title: 'Passport & Registration Rules | Trail of China',
   description:
     'Hotel registration, police checks, and passport requirements for travelers in China. Visa overstays and lost passport procedures.',
-}
+
+  path: '/china-basics/how-china-differs/passport-rules',
+})
 
 const relatedArticles = [
   {

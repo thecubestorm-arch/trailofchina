@@ -3,8 +3,9 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
+import { makeMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makeMetadata({
   title: 'China Budget Guide — Cost of Travel in China  | Trail of China',
   description:
     'Complete China travel budget guide: daily costs, accommodation, food, transport, attractions, and money-saving tips for every travel style.',
@@ -14,7 +15,9 @@ export const metadata: Metadata = {
       'Budget traveler to luxury explorer: real prices for hotels, food, trains, attractions, and more.',
     type: 'article',
   },
-}
+
+  path: '/plan-your-trip/budget',
+})
 
 const relatedArticles = [
   {

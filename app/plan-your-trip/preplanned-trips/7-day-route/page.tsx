@@ -3,11 +3,14 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
+import { makeMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makeMetadata({
   title: "7-Day China Route: Beijing, Xi'an, Shanghai | Trail of China",
   description: 'A practical one-week China itinerary with day-by-day plan, transport times, and realistic trip costs.',
-}
+
+  path: '/plan-your-trip/preplanned-trips/7-day-route',
+})
 
 const relatedArticles = [
   {

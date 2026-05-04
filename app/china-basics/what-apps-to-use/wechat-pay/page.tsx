@@ -3,12 +3,15 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
+import { makeMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makeMetadata({
   title: "WeChat Pay in China: The Ultimate Foreigner's Guide",
   description:
     'How to set up WeChat Pay as a tourist in China. Link international credit cards, send hongbao, scan QR codes, and pay like 1.3 billion locals.',
-}
+
+  path: '/china-basics/what-apps-to-use/wechat-pay',
+})
 
 const setupSteps = [
   {

@@ -3,12 +3,15 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
+import { makeMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makeMetadata({
   title: 'High-Speed Trains in China | Trail of China',
   description:
     "Complete guide to booking and riding China's high-speed rail network. G-trains, D-trains, seat classes, booking, and station tips.",
-}
+
+  path: '/china-basics/how-to-get-around/train',
+})
 
 const bookingSteps = [
   'Download 12306 app. It is the official railway app, though the experience can still feel clunky for visitors.',

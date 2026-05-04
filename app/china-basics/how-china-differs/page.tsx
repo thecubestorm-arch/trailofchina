@@ -3,11 +3,14 @@ import Link from 'next/link'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import Breadcrumb from '@/components/Breadcrumb'
 import RelatedArticles from '@/components/RelatedArticles'
+import { makeMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makeMetadata({
   title: 'How China Differs | Trail of China',
   description: 'Understanding censorship, cultural differences, safety standards, and passport rules in China.',
-}
+
+  path: '/china-basics/how-china-differs',
+})
 
 const sections = [
   {

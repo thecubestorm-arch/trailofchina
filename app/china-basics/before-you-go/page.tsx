@@ -3,12 +3,15 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
+import { makeMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makeMetadata({
   title: 'Before You Go to China | Visa, Safety & Packing | Trail of China',
   description:
     'Everything to check before your China trip: visa requirements, safety tips, and what to pack. Get ready before you fly.',
-}
+
+  path: '/china-basics/before-you-go',
+})
 
 const prepReasons = [
   'China has entry requirements that can take weeks to arrange, so early prep avoids last-minute panic.',

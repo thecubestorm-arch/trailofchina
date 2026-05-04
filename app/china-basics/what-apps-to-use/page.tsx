@@ -3,12 +3,15 @@ import Link from 'next/link'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import Breadcrumb from '@/components/Breadcrumb'
 import RelatedArticles from '@/components/RelatedArticles'
+import { makeMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makeMetadata({
   title: 'Essential Apps for China | Trail of China',
   description:
     'Set up essential China travel apps before departure: Alipay, WeChat Pay, maps, travel booking, communication, and VPN access. Get started right.',
-}
+
+  path: '/china-basics/what-apps-to-use',
+})
 
 type Section = {
   category: string

@@ -3,12 +3,15 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
+import { makeMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makeMetadata({
   title: 'Packing List for China: What to Bring & What to Skip | Trail of China',
   description:
     'The ultimate China packing checklist: documents, electronics, clothing, toiletries, money, and tech essentials. Plus what to leave at home.',
-}
+
+  path: '/china-basics/before-you-go/packing-list',
+})
 
 const checklistReasons = [
   'Public restrooms in China often lack toilet paper, so bringing your own matters immediately.',

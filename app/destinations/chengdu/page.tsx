@@ -2,12 +2,15 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import ChineseWatermark from '@/components/ChineseWatermark';
 import RelatedArticles from '@/components/RelatedArticles'
+import { makeMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makeMetadata({
   title: 'Chengdu Travel Guide | Pandas, Teahouses, and Sichuan Flavor',
   description:
     'Plan your Chengdu trip with neighborhood picks, food highlights, panda timing tips, and practical local advice.',
-};
+
+  path: '/destinations/chengdu',
+});
 
 const sections = [
   {

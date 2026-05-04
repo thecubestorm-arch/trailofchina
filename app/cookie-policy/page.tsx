@@ -1,11 +1,14 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { makeMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makeMetadata({
   title: { absolute: 'Cookie Policy | Trail of China' },
   description:
     'Cookie Policy for Trail of China explaining essential, analytics, and affiliate cookies and how users can manage consent choices.',
-}
+
+  path: '/cookie-policy',
+})
 
 export default function CookiePolicyPage() {
   return (

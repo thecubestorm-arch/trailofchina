@@ -3,12 +3,15 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
+import { makeMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makeMetadata({
   title: 'DiDi Ride-Hailing in China | Trail of China',
   description:
     "Complete guide to using DiDi, China's Uber equivalent. Setup, payment, car types, and safety tips for foreign travelers.",
-}
+
+  path: '/china-basics/how-to-get-around/didi',
+})
 
 const relatedArticles = [
   {

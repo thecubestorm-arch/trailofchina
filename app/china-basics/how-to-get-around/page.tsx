@@ -4,11 +4,14 @@ import ChineseWatermark from '@/components/ChineseWatermark'
 import Breadcrumb from '@/components/Breadcrumb'
 import ContextualCTA from '@/components/ContextualCTA'
 import RelatedArticles from '@/components/RelatedArticles'
+import { makeMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makeMetadata({
   title: 'How to Get Around in China | Trail of China',
   description: 'Complete guide to transportation in China: trains, planes, taxis, metro, DiDi, buses, bikes, and car rentals.',
-}
+
+  path: '/china-basics/how-to-get-around',
+})
 
 const sections = [
   {

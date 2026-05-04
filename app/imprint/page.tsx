@@ -1,11 +1,14 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { makeMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = makeMetadata({
   title: { absolute: 'Imprint | Trail of China' },
   description:
     'Imprint and legal notice for Trail of China, including publisher details, contact information, and Swiss law governance notice.',
-}
+
+  path: '/imprint',
+})
 
 export default function ImprintPage() {
   return (
