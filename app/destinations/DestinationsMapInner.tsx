@@ -661,7 +661,7 @@ export default function DestinationsMapInner() {
             </div>
           </div>
 
-          <div className="flex-1 relative rounded-xl overflow-hidden border border-[#ebe4d8]">
+          <div className="flex-1 relative z-0 rounded-xl overflow-hidden border border-[#ebe4d8]">
             <MapContainer
               center={[34, 108]}
               zoom={4}
@@ -695,6 +695,7 @@ export default function DestinationsMapInner() {
 
       {mobileMapOpen && (
         <div className="fixed inset-0 z-[80] md:hidden bg-white">
+          <div className="relative z-0 h-full w-full">
           <MapContainer
             center={[34, 108]}
             zoom={4}
@@ -722,6 +723,7 @@ export default function DestinationsMapInner() {
             />
           </MapContainer>
           <div style={{ position: 'absolute', bottom: 60, right: 20, zIndex: 1000, width: 36, height: 36, borderRadius: '50%', background: 'white', border: '1px solid #ebe4d8', boxShadow: '0 1px 4px rgba(0,0,0,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold', fontSize: 14, color: '#1a3a4a', pointerEvents: 'none' }}>N</div>
+          </div>
         </div>
       )}
 
