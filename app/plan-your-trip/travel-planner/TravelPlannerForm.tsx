@@ -2,6 +2,7 @@
 
 import { type FormEvent, useState } from 'react'
 import Link from 'next/link'
+import { trackEvent } from '@/lib/analytics'
 
 const cities = ['Beijing', 'Shanghai', "Xi'an", 'Chengdu', 'Guilin/Yangshuo', 'Hong Kong']
 const durations = ['7 days', '10 days', '14 days', '21+ days']
@@ -20,9 +21,7 @@ export default function TravelPlannerForm() {
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    if (typeof window !== 'undefined' && (window as any).umami) {
-      ;(window as any).umami.track('travel_planner_submit')
-    }
+    trackEvent('travel_planner_submit')
     setSubmitted(true)
   }
 

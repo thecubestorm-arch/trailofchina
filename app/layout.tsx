@@ -5,6 +5,7 @@ import './globals.css'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import CookieConsent from '@/components/CookieConsent'
+import AnalyticsTracker from '@/components/AnalyticsTracker'
 // Search temporarily disabled — will be re-enabled after review
 // import { SearchProvider } from '@/components/SearchProvider'
 // import SearchCommandPalette from '@/components/SearchCommandPalette'
@@ -47,6 +48,7 @@ export default function RootLayout({
             <main style={{ backgroundColor: '#f5f1ea' }}>{children}</main>
             <Footer />
             <CookieConsent />
+            <AnalyticsTracker />
           </div>
         </NextIntlClientProvider>
       </body>

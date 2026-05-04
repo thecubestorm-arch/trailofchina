@@ -3,6 +3,7 @@
 import { FormEvent, useRef, useState } from 'react'
 import html2canvas from 'html2canvas-pro'
 import { jsPDF } from 'jspdf'
+import { trackCheatSheetEmail } from '@/lib/analytics'
 import ChinaCheatSheet from '@/components/ChinaCheatSheet'
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -98,10 +99,7 @@ export default function ChecklistDownload() {
 
       saveEmailForMarketing(normalizedEmail)
 
-      // Umami event tracking
-      if (typeof window !== 'undefined' && (window as any).umami) {
-        ;(window as any).umami.track('pdf_download', { source: 'checklist-pdf' })
-      }
+      trackCheatSheetEmail()
 
       setSuccess('Your cheat sheet is downloading! Check your inbox for more China travel tips.')
       setEmail('')
