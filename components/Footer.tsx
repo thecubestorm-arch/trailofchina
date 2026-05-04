@@ -1,6 +1,5 @@
 import Link from 'next/link'
-import ChecklistDownload from './ChecklistDownload'
-import NewsletterSignup from './NewsletterSignup'
+import FooterEmailCTA from './FooterEmailCTA'
 
 export default function Footer() {
   return (
@@ -31,23 +30,15 @@ export default function Footer() {
         {/* Divider */}
         <hr className="my-8 border-[#ddd5c8]" />
 
-        {/* Second row: description + newsletter */}
-        <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
+        {/* Second row: description + CTA */}
+        <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
           <p className="max-w-md text-sm leading-7 text-[var(--muted)]">
             Practical trip planning for international travelers visiting China for the first time, with clearer
             choices, calmer preparation, and smarter routes.
           </p>
-          <div className="max-w-sm">
-            <NewsletterSignup source="footer" heading="China Travel Tips" />
+          <div className="w-full max-w-md lg:shrink-0">
+            <FooterEmailCTA />
           </div>
-        </div>
-
-        {/* Divider */}
-        <hr className="my-8 border-[#ddd5c8]" />
-
-        {/* Third row: PDF download */}
-        <div className="max-w-md">
-          <ChecklistDownload />
         </div>
 
         {/* Divider */}
