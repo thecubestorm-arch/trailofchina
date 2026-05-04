@@ -48,9 +48,21 @@ const sections = [
 ];
 
 export default function XianPage() {
+  const travelGuideJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'TravelGuide',
+    name: 'Xi’an Travel Guide',
+    description: metadata.description,
+    url: 'https://trailofchina.com/destinations/xian',
+  }
+
   return (
     <div className="min-h-screen bg-white">
       <main className="max-w-6xl mx-auto px-4 py-12">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(travelGuideJsonLd) }}
+        />
         <div className="relative">
           <ChineseWatermark character="西安" />
           <h1 className="text-5xl font-bold mb-6 text-[#1a3a4a]">Xi&apos;an</h1>

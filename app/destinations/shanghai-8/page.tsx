@@ -7,5 +7,21 @@ export const metadata: Metadata = {
 };
 
 export default function Shanghai8Page() {
-  return <ShanghaiSuperClient />;
+  const travelGuideJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'TravelGuide',
+    name: 'Shanghai Travel Guide',
+    description: metadata.description,
+    url: 'https://trailofchina.com/destinations/shanghai-8',
+  }
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(travelGuideJsonLd) }}
+      />
+      <ShanghaiSuperClient />
+    </>
+  );
 }

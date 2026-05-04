@@ -114,6 +114,18 @@ const footerQuickInfo = [
 
 function HomeV7ClientInner() {
   const [openFaq, setOpenFaq] = useState(0)
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: trendingFaqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  }
 
   return (
     <main className="min-h-screen bg-[#f5f1ea] text-[#1a3a4a]">
@@ -219,6 +231,10 @@ function HomeV7ClientInner() {
               seasonality, and transport choices.
             </p>
           </div>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+          />
           <div className="space-y-3">
             {trendingFaqs.map((faq, index) => {
               const isOpen = openFaq === index

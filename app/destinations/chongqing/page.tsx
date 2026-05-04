@@ -48,9 +48,21 @@ const sections = [
 ];
 
 export default function ChongqingPage() {
+  const travelGuideJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'TravelGuide',
+    name: 'Chongqing Travel Guide',
+    description: metadata.description,
+    url: 'https://trailofchina.com/destinations/chongqing',
+  }
+
   return (
     <div className="min-h-screen bg-white">
       <main className="max-w-6xl mx-auto px-4 py-12">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(travelGuideJsonLd) }}
+        />
         <div className="relative">
           <ChineseWatermark character="重庆" />
           <h1 className="text-5xl font-bold mb-6 text-[#1a3a4a]">Chongqing</h1>

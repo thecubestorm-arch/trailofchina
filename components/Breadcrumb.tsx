@@ -11,9 +11,38 @@ interface BreadcrumbProps {
 
 export default function Breadcrumb({ items }: BreadcrumbProps) {
   const backHref = items.length >= 2 ? items[items.length - 2].href : '/';
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, index) => {
+      const listItem: {
+        '@type': 'ListItem';
+        position: number;
+        name: string;
+        item?: string;
+      } = {
+        '@type': 'ListItem',
+        position: index + 1,
+        name: item.label,
+      };
+
+      if (item.href) {
+        listItem.item = item.href.startsWith('http')
+          ? item.href
+          : `https://trailofchina.com${item.href}`;
+      }
+
+      return listItem;
+    }),
+  };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+
       {/* Desktop: Full breadcrumb trail */}
       <div className="hidden sm:block text-sm text-[var(--muted)] py-2">
         <nav className="flex items-center flex-wrap gap-1.5">
