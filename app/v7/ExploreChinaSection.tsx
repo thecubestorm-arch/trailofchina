@@ -99,7 +99,7 @@ export default function ExploreChinaSection() {
             </div>
           </div>
 
-          <div className={`${mobileView === 'list' ? 'hidden lg:block' : 'block'} lg:h-[640px]`}>
+          <div className={`${mobileView === 'list' ? 'hidden lg:block' : 'block'} relative z-0 lg:h-[640px]`}>
             <ExploreChinaMap activeCityKey={activeCityKey} onActiveCityChange={setActiveCityKey} />
           </div>
         </div>

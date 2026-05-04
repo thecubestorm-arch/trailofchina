@@ -110,7 +110,7 @@ export default function ExploreChinaMap({
   }
 
   return (
-    <div className="relative h-full min-h-[420px] w-full overflow-hidden rounded-[1.75rem] border border-[#1a3a4a]/10 bg-white">
+    <div className="relative z-0 h-full min-h-[420px] w-full overflow-hidden rounded-[1.75rem] border border-[#1a3a4a]/10 bg-white">
       <MapContainer
         center={[34, 108]}
         zoom={4}
