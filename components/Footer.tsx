@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import ChecklistDownload from './ChecklistDownload'
 import NewsletterSignup from './NewsletterSignup'
 
 export default function Footer() {
@@ -39,6 +40,14 @@ export default function Footer() {
           <div className="max-w-sm">
             <NewsletterSignup source="footer" heading="China Travel Tips" />
           </div>
+        </div>
+
+        {/* Divider */}
+        <hr className="my-8 border-[#ddd5c8]" />
+
+        {/* Third row: PDF download */}
+        <div className="max-w-md">
+          <ChecklistDownload />
         </div>
 
         {/* Divider */}

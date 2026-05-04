@@ -109,12 +109,12 @@ export default function NewsletterSignup({ source, heading = 'Get China Tips' }:
           autoComplete="email"
           required
           disabled={status === 'submitting'}
-          className="h-11 w-full rounded-full border border-[#d8ccbc] bg-[#fdfbf7] px-4 text-sm text-[#1a3a4a] outline-none transition focus:border-[#af5d32] focus:ring-2 focus:ring-[#af5d32]/20 disabled:cursor-not-allowed disabled:opacity-70 sm:min-w-[260px]"
+          className="h-11 w-full rounded-full border border-[#d8ccbc] bg-[#fdfbf7] px-4 text-sm text-[#1a3a4a] outline-none transition focus:border-[#af5d32] focus:ring-2 focus:ring-[#af5d32]/20 disabled:cursor-not-allowed disabled:opacity-70 sm:flex-1"
         />
         <button
           type="submit"
           disabled={status === 'submitting'}
-          className="inline-flex h-11 shrink-0 items-center justify-center rounded-full bg-[#1a3a4a] px-5 text-sm font-semibold text-[#f5f1ea] transition hover:bg-[#122b37] disabled:cursor-not-allowed disabled:opacity-75"
+          className="inline-flex h-11 w-full items-center justify-center rounded-full bg-[#1a3a4a] px-5 text-sm font-semibold text-[#f5f1ea] transition hover:bg-[#122b37] disabled:cursor-not-allowed disabled:opacity-75 sm:min-w-[140px] sm:w-auto sm:shrink-0"
         >
           {status === 'submitting' ? 'Submitting...' : 'Get China Tips'}
         </button>
