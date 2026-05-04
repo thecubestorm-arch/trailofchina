@@ -186,6 +186,10 @@ function MapPopup({
 }) {
   const map = useMap()
   const [pos, setPos] = useState<{ x: number; y: number } | null>(null)
+  const imagesRef = useRef<HTMLDivElement | null>(null)
+  const [scrollLeft, setScrollLeft] = useState(0)
+  const [canScrollLeft, setCanScrollLeft] = useState(false)
+  const [canScrollRight, setCanScrollRight] = useState(false)
 
   const updatePos = useCallback(() => {
     if (!city) {
@@ -196,9 +200,32 @@ function MapPopup({
     setPos({ x: p.x, y: p.y })
   }, [city, map])
 
+  const updateImageScrollState = useCallback(() => {
+    const container = imagesRef.current
+    if (!container) return
+
+    const nextScrollLeft = container.scrollLeft
+    const maxScrollLeft = container.scrollWidth - container.clientWidth
+
+    setScrollLeft(nextScrollLeft)
+    setCanScrollLeft(nextScrollLeft > 4)
+    setCanScrollRight(nextScrollLeft < maxScrollLeft - 4)
+  }, [])
+
   useEffect(() => {
     updatePos()
   }, [updatePos])
+
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => {
+      if (imagesRef.current) {
+        imagesRef.current.scrollLeft = 0
+      }
+      updateImageScrollState()
+    })
+
+    return () => cancelAnimationFrame(frame)
+  }, [city, updateImageScrollState])
 
   useMapEvent('move', updatePos)
   useMapEvent('zoom', updatePos)
@@ -232,16 +259,52 @@ function MapPopup({
         </button>
         <Link href={city.href} className="block no-underline">
           <div className="bg-white rounded-xl shadow-lg border border-[#ebe4d8] min-w-[280px] max-w-[320px] overflow-hidden">
-            <div className="flex gap-1 overflow-x-auto px-3 pt-3 pb-1" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
-              {city.images.map((img, i) => (
-                <img
-                  key={i}
-                  src={`https://picsum.photos/seed/${img}/280/180`}
-                  alt={`${city.name} ${i + 1}`}
-                  className="h-16 w-auto rounded-md object-cover flex-shrink-0"
-                  loading="lazy"
-                />
-              ))}
+            <div className="relative group/images px-3 pt-3 pb-1">
+              <div
+                ref={imagesRef}
+                onScroll={updateImageScrollState}
+                data-scroll-left={scrollLeft > 0 ? 'true' : 'false'}
+                className="flex gap-1 overflow-x-auto scroll-smooth"
+                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+              >
+                {city.images.map((img, i) => (
+                  <img
+                    key={i}
+                    src={`https://picsum.photos/seed/${img}/280/180`}
+                    alt={`${city.name} ${i + 1}`}
+                    className="h-16 w-auto rounded-md object-cover flex-shrink-0"
+                    loading="lazy"
+                  />
+                ))}
+              </div>
+              {canScrollLeft && (
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    e.stopPropagation()
+                    imagesRef.current?.scrollBy({ left: -120, behavior: 'smooth' })
+                  }}
+                  className="absolute left-0 top-1/2 z-10 flex h-6 w-6 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#1a3a4a] shadow transition-opacity hover:bg-[#f8f5ef] opacity-0 group-hover/images:opacity-100"
+                  aria-label={`Scroll ${city.name} images left`}
+                >
+                  <ChevronLeft size={14} />
+                </button>
+              )}
+              {canScrollRight && (
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    e.stopPropagation()
+                    imagesRef.current?.scrollBy({ left: 120, behavior: 'smooth' })
+                  }}
+                  className="absolute right-0 top-1/2 z-10 flex h-6 w-6 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#1a3a4a] shadow transition-opacity hover:bg-[#f8f5ef] opacity-0 group-hover/images:opacity-100"
+                  aria-label={`Scroll ${city.name} images right`}
+                >
+                  <ChevronRight size={14} />
+                </button>
+              )}
             </div>
             <div className="px-3 pb-3 pt-1">
               <h4 className="text-sm font-bold text-[#1a3a4a]">

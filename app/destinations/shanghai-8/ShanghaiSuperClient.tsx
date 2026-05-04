@@ -27,6 +27,8 @@ import {
   Sunset,
   Clock,
   Wallet,
+  ChevronLeft,
+  ChevronRight,
   ChevronDown,
   ChevronUp,
 } from "lucide-react";
@@ -522,6 +524,19 @@ const typeLabels: Record<string, string> = {
 
 const timeIcons = { morning: Sunrise, afternoon: Sun, evening: Sunset };
 const timeLabels = { morning: "Morning", afternoon: "Afternoon", evening: "Evening" };
+const shanghaiGallerySeeds = [
+  "shanghai-bund",
+  "shanghai-yugarden",
+  "shanghai-frenchconcession",
+  "shanghai-tower",
+  "shanghai-tianzifang",
+  "shanghai-jadebuddha",
+  "shanghai-bund-night",
+  "shanghai-nanjing-road",
+  "shanghai-skyline",
+  "shanghai-huangpu",
+  "shanghai-lujiazui",
+];
 
 // ─── Shared Components ──────────────────────────────────────────
 
@@ -1004,8 +1019,13 @@ export default function ShanghaiSuperClient() {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeFilters, setActiveFilters] = useState<FilterTag[]>([]);
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+  const [heroGalleryScrollLeft, setHeroGalleryScrollLeft] = useState(0);
+  const [heroCanScrollLeft, setHeroCanScrollLeft] = useState(false);
+  const [heroCanScrollRight, setHeroCanScrollRight] = useState(true);
+  const [activeHeroImage, setActiveHeroImage] = useState(0);
   const hoverTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const thingsToDoScrollRef = useRef<HTMLDivElement>(null);
+  const heroGalleryRef = useRef<HTMLDivElement>(null);
   const isFiltering = searchQuery.length > 0 || activeFilters.length > 0;
 
   // Hide the main site navbar on this hub page
@@ -1078,29 +1098,123 @@ export default function ShanghaiSuperClient() {
     };
   }, []);
 
+  const updateHeroGalleryState = useCallback(() => {
+    const container = heroGalleryRef.current;
+    if (!container) return;
+
+    const nextScrollLeft = container.scrollLeft;
+    const maxScrollLeft = container.scrollWidth - container.clientWidth;
+    const slides = Array.from(container.children) as HTMLElement[];
+
+    setHeroGalleryScrollLeft(nextScrollLeft);
+    setHeroCanScrollLeft(nextScrollLeft > 4);
+    setHeroCanScrollRight(nextScrollLeft < maxScrollLeft - 4);
+
+    if (slides.length === 0) return;
+
+    let closestIndex = 0;
+    let smallestDistance = Number.POSITIVE_INFINITY;
+
+    slides.forEach((slide, index) => {
+      const distance = Math.abs(slide.offsetLeft - nextScrollLeft);
+      if (distance < smallestDistance) {
+        smallestDistance = distance;
+        closestIndex = index;
+      }
+    });
+
+    setActiveHeroImage(closestIndex);
+  }, []);
+
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => {
+      updateHeroGalleryState();
+    });
+
+    window.addEventListener("resize", updateHeroGalleryState);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("resize", updateHeroGalleryState);
+    };
+  }, [updateHeroGalleryState]);
+
   return (
     <div className="min-h-screen bg-white">
       {/* ========== HERO ========== */}
       <section className="relative w-full">
-        <div className="relative h-[380px] md:h-[500px] w-full overflow-hidden">
-          <Image
-            src="https://picsum.photos/seed/shanghai-skyline/1200/500"
-            alt="Shanghai skyline"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#1a3a4a]/90 via-[#1a3a4a]/40 to-transparent" />
-          <div className="absolute inset-0 flex flex-col justify-end px-4 pb-8 md:pb-12 max-w-6xl mx-auto w-full">
-            <p className="text-white/80 text-sm md:text-base font-medium mb-1">
-              上海, China
-            </p>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-2 md:mb-3 tracking-tight">
-              Shanghai
-            </h1>
-            <p className="text-white/90 text-base md:text-lg max-w-xl">
-              Colonial elegance meets tomorrow&apos;s skyline
-            </p>
+        <div className="bg-gradient-to-br from-[#f8f3ea] via-[#f5f1ea] to-[#efe4d1]">
+          <div className="relative max-w-6xl mx-auto px-4 pt-6 md:pt-8 pb-6 md:pb-8 group/hero">
+            <div
+              ref={heroGalleryRef}
+              onScroll={updateHeroGalleryState}
+              data-scroll-left={heroGalleryScrollLeft > 0 ? "true" : "false"}
+              className="flex snap-x snap-mandatory gap-3 overflow-x-auto scroll-smooth scrollbar-hide"
+            >
+              {shanghaiGallerySeeds.map((seed, index) => (
+                <div
+                  key={seed}
+                  className="relative h-[220px] md:h-[350px] basis-[66.666%] md:basis-[calc((100%_-_1.5rem)/3)] shrink-0 snap-start overflow-hidden rounded-xl"
+                >
+                  <Image
+                    src={`https://picsum.photos/seed/${seed}/900/600`}
+                    alt={`Shanghai gallery image ${index + 1}`}
+                    fill
+                    priority={index < 3}
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a3a4a]/70 via-[#1a3a4a]/25 to-transparent" />
+                </div>
+              ))}
+            </div>
+            {heroCanScrollLeft && (
+              <button
+                type="button"
+                onClick={() => heroGalleryRef.current?.scrollBy({ left: -320, behavior: "smooth" })}
+                className="absolute left-6 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white/95 text-[#1a3a4a] shadow-md transition-opacity hover:bg-white opacity-0 group-hover/hero:opacity-100"
+                aria-label="Scroll Shanghai gallery left"
+              >
+                <ChevronLeft size={18} />
+              </button>
+            )}
+            {heroCanScrollRight && (
+              <button
+                type="button"
+                onClick={() => heroGalleryRef.current?.scrollBy({ left: 320, behavior: "smooth" })}
+                className="absolute right-6 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white/95 text-[#1a3a4a] shadow-md transition-opacity hover:bg-white opacity-0 group-hover/hero:opacity-100"
+                aria-label="Scroll Shanghai gallery right"
+              >
+                <ChevronRight size={18} />
+              </button>
+            )}
+            <div className="pointer-events-none absolute inset-x-4 bottom-6 md:bottom-8">
+              <div className="flex flex-col justify-end rounded-xl bg-gradient-to-t from-[#1a3a4a]/70 via-[#1a3a4a]/25 to-transparent px-5 pb-5 pt-16 md:px-8 md:pb-8 md:pt-24">
+                <p className="text-white/80 text-sm md:text-base font-medium mb-1">
+                  上海, China
+                </p>
+                <h1 className="text-4xl md:text-6xl font-bold text-white mb-2 md:mb-3 tracking-tight">
+                  Shanghai
+                </h1>
+                <p className="text-white/90 text-base md:text-lg max-w-xl">
+                  Colonial elegance meets tomorrow&apos;s skyline
+                </p>
+              </div>
+            </div>
+            <div className="mt-4 flex items-center justify-center gap-2">
+              {shanghaiGallerySeeds.map((seed, index) => (
+                <button
+                  key={`${seed}-dot`}
+                  type="button"
+                  onClick={() => {
+                    const slide = heroGalleryRef.current?.children[index] as HTMLElement | undefined;
+                    slide?.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
+                  }}
+                  className={`h-2 rounded-full transition-all ${
+                    activeHeroImage === index ? "w-6 bg-[#af5d32]" : "w-2 bg-[#d2c3ad]"
+                  }`}
+                  aria-label={`Go to Shanghai gallery image ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
 
