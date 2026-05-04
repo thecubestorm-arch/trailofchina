@@ -36,6 +36,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <script defer src="https://umami-analytics-wuzf.srv1019856.hstgr.cloud/script.js" data-website-id="e6431fc1-db47-401c-96c4-a4d794d0e4fe" />
+      </head>
       <body className="antialiased" style={{ backgroundColor: '#f5f1ea' }}>
         <NextIntlClientProvider locale={defaultLocale}>
           <div className="relative min-h-screen" style={{ backgroundColor: '#f5f1ea' }}>
