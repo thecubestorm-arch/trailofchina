@@ -1005,6 +1005,7 @@ export default function ShanghaiSuperClient() {
   const [activeFilters, setActiveFilters] = useState<FilterTag[]>([]);
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const hoverTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const thingsToDoScrollRef = useRef<HTMLDivElement>(null);
   const isFiltering = searchQuery.length > 0 || activeFilters.length > 0;
 
   // Hide the main site navbar on this hub page
@@ -1302,8 +1303,8 @@ export default function ShanghaiSuperClient() {
                   See all →
                 </Link>
               </div>
-              <div className="relative">
-                <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 -mx-4 px-4 scrollbar-hide">
+              <div className="relative group/scroll">
+                <div ref={thingsToDoScrollRef} className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 -mx-4 px-4 scrollbar-hide scroll-smooth">
                   {attractions.map((attr) => (
                     <div
                       key={attr.name}
@@ -1320,6 +1321,22 @@ export default function ShanghaiSuperClient() {
                     </div>
                   ))}
                 </div>
+                {/* Left scroll arrow */}
+                <button
+                  onClick={() => thingsToDoScrollRef.current?.scrollBy({ left: -300, behavior: 'smooth' })}
+                  className="absolute left-2 top-1/2 -translate-y-1/2 z-10 h-10 w-10 rounded-full bg-white/90 border border-[#ebe4d8] shadow-md flex items-center justify-center text-[#1a3a4a] hover:bg-white hover:shadow-lg transition-all opacity-0 group-hover/scroll:opacity-100 md:opacity-0"
+                  aria-label="Scroll left"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6" /></svg>
+                </button>
+                {/* Right scroll arrow */}
+                <button
+                  onClick={() => thingsToDoScrollRef.current?.scrollBy({ left: 300, behavior: 'smooth' })}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 z-10 h-10 w-10 rounded-full bg-white/90 border border-[#ebe4d8] shadow-md flex items-center justify-center text-[#1a3a4a] hover:bg-white hover:shadow-lg transition-all opacity-0 group-hover/scroll:opacity-100 md:opacity-0"
+                  aria-label="Scroll right"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6" /></svg>
+                </button>
                 <div className="absolute right-0 top-0 bottom-4 w-16 bg-gradient-to-l from-white to-transparent pointer-events-none md:hidden" />
               </div>
             </div>
