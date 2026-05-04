@@ -98,6 +98,11 @@ export default function ChecklistDownload() {
 
       saveEmailForMarketing(normalizedEmail)
 
+      // Umami event tracking
+      if (typeof window !== 'undefined' && (window as any).umami) {
+        ;(window as any).umami.track('pdf_download', { source: 'checklist-pdf' })
+      }
+
       setSuccess('Your cheat sheet is downloading! Check your inbox for more China travel tips.')
       setEmail('')
     } catch {

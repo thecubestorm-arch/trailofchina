@@ -38,6 +38,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <head>
         <script defer src="https://umami-analytics-wuzf.srv1019856.hstgr.cloud/script.js" data-website-id="e6431fc1-db47-401c-96c4-a4d794d0e4fe" />
+        <script type="text/javascript" dangerouslySetInnerHTML={{ __html: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "wlqd442wnx");` }} />
       </head>
       <body className="antialiased" style={{ backgroundColor: '#f5f1ea' }}>
         <NextIntlClientProvider locale={defaultLocale}>

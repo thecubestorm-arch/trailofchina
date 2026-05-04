@@ -20,6 +20,9 @@ export default function TravelPlannerForm() {
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
+    if (typeof window !== 'undefined' && (window as any).umami) {
+      ;(window as any).umami.track('travel_planner_submit')
+    }
     setSubmitted(true)
   }
 
