@@ -8,7 +8,7 @@ import { makeMetadata } from '@/lib/metadata'
 export const metadata: Metadata = makeMetadata({
   title: 'Metro & Subway in China | Trail of China',
   description:
-    'Complete guide to using the metro and subway systems in Chinese cities. Shanghai, Beijing, Guangzhou, and more. Payment, etiquette, and tips.',
+    'Complete guide to using the metro and subway systems in Chinese cities. Beijing, Shanghai, Guangzhou, and more. Payment, etiquette, and tips.',
 
   path: '/china-basics/how-to-get-around/metro-subway',
 })
@@ -83,8 +83,8 @@ export default function MetroPage() {
           <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">Why You Need This</h2>
           <div className="prose prose-lg max-w-none text-[var(--foreground)]">
             <p>
-              China&apos;s metro systems are modern, efficient, and often the best way to navigate major cities. Shanghai and
-              Beijing alone have some of the world&apos;s longest networks, and stations are usually close to the attractions
+              China&apos;s metro systems are modern, efficient, and often the best way to navigate major cities. Beijing and
+              Shanghai alone have some of the world&apos;s longest networks, and stations are usually close to the attractions
               travelers actually want.
             </p>
             <p>
@@ -98,8 +98,8 @@ export default function MetroPage() {
           <h2 className="mb-4 text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)]">Major Metro Systems</h2>
           <div className="prose prose-lg max-w-none text-[var(--foreground)]">
             <p>
-              <strong>Shanghai</strong> has the world&apos;s longest metro network with more than 20 lines, while
-              <strong> Beijing</strong> covers virtually every major site a first-time visitor is likely to see.
+              <strong>Beijing</strong> covers virtually every major site a first-time visitor is likely to see, while
+              <strong> Shanghai</strong> has the world&apos;s longest metro network with more than 20 lines.
             </p>
             <p>
               <strong>Guangzhou</strong> connects deeply into the surrounding region, including Foshan, and

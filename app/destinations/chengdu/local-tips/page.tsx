@@ -49,7 +49,7 @@ export default function ChengduLocalTipsPage() {
               <h3 className="text-xl font-semibold mb-2">🫖 Chengdu Pace Is Slow</h3>
               <p className="text-gray-700 mb-3">
                 Don&apos;t over-schedule. Tea houses, park walks, and long meals are part of the city&apos;s culture.
-                Plan fewer sights per day than you would in Shanghai or Beijing.
+                Plan fewer sights per day than you would in Beijing or Shanghai.
               </p>
               <p className="text-sm text-[#64748b]">🕐 Rhythm: leave buffer time every afternoon</p>
               <p className="text-sm text-[#64748b]">💰 Budget: tea house sessions can be low-cost and long</p>

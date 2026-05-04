@@ -4,7 +4,7 @@ import { makeMetadata } from '@/lib/metadata'
 
 export const metadata: Metadata = makeMetadata({
   title: 'Explore China Destinations | Trail of China',
-  description: "Discover China's top destinations — Shanghai, Beijing, Xi'an, Chengdu, and Chongqing. Interactive map with photo galleries and city previews.",
+  description: "Discover China's top destinations — Beijing, Shanghai, Xi'an, Chengdu, and Chongqing. Interactive map with photo galleries and city previews.",
 
   path: '/destinations',
 })

@@ -18,7 +18,7 @@ import ExploreChinaSection from '@/app/v7/ExploreChinaSection'
 const trustSignals = [
   '4+ Trips to China',
   'Speaks Mandarin',
-  'Family in Shanghai & Beijing',
+  'Family in Beijing & Shanghai',
   'Updated 2025',
 ]
 

@@ -15,6 +15,19 @@ export type ExploreCity = {
 
 export const exploreCities: ExploreCity[] = [
   {
+    key: 'beijing',
+    name: 'Beijing',
+    nameZh: '北京',
+    href: '/destinations/beijing',
+    lat: 39.9,
+    lng: 116.41,
+    hook: 'Great Wall mornings, imperial landmarks, and the capital at full scale.',
+    duration: '3-5 days',
+    price: '$$',
+    season: 'Mar-May, Sep-Nov',
+    imageSeed: 'home-v4-beijing',
+  },
+  {
     key: 'shanghai',
     name: 'Shanghai',
     nameZh: '上海',
@@ -27,19 +40,6 @@ export const exploreCities: ExploreCity[] = [
     season: 'Mar-May, Sep-Nov',
     imageSeed: 'home-v4-shanghai',
     popular: true,
-  },
-  {
-    key: 'beijing',
-    name: 'Beijing',
-    nameZh: '北京',
-    href: '/destinations/beijing',
-    lat: 39.9,
-    lng: 116.41,
-    hook: 'Great Wall mornings, imperial landmarks, and the capital at full scale.',
-    duration: '3-5 days',
-    price: '$$',
-    season: 'Mar-May, Sep-Nov',
-    imageSeed: 'home-v4-beijing',
   },
   {
     key: 'xian',

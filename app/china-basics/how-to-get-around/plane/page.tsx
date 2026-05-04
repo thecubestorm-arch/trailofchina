@@ -156,7 +156,7 @@ export default function PlanePage() {
             <p>Chinese airlines do not always announce delays clearly in English.</p>
             <p>Airport food is overpriced, so eat before you go when possible.</p>
             <p>Some smaller airports are far from city centers, which can erase the convenience advantage.</p>
-            <p>For Shanghai to Beijing specifically, the flight is only really worth it if you live far from train stations.</p>
+            <p>For Beijing to Shanghai specifically, the flight is only really worth it if you live far from train stations.</p>
           </blockquote>
         </section>
 

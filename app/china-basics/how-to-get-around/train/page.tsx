@@ -181,7 +181,7 @@ export default function TrainPage() {
             <p>Download offline maps before departure because tunnels often block signal.</p>
             <p>Bring snacks because station food is expensive.</p>
             <p>Second class is perfectly comfortable for most trips.</p>
-            <p>Shanghai to Beijing takes about 4.5 hours by G-train versus a 2.5 hour flight plus airport transfers.</p>
+            <p>Beijing to Shanghai takes about 4.5 hours by G-train versus a 2.5 hour flight plus airport transfers.</p>
             <p>Bullet trains are often more reliable than flights.</p>
           </blockquote>
         </section>

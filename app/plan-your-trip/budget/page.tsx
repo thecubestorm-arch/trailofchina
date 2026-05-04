@@ -117,7 +117,7 @@ export default function BudgetGuidePage() {
           <div className="prose prose-lg max-w-none text-[var(--foreground)]">
             <p>
               Hostels Y50-80/night, budget hotels Y100-200, mid-range Y300-600, luxury Y800+. Prices are highest in
-              Shanghai and Beijing; Chengdu, Chongqing, and Xi&apos;an offer better value. Book through Trip.com or Ctrip
+              Beijing and Shanghai; Chengdu, Chongqing, and Xi&apos;an offer better value. Book through Trip.com or Ctrip
               for English support and foreign-card payments.
             </p>
           </div>
@@ -152,7 +152,7 @@ export default function BudgetGuidePage() {
           <h3 className="mt-8 text-xl sm:text-2xl font-serif font-bold text-[var(--foreground)] mb-3">City Cost Comparison</h3>
           <div className="prose prose-lg max-w-none text-[var(--foreground)]">
             <p>
-              Shanghai and Beijing are the most expensive cities - expect to pay 30-50% more for hotels and dining.
+              Beijing and Shanghai are the most expensive cities - expect to pay 30-50% more for hotels and dining.
               Chengdu and Chongqing are the most affordable major cities with excellent food scenes. Xi&apos;an sits in
               the middle: great value with world-class attractions.
             </p>
