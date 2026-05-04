@@ -609,36 +609,8 @@ export default function ChinaBasicsClient() {
 
         {activeTab === "overview" && !isFiltering && (
           <div className="space-y-8 md:space-y-10">
-            {/* Prepare — horizontal scroll carousel */}
-            <div className="relative">
-              <div className="flex items-center justify-between mb-4 md:mb-6">
-                <div>
-                  <div className="w-8 h-1 bg-[#af5d32] rounded-full mb-3"></div>
-                  <h2 className="text-2xl md:text-3xl font-bold text-[#1a3a4a]">
-                    Prepare
-                  </h2>
-                </div>
-                <Link
-                  href="/china-basics/how-to-get-internet"
-                  className="text-sm font-medium text-[#af5d32] hover:underline whitespace-nowrap self-end mb-1"
-                >
-                  See all →
-                </Link>
-              </div>
-              <div className="relative">
-                <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 -mx-4 px-4 scrollbar-hide">
-                  {prepareItems.map((item) => (
-                    <div
-                      key={item.name}
-                      className="w-[260px] md:w-[300px] flex-shrink-0 snap-start"
-                    >
-                      <PhotoCard {...item} />
-                    </div>
-                  ))}
-                </div>
-                <div className="absolute right-0 top-0 bottom-4 w-16 bg-gradient-to-l from-white to-transparent pointer-events-none md:hidden" />
-              </div>
-            </div>
+            {/* Prepare */}
+            <PrepareSection expanded />
 
             {/* Apps & Money — compact grid */}
             <AppsMoneySection expanded />
