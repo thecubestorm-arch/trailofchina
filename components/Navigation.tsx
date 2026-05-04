@@ -9,6 +9,7 @@ const navLinks = [
   { href: '/destinations', label: 'Destinations' },
   { href: '/plan-your-trip', label: 'Plan Your Trip' },
   { href: '/interactive-map', label: 'Interactive Map', badge: 'Coming Soon' },
+  { href: '/about', label: 'About' },
 ]
 
 export default function Navigation() {

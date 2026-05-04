@@ -48,6 +48,10 @@ export default function Footer() {
         <div className="flex flex-col gap-2 text-xs text-[var(--muted)] sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} Trail of China</p>
           <div className="flex flex-wrap items-center gap-x-1">
+            <Link href="/about" className="hover:text-[#af5d32]">
+              About
+            </Link>
+            <span aria-hidden="true">·</span>
             <Link href="/imprint" className="hover:text-[#af5d32]">
               Impressum
             </Link>
