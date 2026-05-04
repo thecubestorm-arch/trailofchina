@@ -57,12 +57,12 @@ const team = [
 ]
 
 const coverage = [
-  'Visas and entry rules',
-  'Internet access and eSIM choices',
-  'Alipay, WeChat Pay, and card realities',
-  'High-speed trains and station workflow',
-  'City-to-city route planning',
-  'Apps, maps, taxis, and local transit',
+  { label: 'Visas and entry rules', href: '/china-basics/how-china-differs/visa-guide' },
+  { label: 'Internet access and eSIM choices', href: '/china-basics/how-to-get-internet' },
+  { label: 'Alipay, WeChat Pay, and card realities', href: '/china-basics/what-apps-to-use/alipay' },
+  { label: 'High-speed trains and station workflow', href: '/china-basics/how-to-get-around/train' },
+  { label: 'City-to-city route planning', href: '/plan-your-trip/preplanned-trips' },
+  { label: 'Apps, maps, taxis, and local transit', href: '/china-basics/what-apps-to-use' },
 ]
 
 const quotes = [
@@ -188,9 +188,9 @@ export default function AboutPage() {
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--primary)]">What We Cover</p>
               <div className="mt-6 grid gap-4 sm:grid-cols-2">
                 {coverage.map((item) => (
-                  <div key={item} className="rounded-[1.25rem] border border-[var(--line)] bg-[rgba(255,252,247,0.74)] px-4 py-4">
-                    <p className="text-base font-medium leading-7 text-[var(--foreground)]">{item}</p>
-                  </div>
+                  <Link key={item.label} href={item.href} className="group rounded-[1.25rem] border border-[var(--line)] bg-[rgba(255,252,247,0.74)] px-4 py-4 transition-colors hover:border-[var(--primary)] hover:bg-[rgba(175,93,50,0.06)]">
+                    <p className="text-base font-medium leading-7 text-[var(--foreground)] group-hover:text-[var(--primary)]">{item.label}</p>
+                  </Link>
                 ))}
               </div>
             </article>
