@@ -11,30 +11,10 @@ type NewsletterSignupProps = {
 type SubmissionState = 'idle' | 'submitting' | 'success' | 'error'
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-const API_URL = process.env.NEXT_PUBLIC_LISTMONK_API_URL
-const API_TOKEN = process.env.NEXT_PUBLIC_LISTMONK_API_TOKEN
-const LIST_ID = Number(process.env.NEXT_PUBLIC_LISTMONK_LIST_ID)
 
-function getErrorMessage(status: number, payload: unknown) {
-  const message =
-    typeof payload === 'object' && payload !== null && 'message' in payload && typeof payload.message === 'string'
-      ? payload.message
-      : typeof payload === 'object' && payload !== null && 'error' in payload && typeof payload.error === 'string'
-        ? payload.error
-        : ''
-
-  const normalized = message.toLowerCase()
-
-  if (normalized.includes('subscriber already exists') || normalized.includes('already subscribed')) {
-    return 'That email is already on the list. Check your inbox in case the confirmation email is still waiting.'
-  }
-
-  if (normalized.includes('invalid email') || normalized.includes('invalid e-mail') || status === 400) {
-    return 'Please enter a valid email address.'
-  }
-
-  return 'Something went wrong. Please try again in a moment.'
-}
+// Public subscription endpoint — no auth required, CORS-friendly
+const LISTMONK_PUBLIC_URL = 'https://listmonk-xyme.srv1019856.hstgr.cloud/api/public/subscription'
+const LIST_UUID = 'f634aecd-46d7-4348-b6f1-342b18bb9f1c'
 
 export default function NewsletterSignup({ source, heading = 'Get China Tips' }: NewsletterSignupProps) {
   const inputId = useId()
@@ -54,50 +34,57 @@ export default function NewsletterSignup({ source, heading = 'Get China Tips' }:
       return
     }
 
-    if (!API_URL || !API_TOKEN || !Number.isFinite(LIST_ID)) {
-      setStatus('error')
-      setMessage('Newsletter signup is not configured right now. Please try again later.')
-      return
-    }
-
     setStatus('submitting')
 
     try {
-      const response = await fetch(`${API_URL}/subscribers`, {
+      const response = await fetch(LISTMONK_PUBLIC_URL, {
         method: 'POST',
         headers: {
-          Authorization: `token api_user:${API_TOKEN}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           email: normalizedEmail,
           name: '',
-          lists: [LIST_ID],
-          status: 'pending',
-          preconfirm_subscriptions: false,
+          list_uuids: [LIST_UUID],
         }),
       })
 
-      const payload = await response.json().catch(() => null)
-
+      // Listmonk public subscription returns 200 on success or already subscribed
+      // and 400+ for validation errors
       if (!response.ok) {
-        throw new Error(getErrorMessage(response.status, payload))
+        let errorMsg = 'Something went wrong. Please try again later.'
+        try {
+          const data = await response.json()
+          if (data.message) {
+            const msg = data.message.toLowerCase()
+            if (msg.includes('already') || msg.includes('subscriber already')) {
+              errorMsg = 'That email is already on the list. Check your inbox for the confirmation email.'
+            } else if (msg.includes('invalid') || msg.includes('email')) {
+              errorMsg = 'Please enter a valid email address.'
+            } else {
+              errorMsg = data.message
+            }
+          }
+        } catch {
+          // Response wasn't JSON — use default error
+        }
+        throw new Error(errorMsg)
       }
 
       trackEvent('newsletter_signup', { source })
       setStatus('success')
-      setMessage('Check your inbox to confirm!')
+      setMessage('Check your inbox to confirm your subscription!')
       setEmail('')
     } catch (error) {
-      const nextMessage =
+      const errorMessage =
         error instanceof TypeError || (error instanceof Error && /fetch|network/i.test(error.message))
           ? 'Network error. Please check your connection and try again.'
-          : error instanceof Error && error.message
+          : error instanceof Error
             ? error.message
-            : 'Network error. Please check your connection and try again.'
+            : 'Something went wrong. Please try again.'
 
       setStatus('error')
-      setMessage(nextMessage)
+      setMessage(errorMessage)
     }
   }
 
