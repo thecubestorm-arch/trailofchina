@@ -5,7 +5,7 @@ import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
 
 export const metadata: Metadata = {
-  title: 'China Budget Guide — Cost of Travel in China (2025) | Trail of China',
+  title: 'China Budget Guide — Cost of Travel in China  | Trail of China',
   description:
     'Complete China travel budget guide: daily costs, accommodation, food, transport, attractions, and money-saving tips for every travel style.',
   openGraph: {

@@ -5,7 +5,7 @@ import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
 
 export const metadata: Metadata = {
-  title: 'China Visa Guide: Everything You Need to Know (2025) | Trail of China',
+  title: 'China Visa Guide: Everything You Need to Know  | Trail of China',
   description:
     'Complete China visa guide for tourists — L visa, M visa, transit visas, 144-hour visa-free entry, and Swiss/EU citizen info.',
 }
@@ -80,7 +80,7 @@ export default function VisaGuidePage() {
         <header className="mb-8 relative">
           <ChineseWatermark character="签" />
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-3 text-[var(--foreground)] relative z-10">
-            China Visa Guide: Everything You Need to Know (2025)
+            China Visa Guide: Everything You Need to Know 
           </h1>
           <div className="flex items-center gap-2 text-[var(--muted)] mt-3 relative z-10">
             <span className="text-2xl">签证</span>

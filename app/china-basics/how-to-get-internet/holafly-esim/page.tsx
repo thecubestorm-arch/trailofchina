@@ -5,7 +5,7 @@ import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
 
 export const metadata: Metadata = {
-  title: 'Holafly eSIM for China: Review, Pricing & Is It Worth It? (2025)',
+  title: 'Holafly eSIM for China: Review, Pricing & Is It Worth It? ',
   description:
     'Holafly eSIM for China — detailed review of unlimited data plans, speeds, and reliability. Compare with Airalo and find the best eSIM for your China trip.',
 }
@@ -70,7 +70,7 @@ export default function HolaflyEsimPage() {
         <header className="mb-8 relative">
           <ChineseWatermark character="卡" />
           <h1 className="relative z-10 mb-3 text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-[var(--foreground)]">
-            Holafly eSIM for China: Review, Pricing &amp; Is It Worth It? (2025)
+            Holafly eSIM for China: Review, Pricing &amp; Is It Worth It? 
           </h1>
           <div className="relative z-10 mt-3 flex items-center gap-2 text-[var(--muted)]">
             <span className="text-2xl">eSIM</span>

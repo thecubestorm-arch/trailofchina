@@ -5,11 +5,11 @@ import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
 
 export const metadata: Metadata = {
-  title: 'Best Time to Visit China — Month-by-Month Guide (2025) | Trail of China',
+  title: 'Best Time to Visit China — Month-by-Month Guide  | Trail of China',
   description:
     'When is the best time to visit China? Month-by-month climate guide, peak seasons, holidays to avoid, and the ideal months for every region.',
   openGraph: {
-    title: 'Best Time to Visit China — Month-by-Month Guide (2025)',
+    title: 'Best Time to Visit China — Month-by-Month Guide ',
     description:
       'From cherry-blossom spring to golden autumn — find the perfect season for your China trip.',
     type: 'article',

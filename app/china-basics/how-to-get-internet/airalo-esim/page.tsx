@@ -5,7 +5,7 @@ import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
 
 export const metadata: Metadata = {
-  title: 'Airalo eSIM for China: Honest Review & Setup Guide (2025)',
+  title: 'Airalo eSIM for China: Honest Review & Setup Guide ',
   description:
     'Airalo eSIM for China — honest review of coverage, speed, pricing, and setup. Is it the best eSIM for China travelers? Pros, cons, and alternatives.',
 }
@@ -75,7 +75,7 @@ export default function AiraloEsimPage() {
         <header className="mb-8 relative">
           <ChineseWatermark character="卡" />
           <h1 className="relative z-10 mb-3 text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-[var(--foreground)]">
-            Airalo eSIM for China: Honest Review &amp; Setup Guide (2025)
+            Airalo eSIM for China: Honest Review &amp; Setup Guide 
           </h1>
           <div className="relative z-10 mt-3 flex items-center gap-2 text-[var(--muted)]">
             <span className="text-2xl">eSIM</span>
