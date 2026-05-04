@@ -65,7 +65,8 @@ export default function ChongqingPage() {
           </p>
         </section>
 
-        <section>
+        <section aria-labelledby="chongqing-guide-sections">
+          <h2 id="chongqing-guide-sections" className="text-2xl font-semibold mb-4 text-[#1a3a4a]">Explore Chongqing</h2>
           {sections.map((section, index) => (
             <Link key={section.href} href={section.href} className={`block cursor-pointer rounded-lg transition-colors duration-200 hover:bg-[#fdf8f3] ${index < sections.length - 1 ? 'border-b border-[#ebe4d8] pb-8 mb-8' : ''}`}>
               <article className="py-8 px-6 -mx-6 md:py-10">
@@ -89,15 +90,18 @@ export default function ChongqingPage() {
           ))}
         </section>
 
-        <div className="bg-amber-50 border-l-4 border-amber-400 p-4 mb-8">
-          <h3 className="font-semibold text-amber-800 mb-2">💡 Quick Tips for Chongqing</h3>
-          <ul className="text-amber-900 space-y-2">
-            <li>• The city is vertical: add extra time for stairs, elevators, and slopes</li>
-            <li>• Night is prime time for Hongyadong and skyline photography</li>
-            <li>• Fog is common year-round, especially from late autumn to spring</li>
-            <li>• Even “mild” hotpot can be intense if you are not used to málà heat</li>
-          </ul>
-        </div>
+        <section aria-labelledby="chongqing-quick-tips" className="mb-8">
+          <h2 id="chongqing-quick-tips" className="text-2xl font-semibold mb-4 text-[#1a3a4a]">Quick Tips</h2>
+          <div className="bg-amber-50 border-l-4 border-amber-400 p-4">
+            <h3 className="font-semibold text-amber-800 mb-2">💡 Quick Tips for Chongqing</h3>
+            <ul className="text-amber-900 space-y-2">
+              <li>• The city is vertical: add extra time for stairs, elevators, and slopes</li>
+              <li>• Night is prime time for Hongyadong and skyline photography</li>
+              <li>• Fog is common year-round, especially from late autumn to spring</li>
+              <li>• Even “mild” hotpot can be intense if you are not used to málà heat</li>
+            </ul>
+          </div>
+        </section>
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">✈️ Getting Here</h2>
           <div className="space-y-4">

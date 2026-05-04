@@ -72,7 +72,7 @@ export default function SevenDayRoutePage() {
           <span className="text-[var(--muted)]">·</span>
           <span>2 major train legs</span>
           <span className="text-[var(--muted)]">·</span>
-          <span>Typical total: Y5,750-11,500</span>
+          <span>Typical total: ¥5,750-11,500</span>
         </div>
 
         <p className="text-lg sm:text-xl text-[var(--muted)] italic leading-relaxed max-w-4xl mb-10">
@@ -156,16 +156,16 @@ export default function SevenDayRoutePage() {
           <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)] mb-4">Transport Details</h2>
           <div className="prose prose-lg max-w-none text-[var(--foreground)]">
             <p>
-              <strong>Beijing - Xi&apos;an:</strong> G-train, ~4.5-6 hours, usually Y515-Y825 depending on class.
+              <strong>Beijing - Xi&apos;an:</strong> G-train, ~4.5-6 hours, usually ¥515-¥825 depending on class.
             </p>
             <p>
-              <strong>Xi&apos;an - Shanghai:</strong> G-train, ~6-7 hours, typically Y670-Y1,050.
+              <strong>Xi&apos;an - Shanghai:</strong> G-train, ~6-7 hours, typically ¥670-¥1,050.
             </p>
             <p>
               <strong>City transit:</strong> Metro cards and Alipay/WeChat Pay make local transport easiest.
             </p>
             <p>
-              <strong>Airport transfers:</strong> Budget Y40-Y120 per transfer depending on city and time.
+              <strong>Airport transfers:</strong> Budget ¥40-¥120 per transfer depending on city and time.
             </p>
           </div>
         </section>
@@ -176,22 +176,22 @@ export default function SevenDayRoutePage() {
           </h2>
           <div className="prose prose-lg max-w-none text-[var(--foreground)]">
             <p>
-              <strong>Accommodation:</strong> Y2,100-4,900 (mid-range hotels)
+              <strong>Accommodation:</strong> ¥2,100-4,900 (mid-range hotels)
             </p>
             <p>
-              <strong>Intercity transport:</strong> Y1,200-1,900
+              <strong>Intercity transport:</strong> ¥1,200-1,900
             </p>
             <p>
-              <strong>Food:</strong> Y1,050-2,100
+              <strong>Food:</strong> ¥1,050-2,100
             </p>
             <p>
-              <strong>Attractions and tours:</strong> Y900-1,700
+              <strong>Attractions and tours:</strong> ¥900-1,700
             </p>
             <p>
-              <strong>Local transport + incidentals:</strong> Y500-900
+              <strong>Local transport + incidentals:</strong> ¥500-900
             </p>
             <p>
-              <strong>Typical total:</strong> Y5,750-11,500 (about $790-$1,580)
+              <strong>Typical total:</strong> ¥5,750-11,500 (about $790-$1,580)
             </p>
           </div>
         </section>

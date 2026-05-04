@@ -63,7 +63,8 @@ export default function BeijingPage() {
           </p>
         </section>
 
-        <section>
+        <section aria-labelledby="beijing-guide-sections">
+          <h2 id="beijing-guide-sections" className="text-2xl font-semibold mb-4 text-[#1a3a4a]">Explore Beijing</h2>
           {sections.map((section, index) => (
             <Link key={section.href} href={section.href} className={`block cursor-pointer rounded-lg transition-colors duration-200 hover:bg-[#fdf8f3] ${index < sections.length - 1 ? 'border-b border-[#ebe4d8] pb-8 mb-8' : ''}`}>
               <article className="py-8 px-6 -mx-6 md:py-10">
@@ -87,15 +88,18 @@ export default function BeijingPage() {
           ))}
         </section>
 
-        <div className="bg-amber-50 border-l-4 border-amber-400 p-4">
-          <h3 className="font-semibold text-amber-800 mb-2">💡 Quick Tips for Beijing</h3>
-          <ul className="text-amber-900 space-y-2">
-            <li>• Best time: Spring (April-May) or Fall (September-October)</li>
-            <li>• Subway is best way to get around</li>
-            <li>• Book Forbidden City tickets 7 days in advance</li>
-            <li>• Great Wall: Mutianyu less crowded than Badaling</li>
-          </ul>
-        </div>
+        <section aria-labelledby="beijing-quick-tips" className="mb-8">
+          <h2 id="beijing-quick-tips" className="text-2xl font-semibold mb-4 text-[#1a3a4a]">Quick Tips</h2>
+          <div className="bg-amber-50 border-l-4 border-amber-400 p-4">
+            <h3 className="font-semibold text-amber-800 mb-2">💡 Quick Tips for Beijing</h3>
+            <ul className="text-amber-900 space-y-2">
+              <li>• Best time: Spring (April-May) or Fall (September-October)</li>
+              <li>• Subway is best way to get around</li>
+              <li>• Book Forbidden City tickets 7 days in advance</li>
+              <li>• Great Wall: Mutianyu less crowded than Badaling</li>
+            </ul>
+          </div>
+        </section>
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">✈️ Getting Here</h2>
           <div className="space-y-4">

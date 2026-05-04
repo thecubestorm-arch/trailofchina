@@ -35,7 +35,7 @@ export default function BlogPage() {
 
         <div className="mb-12 text-center">
           <h1 className="font-serif text-4xl md:text-5xl font-bold text-[#1a3a4a] mb-4">
-            The Traveler's Journal
+            China Travel Blog - The Traveler&apos;s Journal
           </h1>
           <p className="text-lg text-[#5d6a73] max-w-2xl mx-auto">
             Expert guides, destination insights, and practical tips for planning your first trip to China

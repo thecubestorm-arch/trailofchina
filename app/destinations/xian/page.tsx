@@ -64,7 +64,8 @@ export default function XianPage() {
           </p>
         </section>
 
-        <section>
+        <section aria-labelledby="xian-guide-sections">
+          <h2 id="xian-guide-sections" className="text-2xl font-semibold mb-4 text-[#1a3a4a]">Explore Xi&apos;an</h2>
           {sections.map((section, index) => (
             <Link key={section.href} href={section.href} className={`block cursor-pointer rounded-lg transition-colors duration-200 hover:bg-[#fdf8f3] ${index < sections.length - 1 ? 'border-b border-[#ebe4d8] pb-8 mb-8' : ''}`}>
               <article className="py-8 px-6 -mx-6 md:py-10">
@@ -88,15 +89,18 @@ export default function XianPage() {
           ))}
         </section>
 
-        <div className="bg-amber-50 border-l-4 border-amber-400 p-4 mb-8">
-          <h3 className="font-semibold text-amber-800 mb-2">💡 Quick Tips for Xi&apos;an</h3>
-          <ul className="text-amber-900 space-y-2">
-            <li>• Reach Terracotta Warriors at opening time to avoid major group-tour crowds.</li>
-            <li>• The City Wall is a full 14 km loop, so carry water if biking in summer.</li>
-            <li>• Muslim Quarter is busiest after dark; go hungry and bring cash for small stalls.</li>
-            <li>• Pair this page with the detailed <Link href="/destinations/xian/what-to-do" className="underline">What to Do guide</Link> to plan your route efficiently.</li>
-          </ul>
-        </div>
+        <section aria-labelledby="xian-quick-tips" className="mb-8">
+          <h2 id="xian-quick-tips" className="text-2xl font-semibold mb-4 text-[#1a3a4a]">Quick Tips</h2>
+          <div className="bg-amber-50 border-l-4 border-amber-400 p-4">
+            <h3 className="font-semibold text-amber-800 mb-2">💡 Quick Tips for Xi&apos;an</h3>
+            <ul className="text-amber-900 space-y-2">
+              <li>• Reach Terracotta Warriors at opening time to avoid major group-tour crowds.</li>
+              <li>• The City Wall is a full 14 km loop, so carry water if biking in summer.</li>
+              <li>• Muslim Quarter is busiest after dark; go hungry and bring cash for small stalls.</li>
+              <li>• Pair this page with the detailed <Link href="/destinations/xian/what-to-do" className="underline">What to Do guide</Link> to plan your route efficiently.</li>
+            </ul>
+          </div>
+        </section>
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">✈️ Getting Here</h2>
           <div className="space-y-4">

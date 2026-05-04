@@ -3,7 +3,7 @@ import BlogPageClient from './BlogPageClient'
 import { makeMetadata } from '@/lib/metadata'
 
 export const metadata: Metadata = makeMetadata({
-  title: "The Traveler's Journal | Trail of China",
+  title: 'China Travel Blog | Trail of China',
   description:
     'Expert guides, destination insights, and practical tips for planning your first trip to China.',
   path: '/blog',

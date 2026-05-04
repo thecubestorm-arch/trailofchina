@@ -64,7 +64,8 @@ export default function ChengduPage() {
           </p>
         </section>
 
-        <section>
+        <section aria-labelledby="chengdu-guide-sections">
+          <h2 id="chengdu-guide-sections" className="text-2xl font-semibold mb-4 text-[#1a3a4a]">Explore Chengdu</h2>
           {sections.map((section, index) => (
             <Link key={section.href} href={section.href} className={`block cursor-pointer rounded-lg transition-colors duration-200 hover:bg-[#fdf8f3] ${index < sections.length - 1 ? 'border-b border-[#ebe4d8] pb-8 mb-8' : ''}`}>
               <article className="py-8 px-6 -mx-6 md:py-10">
@@ -88,15 +89,18 @@ export default function ChengduPage() {
           ))}
         </section>
 
-        <div className="bg-amber-50 border-l-4 border-amber-400 p-4 mb-8">
-          <h3 className="font-semibold text-amber-800 mb-2">💡 Quick Tips for Chengdu</h3>
-          <ul className="text-amber-900 space-y-2">
-            <li>• Visit the Giant Panda Base (成都大熊猫繁育研究基地) at 8:00 AM for active pandas.</li>
-            <li>• Build spice gradually: order a mild hotpot broth before full málà (麻辣).</li>
-            <li>• Leave room for tea culture in People&apos;s Park (人民公园), not just sightseeing.</li>
-            <li>• Check our <Link href="/destinations/chengdu/local-tips" className="underline">Local Tips</Link> before using taxis.</li>
-          </ul>
-        </div>
+        <section aria-labelledby="chengdu-quick-tips" className="mb-8">
+          <h2 id="chengdu-quick-tips" className="text-2xl font-semibold mb-4 text-[#1a3a4a]">Quick Tips</h2>
+          <div className="bg-amber-50 border-l-4 border-amber-400 p-4">
+            <h3 className="font-semibold text-amber-800 mb-2">💡 Quick Tips for Chengdu</h3>
+            <ul className="text-amber-900 space-y-2">
+              <li>• Visit the Giant Panda Base (成都大熊猫繁育研究基地) at 8:00 AM for active pandas.</li>
+              <li>• Build spice gradually: order a mild hotpot broth before full málà (麻辣).</li>
+              <li>• Leave room for tea culture in People&apos;s Park (人民公园), not just sightseeing.</li>
+              <li>• Check our <Link href="/destinations/chengdu/local-tips" className="underline">Local Tips</Link> before using taxis.</li>
+            </ul>
+          </div>
+        </section>
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">✈️ Getting Here</h2>
           <div className="space-y-4">

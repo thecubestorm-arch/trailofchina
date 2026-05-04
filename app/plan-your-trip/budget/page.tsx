@@ -69,11 +69,11 @@ export default function BudgetGuidePage() {
         </header>
 
         <div className="mb-6 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm sm:text-base text-[var(--foreground)] bg-[var(--surface)] border border-[var(--line)] rounded-lg px-4 py-3">
-          <span className="font-medium">Budget: Y200-300/day</span>
+          <span className="font-medium">Budget: ¥200-300/day</span>
           <span className="text-[var(--muted)]">·</span>
-          <span>Mid-range: Y500-800/day</span>
+          <span>Mid-range: ¥500-800/day</span>
           <span className="text-[var(--muted)]">·</span>
-          <span>Luxury: Y1500+/day</span>
+          <span>Luxury: ¥1500+/day</span>
         </div>
 
         <p className="text-lg sm:text-xl text-[var(--muted)] italic leading-relaxed max-w-4xl mb-10">
@@ -92,19 +92,19 @@ export default function BudgetGuidePage() {
           <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[var(--foreground)] mb-4">At a Glance</h2>
           <div className="prose prose-lg max-w-none text-[var(--foreground)]">
             <p>
-              Daily budget: Y200-300 (budget), Y500-800 (mid-range), Y1500+ (luxury).
+              Daily budget: ¥200-300 (budget), ¥500-800 (mid-range), ¥1500+ (luxury).
             </p>
             <p>
-              Budget hotels: Y80-150/night, Mid-range: Y300-600, Luxury: Y800-2000+.
+              Budget hotels: ¥80-150/night, Mid-range: ¥300-600, Luxury: ¥800-2000+.
             </p>
             <p>
-              Street food: Y5-15/meal, Restaurant: Y30-80, High-end: Y150-500+.
+              Street food: ¥5-15/meal, Restaurant: ¥30-80, High-end: ¥150-500+.
             </p>
             <p>
-              High-speed train: Y50-600 depending on distance, Flights: Y200-1000.
+              High-speed train: ¥50-600 depending on distance, Flights: ¥200-1000.
             </p>
             <p>
-              Attractions: Y20-60 typical entry, Y100-200 for major sites.
+              Attractions: ¥20-60 typical entry, ¥100-200 for major sites.
             </p>
             <p>eSIM: $5-15, VPN: $3-12/month.</p>
           </div>
@@ -116,7 +116,7 @@ export default function BudgetGuidePage() {
           <h3 className="text-xl sm:text-2xl font-serif font-bold text-[var(--foreground)] mb-3">Accommodation</h3>
           <div className="prose prose-lg max-w-none text-[var(--foreground)]">
             <p>
-              Hostels Y50-80/night, budget hotels Y100-200, mid-range Y300-600, luxury Y800+. Prices are highest in
+              Hostels ¥50-80/night, budget hotels ¥100-200, mid-range ¥300-600, luxury ¥800+. Prices are highest in
               Beijing and Shanghai; Chengdu, Chongqing, and Xi&apos;an offer better value. Book through Trip.com or Ctrip
               for English support and foreign-card payments.
             </p>
@@ -125,8 +125,8 @@ export default function BudgetGuidePage() {
           <h3 className="mt-8 text-xl sm:text-2xl font-serif font-bold text-[var(--foreground)] mb-3">Food &amp; Drink</h3>
           <div className="prose prose-lg max-w-none text-[var(--foreground)]">
             <p>
-              Street food Y5-15/meal (noodles, baozi, jianbing), local restaurants Y20-50, mid-range dining Y50-100,
-              beer Y5-15, coffee Y15-30. Avoid restaurants directly next to major tourist attractions - walk two
+              Street food ¥5-15/meal (noodles, baozi, jianbing), local restaurants ¥20-50, mid-range dining ¥50-100,
+              beer ¥5-15, coffee ¥15-30. Avoid restaurants directly next to major tourist attractions - walk two
               blocks and pay half the price for better food.
             </p>
           </div>
@@ -134,8 +134,8 @@ export default function BudgetGuidePage() {
           <h3 className="mt-8 text-xl sm:text-2xl font-serif font-bold text-[var(--foreground)] mb-3">Transportation</h3>
           <div className="prose prose-lg max-w-none text-[var(--foreground)]">
             <p>
-              Metro Y3-7/ride, bus Y1-2, Didi (Chinese Uber) Y10-30 for short trips. High-speed trains are the best
-              value for intercity travel - Y50-600 depending on distance and class. Domestic flights Y200-1000; book
+              Metro ¥3-7/ride, bus ¥1-2, Didi (Chinese Uber) ¥10-30 for short trips. High-speed trains are the best
+              value for intercity travel - ¥50-600 depending on distance and class. Domestic flights ¥200-1000; book
               2+ weeks ahead for deals.
             </p>
           </div>
@@ -143,8 +143,8 @@ export default function BudgetGuidePage() {
           <h3 className="mt-8 text-xl sm:text-2xl font-serif font-bold text-[var(--foreground)] mb-3">Attractions &amp; Activities</h3>
           <div className="prose prose-lg max-w-none text-[var(--foreground)]">
             <p>
-              Most temples and parks: Y20-60. Forbidden City: Y60. Great Wall (Mutianyu/Badaling): Y40-65. Terracotta
-              Warriors: Y120. Many museums are free with passport. Book tickets online through Trip.com - often
+              Most temples and parks: ¥20-60. Forbidden City: ¥60. Great Wall (Mutianyu/Badaling): ¥40-65. Terracotta
+              Warriors: ¥120. Many museums are free with passport. Book tickets online through Trip.com - often
               cheaper than at the gate and you skip the queue.
             </p>
           </div>
