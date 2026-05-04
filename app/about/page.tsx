@@ -2,6 +2,7 @@ import type { CSSProperties } from 'react'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import ChineseWatermark from '@/components/ChineseWatermark'
+import NewsletterSignup from '@/components/NewsletterSignup'
 
 export const metadata: Metadata = {
   title: 'About | Trail of China',
@@ -222,6 +223,15 @@ export default function AboutPage() {
                 <a href="mailto:buetikoferdigital@gmail.com" className="text-[var(--primary)] hover:opacity-80">
                   buetikoferdigital@gmail.com
                 </a>
+              </div>
+            </div>
+          </section>
+
+          <section className="py-2 lg:py-4">
+            <div className="rounded-[1.9rem] border border-[var(--line)] bg-[linear-gradient(135deg,rgba(255,250,243,0.96),rgba(26,58,74,0.08))] p-6 shadow-[0_16px_40px_rgba(50,41,30,0.08)] sm:p-8">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--primary)]">Stay in the Loop</p>
+              <div className="mt-4 max-w-3xl">
+                <NewsletterSignup source="about" heading="Stay in the Loop" />
               </div>
             </div>
           </section>
