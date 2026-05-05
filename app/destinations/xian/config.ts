@@ -1,0 +1,328 @@
+import {
+  Calendar,
+  CreditCard,
+  Lightbulb,
+  Map,
+  ShieldCheck,
+  Smartphone,
+  Sun,
+  Sunrise,
+  Thermometer,
+  TrainFront,
+  Wifi,
+} from "lucide-react";
+import type { CityHubConfig } from "../../../components/CityHubTemplate/types";
+import { xianBoundary, xianMaxBounds } from "./data/xian-boundary";
+import { metroLines } from "./data/metro-lines";
+import {
+  attractionCards,
+  foodCards,
+  markers,
+  neighborhoodCards,
+  unifiedLocations,
+} from "./data/attractions";
+import { transportHubs } from "./data/transport-hubs";
+
+export const xianConfig: CityHubConfig = {
+  slug: "xian",
+  nameEn: "Xi'an",
+  nameZh: "西安",
+  tagline: "Ancient capital, living history",
+  watermark: "西安",
+  searchPlaceholder:
+    'Filter Xi\'an... (e.g. "terracotta", "noodles", "wall")',
+  mapCenter: [34.26, 108.94],
+  mapZoom: 10,
+  boundary: xianBoundary,
+  maxBounds: xianMaxBounds,
+  gallerySeeds: [
+    "xian-terracotta-warriors",
+    "xian-city-wall",
+    "xian-muslim-quarter",
+    "xian-big-wild-goose-pagoda",
+    "xian-shaanxi-history-museum",
+    "xian-bell-tower",
+    "xian-drum-tower",
+    "xian-skyline",
+  ],
+  pills: [
+    { icon: Wifi, label: "Internet:", text: "VPN required" },
+    { icon: CreditCard, label: "", text: "Alipay/WeChat" },
+    { icon: TrainFront, label: "", text: "Metro expanding" },
+    { icon: Thermometer, label: "Best:", text: "Mar-May, Sep-Nov" },
+  ],
+  metroLines,
+  transportHubs,
+  unifiedLocations,
+  markers,
+  attractionCards,
+  foodCards,
+  neighborhoodCards,
+  localTips: [
+    {
+      id: "terracotta-timing",
+      title: "Terracotta Timing",
+      text: "Go right at opening and plan it as a half-day outing. Tour groups stack up fast by late morning.",
+      icon: Sunrise,
+      href: "/destinations/xian/local-tips",
+    },
+    {
+      id: "muslim-quarter-food",
+      title: "Muslim Quarter Food",
+      text: "The main lanes are busiest at night, but nearby side streets often have shorter lines and better-value snacks.",
+      icon: Lightbulb,
+      href: "/destinations/xian/local-tips",
+    },
+    {
+      id: "city-wall-cycling",
+      title: "City Wall Cycling",
+      text: "The full wall loop is long enough to feel like a real ride. Bring water and start before sunset for the best light.",
+      icon: Map,
+      href: "/destinations/xian/local-tips",
+    },
+    {
+      id: "museum-booking",
+      title: "Book the Museum",
+      text: "Shaanxi History Museum is free, but timed entry slots can disappear early. Reserve ahead whenever possible.",
+      icon: Calendar,
+      href: "/destinations/xian/local-tips",
+    },
+  ],
+  itinerary: [
+    {
+      dayTitle: "Day 1: Old Xi'an Core",
+      timeOfDay: "morning",
+      items: [
+        {
+          name: "Bell Tower",
+          href: "/destinations/xian/what-to-do/bell-tower",
+          time: "45min",
+          cost: "¥30",
+          imageSeed: "xian-bell-tower",
+          desc: "Start in the historic center and get your bearings before the old city gets busy.",
+        },
+        {
+          name: "Xi'an City Wall",
+          href: "/destinations/xian/what-to-do/city-wall",
+          time: "2h",
+          cost: "¥54",
+          imageSeed: "xian-city-wall",
+          desc: "Walk or rent a bike for a section of the wall while the light is still soft.",
+        },
+      ],
+    },
+    {
+      dayTitle: "Day 1: Old Xi'an Core",
+      timeOfDay: "afternoon",
+      items: [
+        {
+          name: "Roujiamo Lunch",
+          href: "/destinations/xian/where-to-eat/roujiamo",
+          time: "1h",
+          cost: "¥15-30",
+          imageSeed: "xian-roujiamo",
+          desc: "Keep lunch simple and local with Xi'an's signature grab-and-go sandwich.",
+        },
+        {
+          name: "Muslim Quarter",
+          href: "/destinations/xian/what-to-do/muslim-quarter",
+          time: "2-3h",
+          cost: "Free",
+          imageSeed: "xian-muslim-quarter",
+          desc: "Wander the old lanes, snack steadily, and watch the neighborhood shift through the afternoon.",
+        },
+      ],
+    },
+    {
+      dayTitle: "Day 1: Old Xi'an Core",
+      timeOfDay: "evening",
+      items: [
+        {
+          name: "Yangrou Paomo Dinner",
+          href: "/destinations/xian/where-to-eat/yangrou-paomo",
+          time: "1.5h",
+          cost: "¥40+",
+          imageSeed: "xian-yangrou-paomo",
+          desc: "Slow down for a classic Shaanxi dinner and the ritual of tearing the bread yourself.",
+        },
+      ],
+    },
+    {
+      dayTitle: "Day 2: Imperial Xi'an",
+      timeOfDay: "morning",
+      items: [
+        {
+          name: "Terracotta Warriors",
+          href: "/destinations/xian/what-to-do/terracotta-warriors",
+          time: "3-4h",
+          cost: "¥120",
+          imageSeed: "xian-terracotta-warriors",
+          desc: "Leave early and treat this as the day's anchor sight. The pits deserve unhurried time.",
+        },
+      ],
+    },
+    {
+      dayTitle: "Day 2: Imperial Xi'an",
+      timeOfDay: "afternoon",
+      items: [
+        {
+          name: "Return to City + Rest",
+          href: "/destinations/xian/what-to-do/terracotta-warriors",
+          time: "2-3h",
+          cost: "Varies",
+          imageSeed: "xian-terracotta-warriors",
+          desc: "The round-trip is substantial, so leave breathing room instead of overpacking the day.",
+        },
+      ],
+    },
+    {
+      dayTitle: "Day 2: Imperial Xi'an",
+      timeOfDay: "evening",
+      items: [
+        {
+          name: "Big Wild Goose Pagoda",
+          href: "/destinations/xian/what-to-do/big-wild-goose-pagoda",
+          time: "1.5-2h",
+          cost: "¥40",
+          imageSeed: "xian-big-wild-goose-pagoda",
+          desc: "Come for the plaza atmosphere and stay into dusk when the area feels most photogenic.",
+        },
+      ],
+    },
+    {
+      dayTitle: "Day 3: Museums + Modern Side",
+      timeOfDay: "morning",
+      items: [
+        {
+          name: "Shaanxi History Museum",
+          href: "/destinations/xian/what-to-do/shaanxi-history-museum",
+          time: "2-3h",
+          cost: "Free",
+          imageSeed: "xian-shaanxi-history-museum",
+          desc: "Use the museum to tie together everything you've seen in the city and at the Terracotta site.",
+        },
+      ],
+    },
+    {
+      dayTitle: "Day 3: Museums + Modern Side",
+      timeOfDay: "afternoon",
+      items: [
+        {
+          name: "Biangbiang Noodles Lunch",
+          href: "/destinations/xian/where-to-eat/biangbiang-noodles",
+          time: "1h",
+          cost: "¥20-30",
+          imageSeed: "xian-biangbiang-noodles",
+          desc: "Refuel with one of Shaanxi's most satisfying noodle dishes before a slower afternoon.",
+        },
+        {
+          name: "Dayan Pagoda Area",
+          href: "/destinations/xian/where-to-stay/dayan-pagoda",
+          time: "2h",
+          cost: "Free",
+          imageSeed: "xian-dayan-pagoda-stay",
+          desc: "See a more modern, spacious side of Xi'an beyond the dense old-city center.",
+        },
+      ],
+    },
+    {
+      dayTitle: "Day 3: Museums + Modern Side",
+      timeOfDay: "evening",
+      items: [
+        {
+          name: "Bell Tower Area Night Walk",
+          href: "/destinations/xian/where-to-stay/bell-tower",
+          time: "2h",
+          cost: "Free",
+          imageSeed: "xian-bell-tower-stay",
+          desc: "Finish with a final central walk where transport, shopping, and late food options all converge.",
+        },
+      ],
+    },
+  ],
+  knowBeforeYouGo: [
+    {
+      icon: Wifi,
+      title: "Internet",
+      text: "VPNs required. Download before landing.",
+      href: "/china-basics/how-to-get-internet",
+    },
+    {
+      icon: CreditCard,
+      title: "Payment",
+      text: "Alipay and WeChat Pay dominate. Carry a little cash for smaller stalls.",
+      href: "/china-basics/what-apps-to-use/payment",
+    },
+    {
+      icon: TrainFront,
+      title: "Transport",
+      text: "Metro is useful, but some sights still work better with DiDi or a day-trip transfer.",
+      href: "/china-basics/how-to-get-around",
+    },
+    {
+      icon: Smartphone,
+      title: "Apps",
+      text: "Download Alipay, DiDi, Amap, and 12306 before the trip.",
+      href: "/china-basics/what-apps-to-use",
+    },
+    {
+      icon: ShieldCheck,
+      title: "Visa",
+      text: "Check current visa-free or visa requirements before booking.",
+      href: "/china-basics/how-china-differs/visa-guide",
+    },
+    {
+      icon: Thermometer,
+      title: "Weather",
+      text: "Best: Mar-May, Sep-Nov. Summers are hot; winters are dry and cold.",
+      href: "/plan-your-trip/best-time-to-visit",
+    },
+  ],
+  allItems: [
+    { id: "terracotta-warriors-attraction", markerId: "terracotta-warriors", name: "Terracotta Warriors", subtitle: "The iconic clay army of Emperor Qin Shi Huang. A major half-day trip from the city.", tag: "¥120", imageSeed: "xian-terracotta-warriors", href: "/destinations/xian/what-to-do/terracotta-warriors", type: "attraction", filters: ["premium", "historic", "family", "landmark"] },
+    { id: "city-wall-attraction", markerId: "city-wall", name: "Xi'an City Wall", subtitle: "Best-preserved ancient city wall with a full bikeable loop on top.", tag: "¥54", imageSeed: "xian-city-wall", href: "/destinations/xian/what-to-do/city-wall", type: "attraction", filters: ["midrange", "historic", "family", "landmark"] },
+    { id: "muslim-quarter-attraction", markerId: "muslim-quarter", name: "Muslim Quarter", subtitle: "Vibrant street food market and cultural hub in Xi'an's old city.", tag: "Free", imageSeed: "xian-muslim-quarter", href: "/destinations/xian/what-to-do/muslim-quarter", type: "attraction", filters: ["free", "local", "historic", "food"] },
+    { id: "big-wild-goose-pagoda-attraction", markerId: "big-wild-goose-pagoda", name: "Big Wild Goose Pagoda", subtitle: "Iconic Tang Dynasty pagoda with a popular night light show.", tag: "¥40", imageSeed: "xian-big-wild-goose-pagoda", href: "/destinations/xian/what-to-do/big-wild-goose-pagoda", type: "attraction", filters: ["budget", "historic", "family", "landmark"] },
+    { id: "shaanxi-history-museum-attraction", markerId: "shaanxi-history-museum", name: "Shaanxi History Museum", subtitle: "World-class museum packed with dynastic artifacts. Free, but booking ahead is essential.", tag: "Free", imageSeed: "xian-shaanxi-history-museum", href: "/destinations/xian/what-to-do/shaanxi-history-museum", type: "attraction", filters: ["free", "historic", "family", "landmark"] },
+    { id: "bell-tower-attraction", markerId: "bell-tower", name: "Bell Tower", subtitle: "Ming Dynasty tower at Xi'an's central crossroads.", tag: "¥30", imageSeed: "xian-bell-tower", href: "/destinations/xian/what-to-do/bell-tower", type: "attraction", filters: ["budget", "historic", "landmark"] },
+    { id: "roujiamo-food", markerId: "roujiamo", name: "Roujiamo", subtitle: "Chinese hamburger with chopped spiced meat", tag: "Street Food · ¥15", imageSeed: "xian-roujiamo", href: "/destinations/xian/where-to-eat/roujiamo", type: "food", filters: ["budget", "local", "food"] },
+    { id: "biangbiang-noodles-food", markerId: "biangbiang-noodles", name: "Biangbiang Noodles", subtitle: "Wide hand-pulled noodles with chili oil and garlic", tag: "Restaurant · ¥20-30", imageSeed: "xian-biangbiang-noodles", href: "/destinations/xian/where-to-eat/biangbiang-noodles", type: "food", filters: ["budget", "local", "food"] },
+    { id: "yangrou-paomo-food", markerId: "yangrou-paomo", name: "Yangrou Paomo", subtitle: "Mutton soup with hand-torn bread, rich and deeply traditional", tag: "Local Classic · ¥40+", imageSeed: "xian-yangrou-paomo", href: "/destinations/xian/where-to-eat/yangrou-paomo", type: "food", filters: ["midrange", "local", "food"] },
+    { id: "muslim-quarter-stay", markerId: "muslim-quarter", name: "Muslim Quarter Area", subtitle: "Food heaven · Walk to Bell Tower · Best for atmosphere after dark", imageSeed: "xian-muslim-quarter-stay", href: "/destinations/xian/where-to-stay/muslim-quarter", type: "stay", filters: ["midrange", "local", "nightlife", "stay"] },
+    { id: "bell-tower-area-stay", markerId: "bell-tower", name: "Bell Tower Area", subtitle: "Central · Practical · Best-connected base for first-timers", imageSeed: "xian-bell-tower-stay", href: "/destinations/xian/where-to-stay/bell-tower", type: "stay", filters: ["midrange", "modern", "stay"] },
+    { id: "dayan-pagoda-area-stay", markerId: "big-wild-goose-pagoda", name: "Dayan Pagoda Area", subtitle: "Modern · Quiet · Family-friendly with newer hotels", imageSeed: "xian-dayan-pagoda-stay", href: "/destinations/xian/where-to-stay/dayan-pagoda", type: "stay", filters: ["midrange", "family", "modern", "stay"] },
+    { id: "info-internet", name: "Internet", subtitle: "VPNs required. Download before landing.", imageSeed: "", href: "/china-basics/how-to-get-internet", type: "info", icon: Wifi, filters: ["practical"] },
+    { id: "info-payment", name: "Payment", subtitle: "Alipay and WeChat Pay dominate. Carry a little cash for smaller stalls.", imageSeed: "", href: "/china-basics/what-apps-to-use/payment", type: "info", icon: CreditCard, filters: ["practical"] },
+    { id: "info-transport", name: "Transport", subtitle: "Metro is useful, but some sights still work better with DiDi or a day-trip transfer.", imageSeed: "", href: "/china-basics/how-to-get-around", type: "info", icon: TrainFront, filters: ["practical"] },
+    { id: "info-apps", name: "Apps", subtitle: "Download Alipay, DiDi, Amap, and 12306 before the trip.", imageSeed: "", href: "/china-basics/what-apps-to-use", type: "info", icon: Smartphone, filters: ["practical"] },
+    { id: "info-visa", name: "Visa", subtitle: "Check current visa-free or visa requirements before booking.", imageSeed: "", href: "/china-basics/how-china-differs/visa-guide", type: "info", icon: ShieldCheck, filters: ["practical"] },
+    { id: "info-weather", name: "Weather", subtitle: "Best: Mar-May, Sep-Nov. Summers are hot; winters are dry and cold.", imageSeed: "", href: "/plan-your-trip/best-time-to-visit", type: "info", icon: Thermometer, filters: ["practical"] },
+    { id: "tip-terracotta-timing", name: "Terracotta Timing", subtitle: "Go right at opening and plan it as a half-day outing. Tour groups stack up fast by late morning.", imageSeed: "", href: "/destinations/xian/local-tips", type: "tip", icon: Sunrise, filters: ["practical"] },
+    { id: "tip-muslim-quarter-food", name: "Muslim Quarter Food", subtitle: "The side streets often have shorter lines and better-value snacks than the main drag.", imageSeed: "", href: "/destinations/xian/local-tips", type: "tip", icon: Lightbulb, filters: ["local", "food", "practical"] },
+    { id: "tip-city-wall-cycling", name: "City Wall Cycling", subtitle: "Bring water and start before sunset for the best ride and light.", imageSeed: "", href: "/destinations/xian/local-tips", type: "tip", icon: Map, filters: ["historic", "practical"] },
+    { id: "tip-museum-booking", name: "Book the Museum", subtitle: "Shaanxi History Museum is free, but timed entry slots can disappear early.", imageSeed: "", href: "/destinations/xian/local-tips", type: "tip", icon: Calendar, filters: ["practical"] },
+  ],
+  footerTitle: "Ready to Explore Xi'an?",
+  footerSubtitle:
+    "From first-stop landmarks to practical local planning, everything you need for a smooth Xi'an trip.",
+  footerTrustText:
+    "Trusted by 1,000+ China travelers · Free itineraries · Local tips",
+  footerQuickInfo: [
+    {
+      icon: Calendar,
+      title: "3-5 days recommended",
+      description: "Most travelers spend 3-4 days in Xi'an",
+    },
+    {
+      icon: Sun,
+      title: "Best time: Mar-May, Sep-Nov",
+      description: "Comfortable temperatures and clearer skies",
+    },
+    {
+      icon: Lightbulb,
+      title: "First time?",
+      description: "Start with our",
+      link: { href: "/plan-your-trip/preplanned-trips", label: "7-day route" },
+    },
+  ],
+};
