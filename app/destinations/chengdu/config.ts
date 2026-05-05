@@ -1,0 +1,328 @@
+import {
+  Calendar,
+  CreditCard,
+  Lightbulb,
+  Map,
+  ShieldCheck,
+  Smartphone,
+  Sun,
+  Sunrise,
+  Thermometer,
+  TrainFront,
+  Wifi,
+} from "lucide-react";
+import type { CityHubConfig } from "../../../components/CityHubTemplate/types";
+import { chengduBoundary, chengduMaxBounds } from "./data/chengdu-boundary";
+import { metroLines } from "./data/metro-lines";
+import {
+  attractionCards,
+  foodCards,
+  markers,
+  neighborhoodCards,
+  unifiedLocations,
+} from "./data/attractions";
+import { transportHubs } from "./data/transport-hubs";
+
+export const chengduConfig: CityHubConfig = {
+  slug: "chengdu",
+  nameEn: "Chengdu",
+  nameZh: "成都",
+  tagline: "Pandas, spice, and ancient charm",
+  watermark: "成都",
+  searchPlaceholder:
+    'Filter Chengdu... (e.g. "panda", "hotpot", "temple")',
+  mapCenter: [30.57, 104.07],
+  mapZoom: 9,
+  boundary: chengduBoundary,
+  maxBounds: chengduMaxBounds,
+  gallerySeeds: [
+    "chengdu-pandas",
+    "chengdu-jinli",
+    "chengdu-wuhou-shrine",
+    "chengdu-dufu-cottage",
+    "chengdu-wide-narrow-alleys",
+    "chengdu-hotpot",
+    "chengdu-skyline",
+    "chengdu-wenshu-monastery",
+  ],
+  pills: [
+    { icon: Wifi, label: "Internet:", text: "VPN required" },
+    { icon: CreditCard, label: "", text: "Alipay/WeChat" },
+    { icon: TrainFront, label: "", text: "Metro growing" },
+    { icon: Thermometer, label: "Best:", text: "Mar-Jun, Sep-Nov" },
+  ],
+  metroLines,
+  transportHubs,
+  unifiedLocations,
+  markers,
+  attractionCards,
+  foodCards,
+  neighborhoodCards,
+  localTips: [
+    {
+      id: "panda-timing",
+      title: "Panda Timing",
+      text: "Go right at opening. By late morning, both crowds and panda nap rates rise sharply.",
+      icon: Sunrise,
+      href: "/destinations/chengdu/local-tips",
+    },
+    {
+      id: "pace-yourself",
+      title: "Slow the Pace",
+      text: "Chengdu works best with fewer hard-ticket sights and more time for tea, parks, and long meals.",
+      icon: Lightbulb,
+      href: "/destinations/chengdu/local-tips",
+    },
+    {
+      id: "jinli-vs-kuanzhai",
+      title: "Jinli vs Kuanzhai",
+      text: "Use Jinli for lantern-lit atmosphere and snacks, then Kuanzhai for architecture, courtyards, and cafés.",
+      icon: Map,
+      href: "/destinations/chengdu/local-tips",
+    },
+    {
+      id: "opera-booking",
+      title: "Book Opera Early",
+      text: "Sichuan Opera seats sell out on weekends and holidays, especially the best central sections.",
+      icon: Calendar,
+      href: "/destinations/chengdu/local-tips",
+    },
+  ],
+  itinerary: [
+    {
+      dayTitle: "Day 1: Pandas + Old Chengdu",
+      timeOfDay: "morning",
+      items: [
+        {
+          name: "Giant Panda Breeding Research Base",
+          href: "/destinations/chengdu/what-to-do/giant-panda-base",
+          time: "3-4h",
+          cost: "¥55",
+          imageSeed: "chengdu-pandas",
+          desc: "Start early while the pandas are active and the tour buses are still catching up.",
+        },
+      ],
+    },
+    {
+      dayTitle: "Day 1: Pandas + Old Chengdu",
+      timeOfDay: "afternoon",
+      items: [
+        {
+          name: "Wenshu Monastery",
+          href: "/destinations/chengdu/what-to-do/wenshu-monastery",
+          time: "1.5h",
+          cost: "Free",
+          imageSeed: "chengdu-wenshu-monastery",
+          desc: "Reset after the panda crowds with temple courtyards, tea, and a slower pace.",
+        },
+        {
+          name: "Mapo Tofu Lunch",
+          href: "/destinations/chengdu/where-to-eat/mapo-tofu",
+          time: "1h",
+          cost: "¥25-40",
+          imageSeed: "chengdu-mapo-tofu",
+          desc: "Ease into Chengdu flavor with a benchmark dish before jumping into full hotpot territory.",
+        },
+      ],
+    },
+    {
+      dayTitle: "Day 1: Pandas + Old Chengdu",
+      timeOfDay: "evening",
+      items: [
+        {
+          name: "Jinli Ancient Street",
+          href: "/destinations/chengdu/what-to-do/jinli",
+          time: "2h",
+          cost: "Free",
+          imageSeed: "chengdu-jinli",
+          desc: "Come after dark for lantern light, snacks, and a first proper old-Chengdu night walk.",
+        },
+      ],
+    },
+    {
+      dayTitle: "Day 2: Culture + Courtyards",
+      timeOfDay: "morning",
+      items: [
+        {
+          name: "Wuhou Shrine",
+          href: "/destinations/chengdu/what-to-do/wuhou-shrine",
+          time: "1.5-2h",
+          cost: "¥50",
+          imageSeed: "chengdu-wuhou-shrine",
+          desc: "Use the shrine to anchor Chengdu's Three Kingdoms history before the area gets crowded.",
+        },
+        {
+          name: "Du Fu Thatched Cottage",
+          href: "/destinations/chengdu/what-to-do/dufu-cottage",
+          time: "1.5-2h",
+          cost: "¥50",
+          imageSeed: "chengdu-dufu-cottage",
+          desc: "Trade city noise for gardens and literary history in one of Chengdu's calmest museum sites.",
+        },
+      ],
+    },
+    {
+      dayTitle: "Day 2: Culture + Courtyards",
+      timeOfDay: "afternoon",
+      items: [
+        {
+          name: "Wide and Narrow Alleys",
+          href: "/destinations/chengdu/what-to-do/wide-narrow-alleys",
+          time: "2h",
+          cost: "Free",
+          imageSeed: "chengdu-wide-narrow-alleys",
+          desc: "Walk the restored Qing lanes, duck into courtyards, and leave room for tea or coffee stops.",
+        },
+      ],
+    },
+    {
+      dayTitle: "Day 2: Culture + Courtyards",
+      timeOfDay: "evening",
+      items: [
+        {
+          name: "Sichuan Hotpot Dinner",
+          href: "/destinations/chengdu/where-to-eat/hotpot",
+          time: "2h",
+          cost: "¥80-150",
+          imageSeed: "chengdu-hotpot",
+          desc: "This is the right night to go big on málà once you've had a day to calibrate your spice tolerance.",
+        },
+      ],
+    },
+    {
+      dayTitle: "Day 3: Modern Core + Flexible Finish",
+      timeOfDay: "morning",
+      items: [
+        {
+          name: "Chunxi Road / Taikoo Li",
+          href: "/destinations/chengdu/where-to-stay/chunxi-road",
+          time: "2h",
+          cost: "Free",
+          imageSeed: "chengdu-chunxi-road-stay",
+          desc: "See Chengdu's polished modern core, flagship shopping, and the famous climbing panda.",
+        },
+      ],
+    },
+    {
+      dayTitle: "Day 3: Modern Core + Flexible Finish",
+      timeOfDay: "afternoon",
+      items: [
+        {
+          name: "Kung Pao Chicken Lunch",
+          href: "/destinations/chengdu/where-to-eat/kung-pao-chicken",
+          time: "1h",
+          cost: "¥30-50",
+          imageSeed: "chengdu-kung-pao-chicken",
+          desc: "Use a family-style Sichuan lunch to compare a different flavor profile from the heavier chili dishes.",
+        },
+        {
+          name: "Buffer for tea, shopping, or repeat favorites",
+          href: "/destinations/chengdu/local-tips",
+          time: "2-3h",
+          cost: "Varies",
+          imageSeed: "chengdu-skyline",
+          desc: "Chengdu rewards light structure. Keep the last afternoon open instead of forcing another heavy attraction block.",
+        },
+      ],
+    },
+    {
+      dayTitle: "Day 3: Modern Core + Flexible Finish",
+      timeOfDay: "evening",
+      items: [
+        {
+          name: "Final Old-Town Stay or Night Walk",
+          href: "/destinations/chengdu/where-to-stay/jinli",
+          time: "2h",
+          cost: "Free",
+          imageSeed: "chengdu-jinli-stay",
+          desc: "Finish where Chengdu feels most atmospheric: temple district lanes, teahouses, and easy evening wandering.",
+        },
+      ],
+    },
+  ],
+  knowBeforeYouGo: [
+    {
+      icon: Wifi,
+      title: "Internet",
+      text: "VPNs required. Download before landing.",
+      href: "/china-basics/how-to-get-internet",
+    },
+    {
+      icon: CreditCard,
+      title: "Payment",
+      text: "Alipay and WeChat Pay dominate. Small cash still helps at niche stalls.",
+      href: "/china-basics/what-apps-to-use/payment",
+    },
+    {
+      icon: TrainFront,
+      title: "Transport",
+      text: "Metro covers a lot, but panda mornings and airport runs often work better with DiDi.",
+      href: "/china-basics/how-to-get-around",
+    },
+    {
+      icon: Smartphone,
+      title: "Apps",
+      text: "Download Alipay, DiDi, Amap, and 12306 before the trip.",
+      href: "/china-basics/what-apps-to-use",
+    },
+    {
+      icon: ShieldCheck,
+      title: "Visa",
+      text: "Check current visa-free or visa requirements before booking.",
+      href: "/china-basics/how-china-differs/visa-guide",
+    },
+    {
+      icon: Thermometer,
+      title: "Weather",
+      text: "Best: Mar-Jun, Sep-Nov. Summers are humid and sticky; winters are gray but mild.",
+      href: "/plan-your-trip/best-time-to-visit",
+    },
+  ],
+  allItems: [
+    { id: "giant-panda-base-attraction", markerId: "giant-panda-base", name: "Giant Panda Base", subtitle: "See giant pandas up close. Book early-morning tickets and arrive at opening.", tag: "¥55", imageSeed: "chengdu-pandas", href: "/destinations/chengdu/what-to-do/giant-panda-base", type: "attraction", filters: ["premium", "family", "landmark"] },
+    { id: "jinli-attraction", markerId: "jinli-ancient-street", name: "Jinli Ancient Street", subtitle: "Traditional shopping street with snacks, lanterns, and classic evening atmosphere.", tag: "Free", imageSeed: "chengdu-jinli", href: "/destinations/chengdu/what-to-do/jinli", type: "attraction", filters: ["free", "historic", "food", "landmark"] },
+    { id: "wuhou-shrine-attraction", markerId: "wuhou-shrine", name: "Wuhou Shrine", subtitle: "Three Kingdoms-era temple complex and Chengdu's key Shu Han history stop.", tag: "¥50", imageSeed: "chengdu-wuhou-shrine", href: "/destinations/chengdu/what-to-do/wuhou-shrine", type: "attraction", filters: ["budget", "historic", "landmark"] },
+    { id: "dufu-cottage-attraction", markerId: "dufu-cottage", name: "Du Fu Thatched Cottage", subtitle: "Leafy former residence of China's most famous realist poet.", tag: "¥50", imageSeed: "chengdu-dufu-cottage", href: "/destinations/chengdu/what-to-do/dufu-cottage", type: "attraction", filters: ["budget", "historic", "family"] },
+    { id: "wenshu-attraction", markerId: "wenshu-monastery", name: "Wenshu Monastery", subtitle: "Peaceful Buddhist temple with tea, incense courtyards, and a slower side of central Chengdu.", tag: "Free", imageSeed: "chengdu-wenshu-monastery", href: "/destinations/chengdu/what-to-do/wenshu-monastery", type: "attraction", filters: ["free", "historic", "local"] },
+    { id: "wide-narrow-attraction", markerId: "wide-narrow-alleys", name: "Wide and Narrow Alleys", subtitle: "Qing Dynasty lanes with trendy shops, courtyards, and polished old-town vibes.", tag: "Free", imageSeed: "chengdu-wide-narrow-alleys", href: "/destinations/chengdu/what-to-do/wide-narrow-alleys", type: "attraction", filters: ["free", "historic", "local", "landmark"] },
+    { id: "hotpot-food", markerId: "sichuan-hotpot", name: "Sichuan Hotpot", subtitle: "Fiery numbing-spicy broth and Chengdu's essential social dinner.", tag: "Restaurant · ¥80-150", imageSeed: "chengdu-hotpot", href: "/destinations/chengdu/where-to-eat/hotpot", type: "food", filters: ["midrange", "local", "food"] },
+    { id: "mapo-tofu-food", markerId: "mapo-tofu", name: "Mapo Tofu", subtitle: "Silken tofu in chili oil and doubanjiang, one of Sichuan cuisine's benchmark dishes.", tag: "Restaurant · ¥25-40", imageSeed: "chengdu-mapo-tofu", href: "/destinations/chengdu/where-to-eat/mapo-tofu", type: "food", filters: ["budget", "local", "food"] },
+    { id: "kung-pao-food", markerId: "kung-pao-chicken", name: "Kung Pao Chicken", subtitle: "Sweet-spicy peanut chicken done the Chengdu way.", tag: "Restaurant · ¥30-50", imageSeed: "chengdu-kung-pao-chicken", href: "/destinations/chengdu/where-to-eat/kung-pao-chicken", type: "food", filters: ["budget", "local", "food"] },
+    { id: "chunxi-stay", markerId: "chunxi-road", name: "Chunxi Road / Central", subtitle: "Shopping, central, well-connected, and the easiest base for first-timers.", imageSeed: "chengdu-chunxi-road-stay", href: "/destinations/chengdu/where-to-stay/chunxi-road", type: "stay", filters: ["midrange", "modern", "stay"] },
+    { id: "kuanzhai-stay", markerId: "wide-narrow-alleys", name: "Wide and Narrow Alleys Area", subtitle: "Atmospheric old-town stays with courtyard hotels and easy walks to central sights.", imageSeed: "chengdu-wide-narrow-alleys-stay", href: "/destinations/chengdu/where-to-stay/wide-narrow-alleys", type: "stay", filters: ["premium", "historic", "stay"] },
+    { id: "jinli-stay-item", markerId: "jinli-ancient-street", name: "Jinli / Wuhou Area", subtitle: "Near temples, old streets, and a more relaxed culture-first Chengdu rhythm.", imageSeed: "chengdu-jinli-stay", href: "/destinations/chengdu/where-to-stay/jinli", type: "stay", filters: ["midrange", "historic", "stay"] },
+    { id: "info-internet", name: "Internet", subtitle: "VPNs required. Download before landing.", imageSeed: "", href: "/china-basics/how-to-get-internet", type: "info", icon: Wifi, filters: ["practical"] },
+    { id: "info-payment", name: "Payment", subtitle: "Alipay and WeChat Pay dominate. Small cash still helps at niche stalls.", imageSeed: "", href: "/china-basics/what-apps-to-use/payment", type: "info", icon: CreditCard, filters: ["practical"] },
+    { id: "info-transport", name: "Transport", subtitle: "Metro covers a lot, but panda mornings and airport runs often work better with DiDi.", imageSeed: "", href: "/china-basics/how-to-get-around", type: "info", icon: TrainFront, filters: ["practical"] },
+    { id: "info-apps", name: "Apps", subtitle: "Download Alipay, DiDi, Amap, and 12306 before the trip.", imageSeed: "", href: "/china-basics/what-apps-to-use", type: "info", icon: Smartphone, filters: ["practical"] },
+    { id: "info-visa", name: "Visa", subtitle: "Check current visa-free or visa requirements before booking.", imageSeed: "", href: "/china-basics/how-china-differs/visa-guide", type: "info", icon: ShieldCheck, filters: ["practical"] },
+    { id: "info-weather", name: "Weather", subtitle: "Best: Mar-Jun, Sep-Nov. Summers are humid; winters are gray but mild.", imageSeed: "", href: "/plan-your-trip/best-time-to-visit", type: "info", icon: Thermometer, filters: ["practical"] },
+    { id: "tip-panda-timing", name: "Panda Timing", subtitle: "Go right at opening. By late morning, both crowds and panda nap rates rise sharply.", imageSeed: "", href: "/destinations/chengdu/local-tips", type: "tip", icon: Sunrise, filters: ["family", "practical"] },
+    { id: "tip-pace-yourself", name: "Slow the Pace", subtitle: "Chengdu works best with fewer hard-ticket sights and more time for tea, parks, and long meals.", imageSeed: "", href: "/destinations/chengdu/local-tips", type: "tip", icon: Lightbulb, filters: ["local", "practical"] },
+    { id: "tip-jinli-vs-kuanzhai", name: "Jinli vs Kuanzhai", subtitle: "Use Jinli for lantern-lit atmosphere and snacks, then Kuanzhai for architecture and cafés.", imageSeed: "", href: "/destinations/chengdu/local-tips", type: "tip", icon: Map, filters: ["historic", "food", "practical"] },
+    { id: "tip-opera-booking", name: "Book Opera Early", subtitle: "Weekend and holiday performances sell out faster than many first-timers expect.", imageSeed: "", href: "/destinations/chengdu/local-tips", type: "tip", icon: Calendar, filters: ["practical"] },
+  ],
+  footerTitle: "Ready to Explore Chengdu?",
+  footerSubtitle:
+    "From panda mornings to hotpot nights, everything you need for a smooth Chengdu trip.",
+  footerTrustText:
+    "Trusted by 1,000+ China travelers · Free itineraries · Local tips",
+  footerQuickInfo: [
+    {
+      icon: Calendar,
+      title: "3-4 days recommended",
+      description: "Most first-time travelers spend 3 full days in Chengdu",
+    },
+    {
+      icon: Sun,
+      title: "Best time: Mar-Jun, Sep-Nov",
+      description: "Comfortable weather for panda visits, walking, and tea-house afternoons",
+    },
+    {
+      icon: Lightbulb,
+      title: "First time?",
+      description: "Start with our",
+      link: { href: "/plan-your-trip/preplanned-trips", label: "7-day route" },
+    },
+  ],
+};
