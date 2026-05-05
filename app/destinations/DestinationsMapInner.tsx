@@ -258,21 +258,20 @@ function MapPopup({
           <X size={12} className="text-[#64748b]" />
         </button>
         <Link href={city.href} className="block no-underline">
-          <div className="bg-white rounded-xl shadow-lg border border-[#ebe4d8] min-w-[280px] max-w-[320px] overflow-hidden">
+          <div className="bg-white rounded-xl shadow-lg border border-[#ebe4d8] min-w-[240px] max-w-[280px] overflow-hidden sm:min-w-[280px] sm:max-w-[320px]">
             <div className="relative group/images px-3 pt-3 pb-1">
               <div
                 ref={imagesRef}
                 onScroll={updateImageScrollState}
                 data-scroll-left={scrollLeft > 0 ? 'true' : 'false'}
-                className="flex gap-1 overflow-x-auto scroll-smooth"
-                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                className="flex gap-1 overflow-x-auto scroll-smooth scrollbar-hide overscroll-x-contain snap-x snap-mandatory [-webkit-overflow-scrolling:touch]"
               >
                 {city.images.map((img, i) => (
                   <img
                     key={i}
                     src={`https://picsum.photos/seed/${img}/280/180`}
                     alt={`${city.name} ${i + 1}`}
-                    className="h-16 w-auto rounded-md object-cover flex-shrink-0"
+                    className="h-20 w-auto rounded-md object-cover flex-shrink-0 snap-start sm:h-16"
                     loading="lazy"
                   />
                 ))}
@@ -285,7 +284,7 @@ function MapPopup({
                     e.stopPropagation()
                     imagesRef.current?.scrollBy({ left: -120, behavior: 'smooth' })
                   }}
-                  className="absolute left-0 top-1/2 z-10 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#1a3a4a] shadow transition-opacity hover:bg-[#f8f5ef] opacity-100"
+                  className="absolute left-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full p-1 bg-white/95 text-[#1a3a4a] shadow transition-opacity hover:bg-[#f8f5ef] opacity-100 sm:left-0 sm:h-7 sm:w-7 sm:p-0"
                   aria-label={`Scroll ${city.name} images left`}
                 >
                   <ChevronLeft size={14} />
@@ -299,7 +298,7 @@ function MapPopup({
                     e.stopPropagation()
                     imagesRef.current?.scrollBy({ left: 120, behavior: 'smooth' })
                   }}
-                  className="absolute right-0 top-1/2 z-10 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#1a3a4a] shadow transition-opacity hover:bg-[#f8f5ef] opacity-100"
+                  className="absolute right-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full p-1 bg-white/95 text-[#1a3a4a] shadow transition-opacity hover:bg-[#f8f5ef] opacity-100 sm:right-0 sm:h-7 sm:w-7 sm:p-0"
                   aria-label={`Scroll ${city.name} images right`}
                 >
                   <ChevronRight size={14} />
