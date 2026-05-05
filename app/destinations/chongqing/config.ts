@@ -1,0 +1,306 @@
+import {
+  Calendar,
+  CreditCard,
+  Lightbulb,
+  Map,
+  Mountain,
+  ShieldCheck,
+  Smartphone,
+  Sun,
+  Thermometer,
+  TrainFront,
+  Wifi,
+} from "lucide-react";
+import type { CityHubConfig } from "../../../components/CityHubTemplate/types";
+import { chongqingBoundary, chongqingMaxBounds } from "./data/chongqing-boundary";
+import { metroLines } from "./data/metro-lines";
+import {
+  attractionCards,
+  foodCards,
+  markers,
+  neighborhoodCards,
+  unifiedLocations,
+} from "./data/attractions";
+import { transportHubs } from "./data/transport-hubs";
+
+export const chongqingConfig: CityHubConfig = {
+  slug: "chongqing",
+  nameEn: "Chongqing",
+  nameZh: "重庆",
+  tagline: "Mountain city, river life, fearless flavors",
+  watermark: "重庆",
+  searchPlaceholder:
+    'Filter Chongqing... (e.g. "hotpot", "hongyadong", "monorail")',
+  mapCenter: [29.56, 106.55],
+  mapZoom: 10,
+  boundary: chongqingBoundary,
+  maxBounds: chongqingMaxBounds,
+  gallerySeeds: [
+    "chongqing-hongyadong",
+    "chongqing-ciqikou",
+    "chongqing-three-gorges-museum",
+    "chongqing-eling-park",
+    "chongqing-liberation-monument",
+    "chongqing-liziba-monorail",
+    "chongqing-hotpot",
+    "chongqing-skyline",
+  ],
+  pills: [
+    { icon: Wifi, label: "Internet:", text: "VPN required" },
+    { icon: CreditCard, label: "", text: "Alipay/WeChat" },
+    { icon: TrainFront, label: "", text: "Monorail + Metro" },
+    { icon: Thermometer, label: "Best:", text: "Mar-May, Sep-Nov" },
+  ],
+  metroLines,
+  transportHubs,
+  unifiedLocations,
+  markers,
+  attractionCards,
+  foodCards,
+  neighborhoodCards,
+  localTips: [
+    {
+      id: "mountain-city",
+      title: "Mountain City Rules",
+      text: "Chongqing is built on mountains — expect stairs, steep slopes, and zero flat walking. Wear good shoes.",
+      icon: Mountain,
+      href: "/destinations/chongqing/local-tips",
+    },
+    {
+      id: "monorail-life",
+      title: "The Monorail Goes Through Buildings",
+      text: "Liziba Station is the famous one, but the entire Line 2 and 3 are monorail — elevated tracks slicing through apartments.",
+      icon: TrainFront,
+      href: "/destinations/chongqing/local-tips",
+    },
+    {
+      id: "hotpot-rules",
+      title: "Hotpot Is Different Here",
+      text: "Chongqing hotpot uses beef tallow, not the split-yuan-yang pot. Nine-grid (九宫格) means no mild side. Dip in sesame oil + garlic only.",
+      icon: Lightbulb,
+      href: "/destinations/chongqing/local-tips",
+    },
+    {
+      id: "directions-3d",
+      title: "Forget 'North'",
+      text: "Directions in Chongqing are 'go up' or 'go toward the river.' The city is 3D — GPS often puts you on the wrong level.",
+      icon: Map,
+      href: "/destinations/chongqing/local-tips",
+    },
+  ],
+  itinerary: [
+    {
+      dayTitle: "Day 1: Icons & Night Views",
+      timeOfDay: "morning",
+      items: [
+        {
+          name: "Three Gorges Museum",
+          href: "/destinations/chongqing/what-to-do/three-gorges-museum",
+          time: "2-3h",
+          cost: "Free",
+          imageSeed: "chongqing-three-gorges-museum",
+          desc: "Start with the big picture — Chongqing's history, the dam project, and why this city exists.",
+        },
+      ],
+    },
+    {
+      dayTitle: "Day 1: Icons & Night Views",
+      timeOfDay: "afternoon",
+      items: [
+        {
+          name: "Liziba Monorail Station",
+          href: "/destinations/chongqing/what-to-do/liziba-monorail",
+          time: "30min",
+          cost: "Free",
+          imageSeed: "chongqing-liziba-monorail",
+          desc: "Quick stop for the famous monorail-through-building photo, then ride Line 2 across the city.",
+        },
+        {
+          name: "Eling Park Lookout",
+          href: "/destinations/chongqing/what-to-do/eling-park",
+          time: "1h",
+          cost: "Free",
+          imageSeed: "chongqing-eling-park",
+          desc: "Best panoramic view of both rivers and the whole skyline. Go before sunset.",
+        },
+      ],
+    },
+    {
+      dayTitle: "Day 1: Icons & Night Views",
+      timeOfDay: "evening",
+      items: [
+        {
+          name: "Hongyadong",
+          href: "/destinations/chongqing/what-to-do/hongyadong",
+          time: "2h",
+          cost: "Free",
+          imageSeed: "chongqing-hongyadong",
+          desc: "The golden-lit cliffside complex after dark. This is the Chongqing postcard shot.",
+        },
+      ],
+    },
+    {
+      dayTitle: "Day 2: Old Town + Hotpot",
+      timeOfDay: "morning",
+      items: [
+        {
+          name: "Ciqikou Old Town",
+          href: "/destinations/chongqing/what-to-do/ciqikou",
+          time: "2-3h",
+          cost: "Free",
+          imageSeed: "chongqing-ciqikou",
+          desc: "1,000-year-old porcelain town. Go early before the tour buses arrive.",
+        },
+      ],
+    },
+    {
+      dayTitle: "Day 2: Old Town + Hotpot",
+      timeOfDay: "afternoon",
+      items: [
+        {
+          name: "Liberation Monument",
+          href: "/destinations/chongqing/what-to-do/liberation-monument",
+          time: "1-2h",
+          cost: "Free",
+          imageSeed: "chongqing-liberation-monument",
+          desc: "Chongqing's Times Square. Good for people-watching, shopping, and getting your bearings.",
+        },
+      ],
+    },
+    {
+      dayTitle: "Day 2: Old Town + Hotpot",
+      timeOfDay: "evening",
+      items: [
+        {
+          name: "Chongqing Hotpot Dinner",
+          href: "/destinations/chongqing/where-to-eat/hotpot",
+          time: "2h",
+          cost: "¥80-150",
+          imageSeed: "chongqing-hotpot",
+          desc: "Beef tallow, nine-grid, mala. This is not the Chengdu version — brace yourself.",
+        },
+      ],
+    },
+    {
+      dayTitle: "Day 3: Flexible Finish",
+      timeOfDay: "morning",
+      items: [
+        {
+          name: "Xiaomian Breakfast",
+          href: "/destinations/chongqing/where-to-eat/xiaomian",
+          time: "30min",
+          cost: "¥10-20",
+          imageSeed: "chongqing-noodles",
+          desc: "Start like a local — spicy noodles at a street stall before 8 AM.",
+        },
+        {
+          name: "Yangtze River Cable Car",
+          href: "/destinations/chongqing/what-to-do/yangtze-cable-car",
+          time: "1h",
+          cost: "¥20",
+          imageSeed: "chongqing-yangtze-cable-car",
+          desc: "Cross the river by cable car for 360° city views from above.",
+        },
+      ],
+    },
+    {
+      dayTitle: "Day 3: Flexible Finish",
+      timeOfDay: "afternoon",
+      items: [
+        {
+          name: "Buffer for exploring or revisit favorites",
+          href: "/destinations/chongqing/local-tips",
+          time: "2-3h",
+          cost: "Varies",
+          imageSeed: "chongqing-skyline",
+          desc: "Chongqing rewards wandering. Use this time for neighborhoods you missed or a second hotpot.",
+        },
+      ],
+    },
+  ],
+  knowBeforeYouGo: [
+    {
+      icon: Wifi,
+      title: "Internet",
+      text: "VPNs required. Download before landing.",
+      href: "/china-basics/how-to-get-internet",
+    },
+    {
+      icon: CreditCard,
+      title: "Payment",
+      text: "Alipay and WeChat Pay dominate. Cash still works at small shops.",
+      href: "/china-basics/what-apps-to-use/payment",
+    },
+    {
+      icon: TrainFront,
+      title: "Transport",
+      text: "Monorail Lines 2 & 3 are elevated and go through buildings. DiDi for hills and short hops.",
+      href: "/china-basics/how-to-get-around",
+    },
+    {
+      icon: Smartphone,
+      title: "Apps",
+      text: "Download Alipay, DiDi, Amap, and 12306 before the trip.",
+      href: "/china-basics/what-apps-to-use",
+    },
+    {
+      icon: ShieldCheck,
+      title: "Visa",
+      text: "Check current visa-free or visa requirements before booking.",
+      href: "/china-basics/how-china-differs/visa-guide",
+    },
+    {
+      icon: Thermometer,
+      title: "Weather",
+      text: "Best: Mar-May, Sep-Nov. Summer is one of China's 'furnace cities' — 40°C+ days are common.",
+      href: "/plan-your-trip/best-time-to-visit",
+    },
+  ],
+  allItems: [
+    { id: "hongyadong-attraction", markerId: "hongyadong", name: "Hongyadong", subtitle: "Iconic cliffside stilt-house complex. Stunning at night.", tag: "Free", imageSeed: "chongqing-hongyadong", href: "/destinations/chongqing/what-to-do/hongyadong", type: "attraction", filters: ["free", "landmark", "family"] },
+    { id: "ciqikou-attraction", markerId: "ciqikou", name: "Ciqikou Old Town", subtitle: "1,000-year-old porcelain town with snacks and crafts.", tag: "Free", imageSeed: "chongqing-ciqikou", href: "/destinations/chongqing/what-to-do/ciqikou", type: "attraction", filters: ["free", "historic", "food", "landmark"] },
+    { id: "three-gorges-museum-attraction", markerId: "three-gorges-museum", name: "Three Gorges Museum", subtitle: "China's best museum outside Beijing. Free.", tag: "Free", imageSeed: "chongqing-three-gorges-museum", href: "/destinations/chongqing/what-to-do/three-gorges-museum", type: "attraction", filters: ["free", "historic", "family"] },
+    { id: "eling-park-attraction", markerId: "eling-park", name: "Eling Park & Lookout", subtitle: "Best panoramic city views over the river confluence.", tag: "Free", imageSeed: "chongqing-eling-park", href: "/destinations/chongqing/what-to-do/eling-park", type: "attraction", filters: ["free", "landmark"] },
+    { id: "liberation-monument-attraction", markerId: "liberation-monument", name: "Liberation Monument", subtitle: "Shopping district center and Chongqing's Times Square.", tag: "Free", imageSeed: "chongqing-liberation-monument", href: "/destinations/chongqing/what-to-do/liberation-monument", type: "attraction", filters: ["free", "landmark"] },
+    { id: "liziba-attraction", markerId: "liziba-monorail", name: "Liziba Monorail Station", subtitle: "Famous monorail-through-building photo spot.", tag: "Free", imageSeed: "chongqing-liziba-monorail", href: "/destinations/chongqing/what-to-do/liziba-monorail", type: "attraction", filters: ["free", "landmark", "family"] },
+    { id: "hotpot-food", markerId: "chongqing-hotpot", name: "Chongqing Hotpot", subtitle: "Numbing-spicy beef tallow broth. The real deal.", tag: "Restaurant · ¥80-150", imageSeed: "chongqing-hotpot", href: "/destinations/chongqing/where-to-eat/hotpot", type: "food", filters: ["midrange", "local", "food"] },
+    { id: "xiaomian-food", markerId: "chongqing-noodles", name: "Chongqing Noodles (Xiaomian)", subtitle: "Street-level spicy noodles. ¥10-20 breakfast staple.", tag: "Street · ¥10-20", imageSeed: "chongqing-noodles", href: "/destinations/chongqing/where-to-eat/xiaomian", type: "food", filters: ["budget", "local", "food"] },
+    { id: "jianghu-food", markerId: "jianghu-cuisine", name: "Jianghu Cuisine", subtitle: "Bold, rustic Sichuan dishes. Local favorite.", tag: "Restaurant · ¥50-80", imageSeed: "chongqing-jianghu-cuisine", href: "/destinations/chongqing/where-to-eat/jianghu-cuisine", type: "food", filters: ["midrange", "local", "food"] },
+    { id: "jiefangbei-stay", markerId: "jiefangbei-stay", name: "Jiefangbei / Central", subtitle: "Most central, walkable, well-connected.", imageSeed: "chongqing-jiefangbei-stay", href: "/destinations/chongqing/where-to-stay/jiefangbei", type: "stay", filters: ["midrange", "modern", "stay"] },
+    { id: "hongyadong-stay", markerId: "hongyadong-stay", name: "Hongyadong Area", subtitle: "Riverside, atmospheric nights.", imageSeed: "chongqing-hongyadong-stay", href: "/destinations/chongqing/where-to-stay/hongyadong-area", type: "stay", filters: ["premium", "landmark", "stay"] },
+    { id: "nanbin-road-stay", markerId: "nanbin-road-stay", name: "Nanbin Road Area", subtitle: "South bank views, quieter.", imageSeed: "chongqing-nanbin-road-stay", href: "/destinations/chongqing/where-to-stay/nanbin-road", type: "stay", filters: ["midrange", "local", "stay"] },
+    { id: "info-internet", name: "Internet", subtitle: "VPNs required. Download before landing.", imageSeed: "", href: "/china-basics/how-to-get-internet", type: "info", icon: Wifi, filters: ["practical"] },
+    { id: "info-payment", name: "Payment", subtitle: "Alipay and WeChat Pay dominate. Cash still works at small shops.", imageSeed: "", href: "/china-basics/what-apps-to-use/payment", type: "info", icon: CreditCard, filters: ["practical"] },
+    { id: "info-transport", name: "Transport", subtitle: "Monorail Lines 2 & 3 are elevated and go through buildings.", imageSeed: "", href: "/china-basics/how-to-get-around", type: "info", icon: TrainFront, filters: ["practical"] },
+    { id: "info-apps", name: "Apps", subtitle: "Download Alipay, DiDi, Amap, and 12306 before the trip.", imageSeed: "", href: "/china-basics/what-apps-to-use", type: "info", icon: Smartphone, filters: ["practical"] },
+    { id: "info-visa", name: "Visa", subtitle: "Check current visa-free or visa requirements before booking.", imageSeed: "", href: "/china-basics/how-china-differs/visa-guide", type: "info", icon: ShieldCheck, filters: ["practical"] },
+    { id: "info-weather", name: "Weather", subtitle: "Best: Mar-May, Sep-Nov. Summer is 40°C+ furnace city.", imageSeed: "", href: "/plan-your-trip/best-time-to-visit", type: "info", icon: Thermometer, filters: ["practical"] },
+    { id: "tip-mountain-city", name: "Mountain City Rules", subtitle: "Stairs, steep slopes, zero flat walking. Wear good shoes.", imageSeed: "", href: "/destinations/chongqing/local-tips", type: "tip", icon: Mountain, filters: ["practical"] },
+    { id: "tip-monorail", name: "Monorail Goes Through Buildings", subtitle: "Liziba Station is famous, but Lines 2 & 3 are all elevated monorail.", imageSeed: "", href: "/destinations/chongqing/local-tips", type: "tip", icon: TrainFront, filters: ["practical"] },
+    { id: "tip-hotpot-rules", name: "Hotpot Is Different Here", subtitle: "Beef tallow, nine-grid, no mild side. Dip in sesame oil + garlic.", imageSeed: "", href: "/destinations/chongqing/local-tips", type: "tip", icon: Lightbulb, filters: ["food", "practical"] },
+    { id: "tip-directions-3d", name: "Forget 'North'", subtitle: "Directions are 'go up' or 'toward the river.' GPS puts you on wrong levels.", imageSeed: "", href: "/destinations/chongqing/local-tips", type: "tip", icon: Map, filters: ["practical"] },
+  ],
+  footerTitle: "Ready to Explore Chongqing?",
+  footerSubtitle:
+    "From mountain mornings to hotpot nights, everything you need for a smooth Chongqing trip.",
+  footerTrustText:
+    "Trusted by 1,000+ China travelers · Free itineraries · Local tips",
+  footerQuickInfo: [
+    {
+      icon: Calendar,
+      title: "3-4 days recommended",
+      description: "Most first-time travelers spend 3 full days in Chongqing",
+    },
+    {
+      icon: Sun,
+      title: "Best time: Mar-May, Sep-Nov",
+      description: "Avoid summer — Chongqing is one of China's furnace cities",
+    },
+    {
+      icon: Lightbulb,
+      title: "First time?",
+      description: "Start with our",
+      link: { href: "/plan-your-trip/preplanned-trips", label: "7-day route" },
+    },
+  ],
+};
