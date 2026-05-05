@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import BeijingSuperClient from './BeijingSuperClient';
+import BeijingHubClient from '../beijing/BeijingHubClient';
 
 export const metadata: Metadata = {
   title: 'Beijing Travel Guide | Trail of China',
@@ -23,7 +23,7 @@ export default function Beijing8Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(travelGuideJsonLd) }}
       />
-      <BeijingSuperClient />
+      <BeijingHubClient />
     </>
   );
 }

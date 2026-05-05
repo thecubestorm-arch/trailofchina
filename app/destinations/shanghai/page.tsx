@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import ShanghaiSuperClient from '../shanghai-8/ShanghaiSuperClient';
+import ShanghaiHubClient from './ShanghaiHubClient';
 
 export const metadata: Metadata = {
   title: 'Shanghai Travel Guide | Trail of China',
@@ -8,5 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function ShanghaiPage() {
-  return <ShanghaiSuperClient />;
+  return <ShanghaiHubClient />;
 }

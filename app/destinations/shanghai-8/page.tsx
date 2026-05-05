@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import ShanghaiSuperClient from './ShanghaiSuperClient';
+import ShanghaiHubClient from '../shanghai/ShanghaiHubClient';
 
 export const metadata: Metadata = {
   title: 'Shanghai Travel Guide | Trail of China',
@@ -21,7 +21,7 @@ export default function Shanghai8Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(travelGuideJsonLd) }}
       />
-      <ShanghaiSuperClient />
+      <ShanghaiHubClient />
     </>
   );
 }
