@@ -64,7 +64,7 @@ const tools = [
   },
 ] as const
 
-export default function PlanYourTripV5Client() {
+export default function PlanYourTripClient() {
   return (
     <main
       className="min-h-screen"
