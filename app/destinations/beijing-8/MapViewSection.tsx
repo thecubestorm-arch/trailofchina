@@ -474,7 +474,7 @@ export default function MapViewSection({
           zoom={10}
           className="beijing-hub-map z-0"
           bounds={beijingMaxBounds}
-          minZoom={10}
+          minZoom={8}
           maxZoom={18}
           maxBounds={beijingMaxBounds}
           maxBoundsViscosity={0.9}
@@ -505,6 +505,7 @@ export default function MapViewSection({
               />
             ))}
           {layerVisibility.metroStations &&
+            zoom >= 12 &&
             metroLines.flatMap((line) =>
               line.stations.map((station) => (
                 <CircleMarker
@@ -512,10 +513,11 @@ export default function MapViewSection({
                   center={[station.lat, station.lng]}
                   radius={3}
                   pathOptions={{
-                    color: line.color,
-                    fillColor: "white",
-                    fillOpacity: 1,
-                    weight: 1.5,
+                    fillColor: line.color,
+                    fillOpacity: 0.9,
+                    weight: 1,
+                    color: "#fff",
+                    opacity: 0.8,
                   }}
                 />
               ))

@@ -10,15 +10,18 @@ import {
   Popup,
   Polygon,
   useMapEvents,
+  Polyline,
+  CircleMarker,
 } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-import { Search, List, Map } from "lucide-react";
+import { Search, List, Map, Layers } from "lucide-react";
 import type { MarkerLocation } from "../shanghai/types";
 import {
   shanghaiBoundary,
   shanghaiMaxBounds,
 } from "../data/shanghai-boundary";
+import { metroLines } from "../shanghai/data/metro-lines";
 
 type POICategory = "attraction" | "eat" | "stay";
 type CategoryView = "overview" | "things-to-do" | "where-to-eat" | "where-to-stay";
@@ -180,6 +183,10 @@ export default function MapViewSection({
   const [activeView, setActiveView] = useState<CategoryView>("overview");
   const [zoom, setZoom] = useState(13);
   const [mobileView, setMobileView] = useState<"list" | "map">("map");
+  const [layerVisibility, setLayerVisibility] = useState({
+    metroLines: true,
+  });
+  const [panelOpen, setPanelOpen] = useState(false);
   const listRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -441,9 +448,11 @@ export default function MapViewSection({
         style={{ minHeight: 400 }}
       >
         <MapContainer
+          center={[31.2304, 121.4737]}
+          zoom={10}
           className="shanghai-hub-map z-0"
           bounds={shanghaiMaxBounds}
-          minZoom={11}
+          minZoom={8}
           maxZoom={18}
           maxBounds={shanghaiMaxBounds}
           maxBoundsViscosity={0.9}
@@ -465,6 +474,32 @@ export default function MapViewSection({
               opacity: 0.6,
             }}
           />
+          {layerVisibility.metroLines &&
+            metroLines.map((line) => (
+              <Polyline
+                key={line.id}
+                positions={line.path}
+                pathOptions={{ color: line.color, weight: 2, opacity: 0.7 }}
+              />
+            ))}
+          {layerVisibility.metroLines &&
+            zoom >= 12 &&
+            metroLines.flatMap((line) =>
+              line.stations.map((station) => (
+                <CircleMarker
+                  key={`${line.id}-${station.name}`}
+                  center={[station.lat, station.lng]}
+                  radius={3}
+                  pathOptions={{
+                    fillColor: line.color,
+                    fillOpacity: 0.9,
+                    weight: 1,
+                    color: "#fff",
+                    opacity: 0.8,
+                  }}
+                />
+              ))
+            )}
           {filteredMarkers.map((marker) => (
             <Marker
                 key={`marker-${marker.id}`}
@@ -579,6 +614,36 @@ export default function MapViewSection({
             </Marker>
           ))}
         </MapContainer>
+
+        <div className="absolute right-3 top-3 z-[500]">
+          <button
+            type="button"
+            onClick={() => setPanelOpen((open) => !open)}
+            className="flex h-9 w-9 items-center justify-center rounded-lg border border-[#ebe4d8] bg-white shadow-md transition-colors hover:bg-[#f5f1ea]"
+            aria-label="Map layers"
+          >
+            <Layers size={18} className="text-[#1a3a4a]" />
+          </button>
+          {panelOpen && (
+            <div className="absolute right-0 top-11 min-w-[190px] rounded-lg border border-[#ebe4d8] bg-white p-3 shadow-lg">
+              <p className="mb-2 text-xs font-bold text-[#1a3a4a]">Map Layers</p>
+              <label className="flex cursor-pointer items-center gap-2 py-1.5 text-sm text-[#1a3a4a]">
+                <input
+                  type="checkbox"
+                  checked={layerVisibility.metroLines}
+                  onChange={() =>
+                    setLayerVisibility((layers) => ({
+                      ...layers,
+                      metroLines: !layers.metroLines,
+                    }))
+                  }
+                  className="accent-[#af5d32]"
+                />
+                🚇 Metro Lines
+              </label>
+            </div>
+          )}
+        </div>
 
         {/* Mobile floating toggle */}
         <div className="md:hidden absolute bottom-4 left-1/2 -translate-x-1/2 z-[500]">
