@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 // Check if we're on a page that hides the main navigation (hub pages with custom nav)
 function useHideMainNav() {
@@ -89,7 +90,12 @@ const navLinks = [
 
 export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const headerRef = useRef<HTMLElement | null>(null)
+  const pathname = usePathname()
   const hideMainNav = useHideMainNav()
+  const shouldHideForPath =
+    pathname === '/china-basics' || /^\/destinations\/[^/]+$/.test(pathname)
+  const shouldHideNav = hideMainNav || shouldHideForPath
 
   // Lock body scroll when menu is open
   useEffect(() => {
@@ -103,24 +109,65 @@ export default function Navigation() {
     }
   }, [menuOpen])
 
+  useEffect(() => {
+    if (!menuOpen) return
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setMenuOpen(false)
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [menuOpen])
+
+  useEffect(() => {
+    if (!menuOpen) return
+    if (shouldHideNav) {
+      setMenuOpen(false)
+    }
+  }, [menuOpen, shouldHideNav])
+
+  useEffect(() => {
+    const updateNavHeight = () => {
+      const height = headerRef.current?.offsetHeight
+      if (!height) return
+      document.documentElement.style.setProperty('--site-nav-height', `${height}px`)
+    }
+
+    if (shouldHideNav) {
+      document.documentElement.style.removeProperty('--site-nav-height')
+      return
+    }
+
+    updateNavHeight()
+    window.addEventListener('resize', updateNavHeight)
+    return () => window.removeEventListener('resize', updateNavHeight)
+  }, [shouldHideNav])
+
   const openMenu = useCallback(() => setMenuOpen(true), [])
   const closeMenu = () => setMenuOpen(false)
   const toggleMenu = () => setMenuOpen((prev) => !prev)
 
   // Enable swipe-from-right to open menu (only on mobile and when nav is visible)
-  useSwipeToOpenMenu(openMenu, !hideMainNav)
+  useSwipeToOpenMenu(openMenu, !shouldHideNav)
+
+  if (shouldHideNav) {
+    return null
+  }
 
   return (
-    <header 
-      className={`sticky top-0 z-[100] border-b border-[var(--line)] bg-[#f5f1ea]/80 backdrop-blur-xl transition-transform duration-300 ${hideMainNav ? '-translate-y-full opacity-0 pointer-events-none md:translate-y-0 md:opacity-100 md:pointer-events-auto' : 'translate-y-0 opacity-100 pointer-events-auto'}`}
-      aria-hidden={hideMainNav ? 'true' : undefined}
+    <header
+      ref={headerRef}
+      className="sticky top-0 z-[100] border-b border-[var(--line)] bg-[#f5f1ea]/92 backdrop-blur-xl"
     >
-      <div className="container-px mx-auto flex w-full max-w-7xl items-center justify-between py-3 md:py-4">
-        <Link href="/" className="flex flex-col min-h-[44px] justify-center md:min-h-0">
-          <span className="font-serif text-2xl leading-none tracking-[0.08em] text-[var(--foreground)]">
+      <div className="container-px mx-auto flex w-full max-w-7xl items-center justify-between py-2.5 md:py-4">
+        <Link href="/" className="flex min-h-[44px] min-w-0 flex-col justify-center py-1 md:min-h-0 md:py-0">
+          <span className="truncate font-serif text-xl leading-none tracking-[0.06em] text-[var(--foreground)] md:text-2xl">
             Trail of China
           </span>
-          <span className="text-xs uppercase tracking-[0.32em] text-[var(--muted)]">
+          <span className="hidden text-[10px] uppercase tracking-[0.28em] text-[var(--muted)] sm:block md:text-xs md:tracking-[0.32em]">
             First-trip travel planning
           </span>
         </Link>
@@ -192,7 +239,7 @@ export default function Navigation() {
       {/* Mobile Overlay */}
       {menuOpen && (
         <div
-          className="fixed inset-0 z-[100] bg-black/30 backdrop-blur-sm md:hidden"
+          className="fixed inset-0 z-[109] bg-[#09131a]/38 backdrop-blur-sm md:hidden"
           onClick={closeMenu}
           aria-hidden="true"
         />
@@ -200,23 +247,23 @@ export default function Navigation() {
 
       {/* Mobile Slide-out Menu */}
       <div
-        className={`fixed inset-y-0 right-0 z-[100] w-[min(20rem,85vw)] transform bg-[#f5f1ea] shadow-2xl transition-transform duration-300 ease-out md:hidden ${
+        className={`fixed inset-0 z-[110] bg-[#f5f1ea] transition-transform duration-300 ease-out md:hidden ${
           menuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
         aria-hidden={!menuOpen}
       >
-        <div className="flex h-full flex-col px-6 pt-20">
-          <nav aria-label="Mobile primary" className="flex flex-col">
+        <div className="flex h-full flex-col px-6 pb-[calc(env(safe-area-inset-bottom)+1.5rem)] pt-[calc(var(--site-nav-height,4rem)+1rem)]">
+          <nav aria-label="Mobile primary" className="flex flex-col gap-1">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={closeMenu}
-                className="flex min-h-[44px] items-center rounded-lg px-4 py-3 text-lg font-medium text-[var(--muted)] transition-colors hover:bg-[rgba(175,93,50,0.08)] hover:text-[#af5d32]"
+                className="flex min-h-[52px] items-center justify-between rounded-2xl border border-[#e7dece] bg-white px-4 py-3 text-lg font-medium text-[var(--foreground)] transition-colors hover:border-[#af5d32] hover:bg-[rgba(175,93,50,0.08)] hover:text-[#af5d32]"
               >
-                {link.label}
+                <span>{link.label}</span>
                 {'badge' in link && link.badge && (
-                  <span className="ml-2 inline-block rounded-full bg-[#af5d32] px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-white">
+                  <span className="ml-3 inline-block rounded-full bg-[#af5d32] px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-white">
                     {link.badge}
                   </span>
                 )}
@@ -224,11 +271,11 @@ export default function Navigation() {
             ))}
           </nav>
 
-          <div className="mt-auto pb-10 pt-6">
+          <div className="mt-auto pt-6">
             <Link
               href="#cheat-sheet"
               onClick={closeMenu}
-              className="inline-flex items-center gap-2 rounded-full bg-[#af5d32] px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#9a4f28]"
+              className="inline-flex min-h-[52px] w-full items-center justify-center gap-2 rounded-full bg-[#af5d32] px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#9a4f28]"
             >
               Get the Free Cheat Sheet
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">

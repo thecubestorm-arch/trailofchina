@@ -4,7 +4,7 @@ import FooterEmailCTA from './FooterEmailCTA'
 export default function Footer() {
   return (
     <footer className="mt-24 bg-[#f5f1ea]">
-      <div className="container-px mx-auto max-w-7xl py-10">
+      <div className="container-px mx-auto max-w-7xl py-10 pb-[calc(env(safe-area-inset-bottom)+2.5rem)]">
         {/* Top row: brand + nav */}
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <p className="font-serif text-2xl text-[var(--foreground)]">Trail of China</p>
@@ -12,15 +12,15 @@ export default function Footer() {
             <Link href="/china-basics" className="inline-flex min-h-[44px] items-center rounded-md px-2 hover:bg-[var(--surface-strong)] hover:text-[#af5d32] transition-colors">
               China Basics
             </Link>
-            <span aria-hidden="true">·</span>
+            <span aria-hidden="true" className="hidden sm:inline">·</span>
             <Link href="/destinations" className="inline-flex min-h-[44px] items-center rounded-md px-2 hover:bg-[var(--surface-strong)] hover:text-[#af5d32] transition-colors">
               Destinations
             </Link>
-            <span aria-hidden="true">·</span>
+            <span aria-hidden="true" className="hidden sm:inline">·</span>
             <Link href="/plan-your-trip" className="inline-flex min-h-[44px] items-center rounded-md px-2 hover:bg-[var(--surface-strong)] hover:text-[#af5d32] transition-colors">
               Plan Your Trip
             </Link>
-            <span aria-hidden="true">·</span>
+            <span aria-hidden="true" className="hidden sm:inline">·</span>
             <Link href="/blog" className="inline-flex min-h-[44px] items-center rounded-md px-2 hover:bg-[var(--surface-strong)] hover:text-[#af5d32] transition-colors">
               Blog
             </Link>
@@ -51,15 +51,15 @@ export default function Footer() {
             <Link href="/about" className="inline-flex min-h-[44px] items-center rounded-md px-2 hover:bg-[var(--surface-strong)] hover:text-[#af5d32] transition-colors">
               About
             </Link>
-            <span aria-hidden="true">·</span>
+            <span aria-hidden="true" className="hidden sm:inline">·</span>
             <Link href="/imprint" className="inline-flex min-h-[44px] items-center rounded-md px-2 hover:bg-[var(--surface-strong)] hover:text-[#af5d32] transition-colors">
               Impressum
             </Link>
-            <span aria-hidden="true">·</span>
+            <span aria-hidden="true" className="hidden sm:inline">·</span>
             <Link href="/privacy" className="inline-flex min-h-[44px] items-center rounded-md px-2 hover:bg-[var(--surface-strong)] hover:text-[#af5d32] transition-colors">
               Privacy
             </Link>
-            <span aria-hidden="true">·</span>
+            <span aria-hidden="true" className="hidden sm:inline">·</span>
             <Link href="/cookie-policy" className="inline-flex min-h-[44px] items-center rounded-md px-2 hover:bg-[var(--surface-strong)] hover:text-[#af5d32] transition-colors">
               Cookie Policy
             </Link>

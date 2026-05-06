@@ -340,7 +340,7 @@ export default function CityMapView({
 
   return (
     <div className="space-y-4">
-      <div className="relative z-40 flex flex-wrap gap-2">
+      <div className="relative z-40 -mx-4 flex gap-2 overflow-x-auto px-4 pb-1 scrollbar-hide md:mx-0 md:flex-wrap md:px-0">
         {categoryFilterButtons.map((filter) => {
           const isActive = activeView === filter.id;
           return (
@@ -348,7 +348,7 @@ export default function CityMapView({
               key={filter.id}
               type="button"
               onClick={() => setActiveView(filter.id)}
-              className={`rounded-full border px-4 py-2 text-sm font-semibold transition-colors ${
+              className={`min-h-[44px] shrink-0 rounded-full border px-4 py-2 text-sm font-semibold transition-colors ${
                 isActive
                   ? "border-[#af5d32] bg-[#af5d32] text-white"
                   : "border-[#d9c8b5] bg-white text-[#1a3a4a] hover:border-[#af5d32]"
@@ -360,15 +360,12 @@ export default function CityMapView({
         })}
       </div>
 
-      <div
-        className="relative z-0 flex flex-col overflow-hidden border border-[#ebe4d8] bg-white md:-mx-0 md:flex-row md:rounded-2xl -mx-4"
-        style={{ minHeight: 600 }}
-      >
+      <div className="relative z-0 -mx-4 flex min-h-[70svh] flex-col overflow-hidden border border-[#ebe4d8] bg-white md:mx-0 md:min-h-[600px] md:flex-row md:rounded-2xl">
         <div
           className={`${
             mobileView === "list" ? "flex" : "hidden md:flex"
-          } md:w-[35%] w-full flex-col overflow-hidden border-r border-[#ebe4d8]`}
-          style={{ maxHeight: 700 }}
+          } w-full flex-col overflow-hidden border-r border-[#ebe4d8] md:w-[35%]`}
+          style={{ maxHeight: "min(70svh, 700px)" }}
         >
           <div className="border-b border-[#ebe4d8] bg-[#faf8f4] p-3">
             <p className="text-xs font-medium text-[#64748b]">
@@ -455,7 +452,7 @@ export default function CityMapView({
           className={`${
             mobileView === "map" ? "flex" : "hidden md:flex"
           } relative z-0 w-full overflow-hidden md:w-[65%]`}
-          style={{ minHeight: 400 }}
+          style={{ minHeight: "max(28rem, 70svh)" }}
         >
           <MapContainer
             center={config.mapCenter}
@@ -467,7 +464,7 @@ export default function CityMapView({
             maxBounds={expandedMaxBounds}
             maxBoundsViscosity={0.9}
             scrollWheelZoom
-            style={{ height: "100%", width: "100%", minHeight: 500 }}
+            style={{ height: "100%", width: "100%", minHeight: "max(28rem, 70svh)" }}
           >
             <ZoomTracker onZoom={setZoom} />
             <TileLayer
@@ -717,10 +714,10 @@ export default function CityMapView({
             )}
           </div>
 
-          <div className="absolute bottom-4 left-1/2 z-[500] -translate-x-1/2 md:hidden">
+          <div className="absolute bottom-[calc(env(safe-area-inset-bottom)+1rem)] left-1/2 z-[500] -translate-x-1/2 md:hidden">
             <button
               onClick={() => setMobileView((v) => (v === "map" ? "list" : "map"))}
-              className="inline-flex items-center gap-2 rounded-full border border-[#ebe4d8] bg-white px-4 py-2.5 text-sm font-semibold text-[#1a3a4a] shadow-lg"
+              className="inline-flex min-h-[48px] items-center gap-2 rounded-full border border-[#ebe4d8] bg-white px-4 py-2.5 text-sm font-semibold text-[#1a3a4a] shadow-lg"
             >
               {mobileView === "map" ? (
                 <>

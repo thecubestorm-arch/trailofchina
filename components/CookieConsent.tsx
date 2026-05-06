@@ -24,7 +24,7 @@ export default function CookieConsent() {
 
   return (
     <div className="fixed inset-x-0 bottom-0 z-[90] border-t border-[var(--line)] bg-[#f5f1ea]/95 backdrop-blur">
-      <div className="mx-auto flex w-full max-w-7xl flex-col gap-3 px-4 py-4 sm:flex-row sm:items-center sm:justify-between">
+      <div className="mx-auto flex w-full max-w-7xl flex-col gap-3 px-4 py-4 pb-[calc(env(safe-area-inset-bottom)+1rem)] sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm leading-6 text-[var(--muted)]">
           This site uses cookies to support essential functionality, analytics, and affiliate attribution.
         </p>
@@ -32,13 +32,13 @@ export default function CookieConsent() {
           <button
             type="button"
             onClick={handleAccept}
-            className="min-h-[44px] min-w-[44px] rounded-full bg-[#af5d32] px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#8f431c]"
+            className="min-h-[48px] min-w-[44px] rounded-full bg-[#af5d32] px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#8f431c]"
           >
             Accept
           </button>
           <Link
             href="/cookie-policy"
-            className="min-h-[44px] min-w-[44px] flex items-center justify-center rounded-full border border-[var(--line)] bg-white px-4 py-2 text-sm font-semibold text-[var(--foreground)]"
+            className="flex min-h-[48px] min-w-[44px] items-center justify-center rounded-full border border-[var(--line)] bg-white px-4 py-2 text-sm font-semibold text-[var(--foreground)]"
           >
             Learn More
           </Link>

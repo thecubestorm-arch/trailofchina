@@ -446,6 +446,18 @@ export default function DestinationsMapInner() {
     setMounted(true)
   }, [])
 
+  useEffect(() => {
+    if (!mobileMapOpen) {
+      document.body.style.overflow = ''
+      return
+    }
+
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [mobileMapOpen])
+
   const handleCityMouseEnter = useCallback((key: string) => {
     if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current)
     setHoveredCity(key)
@@ -756,11 +768,11 @@ export default function DestinationsMapInner() {
       )}
 
       {mobileMapOpen && (
-        <div className="fixed inset-0 z-[80] md:hidden bg-white">
+        <div className="fixed inset-x-0 bottom-0 top-[var(--site-nav-height,4.5rem)] z-[95] bg-white md:hidden">
           <div className="relative z-0 h-full w-full">
           <MapContainer
             center={[34, 108]}
-            zoom={4}
+            zoom={4.4}
             minZoom={4}
             maxZoom={8}
             maxBounds={[[15, 70], [55, 140]]}
@@ -784,18 +796,18 @@ export default function DestinationsMapInner() {
               onMapClick={handleMapClick}
             />
           </MapContainer>
-          <div style={{ position: 'absolute', bottom: 60, right: 20, zIndex: 1000, width: 36, height: 36, borderRadius: '50%', background: 'white', border: '1px solid #ebe4d8', boxShadow: '0 1px 4px rgba(0,0,0,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold', fontSize: 14, color: '#1a3a4a', pointerEvents: 'none' }}>N</div>
+          <div style={{ position: 'absolute', bottom: 88, right: 20, zIndex: 1000, width: 36, height: 36, borderRadius: '50%', background: 'white', border: '1px solid #ebe4d8', boxShadow: '0 1px 4px rgba(0,0,0,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold', fontSize: 14, color: '#1a3a4a', pointerEvents: 'none' }}>N</div>
           </div>
         </div>
       )}
 
-      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[90] md:hidden">
+      <div className="fixed bottom-[calc(env(safe-area-inset-bottom)+1rem)] left-1/2 -translate-x-1/2 z-[96] md:hidden">
         <button
           onClick={() => {
             setActivePopupCity(null)
             setMobileMapOpen((prev) => !prev)
           }}
-          className="bg-[#1a3a4a] text-white px-5 py-3 rounded-full shadow-xl text-sm font-semibold flex items-center gap-2"
+          className="flex min-h-[48px] items-center gap-2 rounded-full bg-[#1a3a4a] px-5 py-3 text-sm font-semibold text-white shadow-xl"
         >
           {mobileMapOpen ? (
             <>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
@@ -564,7 +564,7 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
   const heroGalleryRef = useRef<HTMLDivElement>(null);
   const isFiltering = searchQuery.length > 0 || activeFilters.length > 0;
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     document.body.setAttribute('data-hide-main-nav', 'true');
     return () => {
       document.body.removeAttribute('data-hide-main-nav');
@@ -801,7 +801,7 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
                       setIsMapView(false);
                       setActiveTab(tab.id);
                     }}
-                    className={`min-h-[44px] cursor-pointer items-center whitespace-nowrap border-b-[3px] px-3 py-2 text-sm transition-colors md:px-4 flex ${
+                    className={`flex min-h-[44px] cursor-pointer items-center whitespace-nowrap border-b-[3px] px-2.5 py-2 text-sm transition-colors md:px-4 ${
                       isActive
                         ? "rounded-t-lg border-[#af5d32] bg-[#f5f1ea]/50 font-semibold text-[#1a3a4a]"
                         : "border-transparent font-medium text-[#64748b] hover:text-[#1a3a4a]"
@@ -832,7 +832,7 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
 
         <div className="relative z-40 border-t border-[#ebe4d8]">
           <div className="mx-auto max-w-6xl px-4 py-3">
-            <div className="mb-3 flex items-center gap-3">
+            <div className="mb-3 flex items-center gap-3 rounded-2xl border border-[#ebe4d8] bg-[#faf8f4] px-3 py-2.5">
               <SlidersHorizontal
                 className="flex-shrink-0 text-[#64748b]"
                 size={20}
@@ -855,7 +855,7 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
             </div>
             <div className="flex flex-wrap gap-2">
               {filterGroups.map((group) => (
-                <div key={group.label} className="flex items-center gap-1.5">
+                <div key={group.label} className="flex flex-wrap items-center gap-1.5">
                   <span className="mr-0.5 text-xs font-medium text-[#64748b]">
                     {group.label}:
                   </span>
