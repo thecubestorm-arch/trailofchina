@@ -3,6 +3,29 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
+// Check if we're on a page that hides the main navigation (hub pages with custom nav)
+function useHideMainNav() {
+  const [hideMainNav, setHideMainNav] = useState(false)
+
+  useEffect(() => {
+    // Check for the data attribute set by hub pages
+    const checkHideNav = () => {
+      const body = document.body
+      setHideMainNav(body.hasAttribute('data-hide-main-nav'))
+    }
+
+    checkHideNav()
+
+    // Use MutationObserver to detect when the attribute changes
+    const observer = new MutationObserver(checkHideNav)
+    observer.observe(document.body, { attributes: true, attributeFilter: ['data-hide-main-nav'] })
+
+    return () => observer.disconnect()
+  }, [])
+
+  return hideMainNav
+}
+
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/china-basics', label: 'China Basics' },
@@ -13,6 +36,7 @@ const navLinks = [
 
 export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const hideMainNav = useHideMainNav()
 
   // Lock body scroll when menu is open
   useEffect(() => {
@@ -29,7 +53,7 @@ export default function Navigation() {
   const closeMenu = () => setMenuOpen(false)
 
   return (
-    <header className="sticky top-0 z-[100] border-b border-[var(--line)] bg-[#f5f1ea]/80 backdrop-blur-xl">
+    <header className={`sticky top-0 z-[100] border-b border-[var(--line)] bg-[#f5f1ea]/80 backdrop-blur-xl transition-transform duration-300 ${hideMainNav ? '-translate-y-full md:translate-y-0' : 'translate-y-0'}`}>
       <div className="container-px mx-auto flex w-full max-w-7xl items-center justify-between py-3 md:py-4">
         <Link href="/" className="flex flex-col">
           <span className="font-serif text-2xl leading-none tracking-[0.08em] text-[var(--foreground)]">

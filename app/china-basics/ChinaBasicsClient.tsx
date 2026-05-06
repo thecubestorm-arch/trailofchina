@@ -445,13 +445,9 @@ export default function ChinaBasicsClient() {
 
   // Hide the main site navbar on this hub page
   useEffect(() => {
-    const header = document.querySelector("header");
-    if (header) {
-      (header as HTMLElement).style.position = "relative";
-    }
+    document.body.setAttribute('data-hide-main-nav', 'true');
     return () => {
-      const h = document.querySelector("header");
-      if (h) (h as HTMLElement).style.position = "";
+      document.body.removeAttribute('data-hide-main-nav');
     };
   }, []);
 

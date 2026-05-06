@@ -28,17 +28,17 @@ export default function CookieConsent() {
         <p className="text-sm leading-6 text-[var(--muted)]">
           This site uses cookies to support essential functionality, analytics, and affiliate attribution.
         </p>
-        <div className="flex items-center gap-3">
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-3">
           <button
             type="button"
             onClick={handleAccept}
-            className="rounded-full bg-[#af5d32] px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#8f431c]"
+            className="min-h-[44px] min-w-[44px] rounded-full bg-[#af5d32] px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#8f431c]"
           >
             Accept
           </button>
           <Link
             href="/cookie-policy"
-            className="rounded-full border border-[var(--line)] bg-white px-4 py-2 text-sm font-semibold text-[var(--foreground)]"
+            className="min-h-[44px] min-w-[44px] flex items-center justify-center rounded-full border border-[var(--line)] bg-white px-4 py-2 text-sm font-semibold text-[var(--foreground)]"
           >
             Learn More
           </Link>

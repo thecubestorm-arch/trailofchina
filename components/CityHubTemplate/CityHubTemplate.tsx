@@ -562,13 +562,9 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
   const isFiltering = searchQuery.length > 0 || activeFilters.length > 0;
 
   useEffect(() => {
-    const header = document.querySelector("header");
-    if (header) {
-      (header as HTMLElement).style.position = "relative";
-    }
+    document.body.setAttribute('data-hide-main-nav', 'true');
     return () => {
-      const h = document.querySelector("header");
-      if (h) (h as HTMLElement).style.position = "";
+      document.body.removeAttribute('data-hide-main-nav');
     };
   }, []);
 
