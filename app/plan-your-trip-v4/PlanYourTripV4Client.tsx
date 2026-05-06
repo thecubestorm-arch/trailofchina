@@ -161,7 +161,7 @@ export default function PlanYourTripV4Client() {
                           <Link
                             key={route.days}
                             href={route.href}
-                            className={`grid gap-2 px-4 py-4 text-sm transition-colors hover:bg-[rgba(240,201,177,0.08)] md:grid-cols-[140px_140px_minmax(0,1fr)_130px] md:items-center md:gap-4 ${
+                            className={`grid gap-2 px-4 py-4 text-sm transition-colors hover:bg-[rgba(240,201,177,0.08)] sm:grid-cols-[100px_100px_1fr] md:grid-cols-[140px_140px_minmax(0,1fr)_130px] md:items-center md:gap-4 ${
                               routeIndex < routes.length - 1 ? 'border-b border-[rgba(240,201,177,0.16)]' : ''
                             }`}
                           >

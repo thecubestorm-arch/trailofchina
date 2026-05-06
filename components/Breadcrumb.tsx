@@ -57,7 +57,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
                   <>
                     <Link
                       href={item.href || '/'}
-                      className="hover:text-[#af5d32] transition-colors"
+                      className="flex min-h-[44px] items-center rounded-md px-2 hover:text-[#af5d32] transition-colors"
                     >
                       {item.label}
                     </Link>
@@ -74,7 +74,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
       <div className="sm:hidden text-sm py-2">
         <Link
           href={backHref || '/'}
-          className="inline-flex items-center gap-1 text-[var(--muted)] hover:text-[#af5d32] transition-colors"
+          className="inline-flex min-h-[44px] items-center gap-1 rounded-md px-2 text-[var(--muted)] hover:text-[#af5d32] transition-colors"
         >
           ← Back
         </Link>

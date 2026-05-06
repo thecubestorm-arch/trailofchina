@@ -670,7 +670,7 @@ export default function DestinationsMapInner() {
 
       {viewMode === 'split' && (
         <div className="hidden md:flex max-w-6xl mx-auto px-4 py-6 gap-4" style={{ height: 'calc(100vh - 200px)' }}>
-          <div className="w-[380px] flex-shrink-0 overflow-y-auto pr-2" style={{ scrollbarWidth: 'thin' }}>
+          <div className="w-[calc(100vw-2rem)] max-w-[380px] flex-shrink-0 overflow-y-auto pr-2 sm:w-[380px]" style={{ scrollbarWidth: 'thin' }}>
             <div className="space-y-3">
               {cities.map((city) => (
                 <Link

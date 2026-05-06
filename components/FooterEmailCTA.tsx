@@ -162,7 +162,7 @@ export default function FooterEmailCTA() {
           </button>
         </form>
 
-        <label className="mt-3 flex items-center gap-2 cursor-pointer select-none">
+        <label className="mt-3 flex items-center gap-2 cursor-pointer select-none min-h-[44px]">
           <input
             type="checkbox"
             checked={newsletter}

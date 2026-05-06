@@ -164,7 +164,7 @@ export default function ExploreChinaMap({
             <Popup closeButton={false} offset={[0, -10]} className="explore-city-popup">
               <Link
                 href={city.href}
-                className="block w-[220px] cursor-pointer overflow-hidden rounded-[1.1rem] bg-[#f5f1ea] text-[#1a3a4a] no-underline transition-transform hover:scale-[1.01]"
+                className="block w-[200px] max-w-[calc(100vw-4rem)] cursor-pointer overflow-hidden rounded-[1.1rem] bg-[#f5f1ea] text-[#1a3a4a] no-underline transition-transform hover:scale-[1.01] sm:w-[220px]"
               >
                 <img
                   src={`https://picsum.photos/seed/${city.imageSeed}/480/280`}

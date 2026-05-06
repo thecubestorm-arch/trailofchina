@@ -363,7 +363,7 @@ function PrepareSection({ expanded = false }: { expanded?: boolean }) {
               {prepareItems.map((item) => (
                 <div
                   key={item.name}
-                  className="w-[260px] md:w-[300px] flex-shrink-0 snap-start"
+                  className="w-[calc(85vw-2rem)] max-w-[260px] flex-shrink-0 snap-start sm:max-w-[280px] md:w-[300px] md:max-w-none"
                 >
                   <PhotoCard {...item} />
                 </div>
@@ -545,7 +545,7 @@ export default function ChinaBasicsClient() {
               {isFiltering && (
                 <button
                   onClick={() => { setSearchQuery(""); setActiveFilter("all"); }}
-                  className="flex items-center gap-1 text-xs font-medium text-[#af5d32] hover:underline"
+                  className="flex min-h-[44px] items-center gap-1 rounded-md px-2 text-xs font-medium text-[#af5d32] hover:bg-[#af5d32]/10 hover:underline"
                 >
                   <X size={14} /> Clear
                 </button>
@@ -588,7 +588,7 @@ export default function ChinaBasicsClient() {
                 </p>
                 <button
                   onClick={() => { setSearchQuery(""); setActiveFilter("all"); }}
-                  className="mt-3 text-sm text-[#af5d32] font-medium hover:underline"
+                  className="mt-3 inline-flex min-h-[44px] items-center rounded-md px-3 text-sm font-medium text-[#af5d32] hover:bg-[#af5d32]/10 hover:underline"
                 >
                   Clear all filters
                 </button>

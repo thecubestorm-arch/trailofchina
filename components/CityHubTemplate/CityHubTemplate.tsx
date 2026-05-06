@@ -81,17 +81,17 @@ function SectionHeader({
 }) {
   return (
     <div className="mb-4 md:mb-6">
-      <div className="flex items-center justify-between">
-        <div>
-          <div className="mb-3 h-1 w-8 rounded-full bg-[#af5d32]" />
-          <h2 className="text-2xl font-bold text-[#1a3a4a] md:text-3xl">
+      <div className="flex items-center justify-between gap-3">
+        <div className="min-w-0">
+          <div className="mb-2 md:mb-3 h-1 w-6 md:w-8 rounded-full bg-[#af5d32]" />
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-[#1a3a4a] leading-tight">
             {title}
           </h2>
         </div>
         {href && (
           <Link
             href={href}
-            className="mb-1 self-end whitespace-nowrap text-sm font-medium text-[#af5d32] hover:underline"
+            className="mb-1 self-end whitespace-nowrap text-sm font-medium text-[#af5d32] hover:underline flex-shrink-0"
           >
             {hrefLabel}
           </Link>
@@ -118,27 +118,28 @@ function PhotoCard({
 }) {
   return (
     <Link href={href} className="group block h-full">
-      <div className="h-full overflow-hidden rounded-xl border border-[#ebe4d8] bg-white shadow-sm transition-shadow hover:shadow-md">
+      <div className="h-full overflow-hidden rounded-xl border border-[#ebe4d8] bg-white shadow-sm transition-shadow hover:shadow-md active:scale-[0.98] md:active:scale-100">
         <div className="relative aspect-[3/2] overflow-hidden">
           <Image
             src={`https://picsum.photos/seed/${imageSeed}/600/400`}
             alt={alt}
             fill
             className="object-cover transition-transform duration-300 group-hover:scale-105"
+            sizes="(max-width: 768px) 85vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
-        <div className="p-4">
+        <div className="p-3 md:p-4">
           <div className="mb-1 flex items-center justify-between gap-2">
-            <h3 className="truncate font-bold text-[#1a3a4a] transition-colors group-hover:text-[#af5d32]">
+            <h3 className="truncate font-bold text-[#1a3a4a] transition-colors group-hover:text-[#af5d32] text-sm md:text-base">
               {title}
             </h3>
             {tag && (
-              <span className="flex-shrink-0 whitespace-nowrap rounded-full bg-[#f5f1ea] px-2 py-0.5 text-xs font-semibold text-[#1a3a4a]">
+              <span className="flex-shrink-0 whitespace-nowrap rounded-full bg-[#f5f1ea] px-2 py-0.5 text-[10px] md:text-xs font-semibold text-[#1a3a4a]">
                 {tag}
               </span>
             )}
           </div>
-          <p className="line-clamp-1 text-sm text-[#64748b]">{subtitle}</p>
+          <p className="line-clamp-1 text-xs md:text-sm text-[#64748b] leading-relaxed">{subtitle}</p>
         </div>
       </div>
     </Link>
@@ -162,27 +163,28 @@ function CompactPhotoCard({
 }) {
   return (
     <Link href={href} className="group block h-full">
-      <div className="h-full overflow-hidden rounded-xl border border-[#ebe4d8] bg-white shadow-sm transition-shadow hover:shadow-md">
+      <div className="h-full overflow-hidden rounded-xl border border-[#ebe4d8] bg-white shadow-sm transition-shadow hover:shadow-md active:scale-[0.98] md:active:scale-100">
         <div className="relative aspect-[4/3] overflow-hidden">
           <Image
             src={`https://picsum.photos/seed/${imageSeed}/600/450`}
             alt={alt}
             fill
             className="object-cover transition-transform duration-300 group-hover:scale-105"
+            sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 20vw"
           />
         </div>
-        <div className="p-3">
+        <div className="p-2.5 md:p-3">
           <div className="mb-0.5 flex items-center justify-between gap-2">
-            <h3 className="truncate text-sm font-semibold text-[#1a3a4a] transition-colors group-hover:text-[#af5d32]">
+            <h3 className="truncate text-xs md:text-sm font-semibold text-[#1a3a4a] transition-colors group-hover:text-[#af5d32]">
               {title}
             </h3>
             {tag && (
-              <span className="flex-shrink-0 whitespace-nowrap rounded-full bg-[#f5f1ea] px-2 py-0.5 text-[10px] font-semibold text-[#1a3a4a]">
+              <span className="flex-shrink-0 whitespace-nowrap rounded-full bg-[#f5f1ea] px-1.5 md:px-2 py-0.5 text-[10px] font-semibold text-[#1a3a4a]">
                 {tag}
               </span>
             )}
           </div>
-          <p className="line-clamp-1 text-xs text-[#64748b]">{subtitle}</p>
+          <p className="line-clamp-1 text-[10px] md:text-xs text-[#64748b] leading-relaxed">{subtitle}</p>
         </div>
       </div>
     </Link>
@@ -202,15 +204,15 @@ function CompactIconCard({
 }) {
   return (
     <Link href={href} className="group block h-full">
-      <div className="h-full overflow-hidden rounded-xl border border-[#ebe4d8] border-t-2 border-t-[#af5d32] bg-white shadow-sm transition-shadow hover:shadow-md">
-        <div className="flex aspect-square items-center justify-center bg-[#f5f1ea]">
-          <Icon className="text-[#1a3a4a]" size={40} />
+      <div className="h-full overflow-hidden rounded-xl border border-[#ebe4d8] border-t-2 border-t-[#af5d32] bg-white shadow-sm transition-shadow hover:shadow-md active:scale-[0.98] md:active:scale-100">
+        <div className="flex aspect-square items-center justify-center bg-[#f5f1ea] p-4">
+          <Icon className="text-[#1a3a4a] w-8 h-8 md:w-10 md:h-10" size={32} />
         </div>
-        <div className="p-3">
-          <h3 className="mb-0.5 truncate text-sm font-semibold text-[#1a3a4a] transition-colors group-hover:text-[#af5d32]">
+        <div className="p-2.5 md:p-3">
+          <h3 className="mb-0.5 truncate text-xs md:text-sm font-semibold text-[#1a3a4a] transition-colors group-hover:text-[#af5d32]">
             {title}
           </h3>
-          <p className="line-clamp-1 text-xs text-[#64748b]">{subtitle}</p>
+          <p className="line-clamp-1 text-[10px] md:text-xs text-[#64748b] leading-relaxed">{subtitle}</p>
         </div>
       </div>
     </Link>
@@ -226,15 +228,15 @@ function CompactResultCard({
     const Icon = item.icon || Map;
     return (
       <Link href={item.href} className="group block h-full">
-        <div className="h-full overflow-hidden rounded-xl border border-[#ebe4d8] border-t-2 border-t-[#af5d32] bg-white shadow-sm transition-shadow hover:shadow-md">
-          <div className="flex aspect-square items-center justify-center bg-[#f5f1ea]">
-            <Icon className="text-[#1a3a4a]" size={40} />
+        <div className="h-full overflow-hidden rounded-xl border border-[#ebe4d8] border-t-2 border-t-[#af5d32] bg-white shadow-sm transition-shadow hover:shadow-md active:scale-[0.98] md:active:scale-100">
+          <div className="flex aspect-square items-center justify-center bg-[#f5f1ea] p-4">
+            <Icon className="text-[#1a3a4a] w-8 h-8 md:w-10 md:h-10" size={32} />
           </div>
-          <div className="p-3">
-            <h3 className="mb-0.5 truncate text-sm font-semibold text-[#1a3a4a] transition-colors group-hover:text-[#af5d32]">
+          <div className="p-2.5 md:p-3">
+            <h3 className="mb-0.5 truncate text-xs md:text-sm font-semibold text-[#1a3a4a] transition-colors group-hover:text-[#af5d32]">
               {item.name}
             </h3>
-            <p className="line-clamp-1 text-xs text-[#64748b]">{item.subtitle}</p>
+            <p className="line-clamp-1 text-[10px] md:text-xs text-[#64748b] leading-relaxed">{item.subtitle}</p>
           </div>
         </div>
       </Link>
@@ -243,27 +245,28 @@ function CompactResultCard({
 
   return (
     <Link href={item.href} className="group block h-full">
-      <div className="h-full overflow-hidden rounded-xl border border-[#ebe4d8] bg-white shadow-sm transition-shadow hover:shadow-md">
+      <div className="h-full overflow-hidden rounded-xl border border-[#ebe4d8] bg-white shadow-sm transition-shadow hover:shadow-md active:scale-[0.98] md:active:scale-100">
         <div className="relative aspect-[4/3] overflow-hidden">
           <Image
             src={`https://picsum.photos/seed/${item.imageSeed}/600/450`}
             alt={item.name}
             fill
             className="object-cover transition-transform duration-300 group-hover:scale-105"
+            sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 20vw"
           />
         </div>
-        <div className="p-3">
+        <div className="p-2.5 md:p-3">
           <div className="mb-0.5 flex items-center justify-between gap-2">
-            <h3 className="truncate text-sm font-semibold text-[#1a3a4a] transition-colors group-hover:text-[#af5d32]">
+            <h3 className="truncate text-xs md:text-sm font-semibold text-[#1a3a4a] transition-colors group-hover:text-[#af5d32]">
               {item.name}
             </h3>
             {item.tag && (
-              <span className="flex-shrink-0 whitespace-nowrap rounded-full bg-[#f5f1ea] px-2 py-0.5 text-[10px] font-semibold text-[#1a3a4a]">
+              <span className="flex-shrink-0 whitespace-nowrap rounded-full bg-[#f5f1ea] px-1.5 md:px-2 py-0.5 text-[10px] font-semibold text-[#1a3a4a]">
                 {item.tag}
               </span>
             )}
           </div>
-          <p className="line-clamp-1 text-xs text-[#64748b]">{item.subtitle}</p>
+          <p className="line-clamp-1 text-[10px] md:text-xs text-[#64748b] leading-relaxed">{item.subtitle}</p>
         </div>
       </div>
     </Link>
@@ -314,7 +317,7 @@ function ItinerarySection({ config }: { config: CityHubConfig }) {
             >
               <button
                 onClick={() => toggleDay(dayTitle)}
-                className="flex w-full items-center justify-between bg-[#f5f1ea] p-4 transition-colors hover:bg-[#ebe4d8] md:p-5"
+                className="flex min-h-[44px] w-full items-center justify-between bg-[#f5f1ea] p-4 transition-colors hover:bg-[#ebe4d8] md:p-5"
               >
                 <div className="flex items-center gap-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#af5d32] text-sm font-bold text-white">
@@ -419,7 +422,7 @@ function ThingsToDoSection({
         {config.attractionCards.map((attr) => (
           <div
             key={attr.name}
-            className={expanded ? "" : "w-[260px] flex-shrink-0 snap-start md:w-[300px]"}
+            className={expanded ? "" : "w-[calc(85vw-2rem)] max-w-[260px] flex-shrink-0 snap-start sm:max-w-[280px] md:w-[300px]"}
           >
             <PhotoCard
               href={attr.categories[attr.defaultCategory]?.href || `/destinations/${config.slug}/what-to-do`}
@@ -688,7 +691,7 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
             {config.gallerySeeds.map((seed, index) => (
               <div
                 key={seed}
-                className="relative h-full basis-[82%] shrink-0 snap-start md:basis-1/2 lg:basis-[74%]"
+                className="relative h-full basis-[85%] max-w-[calc(100vw-3rem)] shrink-0 snap-start sm:basis-[70%] md:basis-1/2 lg:basis-[74%]"
               >
                 <Image
                   src={`https://picsum.photos/seed/${seed}/1600/900`}
@@ -708,7 +711,7 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
               onClick={() =>
                 heroGalleryRef.current?.scrollBy({ left: -640, behavior: "smooth" })
               }
-              className="absolute left-3 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white/95 text-[#1a3a4a] shadow-xl transition hover:bg-white md:left-6 md:h-12 md:w-12 lg:left-16"
+              className="absolute left-3 top-1/2 z-10 flex h-11 w-11 min-h-[44px] min-w-[44px] -translate-y-1/2 items-center justify-center rounded-full bg-white/95 text-[#1a3a4a] shadow-xl transition hover:bg-white md:left-6 md:h-12 md:w-12 lg:left-16"
               aria-label={`Scroll ${config.nameEn} gallery left`}
             >
               <ChevronLeft size={20} className="md:h-[22px] md:w-[22px]" />
@@ -720,7 +723,7 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
               onClick={() =>
                 heroGalleryRef.current?.scrollBy({ left: 640, behavior: "smooth" })
               }
-              className="absolute right-3 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white/95 text-[#1a3a4a] shadow-xl transition hover:bg-white md:right-6 md:h-12 md:w-12 lg:right-16"
+              className="absolute right-3 top-1/2 z-10 flex h-11 w-11 min-h-[44px] min-w-[44px] -translate-y-1/2 items-center justify-center rounded-full bg-white/95 text-[#1a3a4a] shadow-xl transition hover:bg-white md:right-6 md:h-12 md:w-12 lg:right-16"
               aria-label={`Scroll ${config.nameEn} gallery right`}
             >
               <ChevronRight size={20} className="md:h-[22px] md:w-[22px]" />
@@ -750,13 +753,19 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
                     block: "nearest",
                   });
                 }}
-                className={`rounded-full transition-all ${
+                className={`rounded-full transition-all min-h-[44px] min-w-[44px] p-2 flex items-center justify-center ${
+                  activeHeroImage === index
+                    ? "bg-transparent"
+                    : "bg-transparent"
+                }`}
+                aria-label={`Go to ${config.nameEn} gallery image ${index + 1}`}
+              >
+                <span className={`rounded-full block transition-all ${
                   activeHeroImage === index
                     ? "h-2 w-4 bg-[#af5d32] md:h-2.5 md:w-6"
                     : "h-2 w-2 bg-white/55 md:h-2.5 md:w-2.5"
-                }`}
-                aria-label={`Go to ${config.nameEn} gallery image ${index + 1}`}
-              />
+                }`} />
+              </button>
             ))}
           </div>
         </div>
@@ -806,7 +815,7 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
             </div>
             <button
               onClick={() => setIsMapView((v) => !v)}
-              className={`ml-2 flex flex-shrink-0 items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-semibold transition-colors ${
+              className={`ml-2 flex min-h-[44px] flex-shrink-0 items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-semibold transition-colors ${
                 isMapView
                   ? "bg-[#1a3a4a] text-white"
                   : "bg-[#f5f1ea] text-[#1a3a4a] hover:bg-[#ebe4d8]"
@@ -838,7 +847,7 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
               {isFiltering && (
                 <button
                   onClick={clearFilters}
-                  className="flex items-center gap-1 text-xs font-medium text-[#af5d32] hover:underline"
+                  className="flex min-h-[44px] items-center gap-1 rounded-md px-2 text-xs font-medium text-[#af5d32] hover:bg-[#af5d32]/10 hover:underline"
                 >
                   <X size={14} /> Clear
                 </button>
@@ -854,7 +863,7 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
                     <button
                       key={f.id}
                       onClick={() => toggleFilter(f.id)}
-                      className={`rounded-full px-2.5 py-1 text-xs font-medium transition-colors ${
+                      className={`min-h-[44px] rounded-full px-3 py-2 text-xs font-medium transition-colors ${
                         activeFilters.includes(f.id)
                           ? "bg-[#af5d32] text-white"
                           : "border border-[#ebe4d8] bg-[#f5f1ea] text-[#1a3a4a] hover:border-[#af5d32]"
@@ -903,7 +912,7 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
                 </p>
                 <button
                   onClick={clearFilters}
-                  className="mt-3 text-sm font-medium text-[#af5d32] hover:underline"
+                  className="mt-3 inline-flex min-h-[44px] items-center rounded-md px-3 text-sm font-medium text-[#af5d32] hover:bg-[#af5d32]/10 hover:underline"
                 >
                   Clear all filters
                 </button>
@@ -961,7 +970,7 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
                   {config.attractionCards.map((attr) => (
                     <div
                       key={attr.name}
-                      className="w-[260px] flex-shrink-0 snap-start md:w-[300px]"
+                      className="w-[calc(85vw-2rem)] max-w-[260px] flex-shrink-0 snap-start sm:max-w-[280px] md:w-[300px]"
                     >
                       <PhotoCard
                         href={attr.categories[attr.defaultCategory]?.href || `/destinations/${config.slug}/what-to-do`}
@@ -981,7 +990,7 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
                       behavior: "smooth",
                     })
                   }
-                  className="absolute left-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#ebe4d8] bg-white/90 text-[#1a3a4a] shadow-md transition-all hover:bg-white hover:shadow-lg group-hover/scroll:opacity-100 md:opacity-0"
+                  className="absolute left-2 top-1/2 z-10 flex h-11 w-11 min-h-[44px] min-w-[44px] -translate-y-1/2 items-center justify-center rounded-full border border-[#ebe4d8] bg-white/90 text-[#1a3a4a] shadow-md transition-all hover:bg-white hover:shadow-lg group-hover/scroll:opacity-100 md:opacity-0"
                   aria-label="Scroll left"
                 >
                   <svg
@@ -1004,7 +1013,7 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
                       behavior: "smooth",
                     })
                   }
-                  className="absolute right-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#ebe4d8] bg-white/90 text-[#1a3a4a] shadow-md transition-all hover:bg-white hover:shadow-lg group-hover/scroll:opacity-100 md:opacity-0"
+                  className="absolute right-2 top-1/2 z-10 flex h-11 w-11 min-h-[44px] min-w-[44px] -translate-y-1/2 items-center justify-center rounded-full border border-[#ebe4d8] bg-white/90 text-[#1a3a4a] shadow-md transition-all hover:bg-white hover:shadow-lg group-hover/scroll:opacity-100 md:opacity-0"
                   aria-label="Scroll right"
                 >
                   <svg

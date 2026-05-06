@@ -126,7 +126,7 @@ export default function VPNeSIMToast() {
     <aside
       aria-label="VPN and eSIM reminder"
       role="dialog"
-      className={`fixed inset-x-0 bottom-0 z-50 transition-all duration-300 ease-out md:right-6 md:left-auto md:bottom-6 md:w-[380px] ${
+      className={`fixed inset-x-0 bottom-0 z-50 transition-all duration-300 ease-out sm:max-w-[380px] md:right-6 md:left-auto md:bottom-6 md:w-[380px] ${
         isVisible
           ? 'translate-y-0 opacity-100'
           : 'translate-y-6 opacity-0 md:translate-y-4'

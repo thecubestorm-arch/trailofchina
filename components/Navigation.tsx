@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
 
 // Check if we're on a page that hides the main navigation (hub pages with custom nav)
@@ -24,6 +24,59 @@ function useHideMainNav() {
   }, [])
 
   return hideMainNav
+}
+
+// Hook to detect swipe from right edge to open menu
+function useSwipeToOpenMenu(onSwipeOpen: () => void, enabled: boolean) {
+  const touchStartX = useRef<number | null>(null)
+  const touchStartY = useRef<number | null>(null)
+
+  useEffect(() => {
+    if (!enabled) return
+
+    const handleTouchStart = (e: TouchEvent) => {
+      // Only detect swipes starting from right edge (within 40px of right edge)
+      const screenWidth = window.innerWidth
+      const touchX = e.touches[0].clientX
+      
+      if (touchX > screenWidth - 40) {
+        touchStartX.current = touchX
+        touchStartY.current = e.touches[0].clientY
+      }
+    }
+
+    const handleTouchMove = (e: TouchEvent) => {
+      if (touchStartX.current === null) return
+
+      const touchX = e.touches[0].clientX
+      const touchY = e.touches[0].clientY
+      const deltaX = touchX - touchStartX.current
+      const deltaY = touchY - (touchStartY.current || 0)
+
+      // Detect left swipe (negative deltaX) of at least 80px
+      // And ensure it's more horizontal than vertical (|deltaX| > |deltaY|)
+      if (deltaX < -80 && Math.abs(deltaX) > Math.abs(deltaY)) {
+        onSwipeOpen()
+        touchStartX.current = null
+        touchStartY.current = null
+      }
+    }
+
+    const handleTouchEnd = () => {
+      touchStartX.current = null
+      touchStartY.current = null
+    }
+
+    document.addEventListener('touchstart', handleTouchStart, { passive: true })
+    document.addEventListener('touchmove', handleTouchMove, { passive: true })
+    document.addEventListener('touchend', handleTouchEnd, { passive: true })
+
+    return () => {
+      document.removeEventListener('touchstart', handleTouchStart)
+      document.removeEventListener('touchmove', handleTouchMove)
+      document.removeEventListener('touchend', handleTouchEnd)
+    }
+  }, [onSwipeOpen, enabled])
 }
 
 const navLinks = [
@@ -50,10 +103,18 @@ export default function Navigation() {
     }
   }, [menuOpen])
 
+  const openMenu = useCallback(() => setMenuOpen(true), [])
   const closeMenu = () => setMenuOpen(false)
+  const toggleMenu = () => setMenuOpen((prev) => !prev)
+
+  // Enable swipe-from-right to open menu (only on mobile and when nav is visible)
+  useSwipeToOpenMenu(openMenu, !hideMainNav)
 
   return (
-    <header className={`sticky top-0 z-[100] border-b border-[var(--line)] bg-[#f5f1ea]/80 backdrop-blur-xl transition-transform duration-300 ${hideMainNav ? '-translate-y-full md:translate-y-0' : 'translate-y-0'}`}>
+    <header 
+      className={`sticky top-0 z-[100] border-b border-[var(--line)] bg-[#f5f1ea]/80 backdrop-blur-xl transition-transform duration-300 ${hideMainNav ? '-translate-y-full opacity-0 pointer-events-none md:translate-y-0 md:opacity-100 md:pointer-events-auto' : 'translate-y-0 opacity-100 pointer-events-auto'}`}
+      aria-hidden={hideMainNav ? 'true' : undefined}
+    >
       <div className="container-px mx-auto flex w-full max-w-7xl items-center justify-between py-3 md:py-4">
         <Link href="/" className="flex flex-col">
           <span className="font-serif text-2xl leading-none tracking-[0.08em] text-[var(--foreground)]">
@@ -91,8 +152,8 @@ export default function Navigation() {
             type="button"
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={menuOpen}
-            onClick={() => setMenuOpen((prev) => !prev)}
-            className="relative z-[100] flex h-11 w-11 items-center justify-center rounded-full md:hidden"
+            onClick={toggleMenu}
+            className="relative z-[100] flex h-11 w-11 min-h-[44px] min-w-[44px] items-center justify-center rounded-full md:hidden"
           >
             {menuOpen ? (
               /* X Close Icon */
@@ -145,13 +206,13 @@ export default function Navigation() {
         aria-hidden={!menuOpen}
       >
         <div className="flex h-full flex-col px-6 pt-20">
-          <nav aria-label="Mobile primary" className="flex flex-col gap-1">
+          <nav aria-label="Mobile primary" className="flex flex-col">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={closeMenu}
-                className="rounded-lg px-4 py-3 text-lg font-medium text-[var(--muted)] transition-colors hover:bg-[rgba(175,93,50,0.08)] hover:text-[#af5d32]"
+                className="flex min-h-[44px] items-center rounded-lg px-4 py-3 text-lg font-medium text-[var(--muted)] transition-colors hover:bg-[rgba(175,93,50,0.08)] hover:text-[#af5d32]"
               >
                 {link.label}
                 {'badge' in link && link.badge && (

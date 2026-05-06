@@ -8,20 +8,20 @@ export default function Footer() {
         {/* Top row: brand + nav */}
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <p className="font-serif text-2xl text-[var(--foreground)]">Trail of China</p>
-          <nav className="flex flex-wrap items-center gap-x-1 gap-y-1 text-sm text-[var(--muted)]">
-            <Link href="/china-basics" className="hover:text-[#af5d32]">
+          <nav className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-[var(--muted)]">
+            <Link href="/china-basics" className="inline-flex min-h-[44px] items-center rounded-md px-2 hover:bg-[var(--surface-strong)] hover:text-[#af5d32] transition-colors">
               China Basics
             </Link>
             <span aria-hidden="true">·</span>
-            <Link href="/destinations" className="hover:text-[#af5d32]">
+            <Link href="/destinations" className="inline-flex min-h-[44px] items-center rounded-md px-2 hover:bg-[var(--surface-strong)] hover:text-[#af5d32] transition-colors">
               Destinations
             </Link>
             <span aria-hidden="true">·</span>
-            <Link href="/plan-your-trip" className="hover:text-[#af5d32]">
+            <Link href="/plan-your-trip" className="inline-flex min-h-[44px] items-center rounded-md px-2 hover:bg-[var(--surface-strong)] hover:text-[#af5d32] transition-colors">
               Plan Your Trip
             </Link>
             <span aria-hidden="true">·</span>
-            <Link href="/blog" className="hover:text-[#af5d32]">
+            <Link href="/blog" className="inline-flex min-h-[44px] items-center rounded-md px-2 hover:bg-[var(--surface-strong)] hover:text-[#af5d32] transition-colors">
               Blog
             </Link>
           </nav>
@@ -45,22 +45,22 @@ export default function Footer() {
         <hr className="my-8 border-[#ddd5c8]" />
 
         {/* Bottom row: copyright + legal */}
-        <div className="flex flex-col gap-2 text-xs text-[var(--muted)] sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-3 text-xs text-[var(--muted)] sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} Trail of China</p>
-          <div className="flex flex-wrap items-center gap-x-1">
-            <Link href="/about" className="hover:text-[#af5d32]">
+          <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+            <Link href="/about" className="inline-flex min-h-[44px] items-center rounded-md px-2 hover:bg-[var(--surface-strong)] hover:text-[#af5d32] transition-colors">
               About
             </Link>
             <span aria-hidden="true">·</span>
-            <Link href="/imprint" className="hover:text-[#af5d32]">
+            <Link href="/imprint" className="inline-flex min-h-[44px] items-center rounded-md px-2 hover:bg-[var(--surface-strong)] hover:text-[#af5d32] transition-colors">
               Impressum
             </Link>
             <span aria-hidden="true">·</span>
-            <Link href="/privacy" className="hover:text-[#af5d32]">
+            <Link href="/privacy" className="inline-flex min-h-[44px] items-center rounded-md px-2 hover:bg-[var(--surface-strong)] hover:text-[#af5d32] transition-colors">
               Privacy
             </Link>
             <span aria-hidden="true">·</span>
-            <Link href="/cookie-policy" className="hover:text-[#af5d32]">
+            <Link href="/cookie-policy" className="inline-flex min-h-[44px] items-center rounded-md px-2 hover:bg-[var(--surface-strong)] hover:text-[#af5d32] transition-colors">
               Cookie Policy
             </Link>
           </div>
