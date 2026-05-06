@@ -4,14 +4,15 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-// Check if we're on a page that should use the compact navigation shell.
+// Detect pathname-based compact nav for hub pages
 function useCompactNavMode() {
   const [compactNavMode, setCompactNavMode] = useState(false)
 
   useEffect(() => {
+    // data-hide-main-nav is no longer set by any page
+    // keeping the observer for safety but it won't trigger
     const checkCompactNav = () => {
-      const body = document.body
-      setCompactNavMode(body.hasAttribute('data-hide-main-nav'))
+      setCompactNavMode(document.body.hasAttribute('data-hide-main-nav'))
     }
 
     checkCompactNav()

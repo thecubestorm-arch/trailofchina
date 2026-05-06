@@ -443,13 +443,13 @@ export default function ChinaBasicsClient() {
   const [activeFilter, setActiveFilter] = useState<string>("all");
   const isFiltering = searchQuery.length > 0 || activeFilter !== "all";
 
-  // Hide the main site navbar on this hub page
-  useEffect(() => {
-    document.body.setAttribute('data-hide-main-nav', 'true');
-    return () => {
-      document.body.removeAttribute('data-hide-main-nav');
-    };
-  }, []);
+  // No longer hiding main nav — always show hamburger menu
+  // useEffect(() => {
+  //   document.body.setAttribute('data-hide-main-nav', 'true');
+  //   return () => {
+  //     document.body.removeAttribute('data-hide-main-nav');
+  //   };
+  // }, []);
 
   // Filter items based on search + active filter
   const filteredItems = allItems.filter((item) => {
@@ -503,7 +503,7 @@ export default function ChinaBasicsClient() {
       </section>
 
       {/* ========== STICKY TAB NAV + SEARCH/FILTER ========== */}
-      <div className="sticky top-0 z-[40] bg-white border-b border-[#ebe4d8] shadow-sm">
+      <div className="sticky top-[var(--site-nav-height,4rem)] z-[40] bg-white border-b border-[#ebe4d8] shadow-sm">
         {/* Tab Nav */}
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex overflow-x-auto scrollbar-hide">

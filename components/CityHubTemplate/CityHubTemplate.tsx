@@ -564,10 +564,11 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
   const heroGalleryRef = useRef<HTMLDivElement>(null);
   const isFiltering = searchQuery.length > 0 || activeFilters.length > 0;
 
-  useLayoutEffect(() => {
-    document.body.setAttribute('data-hide-main-nav', 'true');
+  useEffect(() => {
+    // No longer hiding main nav — we always want the hamburger menu accessible
+    // document.body.setAttribute('data-hide-main-nav', 'true');
     return () => {
-      document.body.removeAttribute('data-hide-main-nav');
+      // document.body.removeAttribute('data-hide-main-nav');
     };
   }, []);
 
@@ -788,7 +789,7 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
         </div>
       </section>
 
-      <div className="sticky top-0 z-40 border-b border-[#ebe4d8] bg-white shadow-sm">
+      <div className="sticky top-[var(--site-nav-height,4rem)] z-40 border-b border-[#ebe4d8] bg-white shadow-sm">
         <div className="relative z-50 mx-auto max-w-6xl px-4">
           <div className="flex items-center overflow-x-auto scrollbar-hide">
             <div className="flex flex-1 overflow-x-auto scrollbar-hide">
