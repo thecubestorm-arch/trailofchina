@@ -223,22 +223,22 @@ export default function Navigation() {
       {/* Mobile Overlay */}
       {menuOpen && (
         <div
-          className={`fixed inset-0 z-[109] bg-[#09131a]/38 backdrop-blur-sm ${useCompactNav ? '' : 'md:hidden'}`}
+          className={`fixed inset-x-0 bottom-0 top-[var(--site-nav-height,4rem)] z-[109] bg-[#09131a]/38 backdrop-blur-sm ${useCompactNav ? '' : 'md:hidden'}`}
           onClick={closeMenu}
           aria-hidden="true"
         />
       )}
 
-      {/* Mobile Slide-out Menu */}
+      {/* Mobile Full-Screen Menu */}
       <div
-        className={`fixed inset-y-0 right-0 z-[110] w-[min(20rem,85vw)] bg-[#f5f1ea] shadow-[-20px_0_40px_rgba(9,19,26,0.18)] transition-transform duration-300 ease-out ${
+        className={`fixed inset-x-0 bottom-0 top-[var(--site-nav-height,4rem)] z-[110] bg-[#f5f1ea] transition-all duration-300 ease-out ${
           useCompactNav ? '' : 'md:hidden'
         } ${
-          menuOpen ? 'translate-x-0' : 'translate-x-full'
+          menuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0 pointer-events-none'
         }`}
         aria-hidden={!menuOpen}
       >
-        <div className="flex h-full flex-col px-6 pb-[calc(env(safe-area-inset-bottom)+1.5rem)] pt-[max(env(safe-area-inset-top),1.5rem)]">
+        <div className="flex h-full flex-col px-6 pb-[calc(env(safe-area-inset-bottom)+1.5rem)] pt-6">
           <nav aria-label="Mobile primary" className="flex flex-col gap-1">
             {navLinks.map((link) => (
               <Link
