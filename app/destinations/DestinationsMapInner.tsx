@@ -355,6 +355,20 @@ function FlyToCity({ activePopupCity }: { activePopupCity: string | null }) {
   return null
 }
 
+function InvalidateMapSize({ watch }: { watch: boolean | string | null }) {
+  const map = useMap()
+
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => {
+      map.invalidateSize()
+    })
+
+    return () => cancelAnimationFrame(frame)
+  }, [map, watch])
+
+  return null
+}
+
 function MapLayers({
   hoveredCity,
   activePopupCity,
@@ -749,6 +763,7 @@ export default function DestinationsMapInner() {
               style={{ height: '100%', width: '100%' }}
             >
               <TileLayer attribution="&copy; OSM &copy; CARTO" url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png" />
+              <InvalidateMapSize watch={activePopupCity} />
               <MapEventHandler />
               <MapLayers
                 hoveredCity={hoveredCity}
@@ -783,6 +798,7 @@ export default function DestinationsMapInner() {
             style={{ height: '100%', width: '100%' }}
           >
             <TileLayer attribution="&copy; OSM &copy; CARTO" url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png" />
+            <InvalidateMapSize watch={mobileMapOpen} />
             <MapEventHandler />
             <MapLayers
               hoveredCity={hoveredCity}

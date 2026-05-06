@@ -131,7 +131,7 @@ export default function FooterEmailCTA() {
         <ChinaCheatSheet />
       </div>
 
-      <section className="rounded-[1.5rem] border border-[#d9d0c2] bg-[linear-gradient(135deg,rgba(255,250,243,0.96),rgba(175,93,50,0.08))] p-5 shadow-[0_14px_34px_rgba(50,41,30,0.08)] sm:p-6">
+      <section id="footer-email-cta" className="rounded-[1.5rem] border border-[#d9d0c2] bg-[linear-gradient(135deg,rgba(255,250,243,0.96),rgba(175,93,50,0.08))] p-5 shadow-[0_14px_34px_rgba(50,41,30,0.08)] sm:p-6">
         <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#af5d32]">Free Download</p>
         <h3 className="mt-2 font-serif text-2xl leading-tight text-[#1a3a4a]">China Arrival Cheat Sheet</h3>
         <p className="mt-2 max-w-xl text-sm leading-6 text-[#5f6f79]">

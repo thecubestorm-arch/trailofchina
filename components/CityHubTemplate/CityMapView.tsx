@@ -642,7 +642,7 @@ export default function CityMapView({
             ))}
           </MapContainer>
 
-          <div className="absolute right-3 top-3 z-[500]">
+          <div className="fixed right-3 top-[calc(var(--site-nav-height,4rem)+5.5rem)] z-[120] md:absolute md:right-3 md:top-3 md:z-[500]">
             <button
               type="button"
               onClick={() => setPanelOpen((open) => !open)}
@@ -714,7 +714,7 @@ export default function CityMapView({
             )}
           </div>
 
-          <div className="absolute bottom-[calc(env(safe-area-inset-bottom)+1rem)] left-1/2 z-[500] -translate-x-1/2 md:hidden">
+          <div className="fixed bottom-[calc(env(safe-area-inset-bottom)+1rem)] left-1/2 z-[120] -translate-x-1/2 md:absolute md:bottom-[calc(env(safe-area-inset-bottom)+1rem)] md:z-[500] md:hidden">
             <button
               onClick={() => setMobileView((v) => (v === "map" ? "list" : "map"))}
               className="inline-flex min-h-[48px] items-center gap-2 rounded-full border border-[#ebe4d8] bg-white px-4 py-2.5 text-sm font-semibold text-[#1a3a4a] shadow-lg"

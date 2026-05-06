@@ -4,27 +4,25 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-// Check if we're on a page that hides the main navigation (hub pages with custom nav)
-function useHideMainNav() {
-  const [hideMainNav, setHideMainNav] = useState(false)
+// Check if we're on a page that should use the compact navigation shell.
+function useCompactNavMode() {
+  const [compactNavMode, setCompactNavMode] = useState(false)
 
   useEffect(() => {
-    // Check for the data attribute set by hub pages
-    const checkHideNav = () => {
+    const checkCompactNav = () => {
       const body = document.body
-      setHideMainNav(body.hasAttribute('data-hide-main-nav'))
+      setCompactNavMode(body.hasAttribute('data-hide-main-nav'))
     }
 
-    checkHideNav()
+    checkCompactNav()
 
-    // Use MutationObserver to detect when the attribute changes
-    const observer = new MutationObserver(checkHideNav)
+    const observer = new MutationObserver(checkCompactNav)
     observer.observe(document.body, { attributes: true, attributeFilter: ['data-hide-main-nav'] })
 
     return () => observer.disconnect()
   }, [])
 
-  return hideMainNav
+  return compactNavMode
 }
 
 // Hook to detect swipe from right edge to open menu
@@ -36,11 +34,13 @@ function useSwipeToOpenMenu(onSwipeOpen: () => void, enabled: boolean) {
     if (!enabled) return
 
     const handleTouchStart = (e: TouchEvent) => {
-      // Only detect swipes starting from right edge (within 40px of right edge)
+      if (window.innerWidth >= 768) return
+
+      // Only detect swipes starting from the last 20px of the right edge.
       const screenWidth = window.innerWidth
       const touchX = e.touches[0].clientX
       
-      if (touchX > screenWidth - 40) {
+      if (touchX > screenWidth - 20) {
         touchStartX.current = touchX
         touchStartY.current = e.touches[0].clientY
       }
@@ -92,10 +92,10 @@ export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false)
   const headerRef = useRef<HTMLElement | null>(null)
   const pathname = usePathname()
-  const hideMainNav = useHideMainNav()
-  const shouldHideForPath =
+  const compactNavMode = useCompactNavMode()
+  const shouldUseCompactNavForPath =
     pathname === '/china-basics' || /^\/destinations\/[^/]+$/.test(pathname)
-  const shouldHideNav = hideMainNav || shouldHideForPath
+  const useCompactNav = compactNavMode || shouldUseCompactNavForPath
 
   // Lock body scroll when menu is open
   useEffect(() => {
@@ -123,39 +123,23 @@ export default function Navigation() {
   }, [menuOpen])
 
   useEffect(() => {
-    if (!menuOpen) return
-    if (shouldHideNav) {
-      setMenuOpen(false)
-    }
-  }, [menuOpen, shouldHideNav])
-
-  useEffect(() => {
     const updateNavHeight = () => {
       const height = headerRef.current?.offsetHeight
       if (!height) return
       document.documentElement.style.setProperty('--site-nav-height', `${height}px`)
     }
 
-    if (shouldHideNav) {
-      document.documentElement.style.removeProperty('--site-nav-height')
-      return
-    }
-
     updateNavHeight()
     window.addEventListener('resize', updateNavHeight)
     return () => window.removeEventListener('resize', updateNavHeight)
-  }, [shouldHideNav])
+  }, [useCompactNav])
 
   const openMenu = useCallback(() => setMenuOpen(true), [])
   const closeMenu = () => setMenuOpen(false)
   const toggleMenu = () => setMenuOpen((prev) => !prev)
 
-  // Enable swipe-from-right to open menu (only on mobile and when nav is visible)
-  useSwipeToOpenMenu(openMenu, !shouldHideNav)
-
-  if (shouldHideNav) {
-    return null
-  }
+  // Enable swipe-from-right to open menu with a narrow edge zone to avoid iOS gesture conflicts.
+  useSwipeToOpenMenu(openMenu, !menuOpen)
 
   return (
     <header
@@ -175,7 +159,7 @@ export default function Navigation() {
         {/* Desktop Nav */}
         <nav
           aria-label="Primary"
-          className="hidden md:flex md:flex-wrap md:items-center md:justify-end md:gap-2"
+          className={`${useCompactNav ? 'hidden' : 'hidden md:flex'} md:flex-wrap md:items-center md:justify-end md:gap-2`}
         >
           {navLinks.map((link) => (
             <Link
@@ -193,14 +177,13 @@ export default function Navigation() {
           ))}
         </nav>
 
-        {/* Mobile: Hamburger */}
-        <div className="flex items-center gap-1 md:hidden">
+        <div className={`flex items-center gap-1 ${useCompactNav ? '' : 'md:hidden'}`}>
           <button
             type="button"
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={menuOpen}
             onClick={toggleMenu}
-            className="relative z-[100] flex h-11 w-11 min-h-[44px] min-w-[44px] items-center justify-center rounded-full md:hidden"
+            className="relative z-[100] flex h-11 w-11 min-h-[44px] min-w-[44px] items-center justify-center rounded-full"
           >
             {menuOpen ? (
               /* X Close Icon */
@@ -239,7 +222,7 @@ export default function Navigation() {
       {/* Mobile Overlay */}
       {menuOpen && (
         <div
-          className="fixed inset-0 z-[109] bg-[#09131a]/38 backdrop-blur-sm md:hidden"
+          className={`fixed inset-0 z-[109] bg-[#09131a]/38 backdrop-blur-sm ${useCompactNav ? '' : 'md:hidden'}`}
           onClick={closeMenu}
           aria-hidden="true"
         />
@@ -247,12 +230,14 @@ export default function Navigation() {
 
       {/* Mobile Slide-out Menu */}
       <div
-        className={`fixed inset-0 z-[110] bg-[#f5f1ea] transition-transform duration-300 ease-out md:hidden ${
+        className={`fixed inset-y-0 right-0 z-[110] w-[min(20rem,85vw)] bg-[#f5f1ea] shadow-[-20px_0_40px_rgba(9,19,26,0.18)] transition-transform duration-300 ease-out ${
+          useCompactNav ? '' : 'md:hidden'
+        } ${
           menuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
         aria-hidden={!menuOpen}
       >
-        <div className="flex h-full flex-col px-6 pb-[calc(env(safe-area-inset-bottom)+1.5rem)] pt-[calc(var(--site-nav-height,4rem)+1rem)]">
+        <div className="flex h-full flex-col px-6 pb-[calc(env(safe-area-inset-bottom)+1.5rem)] pt-[max(env(safe-area-inset-top),1.5rem)]">
           <nav aria-label="Mobile primary" className="flex flex-col gap-1">
             {navLinks.map((link) => (
               <Link
@@ -273,7 +258,7 @@ export default function Navigation() {
 
           <div className="mt-auto pt-6">
             <Link
-              href="#cheat-sheet"
+              href="/#footer-email-cta"
               onClick={closeMenu}
               className="inline-flex min-h-[52px] w-full items-center justify-center gap-2 rounded-full bg-[#af5d32] px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#9a4f28]"
             >
