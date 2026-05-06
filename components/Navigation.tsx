@@ -145,7 +145,7 @@ export default function Navigation() {
   return (
     <header
       ref={headerRef}
-      className="sticky top-0 z-[100] border-b border-[var(--line)] bg-[#f5f1ea]/92 backdrop-blur-xl"
+      className="sticky top-0 z-[100] border-b border-[var(--line)] bg-[#f5f1ea] md:bg-[#f5f1ea]/92 md:backdrop-blur-xl"
     >
       <div className="container-px mx-auto flex w-full max-w-7xl items-center justify-between py-2.5 md:py-4">
         <Link href="/" className="flex min-h-[44px] min-w-0 flex-col justify-center py-1 md:min-h-0 md:py-0">
