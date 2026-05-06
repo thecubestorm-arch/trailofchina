@@ -543,7 +543,7 @@ export default function DestinationsMapInner() {
                 {cities.length} destinations · {comingSoon.length} coming soon
               </p>
             </div>
-            <div className="flex rounded-lg border border-[#ebe4d8] overflow-hidden bg-white flex-shrink-0">
+            <div className="flex rounded-lg border border-[#ebe4d8] overflow-hidden bg-white flex-shrink-0 hidden md:flex">
               <button
                 onClick={() => { setViewMode('list'); localStorage.setItem('destinations-view-mode', 'list') }}
                 className={`min-h-[44px] px-4 py-2 text-sm font-semibold flex items-center gap-1.5 transition-colors ${

@@ -107,7 +107,7 @@ export default function ExploreChinaSection() {
         <button
           type="button"
           onClick={() => setMobileView((current) => (current === 'list' ? 'map' : 'list'))}
-          className="fixed bottom-5 right-5 z-20 inline-flex items-center gap-2 rounded-full bg-[#1a3a4a] px-4 py-3 text-sm font-semibold text-white shadow-[0_18px_36px_rgba(26,58,74,0.22)] lg:hidden"
+          className="hidden lg:inline-flex items-center gap-2 rounded-full bg-[#1a3a4a] px-4 py-3 text-sm font-semibold text-white shadow-[0_18px_36px_rgba(26,58,74,0.22)]"
           aria-label={mobileView === 'list' ? 'Show map view' : 'Show list view'}
         >
           {mobileView === 'list' ? <MapIcon size={16} /> : <List size={16} />}
