@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState, useRef, useCallback } from 'react'
+import { createPortal } from 'react-dom'
 import { MapContainer, TileLayer, Marker, Polygon, Tooltip, useMap, useMapEvent } from 'react-leaflet'
 import L from 'leaflet'
 import Link from 'next/link'
@@ -161,6 +162,8 @@ const comingSoonMarkerIcon = () => L.divIcon({
   iconAnchor: [5, 5],
 })
 
+type City = (typeof cities)[0]
+
 function MapEventHandler() {
   const map = useMap()
 
@@ -178,14 +181,16 @@ function MapPopup({
   onEnter,
   onLeave,
   onClose,
+  portalTarget,
 }: {
-  city: (typeof cities)[0] | null
+  city: City | null
   onEnter: () => void
   onLeave: () => void
   onClose: () => void
+  portalTarget: HTMLDivElement | null
 }) {
   const map = useMap()
-  const [pos, setPos] = useState<{ x: number; y: number } | null>(null)
+  const [pos, setPos] = useState<{ x: number; y: number; showBelow: boolean } | null>(null)
   const imagesRef = useRef<HTMLDivElement | null>(null)
   const [scrollLeft, setScrollLeft] = useState(0)
   const [canScrollLeft, setCanScrollLeft] = useState(false)
@@ -197,7 +202,18 @@ function MapPopup({
       return
     }
     const p = map.latLngToContainerPoint([city.lat, city.lng])
-    setPos({ x: p.x, y: p.y })
+    const containerSize = map.getSize()
+    const popupHalfWidth = 140
+    const popupHeight = 250
+    const padding = 16
+    const clampedX = Math.min(Math.max(p.x, popupHalfWidth + padding), containerSize.x - popupHalfWidth - padding)
+    const showBelow = p.y < popupHeight + padding
+
+    setPos({
+      x: clampedX,
+      y: showBelow ? p.y + 18 : p.y,
+      showBelow,
+    })
   }, [city, map])
 
   const updateImageScrollState = useCallback(() => {
@@ -230,15 +246,15 @@ function MapPopup({
   useMapEvent('move', updatePos)
   useMapEvent('zoom', updatePos)
 
-  if (!city || !pos) return null
+  if (!city || !pos || !portalTarget) return null
 
-  return (
+  return createPortal(
     <div
       style={{
         position: 'absolute',
         left: pos.x,
         top: pos.y,
-        transform: 'translate(-50%, -100%) translateY(-14px)',
+        transform: pos.showBelow ? 'translate(-50%, 14px)' : 'translate(-50%, -100%) translateY(-14px)',
         zIndex: 2000,
         pointerEvents: 'auto',
       }}
@@ -327,11 +343,25 @@ function MapPopup({
             </div>
           </div>
           <div className="flex justify-center">
-            <div className="w-0 h-0 border-l-[6px] border-r-[6px] border-t-[8px] border-l-transparent border-r-transparent border-t-white drop-shadow-sm" />
+            <div
+              className="w-0 h-0 drop-shadow-sm"
+              style={pos.showBelow
+                ? {
+                    borderLeft: '6px solid transparent',
+                    borderRight: '6px solid transparent',
+                    borderBottom: '8px solid white',
+                  }
+                : {
+                    borderLeft: '6px solid transparent',
+                    borderRight: '6px solid transparent',
+                    borderTop: '8px solid white',
+                  }}
+            />
           </div>
         </Link>
       </div>
-    </div>
+    </div>,
+    portalTarget
   )
 }
 
@@ -379,6 +409,7 @@ function MapLayers({
   onPopupLeave,
   onPopupClose,
   onMapClick,
+  popupPortalTarget,
 }: {
   hoveredCity: string | null
   activePopupCity: string | null
@@ -389,6 +420,7 @@ function MapLayers({
   onPopupLeave: () => void
   onPopupClose: () => void
   onMapClick: () => void
+  popupPortalTarget: HTMLDivElement | null
 }) {
   const activeKey = hoveredCity || activePopupCity
   const activeCity = cities.find((c) => c.key === activeKey) || null
@@ -411,7 +443,7 @@ function MapLayers({
             mouseout: onMarkerLeave,
             click: (e) => {
               if (e.originalEvent) {
-                ;(e.originalEvent as Event).stopPropagation()
+                L.DomEvent.stop(e.originalEvent as MouseEvent)
               }
               onMarkerClick(city.key)
             },
@@ -435,7 +467,13 @@ function MapLayers({
           </Tooltip>
         </Marker>
       ))}
-      <MapPopup city={activeCity} onEnter={onPopupEnter} onLeave={onPopupLeave} onClose={onPopupClose} />
+      <MapPopup
+        city={activeCity}
+        onEnter={onPopupEnter}
+        onLeave={onPopupLeave}
+        onClose={onPopupClose}
+        portalTarget={popupPortalTarget}
+      />
     </>
   )
 }
@@ -454,10 +492,19 @@ export default function DestinationsMapInner() {
   const [hoveredCity, setHoveredCity] = useState<string | null>(null)
   const [activePopupCity, setActivePopupCity] = useState<string | null>(null)
   const [mobileMapOpen, setMobileMapOpen] = useState(false)
+  const [desktopPopupPortalTarget, setDesktopPopupPortalTarget] = useState<HTMLDivElement | null>(null)
+  const [mobilePopupPortalTarget, setMobilePopupPortalTarget] = useState<HTMLDivElement | null>(null)
   const hoverTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const lastMarkerInteractionRef = useRef(0)
 
   useEffect(() => {
     setMounted(true)
+  }, [])
+
+  useEffect(() => {
+    return () => {
+      if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current)
+    }
   }, [])
 
   useEffect(() => {
@@ -495,6 +542,9 @@ export default function DestinationsMapInner() {
   }, [])
 
   const handleMarkerClick = useCallback((key: string) => {
+    lastMarkerInteractionRef.current = Date.now()
+    if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current)
+    setHoveredCity(key)
     setActivePopupCity((prev) => (prev === key ? null : key))
   }, [])
 
@@ -516,7 +566,12 @@ export default function DestinationsMapInner() {
   }, [])
 
   const handleMapClick = useCallback(() => {
+    if (Date.now() - lastMarkerInteractionRef.current < 250) {
+      return
+    }
+
     setActivePopupCity(null)
+    setHoveredCity(null)
   }, [])
 
   if (!mounted) {
@@ -775,8 +830,10 @@ export default function DestinationsMapInner() {
                 onPopupLeave={handlePopupLeave}
                 onPopupClose={handlePopupClose}
                 onMapClick={handleMapClick}
+                popupPortalTarget={desktopPopupPortalTarget}
               />
             </MapContainer>
+            <div ref={setDesktopPopupPortalTarget} className="pointer-events-none absolute inset-0 z-[1200] overflow-visible" />
             <div style={{ position: 'absolute', bottom: 20, right: 20, zIndex: 1000, width: 36, height: 36, borderRadius: '50%', background: 'white', border: '1px solid #ebe4d8', boxShadow: '0 1px 4px rgba(0,0,0,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold', fontSize: 14, color: '#1a3a4a', pointerEvents: 'none' }}>N</div>
           </div>
         </div>
@@ -810,8 +867,10 @@ export default function DestinationsMapInner() {
               onPopupLeave={handlePopupLeave}
               onPopupClose={handlePopupClose}
               onMapClick={handleMapClick}
+              popupPortalTarget={mobilePopupPortalTarget}
             />
           </MapContainer>
+          <div ref={setMobilePopupPortalTarget} className="pointer-events-none absolute inset-0 z-[1200] overflow-visible" />
           <div style={{ position: 'absolute', bottom: 88, right: 20, zIndex: 1000, width: 36, height: 36, borderRadius: '50%', background: 'white', border: '1px solid #ebe4d8', boxShadow: '0 1px 4px rgba(0,0,0,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold', fontSize: 14, color: '#1a3a4a', pointerEvents: 'none' }}>N</div>
           </div>
         </div>
