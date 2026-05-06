@@ -255,22 +255,8 @@ export default function Navigation() {
                 )}
               </Link>
             ))}
-          </nav>
-
-          <div className="mt-auto pt-6">
-            <Link
-              href="/#footer-email-cta"
-              onClick={closeMenu}
-              className="inline-flex min-h-[52px] w-full items-center justify-center gap-2 rounded-full bg-[#af5d32] px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#9a4f28]"
-            >
-              Get the Free Cheat Sheet
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
-            </Link>
-          </div>
-        </div>
+        </nav>
+      </div>
       </div>
     </header>
   )
