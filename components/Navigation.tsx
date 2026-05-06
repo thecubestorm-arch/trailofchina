@@ -116,7 +116,7 @@ export default function Navigation() {
       aria-hidden={hideMainNav ? 'true' : undefined}
     >
       <div className="container-px mx-auto flex w-full max-w-7xl items-center justify-between py-3 md:py-4">
-        <Link href="/" className="flex flex-col">
+        <Link href="/" className="flex flex-col min-h-[44px] justify-center md:min-h-0">
           <span className="font-serif text-2xl leading-none tracking-[0.08em] text-[var(--foreground)]">
             Trail of China
           </span>

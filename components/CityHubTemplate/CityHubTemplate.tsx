@@ -91,7 +91,7 @@ function SectionHeader({
         {href && (
           <Link
             href={href}
-            className="mb-1 self-end whitespace-nowrap text-sm font-medium text-[#af5d32] hover:underline flex-shrink-0"
+            className="mb-1 self-end whitespace-nowrap text-sm font-medium text-[#af5d32] hover:underline flex-shrink-0 flex items-center min-h-[44px] py-1 md:min-h-0 md:py-0"
           >
             {hrefLabel}
           </Link>
@@ -957,7 +957,7 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
                 </div>
                 <Link
                   href={`/destinations/${config.slug}/what-to-do`}
-                  className="mb-1 self-end whitespace-nowrap text-sm font-medium text-[#af5d32] hover:underline"
+                  className="mb-1 self-end whitespace-nowrap text-sm font-medium text-[#af5d32] hover:underline flex items-center min-h-[44px] py-1 md:min-h-0 md:py-0"
                 >
                   See all →
                 </Link>

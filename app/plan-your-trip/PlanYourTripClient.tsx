@@ -157,7 +157,7 @@ export default function PlanYourTripClient() {
 
               <Link
                 href="/plan-your-trip/travel-planner"
-                className="inline-flex items-center gap-2 self-start font-semibold text-[#f0c9b1] transition-colors hover:text-white"
+                className="inline-flex min-h-[44px] items-center gap-2 self-start font-semibold text-[#f0c9b1] transition-colors hover:text-white md:min-h-0"
               >
                 Or customize your own route
                 <span aria-hidden="true">→</span>
@@ -229,7 +229,7 @@ export default function PlanYourTripClient() {
               </div>
               <Link
                 href="/plan-your-trip/preplanned-trips"
-                className="inline-flex items-center gap-2 text-base font-semibold text-[#f5f1ea] transition-colors hover:text-[#f0c9b1]"
+                className="inline-flex min-h-[44px] items-center gap-2 text-base font-semibold text-[#f5f1ea] transition-colors hover:text-[#f0c9b1] md:min-h-0"
               >
                 Browse our preplanned trips
                 <span aria-hidden="true">→</span>

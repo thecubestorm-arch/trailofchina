@@ -71,7 +71,7 @@ export default function ExploreChinaSection() {
                           </div>
                           <Link
                             href={city.href}
-                            className="inline-flex shrink-0 items-center gap-1 text-xs font-semibold text-[#af5d32] transition-colors hover:text-[#8f4a28]"
+                            className="inline-flex shrink-0 items-center gap-1 text-xs font-semibold text-[#af5d32] transition-colors hover:text-[#8f4a28] min-h-[44px] py-1 md:min-h-0 md:py-0"
                           >
                             Explore
                             <ArrowRight size={13} />
