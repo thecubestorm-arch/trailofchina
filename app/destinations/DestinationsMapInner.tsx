@@ -3,6 +3,35 @@
 import { useEffect, useState, useRef, useCallback, type KeyboardEvent, type MouseEvent } from 'react'
 import { createPortal } from 'react-dom'
 import { MapContainer, TileLayer, Marker, Polygon, Tooltip, useMap, useMapEvent } from 'react-leaflet'
+
+// Wrapper that only renders children when the container has a non-zero size.
+// This prevents Leaflet NaN LatLng errors when the map container is 0x0.
+function MapReadyGuard({ children }: { children: React.ReactNode }) {
+  const ref = useRef<HTMLDivElement>(null)
+  const [ready, setReady] = useState(false)
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const check = () => {
+      if (el.offsetWidth > 0 && el.offsetHeight > 0) {
+        setReady(true)
+      }
+    }
+    check()
+    const ro = new ResizeObserver(() => {
+      check()
+    })
+    ro.observe(el)
+    return () => ro.disconnect()
+  }, [])
+
+  return (
+    <div ref={ref} style={{ width: '100%', height: '100%' }}>
+      {ready ? children : null}
+    </div>
+  )
+}
 import L from 'leaflet'
 import Link from 'next/link'
 import { MapPin, List, ArrowRight, Lightbulb, ShieldCheck, X, ChevronLeft, ChevronRight } from 'lucide-react'
@@ -1017,6 +1046,7 @@ export default function DestinationsMapInner() {
           </div>
 
           <div className="flex-1 relative z-0 rounded-xl overflow-hidden border border-[#ebe4d8]">
+            <MapReadyGuard>
             <MapContainer
               center={[34, 108]}
               zoom={4}
@@ -1046,6 +1076,7 @@ export default function DestinationsMapInner() {
                 popupPortalTarget={desktopPopupPortalTarget}
               />
             </MapContainer>
+            </MapReadyGuard>
             <div ref={setDesktopPopupPortalTarget} className="pointer-events-none absolute inset-0 z-[1200] overflow-visible" />
             <div style={{ position: 'absolute', bottom: 20, right: 20, zIndex: 1000, width: 36, height: 36, borderRadius: '50%', background: 'white', border: '1px solid #ebe4d8', boxShadow: '0 1px 4px rgba(0,0,0,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold', fontSize: 14, color: '#1a3a4a', pointerEvents: 'none' }}>N</div>
           </div>
@@ -1055,6 +1086,7 @@ export default function DestinationsMapInner() {
       {mobileMapOpen && (
         <div className="fixed inset-x-0 bottom-0 top-[var(--site-nav-height,4.5rem)] z-[95] overflow-hidden bg-white overscroll-contain md:hidden">
           <div className="relative z-0 h-full w-full">
+          <MapReadyGuard>
           <MapContainer
             center={[34, 108]}
             zoom={4.4}
@@ -1084,6 +1116,7 @@ export default function DestinationsMapInner() {
               popupPortalTarget={mobilePopupPortalTarget}
             />
           </MapContainer>
+          </MapReadyGuard>
           <div
             ref={(node) => {
               mobilePopupPortalRef.current = node
