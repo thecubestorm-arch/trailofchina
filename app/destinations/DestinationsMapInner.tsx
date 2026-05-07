@@ -174,11 +174,46 @@ function safeStopDomEvent(event?: Event | null) {
     // Fall back to native event guards when Leaflet receives an unexpected touch event shape.
   }
 
-  if ('preventDefault' in event && typeof event.preventDefault === 'function') {
-    event.preventDefault()
+  try {
+    if ('preventDefault' in event && typeof event.preventDefault === 'function') {
+      event.preventDefault()
+    }
+  } catch {
+    // Ignore unexpected native event failures.
   }
-  if ('stopPropagation' in event && typeof event.stopPropagation === 'function') {
-    event.stopPropagation()
+
+  try {
+    if ('stopPropagation' in event && typeof event.stopPropagation === 'function') {
+      event.stopPropagation()
+    }
+  } catch {
+    // Ignore unexpected native event failures.
+  }
+}
+
+function safeStopReactEvent(event?: {
+  preventDefault?: () => void
+  stopPropagation?: () => void
+  nativeEvent?: Event | null
+} | null) {
+  if (!event) return
+
+  try {
+    event.preventDefault?.()
+  } catch {
+    // Ignore unexpected synthetic event failures.
+  }
+
+  try {
+    event.stopPropagation?.()
+  } catch {
+    // Ignore unexpected synthetic event failures.
+  }
+
+  try {
+    safeStopDomEvent(event.nativeEvent)
+  } catch {
+    // Ignore unexpected native event failures.
   }
 }
 
@@ -216,26 +251,54 @@ function MapPopup({
   const [canScrollLeft, setCanScrollLeft] = useState(false)
   const [canScrollRight, setCanScrollRight] = useState(false)
   const touchStartedAfterBlockRef = useRef(false)
+  const closeScheduledRef = useRef(false)
+
+  const schedulePopupClose = useCallback(() => {
+    if (closeScheduledRef.current) return
+    closeScheduledRef.current = true
+
+    const runClose = () => {
+      closeScheduledRef.current = false
+
+      try {
+        onClose()
+      } catch {
+        // Ignore close handler failures to keep the page stable.
+      }
+    }
+
+    if (typeof window !== 'undefined' && typeof window.requestAnimationFrame === 'function') {
+      window.requestAnimationFrame(runClose)
+      return
+    }
+
+    setTimeout(runClose, 0)
+  }, [onClose])
 
   const updatePos = useCallback(() => {
     if (!city) {
       setPos(null)
       return
     }
-    const p = map.latLngToContainerPoint([city.lat, city.lng])
-    const containerSize = map.getSize()
-    const popupHalfWidth = 140
-    const popupHeight = 250
-    const padding = 16
-    const clampedX = Math.min(Math.max(p.x, popupHalfWidth + padding), containerSize.x - popupHalfWidth - padding)
-    const showBelow = p.y < popupHeight + padding
+    try {
+      const p = map.latLngToContainerPoint([city.lat, city.lng])
+      const containerSize = map.getSize()
+      const popupHalfWidth = 140
+      const popupHeight = 250
+      const padding = 16
+      const clampedX = Math.min(Math.max(p.x, popupHalfWidth + padding), containerSize.x - popupHalfWidth - padding)
+      const showBelow = p.y < popupHeight + padding
 
-    setPos({
-      x: clampedX,
-      y: showBelow ? p.y + 18 : p.y,
-      showBelow,
-    })
-  }, [city, map])
+      setPos({
+        x: clampedX,
+        y: showBelow ? p.y + 18 : p.y,
+        showBelow,
+      })
+    } catch {
+      setPos(null)
+      schedulePopupClose()
+    }
+  }, [city, map, schedulePopupClose])
 
   const updateImageScrollState = useCallback(() => {
     const container = imagesRef.current
@@ -274,170 +337,206 @@ function MapPopup({
   const isNavigationBlocked = () => Date.now() < navigationBlockedUntil
   const cityHref = city?.href ?? ''
 
-  const handlePopupCardPointerDown = () => {
-    touchStartedAfterBlockRef.current = !isNavigationBlocked()
+  const handlePopupCardPointerDown = (event?: {
+    preventDefault?: () => void
+    stopPropagation?: () => void
+    nativeEvent?: Event | null
+  } | null) => {
+    try {
+      safeStopReactEvent(event)
+      touchStartedAfterBlockRef.current = !isNavigationBlocked()
+    } catch {
+      touchStartedAfterBlockRef.current = false
+      schedulePopupClose()
+    }
   }
 
   const handlePopupCardClick = (event: MouseEvent<HTMLElement>) => {
     try {
       if (isNavigationBlocked() || !touchStartedAfterBlockRef.current) {
-        event.preventDefault()
-        event.stopPropagation()
+        safeStopReactEvent(event)
         return
       }
 
-      event.stopPropagation()
-      window.location.assign(cityHref)
+      safeStopReactEvent(event)
+
+      if (!cityHref || typeof window === 'undefined' || !window.location || typeof window.location.assign !== 'function') {
+        schedulePopupClose()
+        return
+      }
+
+      try {
+        window.location.assign(cityHref)
+      } catch {
+        schedulePopupClose()
+      }
     } catch {
-      event.preventDefault()
-      event.stopPropagation()
+      safeStopReactEvent(event)
+      schedulePopupClose()
     }
   }
 
   const handlePopupCardKeyDown = (event: KeyboardEvent) => {
     if (event.key !== 'Enter' && event.key !== ' ') return
 
-    event.preventDefault()
-    event.stopPropagation()
+    safeStopReactEvent(event)
 
     try {
+      if (!cityHref || typeof window === 'undefined' || !window.location || typeof window.location.assign !== 'function') {
+        schedulePopupClose()
+        return
+      }
+
       window.location.assign(cityHref)
     } catch {
-      // Ignore navigation failures and keep the popup open.
+      schedulePopupClose()
     }
   }
 
-  if (!city || !pos || !portalTarget) return null
+  try {
+    if (!city || !pos) return null
 
-  return createPortal(
-    <div
-      onClick={(e) => e.stopPropagation()}
-      onPointerDown={(e) => e.stopPropagation()}
-      onTouchStart={(e) => e.stopPropagation()}
-      onTouchEnd={(e) => e.stopPropagation()}
-      style={{
-        position: 'absolute',
-        left: pos.x,
-        top: pos.y,
-        transform: pos.showBelow ? 'translate(-50%, 14px)' : 'translate(-50%, -100%) translateY(-14px)',
-        zIndex: 2000,
-        pointerEvents: 'auto',
-        touchAction: 'manipulation',
-      }}
-      onMouseEnter={onEnter}
-      onMouseLeave={onLeave}
-    >
-      <div className="relative">
-        <button
-          onClick={(e) => {
-            e.preventDefault()
-            e.stopPropagation()
-            onClose()
-          }}
-          className="absolute -top-2 -right-2 z-10 w-6 h-6 bg-white rounded-full shadow-md flex items-center justify-center border border-[#ebe4d8] md:hidden cursor-pointer"
-          aria-label="Close popup"
-        >
-          <X size={12} className="text-[#64748b]" />
-        </button>
-        <div
-          role="link"
-          tabIndex={0}
-          aria-label={`Explore ${city.name}`}
-          className="block cursor-pointer"
-          onPointerDown={handlePopupCardPointerDown}
-          onTouchStart={handlePopupCardPointerDown}
-          onClick={handlePopupCardClick}
-          onKeyDown={handlePopupCardKeyDown}
-        >
-          <div className="bg-white rounded-xl shadow-lg border border-[#ebe4d8] min-w-[240px] max-w-[280px] overflow-hidden sm:min-w-[280px] sm:max-w-[320px]">
-            <div className="relative group/images px-3 pt-3 pb-1">
+    const resolvedPortalTarget = portalTarget ?? (typeof document !== 'undefined' ? document.body : null)
+    if (!resolvedPortalTarget) return null
+
+    return createPortal(
+      <div
+        onClick={(e) => safeStopReactEvent(e)}
+        onPointerDown={(e) => safeStopReactEvent(e)}
+        onTouchStart={(e) => safeStopReactEvent(e)}
+        onTouchEnd={(e) => safeStopReactEvent(e)}
+        style={{
+          position: 'absolute',
+          left: pos.x,
+          top: pos.y,
+          transform: pos.showBelow ? 'translate(-50%, 14px)' : 'translate(-50%, -100%) translateY(-14px)',
+          zIndex: 2000,
+          pointerEvents: 'auto',
+          touchAction: 'manipulation',
+        }}
+        onMouseEnter={onEnter}
+        onMouseLeave={onLeave}
+      >
+        <div className="relative">
+          <button
+            onClick={(e) => {
+              safeStopReactEvent(e)
+              schedulePopupClose()
+            }}
+            className="absolute -top-2 -right-2 z-10 w-6 h-6 bg-white rounded-full shadow-md flex items-center justify-center border border-[#ebe4d8] md:hidden cursor-pointer"
+            aria-label="Close popup"
+          >
+            <X size={12} className="text-[#64748b]" />
+          </button>
+          <div
+            role="link"
+            tabIndex={0}
+            aria-label={`Explore ${city.name}`}
+            className="block cursor-pointer"
+            onPointerDown={handlePopupCardPointerDown}
+            onTouchStart={handlePopupCardPointerDown}
+            onClick={handlePopupCardClick}
+            onKeyDown={handlePopupCardKeyDown}
+          >
+            <div className="bg-white rounded-xl shadow-lg border border-[#ebe4d8] min-w-[240px] max-w-[280px] overflow-hidden sm:min-w-[280px] sm:max-w-[320px]">
+              <div className="relative group/images px-3 pt-3 pb-1">
+                <div
+                  ref={imagesRef}
+                  onScroll={updateImageScrollState}
+                  data-scroll-left={scrollLeft > 0 ? 'true' : 'false'}
+                  className="flex gap-1 overflow-x-auto scroll-smooth scrollbar-hide overscroll-x-contain snap-x snap-mandatory [-webkit-overflow-scrolling:touch]"
+                >
+                  {city.images.map((img, i) => (
+                    <img
+                      key={i}
+                      src={`https://picsum.photos/seed/${img}/280/180`}
+                      alt={`${city.name} ${i + 1}`}
+                      className="h-20 w-auto rounded-md object-cover flex-shrink-0 snap-start sm:h-16"
+                      loading="lazy"
+                    />
+                  ))}
+                </div>
+                {canScrollLeft && (
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      safeStopReactEvent(e)
+                      try {
+                        imagesRef.current?.scrollBy({ left: -120, behavior: 'smooth' })
+                      } catch {
+                        schedulePopupClose()
+                      }
+                    }}
+                    className="absolute left-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full p-1 bg-white/95 text-[#1a3a4a] shadow transition-opacity hover:bg-[#f8f5ef] opacity-100 sm:left-0 sm:h-7 sm:w-7 sm:p-0"
+                    aria-label={`Scroll ${city.name} images left`}
+                  >
+                    <ChevronLeft size={14} />
+                  </button>
+                )}
+                {canScrollRight && (
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      safeStopReactEvent(e)
+                      try {
+                        imagesRef.current?.scrollBy({ left: 120, behavior: 'smooth' })
+                      } catch {
+                        schedulePopupClose()
+                      }
+                    }}
+                    className="absolute right-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full p-1 bg-white/95 text-[#1a3a4a] shadow transition-opacity hover:bg-[#f8f5ef] opacity-100 sm:right-0 sm:h-7 sm:w-7 sm:p-0"
+                    aria-label={`Scroll ${city.name} images right`}
+                  >
+                    <ChevronRight size={14} />
+                  </button>
+                )}
+              </div>
+              <div className="px-3 pb-3 pt-1">
+                <h4 className="text-sm font-bold text-[#1a3a4a]">
+                  {city.name} · <span className="text-[#af5d32]">{city.nameZh}</span>
+                </h4>
+                <p className="text-xs text-[#64748b] mt-0.5 line-clamp-2">{city.hook}</p>
+                <div className="flex flex-wrap gap-1.5 mt-2">
+                  <span className="text-[10px] font-medium text-[#64748b] bg-[#f5f1ea] px-2 py-0.5 rounded-full border border-[#ebe4d8]">
+                    ⏱ {city.duration}
+                  </span>
+                  <span className="text-[10px] font-medium text-[#64748b] bg-[#f5f1ea] px-2 py-0.5 rounded-full border border-[#ebe4d8]">
+                    {city.priceLevel}
+                  </span>
+                  <span className="text-[10px] font-medium text-[#64748b] bg-[#f5f1ea] px-2 py-0.5 rounded-full border border-[#ebe4d8]">
+                    🌤 {city.bestSeason}
+                  </span>
+                </div>
+                <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-[#af5d32]">
+                  Explore <ArrowRight size={12} />
+                </span>
+              </div>
+            </div>
+            <div className="flex justify-center">
               <div
-                ref={imagesRef}
-                onScroll={updateImageScrollState}
-                data-scroll-left={scrollLeft > 0 ? 'true' : 'false'}
-                className="flex gap-1 overflow-x-auto scroll-smooth scrollbar-hide overscroll-x-contain snap-x snap-mandatory [-webkit-overflow-scrolling:touch]"
-              >
-                {city.images.map((img, i) => (
-                  <img
-                    key={i}
-                    src={`https://picsum.photos/seed/${img}/280/180`}
-                    alt={`${city.name} ${i + 1}`}
-                    className="h-20 w-auto rounded-md object-cover flex-shrink-0 snap-start sm:h-16"
-                    loading="lazy"
-                  />
-                ))}
-              </div>
-              {canScrollLeft && (
-                <button
-                  type="button"
-                  onClick={(e) => {
-                    e.preventDefault()
-                    e.stopPropagation()
-                    imagesRef.current?.scrollBy({ left: -120, behavior: 'smooth' })
-                  }}
-                  className="absolute left-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full p-1 bg-white/95 text-[#1a3a4a] shadow transition-opacity hover:bg-[#f8f5ef] opacity-100 sm:left-0 sm:h-7 sm:w-7 sm:p-0"
-                  aria-label={`Scroll ${city.name} images left`}
-                >
-                  <ChevronLeft size={14} />
-                </button>
-              )}
-              {canScrollRight && (
-                <button
-                  type="button"
-                  onClick={(e) => {
-                    e.preventDefault()
-                    e.stopPropagation()
-                    imagesRef.current?.scrollBy({ left: 120, behavior: 'smooth' })
-                  }}
-                  className="absolute right-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full p-1 bg-white/95 text-[#1a3a4a] shadow transition-opacity hover:bg-[#f8f5ef] opacity-100 sm:right-0 sm:h-7 sm:w-7 sm:p-0"
-                  aria-label={`Scroll ${city.name} images right`}
-                >
-                  <ChevronRight size={14} />
-                </button>
-              )}
+                className="w-0 h-0 drop-shadow-sm"
+                style={pos.showBelow
+                  ? {
+                      borderLeft: '6px solid transparent',
+                      borderRight: '6px solid transparent',
+                      borderBottom: '8px solid white',
+                    }
+                  : {
+                      borderLeft: '6px solid transparent',
+                      borderRight: '6px solid transparent',
+                      borderTop: '8px solid white',
+                    }}
+              />
             </div>
-            <div className="px-3 pb-3 pt-1">
-              <h4 className="text-sm font-bold text-[#1a3a4a]">
-                {city.name} · <span className="text-[#af5d32]">{city.nameZh}</span>
-              </h4>
-              <p className="text-xs text-[#64748b] mt-0.5 line-clamp-2">{city.hook}</p>
-              <div className="flex flex-wrap gap-1.5 mt-2">
-                <span className="text-[10px] font-medium text-[#64748b] bg-[#f5f1ea] px-2 py-0.5 rounded-full border border-[#ebe4d8]">
-                  ⏱ {city.duration}
-                </span>
-                <span className="text-[10px] font-medium text-[#64748b] bg-[#f5f1ea] px-2 py-0.5 rounded-full border border-[#ebe4d8]">
-                  {city.priceLevel}
-                </span>
-                <span className="text-[10px] font-medium text-[#64748b] bg-[#f5f1ea] px-2 py-0.5 rounded-full border border-[#ebe4d8]">
-                  🌤 {city.bestSeason}
-                </span>
-              </div>
-              <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-[#af5d32]">
-                Explore <ArrowRight size={12} />
-              </span>
-            </div>
-          </div>
-          <div className="flex justify-center">
-            <div
-              className="w-0 h-0 drop-shadow-sm"
-              style={pos.showBelow
-                ? {
-                    borderLeft: '6px solid transparent',
-                    borderRight: '6px solid transparent',
-                    borderBottom: '8px solid white',
-                  }
-                : {
-                    borderLeft: '6px solid transparent',
-                    borderRight: '6px solid transparent',
-                    borderTop: '8px solid white',
-                  }}
-            />
           </div>
         </div>
-      </div>
-    </div>,
-    portalTarget
-  )
+      </div>,
+      resolvedPortalTarget
+    )
+  } catch {
+    schedulePopupClose()
+    return null
+  }
 }
 
 function MapClickHandler({ onClick }: { onClick: () => void }) {
@@ -634,12 +733,22 @@ export default function DestinationsMapInner() {
   }, [])
 
   const handleMarkerClick = useCallback((key: string) => {
-    const interactionTime = Date.now()
-    lastMarkerInteractionRef.current = interactionTime
-    setPopupNavigationBlockedUntil(interactionTime + 450)
-    if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current)
-    setHoveredCity(key)
-    setActivePopupCity((prev) => (prev === key ? null : key))
+    try {
+      const interactionTime = Date.now()
+      lastMarkerInteractionRef.current = interactionTime
+      setPopupNavigationBlockedUntil(interactionTime + 450)
+      if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current)
+      setHoveredCity(key)
+      setActivePopupCity((prev) => (prev === key ? null : key))
+    } catch {
+      try {
+        setHoveredCity(null)
+        setActivePopupCity(null)
+        setPopupNavigationBlockedUntil(0)
+      } catch {
+        // Ignore state update failures to avoid crashing the page.
+      }
+    }
   }, [])
 
   const handlePopupEnter = useCallback(() => {
