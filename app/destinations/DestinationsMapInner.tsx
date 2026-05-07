@@ -518,6 +518,7 @@ export default function DestinationsMapInner() {
   const mobilePopupPortalRef = useRef<HTMLDivElement | null>(null)
   const hoverTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const lastMarkerInteractionRef = useRef(0)
+  const bodyOverflowRef = useRef<string | null>(null)
 
   useEffect(() => {
     setMounted(true)
@@ -532,10 +533,14 @@ export default function DestinationsMapInner() {
   useEffect(() => {
     if (!mobileMapOpen) {
       setMobilePopupPortalTarget(null)
-      document.body.style.overflow = ''
+      if (bodyOverflowRef.current !== null) {
+        document.body.style.overflow = bodyOverflowRef.current
+        bodyOverflowRef.current = null
+      }
       return
     }
 
+    bodyOverflowRef.current = document.body.style.overflow
     document.body.style.overflow = 'hidden'
     const frame = requestAnimationFrame(() => {
       setMobilePopupPortalTarget(mobilePopupPortalRef.current)
@@ -543,7 +548,10 @@ export default function DestinationsMapInner() {
 
     return () => {
       cancelAnimationFrame(frame)
-      document.body.style.overflow = ''
+      if (bodyOverflowRef.current !== null) {
+        document.body.style.overflow = bodyOverflowRef.current
+        bodyOverflowRef.current = null
+      }
     }
   }, [mobileMapOpen])
 
@@ -652,7 +660,7 @@ export default function DestinationsMapInner() {
         </div>
       </div>
 
-      <div className={`max-w-6xl mx-auto px-4 py-8 ${viewMode === 'split' ? 'md:hidden' : ''}`}>
+      <div className={`max-w-6xl mx-auto px-4 py-8 pb-28 md:pb-8 ${viewMode === 'split' ? 'md:hidden' : ''}`}>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {cities.map((city) => (
             <Link
@@ -868,7 +876,7 @@ export default function DestinationsMapInner() {
       )}
 
       {mobileMapOpen && (
-        <div className="fixed inset-x-0 bottom-0 top-[var(--site-nav-height,4.5rem)] z-[95] bg-white md:hidden">
+        <div className="fixed inset-x-0 bottom-0 top-[var(--site-nav-height,4.5rem)] z-[95] overflow-hidden bg-white overscroll-contain md:hidden">
           <div className="relative z-0 h-full w-full">
           <MapContainer
             center={[34, 108]}

@@ -562,6 +562,7 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
   const hoverTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const thingsToDoScrollRef = useRef<HTMLDivElement>(null);
   const heroGalleryRef = useRef<HTMLDivElement>(null);
+  const stickyTabsRef = useRef<HTMLDivElement>(null);
   const isFiltering = searchQuery.length > 0 || activeFilters.length > 0;
 
   useEffect(() => {
@@ -679,6 +680,24 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
     };
   }, [updateHeroGalleryState]);
 
+  useEffect(() => {
+    const updateStickyOffset = () => {
+      const stickyHeight = stickyTabsRef.current?.offsetHeight ?? 0;
+      document.documentElement.style.setProperty(
+        "--city-hub-sticky-offset",
+        `calc(var(--site-nav-height, 4rem) + ${stickyHeight}px)`
+      );
+    };
+
+    updateStickyOffset();
+    window.addEventListener("resize", updateStickyOffset);
+
+    return () => {
+      window.removeEventListener("resize", updateStickyOffset);
+      document.documentElement.style.removeProperty("--city-hub-sticky-offset");
+    };
+  }, [activeFilters.length, activeTab, isFiltering, isMapView, searchQuery]);
+
   return (
     <div className="min-h-screen bg-white">
       <section className="relative w-full">
@@ -789,7 +808,10 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
         </div>
       </section>
 
-      <div className="sticky top-[var(--site-nav-height,4rem)] z-40 border-b border-[#ebe4d8] bg-white shadow-sm">
+      <div
+        ref={stickyTabsRef}
+        className="sticky top-[var(--site-nav-height,4rem)] z-40 border-b border-[#ebe4d8] bg-white shadow-sm"
+      >
         <div className="relative z-50 mx-auto max-w-6xl px-4">
           <div className="flex items-center overflow-x-auto scrollbar-hide">
             <div className="flex flex-1 overflow-x-auto scrollbar-hide">
@@ -880,9 +902,15 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
         </div>
       </div>
 
-      <main className="mx-auto max-w-6xl px-4 py-8 md:py-12">
+      <main
+        className="mx-auto max-w-6xl px-4 py-8 md:py-12"
+        style={{ scrollPaddingTop: "var(--city-hub-sticky-offset, 8.5rem)" }}
+      >
         {isMapView && (
-          <div className="space-y-4">
+          <div
+            className="space-y-4"
+            style={{ scrollMarginTop: "var(--city-hub-sticky-offset, 8.5rem)" }}
+          >
             <CityMapView
               config={config}
               searchQuery={searchQuery}
@@ -947,7 +975,10 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
         )}
 
         {!isMapView && !isFiltering && activeTab === "overview" && (
-          <div className="space-y-8 md:space-y-10">
+          <div
+            className="space-y-8 md:space-y-10"
+            style={{ scrollMarginTop: "var(--city-hub-sticky-offset, 8.5rem)" }}
+          >
             <div className="relative">
               <div className="mb-4 flex items-center justify-between md:mb-6">
                 <div>
@@ -1049,7 +1080,10 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
         )}
 
         {!isMapView && !isFiltering && activeTab === "things-to-do" && (
-          <div className="space-y-8 md:space-y-10">
+          <div
+            className="space-y-8 md:space-y-10"
+            style={{ scrollMarginTop: "var(--city-hub-sticky-offset, 8.5rem)" }}
+          >
             <ThingsToDoSection config={config} expanded />
             <FooterCTA
               title={config.footerTitle}
@@ -1061,7 +1095,10 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
         )}
 
         {!isMapView && !isFiltering && activeTab === "where-to-eat" && (
-          <div className="space-y-8 md:space-y-10">
+          <div
+            className="space-y-8 md:space-y-10"
+            style={{ scrollMarginTop: "var(--city-hub-sticky-offset, 8.5rem)" }}
+          >
             <WhereToEatSection config={config} />
             <FooterCTA
               title={config.footerTitle}
@@ -1073,7 +1110,10 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
         )}
 
         {!isMapView && !isFiltering && activeTab === "where-to-stay" && (
-          <div className="space-y-8 md:space-y-10">
+          <div
+            className="space-y-8 md:space-y-10"
+            style={{ scrollMarginTop: "var(--city-hub-sticky-offset, 8.5rem)" }}
+          >
             <WhereToStaySection config={config} />
             <FooterCTA
               title={config.footerTitle}
@@ -1085,7 +1125,10 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
         )}
 
         {!isMapView && !isFiltering && activeTab === "essentials" && (
-          <div className="space-y-8 md:space-y-10">
+          <div
+            className="space-y-8 md:space-y-10"
+            style={{ scrollMarginTop: "var(--city-hub-sticky-offset, 8.5rem)" }}
+          >
             <KnowBeforeYouGoSection config={config} expanded />
             <LocalTipsSection config={config} />
             <FooterCTA
