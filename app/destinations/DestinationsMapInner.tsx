@@ -164,6 +164,24 @@ const comingSoonMarkerIcon = () => L.divIcon({
 
 type City = (typeof cities)[0]
 
+function safeStopDomEvent(event?: Event | null) {
+  if (!event) return
+
+  try {
+    L.DomEvent.stop(event)
+    return
+  } catch {
+    // Fall back to native event guards when Leaflet receives an unexpected touch event shape.
+  }
+
+  if ('preventDefault' in event && typeof event.preventDefault === 'function') {
+    event.preventDefault()
+  }
+  if ('stopPropagation' in event && typeof event.stopPropagation === 'function') {
+    event.stopPropagation()
+  }
+}
+
 function MapEventHandler() {
   const map = useMap()
 
@@ -190,6 +208,7 @@ function MapPopup({
   portalTarget: HTMLDivElement | null
 }) {
   const map = useMap()
+  const resolvedPortalTarget = portalTarget ?? map.getContainer().parentElement
   const [pos, setPos] = useState<{ x: number; y: number; showBelow: boolean } | null>(null)
   const imagesRef = useRef<HTMLDivElement | null>(null)
   const [scrollLeft, setScrollLeft] = useState(0)
@@ -246,10 +265,13 @@ function MapPopup({
   useMapEvent('move', updatePos)
   useMapEvent('zoom', updatePos)
 
-  if (!city || !pos || !portalTarget) return null
+  if (!city || !pos || !resolvedPortalTarget) return null
 
   return createPortal(
     <div
+      onClick={(e) => e.stopPropagation()}
+      onPointerDown={(e) => e.stopPropagation()}
+      onTouchStart={(e) => e.stopPropagation()}
       style={{
         position: 'absolute',
         left: pos.x,
@@ -257,6 +279,7 @@ function MapPopup({
         transform: pos.showBelow ? 'translate(-50%, 14px)' : 'translate(-50%, -100%) translateY(-14px)',
         zIndex: 2000,
         pointerEvents: 'auto',
+        touchAction: 'manipulation',
       }}
       onMouseEnter={onEnter}
       onMouseLeave={onLeave}
@@ -361,7 +384,7 @@ function MapPopup({
         </Link>
       </div>
     </div>,
-    portalTarget
+    resolvedPortalTarget
   )
 }
 
@@ -442,9 +465,7 @@ function MapLayers({
             mouseover: () => onMarkerEnter(city.key),
             mouseout: onMarkerLeave,
             click: (e) => {
-              if (e.originalEvent) {
-                L.DomEvent.stop(e.originalEvent as MouseEvent)
-              }
+              safeStopDomEvent(e.originalEvent)
               onMarkerClick(city.key)
             },
           }}
@@ -494,6 +515,7 @@ export default function DestinationsMapInner() {
   const [mobileMapOpen, setMobileMapOpen] = useState(false)
   const [desktopPopupPortalTarget, setDesktopPopupPortalTarget] = useState<HTMLDivElement | null>(null)
   const [mobilePopupPortalTarget, setMobilePopupPortalTarget] = useState<HTMLDivElement | null>(null)
+  const mobilePopupPortalRef = useRef<HTMLDivElement | null>(null)
   const hoverTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const lastMarkerInteractionRef = useRef(0)
 
@@ -509,12 +531,18 @@ export default function DestinationsMapInner() {
 
   useEffect(() => {
     if (!mobileMapOpen) {
+      setMobilePopupPortalTarget(null)
       document.body.style.overflow = ''
       return
     }
 
     document.body.style.overflow = 'hidden'
+    const frame = requestAnimationFrame(() => {
+      setMobilePopupPortalTarget(mobilePopupPortalRef.current)
+    })
+
     return () => {
+      cancelAnimationFrame(frame)
       document.body.style.overflow = ''
     }
   }, [mobileMapOpen])
@@ -870,7 +898,13 @@ export default function DestinationsMapInner() {
               popupPortalTarget={mobilePopupPortalTarget}
             />
           </MapContainer>
-          <div ref={setMobilePopupPortalTarget} className="pointer-events-none absolute inset-0 z-[1200] overflow-visible" />
+          <div
+            ref={(node) => {
+              mobilePopupPortalRef.current = node
+              setMobilePopupPortalTarget(node)
+            }}
+            className="pointer-events-none absolute inset-0 z-[1200] overflow-visible"
+          />
           <div style={{ position: 'absolute', bottom: 88, right: 20, zIndex: 1000, width: 36, height: 36, borderRadius: '50%', background: 'white', border: '1px solid #ebe4d8', boxShadow: '0 1px 4px rgba(0,0,0,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold', fontSize: 14, color: '#1a3a4a', pointerEvents: 'none' }}>N</div>
           </div>
         </div>
