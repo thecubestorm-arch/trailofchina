@@ -281,8 +281,12 @@ function MapPopup({
       return
     }
     try {
-      const p = map.latLngToContainerPoint([city.lat, city.lng])
       const containerSize = map.getSize()
+      if (containerSize.x === 0 || containerSize.y === 0) {
+        setPos(null)
+        return
+      }
+      const p = map.latLngToContainerPoint([city.lat, city.lng])
       const popupHalfWidth = 140
       const popupHeight = 250
       const padding = 16
@@ -551,6 +555,9 @@ function FlyToCity({ activePopupCity }: { activePopupCity: string | null }) {
     if (!activePopupCity) return
     const city = cities.find((item) => item.key === activePopupCity)
     if (!city) return
+    // Guard: don't flyTo if map container has zero size (causes NaN LatLng error)
+    const size = map.getSize()
+    if (size.x === 0 || size.y === 0) return
     map.flyTo([city.lat, city.lng], Math.max(map.getZoom(), 5), {
       duration: 0.8,
     })
