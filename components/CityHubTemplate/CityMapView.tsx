@@ -82,12 +82,15 @@ const poiMarkerIcon = (
   name: string,
   showLabel: boolean,
   isHovered: boolean,
-  isDimmed: boolean
+  isDimmed: boolean,
+  isMobile: boolean
 ) => {
   const visibleCategories: POICategory[] =
     categories.length > 0 ? categories : ["attraction"];
   const pillCount = visibleCategories.length;
-  const pillSize = isHovered ? 30 : 24;
+  const basePillSize = isMobile ? 34 : 24;
+  const hoverPillSize = isMobile ? 40 : 30;
+  const pillSize = isHovered ? hoverPillSize : basePillSize;
   const gap = 4;
   const pillsWidth = pillCount * pillSize + Math.max(0, pillCount - 1) * gap;
   const labelGap = showLabel ? 4 : 0;
@@ -96,8 +99,9 @@ const poiMarkerIcon = (
   const labelWidth = showLabel
     ? estimatedLabelTextWidth + labelHorizontalPadding
     : 0;
-  const width = pillsWidth + 10 + labelGap + labelWidth;
-  const height = pillSize + 10;
+  const touchTargetSize = isMobile ? 44 : pillSize + 10;
+  const width = Math.max(pillsWidth + 10 + labelGap + labelWidth, touchTargetSize);
+  const height = Math.max(pillSize + 10, touchTargetSize);
   const borderColor = isHovered ? "#af5d32" : "white";
   const borderWidth = isHovered ? 2.5 : 2;
   const opacity = isDimmed ? (isHovered ? 0.85 : 0.45) : 1;
@@ -117,8 +121,8 @@ const poiMarkerIcon = (
     : "";
 
   return L.divIcon({
-    className: "",
-    html: `<div style="width:${width}px;height:${height}px;display:flex;align-items:center;justify-content:flex-start;opacity:${opacity};transform:${scale};transform-origin:center;transition:transform 0.2s ease, opacity 0.2s ease;">
+    className: "city-hub-poi-marker",
+    html: `<div style="width:${width}px;height:${height}px;display:flex;align-items:center;justify-content:center;opacity:${opacity};transform:${scale};transform-origin:center;transition:transform 0.2s ease, opacity 0.2s ease;touch-action:manipulation;">
       <div style="display:flex;align-items:center;gap:${labelGap}px;padding:5px;">
         <div style="display:flex;align-items:center;gap:${gap}px;">${pills}</div>
         ${labelHtml}
@@ -179,10 +183,22 @@ export default function CityMapView({
     airports: true,
   });
   const [panelOpen, setPanelOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const listRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 767px)");
+    const updateIsMobile = () => setIsMobile(mediaQuery.matches);
+
+    updateIsMobile();
+    mediaQuery.addEventListener("change", updateIsMobile);
+    return () => {
+      mediaQuery.removeEventListener("change", updateIsMobile);
+    };
   }, []);
 
   const activeCategories = useMemo(
@@ -537,11 +553,16 @@ export default function CityMapView({
                   marker.name,
                   zoom >= 13,
                   hoveredItem === marker.id,
-                  marker.activeMarkerCategories.length === 0
+                  marker.activeMarkerCategories.length === 0,
+                  isMobile
                 )}
                 eventHandlers={{
                   mouseover: () => onHoverEnter(marker.id),
                   mouseout: onHoverLeave,
+                  click: (event) => {
+                    onHoverEnter(marker.id);
+                    event.target.openPopup();
+                  },
                 }}
               >
                 <Popup>
@@ -737,6 +758,17 @@ export default function CityMapView({
           .city-hub-map,
           .city-hub-map.leaflet-container {
             z-index: 0;
+          }
+
+          .city-hub-map .city-hub-poi-marker {
+            background: transparent;
+            border: 0;
+          }
+
+          .city-hub-map .city-hub-poi-marker > div {
+            min-width: 44px;
+            min-height: 44px;
+            cursor: pointer;
           }
 
           .city-hub-map .leaflet-pane {

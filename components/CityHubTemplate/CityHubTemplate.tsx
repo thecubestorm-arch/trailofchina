@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
@@ -563,6 +563,10 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
   const thingsToDoScrollRef = useRef<HTMLDivElement>(null);
   const heroGalleryRef = useRef<HTMLDivElement>(null);
   const stickyTabsRef = useRef<HTMLDivElement>(null);
+  const tabsRailRef = useRef<HTMLDivElement>(null);
+  const tabButtonRefs = useRef<Partial<Record<Tab, HTMLButtonElement | null>>>({});
+  const [tabRailCanScrollLeft, setTabRailCanScrollLeft] = useState(false);
+  const [tabRailCanScrollRight, setTabRailCanScrollRight] = useState(false);
   const isFiltering = searchQuery.length > 0 || activeFilters.length > 0;
 
   useEffect(() => {
@@ -698,6 +702,33 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
     };
   }, [activeFilters.length, activeTab, isFiltering, isMapView, searchQuery]);
 
+  const updateTabRailState = useCallback(() => {
+    const container = tabsRailRef.current;
+    if (!container) return;
+
+    const maxScrollLeft = container.scrollWidth - container.clientWidth;
+    setTabRailCanScrollLeft(container.scrollLeft > 4);
+    setTabRailCanScrollRight(container.scrollLeft < maxScrollLeft - 4);
+  }, []);
+
+  useEffect(() => {
+    updateTabRailState();
+    window.addEventListener("resize", updateTabRailState);
+    return () => {
+      window.removeEventListener("resize", updateTabRailState);
+    };
+  }, [updateTabRailState]);
+
+  useEffect(() => {
+    const activeButton = tabButtonRefs.current[activeTab];
+    activeButton?.scrollIntoView({
+      behavior: "smooth",
+      inline: "center",
+      block: "nearest",
+    });
+    requestAnimationFrame(updateTabRailState);
+  }, [activeTab, updateTabRailState]);
+
   return (
     <div className="min-h-screen bg-white">
       <section className="relative w-full">
@@ -813,18 +844,37 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
         className="sticky top-[var(--site-nav-height,4rem)] z-40 border-b border-[#ebe4d8] bg-white shadow-sm"
       >
         <div className="relative z-50 mx-auto max-w-6xl px-4">
-          <div className="flex items-center overflow-x-auto scrollbar-hide">
-            <div className="flex flex-1 overflow-x-auto scrollbar-hide">
+          <div className="relative flex items-center">
+            <div
+              aria-hidden="true"
+              className={`pointer-events-none absolute bottom-0 left-0 top-0 z-10 w-5 bg-gradient-to-r from-white to-transparent transition-opacity md:hidden ${
+                tabRailCanScrollLeft ? "opacity-100" : "opacity-0"
+              }`}
+            />
+            <div
+              aria-hidden="true"
+              className={`pointer-events-none absolute bottom-0 right-0 top-0 z-10 w-5 bg-gradient-to-l from-white to-transparent transition-opacity md:hidden ${
+                tabRailCanScrollRight ? "opacity-100" : "opacity-0"
+              }`}
+            />
+            <div
+              ref={tabsRailRef}
+              onScroll={updateTabRailState}
+              className="scrollbar-hide flex flex-1 snap-x snap-mandatory overflow-x-auto scroll-smooth [-webkit-overflow-scrolling:touch]"
+            >
               {tabs.map((tab) => {
                 const isActive = !isMapView && activeTab === tab.id;
                 return (
                   <button
                     key={tab.id}
+                    ref={(node) => {
+                      tabButtonRefs.current[tab.id] = node;
+                    }}
                     onClick={() => {
                       setIsMapView(false);
                       setActiveTab(tab.id);
                     }}
-                    className={`flex min-h-[44px] cursor-pointer items-center whitespace-nowrap border-b-[3px] px-2.5 py-2 text-sm transition-colors md:px-4 ${
+                    className={`flex min-h-[44px] min-w-fit shrink-0 snap-start cursor-pointer items-center whitespace-nowrap border-b-[3px] px-3 py-2.5 text-sm transition-colors md:px-4 md:py-2 ${
                       isActive
                         ? "rounded-t-lg border-[#af5d32] bg-[#f5f1ea]/50 font-semibold text-[#1a3a4a]"
                         : "border-transparent font-medium text-[#64748b] hover:text-[#1a3a4a]"
@@ -838,24 +888,21 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
             </div>
             <button
               onClick={() => setIsMapView((v) => !v)}
-              className={`ml-2 flex min-h-[44px] flex-shrink-0 items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-semibold transition-colors ${
+              className={`ml-2 hidden min-h-[44px] flex-shrink-0 items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-semibold transition-colors md:flex ${
                 isMapView
                   ? "bg-[#1a3a4a] text-white"
                   : "bg-[#f5f1ea] text-[#1a3a4a] hover:bg-[#ebe4d8]"
               }`}
             >
               {isMapView ? <List size={16} /> : <Map size={16} />}
-              <span className="hidden md:inline">
-                {isMapView ? "List View" : "Map View"}
-              </span>
-              <span className="md:hidden">{isMapView ? "List" : "Map"}</span>
+              <span>{isMapView ? "List View" : "Map View"}</span>
             </button>
           </div>
         </div>
 
         <div className="relative z-40 border-t border-[#ebe4d8]">
-          <div className="mx-auto max-w-6xl px-4 py-3">
-            <div className="mb-3 flex items-center gap-3 rounded-2xl border border-[#ebe4d8] bg-[#faf8f4] px-3 py-2.5">
+          <div className="mx-auto max-w-6xl px-4 py-2.5 md:py-3">
+            <div className="mb-2.5 flex items-center gap-3 rounded-2xl border border-[#ebe4d8] bg-[#faf8f4] px-3 py-2.5 md:mb-3">
               <SlidersHorizontal
                 className="flex-shrink-0 text-[#64748b]"
                 size={20}
@@ -876,7 +923,7 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
                 </button>
               )}
             </div>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-1.5 md:gap-2">
               {filterGroups.map((group) => (
                 <div key={group.label} className="flex flex-wrap items-center gap-1.5">
                   <span className="mr-0.5 text-xs font-medium text-[#64748b]">
@@ -903,7 +950,7 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
       </div>
 
       <main
-        className="mx-auto max-w-6xl px-4 py-8 md:py-12"
+        className="mx-auto max-w-6xl px-4 py-6 md:py-12"
         style={{ scrollPaddingTop: "var(--city-hub-sticky-offset, 8.5rem)" }}
       >
         {isMapView && (
