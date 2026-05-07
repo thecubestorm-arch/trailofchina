@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState, useRef, useCallback } from 'react'
+import { useEffect, useState, useRef, useCallback, type KeyboardEvent, type MouseEvent } from 'react'
 import { createPortal } from 'react-dom'
 import { MapContainer, TileLayer, Marker, Polygon, Tooltip, useMap, useMapEvent } from 'react-leaflet'
 import L from 'leaflet'
@@ -200,20 +200,22 @@ function MapPopup({
   onLeave,
   onClose,
   portalTarget,
+  navigationBlockedUntil,
 }: {
   city: City | null
   onEnter: () => void
   onLeave: () => void
   onClose: () => void
   portalTarget: HTMLDivElement | null
+  navigationBlockedUntil: number
 }) {
   const map = useMap()
-  const resolvedPortalTarget = portalTarget ?? map.getContainer().parentElement
   const [pos, setPos] = useState<{ x: number; y: number; showBelow: boolean } | null>(null)
   const imagesRef = useRef<HTMLDivElement | null>(null)
   const [scrollLeft, setScrollLeft] = useState(0)
   const [canScrollLeft, setCanScrollLeft] = useState(false)
   const [canScrollRight, setCanScrollRight] = useState(false)
+  const touchStartedAfterBlockRef = useRef(false)
 
   const updatePos = useCallback(() => {
     if (!city) {
@@ -265,13 +267,54 @@ function MapPopup({
   useMapEvent('move', updatePos)
   useMapEvent('zoom', updatePos)
 
-  if (!city || !pos || !resolvedPortalTarget) return null
+  useEffect(() => {
+    touchStartedAfterBlockRef.current = false
+  }, [city, navigationBlockedUntil])
+
+  const isNavigationBlocked = () => Date.now() < navigationBlockedUntil
+  const cityHref = city?.href ?? ''
+
+  const handlePopupCardPointerDown = () => {
+    touchStartedAfterBlockRef.current = !isNavigationBlocked()
+  }
+
+  const handlePopupCardClick = (event: MouseEvent<HTMLElement>) => {
+    try {
+      if (isNavigationBlocked() || !touchStartedAfterBlockRef.current) {
+        event.preventDefault()
+        event.stopPropagation()
+        return
+      }
+
+      event.stopPropagation()
+      window.location.assign(cityHref)
+    } catch {
+      event.preventDefault()
+      event.stopPropagation()
+    }
+  }
+
+  const handlePopupCardKeyDown = (event: KeyboardEvent) => {
+    if (event.key !== 'Enter' && event.key !== ' ') return
+
+    event.preventDefault()
+    event.stopPropagation()
+
+    try {
+      window.location.assign(cityHref)
+    } catch {
+      // Ignore navigation failures and keep the popup open.
+    }
+  }
+
+  if (!city || !pos || !portalTarget) return null
 
   return createPortal(
     <div
       onClick={(e) => e.stopPropagation()}
       onPointerDown={(e) => e.stopPropagation()}
       onTouchStart={(e) => e.stopPropagation()}
+      onTouchEnd={(e) => e.stopPropagation()}
       style={{
         position: 'absolute',
         left: pos.x,
@@ -296,7 +339,16 @@ function MapPopup({
         >
           <X size={12} className="text-[#64748b]" />
         </button>
-        <Link href={city.href} className="block no-underline">
+        <div
+          role="link"
+          tabIndex={0}
+          aria-label={`Explore ${city.name}`}
+          className="block cursor-pointer"
+          onPointerDown={handlePopupCardPointerDown}
+          onTouchStart={handlePopupCardPointerDown}
+          onClick={handlePopupCardClick}
+          onKeyDown={handlePopupCardKeyDown}
+        >
           <div className="bg-white rounded-xl shadow-lg border border-[#ebe4d8] min-w-[240px] max-w-[280px] overflow-hidden sm:min-w-[280px] sm:max-w-[320px]">
             <div className="relative group/images px-3 pt-3 pb-1">
               <div
@@ -381,10 +433,10 @@ function MapPopup({
                   }}
             />
           </div>
-        </Link>
+        </div>
       </div>
     </div>,
-    resolvedPortalTarget
+    portalTarget
   )
 }
 
@@ -425,6 +477,7 @@ function InvalidateMapSize({ watch }: { watch: boolean | string | null }) {
 function MapLayers({
   hoveredCity,
   activePopupCity,
+  popupNavigationBlockedUntil,
   onMarkerEnter,
   onMarkerLeave,
   onMarkerClick,
@@ -436,6 +489,7 @@ function MapLayers({
 }: {
   hoveredCity: string | null
   activePopupCity: string | null
+  popupNavigationBlockedUntil: number
   onMarkerEnter: (key: string) => void
   onMarkerLeave: () => void
   onMarkerClick: (key: string) => void
@@ -494,6 +548,7 @@ function MapLayers({
         onLeave={onPopupLeave}
         onClose={onPopupClose}
         portalTarget={popupPortalTarget}
+        navigationBlockedUntil={popupNavigationBlockedUntil}
       />
     </>
   )
@@ -512,6 +567,7 @@ export default function DestinationsMapInner() {
   })
   const [hoveredCity, setHoveredCity] = useState<string | null>(null)
   const [activePopupCity, setActivePopupCity] = useState<string | null>(null)
+  const [popupNavigationBlockedUntil, setPopupNavigationBlockedUntil] = useState(0)
   const [mobileMapOpen, setMobileMapOpen] = useState(false)
   const [desktopPopupPortalTarget, setDesktopPopupPortalTarget] = useState<HTMLDivElement | null>(null)
   const [mobilePopupPortalTarget, setMobilePopupPortalTarget] = useState<HTMLDivElement | null>(null)
@@ -578,7 +634,9 @@ export default function DestinationsMapInner() {
   }, [])
 
   const handleMarkerClick = useCallback((key: string) => {
-    lastMarkerInteractionRef.current = Date.now()
+    const interactionTime = Date.now()
+    lastMarkerInteractionRef.current = interactionTime
+    setPopupNavigationBlockedUntil(interactionTime + 450)
     if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current)
     setHoveredCity(key)
     setActivePopupCity((prev) => (prev === key ? null : key))
@@ -598,6 +656,7 @@ export default function DestinationsMapInner() {
   const handlePopupClose = useCallback(() => {
     setHoveredCity(null)
     setActivePopupCity(null)
+    setPopupNavigationBlockedUntil(0)
     if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current)
   }, [])
 
@@ -608,6 +667,7 @@ export default function DestinationsMapInner() {
 
     setActivePopupCity(null)
     setHoveredCity(null)
+    setPopupNavigationBlockedUntil(0)
   }, [])
 
   if (!mounted) {
@@ -859,6 +919,7 @@ export default function DestinationsMapInner() {
               <MapLayers
                 hoveredCity={hoveredCity}
                 activePopupCity={activePopupCity}
+                popupNavigationBlockedUntil={popupNavigationBlockedUntil}
                 onMarkerEnter={handleMarkerEnter}
                 onMarkerLeave={handleMarkerLeave}
                 onMarkerClick={handleMarkerClick}
@@ -896,6 +957,7 @@ export default function DestinationsMapInner() {
             <MapLayers
               hoveredCity={hoveredCity}
               activePopupCity={activePopupCity}
+              popupNavigationBlockedUntil={popupNavigationBlockedUntil}
               onMarkerEnter={handleMarkerEnter}
               onMarkerLeave={handleMarkerLeave}
               onMarkerClick={handleMarkerClick}
@@ -922,6 +984,7 @@ export default function DestinationsMapInner() {
         <button
           onClick={() => {
             setActivePopupCity(null)
+            setPopupNavigationBlockedUntil(0)
             setMobileMapOpen((prev) => !prev)
           }}
           className="flex min-h-[48px] items-center gap-2 rounded-full bg-[#1a3a4a] px-5 py-3 text-sm font-semibold text-white shadow-xl"
