@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import {
   ArrowRight,
@@ -298,15 +297,4 @@ function HomeV7ClientInner() {
   )
 }
 
-const HomeV7Client = dynamic(() => Promise.resolve(HomeV7ClientInner), {
-  ssr: false,
-  loading: () => (
-    <main className="min-h-screen bg-[#f5f1ea]">
-      <div className="mx-auto flex min-h-screen max-w-6xl items-center px-4 py-24">
-        <p className="text-sm text-[#1a3a4a]/70">Loading homepage...</p>
-      </div>
-    </main>
-  ),
-})
-
-export default HomeV7Client
+export default HomeV7ClientInner

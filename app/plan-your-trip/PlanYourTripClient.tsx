@@ -118,7 +118,7 @@ export default function PlanYourTripClient() {
               <ChineseWatermark character="旅" />
             </div>
             <div className="relative z-10 max-w-3xl pt-3">
-              <p className="text-sm font-semibold uppercase tracking-[0.34em] text-[#f0c9b1]">计划你的中国之旅</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.34em] text-[#f0c9b1]">Plan Your China Trip</p>
               <h1 className="mt-4 font-serif text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
                 Your China Trip Starts Here
               </h1>

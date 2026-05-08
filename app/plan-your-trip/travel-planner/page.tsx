@@ -38,8 +38,7 @@ export default function TravelPlannerPage() {
             Travel Planner
           </h1>
           <div className="flex items-center gap-2 text-[var(--muted)] mt-3 relative z-10">
-            <span className="text-2xl">旅行计划</span>
-            <span className="text-lg">• Plan Your Trip</span>
+            <span className="text-lg">Plan Your Trip</span>
           </div>
         </header>
 
