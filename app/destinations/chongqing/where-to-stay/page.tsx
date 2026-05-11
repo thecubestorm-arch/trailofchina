@@ -4,7 +4,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
-  title: 'Where to Stay in Chongqing | Trail of China',
+  title: 'Where to Stay in Chongqing',
   description:
     'Best areas to stay in Chongqing for first-timers and return visits: Jiefangbei, Nanbin Road, and Hongyadong surroundings.',
 };

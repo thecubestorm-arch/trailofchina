@@ -4,7 +4,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
-  title: 'Where to Eat in Chongqing | Trail of China',
+  title: 'Where to Eat in Chongqing',
   description:
     'A practical food guide to Chongqing: hotpot, xiaomian, grilled fish, Bayi Road, and trusted local-style spots.',
 };

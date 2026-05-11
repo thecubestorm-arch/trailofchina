@@ -5,7 +5,7 @@ import ChineseWatermark from '@/components/ChineseWatermark'
 import FooterEmailCTA from '@/components/FooterEmailCTA'
 
 export const metadata: Metadata = {
-  title: 'About | Trail of China',
+  title: 'About',
   description: 'Learn why Trail of China exists, who is behind it, and what expertise shapes every recommendation.',
   alternates: {
     canonical: '/about',

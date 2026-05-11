@@ -297,7 +297,7 @@ export default function ChinaCheatSheet() {
 
       <div className="toc-sheet">
         <header className="toc-header">
-          <h1 className="toc-header-title">🇨🇳 CHINA TRAVEL CHEAT SHEET</h1>
+          <div className="toc-header-title">🇨🇳 CHINA TRAVEL CHEAT SHEET</div>
           <p className="toc-header-subtitle">2026 Edition — Everything You Need Before You Go</p>
         </header>
 

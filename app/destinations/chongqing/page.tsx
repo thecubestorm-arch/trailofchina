@@ -3,7 +3,7 @@ import ChongqingHubClient from './ChongqingHubClient';
 import { makeMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = makeMetadata({
-  title: 'Chongqing Travel Guide | Trail of China',
+  title: 'Chongqing Travel Guide',
   description:
     'Plan a complete Chongqing trip with mountain city highlights, hotpot nights, Hongyadong views, monorail rides, and practical local tips for first-time visitors.',
   path: '/destinations/chongqing',

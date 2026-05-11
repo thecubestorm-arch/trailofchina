@@ -6,7 +6,7 @@ import ContextualCTA from '@/components/ContextualCTA'
 import { makeMetadata } from '@/lib/metadata'
 
 export const metadata: Metadata = makeMetadata({
-  title: 'Packing List for China: What to Bring & What to Skip | Trail of China',
+  title: 'Packing List for China: What to Bring & What to Skip',
   description:
     'The ultimate China packing checklist: documents, electronics, clothing, toiletries, money, and tech essentials. Plus what to leave at home.',
 

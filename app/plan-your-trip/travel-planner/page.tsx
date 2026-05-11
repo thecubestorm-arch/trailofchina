@@ -6,7 +6,7 @@ import TravelPlannerForm from './TravelPlannerForm'
 import { makeMetadata } from '@/lib/metadata'
 
 export const metadata: Metadata = makeMetadata({
-  title: 'Travel Planner | Trail of China',
+  title: 'Travel Planner',
   description: 'Build your custom China itinerary. Select cities, duration, interests, and budget.',
 
   path: '/plan-your-trip/travel-planner',

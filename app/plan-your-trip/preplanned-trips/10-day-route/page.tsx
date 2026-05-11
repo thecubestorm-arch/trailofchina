@@ -6,7 +6,7 @@ import ContextualCTA from '@/components/ContextualCTA'
 import { makeMetadata } from '@/lib/metadata'
 
 export const metadata: Metadata = makeMetadata({
-  title: '10-Day China Itinerary | Trail of China',
+  title: '10-Day China Itinerary',
   description:
     "Extended 10-day China route adding Chengdu pandas and Yangshuo karst mountains to the classic Beijing-Xi'an-Shanghai circuit.",
 

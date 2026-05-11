@@ -6,7 +6,7 @@ import ContextualCTA from '@/components/ContextualCTA'
 import { makeMetadata } from '@/lib/metadata'
 
 export const metadata: Metadata = makeMetadata({
-  title: 'Payment Apps in China: Why You Need Alipay & WeChat Pay | Trail of China',
+  title: 'Payment Apps in China: Why You Need Alipay & WeChat Pay',
   description:
     'China is essentially cashless. Learn why Alipay and WeChat Pay are essential — not just for payments, but for transit, food delivery, mini-apps, and more.',
 

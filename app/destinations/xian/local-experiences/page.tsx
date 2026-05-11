@@ -5,7 +5,7 @@ import ChineseWatermark from '@/components/ChineseWatermark';
 import RelatedArticles from '@/components/RelatedArticles';
 
 export const metadata: Metadata = {
-  title: 'Local Experiences in Xi\'an | Trail of China',
+  title: 'Local Experiences in Xi\'an',
   description:
     'Authentic local experiences in Xi\'an: city wall sunrise walks, calligraphy classes, Muslim Quarter deep dives, noodle workshops, and sacred mountain hikes.',
 };

@@ -5,7 +5,7 @@ import ChineseWatermark from '@/components/ChineseWatermark';
 import RelatedArticles from '@/components/RelatedArticles';
 
 export const metadata: Metadata = {
-  title: 'Local Experiences in Beijing | Trail of China',
+  title: 'Local Experiences in Beijing',
   description:
     'Authentic local experiences in Beijing: hutong breakfast walks, temple morning rituals, calligraphy classes, street food tours, and hidden gems with locals.',
 };

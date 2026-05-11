@@ -6,7 +6,7 @@ import ContextualCTA from '@/components/ContextualCTA'
 import { makeMetadata } from '@/lib/metadata'
 
 export const metadata: Metadata = makeMetadata({
-  title: 'DiDi Ride-Hailing in China | Trail of China',
+  title: 'DiDi Ride-Hailing in China',
   description:
     "Complete guide to using DiDi, China's Uber equivalent. Setup, payment, car types, and safety tips for foreign travelers.",
 

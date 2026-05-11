@@ -6,7 +6,7 @@ import ContextualCTA from '@/components/ContextualCTA'
 import { makeMetadata } from '@/lib/metadata'
 
 export const metadata: Metadata = makeMetadata({
-  title: 'China Budget Guide — Cost of Travel in China  | Trail of China',
+  title: 'China Budget Guide — Cost of Travel in China ',
   description:
     'Complete China travel budget guide: daily costs, accommodation, food, transport, attractions, and money-saving tips for every travel style.',
   openGraph: {

@@ -7,7 +7,7 @@ import RelatedArticles from '@/components/RelatedArticles'
 import ToursCTA from '@/components/ToursCTA'
 
 export const metadata: Metadata = {
-  title: 'What to Do in Chongqing | Trail of China',
+  title: 'What to Do in Chongqing',
   description:
     'Top things to do in Chongqing: Hongyadong, Yangtze Cable Car, Ciqikou, Liziba Monorail, and more.',
 };

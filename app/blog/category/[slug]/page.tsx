@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const { slug } = await params
   const categoryName = slugToCategoryName(slug)
   return {
-    title: `${categoryName} - Blog | Trail of China`,
+    title: `${categoryName} - Blog`,
     description: `Read our ${categoryName} guides and tips for China travel`,
     alternates: { canonical: `/blog/category/${slug}` },
   }

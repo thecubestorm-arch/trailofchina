@@ -6,7 +6,7 @@ import RelatedArticles from '@/components/RelatedArticles'
 import { makeMetadata } from '@/lib/metadata'
 
 export const metadata: Metadata = makeMetadata({
-  title: 'How China Differs | Trail of China',
+  title: 'How China Differs',
   description: 'Understanding censorship, cultural differences, safety standards, and passport rules in China.',
 
   path: '/china-basics/how-china-differs',

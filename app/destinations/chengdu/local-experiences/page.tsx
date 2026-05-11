@@ -5,7 +5,7 @@ import ChineseWatermark from '@/components/ChineseWatermark';
 import RelatedArticles from '@/components/RelatedArticles';
 
 export const metadata: Metadata = {
-  title: 'Local Experiences in Chengdu | Trail of China',
+  title: 'Local Experiences in Chengdu',
   description:
     'Authentic local experiences in Chengdu: tea ceremonies, Sichuan opera backstage, hotpot with locals, panda volunteering, and hidden temple hikes.',
 };

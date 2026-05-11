@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const post = blogPosts.find((p) => p.slug === slug)
   if (!post) return { title: 'Blog Post' }
   return {
-    title: `${post.title} | Trail of China`,
+    title: `${post.title}`,
     description: post.description,
     alternates: { canonical: `/blog/${slug}` },
     openGraph: {

@@ -7,7 +7,7 @@ import RelatedArticles from '@/components/RelatedArticles'
 import ToursCTA from '@/components/ToursCTA'
 
 export const metadata: Metadata = {
-  title: 'What to Do in Shanghai | Trail of China',
+  title: 'What to Do in Shanghai',
   description: 'Top attractions in Shanghai: The Bund, Yu Garden, French Concession, and hidden gems.',
 };
 

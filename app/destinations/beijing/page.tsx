@@ -3,7 +3,7 @@ import BeijingHubClient from './BeijingHubClient';
 import { makeMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = makeMetadata({
-  title: 'Beijing Travel Guide | Trail of China',
+  title: 'Beijing Travel Guide',
   description:
     "Plan a complete Beijing trip with this city guide covering the Forbidden City, Great Wall, hutongs, best neighborhoods, and practical local tips for first-time visitors.",
   path: '/destinations/beijing',

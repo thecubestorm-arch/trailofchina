@@ -86,7 +86,7 @@ const navLinks = [
   { href: '/china-basics', label: 'China Basics' },
   { href: '/destinations', label: 'Destinations' },
   { href: '/plan-your-trip', label: 'Plan Your Trip' },
-  { href: '/interactive-map', label: 'Interactive Map', badge: 'Coming Soon' },
+
 ]
 
 export default function Navigation() {
@@ -169,11 +169,6 @@ export default function Navigation() {
               className="shrink-0 rounded-full border border-transparent px-4 py-2 text-sm font-medium text-[var(--muted)] hover:border-[var(--line)] hover:bg-[var(--surface-strong)] hover:text-[var(--foreground)]"
             >
               {link.label}
-              {'badge' in link && link.badge && (
-                <span className="ml-1.5 inline-block rounded-full bg-[#af5d32] px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-white">
-                  {link.badge}
-                </span>
-              )}
             </Link>
           ))}
         </nav>
@@ -248,11 +243,6 @@ export default function Navigation() {
                 className="flex min-h-[52px] items-center justify-between rounded-2xl border border-[#e7dece] bg-white px-4 py-3 text-lg font-medium text-[var(--foreground)] transition-colors hover:border-[#af5d32] hover:bg-[rgba(175,93,50,0.08)] hover:text-[#af5d32]"
               >
                 <span>{link.label}</span>
-                {'badge' in link && link.badge && (
-                  <span className="ml-3 inline-block rounded-full bg-[#af5d32] px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-white">
-                    {link.badge}
-                  </span>
-                )}
               </Link>
             ))}
         </nav>

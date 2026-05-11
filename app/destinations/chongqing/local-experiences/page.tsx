@@ -5,7 +5,7 @@ import ChineseWatermark from '@/components/ChineseWatermark';
 import RelatedArticles from '@/components/RelatedArticles';
 
 export const metadata: Metadata = {
-  title: 'Local Experiences in Chongqing | Trail of China',
+  title: 'Local Experiences in Chongqing',
   description:
     'Authentic local experiences in Chongqing: old town walks, Yangtze river stories, hotpot boot camps, mountain city photography, and ferry crossings.',
 };

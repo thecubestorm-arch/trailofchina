@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import InteractiveMapClient from './InteractiveMapClient';
 
 export const metadata: Metadata = {
-  title: 'Interactive Map | Trail of China',
+  title: 'Interactive Map',
   description: 'Interactive map of China destinations. Coming soon!',
   robots: {
     index: false,

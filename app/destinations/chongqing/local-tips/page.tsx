@@ -4,7 +4,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
-  title: 'Chongqing Local Tips | Trail of China',
+  title: 'Chongqing Local Tips',
   description:
     'Practical Chongqing local tips: 3D navigation, foggy weather, spicy food reality, monorail logistics, and DiDi use.',
 };

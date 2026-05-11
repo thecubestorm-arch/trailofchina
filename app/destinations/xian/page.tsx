@@ -3,7 +3,7 @@ import XianHubClient from './XianHubClient';
 import { makeMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = makeMetadata({
-  title: "Xi'an Travel Guide | Trail of China",
+  title: "Xi'an Travel Guide",
   description:
     "Plan a complete Xi'an trip with this city guide covering Terracotta Warriors, food streets, best neighborhoods, and practical local tips for first-time visitors.",
   path: '/destinations/xian',

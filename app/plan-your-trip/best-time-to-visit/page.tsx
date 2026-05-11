@@ -6,7 +6,7 @@ import ContextualCTA from '@/components/ContextualCTA'
 import { makeMetadata } from '@/lib/metadata'
 
 export const metadata: Metadata = makeMetadata({
-  title: 'Best Time to Visit China — Month-by-Month Guide  | Trail of China',
+  title: 'Best Time to Visit China — Month-by-Month Guide ',
   description:
     'When is the best time to visit China? Month-by-month climate guide, peak seasons, holidays to avoid, and the ideal months for every region.',
   openGraph: {

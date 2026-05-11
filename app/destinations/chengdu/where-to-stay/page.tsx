@@ -4,7 +4,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
-  title: 'Where to Stay in Chengdu | Trail of China',
+  title: 'Where to Stay in Chengdu',
   description:
     'Best Chengdu neighborhoods for first-timers, culture seekers, and budget travelers with price and metro details.',
 };

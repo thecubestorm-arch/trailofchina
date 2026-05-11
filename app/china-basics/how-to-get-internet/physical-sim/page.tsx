@@ -6,7 +6,7 @@ import ContextualCTA from '@/components/ContextualCTA'
 import { makeMetadata } from '@/lib/metadata'
 
 export const metadata: Metadata = makeMetadata({
-  title: 'Physical SIM Cards in China | Trail of China',
+  title: 'Physical SIM Cards in China',
   description:
     'Complete guide to buying physical SIM cards at Chinese airports. Best carriers, pricing, requirements, and setup.',
 

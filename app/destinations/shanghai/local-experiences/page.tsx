@@ -5,7 +5,7 @@ import ChineseWatermark from '@/components/ChineseWatermark';
 import RelatedArticles from '@/components/RelatedArticles';
 
 export const metadata: Metadata = {
-  title: 'Local Experiences in Shanghai | Trail of China',
+  title: 'Local Experiences in Shanghai',
   description:
     'Authentic local experiences in Shanghai: shikumen walks, Art Deco tours, street food adventures, art district visits, and day trips with locals.',
 };

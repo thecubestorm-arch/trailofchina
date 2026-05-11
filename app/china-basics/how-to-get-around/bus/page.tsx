@@ -6,7 +6,7 @@ import ContextualCTA from '@/components/ContextualCTA'
 import { makeMetadata } from '@/lib/metadata'
 
 export const metadata: Metadata = makeMetadata({
-  title: 'Public Buses in China | Trail of China',
+  title: 'Public Buses in China',
   description:
     'Guide to using public buses in China. Routes, payment with Alipay/WeChat, bus etiquette, and when buses are the best option.',
 

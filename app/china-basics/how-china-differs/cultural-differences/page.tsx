@@ -6,7 +6,7 @@ import ContextualCTA from '@/components/ContextualCTA'
 import { makeMetadata } from '@/lib/metadata'
 
 export const metadata: Metadata = makeMetadata({
-  title: 'Cultural Differences in China | Trail of China',
+  title: 'Cultural Differences in China',
   description:
     'Essential etiquette, customs, and social norms for travelers in China. Dining, greetings, gift giving, and public behavior explained.',
 

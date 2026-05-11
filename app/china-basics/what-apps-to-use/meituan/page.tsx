@@ -6,7 +6,7 @@ import ContextualCTA from '@/components/ContextualCTA'
 import { makeMetadata } from '@/lib/metadata'
 
 export const metadata: Metadata = makeMetadata({
-  title: 'Meituan App Guide: Food Delivery, Hotels & Deals in China | Trail of China',
+  title: 'Meituan App Guide: Food Delivery, Hotels & Deals in China',
   description:
     'Complete guide to Meituan (美团): order food delivery, book hotels, buy movie tickets, and get group deals. Setup tips for foreign travelers in China.',
 

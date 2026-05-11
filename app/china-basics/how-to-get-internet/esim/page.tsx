@@ -6,7 +6,7 @@ import ContextualCTA from '@/components/ContextualCTA'
 import { makeMetadata } from '@/lib/metadata'
 
 export const metadata: Metadata = makeMetadata({
-  title: 'eSIM Cards for China | Trail of China',
+  title: 'eSIM Cards for China',
   description:
     'Best eSIM providers for China travel: Airalo, Holafly, Ubigi. Setup guide, pricing, and recommendations.',
 

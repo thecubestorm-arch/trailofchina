@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { makeMetadata } from '@/lib/metadata'
 
 export const metadata: Metadata = makeMetadata({
-  title: { absolute: 'Privacy Policy | Trail of China' },
+  title: { absolute: 'Privacy Policy' },
   description:
     'Privacy Policy for Trail of China describing data collection, legal basis, user rights, and cross-border processing under Swiss nDSG and GDPR.',
 

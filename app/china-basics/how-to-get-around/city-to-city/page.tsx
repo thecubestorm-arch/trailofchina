@@ -6,7 +6,7 @@ import ContextualCTA from '@/components/ContextualCTA'
 import { makeMetadata } from '@/lib/metadata'
 
 export const metadata: Metadata = makeMetadata({
-  title: 'Getting Between Cities in China | Trail of China',
+  title: 'Getting Between Cities in China',
   description:
     "High-speed train routes, flight comparisons, and booking tips for traveling between Beijing, Shanghai, Xi'an, Chengdu, and Chongqing.",
 

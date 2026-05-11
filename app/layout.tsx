@@ -48,9 +48,8 @@ export default function RootLayout({
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Trail of China',
-    url: 'https://trailofchina.com',
-    logo: 'https://trailofchina.com/favicon.svg',
-    email: 'buetikoferdigital@gmail.com',
+    url: 'https://www.trailofchina.com',
+    logo: 'https://www.trailofchina.com/favicon.svg',
     sameAs: [],
   }
 

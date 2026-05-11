@@ -6,7 +6,7 @@ import RelatedArticles from '@/components/RelatedArticles'
 import { makeMetadata } from '@/lib/metadata'
 
 export const metadata: Metadata = makeMetadata({
-  title: 'Essential Apps for China | Trail of China',
+  title: 'Essential Apps for China',
   description:
     'Set up essential China travel apps before departure: Alipay, WeChat Pay, maps, travel booking, communication, and VPN access. Get started right.',
 

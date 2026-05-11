@@ -4,7 +4,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
-  title: 'Chengdu Local Tips | Trail of China',
+  title: 'Chengdu Local Tips',
   description:
     'Practical Chengdu insider tips: panda timing, transport, weather planning, opera bookings, and what to skip.',
 };

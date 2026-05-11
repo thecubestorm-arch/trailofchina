@@ -3,7 +3,7 @@ import ChengduHubClient from './ChengduHubClient';
 import { makeMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = makeMetadata({
-  title: 'Chengdu Travel Guide | Trail of China',
+  title: 'Chengdu Travel Guide',
   description:
     'Plan a complete Chengdu trip with panda timing, temple and old-town highlights, best neighborhoods, and practical local tips for first-time visitors.',
   path: '/destinations/chengdu',
