@@ -104,15 +104,18 @@ export default function ExploreChinaSection() {
           </div>
         </div>
 
-        <button
-          type="button"
-          onClick={() => setMobileView((current) => (current === 'list' ? 'map' : 'list'))}
-          className="hidden lg:inline-flex items-center gap-2 rounded-full bg-[#1a3a4a] px-4 py-3 text-sm font-semibold text-white shadow-[0_18px_36px_rgba(26,58,74,0.22)]"
-          aria-label={mobileView === 'list' ? 'Show map view' : 'Show list view'}
-        >
-          {mobileView === 'list' ? <MapIcon size={16} /> : <List size={16} />}
-          {mobileView === 'list' ? 'Map' : 'List'}
-        </button>
+        {/* Mobile list/map toggle */}
+        <div className="flex justify-center lg:hidden">
+          <button
+            type="button"
+            onClick={() => setMobileView((current) => (current === 'list' ? 'map' : 'list'))}
+            className="flex min-h-[48px] items-center gap-2 rounded-full bg-[#1a3a4a] px-5 py-3 text-sm font-semibold text-white shadow-xl"
+            aria-label={mobileView === 'list' ? 'Show map view' : 'Show list view'}
+          >
+            {mobileView === 'list' ? <MapIcon size={16} /> : <List size={16} />}
+            {mobileView === 'list' ? 'Show Map' : 'Show List'}
+          </button>
+        </div>
       </div>
     </section>
   )
