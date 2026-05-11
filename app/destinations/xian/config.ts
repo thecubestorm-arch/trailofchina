@@ -68,6 +68,53 @@ export const xianConfig: CityHubConfig = {
   attractionCards,
   foodCards,
   neighborhoodCards,
+  dayTripCards: [
+    {
+      id: "huashan-day-trip",
+      name: "Mount Hua (Day Trip)",
+      lat: 34.4744,
+      lng: 110.0849,
+      imageSeed: "huashan-plank-walk-day-trip",
+      defaultCategory: "day-trips",
+      categories: {
+        "day-trips": {
+          href: "/destinations/xian/day-trips/huashan",
+          hook: "30 min by high-speed train — China's most dangerous mountain, plank walks, and sunrise from 2,154m.",
+          tag: "Full day",
+        },
+      },
+    },
+    {
+      id: "famen-temple-day-trip",
+      name: "Famen Temple (Day Trip)",
+      lat: 34.4697,
+      lng: 107.8966,
+      imageSeed: "famen-temple-day-trip",
+      defaultCategory: "day-trips",
+      categories: {
+        "day-trips": {
+          href: "/destinations/xian/day-trips/famen-temple",
+          hook: "2h from Xi'an — a 1,113-year-old crypt, the Buddha's finger bone, and Tang dynasty gold.",
+          tag: "Full day",
+        },
+      },
+    },
+    {
+      id: "huaqing-palace-day-trip",
+      name: "Huaqing Palace (Day Trip)",
+      lat: 34.3604,
+      lng: 109.2137,
+      imageSeed: "huaqing-palace-day-trip",
+      defaultCategory: "day-trips",
+      categories: {
+        "day-trips": {
+          href: "/destinations/xian/day-trips/huaqing-palace",
+          hook: "45 min from Xi'an — Tang dynasty hot springs and the Xi'an Incident site. Combine with Terracotta Warriors.",
+          tag: "Half day",
+        },
+      },
+    },
+  ],
   localTips: [
     {
       id: "terracotta-timing",
@@ -311,6 +358,9 @@ export const xianConfig: CityHubConfig = {
     { id: "tip-muslim-quarter-food", name: "Muslim Quarter Food", subtitle: "The side streets often have shorter lines and better-value snacks than the main drag.", imageSeed: "", href: "/destinations/xian/local-tips", type: "tip", icon: Lightbulb, filters: ["local", "food", "practical"] },
     { id: "tip-city-wall-cycling", name: "City Wall Cycling", subtitle: "Bring water and start before sunset for the best ride and light.", imageSeed: "", href: "/destinations/xian/local-tips", type: "tip", icon: Map, filters: ["historic", "practical"] },
     { id: "tip-museum-booking", name: "Book the Museum", subtitle: "Shaanxi History Museum is free, but timed entry slots can disappear early.", imageSeed: "", href: "/destinations/xian/local-tips", type: "tip", icon: Calendar, filters: ["practical"] },
+    { id: "huashan-day-trip", name: "Mount Hua (Day Trip)", subtitle: "30 min by train — plank walks, sunrise, and China's most dangerous mountain.", tag: "Full day", imageSeed: "huashan-plank-walk-day-trip", href: "/destinations/xian/day-trips/huashan", type: "attraction", filters: ["historic", "family", "landmark"] },
+    { id: "famen-temple-day-trip", name: "Famen Temple (Day Trip)", subtitle: "2h from Xi'an — a 1,113-year-old crypt and the Buddha's finger bone.", tag: "Full day", imageSeed: "famen-temple-day-trip", href: "/destinations/xian/day-trips/famen-temple", type: "attraction", filters: ["historic", "landmark"] },
+    { id: "huaqing-palace-day-trip", name: "Huaqing Palace (Day Trip)", subtitle: "Tang dynasty hot springs + Xi'an Incident site. Combine with Terracotta Warriors.", tag: "Half day", imageSeed: "huaqing-palace-day-trip", href: "/destinations/xian/day-trips/huaqing-palace", type: "attraction", filters: ["historic", "family", "landmark"] },
   ],
   footerTitle: "Ready to Explore Xi'an?",
   footerSubtitle:
