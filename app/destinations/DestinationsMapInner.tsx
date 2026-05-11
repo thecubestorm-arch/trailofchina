@@ -57,6 +57,9 @@ const cities = [
   { key: 'shenzhen', name: 'Shenzhen', nameZh: '深圳', lat: 22.54, lng: 114.06, bestFor: 'Tech & Innovation', hook: "China's Silicon Valley — where tomorrow gets built today", thingsToDo: 6, whereToEat: 5, href: '/destinations/shenzhen', featured: false, duration: '2-3 days', priceLevel: '$$', bestSeason: 'Oct-Mar',
     images: ['shenzhen-skyline-night', 'shenzhen-huaqiangbei', 'shenzhen-ping-an-finance', 'shenzhen-dafen-village', 'shenzhen-oct-loft'],
   },
+  { key: 'guangzhou', name: 'Guangzhou', nameZh: '广州', lat: 23.13, lng: 113.26, bestFor: 'Food & History', hook: '2,200 years of history and the best food in China', thingsToDo: 6, whereToEat: 5, href: '/destinations/guangzhou', featured: true, duration: '3-4 days', priceLevel: '$$', bestSeason: 'Oct-Dec',
+    images: ['guangzhou-canton-tower', 'guangzhou-shamian-island', 'guangzhou-dim-sum', 'guangzhou-chen-clan-hall', 'guangzhou-beijing-road'],
+  },
 ]
 
 const comingSoon = [

@@ -93,6 +93,20 @@ export const exploreCities: ExploreCity[] = [
     season: 'Oct-Mar',
     imageSeed: 'home-v4-shenzhen',
   },
+  {
+    key: 'guangzhou',
+    name: 'Guangzhou',
+    nameZh: '广州',
+    href: '/destinations/guangzhou',
+    lat: 23.13,
+    lng: 113.26,
+    hook: '2,200 years of history and the best food in China.',
+    duration: '3-4 days',
+    price: '$$',
+    season: 'Oct-Dec',
+    imageSeed: 'home-v4-guangzhou',
+    popular: true,
+  },
 ]
 
 export const chinaBoundary: [number, number][] = [
