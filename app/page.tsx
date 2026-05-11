@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description:
       'Your first trip to China, simplified. Visa-free updates, practical trip planning, destination ideas, and essential China basics for first-time travelers.',
     type: 'website',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Trail of China - China Travel Guide' }],
   },
   twitter: {
     card: 'summary_large_image',

@@ -4,11 +4,13 @@ import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
 import { makeMetadata } from '@/lib/metadata'
+import { faqPageSchema } from '@/lib/schema'
 
 export const metadata: Metadata = makeMetadata({
   title: 'China Budget Guide — Cost of Travel in China ',
   description:
     'Complete China travel budget guide: daily costs, accommodation, food, transport, attractions, and money-saving tips for every travel style.',
+  keywords: 'China travel budget,cost of trip to China,China travel costs,China trip expenses,how much does China trip cost',
   openGraph: {
     title: 'China Budget Guide — What Everything Actually Costs',
     description:
@@ -37,8 +39,16 @@ const relatedArticles = [
   },
 ]
 
+const faqJsonLd = faqPageSchema([
+  { question: 'How much does a trip to China cost?', answer: 'Budget travelers can get by on ¥200-300/day ($28-42), mid-range travelers spend ¥500-800/day ($70-110), and luxury travelers ¥1500+/day ($210+). Accommodation and transport are the biggest variables.' },
+  { question: 'Is China expensive for tourists?', answer: 'China is cheaper than Japan or South Korea but more expensive than Southeast Asia. Street food costs ¥5-15 per meal, budget hotels ¥80-150/night, and high-speed trains ¥50-600 depending on distance.' },
+  { question: 'Can I use cash in China?', answer: 'China is over 95% cashless. You should set up Alipay and WeChat Pay before arrival. Cash is technically accepted but often inconvenient — many vendors cannot make change.' },
+])
+
 export default function BudgetGuidePage() {
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
     <div
       className="min-h-screen"
       style={{
@@ -62,6 +72,7 @@ export default function BudgetGuidePage() {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-3 text-[var(--foreground)] relative z-10">
             Budget Guide - Cost of Travel in China
           </h1>
+          <p className="text-sm text-[#1a3a4a]/60">Last updated: May 2025</p>
           <div className="flex items-center gap-2 text-[var(--muted)] mt-3 relative z-10">
             <span className="text-2xl">预算</span>
             <span className="text-lg">• Plan Your Trip</span>
@@ -204,5 +215,6 @@ export default function BudgetGuidePage() {
         />
       </main>
     </div>
+    </>
   )
 }

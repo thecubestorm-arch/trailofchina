@@ -4,11 +4,13 @@ import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
 import { makeMetadata } from '@/lib/metadata'
+import { faqPageSchema } from '@/lib/schema'
 
 export const metadata: Metadata = makeMetadata({
   title: 'China Visa Guide: Everything You Need to Know ',
   description:
     'Complete China visa guide for tourists — L visa, M visa, transit visas, 144-hour visa-free entry, and Swiss/EU citizen info.',
+  keywords: 'China visa guide,China visa requirements,China visa-free entry,L visa China,China tourist visa,China visa application',
 
   path: '/china-basics/how-china-differs/visa-guide',
 })
@@ -59,8 +61,16 @@ const relatedArticles = [
   },
 ]
 
+const faqJsonLd = faqPageSchema([
+  { question: 'Do I need a visa to visit China?', answer: 'Most foreign nationals need a visa, but China offers visa-free entry for citizens of France, Germany, Italy, Spain, Malaysia, and several other countries for stays up to 15 days.' },
+  { question: 'What is the China 240-hour transit visa exemption?', answer: 'China offers 240-hour (10-day) transit visa exemptions for citizens of 54 countries transiting through designated ports.' },
+  { question: 'How do I apply for a China tourist visa?', answer: 'Apply through the Chinese visa application center (CVASC) in your country. You need a passport valid for 6+ months, a completed application form, photos, and itinerary documents.' },
+])
+
 export default function VisaGuidePage() {
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
     <div
       className="min-h-screen"
       style={{
@@ -85,6 +95,7 @@ export default function VisaGuidePage() {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-3 text-[var(--foreground)] relative z-10">
             China Visa Guide: Everything You Need to Know 
           </h1>
+          <p className="text-sm text-[#1a3a4a]/60">Last updated: May 2025</p>
           <div className="flex items-center gap-2 text-[var(--muted)] mt-3 relative z-10">
             <span className="text-2xl">签证</span>
             <span className="text-lg">• China Basics • How China Differs</span>
@@ -225,6 +236,7 @@ export default function VisaGuidePage() {
           variant="primary"
         />
       </main>
-    </div>
+      </div>
+    </>
   )
 }

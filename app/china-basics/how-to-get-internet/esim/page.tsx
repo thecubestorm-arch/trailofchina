@@ -4,11 +4,13 @@ import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
 import { makeMetadata } from '@/lib/metadata'
+import { faqPageSchema } from '@/lib/schema'
 
 export const metadata: Metadata = makeMetadata({
   title: 'eSIM Cards for China',
   description:
     'Best eSIM providers for China travel: Airalo, Holafly, Ubigi. Setup guide, pricing, and recommendations.',
+  keywords: 'China eSIM,best eSIM for China,China internet for tourists,China SIM card,internet in China',
 
   path: '/china-basics/how-to-get-internet/esim',
 })
@@ -50,8 +52,16 @@ const relatedArticles = [
   },
 ]
 
+const faqJsonLd = faqPageSchema([
+  { question: 'What is the best eSIM for China travel?', answer: 'Airalo offers the best budget eSIM for China with good coverage and affordable plans. Holafly provides unlimited data options at a higher price. Both work via roaming networks that bypass the Great Firewall.' },
+  { question: 'Does eSIM bypass the Great Firewall of China?', answer: 'Most travel eSIMs route through international roaming networks, which means Google, WhatsApp, and other blocked services work without a VPN. However, speeds may be slower than local SIMs.' },
+  { question: 'Can I use eSIM in China on iPhone?', answer: 'Yes. iPhones from iPhone XS and later support eSIM. Install the eSIM profile before you travel, then switch to it when you land in China.' },
+])
+
 export default function EsimPage() {
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
     <div
       className="min-h-screen"
       style={{
@@ -76,6 +86,7 @@ export default function EsimPage() {
           <h1 className="relative z-10 mb-3 text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-[var(--foreground)]">
             eSIM Cards for China
           </h1>
+          <p className="text-sm text-[#1a3a4a]/60">Last updated: May 2025</p>
           <div className="relative z-10 mt-3 flex items-center gap-2 text-[var(--muted)]">
             <span className="text-2xl">网络</span>
             <span className="text-lg">• China Basics • How to Get Internet</span>
@@ -208,5 +219,6 @@ export default function EsimPage() {
         />
       </div>
     </div>
+    </>
   )
 }

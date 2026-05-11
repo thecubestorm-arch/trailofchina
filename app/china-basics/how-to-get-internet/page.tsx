@@ -4,11 +4,13 @@ import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
 import { makeMetadata } from '@/lib/metadata'
+import { faqPageSchema } from '@/lib/schema'
 
 export const metadata: Metadata = makeMetadata({
   title: 'How to Get Internet in China',
   description:
     'Complete guide to getting internet in China: eSIM vs physical SIM cards, best providers, setup instructions, and pricing.',
+  keywords: 'internet in China,China WiFi,China VPN,China internet access,get online in China',
 
   path: '/china-basics/how-to-get-internet',
 })
@@ -87,8 +89,16 @@ const relatedArticles = [
   },
 ]
 
+const faqJsonLd = faqPageSchema([
+  { question: 'How can I get internet in China as a tourist?', answer: 'The three main options are eSIM (install before departure), physical SIM (buy at airport or carrier store), and hotel WiFi (unreliable for daily use). eSIM is easiest, physical SIM is best for longer stays.' },
+  { question: 'Do I need a VPN in China?', answer: 'Yes. Google, WhatsApp, Instagram, and many other services are blocked. Download and install a VPN before you arrive, because VPN websites are inaccessible from within China.' },
+  { question: 'Can I use my phone in China with roaming?', answer: 'International roaming works but is expensive. eSIM or a local SIM is much cheaper. Some eSIMs route through roaming partners, which naturally bypass the Great Firewall.' },
+])
+
 export default function InternetHub() {
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
     <div
       className="min-h-screen"
       style={{
@@ -112,6 +122,7 @@ export default function InternetHub() {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-3 text-[var(--foreground)] relative z-10">
             How to Get Internet in China
           </h1>
+          <p className="text-sm text-[#1a3a4a]/60">Last updated: May 2025</p>
           <div className="flex items-center gap-2 text-[var(--muted)] mt-3 relative z-10">
             <span className="text-2xl">网络</span>
             <span className="text-lg">• China Basics</span>
@@ -218,5 +229,6 @@ export default function InternetHub() {
         />
       </main>
     </div>
+    </>
   )
 }

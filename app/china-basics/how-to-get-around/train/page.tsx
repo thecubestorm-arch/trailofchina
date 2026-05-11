@@ -4,11 +4,13 @@ import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
 import { makeMetadata } from '@/lib/metadata'
+import { faqPageSchema } from '@/lib/schema'
 
 export const metadata: Metadata = makeMetadata({
   title: 'High-Speed Trains in China',
   description:
     "Complete guide to booking and riding China's high-speed rail network. G-trains, D-trains, seat classes, booking, and station tips.",
+  keywords: 'China high-speed rail,China train travel,China rail pass,buy train tickets China,China bullet train',
 
   path: '/china-basics/how-to-get-around/train',
 })
@@ -33,8 +35,16 @@ const relatedArticles = [
   },
 ]
 
+const faqJsonLd = faqPageSchema([
+  { question: 'How do I buy train tickets in China as a foreigner?', answer: 'Use Trip.com for English-language booking with a small fee, or the official 12306 app. You can also buy at station ticket windows with your passport, but popular routes sell out fast.' },
+  { question: 'What is the difference between G-trains and D-trains in China?', answer: 'G-trains (Gaotie) are the fastest at up to 350 km/h with premium fares. D-trains (Dongche) reach 250 km/h and offer better value for most travelers. Both are high-speed rail options.' },
+  { question: 'How early should I arrive at a Chinese train station?', answer: 'Arrive 30 minutes early for normal stations, 45 minutes early for major hubs like Beijing South or Shanghai Hongqiao. Security screening is required and platform gates close 5 minutes before departure.' },
+])
+
 export default function TrainPage() {
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
     <div
       className="min-h-screen"
       style={{
@@ -59,6 +69,7 @@ export default function TrainPage() {
           <h1 className="relative z-10 mb-3 text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-[var(--foreground)]">
             High-Speed Trains
           </h1>
+          <p className="text-sm text-[#1a3a4a]/60">Last updated: May 2025</p>
           <div className="relative z-10 mt-3 flex items-center gap-2 text-[var(--muted)]">
             <span className="text-2xl">高铁</span>
             <span className="text-lg">• China Basics • How to Get Around</span>
@@ -220,5 +231,6 @@ export default function TrainPage() {
         />
       </main>
     </div>
+    </>
   )
 }

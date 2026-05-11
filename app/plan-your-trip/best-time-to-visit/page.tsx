@@ -4,11 +4,13 @@ import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
 import { makeMetadata } from '@/lib/metadata'
+import { faqPageSchema } from '@/lib/schema'
 
 export const metadata: Metadata = makeMetadata({
   title: 'Best Time to Visit China — Month-by-Month Guide ',
   description:
     'When is the best time to visit China? Month-by-month climate guide, peak seasons, holidays to avoid, and the ideal months for every region.',
+  keywords: 'best time to visit China,China weather by month,when to go to China,China travel seasons,China peak tourist season',
   openGraph: {
     title: 'Best Time to Visit China — Month-by-Month Guide ',
     description:
@@ -37,8 +39,16 @@ const relatedArticles = [
   },
 ]
 
+const faqJsonLd = faqPageSchema([
+  { question: 'When is the best time to visit China?', answer: 'Spring (March-May) and autumn (September-November) offer the best weather. October is the peak month for comfortable temperatures and clear skies, but avoid the National Day holiday (Oct 1-7).' },
+  { question: 'What months should I avoid when visiting China?', answer: 'Avoid Chinese New Year (January-February, dates shift), May Day holiday (first week of May), and National Day (October 1-7). During these periods, transport and hotels are fully booked and prices can triple.' },
+  { question: 'Is winter a bad time to visit China?', answer: 'Not necessarily. Winter offers the Harbin Ice Festival, fewer crowds, and lower prices. South China (Guangxi, Yunnan) stays pleasant year-round. Just avoid Chinese New Year travel chaos.' },
+])
+
 export default function BestTimeToVisitPage() {
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
     <div
       className="min-h-screen"
       style={{
@@ -62,6 +72,7 @@ export default function BestTimeToVisitPage() {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-3 text-[var(--foreground)] relative z-10">
             Best Time to Visit China
           </h1>
+          <p className="text-sm text-[#1a3a4a]/60">Last updated: May 2025</p>
           <div className="flex items-center gap-2 text-[var(--muted)] mt-3 relative z-10">
             <span className="text-2xl">四季</span>
             <span className="text-lg">• Plan Your Trip</span>
@@ -193,5 +204,6 @@ export default function BestTimeToVisitPage() {
         />
       </main>
     </div>
+    </>
   )
 }

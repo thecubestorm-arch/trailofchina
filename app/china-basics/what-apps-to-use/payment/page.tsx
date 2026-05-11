@@ -4,11 +4,13 @@ import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
 import { makeMetadata } from '@/lib/metadata'
+import { faqPageSchema } from '@/lib/schema'
 
 export const metadata: Metadata = makeMetadata({
   title: 'Payment Apps in China: Why You Need Alipay & WeChat Pay',
   description:
     'China is essentially cashless. Learn why Alipay and WeChat Pay are essential — not just for payments, but for transit, food delivery, mini-apps, and more.',
+  keywords: 'Alipay for foreigners,WeChat Pay China,China payment apps,cashless China,mobile payment China',
 
   path: '/china-basics/what-apps-to-use/payment',
 })
@@ -64,8 +66,16 @@ const relatedArticles = [
   },
 ]
 
+const faqJsonLd = faqPageSchema([
+  { question: 'Can foreigners use Alipay and WeChat Pay in China?', answer: 'Yes. Both Alipay and WeChat Pay now support international Visa and Mastercard. Set them up before you arrive by linking your foreign card and verifying your passport.' },
+  { question: 'Is China really cashless?', answer: 'Over 95% of transactions in China are mobile payments. Cash is technically accepted but often inconvenient — vendors may not have change, and some smaller places simply refuse it.' },
+  { question: 'Do I need both Alipay and WeChat Pay?', answer: 'Having both is recommended. Some merchants only accept one or the other. Alipay is better for standalone use, while WeChat Pay is essential for social payments and mini-programs.' },
+])
+
 export default function PaymentAppsPage() {
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
     <div
       className="min-h-screen"
       style={{
@@ -90,6 +100,7 @@ export default function PaymentAppsPage() {
           <h1 className="relative z-10 mb-3 text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-[var(--foreground)]">
             Payment Apps in China: Why You Need More Than Cash
           </h1>
+          <p className="text-sm text-[#1a3a4a]/60">Last updated: May 2025</p>
           <div className="relative z-10 mt-3 flex items-center gap-2 text-[var(--muted)]">
             <span className="text-2xl">支付</span>
             <span className="text-lg">• China Basics • What Apps to Use</span>
@@ -214,5 +225,6 @@ export default function PaymentAppsPage() {
         />
       </div>
     </div>
+    </>
   )
 }
