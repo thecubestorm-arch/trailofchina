@@ -41,9 +41,10 @@ export default function ExploreChinaSection() {
                 const isActive = activeCityKey === city.key
 
                 return (
-                  <article
+                  <Link
                     key={city.key}
-                    className={`rounded-[1.5rem] border p-3 transition-all ${
+                    href={city.href}
+                    className={`block rounded-[1.5rem] border p-3 transition-all ${
                       isActive
                         ? 'border-[#af5d32]/35 bg-[#fcfaf6] shadow-[0_16px_36px_rgba(175,93,50,0.12)]'
                         : 'border-[#1a3a4a]/8 bg-white hover:border-[#af5d32]/25'
@@ -69,13 +70,10 @@ export default function ExploreChinaSection() {
                             </div>
                             <p className="mt-0.5 text-sm font-medium text-[#af5d32]">{city.nameZh}</p>
                           </div>
-                          <Link
-                            href={city.href}
-                            className="inline-flex shrink-0 items-center gap-1 text-xs font-semibold text-[#af5d32] transition-colors hover:text-[#8f4a28] min-h-[44px] py-1 md:min-h-0 md:py-0"
-                          >
+                          <span className="inline-flex shrink-0 items-center gap-1 text-xs font-semibold text-[#af5d32] min-h-[44px] py-1 md:min-h-0 md:py-0">
                             Explore
                             <ArrowRight size={13} />
-                          </Link>
+                          </span>
                         </div>
                         <p className="mt-2 line-clamp-2 text-sm leading-5 text-[#1a3a4a]/72">
                           {city.hook}
@@ -93,7 +91,7 @@ export default function ExploreChinaSection() {
                         </div>
                       </div>
                     </div>
-                  </article>
+                  </Link>
                 )
               })}
             </div>
