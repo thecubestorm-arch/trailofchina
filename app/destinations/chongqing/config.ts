@@ -20,6 +20,7 @@ import {
   markers,
   neighborhoodCards,
   unifiedLocations,
+  dayTripCards,
 } from "./data/attractions";
 import { transportHubs } from "./data/transport-hubs";
 
@@ -68,6 +69,7 @@ export const chongqingConfig: CityHubConfig = {
   attractionCards,
   foodCards,
   neighborhoodCards,
+  dayTripCards,
   localTips: [
     {
       id: "mountain-city",
@@ -289,6 +291,8 @@ export const chongqingConfig: CityHubConfig = {
     { id: "tip-monorail", name: "Monorail Goes Through Buildings", subtitle: "Liziba Station is famous, but Lines 2 & 3 are all elevated monorail.", imageSeed: "", href: "/destinations/chongqing/local-tips", type: "tip", icon: TrainFront, filters: ["practical"] },
     { id: "tip-hotpot-rules", name: "Hotpot Is Different Here", subtitle: "Beef tallow, nine-grid, no mild side. Dip in sesame oil + garlic.", imageSeed: "", href: "/destinations/chongqing/local-tips", type: "tip", icon: Lightbulb, filters: ["food", "practical"] },
     { id: "tip-directions-3d", name: "Forget 'North'", subtitle: "Directions are 'go up' or 'toward the river.' GPS puts you on wrong levels.", imageSeed: "", href: "/destinations/chongqing/local-tips", type: "tip", icon: Map, filters: ["practical"] },
+    { id: "dazu-rock-carvings-day-trip", name: "Dazu Rock Carvings (Day Trip)", subtitle: "50,000 stone carvings spanning 600 years — China's most underrated UNESCO site.", tag: "Full day", imageSeed: "dazu-rock-carvings-day-trip", href: "/destinations/chongqing/day-trips/dazu-rock-carvings", type: "attraction", filters: ["historic", "family", "landmark"] },
+    { id: "wulong-karst-day-trip", name: "Wulong Karst — Three Natural Bridges (Day Trip)", subtitle: "Limestone bridges so vast they swallowed a river — where Transformers filmed.", tag: "Full day", imageSeed: "wulong-karst-day-trip", href: "/destinations/chongqing/day-trips/wulong-karst", type: "attraction", filters: ["landmark", "family", "landmark"] },
   ],
   footerTitle: "Ready to Explore Chongqing?",
   footerSubtitle:

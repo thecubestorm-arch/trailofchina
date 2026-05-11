@@ -205,3 +205,36 @@ export const foodCards: UnifiedLocation[] = unifiedLocations.filter(
 export const neighborhoodCards: UnifiedLocation[] = unifiedLocations.filter(
   (l) => l.defaultCategory === "where-to-stay"
 );
+
+export const dayTripCards: UnifiedLocation[] = [
+  {
+    id: "dazu-rock-carvings-day-trip",
+    name: "Dazu Rock Carvings (Day Trip)",
+    lat: 29.7064,
+    lng: 105.7228,
+    imageSeed: "dazu-rock-carvings-day-trip",
+    defaultCategory: "day-trips",
+    categories: {
+      "day-trips": {
+        href: "/destinations/chongqing/day-trips/dazu-rock-carvings",
+        hook: "1.5h by train — 50,000 stone carvings, 31m Reclining Buddha, almost no foreign tourists.",
+        tag: "Full day",
+      },
+    },
+  },
+  {
+    id: "wulong-karst-day-trip",
+    name: "Wulong Karst — Three Natural Bridges (Day Trip)",
+    lat: 29.3244,
+    lng: 107.7583,
+    imageSeed: "wulong-karst-day-trip",
+    defaultCategory: "day-trips",
+    categories: {
+      "day-trips": {
+        href: "/destinations/chongqing/day-trips/wulong-karst",
+        hook: "2.5h by train — limestone bridges that swallowed a river. Where Transformers filmed.",
+        tag: "Full day",
+      },
+    },
+  },
+];
