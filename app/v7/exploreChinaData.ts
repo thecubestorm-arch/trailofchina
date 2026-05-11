@@ -80,6 +80,19 @@ export const exploreCities: ExploreCity[] = [
     season: 'Mar-May, Oct-Nov',
     imageSeed: 'home-v4-chongqing',
   },
+  {
+    key: 'shenzhen',
+    name: 'Shenzhen',
+    nameZh: '深圳',
+    href: '/destinations/shenzhen',
+    lat: 22.54,
+    lng: 114.06,
+    hook: "China's Silicon Valley — electronics markets, art villages, and 15 minutes from Hong Kong.",
+    duration: '2-3 days',
+    price: '$$',
+    season: 'Oct-Mar',
+    imageSeed: 'home-v4-shenzhen',
+  },
 ]
 
 export const chinaBoundary: [number, number][] = [

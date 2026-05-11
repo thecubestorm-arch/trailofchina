@@ -54,13 +54,15 @@ const cities = [
   { key: 'chongqing', name: 'Chongqing', nameZh: '重庆', lat: 29.56, lng: 106.55, bestFor: 'Urban Adventure', hook: "China's cyberpunk megacity", thingsToDo: 6, whereToEat: 3, href: '/destinations/chongqing', featured: false, duration: '2-3 days', priceLevel: '$', bestSeason: 'Mar-May, Oct-Nov',
     images: ['chongqing-hongya', 'chongqing-river', 'chongqing-bridge', 'chongqing-streets', 'chongqing-night'],
   },
+  { key: 'shenzhen', name: 'Shenzhen', nameZh: '深圳', lat: 22.54, lng: 114.06, bestFor: 'Tech & Innovation', hook: "China's Silicon Valley — where tomorrow gets built today", thingsToDo: 6, whereToEat: 5, href: '/destinations/shenzhen', featured: false, duration: '2-3 days', priceLevel: '$$', bestSeason: 'Oct-Mar',
+    images: ['shenzhen-skyline-night', 'shenzhen-huaqiangbei', 'shenzhen-ping-an-finance', 'shenzhen-dafen-village', 'shenzhen-oct-loft'],
+  },
 ]
 
 const comingSoon = [
   { key: 'hangzhou', name: 'Hangzhou', nameZh: '杭州', lat: 30.27, lng: 120.15 },
   { key: 'suzhou', name: 'Suzhou', nameZh: '苏州', lat: 31.30, lng: 120.59 },
   { key: 'guilin', name: 'Guilin', nameZh: '桂林', lat: 25.27, lng: 110.29 },
-  { key: 'guangzhou', name: 'Guangzhou', nameZh: '广州', lat: 23.13, lng: 113.26 },
   { key: 'nanjing', name: 'Nanjing', nameZh: '南京', lat: 32.06, lng: 118.80 },
   { key: 'lhasa', name: 'Lhasa', nameZh: '拉萨', lat: 29.65, lng: 91.10 },
   { key: 'kunming', name: 'Kunming', nameZh: '昆明', lat: 25.04, lng: 102.72 },
