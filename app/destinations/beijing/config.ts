@@ -39,6 +39,15 @@ export const beijingConfig: CityHubConfig = {
     "beijing-lama-temple",
     "beijing-798-art",
   ],
+  galleryAlts: [
+    "Forbidden City imperial palace gates at sunset, Beijing",
+    "Great Wall winding over mountain ridges near Mutianyu, Beijing",
+    "Temple of Heaven circular Hall of Prayer surrounded by park, Beijing",
+    "Summer Palace with Kunming Lake and Long Corridor, Beijing",
+    "Hutong alleyways with traditional courtyard homes, Beijing",
+    "Lama Temple with incense and ornate Tibetan architecture, Beijing",
+    "798 Art District industrial galleries and contemporary art, Beijing",
+  ],
   pills: [
     { icon: Wifi, label: "Internet:", text: "VPN required" },
     { icon: CreditCard, label: "", text: "Cashless society" },

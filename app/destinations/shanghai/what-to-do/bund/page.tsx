@@ -12,7 +12,7 @@ export const metadata: Metadata = {
       'Shanghai\'s iconic waterfront promenade with colonial-era buildings and the Pudong skyline. Free to visit, best at sunset.',
     url: 'https://www.trailofchina.com/destinations/shanghai/what-to-do/bund',
     type: 'website',
-    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'The Bund (外滩) - Shanghai\ - Trail of China' }],
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: "The Bund (外滩) - Shanghai's Waterfront - Trail of China" }],
   },
 };
 

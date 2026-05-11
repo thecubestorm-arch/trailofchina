@@ -45,6 +45,16 @@ export const chengduConfig: CityHubConfig = {
     "chengdu-skyline",
     "chengdu-wenshu-monastery",
   ],
+  galleryAlts: [
+    "Giant pandas eating bamboo at Chengdu Research Base",
+    "Jinli Ancient Street with red lanterns and traditional shops, Chengdu",
+    "Wuhou Shrine with Three Kingdoms era architecture, Chengdu",
+    "Du Fu Thatched Cottage with bamboo gardens and poetry pavilions, Chengdu",
+    "Wide and Narrow Alleys with teahouses and boutique shops, Chengdu",
+    "Sichuan hotpot bubbling with chili oil and beef tallow, Chengdu",
+    "Chengdu skyline with modern towers at twilight",
+    "Wenshu Monastery with incense and golden rooftops, Chengdu",
+  ],
   pills: [
     { icon: Wifi, label: "Internet:", text: "VPN required" },
     { icon: CreditCard, label: "", text: "Alipay/WeChat" },

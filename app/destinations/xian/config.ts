@@ -45,6 +45,16 @@ export const xianConfig: CityHubConfig = {
     "xian-drum-tower",
     "xian-skyline",
   ],
+  galleryAlts: [
+    "Terracotta Army warriors lined in formation, Xi'an",
+    "Ancient city wall with cyclists at sunset, Xi'an",
+    "Muslim Quarter food stalls on Beiyuanmen Street, Xi'an",
+    "Big Wild Goose Pagoda rising above temple grounds, Xi'an",
+    "Shaanxi History Museum with Tang dynasty artifacts, Xi'an",
+    "Bell Tower lit up at night in the city center, Xi'an",
+    "Drum Tower and square with lanterns, Xi'an",
+    "Xi'an skyline with pagoda silhouettes at dusk",
+  ],
   pills: [
     { icon: Wifi, label: "Internet:", text: "VPN required" },
     { icon: CreditCard, label: "", text: "Alipay/WeChat" },

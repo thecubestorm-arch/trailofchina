@@ -12,7 +12,7 @@ export const metadata: Metadata = {
       'Chongqing\'s iconic stilted building complex on the Jialing River. 11 stories of shops, restaurants, and views. Free to explore.',
     url: 'https://www.trailofchina.com/destinations/chongqing/what-to-do/hongya-cave',
     type: 'website',
-    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Hongya Cave (洪崖洞) - Chongqing\ - Trail of China' }],
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: "Hongya Cave (洪崖洞) - Chongqing's Stilted Wonder - Trail of China" }],
   },
 };
 

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
       'The Heming Teahouse in People\'s Park is where Chengdu\'s slow-living culture peaks.',
     url: 'https://www.trailofchina.com/destinations/chengdu/what-to-do/peoples-park-teahouse',
     type: 'website',
-    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'People\ - Trail of China' }],
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: "People's Park Teahouse - Trail of China" }],
   },
 };
 

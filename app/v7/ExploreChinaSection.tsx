@@ -54,7 +54,7 @@ export default function ExploreChinaSection() {
                     <div className="flex gap-3">
                       <img
                         src={`https://picsum.photos/seed/${city.imageSeed}/240/240`}
-                        alt={`${city.name} travel preview`}
+                        alt={`${city.name} city skyline and landmarks`}
                         className="h-20 w-20 shrink-0 rounded-2xl object-cover"
                       />
                       <div className="min-w-0 flex-1">

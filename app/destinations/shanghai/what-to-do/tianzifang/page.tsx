@@ -11,7 +11,7 @@ export const metadata: Metadata = {
       'Explore Tianzifang, Shanghai\'s maze of narrow alleys filled with artists\' studios, indie boutiques, and hidden cafés in restored Shikumen townhouses. Free to visit.',
     url: 'https://www.trailofchina.com/destinations/shanghai/what-to-do/tianzifang',
     type: 'website',
-    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Tianzifang (田子坊) - Shanghai\ - Trail of China' }],
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Tianzifang Art District - Trail of China' }],
   },
 };
 

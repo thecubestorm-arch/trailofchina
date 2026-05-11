@@ -45,6 +45,16 @@ export const chongqingConfig: CityHubConfig = {
     "chongqing-hotpot",
     "chongqing-skyline",
   ],
+  galleryAlts: [
+    "Hongyadong stilt houses lit up at night on the Jialing River, Chongqing",
+    "Ciqikou Ancient Town stone alleys with snack stalls and pottery, Chongqing",
+    "Three Gorges Museum with Ba culture exhibits and Three Gorges Dam displays, Chongqing",
+    "Eling Park panoramic viewpoint overlooking the mountain city, Chongqing",
+    "Jiefangbei Monument surrounded by neon shopping district, Chongqing",
+    "Liziba monorail train passing through a residential building, Chongqing",
+    "Chongqing hotpot simmering with beef tallow and Sichuan pepper, Chongqing",
+    "Chongqing skyline with layered buildings on mountain slopes at dusk",
+  ],
   pills: [
     { icon: Wifi, label: "Internet:", text: "VPN required" },
     { icon: CreditCard, label: "", text: "Alipay/WeChat" },
