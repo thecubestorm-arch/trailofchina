@@ -31,6 +31,7 @@ const tabs = [
   { id: "where-to-eat" as Tab, label: "Where to Eat", mobileLabel: "Eat" },
   { id: "where-to-stay" as Tab, label: "Where to Stay", mobileLabel: "Stay" },
   { id: "essentials" as Tab, label: "Essentials", mobileLabel: "Essentials" },
+  { id: "day-trips" as Tab, label: "Day Trips", mobileLabel: "Day Trips" },
 ];
 
 const filterGroups = [
@@ -480,6 +481,38 @@ function WhereToStaySection({ config }: { config: CityHubConfig }) {
             subtitle={n.categories[n.defaultCategory]?.hook || ""}
             alt={n.name}
           />
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function DayTripsSection({ config }: { config: CityHubConfig }) {
+  const cards = config.dayTripCards;
+  if (!cards || cards.length === 0) return null;
+  return (
+    <section>
+      <SectionHeader
+        title="Day Trips"
+        href={`/destinations/${config.slug}/day-trips`}
+      />
+      <div
+        className="scrollbar-hide -mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4"
+      >
+        {cards.map((trip) => (
+          <div
+            key={trip.name}
+            className="w-[calc(85vw-2rem)] max-w-[260px] flex-shrink-0 snap-start sm:max-w-[280px] md:w-[300px]"
+          >
+            <PhotoCard
+              href={trip.categories[trip.defaultCategory]?.href || `/destinations/${config.slug}/day-trips`}
+              imageSeed={trip.imageSeed}
+              title={trip.name}
+              subtitle={trip.categories[trip.defaultCategory]?.hook || ""}
+              tag={trip.categories[trip.defaultCategory]?.tag}
+              alt={trip.name}
+            />
+          </div>
         ))}
       </div>
     </section>
@@ -1113,6 +1146,7 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
             </div>
 
             <ItinerarySection config={config} />
+            <DayTripsSection config={config} />
             <WhereToEatSection config={config} />
             <WhereToStaySection config={config} />
             <KnowBeforeYouGoSection config={config} expanded />
@@ -1178,6 +1212,21 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
           >
             <KnowBeforeYouGoSection config={config} expanded />
             <LocalTipsSection config={config} />
+            <FooterCTA
+              title={config.footerTitle}
+              subtitle={config.footerSubtitle}
+              quickInfo={config.footerQuickInfo}
+              trustText={config.footerTrustText}
+            />
+          </div>
+        )}
+
+        {!isMapView && !isFiltering && activeTab === "day-trips" && (
+          <div
+            className="space-y-8 md:space-y-10"
+            style={{ scrollMarginTop: "var(--city-hub-sticky-offset, 8.5rem)" }}
+          >
+            <DayTripsSection config={config} />
             <FooterCTA
               title={config.footerTitle}
               subtitle={config.footerSubtitle}

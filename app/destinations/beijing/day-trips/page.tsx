@@ -32,6 +32,9 @@ export default function BeijingDayTripsPage() {
         <div className="relative mb-6">
           <LanternWatermark className="-top-4 -right-8" />
           <h1 className="text-4xl font-bold text-[#1a3a4a]">Day Trips from Beijing</h1>
+          <Link href="/destinations/beijing" className="inline-flex items-center gap-1 mt-2 text-[#af5d32] hover:underline text-sm">
+            ← Back to Beijing
+          </Link>
         </div>
 
         <section className="mb-8">

@@ -274,6 +274,68 @@ export const beijingConfig: CityHubConfig = {
       },
     },
   ],
+  dayTripCards: [
+    {
+      id: "mutianyu-great-wall-day-trip",
+      name: "Mutianyu Great Wall (Day Trip)",
+      lat: 40.4319,
+      lng: 116.5682,
+      imageSeed: "mutianyu-great-wall-day-trip",
+      defaultCategory: "day-trips",
+      categories: {
+        "day-trips": {
+          href: "/destinations/beijing/day-trips/mutianyu-great-wall",
+          hook: "90 min from Beijing — the wall section with cable car, toboggan, and zero crowds.",
+          tag: "Full day",
+        },
+      },
+    },
+    {
+      id: "chengde-day-trip",
+      name: "Chengde Mountain Resort (Day Trip)",
+      lat: 40.951,
+      lng: 117.963,
+      imageSeed: "chengde-mountain-resort-day-trip",
+      defaultCategory: "day-trips",
+      categories: {
+        "day-trips": {
+          href: "/destinations/beijing/day-trips/chengde",
+          hook: "1h bullet train — Qing summer capital with imperial gardens and a Little Potala Palace.",
+          tag: "Full day",
+        },
+      },
+    },
+    {
+      id: "ming-tombs-day-trip",
+      name: "Ming Tombs (Day Trip)",
+      lat: 40.2297,
+      lng: 116.2225,
+      imageSeed: "ming-tombs-day-trip",
+      defaultCategory: "day-trips",
+      categories: {
+        "day-trips": {
+          href: "/destinations/beijing/day-trips/ming-tombs",
+          hook: "40 min from Beijing — 13 imperial tombs, underground palace, and the Sacred Way.",
+          tag: "Half day",
+        },
+      },
+    },
+    {
+      id: "gubei-water-town-day-trip",
+      name: "Gubei Water Town & Simatai (Day Trip)",
+      lat: 40.6728,
+      lng: 117.2445,
+      imageSeed: "gubei-water-town-day-trip",
+      defaultCategory: "day-trips",
+      categories: {
+        "day-trips": {
+          href: "/destinations/beijing/day-trips/gubei-water-town",
+          hook: "2h from Beijing — canal village by day, the only Great Wall you can walk at night.",
+          tag: "Full day",
+        },
+      },
+    },
+  ],
   localTips: [
     {
       id: "forbidden-city-tickets",
@@ -495,6 +557,10 @@ export const beijingConfig: CityHubConfig = {
     { id: "tip-great-wall", name: "Great Wall Timing", subtitle: "Mutianyu is less crowded. Go early — buses fill up by 9 AM.", imageSeed: "", href: "/destinations/beijing/local-tips", type: "tip", icon: Sunrise, filters: ["practical"] },
     { id: "tip-sandstorm", name: "Sandstorm Season", subtitle: "Spring sandstorms (March–May) can turn the sky orange. Bring a mask.", imageSeed: "", href: "/destinations/beijing/local-tips", type: "tip", icon: CloudRain, filters: ["practical"] },
     { id: "tip-didi", name: "Taxi vs DiDi", subtitle: "Taxi drivers rarely speak English. DiDi with English UI is safer.", imageSeed: "", href: "/destinations/beijing/local-tips", type: "tip", icon: Car, filters: ["practical"] },
+    { id: "mutianyu-day-trip", name: "Mutianyu Great Wall (Day Trip)", subtitle: "90 min from Beijing — cable car, toboggan, zero crowds.", tag: "Full day", imageSeed: "mutianyu-great-wall-day-trip", href: "/destinations/beijing/day-trips/mutianyu-great-wall", type: "attraction", filters: ["historic", "family", "landmark"] },
+    { id: "chengde-day-trip", name: "Chengde Mountain Resort (Day Trip)", subtitle: "1h bullet train — Qing summer capital with imperial gardens.", tag: "Full day", imageSeed: "chengde-mountain-resort-day-trip", href: "/destinations/beijing/day-trips/chengde", type: "attraction", filters: ["historic", "landmark"] },
+    { id: "ming-tombs-day-trip", name: "Ming Tombs (Day Trip)", subtitle: "40 min from Beijing — underground palace and Sacred Way.", tag: "Half day", imageSeed: "ming-tombs-day-trip", href: "/destinations/beijing/day-trips/ming-tombs", type: "attraction", filters: ["historic", "landmark"] },
+    { id: "gubei-day-trip", name: "Gubei Water Town & Simatai (Day Trip)", subtitle: "2h from Beijing — canal village by day, night wall walk.", tag: "Full day", imageSeed: "gubei-water-town-day-trip", href: "/destinations/beijing/day-trips/gubei-water-town", type: "attraction", filters: ["historic", "family", "landmark"] },
   ],
   footerTitle: "Ready to Explore Beijing?",
   footerSubtitle:

@@ -5,7 +5,8 @@ export type Tab =
   | "things-to-do"
   | "where-to-eat"
   | "where-to-stay"
-  | "essentials";
+  | "essentials"
+  | "day-trips";
 
 export type FilterTag =
   | "free"
@@ -145,6 +146,7 @@ export interface CityHubConfig {
   localTips: LocalTip[];
   itinerary: ItineraryDay[];
   knowBeforeYouGo: KnowBeforeYouGoItem[];
+  dayTripCards?: UnifiedLocation[];
   allItems: FilterableItem[];
   footerTitle: string;
   footerSubtitle: string;
