@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import FooterEmailCTA from '@/components/FooterEmailCTA'
+import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'About',
@@ -72,7 +73,10 @@ const quotes = [
 ]
 
 export default function AboutPage() {
+  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "About", path: "/about" }]);
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
     <main
       className="min-h-screen"
       style={
@@ -257,5 +261,6 @@ export default function AboutPage() {
         </div>
       </div>
     </main>
+    </>
   )
 }

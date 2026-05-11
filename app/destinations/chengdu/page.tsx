@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import ChengduHubClient from './ChengduHubClient';
 import { makeMetadata } from '@/lib/metadata';
 import AuthorByline from '@/components/AuthorByline';
+import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = makeMetadata({
   title: 'Chengdu Travel Guide',
@@ -18,6 +19,8 @@ export default function ChengduPage() {
     description: metadata.description,
     url: 'https://trailofchina.com/destinations/chengdu',
   };
+
+  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Destinations", path: "/destinations" }, { name: "Chengdu", path: "/destinations/chengdu" }]);
 
   return (
     <>

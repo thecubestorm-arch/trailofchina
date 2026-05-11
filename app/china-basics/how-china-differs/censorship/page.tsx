@@ -5,6 +5,7 @@ import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
 import { makeMetadata } from '@/lib/metadata'
 import AuthorByline from '@/components/AuthorByline';
+import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = makeMetadata({
   title: 'Censorship & The Great Firewall',
@@ -53,7 +54,10 @@ const relatedArticles = [
 ]
 
 export default function CensorshipPage() {
+  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "China Basics", path: "/china-basics" }, { name: "How China Differs", path: "/china-basics/how-china-differs" }, { name: "Censorship", path: "/china-basics/how-china-differs/censorship" }]);
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
     <div
       className="min-h-screen"
       style={{
@@ -228,5 +232,6 @@ export default function CensorshipPage() {
         />
       </main>
     </div>
+    </>
   )
 }

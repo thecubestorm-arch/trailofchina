@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import DestinationsV8Client from './DestinationsV8Client'
 import { makeMetadata } from '@/lib/metadata'
+import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = makeMetadata({
   title: 'Explore China Destinations',
@@ -10,5 +11,11 @@ export const metadata: Metadata = makeMetadata({
 })
 
 export default function DestinationsPage() {
-  return <DestinationsV8Client />
+  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Destinations", path: "/destinations" }]);
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <DestinationsV8Client />
+    </>
+  )
 }

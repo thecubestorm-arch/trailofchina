@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import BlogPageClient from './BlogPageClient'
 import { makeMetadata } from '@/lib/metadata'
+import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = makeMetadata({
   title: 'China Travel Blog',
@@ -10,5 +11,11 @@ export const metadata: Metadata = makeMetadata({
 })
 
 export default function BlogPage() {
-  return <BlogPageClient />
+  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Blog", path: "/blog" }]);
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <BlogPageClient />
+    </>
+  )
 }

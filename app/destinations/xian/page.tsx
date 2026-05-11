@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import XianHubClient from './XianHubClient';
 import { makeMetadata } from '@/lib/metadata';
 import AuthorByline from '@/components/AuthorByline';
+import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = makeMetadata({
   title: "Xi'an Travel Guide",
@@ -18,6 +19,8 @@ export default function XianPage() {
     description: metadata.description,
     url: 'https://trailofchina.com/destinations/xian',
   };
+
+  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Destinations", path: "/destinations" }, { name: "Xi'an", path: "/destinations/xian" }]);
 
   return (
     <>

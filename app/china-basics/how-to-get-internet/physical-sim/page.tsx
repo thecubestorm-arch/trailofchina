@@ -5,6 +5,7 @@ import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
 import { makeMetadata } from '@/lib/metadata'
 import AuthorByline from '@/components/AuthorByline';
+import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = makeMetadata({
   title: 'Physical SIM Cards in China',
@@ -64,7 +65,10 @@ const relatedArticles = [
 ]
 
 export default function PhysicalSimPage() {
+  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "China Basics", path: "/china-basics" }, { name: "How to Get Internet", path: "/china-basics/how-to-get-internet" }, { name: "Physical SIM", path: "/china-basics/how-to-get-internet/physical-sim" }]);
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
     <div
       className="min-h-screen"
       style={{
@@ -223,5 +227,6 @@ export default function PhysicalSimPage() {
         />
       </div>
     </div>
+    </>
   )
 }

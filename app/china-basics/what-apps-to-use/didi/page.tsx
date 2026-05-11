@@ -5,6 +5,7 @@ import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
 import { makeMetadata } from '@/lib/metadata'
 import AuthorByline from '@/components/AuthorByline';
+import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = makeMetadata({
   title: "Didi Chuxing Guide: China's Uber for Taxis & Ride-Hailing",
@@ -56,7 +57,10 @@ const relatedArticles = [
 ]
 
 export default function DidiPage() {
+  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "China Basics", path: "/china-basics" }, { name: "What Apps to Use", path: "/china-basics/what-apps-to-use" }, { name: "DiDi", path: "/china-basics/what-apps-to-use/didi" }]);
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
     <div
       className="min-h-screen"
       style={{
@@ -216,5 +220,6 @@ export default function DidiPage() {
         />
       </div>
     </div>
+    </>
   )
 }

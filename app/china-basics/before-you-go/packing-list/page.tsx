@@ -5,6 +5,7 @@ import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
 import { makeMetadata } from '@/lib/metadata'
 import AuthorByline from '@/components/AuthorByline';
+import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = makeMetadata({
   title: 'Packing List for China: What to Bring & What to Skip',
@@ -92,7 +93,10 @@ const relatedArticles = [
 ]
 
 export default function PackingListPage() {
+  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "China Basics", path: "/china-basics" }, { name: "Before You Go", path: "/china-basics/before-you-go" }, { name: "Packing List", path: "/china-basics/before-you-go/packing-list" }]);
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
     <div
       className="min-h-screen"
       style={{
@@ -209,5 +213,6 @@ export default function PackingListPage() {
         />
       </main>
     </div>
+    </>
   )
 }

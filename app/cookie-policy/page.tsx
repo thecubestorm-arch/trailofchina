@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { makeMetadata } from '@/lib/metadata'
+import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = makeMetadata({
   title: { absolute: 'Cookie Policy | Trail of China' },
@@ -11,7 +12,10 @@ export const metadata: Metadata = makeMetadata({
 })
 
 export default function CookiePolicyPage() {
+  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Cookie Policy", path: "/cookie-policy" }]);
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
     <div className="min-h-screen bg-white">
       <div className="max-w-6xl mx-auto px-4 py-12 md:py-16">
         {/* Breadcrumb */}
@@ -101,5 +105,6 @@ export default function CookiePolicyPage() {
         </article>
       </div>
     </div>
+    </>
   )
 }

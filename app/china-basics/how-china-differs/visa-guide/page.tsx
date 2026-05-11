@@ -4,7 +4,7 @@ import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
 import { makeMetadata } from '@/lib/metadata'
-import { faqPageSchema } from '@/lib/schema'
+import { faqPageSchema, breadcrumbSchema } from '@/lib/schema'
 import AuthorByline from '@/components/AuthorByline';
 
 export const metadata: Metadata = makeMetadata({
@@ -69,9 +69,11 @@ const faqJsonLd = faqPageSchema([
 ])
 
 export default function VisaGuidePage() {
+  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "China Basics", path: "/china-basics" }, { name: "How China Differs", path: "/china-basics/how-china-differs" }, { name: "Visa Guide", path: "/china-basics/how-china-differs/visa-guide" }]);
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
     <div
       className="min-h-screen"
       style={{

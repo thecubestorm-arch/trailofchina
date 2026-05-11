@@ -5,6 +5,7 @@ import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
 import { makeMetadata } from '@/lib/metadata'
 import AuthorByline from '@/components/AuthorByline';
+import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = makeMetadata({
   title: "7-Day China Route: Beijing, Xi'an, Shanghai",
@@ -37,7 +38,10 @@ const relatedArticles = [
 ]
 
 export default function SevenDayRoutePage() {
+  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Plan Your Trip", path: "/plan-your-trip" }, { name: "Preplanned Trips", path: "/plan-your-trip/preplanned-trips" }, { name: "7 Day Route", path: "/plan-your-trip/preplanned-trips/7-day-route" }]);
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
     <div
       className="min-h-screen"
       style={{
@@ -230,5 +234,6 @@ export default function SevenDayRoutePage() {
         />
       </main>
     </div>
+    </>
   )
 }

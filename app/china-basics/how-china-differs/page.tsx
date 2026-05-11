@@ -5,6 +5,7 @@ import Breadcrumb from '@/components/Breadcrumb'
 import RelatedArticles from '@/components/RelatedArticles'
 import { makeMetadata } from '@/lib/metadata'
 import AuthorByline from '@/components/AuthorByline';
+import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = makeMetadata({
   title: 'How China Differs',
@@ -62,7 +63,10 @@ const sections = [
 ]
 
 export default function HowChinaDiffersHub() {
+  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "China Basics", path: "/china-basics" }, { name: "How China Differs", path: "/china-basics/how-china-differs" }]);
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
     <div className="min-h-screen bg-white">
       <main className="mx-auto max-w-6xl px-4 py-12">
         <div className="relative">
@@ -134,5 +138,6 @@ export default function HowChinaDiffersHub() {
         ]} />
       </main>
     </div>
+    </>
   )
 }

@@ -6,6 +6,7 @@ import ContextualCTA from '@/components/ContextualCTA'
 import RelatedArticles from '@/components/RelatedArticles'
 import { makeMetadata } from '@/lib/metadata'
 import AuthorByline from '@/components/AuthorByline';
+import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = makeMetadata({
   title: 'How to Get Around in China',
@@ -108,7 +109,10 @@ const sections = [
 ]
 
 export default function HowToGetAroundHub() {
+  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "China Basics", path: "/china-basics" }, { name: "How to Get Around", path: "/china-basics/how-to-get-around" }]);
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
     <div className="min-h-screen bg-white">
       <main className="mx-auto max-w-6xl px-4 py-12">
         <div className="relative">
@@ -186,5 +190,6 @@ export default function HowToGetAroundHub() {
         ]} />
       </main>
     </div>
+    </>
   )
 }

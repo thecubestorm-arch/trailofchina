@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ChinaBasicsClient from './ChinaBasicsClient'
+import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'China Basics - Everything You Need to Know',
@@ -11,5 +12,11 @@ export const metadata: Metadata = {
 }
 
 export default function ChinaBasicsPage() {
-  return <ChinaBasicsClient />
+  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "China Basics", path: "/china-basics" }]);
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <ChinaBasicsClient />
+    </>
+  )
 }

@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import BeijingHubClient from './BeijingHubClient';
 import { makeMetadata } from '@/lib/metadata';
 import AuthorByline from '@/components/AuthorByline';
+import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = makeMetadata({
   title: 'Beijing Travel Guide',
@@ -18,6 +19,8 @@ export default function BeijingPage() {
     description: metadata.description,
     url: 'https://trailofchina.com/destinations/beijing',
   };
+
+  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Destinations", path: "/destinations" }, { name: "Beijing", path: "/destinations/beijing" }]);
 
   return (
     <>

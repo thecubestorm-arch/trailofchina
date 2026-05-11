@@ -5,6 +5,7 @@ import ContextualCTA from '@/components/ContextualCTA'
 import TravelPlannerForm from './TravelPlannerForm'
 import { makeMetadata } from '@/lib/metadata'
 import AuthorByline from '@/components/AuthorByline';
+import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = makeMetadata({
   title: 'Travel Planner',
@@ -14,7 +15,10 @@ export const metadata: Metadata = makeMetadata({
 })
 
 export default function TravelPlannerPage() {
+  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Plan Your Trip", path: "/plan-your-trip" }, { name: "Travel Planner", path: "/plan-your-trip/travel-planner" }]);
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
     <div
       className="min-h-screen"
       style={{
@@ -83,5 +87,6 @@ export default function TravelPlannerPage() {
         />
       </main>
     </div>
+    </>
   )
 }

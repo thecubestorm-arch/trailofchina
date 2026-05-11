@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import ChongqingHubClient from './ChongqingHubClient';
 import { makeMetadata } from '@/lib/metadata';
 import AuthorByline from '@/components/AuthorByline';
+import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = makeMetadata({
   title: 'Chongqing Travel Guide',
@@ -18,6 +19,8 @@ export default function ChongqingPage() {
     description: metadata.description,
     url: 'https://trailofchina.com/destinations/chongqing',
   };
+
+  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Destinations", path: "/destinations" }, { name: "Chongqing", path: "/destinations/chongqing" }]);
 
   return (
     <>

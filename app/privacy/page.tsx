@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { makeMetadata } from '@/lib/metadata'
+import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = makeMetadata({
   title: { absolute: 'Privacy Policy' },
@@ -11,7 +12,10 @@ export const metadata: Metadata = makeMetadata({
 })
 
 export default function PrivacyPage() {
+  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Privacy", path: "/privacy" }]);
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
     <div className="min-h-screen bg-white">
       <div className="max-w-6xl mx-auto px-4 py-12 md:py-16">
         {/* Breadcrumb */}
@@ -126,5 +130,6 @@ export default function PrivacyPage() {
         </article>
       </div>
     </div>
+    </>
   )
 }
