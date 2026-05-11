@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import XianHubClient from './XianHubClient';
 import { makeMetadata } from '@/lib/metadata';
+import AuthorByline from '@/components/AuthorByline';
 
 export const metadata: Metadata = makeMetadata({
   title: "Xi'an Travel Guide",
@@ -24,6 +25,7 @@ export default function XianPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(travelGuideJsonLd) }}
       />
+      <AuthorByline />
       <XianHubClient />
     </>
   );

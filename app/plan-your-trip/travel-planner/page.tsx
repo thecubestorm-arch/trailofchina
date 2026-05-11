@@ -4,6 +4,7 @@ import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
 import TravelPlannerForm from './TravelPlannerForm'
 import { makeMetadata } from '@/lib/metadata'
+import AuthorByline from '@/components/AuthorByline';
 
 export const metadata: Metadata = makeMetadata({
   title: 'Travel Planner',
@@ -40,6 +41,7 @@ export default function TravelPlannerPage() {
           <div className="flex items-center gap-2 text-[var(--muted)] mt-3 relative z-10">
             <span className="text-lg">Plan Your Trip</span>
           </div>
+        <AuthorByline />
         </header>
 
         <p className="text-lg sm:text-xl text-[var(--muted)] italic leading-relaxed max-w-4xl mb-10">

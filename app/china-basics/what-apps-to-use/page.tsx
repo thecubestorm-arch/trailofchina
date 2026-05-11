@@ -4,6 +4,7 @@ import ChineseWatermark from '@/components/ChineseWatermark'
 import Breadcrumb from '@/components/Breadcrumb'
 import RelatedArticles from '@/components/RelatedArticles'
 import { makeMetadata } from '@/lib/metadata'
+import AuthorByline from '@/components/AuthorByline';
 
 export const metadata: Metadata = makeMetadata({
   title: 'Essential Apps for China',
@@ -127,6 +128,7 @@ export default function WhatAppsToUsePage() {
           <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'China Basics', href: '/china-basics' }, { label: 'What Apps to Use' }]} />
           <ChineseWatermark character="应用" />
           <h1 className="mb-6 text-5xl font-bold text-[#1a3a4a]">What Apps to Use in China</h1>
+          <AuthorByline />
         </div>
 
         <section className="mb-8">

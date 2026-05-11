@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import BeijingHubClient from './BeijingHubClient';
 import { makeMetadata } from '@/lib/metadata';
+import AuthorByline from '@/components/AuthorByline';
 
 export const metadata: Metadata = makeMetadata({
   title: 'Beijing Travel Guide',
@@ -24,6 +25,7 @@ export default function BeijingPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(travelGuideJsonLd) }}
       />
+      <AuthorByline />
       <BeijingHubClient />
     </>
   );

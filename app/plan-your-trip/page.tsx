@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import PlanYourTripClient from './PlanYourTripClient'
+import AuthorByline from '@/components/AuthorByline';
 
 export const metadata: Metadata = {
   title: 'Plan Your Trip - Itineraries, Budget & Travel Planning',
@@ -15,5 +16,10 @@ export const metadata: Metadata = {
 }
 
 export default function PlanYourTripPage() {
-  return <PlanYourTripClient />
+  return (
+    <>
+      <AuthorByline />
+      <PlanYourTripClient />
+    </>
+  )
 }

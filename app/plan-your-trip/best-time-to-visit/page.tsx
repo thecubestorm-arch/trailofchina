@@ -5,6 +5,7 @@ import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
 import { makeMetadata } from '@/lib/metadata'
 import { faqPageSchema } from '@/lib/schema'
+import AuthorByline from '@/components/AuthorByline';
 
 export const metadata: Metadata = makeMetadata({
   title: 'Best Time to Visit China — Month-by-Month Guide ',
@@ -73,6 +74,7 @@ export default function BestTimeToVisitPage() {
             Best Time to Visit China
           </h1>
           <p className="text-sm text-[#1a3a4a]/60">Last updated: May 2025</p>
+          <AuthorByline />
           <div className="flex items-center gap-2 text-[var(--muted)] mt-3 relative z-10">
             <span className="text-2xl">四季</span>
             <span className="text-lg">• Plan Your Trip</span>

@@ -5,6 +5,7 @@ import Breadcrumb from '@/components/Breadcrumb'
 import ContextualCTA from '@/components/ContextualCTA'
 import RelatedArticles from '@/components/RelatedArticles'
 import { makeMetadata } from '@/lib/metadata'
+import AuthorByline from '@/components/AuthorByline';
 
 export const metadata: Metadata = makeMetadata({
   title: 'How to Get Around in China',
@@ -114,6 +115,7 @@ export default function HowToGetAroundHub() {
           <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'China Basics', href: '/china-basics' }, { label: 'How to Get Around' }]} />
           <ChineseWatermark character="交通" />
           <h1 className="mb-6 text-5xl font-bold text-[#1a3a4a]">How to Get Around</h1>
+          <AuthorByline />
         </div>
 
         <section className="mb-8">

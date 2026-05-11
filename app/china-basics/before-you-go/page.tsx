@@ -4,6 +4,7 @@ import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
 import { makeMetadata } from '@/lib/metadata'
+import AuthorByline from '@/components/AuthorByline';
 
 export const metadata: Metadata = makeMetadata({
   title: 'Before You Go to China | Visa, Safety & Packing',
@@ -116,6 +117,7 @@ export default function BeforeYouGoPage() {
             <span className="text-2xl">出行前</span>
             <span className="text-lg">• China Basics</span>
           </div>
+        <AuthorByline />
         </header>
 
         <div className="mb-6 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm sm:text-base text-[var(--foreground)] bg-[var(--surface)] border border-[var(--line)] rounded-lg px-4 py-3">

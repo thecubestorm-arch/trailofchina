@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import ChengduHubClient from './ChengduHubClient';
 import { makeMetadata } from '@/lib/metadata';
+import AuthorByline from '@/components/AuthorByline';
 
 export const metadata: Metadata = makeMetadata({
   title: 'Chengdu Travel Guide',
@@ -24,6 +25,7 @@ export default function ChengduPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(travelGuideJsonLd) }}
       />
+      <AuthorByline />
       <ChengduHubClient />
     </>
   );

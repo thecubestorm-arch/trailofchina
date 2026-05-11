@@ -5,6 +5,7 @@ import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
 import { makeMetadata } from '@/lib/metadata'
 import { faqPageSchema } from '@/lib/schema'
+import AuthorByline from '@/components/AuthorByline';
 
 export const metadata: Metadata = makeMetadata({
   title: 'High-Speed Trains in China',
@@ -70,6 +71,7 @@ export default function TrainPage() {
             High-Speed Trains
           </h1>
           <p className="text-sm text-[#1a3a4a]/60">Last updated: May 2025</p>
+          <AuthorByline />
           <div className="relative z-10 mt-3 flex items-center gap-2 text-[var(--muted)]">
             <span className="text-2xl">高铁</span>
             <span className="text-lg">• China Basics • How to Get Around</span>

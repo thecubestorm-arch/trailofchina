@@ -4,6 +4,7 @@ import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
 import { makeMetadata } from '@/lib/metadata'
+import AuthorByline from '@/components/AuthorByline';
 
 export const metadata: Metadata = makeMetadata({
   title: '14-Day Grand China Tour',
@@ -66,6 +67,7 @@ export default function FourteenDayRoutePage() {
             <span className="text-2xl">十四日</span>
             <span className="text-lg">• Plan Your Trip • Preplanned Trips</span>
           </div>
+        <AuthorByline />
         </header>
 
         <div className="mb-6 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm sm:text-base text-[var(--foreground)] bg-[var(--surface)] border border-[var(--line)] rounded-lg px-4 py-3">

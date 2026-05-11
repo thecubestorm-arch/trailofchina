@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import ShanghaiHubClient from './ShanghaiHubClient';
+import AuthorByline from '@/components/AuthorByline';
 
 export const metadata: Metadata = {
   title: 'Shanghai Travel Guide',
@@ -8,5 +9,10 @@ export const metadata: Metadata = {
 };
 
 export default function ShanghaiPage() {
-  return <ShanghaiHubClient />;
+  return (
+    <>
+      <AuthorByline />
+      <ShanghaiHubClient />
+    </>
+  );
 }

@@ -11,6 +11,21 @@ export function breadcrumbSchema(items: { name: string; path: string }[]) {
   };
 }
 
+export function authorSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Ruijie & Sascha',
+    jobTitle: 'China Travel Guide Authors',
+    url: 'https://www.trailofchina.com/about',
+    worksFor: {
+      '@type': 'Organization',
+      name: 'Trail of China',
+    },
+    knowsAbout: 'China travel, Chinese culture, Mandarin language, China visa, China transportation',
+  };
+}
+
 export function faqPageSchema(faqs: { question: string; answer: string }[]) {
   return {
     '@context': 'https://schema.org',

@@ -4,6 +4,7 @@ import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
 import { makeMetadata } from '@/lib/metadata'
+import AuthorByline from '@/components/AuthorByline';
 
 export const metadata: Metadata = makeMetadata({
   title: 'Meituan App Guide: Food Delivery, Hotels & Deals in China',
@@ -84,6 +85,7 @@ export default function MeituanPage() {
             <span className="text-2xl">美团</span>
             <span className="text-lg">• China Basics • What Apps to Use</span>
           </div>
+        <AuthorByline />
         </header>
 
         <div className="mb-6 flex flex-wrap items-center gap-x-2 gap-y-1 rounded-lg border border-[var(--line)] bg-[var(--surface)] px-4 py-3 text-sm sm:text-base text-[var(--foreground)]">
