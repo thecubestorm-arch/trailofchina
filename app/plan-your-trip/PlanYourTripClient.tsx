@@ -5,7 +5,7 @@ import type { CSSProperties } from 'react'
 import Breadcrumb from '@/components/Breadcrumb'
 import ChineseWatermark from '@/components/ChineseWatermark'
 
-const routeCards = [
+const durationRouteCards = [
   {
     badge: '7 Days',
     pace: 'Fast Paced',
@@ -32,6 +32,49 @@ const routeCards = [
     href: '/plan-your-trip/preplanned-trips/14-day-route',
     image: '/images/chongqing/skyline-night.jpg',
     alt: 'Chongqing skyline glowing at night above the river',
+  },
+] as const
+
+const popularRouteCards = [
+  {
+    badge: 'Classic',
+    pace: '10-12 Days',
+    route: "Beijing → Xi'an → Shanghai",
+    price: '¥8,000-15,000',
+    href: '/plan-your-trip/beijing-shanghai-xian',
+    image: '/images/beijing/great-wall.jpg',
+    alt: 'Classic China route through Beijing, Xi\'an and Shanghai',
+    tag: '#1 First-Timer Pick',
+  },
+  {
+    badge: 'Golden Triangle',
+    pace: '7-10 Days',
+    route: 'Shanghai → Suzhou → Hangzhou',
+    price: '¥6,000-12,000',
+    href: '/plan-your-trip/shanghai-hangzhou-suzhou',
+    image: '/images/shanghai/bund-skyline.jpg',
+    alt: 'Golden Triangle route through Shanghai, Suzhou and Hangzhou',
+    tag: 'Most Relaxed',
+  },
+  {
+    badge: 'South China',
+    pace: '7-10 Days',
+    route: 'Shenzhen → Guangzhou → Hong Kong',
+    price: '¥8,000-15,000 + HKD',
+    href: '/plan-your-trip/shenzhen-guangzhou-hongkong',
+    image: '/images/chongqing/skyline-night.jpg',
+    alt: 'South China Triangle route through Shenzhen, Guangzhou and Hong Kong',
+    tag: 'Best Food',
+  },
+  {
+    badge: 'Sichuan Spice',
+    pace: '5-7 Days',
+    route: 'Chengdu → Chongqing',
+    price: '¥5,000-10,000',
+    href: '/plan-your-trip/chengdu-chongqing',
+    image: '/images/chengdu/pandas.jpg',
+    alt: 'Sichuan Spice Route through Chengdu and Chongqing',
+    tag: 'Best Value',
   },
 ] as const
 
@@ -136,7 +179,7 @@ export default function PlanYourTripClient() {
               </div>
 
               <div className="grid gap-5 md:grid-cols-3">
-                {routeCards.map((route) => (
+                {durationRouteCards.map((route) => (
                   <Link
                     key={route.badge}
                     href={route.href}
@@ -162,6 +205,41 @@ export default function PlanYourTripClient() {
                 Or customize your own route
                 <span aria-hidden="true">→</span>
               </Link>
+            </div>
+          </section>
+
+          <section className="mt-10 overflow-hidden rounded-[2rem] bg-white border border-[#ebe4d8] px-5 py-8 text-[#1a3a4a] shadow-sm sm:px-8 sm:py-10">
+            <div className="flex flex-col gap-8">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-widest text-[#af5d32]">Popular Routes</p>
+                <h2 className="mt-3 font-serif text-3xl font-bold">Choose Your Route by Region</h2>
+                <p className="mt-2 text-[#5f6f7a]">Day-by-day guides for China&rsquo;s most popular multi-city routes.</p>
+              </div>
+
+              <div className="grid gap-5 sm:grid-cols-2">
+                {popularRouteCards.map((route) => (
+                  <Link
+                    key={route.badge}
+                    href={route.href}
+                    className="group overflow-hidden rounded-xl border border-[#ebe4d8] bg-white text-[#1a3a4a] shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-[#af5d32] hover:shadow-md"
+                  >
+                    <div className="p-6">
+                      <div className="flex items-center gap-2 mb-3">
+                        <span className="inline-flex rounded-full bg-[#af5d32] px-3 py-1 text-sm font-semibold text-[#f5f1ea]">
+                          {route.badge}
+                        </span>
+                        <span className="text-xs font-medium text-[#af5d32]">{route.tag}</span>
+                      </div>
+                      <p className="font-serif text-xl font-bold leading-tight">{route.route}</p>
+                      <div className="mt-3 flex items-center gap-4 text-sm text-[#5f6f7a]">
+                        <span>{route.pace}</span>
+                        <span className="text-[#ebe4d8]">|</span>
+                        <span>{route.price}</span>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
             </div>
           </section>
 
