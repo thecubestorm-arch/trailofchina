@@ -68,6 +68,53 @@ export const chengduConfig: CityHubConfig = {
   attractionCards,
   foodCards,
   neighborhoodCards,
+  dayTripCards: [
+    {
+      id: "leshan-giant-buddha-day-trip",
+      name: "Leshan Giant Buddha (Day Trip)",
+      lat: 29.5444,
+      lng: 103.7722,
+      imageSeed: "leshan-giant-buddha-day-trip",
+      defaultCategory: "day-trips",
+      categories: {
+        "day-trips": {
+          href: "/destinations/chengdu/day-trips/leshan-giant-buddha",
+          hook: "1h by train — the world\u2019s largest stone Buddha, seen from the river cruise.",
+          tag: "Full day",
+        },
+      },
+    },
+    {
+      id: "mount-qingcheng-day-trip",
+      name: "Mount Qingcheng (Day Trip)",
+      lat: 30.8969,
+      lng: 103.5729,
+      imageSeed: "mount-qingcheng-day-trip",
+      defaultCategory: "day-trips",
+      categories: {
+        "day-trips": {
+          href: "/destinations/chengdu/day-trips/mount-qingcheng",
+          hook: "30 min by train — misty forests, Taoist temples, and the birthplace of Taoism.",
+          tag: "Half or full day",
+        },
+      },
+    },
+    {
+      id: "dujiangyan-panda-valley-day-trip",
+      name: "Dujiangyan Panda Valley (Day Trip)",
+      lat: 31.0069,
+      lng: 103.62,
+      imageSeed: "dujiangyan-panda-valley-day-trip",
+      defaultCategory: "day-trips",
+      categories: {
+        "day-trips": {
+          href: "/destinations/chengdu/day-trips/dujiangyan-panda-valley",
+          hook: "30 min by train — pandas without the crowds, plus a 2,200-year-old UNESCO irrigation system.",
+          tag: "Full day",
+        },
+      },
+    },
+  ],
   localTips: [
     {
       id: "panda-timing",
@@ -311,6 +358,9 @@ export const chengduConfig: CityHubConfig = {
     { id: "tip-pace-yourself", name: "Slow the Pace", subtitle: "Chengdu works best with fewer hard-ticket sights and more time for tea, parks, and long meals.", imageSeed: "", href: "/destinations/chengdu/local-tips", type: "tip", icon: Lightbulb, filters: ["local", "practical"] },
     { id: "tip-jinli-vs-kuanzhai", name: "Jinli vs Kuanzhai", subtitle: "Use Jinli for lantern-lit atmosphere and snacks, then Kuanzhai for architecture and cafés.", imageSeed: "", href: "/destinations/chengdu/local-tips", type: "tip", icon: Map, filters: ["historic", "food", "practical"] },
     { id: "tip-opera-booking", name: "Book Opera Early", subtitle: "Weekend and holiday performances sell out faster than many first-timers expect.", imageSeed: "", href: "/destinations/chengdu/local-tips", type: "tip", icon: Calendar, filters: ["practical"] },
+    { id: "leshan-giant-buddha-day-trip", name: "Leshan Giant Buddha (Day Trip)", subtitle: "1h by train — the world\u2019s largest stone Buddha, seen from the river cruise.", tag: "Full day", imageSeed: "leshan-giant-buddha-day-trip", href: "/destinations/chengdu/day-trips/leshan-giant-buddha", type: "attraction", filters: ["historic", "family", "landmark"] },
+    { id: "mount-qingcheng-day-trip", name: "Mount Qingcheng (Day Trip)", subtitle: "30 min by train — misty forests, Taoist temples, and the birthplace of Taoism.", tag: "Half or full day", imageSeed: "mount-qingcheng-day-trip", href: "/destinations/chengdu/day-trips/mount-qingcheng", type: "attraction", filters: ["budget", "historic", "landmark"] },
+    { id: "dujiangyan-panda-valley-day-trip", name: "Dujiangyan Panda Valley (Day Trip)", subtitle: "30 min by train — pandas without the crowds, plus a UNESCO irrigation system.", tag: "Full day", imageSeed: "dujiangyan-panda-valley-day-trip", href: "/destinations/chengdu/day-trips/dujiangyan-panda-valley", type: "attraction", filters: ["family", "landmark"] },
   ],
   footerTitle: "Ready to Explore Chengdu?",
   footerSubtitle:
