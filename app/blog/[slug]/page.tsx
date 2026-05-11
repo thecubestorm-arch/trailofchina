@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
       images: [{ url: post.imageUrl }],
       type: 'article',
     },
-  }
+};
 }
 
 export default async function BlogPostPage({ params }: { params: Params }) {
@@ -56,7 +56,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
       '@type': 'Organization',
       name: 'Trail of China',
     },
-  }
+};
 
   const formatDate = (dateStr: string) => {
     return new Date(dateStr).toLocaleDateString('en-US', {

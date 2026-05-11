@@ -9,8 +9,9 @@ export const metadata: Metadata = {
     title: 'Tianzifang (田子坊) - Shanghai\'s Creative Alleyways',
     description:
       'Explore Tianzifang, Shanghai\'s maze of narrow alleys filled with artists\' studios, indie boutiques, and hidden cafés in restored Shikumen townhouses. Free to visit.',
-    url: 'https://trailofchina.com/destinations/shanghai/what-to-do/tianzifang',
+    url: 'https://www.trailofchina.com/destinations/shanghai/what-to-do/tianzifang',
     type: 'website',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Tianzifang (田子坊) - Shanghai\ - Trail of China' }],
   },
 };
 

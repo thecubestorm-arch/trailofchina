@@ -15,8 +15,9 @@ export const metadata: Metadata = {
     title: 'Lama Temple (雍和宫) Beijing | History, Hours & Visitor Tips',
     description:
       'Largest Tibetan Buddhist temple outside Tibet. Red walls, golden roofs, thick incense. The 18-meter Maitreya Buddha carved from single sandalwood tree. Visit early morning when monks chant.',
-    url: 'https://trailofchina.com/destinations/beijing/what-to-do/lama-temple',
+    url: 'https://www.trailofchina.com/destinations/beijing/what-to-do/lama-temple',
     type: 'website',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Lama Temple (雍和宫) Beijing | History, Hours & Visitor Tips - Trail of China' }],
   },
 };
 

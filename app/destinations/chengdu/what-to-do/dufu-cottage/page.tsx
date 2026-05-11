@@ -5,6 +5,11 @@ export const metadata: Metadata = {
   title: "Du Fu Thatched Cottage (杜甫草堂) | Chengdu Poet's Garden Guide",
   description:
     "Visit Du Fu Thatched Cottage in Chengdu for classical gardens, literary history, and one of the city's calmest cultural attractions.",
+  openGraph: {
+    title: 'Du Fu Thatched Cottage - Trail of China',
+    description: 'Classical gardens and literary history in Chengdu.',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Du Fu Thatched Cottage - Trail of China' }],
+  },
 };
 
 export default function DufuCottagePage() {

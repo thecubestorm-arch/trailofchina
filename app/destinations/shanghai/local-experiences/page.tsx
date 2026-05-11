@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   title: 'Local Experiences in Shanghai',
   description:
     'Authentic local experiences in Shanghai: shikumen walks, Art Deco tours, street food adventures, art district visits, and day trips with locals.',
+  openGraph: {
+    title: 'Shanghai Local Experiences - Trail of China',
+    description: 'Authentic local experiences in Shanghai.',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Shanghai Local Experiences - Trail of China' }],
+  },
 };
 
 const categories = [

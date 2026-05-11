@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     title: 'Peking Duck (北京烤鸭) in Beijing',
     description: 'Beijing\'s most famous dish. Crispy lacquered skin, tender meat, thin pancakes, hoisin sauce, cucumber and scallion.',
     type: 'website',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Peking Duck (北京烤鸭) in Beijing | Best Restaurants & History - Trail of China' }],
   },
 };
 

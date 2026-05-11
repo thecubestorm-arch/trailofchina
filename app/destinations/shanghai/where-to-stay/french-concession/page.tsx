@@ -11,7 +11,7 @@ export const metadata: Metadata = {
       'Stay in Shanghai leafy, charming neighborhood with lane houses, cafes, and boutiques. Perfect for travelers who want to experience Shanghai like a local.',
     images: [
       {
-        url: 'https://trailofchina.com/api/og?title=French+Concession&description=Leafy+streets+cafe+hou',
+        url: 'https://www.trailofchina.com/api/og?title=French+Concession&description=Leafy+streets+cafe+hou',
         width: 1200,
         height: 630,
         alt: 'French Concession Shanghai',

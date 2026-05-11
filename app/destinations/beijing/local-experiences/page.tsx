@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   title: 'Local Experiences in Beijing',
   description:
     'Authentic local experiences in Beijing: hutong breakfast walks, temple morning rituals, calligraphy classes, street food tours, and hidden gems with locals.',
+  openGraph: {
+    title: 'Beijing Local Experiences - Trail of China',
+    description: 'Authentic local experiences in Beijing.',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Beijing Local Experiences - Trail of China' }],
+  },
 };
 
 const categories = [

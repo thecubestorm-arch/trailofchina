@@ -35,6 +35,15 @@ export const affiliateLinks = {
   "safetywing": "https://safetywing.com/?ref=PLACEHOLDER",
   "worldnomads": "https://worldnomads.com/?ref=PLACEHOLDER",
 
+  // === Activities / Tours ===
+  "klook": "https://klook.com/?ref=PLACEHOLDER",
+  "get-your-guide": "https://getyourguide.com/?ref=PLACEHOLDER",
+  "tripadvisor": "https://tripadvisor.com/?ref=PLACEHOLDER",
+
+  // === Finance / Payment ===
+  "wise": "https://wise.com/?ref=PLACEHOLDER",
+  "revolut": "https://revolut.com/?ref=PLACEHOLDER",
+
   // === Travel Gear ===
   "travel-adapter-amazon": "https://amazon.de/dp/PLACEHOLDER?tag=PLACEHOLDER",
   "packing-cube-amazon": "https://amazon.de/dp/PLACEHOLDER?tag=PLACEHOLDER",

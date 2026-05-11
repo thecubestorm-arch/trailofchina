@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Yangtze River Cable Car (长江索道) Chongqing | Ride, Views & Tickets',
     description: "Chongqing's most iconic experience — a cable car gliding over the Yangtze River with panoramic views of the mountain city skyline.",
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Yangtze River Cable Car (长江索道) Chongqing | Ride, Views & Tickets - Trail of China' }],
   },
 };
 

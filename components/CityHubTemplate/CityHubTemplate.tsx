@@ -746,7 +746,7 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
               >
                 <Image
                   src={`https://picsum.photos/seed/${seed}/1600/900`}
-                  alt={`${config.nameEn} gallery image ${index + 1}`}
+                  alt={config.galleryAlts?.[index] ?? `${config.nameEn} gallery image ${index + 1}`}
                   fill
                   priority={index < 2}
                   className="object-cover"

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
       'Stay in Chongqing\'s downtown core. Shopping, dining, and the best metro connections in a city where elevation matters.',
     images: [
       {
-        url: 'https://trailofchina.com/api/og?title=Jiefangbei&description=Downtown+core+with+the+best+transport+links',
+        url: 'https://www.trailofchina.com/api/og?title=Jiefangbei&description=Downtown+core+with+the+best+transport+links',
         width: 1200,
         height: 630,
         alt: 'Jiefangbei Chongqing',

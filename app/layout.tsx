@@ -12,7 +12,7 @@ import VPNeSIMToast from '@/components/VPNeSIMToast'
 // import SearchCommandPalette from '@/components/SearchCommandPalette'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://trailofchina.com'),
+  metadataBase: new URL('https://www.trailofchina.com'),
   title: {
     default: 'Travel China Without Confusion',
     template: '%s | Trail of China',
@@ -29,11 +29,11 @@ export const metadata: Metadata = {
     apple: '/apple-touch-icon.png',
   },
   openGraph: {
-    images: [{ url: '/og-default.jpg', width: 1200, height: 630, alt: 'Trail of China' }],
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Trail of China - China Travel Guide' }],
   },
   twitter: {
     card: 'summary_large_image',
-    images: ['/og-default.jpg'],
+    images: ['https://www.trailofchina.com/og-default.jpg'],
   },
 }
 

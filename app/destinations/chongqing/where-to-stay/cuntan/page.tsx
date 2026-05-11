@@ -11,7 +11,7 @@ export const metadata: Metadata = {
       'Stay across the river for local flavor, budget prices, and skyline views of downtown Chongqing without the downtown prices.',
     images: [
       {
-        url: 'https://trailofchina.com/api/og?title=Cuntan+%2F+Nan%27an&description=Budget-friendly+with+skyline+views+across+the+river',
+        url: 'https://www.trailofchina.com/api/og?title=Cuntan+%2F+Nan%27an&description=Budget-friendly+with+skyline+views+across+the+river',
         width: 1200,
         height: 630,
         alt: 'Cuntan Nan\'an Chongqing',

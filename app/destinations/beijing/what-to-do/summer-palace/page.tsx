@@ -15,8 +15,9 @@ export const metadata: Metadata = {
     title: 'Summer Palace (颐和园) Beijing | Tickets, Hours & Walking Routes',
     description:
       'Imperial retreat with Kunming Lake, Longevity Hill, Long Corridor (728m of painted beams). Marble Boat symbol of Cixi\'s extravagance. Rent a rowboat in summer. UNESCO World Heritage Site.',
-    url: 'https://trailofchina.com/destinations/beijing/what-to-do/summer-palace',
+    url: 'https://www.trailofchina.com/destinations/beijing/what-to-do/summer-palace',
     type: 'website',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Summer Palace (颐和园) Beijing | Tickets, Hours & Walking Routes - Trail of China' }],
   },
 };
 

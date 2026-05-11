@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   title: 'Where to Stay in Shanghai | Best Neighborhoods, Hotels & Hostels',
   description:
     'Best areas to stay in Shanghai: the Bund, French Concession, Jing\'an, Xintiandi, and People\'s Square. Budget hostels to luxury hotels.',
+  openGraph: {
+    title: 'Where to Stay in Shanghai - Trail of China',
+    description: 'Best neighborhoods and hotels in Shanghai.',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Where to Stay in Shanghai - Trail of China' }],
+  },
 };
 
 export default function ShanghaiWhereToStayPage() {

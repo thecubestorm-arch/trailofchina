@@ -4,7 +4,7 @@ import { blogPosts } from '@/lib/blog-data'
 
 export const dynamic = 'force-static'
 
-const BASE_URL = 'https://trailofchina.com'
+const BASE_URL = 'https://www.trailofchina.com'
 const defaultLastModified = new Date()
 
 type SitemapEntry = {

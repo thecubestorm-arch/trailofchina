@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     title: 'Mapo Tofu (麻婆豆腐) in Chengdu | History, Best Restaurants & Recipe',
     description: 'Soft tofu cubes in a fiery sauce of chili oil and Sichuan peppercorns.',
     type: 'website',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Mapo Tofu (麻婆豆腐) in Chengdu | History, Best Restaurants & Recipe - Trail of China' }],
   },
 };
 

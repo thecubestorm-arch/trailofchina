@@ -9,8 +9,9 @@ export const metadata: Metadata = {
     title: 'Shanghai French Concession | Walking Guide, Cafes & Hidden Streets',
     description:
       'Explore Shanghai\'s French Concession: tree-lined streets, Art Deco architecture, best cafes, boutiques, and hidden lane houses.',
-    url: 'https://trailofchina.com/destinations/shanghai/what-to-do/french-concession',
+    url: 'https://www.trailofchina.com/destinations/shanghai/what-to-do/french-concession',
     type: 'website',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Shanghai French Concession | Walking Guide, Cafes & Hidden Streets - Trail of China' }],
   },
 };
 

@@ -10,8 +10,9 @@ export const metadata: Metadata = {
     title: 'Chengdu Panda Base (成都大熊猫繁育研究研究基地) - Giant Panda Sanctuary',
     description:
       'World-famous giant panda sanctuary where you can see pandas up close. Best time to visit is morning hours when they\'re most active.',
-    url: 'https://trailofchina.com/destinations/chengdu/what-to-do/panda-base',
+    url: 'https://www.trailofchina.com/destinations/chengdu/what-to-do/panda-base',
     type: 'website',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Chengdu Panda Base (成都大熊猫繁育研究基地) - Giant Panda Sanctuary - Trail of China' }],
   },
 };
 

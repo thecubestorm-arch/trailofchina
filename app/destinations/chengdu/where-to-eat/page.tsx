@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   title: 'Where to Eat in Chengdu | Hotpot, Noodles, and Local Classics',
   description:
     'Chengdu food guide covering hotpot, mapo tofu, kung pao chicken, dan dan noodles, and where to eat near key sights.',
+  openGraph: {
+    title: 'Where to Eat in Chengdu - Trail of China',
+    description: 'Hotpot, noodles, and local classics in Chengdu.',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Where to Eat in Chengdu - Trail of China' }],
+  },
 };
 
 export default function ChengduWhereToEatPage() {

@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   title: 'Where to Stay in Chengdu',
   description:
     'Best Chengdu neighborhoods for first-timers, culture seekers, and budget travelers with price and metro details.',
+  openGraph: {
+    title: 'Where to Stay in Chengdu - Trail of China',
+    description: 'Best neighborhoods and hotels in Chengdu.',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Where to Stay in Chengdu - Trail of China' }],
+  },
 };
 
 export default function ChengduWhereToStayPage() {

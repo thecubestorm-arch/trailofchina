@@ -9,7 +9,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/china-basics',
   },
-}
+  openGraph: {
+    title: 'China Basics - Trail of China',
+    description: 'Master the essentials for your first China trip.',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'China Basics - Trail of China' }],
+  },
+};
 
 export default function ChinaBasicsPage() {
   const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "China Basics", path: "/china-basics" }]);

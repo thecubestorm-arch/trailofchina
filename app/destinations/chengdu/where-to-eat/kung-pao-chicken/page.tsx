@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     title: 'Kung Pao Chicken (宫保鸡丁) in Chengdu | Authentic Recipe & Best Restaurants',
     description: 'The Western version is sweet and gloppy; the real thing is dry, complex, and the peanuts are the star.',
     type: 'website',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Kung Pao Chicken (宫保鸡丁) in Chengdu | Authentic Recipe & Best Restaurants - Trail of China' }],
   },
 };
 

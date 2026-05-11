@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   title: 'Where to Stay in Chongqing',
   description:
     'Best areas to stay in Chongqing for first-timers and return visits: Jiefangbei, Nanbin Road, and Hongyadong surroundings.',
+  openGraph: {
+    title: 'Where to Stay in Chongqing - Trail of China',
+    description: 'Best neighborhoods and hotels in Chongqing.',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Where to Stay in Chongqing - Trail of China' }],
+  },
 };
 
 export default function ChongqingWhereToStayPage() {

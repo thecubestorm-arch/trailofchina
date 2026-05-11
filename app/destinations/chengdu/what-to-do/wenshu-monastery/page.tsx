@@ -15,8 +15,9 @@ export const metadata: Metadata = {
     title: 'Wenshu Monastery (文殊院) Chengdu | Tea House, History & Peace',
     description:
       'Chengdu\'s best-preserved Buddhist monastery and the spiritual heart of the city.',
-    url: 'https://trailofchina.com/destinations/chengdu/what-to-do/wenshu-monastery',
+    url: 'https://www.trailofchina.com/destinations/chengdu/what-to-do/wenshu-monastery',
     type: 'website',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Wenshu Monastery (文殊院) Chengdu | Tea House, History & Peace - Trail of China' }],
   },
 };
 

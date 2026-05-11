@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   title: 'Chengdu Local Tips',
   description:
     'Practical Chengdu insider tips: panda timing, transport, weather planning, opera bookings, and what to skip.',
+  openGraph: {
+    title: 'Chengdu Local Tips - Trail of China',
+    description: 'Transport, food, and insider secrets for Chengdu.',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Chengdu Local Tips - Trail of China' }],
+  },
 };
 
 export default function ChengduLocalTipsPage() {

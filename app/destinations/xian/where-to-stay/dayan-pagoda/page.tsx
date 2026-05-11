@@ -11,7 +11,7 @@ export const metadata: Metadata = {
       "Stay near the Big Wild Goose Pagoda in Xi'an's modern south side. Clean, quiet, and perfect for families and longer stays.",
     images: [
       {
-        url: 'https://trailofchina.com/api/og?title=Dayan+Pagoda+Area&description=Modern+and+clean+near+the+Big+Wild+Goose+Pagoda',
+        url: 'https://www.trailofchina.com/api/og?title=Dayan+Pagoda+Area&description=Modern+and+clean+near+the+Big+Wild+Goose+Pagoda',
         width: 1200,
         height: 630,
         alt: "Dayan Pagoda Area Xi'an",

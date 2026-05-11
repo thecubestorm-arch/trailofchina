@@ -9,8 +9,9 @@ export const metadata: Metadata = {
     title: 'Jade Buddha Temple (玉佛禅寺) - Shanghai',
     description:
       'Visit the Jade Buddha Temple in Shanghai to see two extraordinary Buddha statues carved from single pieces of Burmese jade. A peaceful retreat in the heart of the city.',
-    url: 'https://trailofchina.com/destinations/shanghai/what-to-do/jade-buddha-temple',
+    url: 'https://www.trailofchina.com/destinations/shanghai/what-to-do/jade-buddha-temple',
     type: 'website',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Jade Buddha Temple (玉佛禅寺) - Shanghai - Trail of China' }],
   },
 };
 

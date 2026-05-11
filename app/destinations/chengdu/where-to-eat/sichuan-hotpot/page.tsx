@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     title: 'Sichuan Hotpot (四川火锅) in Chengdu | Best Restaurants & Spice Guide',
     description: 'The king of Chengdu dining — a bubbling cauldron of chili oil and Sichuan peppercorns.',
     type: 'website',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Sichuan Hotpot (四川火锅) in Chengdu | Best Restaurants & Spice Guide - Trail of China' }],
   },
 };
 

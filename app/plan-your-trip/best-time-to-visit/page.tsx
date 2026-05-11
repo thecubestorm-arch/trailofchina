@@ -17,6 +17,7 @@ export const metadata: Metadata = makeMetadata({
     description:
       'From cherry-blossom spring to golden autumn — find the perfect season for your China trip.',
     type: 'article',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Best Time to Visit China — Month-by-Month Guide  - Trail of China' }],
   },
 
   path: '/plan-your-trip/best-time-to-visit',

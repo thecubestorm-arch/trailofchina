@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     title: 'Shengjianbao (生煎包) in Shanghai',
     description: 'Crispy bottom, fluffy top, pork and soup inside — Shanghai\'s beloved breakfast staple',
     type: 'website',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Shengjianbao (生煎包) in Shanghai | Pan-Fried Buns Guide - Trail of China' }],
   },
 };
 

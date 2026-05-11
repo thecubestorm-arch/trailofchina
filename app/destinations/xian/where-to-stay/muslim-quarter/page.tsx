@@ -11,7 +11,7 @@ export const metadata: Metadata = {
       "Stay in Xi'an's legendary food quarter. Street food heaven, walk to the Bell Tower, and the city's most lively atmosphere.",
     images: [
       {
-        url: 'https://trailofchina.com/api/og?title=Muslim+Quarter&description=Street+food+heaven+in+Xi%27an',
+        url: 'https://www.trailofchina.com/api/og?title=Muslim+Quarter&description=Street+food+heaven+in+Xi%27an',
         width: 1200,
         height: 630,
         alt: 'Muslim Quarter Xi\'an',

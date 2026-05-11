@@ -11,7 +11,7 @@ export const metadata: Metadata = {
       'Stay in Shanghai central transportation and shopping hub. Perfect for first-time visitors who want to be near everything — shopping, transport, and nightlife.',
     images: [
       {
-        url: 'https://trailofchina.com/api/og?title=Jing%27an&description=Central+connected+and+always+buzzing',
+        url: 'https://www.trailofchina.com/api/og?title=Jing%27an&description=Central+connected+and+always+buzzing',
         width: 1200,
         height: 630,
         alt: 'Jing\'an Shanghai',

@@ -15,8 +15,9 @@ export const metadata: Metadata = {
     title: 'Temple of Heaven (天坛) Beijing | Complete Visitor Guide',
     description:
       'Where Ming and Qing emperors prayed for good harvests. The circular Hall of Prayer for Good Harvests is Beijing\'s most iconic silhouette. Come at 6 AM to watch locals doing tai chi, sword dancing, and choir singing. The park is where real Beijing life happens.',
-    url: 'https://trailofchina.com/destinations/beijing/what-to-do/temple-of-heaven',
+    url: 'https://www.trailofchina.com/destinations/beijing/what-to-do/temple-of-heaven',
     type: 'website',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Temple of Heaven (天坛) Beijing | Complete Visitor Guide - Trail of China' }],
   },
 };
 

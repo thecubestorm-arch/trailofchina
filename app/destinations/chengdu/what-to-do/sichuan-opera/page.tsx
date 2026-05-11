@@ -15,8 +15,9 @@ export const metadata: Metadata = {
     title: 'Sichuan Opera Face-Changing (川剧变脸) Chengdu | Shows, Tickets & What to Expect',
     description:
       'Sichuan opera\'s face-changing (bianlian) is one of China\'s most spectacular traditional arts.',
-    url: 'https://trailofchina.com/destinations/chengdu/what-to-do/sichuan-opera',
+    url: 'https://www.trailofchina.com/destinations/chengdu/what-to-do/sichuan-opera',
     type: 'website',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Sichuan Opera Face-Changing (川剧变脸) Chengdu | Shows, Tickets & What to Expect - Trail of China' }],
   },
 };
 

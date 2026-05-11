@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: 'Xi\'an Bell Tower & Drum Tower: Icons of the Ancient Capital',
     description:
       'Visit Xi\'an\'s iconic Bell Tower and Drum Tower — the twin landmarks at the heart of the city. Tickets, hours, best photo spots, and history guide.',
-    url: 'https://trailofchina.com/destinations/xian/what-to-do/bell-drum-tower',
+    url: 'https://www.trailofchina.com/destinations/xian/what-to-do/bell-drum-tower',
     type: 'website',
   },
 };

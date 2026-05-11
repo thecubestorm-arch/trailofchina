@@ -11,7 +11,7 @@ export const metadata: Metadata = {
       'Stay in Shanghai iconic waterfront district with luxury hotels and colonial grandeur. Perfect for travelers who want skyline views and don\'t mind paying for them.',
     images: [
       {
-        url: 'https://trailofchina.com/api/og?title=The+Bund&description=Iconic+waterfront+luxury+and+colonial+grandeur',
+        url: 'https://www.trailofchina.com/api/og?title=The+Bund&description=Iconic+waterfront+luxury+and+colonial+grandeur',
         width: 1200,
         height: 630,
         alt: 'The Bund Shanghai',

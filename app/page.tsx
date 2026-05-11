@@ -31,7 +31,7 @@ export default function HomePage() {
       target: 'https://www.trailofchina.com/search?q={search_term_string}',
       'query-input': 'required name=search_term_string',
     },
-  }
+};
 
   return (
     <>

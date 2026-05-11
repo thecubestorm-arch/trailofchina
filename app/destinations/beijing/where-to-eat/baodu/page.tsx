@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     title: 'Baodu (爆肚) in Beijing',
     description: 'Quick-blanched beef or sheep tripe, sliced thin, dipped in sesame sauce. Sounds intimidating, tastes incredible when done right — crisp and clean, not chewy.',
     type: 'website',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Baodu (爆肚) in Beijing | Tripe Hotpot, Sauce & Where to Try - Trail of China' }],
   },
 };
 

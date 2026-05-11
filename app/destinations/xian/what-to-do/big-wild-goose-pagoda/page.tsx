@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: 'Big Wild Goose Pagoda: Xi\'an\'s Most Iconic Buddhist Landmark',
     description:
       'Visit the Big Wild Goose Pagoda — a 7th-century Buddhist pagoda and Xi\'an symbol. Complete guide with hours, tickets, night fountain show, and nearby temples.',
-    url: 'https://trailofchina.com/destinations/xian/what-to-do/big-wild-goose-pagoda',
+    url: 'https://www.trailofchina.com/destinations/xian/what-to-do/big-wild-goose-pagoda',
     type: 'website',
   },
 };

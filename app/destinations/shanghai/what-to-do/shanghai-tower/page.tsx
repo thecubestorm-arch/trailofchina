@@ -9,8 +9,9 @@ export const metadata: Metadata = {
     title: 'Shanghai Tower Observation Deck | Tickets, Hours & Best Views',
     description:
       'Shanghai Tower observation deck guide: how to buy tickets, best time to visit, 360° views from 546 meters, and comparison with Jin Mao and SWFC.',
-    url: 'https://trailofchina.com/destinations/shanghai/what-to-do/shanghai-tower',
+    url: 'https://www.trailofchina.com/destinations/shanghai/what-to-do/shanghai-tower',
     type: 'website',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Shanghai Tower Observation Deck | Tickets, Hours & Best Views - Trail of China' }],
   },
 };
 

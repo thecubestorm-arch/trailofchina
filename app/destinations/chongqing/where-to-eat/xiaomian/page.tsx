@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Chongqing Xiaomian (小面) | Best Noodle Stalls, Sauce Guide & Prices',
     description: 'The humble bowl that fuels Chongqing. Fresh wheat noodles tossed in chili oil, Sichuan pepper, garlic, and a dozen other seasonings.',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Chongqing Xiaomian (小面) | Best Noodle Stalls, Sauce Guide & Prices - Trail of China' }],
   },
 };
 

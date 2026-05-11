@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     title: 'Lamb Skewers (羊肉串) in Beijing',
     description: 'Cumin-dusted lamb chunks grilled over charcoal. The signature spice combo — cumin and chili — is unmistakably northern Chinese.',
     type: 'website',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Lamb Skewers (羊肉串) in Beijing | Best Yakitori-Style BBQ & Night Markets - Trail of China' }],
   },
 };
 

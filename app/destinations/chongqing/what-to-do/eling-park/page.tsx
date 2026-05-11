@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Eling Park (鹅岭公园) Chongqing | Best Panoramic City Views',
     description: "The highest point on the Yuzhong peninsula and Chongqing's best free viewpoint with a two-story observation tower.",
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Eling Park (鹅岭公园) Chongqing | Best Panoramic City Views - Trail of China' }],
   },
 };
 

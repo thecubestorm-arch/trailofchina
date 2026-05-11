@@ -11,7 +11,7 @@ export const metadata: Metadata = {
       'Stay near Chengdu\'s most famous traditional street. Backpacker hostels to mid-range hotels within walking distance of Wuhou Shrine.',
     images: [
       {
-        url: 'https://trailofchina.com/api/og?title=Jinli+Area&description=Traditional+Chengdu+vibe+near+Wuhou+Shrine',
+        url: 'https://www.trailofchina.com/api/og?title=Jinli+Area&description=Traditional+Chengdu+vibe+near+Wuhou+Shrine',
         width: 1200,
         height: 630,
         alt: 'Jinli Area Chengdu',

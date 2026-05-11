@@ -14,6 +14,7 @@ export const metadata: Metadata = makeMetadata({
     description:
       'Book trains, flights, hotels, eSIMs, attraction tickets, and airport transfers — all in English, with foreign card support.',
     type: 'article',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Trip.com Guide for China Travelers - Trail of China' }],
   },
 
   path: '/china-basics/what-apps-to-use/trip-com',

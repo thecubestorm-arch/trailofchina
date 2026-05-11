@@ -17,7 +17,7 @@ export default function ChongqingPage() {
     '@type': 'TravelGuide',
     name: 'Chongqing Travel Guide',
     description: metadata.description,
-    url: 'https://trailofchina.com/destinations/chongqing',
+    url: 'https://www.trailofchina.com/destinations/chongqing',
   };
 
   const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Destinations", path: "/destinations" }, { name: "Chongqing", path: "/destinations/chongqing" }]);

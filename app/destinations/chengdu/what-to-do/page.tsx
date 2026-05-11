@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   title: 'What to Do in Chengdu | Pandas, Teahouses, and Culture',
   description:
     'Best things to do in Chengdu, from the Giant Panda Base and Wenshu Temple to Sichuan Opera and Kuanzhai Alley.',
+  openGraph: {
+    title: 'What to Do in Chengdu - Trail of China',
+    description: 'Pandas, teahouses, and culture in Chengdu.',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'What to Do in Chengdu - Trail of China' }],
+  },
 };
 
 export default function ChengduWhatToDoPage() {

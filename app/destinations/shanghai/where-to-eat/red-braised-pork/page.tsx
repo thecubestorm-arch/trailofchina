@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     title: 'Red Braised Pork (红烧肉) in Shanghai',
     description: 'Slow-braised pork belly in soy sauce, rock sugar, Shaoxing wine',
     type: 'website',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Red Braised Pork (红烧肉) in Shanghai | Best Restaurants & Recipe History - Trail of China' }],
   },
 };
 

@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Liziba Monorail Station (李子坝) Chongqing | Train Through a Building',
     description: "Chongqing's viral internet sensation — a monorail train passing straight through a residential apartment building.",
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Liziba Monorail Station (李子坝) Chongqing | Train Through a Building - Trail of China' }],
   },
 };
 

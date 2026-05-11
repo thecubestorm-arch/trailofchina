@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     title: 'Xiaolongbao (小笼包) in Shanghai',
     description: 'Steamed dumplings with pork and hot soup — Shanghai\'s signature dish',
     type: 'website',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Xiaolongbao (小笼包) in Shanghai | Where to Eat Soup Dumplings - Trail of China' }],
   },
 };
 

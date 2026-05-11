@@ -5,6 +5,11 @@ export const metadata: Metadata = {
   title: 'Wuhou Shrine (武侯祠) | Chengdu Three Kingdoms Temple Guide',
   description:
     'Visit Chengdu’s Wuhou Shrine for Three Kingdoms history, cypress courtyards, and one of the city’s most important cultural sites.',
+  openGraph: {
+    title: 'Wuhou Shrine - Trail of China',
+    description: 'Three Kingdoms temple and cultural landmark in Chengdu.',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Wuhou Shrine - Trail of China' }],
+  },
 };
 
 export default function WuhouShrinePage() {

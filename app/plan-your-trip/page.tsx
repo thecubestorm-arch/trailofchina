@@ -14,7 +14,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/plan-your-trip',
   },
-}
+  openGraph: {
+    title: 'Plan Your Trip to China - Trail of China',
+    description: 'Itineraries, budget, and travel planning for China.',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Plan Your Trip to China - Trail of China' }],
+  },
+};
 
 export default function PlanYourTripPage() {
   const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Plan Your Trip", path: "/plan-your-trip" }]);

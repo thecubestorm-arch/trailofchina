@@ -11,7 +11,7 @@ export const metadata: Metadata = {
       'Stay in Beijing historic hutong alleys with courtyard hotels and real old Beijing atmosphere. Perfect for travelers who want authentic Beijing experience.',
     images: [
       {
-        url: 'https://trailofchina.com/api/og?title=Dongcheng+Hutong&description=Historic+hutong+alleys+and+authentic+Beijing',
+        url: 'https://www.trailofchina.com/api/og?title=Dongcheng+Hutong&description=Historic+hutong+alleys+and+authentic+Beijing',
         width: 1200,
         height: 630,
         alt: 'Dongcheng Hutong Beijing',

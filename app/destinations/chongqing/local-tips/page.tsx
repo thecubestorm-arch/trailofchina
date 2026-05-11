@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   title: 'Chongqing Local Tips',
   description:
     'Practical Chongqing local tips: 3D navigation, foggy weather, spicy food reality, monorail logistics, and DiDi use.',
+  openGraph: {
+    title: 'Chongqing Local Tips - Trail of China',
+    description: 'Transport, food, and insider secrets for Chongqing.',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Chongqing Local Tips - Trail of China' }],
+  },
 };
 
 export default function ChongqingLocalTipsPage() {

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: 'Cycling the Xi\'an City Wall: The Ultimate Ancient Wall Experience',
     description:
       'Rent a bike and cycle the 14km ancient City Wall of Xi\'an. Complete guide with hours, tickets, best time to visit, and tips for the ultimate wall experience.',
-    url: 'https://trailofchina.com/destinations/xian/what-to-do/city-wall',
+    url: 'https://www.trailofchina.com/destinations/xian/what-to-do/city-wall',
     type: 'website',
   },
 };

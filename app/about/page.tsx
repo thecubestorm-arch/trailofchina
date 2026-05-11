@@ -11,7 +11,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/about',
   },
-}
+  openGraph: {
+    title: 'About Trail of China',
+    description: 'Learn why Trail of China exists and what expertise shapes every recommendation.',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'About Trail of China' }],
+  },
+};
 
 const quickLinks = [
   { href: '/', label: 'Home' },

@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   title: 'Beijing Local Tips | Transport, Food & Insider Secrets',
   description:
     'Insider tips for Beijing: transport hacks, money-saving strategies, cultural etiquette, and things to watch out for.',
+  openGraph: {
+    title: 'Beijing Local Tips - Trail of China',
+    description: 'Transport, food, and insider secrets for Beijing.',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Beijing Local Tips - Trail of China' }],
+  },
 };
 
 export default function BeijingLocalTipsPage() {

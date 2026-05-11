@@ -9,6 +9,11 @@ import ToursCTA from '@/components/ToursCTA'
 export const metadata: Metadata = {
   title: 'What to Do in Shanghai',
   description: 'Top attractions in Shanghai: The Bund, Yu Garden, French Concession, and hidden gems.',
+  openGraph: {
+    title: 'What to Do in Shanghai - Trail of China',
+    description: 'The Bund, Yu Garden, and top Shanghai attractions.',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'What to Do in Shanghai - Trail of China' }],
+  },
 };
 
 export default function ShanghaiWhatToDoPage() {

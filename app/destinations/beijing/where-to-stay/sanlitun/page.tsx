@@ -11,7 +11,7 @@ export const metadata: Metadata = {
       'Stay in Beijing international nightlife district with craft cocktails and expat-friendly amenities. Perfect for nightlife lovers and expats.',
     images: [
       {
-        url: 'https://trailofchina.com/api/og?title=Sanlitun&description=Nightlife+and+expat+hub',
+        url: 'https://www.trailofchina.com/api/og?title=Sanlitun&description=Nightlife+and+expat+hub',
         width: 1200,
         height: 630,
         alt: 'Sanlitun Beijing',

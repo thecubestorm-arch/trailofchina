@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     title: 'Jianbing (煎饼) in Beijing',
     description: 'China\'s answer to the crepe — a thin batter cooked on a round griddle, brushed with chili and bean sauce, filled with egg, crispy crackers, lettuce, cilantro.',
     type: 'website',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Jianbing (煎饼) in Beijing | Best Breakfast Crepes & Where to Find Them - Trail of China' }],
   },
 };
 

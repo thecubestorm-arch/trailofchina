@@ -11,7 +11,7 @@ export const metadata: Metadata = {
       "Stay at Xi'an's central crossroads. Best transport links, walk to everything inside the City Wall, and ideal for first-time visitors.",
     images: [
       {
-        url: 'https://trailofchina.com/api/og?title=Bell+Tower+Area&description=Central+Xi%27an+with+the+best+transport+links',
+        url: 'https://www.trailofchina.com/api/og?title=Bell+Tower+Area&description=Central+Xi%27an+with+the+best+transport+links',
         width: 1200,
         height: 630,
         alt: "Bell Tower Area Xi'an",

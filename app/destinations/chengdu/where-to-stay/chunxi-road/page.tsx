@@ -11,7 +11,7 @@ export const metadata: Metadata = {
       'Stay in Chengdu\'s central shopping and dining district. Modern hotels, easy metro access, and the best base for first-time visitors.',
     images: [
       {
-        url: 'https://trailofchina.com/api/og?title=Chunxi+Road&description=Central+shopping+district+with+modern+hotels',
+        url: 'https://www.trailofchina.com/api/og?title=Chunxi+Road&description=Central+shopping+district+with+modern+hotels',
         width: 1200,
         height: 630,
         alt: 'Chunxi Road Chengdu',

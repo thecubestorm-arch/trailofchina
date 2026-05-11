@@ -32,7 +32,7 @@ export async function generateStaticParams() {
     'Practical Tips': 'practical-tips',
     'Destinations': 'destinations',
     'Visa': 'visa',
-  }
+};
 
   return categories.map((category) => ({
     slug: slugMap[category] || category.toLowerCase().replace(/ /g, '-'),
@@ -46,7 +46,12 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
     title: `${categoryName} - Blog`,
     description: `Read our ${categoryName} guides and tips for China travel`,
     alternates: { canonical: `/blog/category/${slug}` },
-  }
+    openGraph: {
+      title: `${categoryName} - Trail of China Blog`,
+      description: `Read our ${categoryName} guides and tips for China travel`,
+      images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: `${categoryName} - Trail of China Blog` }],
+    },
+};
 }
 
 export default async function CategoryPage({ params }: { params: Params }) {

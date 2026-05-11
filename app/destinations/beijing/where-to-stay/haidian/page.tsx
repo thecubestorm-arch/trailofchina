@@ -11,7 +11,7 @@ export const metadata: Metadata = {
       'Stay in Beijing university district with cheaper hotels and academic vibe. Perfect for budget travelers and visitors to the Summer Palace.',
     images: [
       {
-        url: 'https://trailofchina.com/api/og?title=Haidian&description=University+district+and+Summer+Palace',
+        url: 'https://www.trailofchina.com/api/og?title=Haidian&description=University+district+and+Summer+Palace',
         width: 1200,
         height: 630,
         alt: 'Haidian Beijing',

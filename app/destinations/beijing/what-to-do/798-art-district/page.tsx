@@ -15,8 +15,9 @@ export const metadata: Metadata = {
     title: '798 Art District Beijing | Galleries, Cafes & Contemporary Art',
     description:
       'Beijing\'s contemporary art scene in a vast 1950s East German factory complex. Galleries, studios, design shops, cafes in converted warehouses. UCCA Center for Contemporary Art is the anchor. Best on weekends.',
-    url: 'https://trailofchina.com/destinations/beijing/what-to-do/798-art-district',
+    url: 'https://www.trailofchina.com/destinations/beijing/what-to-do/798-art-district',
     type: 'website',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: '798 Art District Beijing | Galleries, Cafes & Contemporary Art - Trail of China' }],
   },
 };
 

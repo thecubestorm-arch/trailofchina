@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: "Shaanxi History Museum: Xi'an's Best Museum for Dynastic China",
     description:
       "Visit Shaanxi History Museum for bronzes, Tang treasures, and Silk Road artifacts. Hours, booking tips, and how to plan the visit.",
-    url: 'https://trailofchina.com/destinations/xian/what-to-do/shaanxi-history-museum',
+    url: 'https://www.trailofchina.com/destinations/xian/what-to-do/shaanxi-history-museum',
     type: 'website',
   },
 };

@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     title: 'Tanghulu (糖葫芦) in Beijing',
     description: 'Skewered hawthorn berries dipped in hard sugar glaze — crackly, sweet, tart. The iconic Beijing street snack, bright red on a stick.',
     type: 'website',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Tanghulu (糖葫芦) in Beijing | Candied Hawthorn Sticks & Where to Buy - Trail of China' }],
   },
 };
 

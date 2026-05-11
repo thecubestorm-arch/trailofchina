@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   title: 'Where to Stay in Beijing | Best Neighborhoods, Hotels & Hutong Courtyards',
   description:
     'Best areas to stay in Beijing: hutong courtyards in Dongcheng, Wangfujing convenience, Sanlitun nightlife, Haidian university vibe. Budget to luxury hotel picks.',
+  openGraph: {
+    title: 'Where to Stay in Beijing - Trail of China',
+    description: 'Best neighborhoods and hotels in Beijing.',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Where to Stay in Beijing - Trail of China' }],
+  },
 };
 
 export default function BeijingWhereToStayPage() {

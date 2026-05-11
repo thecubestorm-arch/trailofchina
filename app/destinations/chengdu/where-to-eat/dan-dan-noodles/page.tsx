@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     title: 'Dan Dan Noodles (担担面) in Chengdu | Best Bowls & Street History',
     description: 'Thin wheat noodles in a small bowl that packs more flavor than dishes 5x the price.',
     type: 'website',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Dan Dan Noodles (担担面) in Chengdu | Best Bowls & Street History - Trail of China' }],
   },
 };
 

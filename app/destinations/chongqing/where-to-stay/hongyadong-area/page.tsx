@@ -11,7 +11,7 @@ export const metadata: Metadata = {
       'Stay beside Chongqing\'s most iconic landmark. Riverside views, stilt-house architecture, and unbeatable nighttime scenery.',
     images: [
       {
-        url: 'https://trailofchina.com/api/og?title=Hongyadong+Area&description=Iconic+riverside+views+and+stilt-house+architecture',
+        url: 'https://www.trailofchina.com/api/og?title=Hongyadong+Area&description=Iconic+riverside+views+and+stilt-house+architecture',
         width: 1200,
         height: 630,
         alt: 'Hongyadong Area Chongqing',

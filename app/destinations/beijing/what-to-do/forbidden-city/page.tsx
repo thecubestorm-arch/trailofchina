@@ -15,8 +15,9 @@ export const metadata: Metadata = {
     title: 'Forbidden City (故宫) - Beijing\'s Imperial Palace',
     description:
       'The world\'s largest palace complex. 980 buildings, 8,700 rooms, home to 24 emperors over 500 years. Complete visitor guide.',
-    url: 'https://trailofchina.com/destinations/beijing/what-to-do/forbidden-city',
+    url: 'https://www.trailofchina.com/destinations/beijing/what-to-do/forbidden-city',
     type: 'website',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Forbidden City (故宫) - Beijing\ - Trail of China' }],
   },
 };
 

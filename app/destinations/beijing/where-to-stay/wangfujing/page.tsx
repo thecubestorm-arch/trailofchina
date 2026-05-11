@@ -11,7 +11,7 @@ export const metadata: Metadata = {
       'Stay in Beijing central shopping district with international hotels and walking distance to everything. Perfect for first-time visitors who want convenience.',
     images: [
       {
-        url: 'https://trailofchina.com/api/og?title=Wangfujing&description=Central+shopping+and+tourist+hub',
+        url: 'https://www.trailofchina.com/api/og?title=Wangfujing&description=Central+shopping+and+tourist+hub',
         width: 1200,
         height: 630,
         alt: 'Wangfujing Beijing',

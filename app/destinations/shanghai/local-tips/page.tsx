@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   title: 'Shanghai Local Tips | WeChat Pay, Subway & Insider Secrets',
   description:
     'Insider tips for Shanghai: WeChat Pay setup, subway survival, nightlife, money-saving hacks, and things to watch out for.',
+  openGraph: {
+    title: 'Shanghai Local Tips - Trail of China',
+    description: 'WeChat Pay, subway, and insider secrets for Shanghai.',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Shanghai Local Tips - Trail of China' }],
+  },
 };
 
 export default function ShanghaiLocalTipsPage() {

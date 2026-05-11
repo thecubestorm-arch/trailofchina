@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: 'Terracotta Warriors (兵马俑) - Xi\'an\'s Ancient Army',
     description:
       'The 2,200-year-old army of Emperor Qin Shi Huang. Three main pits with over 8,000 life-sized soldiers, horses, and chariots.',
-    url: 'https://trailofchina.com/destinations/xian/what-to-do/terracotta-warriors',
+    url: 'https://www.trailofchina.com/destinations/xian/what-to-do/terracotta-warriors',
     type: 'website',
   },
 };

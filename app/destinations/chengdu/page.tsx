@@ -17,7 +17,7 @@ export default function ChengduPage() {
     '@type': 'TravelGuide',
     name: 'Chengdu Travel Guide',
     description: metadata.description,
-    url: 'https://trailofchina.com/destinations/chengdu',
+    url: 'https://www.trailofchina.com/destinations/chengdu',
   };
 
   const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Destinations", path: "/destinations" }, { name: "Chengdu", path: "/destinations/chengdu" }]);

@@ -11,6 +11,11 @@ export const metadata: Metadata = {
   title: 'What to Do in Beijing | Forbidden City, Great Wall & Hidden Gems',
   description:
     'Best things to do in Beijing: Forbidden City, Great Wall sections, Temple of Heaven, hutong tours, 798 Art District, and insider picks.',
+  openGraph: {
+    title: 'What to Do in Beijing - Trail of China',
+    description: 'Forbidden City, Great Wall, and hidden gems in Beijing.',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'What to Do in Beijing - Trail of China' }],
+  },
 };
 
 const tocItems = [

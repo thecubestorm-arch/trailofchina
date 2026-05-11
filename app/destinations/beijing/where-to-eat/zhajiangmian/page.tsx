@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     title: 'Zhajiangmian (炸酱面) in Beijing',
     description: 'Thick hand-pulled noodles topped with a dark fermented soybean paste fried with pork, served with a colorful array of fresh toppings — cucumber, bean sprouts, edamame, radish.',
     type: 'website',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Zhajiangmian (炸酱面) in Beijing | Best Noodle Shops & Authentic Recipe - Trail of China' }],
   },
 };
 

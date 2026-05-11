@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Chongqing Hotpot (重庆火锅) | The Real Thing — Beef Tallow, Mala & Night Vibes',
     description: 'The original and the best. Chongqing hotpot uses beef tallow (牛油) as the base, making it richer, more fragrant, and more intense.',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Chongqing Hotpot (重庆火锅) | The Real Thing — Beef Tallow, Mala & Night Vibes - Trail of China' }],
   },
 };
 

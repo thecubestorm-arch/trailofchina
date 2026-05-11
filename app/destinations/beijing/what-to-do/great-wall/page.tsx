@@ -15,8 +15,9 @@ export const metadata: Metadata = {
     title: 'Great Wall of China (长城) - Beijing\'s Iconic Fortress',
     description:
       'Multiple sections within reach of Beijing, each with a different character. Complete guide to Mutianyu, Badaling, Jinshanling, and more.',
-    url: 'https://trailofchina.com/destinations/beijing/what-to-do/great-wall',
+    url: 'https://www.trailofchina.com/destinations/beijing/what-to-do/great-wall',
     type: 'website',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Great Wall of China (长城) - Beijing\ - Trail of China' }],
   },
 };
 

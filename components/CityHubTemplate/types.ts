@@ -133,6 +133,7 @@ export interface CityHubConfig {
   boundary: [number, number][];
   maxBounds: [[number, number], [number, number]];
   gallerySeeds: string[];
+  galleryAlts: string[];
   pills: QuickInfoPill[];
   metroLines: MetroLine[];
   transportHubs: TransportHub[];

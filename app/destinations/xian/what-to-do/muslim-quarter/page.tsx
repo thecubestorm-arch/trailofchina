@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: 'Xi\'an Muslim Quarter: Street Food Paradise & Hidden Mosque',
     description:
       'Explore Xi\'an\'s vibrant Muslim Quarter — street food capital of China with the stunning Great Mosque. Food guide, walking route, and what to eat.',
-    url: 'https://trailofchina.com/destinations/xian/what-to-do/muslim-quarter',
+    url: 'https://www.trailofchina.com/destinations/xian/what-to-do/muslim-quarter',
     type: 'website',
   },
 };

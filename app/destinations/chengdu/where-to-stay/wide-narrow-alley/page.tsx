@@ -11,7 +11,7 @@ export const metadata: Metadata = {
       'Stay among Chengdu\'s trendiest boutiques and courtyard hotels. Hipster cafes, traditional architecture, and the city\'s best atmosphere.',
     images: [
       {
-        url: 'https://trailofchina.com/api/og?title=Wide+%26+Narrow+Alleys&description=Boutique+hotels+and+hipster+cafes+in+traditional+courtyards',
+        url: 'https://www.trailofchina.com/api/og?title=Wide+%26+Narrow+Alleys&description=Boutique+hotels+and+hipster+cafes+in+traditional+courtyards',
         width: 1200,
         height: 630,
         alt: 'Wide and Narrow Alleys Chengdu',

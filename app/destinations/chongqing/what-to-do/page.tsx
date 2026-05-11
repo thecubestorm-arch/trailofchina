@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   title: 'What to Do in Chongqing',
   description:
     'Top things to do in Chongqing: Hongyadong, Yangtze Cable Car, Ciqikou, Liziba Monorail, and more.',
+  openGraph: {
+    title: 'What to Do in Chongqing - Trail of China',
+    description: 'Hongya Cave, cable car, and top attractions in Chongqing.',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'What to Do in Chongqing - Trail of China' }],
+  },
 };
 
 export default function ChongqingWhatToDoPage() {

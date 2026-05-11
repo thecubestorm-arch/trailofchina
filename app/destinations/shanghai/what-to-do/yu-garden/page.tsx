@@ -9,8 +9,9 @@ export const metadata: Metadata = {
     title: 'Yu Garden Shanghai (豫园) | Complete Visitor Guide',
     description:
       'Everything you need to visit Yu Garden in Shanghai: hours, prices, best times, what to see in the bazaar, and how to avoid crowds.',
-    url: 'https://trailofchina.com/destinations/shanghai/what-to-do/yu-garden',
+    url: 'https://www.trailofchina.com/destinations/shanghai/what-to-do/yu-garden',
     type: 'website',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Yu Garden Shanghai (豫园) | Complete Visitor Guide - Trail of China' }],
   },
 };
 

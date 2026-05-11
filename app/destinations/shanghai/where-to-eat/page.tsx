@@ -6,6 +6,11 @@ import RelatedArticles from '@/components/RelatedArticles'
 export const metadata: Metadata = {
   title: 'Where to Eat in Shanghai | Xiaolongbao, Street Food & Fine Dining',
   description: 'Best places to eat in Shanghai: xiaolongbao at Jia Jia Tang Bao, shengjianbao at Xiaoyang Shengjian, hairy crab season, and Michelin-starred restaurants.',
+  openGraph: {
+    title: 'Where to Eat in Shanghai - Trail of China',
+    description: 'Xiaolongbao, street food, and fine dining in Shanghai.',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Where to Eat in Shanghai - Trail of China' }],
+  },
 };
 
 export default function ShanghaiWhereToEatPage() {

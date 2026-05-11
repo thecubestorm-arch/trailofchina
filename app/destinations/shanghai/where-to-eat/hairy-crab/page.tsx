@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     title: 'Hairy Crab (大闸蟹) in Shanghai',
     description: 'Yangcheng Lake seasonal delicacy (Oct-Nov). The roe is the prize',
     type: 'website',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Hairy Crab (大闸蟹) in Shanghai | Season, Prices & Where to Eat - Trail of China' }],
   },
 };
 

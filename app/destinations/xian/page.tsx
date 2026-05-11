@@ -17,7 +17,7 @@ export default function XianPage() {
     '@type': 'TravelGuide',
     name: "Xi'an Travel Guide",
     description: metadata.description,
-    url: 'https://trailofchina.com/destinations/xian',
+    url: 'https://www.trailofchina.com/destinations/xian',
   };
 
   const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Destinations", path: "/destinations" }, { name: "Xi'an", path: "/destinations/xian" }]);

@@ -15,8 +15,9 @@ export const metadata: Metadata = {
     title: 'Kuanzhai Alley (宽窄巷子) Chengdu | Three Alleys, Three Vibes',
     description:
       'Three parallel Qing-dynasty alleys — Wide Alley (Kuan) for tea and culture, Narrow Alley (Zhai) for bars and boutiques.',
-    url: 'https://trailofchina.com/destinations/chengdu/what-to-do/kuanzhai-alley',
+    url: 'https://www.trailofchina.com/destinations/chengdu/what-to-do/kuanzhai-alley',
     type: 'website',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Kuanzhai Alley (宽窄巷子) Chengdu | Three Alleys, Three Vibes - Trail of China' }],
   },
 };
 

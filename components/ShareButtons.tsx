@@ -10,7 +10,7 @@ interface ShareButtonsProps {
 
 export default function ShareButtons({ title, slug }: ShareButtonsProps) {
   const [copied, setCopied] = useState(false)
-  const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://trailofchina.com'
+  const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://www.trailofchina.com'
   const url = `${baseUrl}/blog/${slug}`
 
   const handleCopyLink = async () => {

@@ -17,7 +17,7 @@ export default function BeijingPage() {
     '@type': 'TravelGuide',
     name: 'Beijing Travel Guide',
     description: metadata.description,
-    url: 'https://trailofchina.com/destinations/beijing',
+    url: 'https://www.trailofchina.com/destinations/beijing',
   };
 
   const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Destinations", path: "/destinations" }, { name: "Beijing", path: "/destinations/beijing" }]);

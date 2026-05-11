@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   title: 'Local Experiences in Chengdu',
   description:
     'Authentic local experiences in Chengdu: tea ceremonies, Sichuan opera backstage, hotpot with locals, panda volunteering, and hidden temple hikes.',
+  openGraph: {
+    title: 'Chengdu Local Experiences - Trail of China',
+    description: 'Authentic local experiences in Chengdu.',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Chengdu Local Experiences - Trail of China' }],
+  },
 };
 
 const categories = [

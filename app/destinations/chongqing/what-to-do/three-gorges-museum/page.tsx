@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Three Gorges Museum (三峡博物馆) Chongqing | History, Culture & Free Entry',
     description: "Chongqing's best museum with four floors covering the Three Gorges Dam project, Ba culture, WWII history, and ancient bronzes.",
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Three Gorges Museum (三峡博物馆) Chongqing | History, Culture & Free Entry - Trail of China' }],
   },
 };
 

@@ -29,7 +29,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
       if (item.href) {
         listItem.item = item.href.startsWith('http')
           ? item.href
-          : `https://trailofchina.com${item.href}`;
+          : `https://www.trailofchina.com${item.href}`;
       }
 
       return listItem;

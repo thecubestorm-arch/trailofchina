@@ -15,8 +15,9 @@ export const metadata: Metadata = {
     title: 'Beijing Hutong Tours (胡同) | Walking Routes, Rickshaws & Authentic Alleys',
     description:
       'Beijing\'s traditional alleyways — living counterpoint to imperial monuments. Nanluoguxiang is polished tourist lane, Yandai Xiejie near Shichahai is quieter. Walk or hire rickshaw. Real hutong life is one block off main tourist drags.',
-    url: 'https://trailofchina.com/destinations/beijing/what-to-do/hutong',
+    url: 'https://www.trailofchina.com/destinations/beijing/what-to-do/hutong',
     type: 'website',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Beijing Hutong Tours (胡同) | Walking Routes, Rickshaws & Authentic Alleys - Trail of China' }],
   },
 };
 

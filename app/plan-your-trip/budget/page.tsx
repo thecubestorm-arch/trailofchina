@@ -17,6 +17,7 @@ export const metadata: Metadata = makeMetadata({
     description:
       'Budget traveler to luxury explorer: real prices for hotels, food, trains, attractions, and more.',
     type: 'article',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'China Budget Guide — Cost of Travel in China  - Trail of China' }],
   },
 
   path: '/plan-your-trip/budget',

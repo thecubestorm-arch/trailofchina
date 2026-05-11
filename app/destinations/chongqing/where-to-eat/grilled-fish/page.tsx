@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Chongqing Grilled Fish (烤鱼) | Best Restaurants & What to Order',
     description: 'A whole fish grilled over charcoal, served in a sizzling metal tray with chili oil, Sichuan pepper, lotus root, potatoes, and tofu skin.',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Chongqing Grilled Fish (烤鱼) | Best Restaurants & What to Order - Trail of China' }],
   },
 };
 

@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   title: 'Where to Eat in Beijing | Peking Duck, Hutong Food & Local Eats',
   description:
     'Best places to eat in Beijing: Peking duck at Quanjude and Siji Minfu, hutong noodle shops, jianbing stands, and the Muslim Quarter. Budget to fine dining.',
+  openGraph: {
+    title: 'Where to Eat in Beijing - Trail of China',
+    description: 'Peking duck, hutong food, and local eats in Beijing.',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Where to Eat in Beijing - Trail of China' }],
+  },
 };
 
 export default function BeijingWhereToEatPage() {

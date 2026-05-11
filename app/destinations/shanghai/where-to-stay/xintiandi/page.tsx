@@ -11,7 +11,7 @@ export const metadata: Metadata = {
       'Stay in Shanghai polished entertainment district with restored shikumen buildings. Perfect for business travelers and couples who want upscale dining and nightlife steps from their hotel.',
     images: [
       {
-        url: 'https://trailofchina.com/api/og?title=Xintiandi&description=Polished+modern+and+expat-friendly',
+        url: 'https://www.trailofchina.com/api/og?title=Xintiandi&description=Polished+modern+and+expat-friendly',
         width: 1200,
         height: 630,
         alt: 'Xintiandi Shanghai',

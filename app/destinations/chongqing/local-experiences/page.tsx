@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   title: 'Local Experiences in Chongqing',
   description:
     'Authentic local experiences in Chongqing: old town walks, Yangtze river stories, hotpot boot camps, mountain city photography, and ferry crossings.',
+  openGraph: {
+    title: 'Chongqing Local Experiences - Trail of China',
+    description: 'Authentic local experiences in Chongqing.',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Chongqing Local Experiences - Trail of China' }],
+  },
 };
 
 const categories = [

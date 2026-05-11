@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     title: 'Scallion Oil Noodles (葱油拌面) in Shanghai',
     description: 'Simple iconic dish — noodles in caramelized scallion oil',
     type: 'website',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Scallion Oil Noodles (葱油拌面) in Shanghai | Best Bowls & History - Trail of China' }],
   },
 };
 

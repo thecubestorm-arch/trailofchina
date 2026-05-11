@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   title: 'Where to Eat in Chongqing',
   description:
     'A practical food guide to Chongqing: hotpot, xiaomian, grilled fish, Bayi Road, and trusted local-style spots.',
+  openGraph: {
+    title: 'Where to Eat in Chongqing - Trail of China',
+    description: 'Hotpot, xiaomian, and street food in Chongqing.',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Where to Eat in Chongqing - Trail of China' }],
+  },
 };
 
 export default function ChongqingWhereToEatPage() {

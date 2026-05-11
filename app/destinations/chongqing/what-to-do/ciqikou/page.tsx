@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Ciqikou Ancient Town (磁器口) Chongqing | Snacks, Crafts & Old Streets',
     description: "A 1,000-year-old trading town now converted into Chongqing's busiest tourist street with narrow stone alleys, snack stalls, and tea houses.",
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Ciqikou Ancient Town (磁器口) Chongqing | Snacks, Crafts & Old Streets - Trail of China' }],
   },
 };
 

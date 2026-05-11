@@ -15,8 +15,9 @@ export const metadata: Metadata = {
     title: 'Jinli Ancient Street (锦里) Chengdu | Shopping, Snacks & Night Visits',
     description:
       'Chengdu\'s most atmospheric pedestrian street — red lanterns, wooden architecture, snack stalls, and tea houses. Adjacent to Wuhou Shrine.',
-    url: 'https://trailofchina.com/destinations/chengdu/what-to-do/jinli-ancient-street',
+    url: 'https://www.trailofchina.com/destinations/chengdu/what-to-do/jinli-ancient-street',
     type: 'website',
+    images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Jinli Ancient Street (锦里) Chengdu | Shopping, Snacks & Night Visits - Trail of China' }],
   },
 };
 
