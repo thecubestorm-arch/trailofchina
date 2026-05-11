@@ -163,6 +163,53 @@ export const shanghaiConfig: CityHubConfig = {
       },
     },
   ],
+  dayTripCards: [
+    {
+      id: "suzhou-day-trip",
+      name: "Suzhou — Classical Gardens and Water Towns (Day Trip)",
+      lat: 31.3249,
+      lng: 120.6294,
+      imageSeed: "suzhou-humble-garden",
+      defaultCategory: "day-trips",
+      categories: {
+        "day-trips": {
+          href: "/destinations/shanghai/day-trips/suzhou",
+          hook: "30 min bullet train — Ming dynasty gardens, silk workshops, and Tongli water town.",
+          tag: "Full day",
+        },
+      },
+    },
+    {
+      id: "hangzhou-day-trip",
+      name: "Hangzhou — West Lake and Tea Country (Day Trip)",
+      lat: 30.242,
+      lng: 120.1485,
+      imageSeed: "hangzhou-west-lake",
+      defaultCategory: "day-trips",
+      categories: {
+        "day-trips": {
+          href: "/destinations/shanghai/day-trips/hangzhou",
+          hook: "1h bullet train — West Lake cycling, Lingyin Temple caves, and Longjing tea village.",
+          tag: "Full day",
+        },
+      },
+    },
+    {
+      id: "zhujiajiao-day-trip",
+      name: "Zhujiajiao — Shanghai's Water Town (Day Trip)",
+      lat: 31.108,
+      lng: 121.053,
+      imageSeed: "zhujiajiao-bridges",
+      defaultCategory: "day-trips",
+      categories: {
+        "day-trips": {
+          href: "/destinations/shanghai/day-trips/zhujiajiao",
+          hook: "Line 17 to the end — 1,700-year-old water town, 36 stone bridges, best zongzi in Shanghai.",
+          tag: "Half day",
+        },
+      },
+    },
+  ],
   foodCards: [
     {
       id: "xiaolongbao",
@@ -514,6 +561,9 @@ export const shanghaiConfig: CityHubConfig = {
     { id: "tip-taxi", name: "Taxi Pro Tip", subtitle: "Shanghai taxis are cheap, but drivers rarely speak English. Use DiDi with English interface instead.", imageSeed: "", href: "/destinations/shanghai/local-tips", type: "tip", icon: Car, filters: ["practical"] },
     { id: "tip-bund-night", name: "Bund After Dark", subtitle: "The Bund is free and best at night. Skip the overpriced tourist tunnel — walk or take the metro instead.", imageSeed: "", href: "/destinations/shanghai/local-tips", type: "tip", icon: Moon, filters: ["free", "nightlife", "practical"] },
     { id: "tip-metro-maps", name: "Metro & Maps", subtitle: "Metro stops have English signs. Google Maps works with a VPN; Amap is the best local alternative.", imageSeed: "", href: "/destinations/shanghai/local-tips", type: "tip", icon: Map, filters: ["practical"] },
+    { id: "suzhou-day-trip", name: "Suzhou — Classical Gardens (Day Trip)", subtitle: "30 min bullet train — Ming dynasty gardens, silk workshops, and Tongli water town.", tag: "Full day", imageSeed: "suzhou-humble-garden", href: "/destinations/shanghai/day-trips/suzhou", type: "attraction", filters: ["historic", "family", "landmark"] },
+    { id: "hangzhou-day-trip", name: "Hangzhou — West Lake (Day Trip)", subtitle: "1h bullet train — West Lake cycling, Lingyin Temple caves, and Longjing tea village.", tag: "Full day", imageSeed: "hangzhou-west-lake", href: "/destinations/shanghai/day-trips/hangzhou", type: "attraction", filters: ["historic", "family", "landmark"] },
+    { id: "zhujiajiao-day-trip", name: "Zhujiajiao Water Town (Day Trip)", subtitle: "Line 17 to the end — 1,700-year-old water town with stone bridges and the best zongzi.", tag: "Half day", imageSeed: "zhujiajiao-bridges", href: "/destinations/shanghai/day-trips/zhujiajiao", type: "attraction", filters: ["budget", "historic", "family"] },
   ],
   footerTitle: "Ready to Explore Shanghai?",
   footerSubtitle:
