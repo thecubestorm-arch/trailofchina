@@ -1,7 +1,9 @@
 import {
   Calendar,
   Car,
+  Clock,
   CloudRain,
+  Compass,
   CreditCard,
   Lightbulb,
   Map,
@@ -564,6 +566,11 @@ export const shanghaiConfig: CityHubConfig = {
     { id: "suzhou-day-trip", name: "Suzhou — Classical Gardens (Day Trip)", subtitle: "30 min bullet train — Ming dynasty gardens, silk workshops, and Tongli water town.", tag: "Full day", imageSeed: "suzhou-humble-garden", href: "/destinations/shanghai/day-trips/suzhou", type: "attraction", filters: ["historic", "family", "landmark"] },
     { id: "hangzhou-day-trip", name: "Hangzhou — West Lake (Day Trip)", subtitle: "1h bullet train — West Lake cycling, Lingyin Temple caves, and Longjing tea village.", tag: "Full day", imageSeed: "hangzhou-west-lake", href: "/destinations/shanghai/day-trips/hangzhou", type: "attraction", filters: ["historic", "family", "landmark"] },
     { id: "zhujiajiao-day-trip", name: "Zhujiajiao Water Town (Day Trip)", subtitle: "Line 17 to the end — 1,700-year-old water town with stone bridges and the best zongzi.", tag: "Half day", imageSeed: "zhujiajiao-bridges", href: "/destinations/shanghai/day-trips/zhujiajiao", type: "attraction", filters: ["budget", "historic", "family"] },
+    { id: "shanghai-how-many-days", name: "How Many Days in Shanghai?", subtitle: "3-4 day guide: 3 for highlights, 4 with day trip.", imageSeed: "", href: "/destinations/shanghai/how-many-days", type: "info", icon: Clock, filters: ["practical"] },
+    { id: "shanghai-common-mistakes", name: "Common Mistakes in Shanghai", subtitle: "6 mistakes tourists make — Bund at night, mobile pay, tourist food.", imageSeed: "", href: "/destinations/shanghai/common-mistakes", type: "info", icon: Compass, filters: ["practical"] },
+    { id: "shanghai-for-first-timers", name: "Shanghai for First-Timers", subtitle: "Most international city in China — easiest landing.", imageSeed: "", href: "/destinations/shanghai/for-first-timers", type: "info", icon: Lightbulb, filters: ["practical"] },
+    { id: "shanghai-itinerary", name: "1-2-3 Day Shanghai Itineraries", subtitle: "Hour-by-hour plans for Bund, Yu Garden, French Concession.", imageSeed: "", href: "/destinations/shanghai/1-2-3-day-itinerary", type: "info", icon: Calendar, filters: ["practical"] },
+    { id: "shanghai-transport-guide", name: "Shanghai Transport Guide", subtitle: "Metro (¥3-10), Maglev (¥50, 8 min), DiDi, taxi, airport.", imageSeed: "", href: "/destinations/shanghai/transport-guide", type: "info", icon: TrainFront, filters: ["practical"] },
   ],
   footerTitle: "Ready to Explore Shanghai?",
   footerSubtitle:
