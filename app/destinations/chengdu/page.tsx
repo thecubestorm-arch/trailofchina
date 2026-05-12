@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import ChengduHubClient from './ChengduHubClient';
 import { makeMetadata } from '@/lib/metadata';
-import AuthorByline from '@/components/AuthorByline';
 import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = makeMetadata({
@@ -32,7 +31,6 @@ export default function ChengduPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      <AuthorByline />
       <ChengduHubClient />
     </>
   );

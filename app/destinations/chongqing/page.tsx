@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import ChongqingHubClient from './ChongqingHubClient';
 import { makeMetadata } from '@/lib/metadata';
-import AuthorByline from '@/components/AuthorByline';
 import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = makeMetadata({
@@ -32,7 +31,6 @@ export default function ChongqingPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      <AuthorByline />
       <ChongqingHubClient />
     </>
   );

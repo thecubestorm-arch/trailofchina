@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import ShanghaiHubClient from './ShanghaiHubClient';
-import AuthorByline from '@/components/AuthorByline';
 import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
@@ -19,7 +18,6 @@ export default function ShanghaiPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
-      <AuthorByline />
       <ShanghaiHubClient />
     </>
   );
