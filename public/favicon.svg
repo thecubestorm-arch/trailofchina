@@ -1,51 +1,48 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <!-- Cream background -->
-  <rect width="100" height="100" rx="16" fill="#f5f1ea"/>
-  
   <!-- Terracotta circle -->
   <circle cx="50" cy="50" r="40" fill="#af5d32"/>
-  
+
   <!-- Gate base platform -->
   <rect x="28" y="72" width="44" height="4" rx="1" fill="#f5f1ea"/>
-  
+
   <!-- Left pillar -->
   <rect x="32" y="42" width="5" height="30" fill="#f5f1ea"/>
   <!-- Right pillar -->
   <rect x="63" y="42" width="5" height="30" fill="#f5f1ea"/>
-  
+
   <!-- Left inner pillar -->
   <rect x="41" y="48" width="3" height="24" fill="#f5f1ea"/>
   <!-- Right inner pillar -->
   <rect x="56" y="48" width="3" height="24" fill="#f5f1ea"/>
-  
+
   <!-- Main roof beam -->
   <rect x="26" y="38" width="48" height="4" rx="1" fill="#f5f1ea"/>
-  
+
   <!-- Roof eave overhang left -->
   <path d="M18 36 L32 42" stroke="#f5f1ea" stroke-width="3" stroke-linecap="round"/>
   <!-- Roof eave overhang right -->
   <path d="M68 42 L82 36" stroke="#f5f1ea" stroke-width="3" stroke-linecap="round"/>
-  
+
   <!-- Upper roof beam -->
   <rect x="30" y="30" width="40" height="4" rx="1" fill="#f5f1ea"/>
-  
+
   <!-- Roof eave upper left -->
   <path d="M22 28 L36 34" stroke="#f5f1ea" stroke-width="2.5" stroke-linecap="round"/>
   <!-- Roof eave upper right -->
   <path d="M64 34 L78 28" stroke="#f5f1ea" stroke-width="2.5" stroke-linecap="round"/>
-  
+
   <!-- Top ornament / roof ridge -->
   <rect x="34" y="23" width="32" height="4" rx="2" fill="#f5f1ea"/>
-  
+
   <!-- Roof peak -->
   <path d="M42 23 L50 17 L58 23" fill="#f5f1ea"/>
-  
+
   <!-- Top finial -->
   <circle cx="50" cy="15" r="2.5" fill="#f5f1ea"/>
-  
+
   <!-- Gate door arch detail -->
   <path d="M44 72 L44 58 Q44 54 50 54 Q56 54 56 58 L56 72" fill="none" stroke="#af5d32" stroke-width="1.5"/>
-  
+
   <!-- Cross beam detail -->
   <rect x="42" y="46" width="16" height="2" fill="#f5f1ea" opacity="0.6"/>
 </svg>
