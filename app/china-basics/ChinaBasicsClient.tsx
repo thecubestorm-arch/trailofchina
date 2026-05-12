@@ -48,7 +48,7 @@ const tabs = [
 const quickInfoPills = [
   { icon: Wifi, label: "", text: "VPN required" },
   { icon: CreditCard, label: "", text: "Cashless society" },
-  { icon: ShieldCheck, label: "", text: "15 days visa-free" },
+  { icon: ShieldCheck, label: "", text: "15–30 days visa-free" },
   { icon: Smartphone, label: "", text: "Download apps before you go" },
 ];
 

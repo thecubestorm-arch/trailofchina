@@ -65,7 +65,7 @@ const chinaPath =
 
 const facts = [
   { label: "1.4B+", sub: "Population" },
-  { label: "15 Days", sub: "visa-free" },
+  { label: "15–30 Days", sub: "visa-free" },
   { label: "¥ (CNY)", sub: "Currency" },
   { label: "9.6M km²", sub: "Area" },
 ]

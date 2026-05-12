@@ -447,30 +447,21 @@ You'll receive a temporary entry permit stamped in your passport. Keep this with
 
 **Visa-Free Entry for Certain Countries**
 
-As of 2025, China offers visa-free entry for 15 days to citizens of:
+As of 2025, China offers visa-free entry to citizens of many countries. Duration varies by nationality:
 
-- France
-- Germany
-- Italy
-- Netherlands
-- Spain
-- Switzerland
-- Ireland
-- Malta
-- Cyprus
-- Belgium
-- Austria
+- **30 days:** Switzerland
+- **15 days:** France, Germany, Italy, Netherlands, Spain, Ireland, Malta, Cyprus, Belgium, Austria
 
 This is part of China's broader visa-free policy for tourism cooperation. Requirements:
 
 - Entry for tourism, family visits, or business
-- Stay limited to 15 days
+- Stay limited to the allowed duration (15 or 30 days depending on nationality)
 - Must enter via designated ports
 - Some restrictions apply (must join guided tours in some cases)
 
 **Schengen Country Citizens: 24/144-Hour Options**
 
-Citizens of Schengen Area countries (including Germany, France, Switzerland, etc.) can also use the 24-hour and 144-hour visa-free transit policies in addition to the 15-day visa-free entry, giving maximum flexibility.
+Citizens of Schengen Area countries (including Germany, France, Switzerland, etc.) can also use the 24-hour and 144-hour visa-free transit policies in addition to visa-free entry, giving maximum flexibility.
 
 **Applying for China Visa from Third Countries**
 

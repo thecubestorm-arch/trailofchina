@@ -20,7 +20,7 @@ const setupSteps = [
   {
     title: 'Check if you qualify for visa-free entry',
     description:
-      'As of 2025, China offers visa-free entry (15-30 days) to citizens of many countries including France, Germany, Italy, Spain, Malaysia, Thailand, Singapore, and more. Check the latest list on the Chinese embassy website for your nationality. Swiss citizens currently qualify for 15-day visa-free entry.',
+      'As of 2025, China offers visa-free entry (15–30 days depending on nationality) to citizens of many countries including France, Germany, Italy, Spain, Malaysia, Thailand, Singapore, and more. Check the latest list on the Chinese embassy website for your nationality. Swiss citizens qualify for 30-day visa-free entry (since November 2024).',
   },
   {
     title: 'Determine your visa type',
@@ -63,7 +63,7 @@ const relatedArticles = [
 ]
 
 const faqJsonLd = faqPageSchema([
-  { question: 'Do I need a visa to visit China?', answer: 'Most foreign nationals need a visa, but China offers visa-free entry for citizens of France, Germany, Italy, Spain, Malaysia, and several other countries for stays up to 15 days.' },
+  { question: 'Do I need a visa to visit China?', answer: 'Most foreign nationals need a visa, but China offers visa-free entry for citizens of many countries — 15 days for most EU nationals, and 30 days for Swiss citizens (since November 2024). Check the Chinese embassy website for your nationality.' },
   { question: 'What is the China 240-hour transit visa exemption?', answer: 'China offers 240-hour (10-day) transit visa exemptions for citizens of 54 countries transiting through designated ports.' },
   { question: 'How do I apply for a China tourist visa?', answer: 'Apply through the Chinese visa application center (CVASC) in your country. You need a passport valid for 6+ months, a completed application form, photos, and itinerary documents.' },
 ])
