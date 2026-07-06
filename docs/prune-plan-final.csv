@@ -1,0 +1,276 @@
+url,decision,redirect_target,reason
+/,KEEP,,core page
+/about,KEEP,,core page
+/imprint,KEEP,,legal page
+/privacy,KEEP,,legal page
+/cookie-policy,KEEP,,legal page
+/blog,KEEP,,blog hub
+/blog/[slug],KEEP,,blog dynamic route
+/blog/category/[slug],KEEP,,blog category
+/china-basics,KEEP,,section hub
+/china-basics/before-you-go,KEEP,,section hub
+/china-basics/before-you-go/is-china-safe,KEEP,,key content
+/china-basics/before-you-go/packing-list,KEEP,,key content
+/china-basics/how-china-differs,KEEP,,section hub
+/china-basics/how-china-differs/visa-guide,KEEP,,key content
+/china-basics/how-to-get-around,KEEP,,section hub
+/china-basics/how-to-get-around/city-to-city,KEEP,,getting around cluster
+/china-basics/how-to-get-around/didi,KEEP,,getting around cluster
+/china-basics/how-to-get-around/metro-subway,KEEP,,getting around cluster
+/china-basics/how-to-get-around/plane,KEEP,,getting around cluster
+/china-basics/how-to-get-around/taxi,KEEP,,getting around cluster
+/china-basics/how-to-get-around/train,KEEP,,getting around cluster
+/china-basics/how-to-get-internet,KEEP,,section hub
+/china-basics/how-to-get-internet/airalo-esim,KEEP,,SACRED PAGE — top traffic URL frozen
+/china-basics/how-to-get-internet/esim,KEEP,,eSIM cluster
+/china-basics/how-to-get-internet/holafly-esim,KEEP,,eSIM cluster
+/china-basics/how-to-get-internet/physical-sim,KEEP,,eSIM cluster
+/china-basics/what-apps-to-use,KEEP,,section hub
+/china-basics/what-apps-to-use/alipay,KEEP,,payment page
+/china-basics/what-apps-to-use/communication,KEEP,,apps cluster
+/china-basics/what-apps-to-use/didi,KEEP,,apps cluster
+/china-basics/what-apps-to-use/maps,KEEP,,apps cluster
+/china-basics/what-apps-to-use/meituan,KEEP,,apps cluster
+/china-basics/what-apps-to-use/payment,KEEP,,payment page
+/china-basics/what-apps-to-use/travel,KEEP,,apps cluster
+/china-basics/what-apps-to-use/trip-com,KEEP,,apps cluster
+/china-basics/what-apps-to-use/vpn,KEEP,,apps cluster
+/china-basics/what-apps-to-use/wechat-pay,KEEP,,payment page
+/destinations,KEEP,,section hub
+/destinations/beijing,KEEP,,core city hub
+/destinations/beijing/day-trips,KEEP,,city sub-hub
+/destinations/beijing/local-experiences,KEEP,,city sub-hub
+/destinations/beijing/local-tips,KEEP,,city sub-hub
+/destinations/beijing/transport-guide,KEEP,,city sub-hub
+/destinations/beijing/what-to-do,KEEP,,city sub-hub
+/destinations/beijing/where-to-eat,KEEP,,city sub-hub
+/destinations/beijing/where-to-eat/jianbing,KEEP,,traffic page — Google pos ~10
+/destinations/beijing/where-to-stay,KEEP,,city sub-hub
+/destinations/chengdu,KEEP,,core city hub
+/destinations/chengdu/day-trips,KEEP,,city sub-hub
+/destinations/chengdu/local-experiences,KEEP,,city sub-hub
+/destinations/chengdu/local-tips,KEEP,,city sub-hub
+/destinations/chengdu/what-to-do,KEEP,,city sub-hub
+/destinations/chengdu/where-to-eat,KEEP,,city sub-hub
+/destinations/chengdu/where-to-stay,KEEP,,city sub-hub
+/destinations/chongqing,KEEP,,core city hub
+/destinations/chongqing/day-trips,KEEP,,city sub-hub
+/destinations/chongqing/local-experiences,KEEP,,city sub-hub
+/destinations/chongqing/local-tips,KEEP,,city sub-hub
+/destinations/chongqing/what-to-do,KEEP,,city sub-hub
+/destinations/chongqing/where-to-eat,KEEP,,city sub-hub
+/destinations/chongqing/where-to-stay,KEEP,,city sub-hub
+/destinations/guangzhou,KEEP,,city hub
+/destinations/shanghai,KEEP,,core city hub
+/destinations/shanghai/day-trips,KEEP,,city sub-hub
+/destinations/shanghai/local-experiences,KEEP,,city sub-hub
+/destinations/shanghai/local-tips,KEEP,,city sub-hub
+/destinations/shanghai/transport-guide,KEEP,,city sub-hub
+/destinations/shanghai/what-to-do,KEEP,,city sub-hub
+/destinations/shanghai/what-to-do/shanghai-tower,KEEP,,traffic page
+/destinations/shanghai/where-to-eat,KEEP,,city sub-hub
+/destinations/shanghai/where-to-stay,KEEP,,city sub-hub
+/destinations/shenzhen,KEEP,,city hub
+/destinations/shenzhen/what-to-do/ping-an-finance-centre,KEEP,,traffic page
+/destinations/xian,KEEP,,core city hub
+/destinations/xian/day-trips,KEEP,,city sub-hub
+/destinations/xian/local-experiences,KEEP,,city sub-hub
+/destinations/xian/local-tips,KEEP,,city sub-hub
+/destinations/xian/what-to-do,KEEP,,city sub-hub
+/destinations/xian/where-to-eat,KEEP,,city sub-hub
+/destinations/xian/where-to-stay,KEEP,,city sub-hub
+/plan-your-trip,KEEP,,section hub
+/plan-your-trip/beijing-shanghai-xian,KEEP,,itinerary page
+/plan-your-trip/best-time-to-visit,KEEP,,traffic page
+/plan-your-trip/budget,KEEP,,traffic page
+/plan-your-trip/chengdu-chongqing,KEEP,,itinerary page
+/plan-your-trip/preplanned-trips,KEEP,,preplanned trips hub
+/plan-your-trip/preplanned-trips/10-day-route,KEEP,,preplanned trip
+/plan-your-trip/preplanned-trips/14-day-route,KEEP,,preplanned trip
+/plan-your-trip/preplanned-trips/7-day-route,KEEP,,traffic page
+/plan-your-trip/shanghai-hangzhou-suzhou,KEEP,,itinerary page
+/plan-your-trip/shenzhen-guangzhou-hongkong,KEEP,,itinerary page
+/china-basics/how-china-differs/censorship,ARCHIVE,/china-basics/how-china-differs,thin content / not in keep list
+/china-basics/how-china-differs/cultural-differences,ARCHIVE,/china-basics/how-china-differs,thin content / not in keep list
+/china-basics/how-china-differs/passport-rules,ARCHIVE,/china-basics/how-china-differs,thin content / not in keep list
+/china-basics/how-china-differs/security-standards,ARCHIVE,/china-basics/how-china-differs,thin content / not in keep list
+/china-basics/how-to-get-around/12306,ARCHIVE,/china-basics/how-to-get-around,thin content / not in keep list
+/china-basics/how-to-get-around/bicycle,ARCHIVE,/china-basics/how-to-get-around,thin content / not in keep list
+/china-basics/how-to-get-around/bus,ARCHIVE,/china-basics/how-to-get-around,thin content / not in keep list
+/china-basics/how-to-get-around/car,ARCHIVE,/china-basics/how-to-get-around,thin content / not in keep list
+/destinations/beijing/1-2-3-day-itinerary,ARCHIVE,/destinations/beijing,thin content / not in keep list
+/destinations/beijing/common-mistakes,ARCHIVE,/destinations/beijing,thin content / not in keep list
+/destinations/beijing/day-trips/chengde,ARCHIVE,/destinations/beijing/day-trips,day-trip subpage (keep hub only)
+/destinations/beijing/day-trips/gubei-water-town,ARCHIVE,/destinations/beijing/day-trips,day-trip subpage (keep hub only)
+/destinations/beijing/day-trips/ming-tombs,ARCHIVE,/destinations/beijing/day-trips,day-trip subpage (keep hub only)
+/destinations/beijing/day-trips/mutianyu-great-wall,ARCHIVE,/destinations/beijing/day-trips,day-trip subpage (keep hub only)
+/destinations/beijing/day-trips,ARCHIVE,/destinations/beijing,thin content / not in keep list
+/destinations/beijing/for-first-timers,ARCHIVE,/destinations/beijing,thin content / not in keep list
+/destinations/beijing/how-many-days,ARCHIVE,/destinations/beijing,thin content / not in keep list
+/destinations/beijing/local-experiences,ARCHIVE,/destinations/beijing,thin content / not in keep list
+/destinations/beijing/local-tips,ARCHIVE,/destinations/beijing,thin content / not in keep list
+/destinations/beijing/transport-guide,ARCHIVE,/destinations/beijing,thin content / not in keep list
+/destinations/beijing/what-to-do/798-art-district,ARCHIVE,/destinations/beijing/what-to-do,individual attraction/food/stay page
+/destinations/beijing/what-to-do/forbidden-city,ARCHIVE,/destinations/beijing/what-to-do,individual attraction/food/stay page
+/destinations/beijing/what-to-do/great-wall,ARCHIVE,/destinations/beijing/what-to-do,individual attraction/food/stay page
+/destinations/beijing/what-to-do/hutong,ARCHIVE,/destinations/beijing/what-to-do,individual attraction/food/stay page
+/destinations/beijing/what-to-do/lama-temple,ARCHIVE,/destinations/beijing/what-to-do,individual attraction/food/stay page
+/destinations/beijing/what-to-do,ARCHIVE,/destinations/beijing,thin content / not in keep list
+/destinations/beijing/what-to-do/summer-palace,ARCHIVE,/destinations/beijing/what-to-do,individual attraction/food/stay page
+/destinations/beijing/what-to-do/temple-of-heaven,ARCHIVE,/destinations/beijing/what-to-do,individual attraction/food/stay page
+/destinations/beijing/where-to-eat/baodu,ARCHIVE,/destinations/beijing/where-to-eat,individual attraction/food/stay page
+/destinations/beijing/where-to-eat/lamb-skewers,ARCHIVE,/destinations/beijing/where-to-eat,individual attraction/food/stay page
+/destinations/beijing/where-to-eat,ARCHIVE,/destinations/beijing,thin content / not in keep list
+/destinations/beijing/where-to-eat/peking-duck,ARCHIVE,/destinations/beijing/where-to-eat,individual attraction/food/stay page
+/destinations/beijing/where-to-eat/tanghulu,ARCHIVE,/destinations/beijing/where-to-eat,individual attraction/food/stay page
+/destinations/beijing/where-to-eat/zhajiangmian,ARCHIVE,/destinations/beijing/where-to-eat,individual attraction/food/stay page
+/destinations/beijing/where-to-stay/dongcheng-hutong,ARCHIVE,/destinations/beijing/where-to-stay,individual attraction/food/stay page
+/destinations/beijing/where-to-stay/haidian,ARCHIVE,/destinations/beijing/where-to-stay,individual attraction/food/stay page
+/destinations/beijing/where-to-stay,ARCHIVE,/destinations/beijing,thin content / not in keep list
+/destinations/beijing/where-to-stay/sanlitun,ARCHIVE,/destinations/beijing/where-to-stay,individual attraction/food/stay page
+/destinations/beijing/where-to-stay/wangfujing,ARCHIVE,/destinations/beijing/where-to-stay,individual attraction/food/stay page
+/destinations/chengdu/day-trips/dujiangyan-panda-valley,ARCHIVE,/destinations/chengdu/day-trips,day-trip subpage (keep hub only)
+/destinations/chengdu/day-trips/leshan-giant-buddha,ARCHIVE,/destinations/chengdu/day-trips,day-trip subpage (keep hub only)
+/destinations/chengdu/day-trips/mount-qingcheng,ARCHIVE,/destinations/chengdu/day-trips,day-trip subpage (keep hub only)
+/destinations/chengdu/day-trips,ARCHIVE,/destinations/chengdu,thin content / not in keep list
+/destinations/chengdu/local-experiences,ARCHIVE,/destinations/chengdu,thin content / not in keep list
+/destinations/chengdu/local-tips,ARCHIVE,/destinations/chengdu,thin content / not in keep list
+/destinations/chengdu/what-to-do/dufu-cottage,ARCHIVE,/destinations/chengdu/what-to-do,individual attraction/food/stay page
+/destinations/chengdu/what-to-do/giant-panda-base,ARCHIVE,/destinations/chengdu/what-to-do,individual attraction/food/stay page
+/destinations/chengdu/what-to-do/jinli-ancient-street,ARCHIVE,/destinations/chengdu/what-to-do,duplicate/alias page
+/destinations/chengdu/what-to-do/jinli,ARCHIVE,/destinations/chengdu/what-to-do,duplicate/alias page
+/destinations/chengdu/what-to-do/kuanzhai-alley,ARCHIVE,/destinations/chengdu/what-to-do,duplicate/alias page
+/destinations/chengdu/what-to-do,ARCHIVE,/destinations/chengdu,thin content / not in keep list
+/destinations/chengdu/what-to-do/panda-base,ARCHIVE,/destinations/chengdu/what-to-do,duplicate/alias page
+/destinations/chengdu/what-to-do/peoples-park-teahouse,ARCHIVE,/destinations/chengdu/what-to-do,individual attraction/food/stay page
+/destinations/chengdu/what-to-do/sichuan-opera,ARCHIVE,/destinations/chengdu/what-to-do,individual attraction/food/stay page
+/destinations/chengdu/what-to-do/wenshu-monastery,ARCHIVE,/destinations/chengdu/what-to-do,individual attraction/food/stay page
+/destinations/chengdu/what-to-do/wide-narrow-alleys,ARCHIVE,/destinations/chengdu/what-to-do,duplicate/alias page
+/destinations/chengdu/what-to-do/wuhou-shrine,ARCHIVE,/destinations/chengdu/what-to-do,individual attraction/food/stay page
+/destinations/chengdu/where-to-eat/dan-dan-noodles,ARCHIVE,/destinations/chengdu/where-to-eat,individual attraction/food/stay page
+/destinations/chengdu/where-to-eat/hotpot,ARCHIVE,/destinations/chengdu/where-to-eat,duplicate/alias page
+/destinations/chengdu/where-to-eat/kung-pao-chicken,ARCHIVE,/destinations/chengdu/where-to-eat,individual attraction/food/stay page
+/destinations/chengdu/where-to-eat/mapo-tofu,ARCHIVE,/destinations/chengdu/where-to-eat,individual attraction/food/stay page
+/destinations/chengdu/where-to-eat,ARCHIVE,/destinations/chengdu,thin content / not in keep list
+/destinations/chengdu/where-to-eat/sichuan-hotpot,ARCHIVE,/destinations/chengdu/where-to-eat,duplicate/alias page
+/destinations/chengdu/where-to-stay/chunxi-road,ARCHIVE,/destinations/chengdu/where-to-stay,individual attraction/food/stay page
+/destinations/chengdu/where-to-stay/jinli-area,ARCHIVE,/destinations/chengdu/where-to-stay,duplicate/alias page
+/destinations/chengdu/where-to-stay/jinli,ARCHIVE,/destinations/chengdu/where-to-stay,duplicate/alias page
+/destinations/chengdu/where-to-stay,ARCHIVE,/destinations/chengdu,thin content / not in keep list
+/destinations/chengdu/where-to-stay/wide-narrow-alley,ARCHIVE,/destinations/chengdu/where-to-stay,duplicate/alias page
+/destinations/chengdu/where-to-stay/wide-narrow-alleys,ARCHIVE,/destinations/chengdu/where-to-stay,duplicate/alias page
+/destinations/chongqing/day-trips/dazu-rock-carvings,ARCHIVE,/destinations/chongqing/day-trips,day-trip subpage (keep hub only)
+/destinations/chongqing/day-trips,ARCHIVE,/destinations/chongqing,thin content / not in keep list
+/destinations/chongqing/day-trips/wulong-karst,ARCHIVE,/destinations/chongqing/day-trips,day-trip subpage (keep hub only)
+/destinations/chongqing/local-experiences,ARCHIVE,/destinations/chongqing,thin content / not in keep list
+/destinations/chongqing/local-tips,ARCHIVE,/destinations/chongqing,thin content / not in keep list
+/destinations/chongqing/what-to-do/ciqikou,ARCHIVE,/destinations/chongqing/what-to-do,individual attraction/food/stay page
+/destinations/chongqing/what-to-do/eling-park,ARCHIVE,/destinations/chongqing/what-to-do,individual attraction/food/stay page
+/destinations/chongqing/what-to-do/hongya-cave,ARCHIVE,/destinations/chongqing/what-to-do,individual attraction/food/stay page
+/destinations/chongqing/what-to-do/liziba-monorail,ARCHIVE,/destinations/chongqing/what-to-do,individual attraction/food/stay page
+/destinations/chongqing/what-to-do,ARCHIVE,/destinations/chongqing,thin content / not in keep list
+/destinations/chongqing/what-to-do/three-gorges-museum,ARCHIVE,/destinations/chongqing/what-to-do,individual attraction/food/stay page
+/destinations/chongqing/what-to-do/yangtze-cable-car,ARCHIVE,/destinations/chongqing/what-to-do,individual attraction/food/stay page
+/destinations/chongqing/where-to-eat/chongqing-hotpot,ARCHIVE,/destinations/chongqing/where-to-eat,individual attraction/food/stay page
+/destinations/chongqing/where-to-eat/grilled-fish,ARCHIVE,/destinations/chongqing/where-to-eat,individual attraction/food/stay page
+/destinations/chongqing/where-to-eat,ARCHIVE,/destinations/chongqing,thin content / not in keep list
+/destinations/chongqing/where-to-eat/xiaomian,ARCHIVE,/destinations/chongqing/where-to-eat,individual attraction/food/stay page
+/destinations/chongqing/where-to-stay/cuntan,ARCHIVE,/destinations/chongqing/where-to-stay,individual attraction/food/stay page
+/destinations/chongqing/where-to-stay/hongyadong-area,ARCHIVE,/destinations/chongqing/where-to-stay,individual attraction/food/stay page
+/destinations/chongqing/where-to-stay/jiefangbei,ARCHIVE,/destinations/chongqing/where-to-stay,individual attraction/food/stay page
+/destinations/chongqing/where-to-stay,ARCHIVE,/destinations/chongqing,thin content / not in keep list
+/destinations/guangzhou/day-trips/foshan,ARCHIVE,/destinations/guangzhou,day-trip subpage (keep hub only)
+/destinations/guangzhou/day-trips,ARCHIVE,/destinations/guangzhou,thin content / not in keep list
+/destinations/guangzhou/day-trips/shenzhen,ARCHIVE,/destinations/guangzhou,day-trip subpage (keep hub only)
+/destinations/guangzhou/local-tips,ARCHIVE,/destinations/guangzhou,thin content / not in keep list
+/destinations/guangzhou/what-to-do/beijing-road,ARCHIVE,/destinations/guangzhou,individual attraction/food/stay page
+/destinations/guangzhou/what-to-do/canton-tower,ARCHIVE,/destinations/guangzhou,individual attraction/food/stay page
+/destinations/guangzhou/what-to-do/chen-clan-ancestral-hall,ARCHIVE,/destinations/guangzhou,individual attraction/food/stay page
+/destinations/guangzhou/what-to-do,ARCHIVE,/destinations/guangzhou,thin content / not in keep list
+/destinations/guangzhou/what-to-do/sacred-heart-cathedral,ARCHIVE,/destinations/guangzhou,individual attraction/food/stay page
+/destinations/guangzhou/what-to-do/shamian-island,ARCHIVE,/destinations/guangzhou,individual attraction/food/stay page
+/destinations/guangzhou/what-to-do/yuexiu-park,ARCHIVE,/destinations/guangzhou,individual attraction/food/stay page
+/destinations/guangzhou/where-to-eat/dim-sum,ARCHIVE,/destinations/guangzhou,individual attraction/food/stay page
+/destinations/guangzhou/where-to-eat,ARCHIVE,/destinations/guangzhou,thin content / not in keep list
+/destinations/guangzhou/where-to-eat/rice-noodle-rolls,ARCHIVE,/destinations/guangzhou,individual attraction/food/stay page
+/destinations/guangzhou/where-to-eat/roast-goose,ARCHIVE,/destinations/guangzhou,individual attraction/food/stay page
+/destinations/guangzhou/where-to-eat/shunde-cuisine,ARCHIVE,/destinations/guangzhou,individual attraction/food/stay page
+/destinations/guangzhou/where-to-eat/wonton-noodles,ARCHIVE,/destinations/guangzhou,individual attraction/food/stay page
+/destinations/guangzhou/where-to-stay/haizhu-district,ARCHIVE,/destinations/guangzhou,individual attraction/food/stay page
+/destinations/guangzhou/where-to-stay,ARCHIVE,/destinations/guangzhou,thin content / not in keep list
+/destinations/guangzhou/where-to-stay/tianhe-district,ARCHIVE,/destinations/guangzhou,individual attraction/food/stay page
+/destinations/guangzhou/where-to-stay/yuexiu-district,ARCHIVE,/destinations/guangzhou,individual attraction/food/stay page
+/destinations/shanghai/1-2-3-day-itinerary,ARCHIVE,/destinations/shanghai,thin content / not in keep list
+/destinations/shanghai/common-mistakes,ARCHIVE,/destinations/shanghai,thin content / not in keep list
+/destinations/shanghai/day-trips/hangzhou,ARCHIVE,/destinations/shanghai/day-trips,day-trip subpage (keep hub only)
+/destinations/shanghai/day-trips,ARCHIVE,/destinations/shanghai,thin content / not in keep list
+/destinations/shanghai/day-trips/suzhou,ARCHIVE,/destinations/shanghai/day-trips,day-trip subpage (keep hub only)
+/destinations/shanghai/day-trips/zhujiajiao,ARCHIVE,/destinations/shanghai/day-trips,day-trip subpage (keep hub only)
+/destinations/shanghai/for-first-timers,ARCHIVE,/destinations/shanghai,thin content / not in keep list
+/destinations/shanghai/how-many-days,ARCHIVE,/destinations/shanghai,thin content / not in keep list
+/destinations/shanghai/local-experiences,ARCHIVE,/destinations/shanghai,thin content / not in keep list
+/destinations/shanghai/local-tips,ARCHIVE,/destinations/shanghai,thin content / not in keep list
+/destinations/shanghai/transport-guide,ARCHIVE,/destinations/shanghai,thin content / not in keep list
+/destinations/shanghai/what-to-do/bund,ARCHIVE,/destinations/shanghai/what-to-do,individual attraction/food/stay page
+/destinations/shanghai/what-to-do/french-concession,ARCHIVE,/destinations/shanghai/what-to-do,individual attraction/food/stay page
+/destinations/shanghai/what-to-do/jade-buddha-temple,ARCHIVE,/destinations/shanghai/what-to-do,individual attraction/food/stay page
+/destinations/shanghai/what-to-do,ARCHIVE,/destinations/shanghai,thin content / not in keep list
+/destinations/shanghai/what-to-do/tianzifang,ARCHIVE,/destinations/shanghai/what-to-do,individual attraction/food/stay page
+/destinations/shanghai/what-to-do/yu-garden,ARCHIVE,/destinations/shanghai/what-to-do,individual attraction/food/stay page
+/destinations/shanghai/where-to-eat/hairy-crab,ARCHIVE,/destinations/shanghai/where-to-eat,individual attraction/food/stay page
+/destinations/shanghai/where-to-eat,ARCHIVE,/destinations/shanghai,thin content / not in keep list
+/destinations/shanghai/where-to-eat/red-braised-pork,ARCHIVE,/destinations/shanghai/where-to-eat,individual attraction/food/stay page
+/destinations/shanghai/where-to-eat/scallion-oil-noodles,ARCHIVE,/destinations/shanghai/where-to-eat,individual attraction/food/stay page
+/destinations/shanghai/where-to-eat/shengjianbao,ARCHIVE,/destinations/shanghai/where-to-eat,individual attraction/food/stay page
+/destinations/shanghai/where-to-eat/xiaolongbao,ARCHIVE,/destinations/shanghai/where-to-eat,individual attraction/food/stay page
+/destinations/shanghai/where-to-stay/bund-area,ARCHIVE,/destinations/shanghai/where-to-stay,individual attraction/food/stay page
+/destinations/shanghai/where-to-stay/french-concession,ARCHIVE,/destinations/shanghai/where-to-stay,individual attraction/food/stay page
+/destinations/shanghai/where-to-stay/jingan,ARCHIVE,/destinations/shanghai/where-to-stay,individual attraction/food/stay page
+/destinations/shanghai/where-to-stay,ARCHIVE,/destinations/shanghai,thin content / not in keep list
+/destinations/shanghai/where-to-stay/xintiandi,ARCHIVE,/destinations/shanghai/where-to-stay,individual attraction/food/stay page
+/destinations/shenzhen/day-trips/guangzhou,ARCHIVE,/destinations/shenzhen,day-trip subpage (keep hub only)
+/destinations/shenzhen/day-trips/hong-kong,ARCHIVE,/destinations/shenzhen,day-trip subpage (keep hub only)
+/destinations/shenzhen/day-trips,ARCHIVE,/destinations/shenzhen,thin content / not in keep list
+/destinations/shenzhen/local-tips,ARCHIVE,/destinations/shenzhen,thin content / not in keep list
+/destinations/shenzhen/what-to-do/dafen-oil-painting-village,ARCHIVE,/destinations/shenzhen,individual attraction/food/stay page
+/destinations/shenzhen/what-to-do/huaqiangbei,ARCHIVE,/destinations/shenzhen,individual attraction/food/stay page
+/destinations/shenzhen/what-to-do/lianhuashan-park,ARCHIVE,/destinations/shenzhen,individual attraction/food/stay page
+/destinations/shenzhen/what-to-do/oct-loft,ARCHIVE,/destinations/shenzhen,individual attraction/food/stay page
+/destinations/shenzhen/what-to-do,ARCHIVE,/destinations/shenzhen,thin content / not in keep list
+/destinations/shenzhen/what-to-do/window-of-the-world,ARCHIVE,/destinations/shenzhen,individual attraction/food/stay page
+/destinations/shenzhen/where-to-eat/chongqing-hotpot,ARCHIVE,/destinations/shenzhen,individual attraction/food/stay page
+/destinations/shenzhen/where-to-eat/dim-sum,ARCHIVE,/destinations/shenzhen,individual attraction/food/stay page
+/destinations/shenzhen/where-to-eat/hakka-cuisine,ARCHIVE,/destinations/shenzhen,individual attraction/food/stay page
+/destinations/shenzhen/where-to-eat,ARCHIVE,/destinations/shenzhen,thin content / not in keep list
+/destinations/shenzhen/where-to-eat/seafood-coco-park,ARCHIVE,/destinations/shenzhen,individual attraction/food/stay page
+/destinations/shenzhen/where-to-eat/street-food-dongmen,ARCHIVE,/destinations/shenzhen,individual attraction/food/stay page
+/destinations/shenzhen/where-to-stay/futian-district,ARCHIVE,/destinations/shenzhen,individual attraction/food/stay page
+/destinations/shenzhen/where-to-stay/luohu-district,ARCHIVE,/destinations/shenzhen,individual attraction/food/stay page
+/destinations/shenzhen/where-to-stay/nanshan-district,ARCHIVE,/destinations/shenzhen,individual attraction/food/stay page
+/destinations/shenzhen/where-to-stay,ARCHIVE,/destinations/shenzhen,thin content / not in keep list
+/destinations/xian/day-trips/famen-temple,ARCHIVE,/destinations/xian/day-trips,day-trip subpage (keep hub only)
+/destinations/xian/day-trips/huaqing-palace,ARCHIVE,/destinations/xian/day-trips,day-trip subpage (keep hub only)
+/destinations/xian/day-trips/huashan,ARCHIVE,/destinations/xian/day-trips,day-trip subpage (keep hub only)
+/destinations/xian/day-trips,ARCHIVE,/destinations/xian,thin content / not in keep list
+/destinations/xian/local-experiences,ARCHIVE,/destinations/xian,thin content / not in keep list
+/destinations/xian/local-tips,ARCHIVE,/destinations/xian,thin content / not in keep list
+/destinations/xian/what-to-do/bell-drum-tower,ARCHIVE,/destinations/xian/what-to-do,duplicate/alias page
+/destinations/xian/what-to-do/bell-tower,ARCHIVE,/destinations/xian/what-to-do,duplicate/alias page
+/destinations/xian/what-to-do/big-wild-goose-pagoda,ARCHIVE,/destinations/xian/what-to-do,individual attraction/food/stay page
+/destinations/xian/what-to-do/city-wall,ARCHIVE,/destinations/xian/what-to-do,individual attraction/food/stay page
+/destinations/xian/what-to-do/muslim-quarter,ARCHIVE,/destinations/xian/what-to-do,individual attraction/food/stay page
+/destinations/xian/what-to-do,ARCHIVE,/destinations/xian,thin content / not in keep list
+/destinations/xian/what-to-do/shaanxi-history-museum,ARCHIVE,/destinations/xian/what-to-do,individual attraction/food/stay page
+/destinations/xian/what-to-do/terracotta-warriors,ARCHIVE,/destinations/xian/what-to-do,individual attraction/food/stay page
+/destinations/xian/where-to-eat/biangbiang-noodles,ARCHIVE,/destinations/xian/where-to-eat,individual attraction/food/stay page
+/destinations/xian/where-to-eat/liangpi,ARCHIVE,/destinations/xian/where-to-eat,individual attraction/food/stay page
+/destinations/xian/where-to-eat,ARCHIVE,/destinations/xian,thin content / not in keep list
+/destinations/xian/where-to-eat/roujiamo,ARCHIVE,/destinations/xian/where-to-eat,individual attraction/food/stay page
+/destinations/xian/where-to-eat/yangrou-paomo,ARCHIVE,/destinations/xian/where-to-eat,duplicate/alias page
+/destinations/xian/where-to-eat/yangroupaomo,ARCHIVE,/destinations/xian/where-to-eat,duplicate/alias page
+/destinations/xian/where-to-stay/bell-tower,ARCHIVE,/destinations/xian/where-to-stay,individual attraction/food/stay page
+/destinations/xian/where-to-stay/dayan-pagoda,ARCHIVE,/destinations/xian/where-to-stay,individual attraction/food/stay page
+/destinations/xian/where-to-stay/muslim-quarter,ARCHIVE,/destinations/xian/where-to-stay,individual attraction/food/stay page
+/destinations/xian/where-to-stay,ARCHIVE,/destinations/xian,thin content / not in keep list
+/interactive-map,ARCHIVE,/,thin content / not in keep list
+/plan-your-trip/travel-planner,ARCHIVE,/plan-your-trip,thin content / not in keep list
