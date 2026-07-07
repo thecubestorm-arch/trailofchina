@@ -2,7 +2,6 @@ import { Metadata } from 'next';
 import XianHubClient from './XianHubClient';
 import { makeMetadata } from '@/lib/metadata';
 import { breadcrumbSchema } from '@/lib/schema'
-import ChineseWatermark from '@/components/ChineseWatermark'
 
 export const metadata: Metadata = makeMetadata({
   title: "Xi'an Travel Guide",
@@ -23,18 +22,7 @@ export default function XianPage() {
   const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Destinations", path: "/destinations" }, { name: "Xi'an", path: "/destinations/xian" }]);
 
   return (
-    <>
-      <header className="mb-8 relative">
-        <ChineseWatermark character="安" />
-        <h1 className="relative z-10 mb-3 text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-[var(--foreground)]">
-          {'Xi\'an Travel Guide'}
-        </h1>
-        <div className="relative z-10 mt-3 flex items-center gap-2 text-[var(--muted)]">
-          <span className="text-2xl">Destinations</span>
-          <span className="text-lg">• Xi'an</span>
-        </div>
-      </header>
-      <script
+    <><script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(travelGuideJsonLd) }}
       />

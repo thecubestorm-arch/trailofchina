@@ -817,9 +817,9 @@ export default function CityHubTemplate({ config }: { config: CityHubConfig }) {
             <p className="mb-1 text-xs font-medium text-white/80 md:text-base">
               {config.nameZh}, China
             </p>
-            <h2 className="mb-1.5 text-3xl font-bold tracking-tight text-white md:mb-3 md:text-6xl">
+            <h1 className="mb-1.5 text-3xl font-bold tracking-tight text-white md:mb-3 md:text-6xl">
               {config.nameEn}
-            </h2>
+            </h1>
             <p className="text-xs text-white/90 md:text-lg">{config.tagline}</p>
           </div>
           <div className="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 items-center justify-center gap-2.5 md:bottom-7 md:gap-2">
