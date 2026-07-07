@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Shanghai Tower Observation Deck | Tickets, Hours & Best Views - Trail of China' }],
   },
-    alternates: { canonical: '/destinations/shanghai/what-to-do/shanghai-tower' },
+    alternates: { canonical: '/destinations/shanghai/shanghai-tower' },
 };
 
 const searchQuery = encodeURIComponent('Shanghai Tower observation deck tour');
@@ -72,7 +72,7 @@ export default function ShanghaiTowerPage() {
         { label: 'Home', href: '/' },
         { label: 'Destinations', href: '/destinations' },
         { label: 'Shanghai', href: '/destinations/shanghai' },
-        { label: 'What to Do', href: '/destinations/shanghai/what-to-do' },
+        { label: 'What to Do', href: '/destinations/shanghai' },
       ]}
       nameZh="上海中心大厦"
       city="Shanghai"
@@ -114,8 +114,8 @@ Three skyscrapers in Lujiazui offer observation decks. Shanghai Tower is the hig
         { title: "Yu Garden", description: "400-year-old classical Chinese garden in Shanghai's Old City.", href: "/destinations/shanghai/yu-garden" },
         { title: "The Bund", description: "Shanghai's iconic waterfront with colonial architecture.", href: "/destinations/shanghai/bund" },
         { title: "French Concession", description: "Shanghai's most charming neighborhood of tree-lined streets.", href: "/destinations/shanghai/french-concession" },
-        { title: "Where to Eat in Shanghai", description: "Discover Shanghai's best local dishes and restaurants.", href: "/destinations/shanghai/where-to-eat" },
-        { title: "Shanghai Local Tips", description: "Practical tips for navigating Shanghai like a local.", href: "/destinations/shanghai/local-tips" },
+        { title: "Where to Eat in Shanghai", description: "Discover Shanghai's best local dishes and restaurants.", href: "/destinations/shanghai" },
+        { title: "Shanghai Local Tips", description: "Practical tips for navigating Shanghai like a local.", href: "/destinations/shanghai" },
         { title: "Shanghai Guide", description: "Complete guide to planning your Shanghai trip.", href: "/destinations/shanghai" },
       ]}
       tips={[...tips, ...photoSpots]}

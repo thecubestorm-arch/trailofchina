@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Ping An Finance Centre - Trail of China' }],
   },
-    alternates: { canonical: '/destinations/shenzhen/what-to-do/ping-an-finance-centre' },
+    alternates: { canonical: '/destinations/shenzhen/ping-an-finance-centre' },
 };
 
 const faqJsonLd = faqPageSchema([
@@ -25,7 +25,7 @@ const faqJsonLd = faqPageSchema([
 
 const breadcrumbJsonLd = breadcrumbSchema([
   { name: 'Home', path: '/' }, { name: 'Destinations', path: '/destinations' },
-  { name: 'Shenzhen', path: '/destinations/shenzhen' }, { name: 'What to Do', path: '/destinations/shenzhen/what-to-do' },
+  { name: 'Shenzhen', path: '/destinations/shenzhen' }, { name: 'What to Do', path: '/destinations/shenzhen' },
   { name: 'Ping An Finance Centre', path: '/destinations/shenzhen/ping-an-finance-centre' },
 ]);
 
@@ -39,7 +39,7 @@ export default function PingAnFinanceCentrePage() {
         name="Ping An Finance Centre"
         breadcrumbs={[
           { label: 'Home', href: '/' }, { label: 'Destinations', href: '/destinations' },
-          { label: 'Shenzhen', href: '/destinations/shenzhen' }, { label: 'What to Do', href: '/destinations/shenzhen/what-to-do' },
+          { label: 'Shenzhen', href: '/destinations/shenzhen' }, { label: 'What to Do', href: '/destinations/shenzhen' },
         ]}
         nameZh="平安金融中心"
         city="Shenzhen"
@@ -73,7 +73,7 @@ The building's design is inspired by the Chinese character for "peace" (安), wi
         relatedArticles={[
           { title: "Lianhuashan Park", description: "The best free skyline view of this building.", href: "/destinations/shenzhen/lianhuashan-park" },
           { title: "Huaqiangbei", description: "The world's largest electronics market, 15 minutes away.", href: "/destinations/shenzhen/huaqiangbei" },
-          { title: "Where to Eat in Shenzhen", description: "Dim sum and seafood near Futian.", href: "/destinations/shenzhen/where-to-eat" },
+          { title: "Where to Eat in Shenzhen", description: "Dim sum and seafood near Futian.", href: "/destinations/shenzhen" },
           { title: "Hong Kong Day Trip", description: "Cross the border for Victoria Peak views.", href: "/destinations/shenzhen/hong-kong" },
         ]}
         tips={[
