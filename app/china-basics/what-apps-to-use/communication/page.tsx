@@ -10,7 +10,7 @@ export const metadata: Metadata = makeMetadata({
   description:
     'Set up WeChat for messaging, service mini-programs, and travel coordination in China. Essential guide for first-time visitors.',
 
-  path: '/china-basics/what-apps-to-use/communication',
+  path: '/china-basics/communication',
 })
 
 const setupSteps = [
@@ -40,12 +40,12 @@ const relatedArticles = [
   {
     title: 'WeChat Pay Guide',
     description: 'Set up WeChat Pay for payments, mini programs, and P2P transfers.',
-    href: '/china-basics/what-apps-to-use/wechat-pay',
+    href: '/china-basics/wechat-pay',
   },
   {
     title: 'Payment Apps Overview',
     description: 'Why you need Alipay and WeChat Pay in cashless China.',
-    href: '/china-basics/what-apps-to-use/payment',
+    href: '/china-basics/payment',
   },
 ]
 
@@ -64,7 +64,7 @@ export default function CommunicationAppsPage() {
             items={[
               { label: 'Home', href: '/' },
               { label: 'China Basics', href: '/china-basics' },
-              { label: 'What Apps to Use', href: '/china-basics/what-apps-to-use' },
+              { label: 'What Apps to Use', href: '/china-basics' },
               { label: 'Communication' },
             ]}
           />

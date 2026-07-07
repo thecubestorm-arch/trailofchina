@@ -17,7 +17,7 @@ export const metadata: Metadata = makeMetadata({
     images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Trip.com Guide for China Travelers - Trail of China' }],
   },
 
-  path: '/china-basics/what-apps-to-use/trip-com',
+  path: '/china-basics/trip-com',
 })
 
 const capabilities = ['High-Speed Trains', 'Hotels', 'Flights', 'Attraction Tickets', 'eSIM', 'Airport Transfers']
@@ -118,12 +118,12 @@ const relatedArticles = [
   {
     title: 'Payment Apps Guide',
     description: 'Alipay, WeChat Pay, and how to pay in cashless China.',
-    href: '/china-basics/what-apps-to-use/payment',
+    href: '/china-basics/payment',
   },
   {
     title: 'VPN Guide',
     description: 'Which VPNs work in China and how to set them up.',
-    href: '/china-basics/what-apps-to-use/vpn',
+    href: '/china-basics/vpn',
   },
   {
     title: 'Internet Setup',
@@ -133,7 +133,7 @@ const relatedArticles = [
   {
     title: 'Didi Guide',
     description: "China's ride-hailing app explained for foreigners.",
-    href: '/china-basics/what-apps-to-use/didi',
+    href: '/china-basics/didi',
   },
 ]
 
@@ -164,7 +164,7 @@ export default function TripComPage() {
             items={[
               { label: 'Home', href: '/' },
               { label: 'China Basics', href: '/china-basics' },
-              { label: 'What Apps to Use', href: '/china-basics/what-apps-to-use' },
+              { label: 'What Apps to Use', href: '/china-basics' },
               { label: 'Trip.com' },
             ]}
           />
@@ -435,7 +435,7 @@ export default function TripComPage() {
           title="Access Blocked Apps in China"
           description="Trip.com works without a VPN, but Google, WhatsApp, and Instagram don't. Install a VPN before you land."
           buttonText="VPN Guide →"
-          buttonHref="/china-basics/what-apps-to-use/vpn"
+          buttonHref="/china-basics/vpn"
           variant="secondary"
         />
       </div>

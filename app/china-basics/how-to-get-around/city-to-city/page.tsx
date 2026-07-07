@@ -12,7 +12,7 @@ export const metadata: Metadata = makeMetadata({
   description:
     "High-speed train routes, flight comparisons, and booking tips for traveling between Beijing, Shanghai, Xi'an, Chengdu, and Chongqing.",
 
-  path: '/china-basics/how-to-get-around/city-to-city',
+  path: '/china-basics/city-to-city',
 })
 
 const relatedArticles = [
@@ -24,12 +24,12 @@ const relatedArticles = [
   {
     title: '12306 Train Booking',
     description: 'Book train tickets like a local.',
-    href: '/china-basics/how-to-get-around/12306',
+    href: '/china-basics/12306',
   },
   {
     title: 'High-Speed Trains',
     description: 'Complete guide to G-trains, D-trains, seat classes, and station tips.',
-    href: '/china-basics/how-to-get-around/train',
+    href: '/china-basics/train',
   },
   {
     title: 'Preplanned Trips',
@@ -39,7 +39,7 @@ const relatedArticles = [
 ]
 
 export default function CityToCityPage() {
-  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "China Basics", path: "/china-basics" }, { name: "How to Get Around", path: "/china-basics/how-to-get-around" }, { name: "City to City", path: "/china-basics/how-to-get-around/city-to-city" }]);
+  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "China Basics", path: "/china-basics" }, { name: "How to Get Around", path: "/china-basics" }, { name: "City to City", path: "/china-basics/city-to-city" }]);
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
@@ -56,7 +56,7 @@ export default function CityToCityPage() {
             items={[
               { label: 'Home', href: '/' },
               { label: 'China Basics', href: '/china-basics' },
-              { label: 'How to Get Around', href: '/china-basics/how-to-get-around' },
+              { label: 'How to Get Around', href: '/china-basics' },
               { label: 'City-to-City' },
             ]}
           />

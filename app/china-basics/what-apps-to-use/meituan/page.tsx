@@ -12,7 +12,7 @@ export const metadata: Metadata = makeMetadata({
   description:
     'Complete guide to Meituan (美团): order food delivery, book hotels, buy movie tickets, and get group deals. Setup tips for foreign travelers in China.',
 
-  path: '/china-basics/what-apps-to-use/meituan',
+  path: '/china-basics/meituan',
 })
 
 const setupSteps = [
@@ -47,17 +47,17 @@ const relatedArticles = [
   {
     title: 'Alipay Guide',
     description: 'Pay for Meituan orders with Alipay.',
-    href: '/china-basics/what-apps-to-use/alipay',
+    href: '/china-basics/alipay',
   },
   {
     title: 'Payment Apps Overview',
     description: 'Why you need Alipay and WeChat Pay in cashless China.',
-    href: '/china-basics/what-apps-to-use/payment',
+    href: '/china-basics/payment',
   },
 ]
 
 export default function MeituanPage() {
-  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "China Basics", path: "/china-basics" }, { name: "What Apps to Use", path: "/china-basics/what-apps-to-use" }, { name: "Meituan", path: "/china-basics/what-apps-to-use/meituan" }]);
+  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "China Basics", path: "/china-basics" }, { name: "What Apps to Use", path: "/china-basics" }, { name: "Meituan", path: "/china-basics/meituan" }]);
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
@@ -74,7 +74,7 @@ export default function MeituanPage() {
             items={[
               { label: 'Home', href: '/' },
               { label: 'China Basics', href: '/china-basics' },
-              { label: 'What Apps to Use', href: '/china-basics/what-apps-to-use' },
+              { label: 'What Apps to Use', href: '/china-basics' },
               { label: 'Meituan' },
             ]}
           />

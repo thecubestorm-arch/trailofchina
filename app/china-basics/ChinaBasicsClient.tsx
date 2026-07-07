@@ -170,7 +170,7 @@ const gettingAroundItems: BasicsItem[] = [
   {
     name: "Train Tickets (12306)",
     subtitle: "Book bullet train tickets. The official booking platform.",
-    href: "/china-basics/how-to-get-around/12306",
+    href: "/china-basics/12306",
     icon: TrainFront,
     imageSeed: "china-train-station",
     category: "getting-around",
@@ -179,7 +179,7 @@ const gettingAroundItems: BasicsItem[] = [
   {
     name: "Getting Around Overview",
     subtitle: "Metro, taxi, DiDi, bus — how China moves.",
-    href: "/china-basics/how-to-get-around",
+    href: "/china-basics",
     icon: TrainFront,
     imageSeed: "china-transport-overview",
     category: "getting-around",
@@ -188,7 +188,7 @@ const gettingAroundItems: BasicsItem[] = [
   {
     name: "High-Speed Rail",
     subtitle: "300+ km/h bullet trains between cities.",
-    href: "/china-basics/how-to-get-around/train",
+    href: "/china-basics/train",
     icon: TrainFront,
     imageSeed: "china-bullet-train",
     category: "getting-around",
@@ -197,7 +197,7 @@ const gettingAroundItems: BasicsItem[] = [
   {
     name: "Flights",
     subtitle: "Domestic flights for longer distances.",
-    href: "/china-basics/how-to-get-around/plane",
+    href: "/china-basics/plane",
     icon: TrainFront,
     imageSeed: "china-airplane",
     category: "getting-around",
@@ -206,7 +206,7 @@ const gettingAroundItems: BasicsItem[] = [
   {
     name: "Metro",
     subtitle: "Excellent subway systems in major cities.",
-    href: "/china-basics/how-to-get-around/metro-subway",
+    href: "/china-basics/metro-subway",
     icon: TrainFront,
     imageSeed: "china-metro-subway",
     category: "getting-around",
@@ -387,7 +387,7 @@ function AppsMoneySection({ expanded = false }: { expanded?: boolean }) {
       {expanded && (
         <SectionHeader
           title="Apps & Money"
-          href="/china-basics/what-apps-to-use"
+          href="/china-basics"
         />
       )}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -405,7 +405,7 @@ function GettingAroundSection({ expanded = false }: { expanded?: boolean }) {
       {expanded && (
         <SectionHeader
           title="Getting Around"
-          href="/china-basics/how-to-get-around"
+          href="/china-basics"
         />
       )}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -423,7 +423,7 @@ function KnowBeforeSection({ expanded = false }: { expanded?: boolean }) {
       {expanded && (
         <SectionHeader
           title="Know Before You Go"
-          href="/china-basics/how-china-differs"
+          href="/china-basics"
         />
       )}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">

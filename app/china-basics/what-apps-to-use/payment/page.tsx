@@ -13,7 +13,7 @@ export const metadata: Metadata = makeMetadata({
     'China is essentially cashless. Learn why Alipay and WeChat Pay are essential — not just for payments, but for transit, food delivery, mini-apps, and more.',
   keywords: 'Alipay for foreigners,WeChat Pay China,China payment apps,cashless China,mobile payment China',
 
-  path: '/china-basics/what-apps-to-use/payment',
+  path: '/china-basics/payment',
 })
 
 const setupSteps = [
@@ -53,12 +53,12 @@ const relatedArticles = [
   {
     title: 'Alipay Setup Guide',
     description: 'Step-by-step Alipay setup for foreigners.',
-    href: '/china-basics/what-apps-to-use/alipay',
+    href: '/china-basics/alipay',
   },
   {
     title: 'WeChat Pay Guide',
     description: 'Complete WeChat Pay walkthrough.',
-    href: '/china-basics/what-apps-to-use/wechat-pay',
+    href: '/china-basics/wechat-pay',
   },
   {
     title: 'How to Get Internet in China',
@@ -74,7 +74,7 @@ const faqJsonLd = faqPageSchema([
 ])
 
 export default function PaymentAppsPage() {
-  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "China Basics", path: "/china-basics" }, { name: "What Apps to Use", path: "/china-basics/what-apps-to-use" }, { name: "Payment", path: "/china-basics/what-apps-to-use/payment" }]);
+  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "China Basics", path: "/china-basics" }, { name: "What Apps to Use", path: "/china-basics" }, { name: "Payment", path: "/china-basics/payment" }]);
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
@@ -92,7 +92,7 @@ export default function PaymentAppsPage() {
             items={[
               { label: 'Home', href: '/' },
               { label: 'China Basics', href: '/china-basics' },
-              { label: 'What Apps to Use', href: '/china-basics/what-apps-to-use' },
+              { label: 'What Apps to Use', href: '/china-basics' },
               { label: 'Payment Apps' },
             ]}
           />

@@ -10,7 +10,7 @@ export const metadata: Metadata = makeMetadata({
   description:
     'Choose the best map tools for China travel, including local app options, offline backups, and translation tactics.',
 
-  path: '/china-basics/what-apps-to-use/maps',
+  path: '/china-basics/maps',
 })
 
 const setupSteps = [
@@ -40,12 +40,12 @@ const relatedArticles = [
   {
     title: 'How to Get Around',
     description: 'Navigation tips for trains, metro, and taxis.',
-    href: '/china-basics/how-to-get-around',
+    href: '/china-basics',
   },
   {
     title: 'Didi Guide',
     description: 'Ride-hailing with built-in navigation.',
-    href: '/china-basics/what-apps-to-use/didi',
+    href: '/china-basics/didi',
   },
 ]
 
@@ -64,7 +64,7 @@ export default function MapsAppsPage() {
             items={[
               { label: 'Home', href: '/' },
               { label: 'China Basics', href: '/china-basics' },
-              { label: 'What Apps to Use', href: '/china-basics/what-apps-to-use' },
+              { label: 'What Apps to Use', href: '/china-basics' },
               { label: 'Maps' },
             ]}
           />

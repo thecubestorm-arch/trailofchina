@@ -56,6 +56,13 @@ const nextConfig = {
       });
     }
 
+    // ─── Redirect intermediate China Basics hubs to main hub ──────────────────
+    redirects.push(
+      { source: '/china-basics/what-apps-to-use', destination: '/china-basics', permanent: true },
+      { source: '/china-basics/how-china-differs', destination: '/china-basics', permanent: true },
+      { source: '/china-basics/how-to-get-around', destination: '/china-basics', permanent: true },
+    );
+
     return redirects;
   }
 }

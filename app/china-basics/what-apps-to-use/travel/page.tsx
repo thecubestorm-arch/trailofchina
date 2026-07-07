@@ -10,7 +10,7 @@ export const metadata: Metadata = makeMetadata({
   description:
     'How to use Trip.com and DiDi for flights, trains, hotels, and local rides across China with fewer booking mistakes.',
 
-  path: '/china-basics/what-apps-to-use/travel',
+  path: '/china-basics/travel',
 })
 
 const setupSteps = [
@@ -40,12 +40,12 @@ const relatedArticles = [
   {
     title: 'How to Get Around',
     description: 'Transportation overview: trains, planes, taxis, and more.',
-    href: '/china-basics/how-to-get-around',
+    href: '/china-basics',
   },
   {
     title: '12306 Train Booking',
     description: 'Book China train tickets directly like a local.',
-    href: '/china-basics/how-to-get-around/12306',
+    href: '/china-basics/12306',
   },
 ]
 
@@ -64,7 +64,7 @@ export default function TravelAppsPage() {
             items={[
               { label: 'Home', href: '/' },
               { label: 'China Basics', href: '/china-basics' },
-              { label: 'What Apps to Use', href: '/china-basics/what-apps-to-use' },
+              { label: 'What Apps to Use', href: '/china-basics' },
               { label: 'Travel Booking' },
             ]}
           />

@@ -13,7 +13,7 @@ export const metadata: Metadata = makeMetadata({
     'Complete China visa guide for tourists — L visa, M visa, transit visas, 144-hour visa-free entry, and Swiss/EU citizen info.',
   keywords: 'China visa guide,China visa requirements,China visa-free entry,L visa China,China tourist visa,China visa application',
 
-  path: '/china-basics/how-china-differs/visa-guide',
+  path: '/china-basics/visa-guide',
 })
 
 const setupSteps = [
@@ -53,12 +53,12 @@ const relatedArticles = [
   {
     title: 'Passport Rules in China',
     description: 'Entry requirements, passport validity, and registration rules.',
-    href: '/china-basics/how-china-differs/passport-rules',
+    href: '/china-basics/passport-rules',
   },
   {
     title: 'How China Differs',
     description: 'Cultural differences, censorship, and safety standards.',
-    href: '/china-basics/how-china-differs',
+    href: '/china-basics',
   },
 ]
 
@@ -69,7 +69,7 @@ const faqJsonLd = faqPageSchema([
 ])
 
 export default function VisaGuidePage() {
-  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "China Basics", path: "/china-basics" }, { name: "How China Differs", path: "/china-basics/how-china-differs" }, { name: "Visa Guide", path: "/china-basics/how-china-differs/visa-guide" }]);
+  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "China Basics", path: "/china-basics" }, { name: "How China Differs", path: "/china-basics" }, { name: "Visa Guide", path: "/china-basics/visa-guide" }]);
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
@@ -87,7 +87,7 @@ export default function VisaGuidePage() {
             items={[
               { label: 'Home', href: '/' },
               { label: 'China Basics', href: '/china-basics' },
-              { label: 'How China Differs', href: '/china-basics/how-china-differs' },
+              { label: 'How China Differs', href: '/china-basics' },
               { label: 'Visa Guide' },
             ]}
           />

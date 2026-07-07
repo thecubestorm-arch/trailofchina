@@ -11,24 +11,24 @@ export const metadata: Metadata = makeMetadata({
   title: 'Taxis in China',
   description: 'How to take traditional taxis in China. Tips for hailing, payment, and getting around major cities safely and affordably.',
 
-  path: '/china-basics/how-to-get-around/taxi',
+  path: '/china-basics/taxi',
 })
 
 const relatedArticles = [
   {
     title: 'Didi Ride-Hailing',
     description: "China's Uber — book rides from your phone.",
-    href: '/china-basics/how-to-get-around/didi',
+    href: '/china-basics/didi',
   },
   {
     title: 'How to Get Around',
     description: 'All transportation options in China.',
-    href: '/china-basics/how-to-get-around',
+    href: '/china-basics',
   },
 ]
 
 export default function TaxiPage() {
-  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "China Basics", path: "/china-basics" }, { name: "How to Get Around", path: "/china-basics/how-to-get-around" }, { name: "Taxi", path: "/china-basics/how-to-get-around/taxi" }]);
+  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "China Basics", path: "/china-basics" }, { name: "How to Get Around", path: "/china-basics" }, { name: "Taxi", path: "/china-basics/taxi" }]);
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
@@ -45,7 +45,7 @@ export default function TaxiPage() {
             items={[
               { label: 'Home', href: '/' },
               { label: 'China Basics', href: '/china-basics' },
-              { label: 'How to Get Around', href: '/china-basics/how-to-get-around' },
+              { label: 'How to Get Around', href: '/china-basics' },
               { label: 'Taxi' },
             ]}
           />
@@ -172,7 +172,7 @@ export default function TaxiPage() {
           title="Use DiDi When You Can"
           description="Traditional taxis are useful backup, but DiDi is usually easier for pickup, destination entry, and payment."
           buttonText="DiDi Guide →"
-          buttonHref="/china-basics/how-to-get-around/didi"
+          buttonHref="/china-basics/didi"
           variant="secondary"
         />
       </main>

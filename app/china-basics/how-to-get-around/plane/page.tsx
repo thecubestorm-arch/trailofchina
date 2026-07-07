@@ -12,24 +12,24 @@ export const metadata: Metadata = makeMetadata({
   description:
     'Guide to booking and flying domestic flights in China. Airlines, airports, booking tips, and what to expect at security checks.',
 
-  path: '/china-basics/how-to-get-around/plane',
+  path: '/china-basics/plane',
 })
 
 const relatedArticles = [
   {
     title: 'Train Travel',
     description: 'Often faster and more convenient than flights.',
-    href: '/china-basics/how-to-get-around/train',
+    href: '/china-basics/train',
   },
   {
     title: 'How to Get Around',
     description: 'All transportation options in China.',
-    href: '/china-basics/how-to-get-around',
+    href: '/china-basics',
   },
 ]
 
 export default function PlanePage() {
-  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "China Basics", path: "/china-basics" }, { name: "How to Get Around", path: "/china-basics/how-to-get-around" }, { name: "Plane", path: "/china-basics/how-to-get-around/plane" }]);
+  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "China Basics", path: "/china-basics" }, { name: "How to Get Around", path: "/china-basics" }, { name: "Plane", path: "/china-basics/plane" }]);
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
@@ -46,7 +46,7 @@ export default function PlanePage() {
             items={[
               { label: 'Home', href: '/' },
               { label: 'China Basics', href: '/china-basics' },
-              { label: 'How to Get Around', href: '/china-basics/how-to-get-around' },
+              { label: 'How to Get Around', href: '/china-basics' },
               { label: 'Plane' },
             ]}
           />
@@ -187,7 +187,7 @@ export default function PlanePage() {
           title="Compare Flights With Trains"
           description="For many routes, high-speed rail is more convenient once you factor in airport transfers, security, and delays."
           buttonText="Train Travel Guide →"
-          buttonHref="/china-basics/how-to-get-around/train"
+          buttonHref="/china-basics/train"
           variant="secondary"
         />
       </main>

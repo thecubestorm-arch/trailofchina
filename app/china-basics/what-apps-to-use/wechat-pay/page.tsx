@@ -10,7 +10,7 @@ export const metadata: Metadata = makeMetadata({
   description:
     'How to set up WeChat Pay as a tourist in China. Link international credit cards, send hongbao, scan QR codes, and pay like 1.3 billion locals.',
 
-  path: '/china-basics/what-apps-to-use/wechat-pay',
+  path: '/china-basics/wechat-pay',
 })
 
 const setupSteps = [
@@ -50,17 +50,17 @@ const relatedArticles = [
   {
     title: 'Alipay Guide',
     description: 'Set up Alipay as your backup payment method.',
-    href: '/china-basics/what-apps-to-use/alipay',
+    href: '/china-basics/alipay',
   },
   {
     title: 'Payment Apps Overview',
     description: 'Why you need both payment apps in China.',
-    href: '/china-basics/what-apps-to-use/payment',
+    href: '/china-basics/payment',
   },
   {
     title: 'Didi Guide',
     description: 'Pay for rides with WeChat Pay via Didi.',
-    href: '/china-basics/what-apps-to-use/didi',
+    href: '/china-basics/didi',
   },
 ]
 
@@ -79,7 +79,7 @@ export default function WeChatPayPage() {
             items={[
               { label: 'Home', href: '/' },
               { label: 'China Basics', href: '/china-basics' },
-              { label: 'What Apps to Use', href: '/china-basics/what-apps-to-use' },
+              { label: 'What Apps to Use', href: '/china-basics' },
               { label: 'WeChat Pay' },
             ]}
           />
@@ -228,7 +228,7 @@ export default function WeChatPayPage() {
           title="Also Set Up Alipay"
           description="Some merchants only accept Alipay. Having both means you are never stuck."
           buttonText="Alipay Setup Guide →"
-          buttonHref="/china-basics/what-apps-to-use/alipay"
+          buttonHref="/china-basics/alipay"
           variant="secondary"
         />
       </div>

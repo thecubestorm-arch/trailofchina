@@ -12,7 +12,7 @@ export const metadata: Metadata = makeMetadata({
   description:
     'How to use Didi (滴滴) in China: ride-hailing, bike sharing, and bus routes. Setup guide, safety tips, and pricing for foreign travelers.',
 
-  path: '/china-basics/what-apps-to-use/didi',
+  path: '/china-basics/didi',
 })
 
 const setupSteps = [
@@ -47,17 +47,17 @@ const relatedArticles = [
   {
     title: 'Alipay Guide',
     description: 'Pay for Didi rides and more with Alipay.',
-    href: '/china-basics/what-apps-to-use/alipay',
+    href: '/china-basics/alipay',
   },
   {
     title: 'How to Get Around',
     description: 'All transportation options in China.',
-    href: '/china-basics/how-to-get-around',
+    href: '/china-basics',
   },
 ]
 
 export default function DidiPage() {
-  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "China Basics", path: "/china-basics" }, { name: "What Apps to Use", path: "/china-basics/what-apps-to-use" }, { name: "DiDi", path: "/china-basics/what-apps-to-use/didi" }]);
+  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "China Basics", path: "/china-basics" }, { name: "What Apps to Use", path: "/china-basics" }, { name: "DiDi", path: "/china-basics/didi" }]);
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
@@ -74,7 +74,7 @@ export default function DidiPage() {
             items={[
               { label: 'Home', href: '/' },
               { label: 'China Basics', href: '/china-basics' },
-              { label: 'What Apps to Use', href: '/china-basics/what-apps-to-use' },
+              { label: 'What Apps to Use', href: '/china-basics' },
               { label: 'Didi' },
             ]}
           />

@@ -10,7 +10,7 @@ export const metadata: Metadata = makeMetadata({
   description:
     'Step-by-step guide to setting up Alipay as a foreigner in China. Link international cards, verify identity, and pay everywhere like a local.',
 
-  path: '/china-basics/what-apps-to-use/alipay',
+  path: '/china-basics/alipay',
 })
 
 const setupSteps = [
@@ -45,17 +45,17 @@ const relatedArticles = [
   {
     title: 'WeChat Pay Guide',
     description: 'The other must-have payment app for China travelers.',
-    href: '/china-basics/what-apps-to-use/wechat-pay',
+    href: '/china-basics/wechat-pay',
   },
   {
     title: 'Payment Apps Overview',
     description: 'Why you need Alipay and WeChat Pay in cashless China.',
-    href: '/china-basics/what-apps-to-use/payment',
+    href: '/china-basics/payment',
   },
   {
     title: 'Meituan Guide',
     description: 'Order food delivery and book hotels with Meituan.',
-    href: '/china-basics/what-apps-to-use/meituan',
+    href: '/china-basics/meituan',
   },
 ]
 
@@ -74,7 +74,7 @@ export default function AlipayPage() {
             items={[
               { label: 'Home', href: '/' },
               { label: 'China Basics', href: '/china-basics' },
-              { label: 'What Apps to Use', href: '/china-basics/what-apps-to-use' },
+              { label: 'What Apps to Use', href: '/china-basics' },
               { label: 'Alipay' },
             ]}
           />

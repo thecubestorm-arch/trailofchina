@@ -12,14 +12,14 @@ export const metadata: Metadata = makeMetadata({
   description:
     "Complete guide to using DiDi, China's Uber equivalent. Setup, payment, car types, and safety tips for foreign travelers.",
 
-  path: '/china-basics/how-to-get-around/didi',
+  path: '/china-basics/didi',
 })
 
 const relatedArticles = [
   {
     title: 'Taxi Guide',
     description: 'Traditional taxi tips and getting around.',
-    href: '/china-basics/how-to-get-around/taxi',
+    href: '/china-basics/taxi',
   },
   {
     title: 'Didi App Guide',
@@ -29,7 +29,7 @@ const relatedArticles = [
 ]
 
 export default function DidiPage() {
-  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "China Basics", path: "/china-basics" }, { name: "How to Get Around", path: "/china-basics/how-to-get-around" }, { name: "DiDi", path: "/china-basics/how-to-get-around/didi" }]);
+  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "China Basics", path: "/china-basics" }, { name: "How to Get Around", path: "/china-basics" }, { name: "DiDi", path: "/china-basics/didi" }]);
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
@@ -46,7 +46,7 @@ export default function DidiPage() {
             items={[
               { label: 'Home', href: '/' },
               { label: 'China Basics', href: '/china-basics' },
-              { label: 'How to Get Around', href: '/china-basics/how-to-get-around' },
+              { label: 'How to Get Around', href: '/china-basics' },
               { label: 'Didi' },
             ]}
           />

@@ -13,7 +13,7 @@ export const metadata: Metadata = makeMetadata({
     "Complete guide to booking and riding China's high-speed rail network. G-trains, D-trains, seat classes, booking, and station tips.",
   keywords: 'China high-speed rail,China train travel,China rail pass,buy train tickets China,China bullet train',
 
-  path: '/china-basics/how-to-get-around/train',
+  path: '/china-basics/train',
 })
 
 const bookingSteps = [
@@ -27,12 +27,12 @@ const relatedArticles = [
   {
     title: '12306 Train Booking',
     description: 'Book train tickets like a local.',
-    href: '/china-basics/how-to-get-around/12306',
+    href: '/china-basics/12306',
   },
   {
     title: 'How to Get Around',
     description: 'All transportation options in China.',
-    href: '/china-basics/how-to-get-around',
+    href: '/china-basics',
   },
 ]
 
@@ -43,7 +43,7 @@ const faqJsonLd = faqPageSchema([
 ])
 
 export default function TrainPage() {
-  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "China Basics", path: "/china-basics" }, { name: "How to Get Around", path: "/china-basics/how-to-get-around" }, { name: "Train", path: "/china-basics/how-to-get-around/train" }]);
+  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "China Basics", path: "/china-basics" }, { name: "How to Get Around", path: "/china-basics" }, { name: "Train", path: "/china-basics/train" }]);
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
@@ -61,7 +61,7 @@ export default function TrainPage() {
             items={[
               { label: 'Home', href: '/' },
               { label: 'China Basics', href: '/china-basics' },
-              { label: 'How to Get Around', href: '/china-basics/how-to-get-around' },
+              { label: 'How to Get Around', href: '/china-basics' },
               { label: 'Train' },
             ]}
           />
@@ -230,7 +230,7 @@ export default function TrainPage() {
           title="Book Trains the Easy Way"
           description="If the official 12306 process feels heavy, start with the simpler foreigner-friendly booking options before you travel."
           buttonText="12306 Booking Guide →"
-          buttonHref="/china-basics/how-to-get-around/12306"
+          buttonHref="/china-basics/12306"
           variant="secondary"
         />
       </main>

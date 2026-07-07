@@ -80,7 +80,7 @@ const relatedArticles = [
   {
     title: 'What Apps to Use',
     description: 'Essential apps to download before your trip.',
-    href: '/china-basics/what-apps-to-use',
+    href: '/china-basics',
   },
   {
     title: 'Passport Rules',
@@ -219,7 +219,7 @@ export default function BeforeYouGoPage() {
           title="Get Your Apps Ready"
           description="Set up WeChat, Alipay, your VPN, and arrival essentials before you board the plane."
           buttonText="See Essential Apps →"
-          buttonHref="/china-basics/what-apps-to-use"
+          buttonHref="/china-basics"
           variant="secondary"
         />
       </main>

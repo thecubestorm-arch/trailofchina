@@ -11,7 +11,7 @@ export const metadata: Metadata = makeMetadata({
   description:
     'The best VPNs that actually work in China, plus setup tips and backup plans for when the Great Firewall blocks your connection.',
 
-  path: '/china-basics/what-apps-to-use/vpn',
+  path: '/china-basics/vpn',
 })
 
 const vpnProviders = [
@@ -71,13 +71,13 @@ export default function VpnGuidePage() {
   const breadcrumbJsonLd = breadcrumbSchema([
     { name: 'Home', path: '/' },
     { name: 'China Basics', path: '/china-basics' },
-    { name: 'What Apps to Use', path: '/china-basics/what-apps-to-use' },
-    { name: 'VPN', path: '/china-basics/what-apps-to-use/vpn' },
+    { name: 'What Apps to Use', path: '/china-basics' },
+    { name: 'VPN', path: '/china-basics/vpn' },
   ]);
   const articleJsonLd = articleSchema({
     title: metadata.title as string,
     description: metadata.description as string,
-    url: '/china-basics/what-apps-to-use/vpn',
+    url: '/china-basics/vpn',
     image: 'https://www.trailofchina.com/og-default.jpg',
   });
 
@@ -98,7 +98,7 @@ export default function VpnGuidePage() {
               items={[
                 { label: 'Home', href: '/' },
                 { label: 'China Basics', href: '/china-basics' },
-                { label: 'What Apps to Use', href: '/china-basics/what-apps-to-use' },
+                { label: 'What Apps to Use', href: '/china-basics' },
                 { label: 'VPN' },
               ]}
             />
@@ -251,7 +251,7 @@ export default function VpnGuidePage() {
             title="Don't Wait Until You Land"
             description="Install your VPN before entering China — the download sites are blocked otherwise."
             buttonText="See VPN Recommendations →"
-            buttonHref="/china-basics/what-apps-to-use/vpn"
+            buttonHref="/china-basics/vpn"
             variant="secondary"
           />
         </div>

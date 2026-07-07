@@ -12,7 +12,7 @@ export const metadata: Metadata = makeMetadata({
   description:
     'Complete guide to using the metro and subway systems in Chinese cities. Beijing, Shanghai, Guangzhou, and more. Payment, etiquette, and tips.',
 
-  path: '/china-basics/how-to-get-around/metro-subway',
+  path: '/china-basics/metro-subway',
 })
 
 const relatedArticles = [
@@ -24,12 +24,12 @@ const relatedArticles = [
   {
     title: 'How to Get Around',
     description: 'All transportation options in China.',
-    href: '/china-basics/how-to-get-around',
+    href: '/china-basics',
   },
 ]
 
 export default function MetroPage() {
-  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "China Basics", path: "/china-basics" }, { name: "How to Get Around", path: "/china-basics/how-to-get-around" }, { name: "Metro & Subway", path: "/china-basics/how-to-get-around/metro-subway" }]);
+  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "China Basics", path: "/china-basics" }, { name: "How to Get Around", path: "/china-basics" }, { name: "Metro & Subway", path: "/china-basics/metro-subway" }]);
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
@@ -46,7 +46,7 @@ export default function MetroPage() {
             items={[
               { label: 'Home', href: '/' },
               { label: 'China Basics', href: '/china-basics' },
-              { label: 'How to Get Around', href: '/china-basics/how-to-get-around' },
+              { label: 'How to Get Around', href: '/china-basics' },
               { label: 'Metro & Subway' },
             ]}
           />
