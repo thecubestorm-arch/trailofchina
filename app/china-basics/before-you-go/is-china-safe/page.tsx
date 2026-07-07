@@ -5,7 +5,7 @@ import ChineseWatermark from '@/components/ChineseWatermark'
 import ContextualCTA from '@/components/ContextualCTA'
 import { makeMetadata } from '@/lib/metadata'
 import AuthorByline from '@/components/AuthorByline';
-import { breadcrumbSchema } from '@/lib/schema'
+import { faqPageSchema, breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = makeMetadata({
   title: "Is China Safe? A Traveler's Safety Guide",
@@ -94,8 +94,16 @@ const relatedArticles = [
 
 export default function IsChinaSafePage() {
   const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "China Basics", path: "/china-basics" }, { name: "Before You Go", path: "/china-basics/before-you-go" }, { name: "Is China Safe?", path: "/china-basics/before-you-go/is-china-safe" }]);
+  const faqJsonLd = faqPageSchema([
+    { question: 'Is China safe for tourists?', answer: 'China is one of the safest countries for tourists, with very low violent crime rates, extensive CCTV coverage, and a strong police presence in cities.' },
+    { question: 'What are the most common scams in China?', answer: 'Overcharging at markets, fake taxis that refuse the meter, and tea house or art gallery scams are the most common issues travelers face.' },
+    { question: 'Is China safe for solo female travelers?', answer: 'Yes. Street harassment is rare, and most solo female travelers report feeling safe walking alone at night in Chinese cities.' },
+    { question: 'Is tap water safe to drink in China?', answer: 'No. Tap water is not drinkable. Always drink bottled or boiled water.' },
+    { question: 'What emergency numbers should I know?', answer: 'Police: 110, Ambulance: 120, Fire: 119. These work from any phone, even without a SIM card.' },
+  ]);
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
     <div
       className="min-h-screen"

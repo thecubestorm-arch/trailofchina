@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import HomeV7Client from './v7/HomeV7Client'
+import { breadcrumbSchema, travelGuideSchema, websiteSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'China Travel Guide - First Trip Planning',
@@ -21,23 +22,33 @@ export const metadata: Metadata = {
 }
 
 export default function HomePage() {
-  const websiteJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
+  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }]);
+  const travelGuideJsonLd = travelGuideSchema({
+    title: 'Trail of China — China Travel Guide',
+    description:
+      'Your first trip to China, simplified. Visa-free updates, practical trip planning, destination ideas, and essential China basics for first-time travelers.',
+    url: '/',
+    image: 'https://www.trailofchina.com/og-default.jpg',
+  });
+  const websiteJsonLd = websiteSchema({
     name: 'Trail of China',
-    url: 'https://www.trailofchina.com',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: 'https://www.trailofchina.com/search?q={search_term_string}',
-      'query-input': 'required name=search_term_string',
-    },
-};
+    url: '/',
+    searchUrl: '/search?q={search_term_string}',
+  });
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(travelGuideJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <HomeV7Client />
     </>

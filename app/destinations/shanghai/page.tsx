@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import ShanghaiHubClient from './ShanghaiHubClient';
-import { breadcrumbSchema } from '@/lib/schema'
+import { breadcrumbSchema, travelGuideSchema } from '@/lib/schema'
 import ChineseWatermark from '@/components/ChineseWatermark'
 
 export const metadata: Metadata = {
@@ -16,8 +16,17 @@ export const metadata: Metadata = {
 
 export default function ShanghaiPage() {
   const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Destinations", path: "/destinations" }, { name: "Shanghai", path: "/destinations/shanghai" }]);
+  const travelGuideJsonLd = travelGuideSchema({
+    title: 'Shanghai Travel Guide',
+    description: metadata.description as string,
+    url: '/destinations/shanghai',
+    image: 'https://www.trailofchina.com/og-default.jpg',
+  });
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(travelGuideJsonLd) }} />
       <header className="mb-8 relative">
         <ChineseWatermark character="沪" />
         <h1 className="relative z-10 mb-3 text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-[var(--foreground)]">
@@ -28,7 +37,6 @@ export default function ShanghaiPage() {
           <span className="text-lg">• Shanghai</span>
         </div>
       </header>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <ShanghaiHubClient />
     </>
   );
