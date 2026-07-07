@@ -67,7 +67,7 @@ export const guangzhouConfig: CityHubConfig = {
       defaultCategory: "things-to-do",
       categories: {
         "things-to-do": {
-          href: "/destinations/guangzhou/what-to-do/canton-tower",
+          href: "/destinations/guangzhou/canton-tower",
           hook: "Canton Tower isn't just an observation deck — the skywalk lets you walk outside at 488 meters.",
           tag: "¥150–298",
         },
@@ -82,7 +82,7 @@ export const guangzhouConfig: CityHubConfig = {
       defaultCategory: "things-to-do",
       categories: {
         "things-to-do": {
-          href: "/destinations/guangzhou/what-to-do/shamian-island",
+          href: "/destinations/guangzhou/shamian-island",
           hook: "Guangzhou's time capsule — 150-year-old European buildings under banyan trees.",
           tag: "Free",
         },
@@ -97,7 +97,7 @@ export const guangzhouConfig: CityHubConfig = {
       defaultCategory: "things-to-do",
       categories: {
         "things-to-do": {
-          href: "/destinations/guangzhou/what-to-do/chen-clan-ancestral-hall",
+          href: "/destinations/guangzhou/chen-clan-ancestral-hall",
           hook: "A Lingnan architecture masterpiece with wood and stone carvings so detailed they take your breath away.",
           tag: "¥10",
         },
@@ -112,7 +112,7 @@ export const guangzhouConfig: CityHubConfig = {
       defaultCategory: "things-to-do",
       categories: {
         "things-to-do": {
-          href: "/destinations/guangzhou/what-to-do/beijing-road",
+          href: "/destinations/guangzhou/beijing-road",
           hook: "A 2,000-year-old shopping street — with the ancient road visible under glass panels beneath your feet.",
           tag: "Free",
         },
@@ -127,7 +127,7 @@ export const guangzhouConfig: CityHubConfig = {
       defaultCategory: "things-to-do",
       categories: {
         "things-to-do": {
-          href: "/destinations/guangzhou/what-to-do/yuexiu-park",
+          href: "/destinations/guangzhou/yuexiu-park",
           hook: "Guangzhou's green lung — home to the Five Rams Statue and 600-year-old Zhenhai Tower.",
           tag: "Free",
         },
@@ -142,7 +142,7 @@ export const guangzhouConfig: CityHubConfig = {
       defaultCategory: "things-to-do",
       categories: {
         "things-to-do": {
-          href: "/destinations/guangzhou/what-to-do/sacred-heart-cathedral",
+          href: "/destinations/guangzhou/sacred-heart-cathedral",
           hook: "Guangzhou's Notre-Dame — a Gothic cathedral built entirely from granite in 1863.",
           tag: "Free",
         },
@@ -159,7 +159,7 @@ export const guangzhouConfig: CityHubConfig = {
       defaultCategory: "where-to-eat",
       categories: {
         "where-to-eat": {
-          href: "/destinations/guangzhou/where-to-eat/dim-sum",
+          href: "/destinations/guangzhou/dim-sum",
           hook: "Guangzhou INVENTED dim sum. This is the real thing — not the version you get abroad.",
           tag: "Cantonese · ¥50–120",
         },
@@ -174,7 +174,7 @@ export const guangzhouConfig: CityHubConfig = {
       defaultCategory: "where-to-eat",
       categories: {
         "where-to-eat": {
-          href: "/destinations/guangzhou/where-to-eat/wonton-noodles",
+          href: "/destinations/guangzhou/wonton-noodles",
           hook: "Thin egg noodles, shrimp wontons, clear broth — Cantonese comfort food perfected over centuries.",
           tag: "Local · ¥15–30",
         },
@@ -189,7 +189,7 @@ export const guangzhouConfig: CityHubConfig = {
       defaultCategory: "where-to-eat",
       categories: {
         "where-to-eat": {
-          href: "/destinations/guangzhou/where-to-eat/rice-noodle-rolls",
+          href: "/destinations/guangzhou/rice-noodle-rolls",
           hook: "Cheung fun — silky rice noodle rolls with soy sauce, the Guangzhou breakfast staple.",
           tag: "Street · ¥8–15",
         },
@@ -204,7 +204,7 @@ export const guangzhouConfig: CityHubConfig = {
       defaultCategory: "where-to-eat",
       categories: {
         "where-to-eat": {
-          href: "/destinations/guangzhou/where-to-eat/roast-goose",
+          href: "/destinations/guangzhou/roast-goose",
           hook: "Cantonese roast goose — crispy skin, juicy meat, the dish that makes Guangzhou the food capital.",
           tag: "Cantonese · ¥60–120",
         },
@@ -219,7 +219,7 @@ export const guangzhouConfig: CityHubConfig = {
       defaultCategory: "where-to-eat",
       categories: {
         "where-to-eat": {
-          href: "/destinations/guangzhou/where-to-eat/shunde-cuisine",
+          href: "/destinations/guangzhou/shunde-cuisine",
           hook: "Shunde is a UNESCO City of Gastronomy — and it's a suburb of Guangzhou.",
           tag: "Premium · ¥100–200",
         },
@@ -236,7 +236,7 @@ export const guangzhouConfig: CityHubConfig = {
       defaultCategory: "where-to-stay",
       categories: {
         "where-to-stay": {
-          href: "/destinations/guangzhou/where-to-stay/tianhe-district",
+          href: "/destinations/guangzhou/tianhe-district",
           hook: "Modern CBD · Canton Tower · Shopping malls",
           tag: "¥¥",
         },
@@ -251,7 +251,7 @@ export const guangzhouConfig: CityHubConfig = {
       defaultCategory: "where-to-stay",
       categories: {
         "where-to-stay": {
-          href: "/destinations/guangzhou/where-to-stay/yuexiu-district",
+          href: "/destinations/guangzhou/yuexiu-district",
           hook: "Old Guangzhou · Beijing Road · Shamian nearby",
           tag: "¥",
         },
@@ -266,7 +266,7 @@ export const guangzhouConfig: CityHubConfig = {
       defaultCategory: "where-to-stay",
       categories: {
         "where-to-stay": {
-          href: "/destinations/guangzhou/where-to-stay/haizhu-district",
+          href: "/destinations/guangzhou/haizhu-district",
           hook: "Across the Pearl River · Canton Tower · Arts district",
           tag: "¥¥",
         },
@@ -283,7 +283,7 @@ export const guangzhouConfig: CityHubConfig = {
       defaultCategory: "day-trips",
       categories: {
         "day-trips": {
-          href: "/destinations/guangzhou/day-trips/foshan",
+          href: "/destinations/guangzhou/foshan",
           hook: "Foshan is 30 minutes by metro — the birthplace of wing chun kung fu, Lingnan architecture, and some of the best pottery in China.",
           tag: "Full day",
         },
@@ -298,7 +298,7 @@ export const guangzhouConfig: CityHubConfig = {
       defaultCategory: "day-trips",
       categories: {
         "day-trips": {
-          href: "/destinations/guangzhou/day-trips/shenzhen",
+          href: "/destinations/guangzhou/shenzhen",
           hook: "Shenzhen is 30 minutes by bullet train — a fishing village 40 years ago, now China's tech capital.",
           tag: "Full day",
         },
@@ -342,7 +342,7 @@ export const guangzhouConfig: CityHubConfig = {
       items: [
         {
           name: "Dim Sum Breakfast",
-          href: "/destinations/guangzhou/where-to-eat/dim-sum",
+          href: "/destinations/guangzhou/dim-sum",
           time: "1.5–2h",
           cost: "¥50–80",
           imageSeed: "guangzhou-dim-sum",
@@ -356,7 +356,7 @@ export const guangzhouConfig: CityHubConfig = {
       items: [
         {
           name: "Shamian Island",
-          href: "/destinations/guangzhou/what-to-do/shamian-island",
+          href: "/destinations/guangzhou/shamian-island",
           time: "1.5h",
           cost: "Free",
           imageSeed: "guangzhou-shamian-island",
@@ -370,7 +370,7 @@ export const guangzhouConfig: CityHubConfig = {
       items: [
         {
           name: "Beijing Road",
-          href: "/destinations/guangzhou/what-to-do/beijing-road",
+          href: "/destinations/guangzhou/beijing-road",
           time: "2h",
           cost: "Varies",
           imageSeed: "guangzhou-beijing-road",
@@ -384,7 +384,7 @@ export const guangzhouConfig: CityHubConfig = {
       items: [
         {
           name: "Chen Clan Ancestral Hall",
-          href: "/destinations/guangzhou/what-to-do/chen-clan-ancestral-hall",
+          href: "/destinations/guangzhou/chen-clan-ancestral-hall",
           time: "1.5h",
           cost: "¥10",
           imageSeed: "guangzhou-chen-clan-hall",
@@ -398,7 +398,7 @@ export const guangzhouConfig: CityHubConfig = {
       items: [
         {
           name: "Yuexiu Park",
-          href: "/destinations/guangzhou/what-to-do/yuexiu-park",
+          href: "/destinations/guangzhou/yuexiu-park",
           time: "1.5h",
           cost: "Free",
           imageSeed: "guangzhou-yuexiu-park",
@@ -412,7 +412,7 @@ export const guangzhouConfig: CityHubConfig = {
       items: [
         {
           name: "Canton Tower",
-          href: "/destinations/guangzhou/what-to-do/canton-tower",
+          href: "/destinations/guangzhou/canton-tower",
           time: "2h",
           cost: "¥150–298",
           imageSeed: "guangzhou-canton-tower",
@@ -426,7 +426,7 @@ export const guangzhouConfig: CityHubConfig = {
       items: [
         {
           name: "Rice Noodle Rolls Breakfast",
-          href: "/destinations/guangzhou/where-to-eat/rice-noodle-rolls",
+          href: "/destinations/guangzhou/rice-noodle-rolls",
           time: "1h",
           cost: "¥8–15",
           imageSeed: "guangzhou-rice-noodle-rolls",
@@ -440,7 +440,7 @@ export const guangzhouConfig: CityHubConfig = {
       items: [
         {
           name: "Foshan Day Trip",
-          href: "/destinations/guangzhou/day-trips/foshan",
+          href: "/destinations/guangzhou/foshan",
           time: "4–6h",
           cost: "¥50–100",
           imageSeed: "guangzhou-foshan-day-trip",
@@ -454,7 +454,7 @@ export const guangzhouConfig: CityHubConfig = {
       items: [
         {
           name: "Roast Goose Dinner",
-          href: "/destinations/guangzhou/where-to-eat/roast-goose",
+          href: "/destinations/guangzhou/roast-goose",
           time: "1.5h",
           cost: "¥60–120",
           imageSeed: "guangzhou-roast-goose",
@@ -502,20 +502,20 @@ export const guangzhouConfig: CityHubConfig = {
     },
   ],
   allItems: [
-    { id: "canton-tower-attraction", markerId: "canton-tower", name: "Canton Tower", subtitle: "Canton Tower isn't just an observation deck — the skywalk lets you walk outside at 488 meters.", tag: "¥150–298", imageSeed: "guangzhou-canton-tower", href: "/destinations/guangzhou/what-to-do/canton-tower", type: "attraction", filters: ["premium", "modern", "landmark"] },
-    { id: "shamian-attraction", markerId: "shamian-island", name: "Shamian Island", subtitle: "Guangzhou's time capsule — 150-year-old European buildings under banyan trees.", tag: "Free", imageSeed: "guangzhou-shamian-island", href: "/destinations/guangzhou/what-to-do/shamian-island", type: "attraction", filters: ["free", "historic", "landmark"] },
-    { id: "chen-clan-attraction", markerId: "chen-clan-ancestral-hall", name: "Chen Clan Ancestral Hall", subtitle: "A Lingnan architecture masterpiece with wood and stone carvings so detailed they take your breath away.", tag: "¥10", imageSeed: "guangzhou-chen-clan-hall", href: "/destinations/guangzhou/what-to-do/chen-clan-ancestral-hall", type: "attraction", filters: ["budget", "historic", "landmark"] },
-    { id: "beijing-road-attraction", markerId: "beijing-road", name: "Beijing Road", subtitle: "A 2,000-year-old shopping street — with the ancient road visible under glass panels beneath your feet.", tag: "Free", imageSeed: "guangzhou-beijing-road", href: "/destinations/guangzhou/what-to-do/beijing-road", type: "attraction", filters: ["free", "historic", "landmark"] },
-    { id: "yuexiu-attraction", markerId: "yuexiu-park", name: "Yuexiu Park", subtitle: "Guangzhou's green lung — home to the Five Rams Statue and 600-year-old Zhenhai Tower.", tag: "Free", imageSeed: "guangzhou-yuexiu-park", href: "/destinations/guangzhou/what-to-do/yuexiu-park", type: "attraction", filters: ["free", "historic", "family"] },
-    { id: "sacred-heart-attraction", markerId: "sacred-heart-cathedral", name: "Sacred Heart Cathedral", subtitle: "Guangzhou's Notre-Dame — a Gothic cathedral built entirely from granite in 1863.", tag: "Free", imageSeed: "guangzhou-sacred-heart", href: "/destinations/guangzhou/what-to-do/sacred-heart-cathedral", type: "attraction", filters: ["free", "historic", "landmark"] },
-    { id: "dim-sum-food", markerId: "dim-sum", name: "Dim Sum", subtitle: "Guangzhou INVENTED dim sum. This is the real thing — not the version you get abroad.", tag: "Cantonese · ¥50–120", imageSeed: "guangzhou-dim-sum", href: "/destinations/guangzhou/where-to-eat/dim-sum", type: "food", filters: ["midrange", "local", "food"] },
-    { id: "wonton-food", markerId: "wonton-noodles", name: "Wonton Noodles", subtitle: "Thin egg noodles, shrimp wontons, clear broth — Cantonese comfort food perfected over centuries.", tag: "Local · ¥15–30", imageSeed: "guangzhou-wonton-noodles", href: "/destinations/guangzhou/where-to-eat/wonton-noodles", type: "food", filters: ["budget", "local", "food"] },
-    { id: "rice-noodle-food", markerId: "rice-noodle-rolls", name: "Rice Noodle Rolls", subtitle: "Cheung fun — silky rice noodle rolls with soy sauce, the Guangzhou breakfast staple.", tag: "Street · ¥8–15", imageSeed: "guangzhou-rice-noodle-rolls", href: "/destinations/guangzhou/where-to-eat/rice-noodle-rolls", type: "food", filters: ["budget", "local", "food"] },
-    { id: "roast-goose-food", markerId: "roast-goose", name: "Roast Goose", subtitle: "Cantonese roast goose — crispy skin, juicy meat, the dish that makes Guangzhou the food capital.", tag: "Cantonese · ¥60–120", imageSeed: "guangzhou-roast-goose", href: "/destinations/guangzhou/where-to-eat/roast-goose", type: "food", filters: ["midrange", "food"] },
-    { id: "shunde-food", markerId: "shunde-cuisine", name: "Shunde Cuisine", subtitle: "Shunde is a UNESCO City of Gastronomy — and it's a suburb of Guangzhou.", tag: "Premium · ¥100–200", imageSeed: "guangzhou-shunde", href: "/destinations/guangzhou/where-to-eat/shunde-cuisine", type: "food", filters: ["premium", "local", "food"] },
-    { id: "tianhe-stay", markerId: "tianhe-district", name: "Tianhe District", subtitle: "Modern CBD · Canton Tower · Shopping malls", imageSeed: "guangzhou-tianhe-district", href: "/destinations/guangzhou/where-to-stay/tianhe-district", type: "stay", filters: ["midrange", "modern", "stay"] },
-    { id: "yuexiu-stay", markerId: "yuexiu-district", name: "Yuexiu District", subtitle: "Old Guangzhou · Beijing Road · Shamian nearby", imageSeed: "guangzhou-yuexiu-district", href: "/destinations/guangzhou/where-to-stay/yuexiu-district", type: "stay", filters: ["budget", "local", "stay"] },
-    { id: "haizhu-stay", markerId: "haizhu-district", name: "Haizhu District", subtitle: "Across the Pearl River · Canton Tower · Arts district", imageSeed: "guangzhou-haizhu-district", href: "/destinations/guangzhou/where-to-stay/haizhu-district", type: "stay", filters: ["midrange", "stay"] },
+    { id: "canton-tower-attraction", markerId: "canton-tower", name: "Canton Tower", subtitle: "Canton Tower isn't just an observation deck — the skywalk lets you walk outside at 488 meters.", tag: "¥150–298", imageSeed: "guangzhou-canton-tower", href: "/destinations/guangzhou/canton-tower", type: "attraction", filters: ["premium", "modern", "landmark"] },
+    { id: "shamian-attraction", markerId: "shamian-island", name: "Shamian Island", subtitle: "Guangzhou's time capsule — 150-year-old European buildings under banyan trees.", tag: "Free", imageSeed: "guangzhou-shamian-island", href: "/destinations/guangzhou/shamian-island", type: "attraction", filters: ["free", "historic", "landmark"] },
+    { id: "chen-clan-attraction", markerId: "chen-clan-ancestral-hall", name: "Chen Clan Ancestral Hall", subtitle: "A Lingnan architecture masterpiece with wood and stone carvings so detailed they take your breath away.", tag: "¥10", imageSeed: "guangzhou-chen-clan-hall", href: "/destinations/guangzhou/chen-clan-ancestral-hall", type: "attraction", filters: ["budget", "historic", "landmark"] },
+    { id: "beijing-road-attraction", markerId: "beijing-road", name: "Beijing Road", subtitle: "A 2,000-year-old shopping street — with the ancient road visible under glass panels beneath your feet.", tag: "Free", imageSeed: "guangzhou-beijing-road", href: "/destinations/guangzhou/beijing-road", type: "attraction", filters: ["free", "historic", "landmark"] },
+    { id: "yuexiu-attraction", markerId: "yuexiu-park", name: "Yuexiu Park", subtitle: "Guangzhou's green lung — home to the Five Rams Statue and 600-year-old Zhenhai Tower.", tag: "Free", imageSeed: "guangzhou-yuexiu-park", href: "/destinations/guangzhou/yuexiu-park", type: "attraction", filters: ["free", "historic", "family"] },
+    { id: "sacred-heart-attraction", markerId: "sacred-heart-cathedral", name: "Sacred Heart Cathedral", subtitle: "Guangzhou's Notre-Dame — a Gothic cathedral built entirely from granite in 1863.", tag: "Free", imageSeed: "guangzhou-sacred-heart", href: "/destinations/guangzhou/sacred-heart-cathedral", type: "attraction", filters: ["free", "historic", "landmark"] },
+    { id: "dim-sum-food", markerId: "dim-sum", name: "Dim Sum", subtitle: "Guangzhou INVENTED dim sum. This is the real thing — not the version you get abroad.", tag: "Cantonese · ¥50–120", imageSeed: "guangzhou-dim-sum", href: "/destinations/guangzhou/dim-sum", type: "food", filters: ["midrange", "local", "food"] },
+    { id: "wonton-food", markerId: "wonton-noodles", name: "Wonton Noodles", subtitle: "Thin egg noodles, shrimp wontons, clear broth — Cantonese comfort food perfected over centuries.", tag: "Local · ¥15–30", imageSeed: "guangzhou-wonton-noodles", href: "/destinations/guangzhou/wonton-noodles", type: "food", filters: ["budget", "local", "food"] },
+    { id: "rice-noodle-food", markerId: "rice-noodle-rolls", name: "Rice Noodle Rolls", subtitle: "Cheung fun — silky rice noodle rolls with soy sauce, the Guangzhou breakfast staple.", tag: "Street · ¥8–15", imageSeed: "guangzhou-rice-noodle-rolls", href: "/destinations/guangzhou/rice-noodle-rolls", type: "food", filters: ["budget", "local", "food"] },
+    { id: "roast-goose-food", markerId: "roast-goose", name: "Roast Goose", subtitle: "Cantonese roast goose — crispy skin, juicy meat, the dish that makes Guangzhou the food capital.", tag: "Cantonese · ¥60–120", imageSeed: "guangzhou-roast-goose", href: "/destinations/guangzhou/roast-goose", type: "food", filters: ["midrange", "food"] },
+    { id: "shunde-food", markerId: "shunde-cuisine", name: "Shunde Cuisine", subtitle: "Shunde is a UNESCO City of Gastronomy — and it's a suburb of Guangzhou.", tag: "Premium · ¥100–200", imageSeed: "guangzhou-shunde", href: "/destinations/guangzhou/shunde-cuisine", type: "food", filters: ["premium", "local", "food"] },
+    { id: "tianhe-stay", markerId: "tianhe-district", name: "Tianhe District", subtitle: "Modern CBD · Canton Tower · Shopping malls", imageSeed: "guangzhou-tianhe-district", href: "/destinations/guangzhou/tianhe-district", type: "stay", filters: ["midrange", "modern", "stay"] },
+    { id: "yuexiu-stay", markerId: "yuexiu-district", name: "Yuexiu District", subtitle: "Old Guangzhou · Beijing Road · Shamian nearby", imageSeed: "guangzhou-yuexiu-district", href: "/destinations/guangzhou/yuexiu-district", type: "stay", filters: ["budget", "local", "stay"] },
+    { id: "haizhu-stay", markerId: "haizhu-district", name: "Haizhu District", subtitle: "Across the Pearl River · Canton Tower · Arts district", imageSeed: "guangzhou-haizhu-district", href: "/destinations/guangzhou/haizhu-district", type: "stay", filters: ["midrange", "stay"] },
     { id: "info-internet", name: "Internet", subtitle: "eSIM/Airalo works. VPN required for Google/Meta apps.", imageSeed: "", href: "/china-basics/how-to-get-internet", type: "info", icon: Wifi, filters: ["practical"] },
     { id: "info-payment", name: "Payment", subtitle: "Alipay & WeChat Pay accepted everywhere.", imageSeed: "", href: "/china-basics/what-apps-to-use/payment", type: "info", icon: CreditCard, filters: ["practical"] },
     { id: "info-transport", name: "Transport", subtitle: "Metro + DiDi. Line 3 is the busiest in China.", imageSeed: "", href: "/china-basics/how-to-get-around", type: "info", icon: TrainFront, filters: ["practical"] },
@@ -526,8 +526,8 @@ export const guangzhouConfig: CityHubConfig = {
     { id: "tip-line-3", name: "Line 3 Survival", subtitle: "Line 3 is the busiest metro line in China. Avoid at rush hour.", imageSeed: "", href: "/destinations/guangzhou/local-tips", type: "tip", icon: TrainFront, filters: ["practical"] },
     { id: "tip-cantonese", name: "Cantonese ≠ Mandarin", subtitle: "Locals speak Cantonese. A few phrases go a long way.", imageSeed: "", href: "/destinations/guangzhou/local-tips", type: "tip", icon: Lightbulb, filters: ["practical"] },
     { id: "tip-typhoon", name: "Typhoon Season", subtitle: "July–September. Flights cancel, streets flood.", imageSeed: "", href: "/destinations/guangzhou/local-tips", type: "tip", icon: CloudRain, filters: ["practical"] },
-    { id: "foshan-day-trip", name: "Foshan Day Trip", subtitle: "30 min by metro — wing chun kung fu, Lingnan architecture, and pottery.", tag: "Full day", imageSeed: "guangzhou-foshan-day-trip", href: "/destinations/guangzhou/day-trips/foshan", type: "attraction", filters: ["historic", "family", "landmark"] },
-    { id: "shenzhen-day-trip", name: "Shenzhen Day Trip", subtitle: "30 min by bullet train — from fishing village to tech capital.", tag: "Full day", imageSeed: "guangzhou-shenzhen-day-trip", href: "/destinations/guangzhou/day-trips/shenzhen", type: "attraction", filters: ["modern", "landmark"] },
+    { id: "foshan-day-trip", name: "Foshan Day Trip", subtitle: "30 min by metro — wing chun kung fu, Lingnan architecture, and pottery.", tag: "Full day", imageSeed: "guangzhou-foshan-day-trip", href: "/destinations/guangzhou/foshan", type: "attraction", filters: ["historic", "family", "landmark"] },
+    { id: "shenzhen-day-trip", name: "Shenzhen Day Trip", subtitle: "30 min by bullet train — from fishing village to tech capital.", tag: "Full day", imageSeed: "guangzhou-shenzhen-day-trip", href: "/destinations/guangzhou/shenzhen", type: "attraction", filters: ["modern", "landmark"] },
   ],
   footerTitle: "Ready to Explore Guangzhou?",
   footerSubtitle:

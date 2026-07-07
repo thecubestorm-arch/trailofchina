@@ -9,7 +9,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "beijing-forbidden-city",
     categories: {
       "things-to-do": {
-        href: "/destinations/beijing/what-to-do/forbidden-city",
+        href: "/destinations/beijing/forbidden-city",
         hook: "The world's largest palace complex — 600 years of imperial history in 980 buildings.",
         tag: "¥60",
       },
@@ -24,7 +24,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "beijing-great-wall",
     categories: {
       "things-to-do": {
-        href: "/destinations/beijing/what-to-do/great-wall",
+        href: "/destinations/beijing/great-wall",
         hook: "The best-preserved section near Beijing. Less crowded than Badaling, stunning mountain scenery.",
         tag: "¥40",
       },
@@ -39,7 +39,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "beijing-temple-of-heaven",
     categories: {
       "things-to-do": {
-        href: "/destinations/beijing/what-to-do/temple-of-heaven",
+        href: "/destinations/beijing/temple-of-heaven",
         hook: "Where emperors prayed for harvests. The circular Hall of Prayer is iconic.",
         tag: "¥15",
       },
@@ -54,7 +54,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "beijing-summer-palace",
     categories: {
       "things-to-do": {
-        href: "/destinations/beijing/what-to-do/summer-palace",
+        href: "/destinations/beijing/summer-palace",
         hook: "Imperial garden with Kunming Lake, Long Corridor, and hilltop temples.",
         tag: "¥30",
       },
@@ -69,7 +69,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "beijing-hutong",
     categories: {
       "things-to-do": {
-        href: "/destinations/beijing/what-to-do/hutong",
+        href: "/destinations/beijing/hutong",
         hook: "Beijing's ancient alleyway neighborhoods — courtyard homes, local life, hidden cafés.",
         tag: "Free",
       },
@@ -84,7 +84,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "beijing-lama-temple",
     categories: {
       "things-to-do": {
-        href: "/destinations/beijing/what-to-do/lama-temple",
+        href: "/destinations/beijing/lama-temple",
         hook: "Tibetan Buddhist temple with a 26m carved sandalwood Maitreya Buddha.",
         tag: "¥25",
       },
@@ -99,7 +99,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "beijing-798-art",
     categories: {
       "things-to-do": {
-        href: "/destinations/beijing/what-to-do/798-art-district",
+        href: "/destinations/beijing/798-art-district",
         hook: "Former factory turned contemporary art hub — galleries, cafés, street art.",
         tag: "Free",
       },
@@ -114,7 +114,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "beijing-peking-duck",
     categories: {
       "where-to-eat": {
-        href: "/destinations/beijing/where-to-eat/peking-duck",
+        href: "/destinations/beijing/peking-duck",
         hook: "Beijing's signature roast duck — crispy skin, tender meat, thin pancakes.",
         tag: "Premium · ¥150+",
       },
@@ -129,7 +129,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "beijing-jianbing",
     categories: {
       "where-to-eat": {
-        href: "/destinations/beijing/where-to-eat/jianbing",
+        href: "/destinations/beijing/jianbing",
         hook: "Savory breakfast crepe with egg, crispy crackers, and sauces.",
         tag: "Street Food · ¥8",
       },
@@ -144,7 +144,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "beijing-zhajiangmian",
     categories: {
       "where-to-eat": {
-        href: "/destinations/beijing/where-to-eat/zhajiangmian",
+        href: "/destinations/beijing/zhajiangmian",
         hook: "Noodles with fermented bean sauce — Beijing's everyday comfort dish.",
         tag: "Restaurant · ¥25",
       },
@@ -159,7 +159,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "beijing-lamb-skewers",
     categories: {
       "where-to-eat": {
-        href: "/destinations/beijing/where-to-eat/lamb-skewers",
+        href: "/destinations/beijing/lamb-skewers",
         hook: "Cumin-spiced yangrouchuan from street BBQ stalls — smoky and addictive.",
         tag: "Street Food · ¥15",
       },
@@ -174,7 +174,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "beijing-baodu",
     categories: {
       "where-to-eat": {
-        href: "/destinations/beijing/where-to-eat/baodu",
+        href: "/destinations/beijing/baodu",
         hook: "Traditional Beijing tripe snack — an acquired taste locals love.",
         tag: "Local · ¥20",
       },
@@ -189,7 +189,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "beijing-tanghulu",
     categories: {
       "where-to-eat": {
-        href: "/destinations/beijing/where-to-eat/tanghulu",
+        href: "/destinations/beijing/tanghulu",
         hook: "Candied hawthorn on sticks — sweet, tart, and photogenic.",
         tag: "Snack · ¥10",
       },
@@ -204,12 +204,12 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "beijing-dongcheng-hutong",
     categories: {
       "things-to-do": {
-        href: "/destinations/beijing/what-to-do/hutong",
+        href: "/destinations/beijing/hutong",
         hook: "Beijing's ancient alleyway neighborhoods.",
         tag: "Free",
       },
       "where-to-stay": {
-        href: "/destinations/beijing/where-to-stay/dongcheng-hutong",
+        href: "/destinations/beijing/dongcheng-hutong",
         hook: "Old Beijing · Courtyard stays · Walking distance to Forbidden City",
         tag: "¥¥",
       },
@@ -224,7 +224,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "beijing-wangfujing",
     categories: {
       "where-to-stay": {
-        href: "/destinations/beijing/where-to-stay/wangfujing",
+        href: "/destinations/beijing/wangfujing",
         hook: "Shopping · Central · Walking distance to major sights",
         tag: "¥¥",
       },
@@ -239,7 +239,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "beijing-sanlitun",
     categories: {
       "where-to-stay": {
-        href: "/destinations/beijing/where-to-stay/sanlitun",
+        href: "/destinations/beijing/sanlitun",
         hook: "Nightlife · Expat hub · Modern bars and international dining",
         tag: "¥¥¥",
       },
@@ -254,7 +254,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "beijing-haidian",
     categories: {
       "where-to-stay": {
-        href: "/destinations/beijing/where-to-stay/haidian",
+        href: "/destinations/beijing/haidian",
         hook: "University vibe · Tech district · Quieter and affordable",
         tag: "¥",
       },

@@ -9,7 +9,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "chengdu-pandas",
     categories: {
       "things-to-do": {
-        href: "/destinations/chengdu/what-to-do/giant-panda-base",
+        href: "/destinations/chengdu/giant-panda-base",
         hook: "See giant pandas up close. Book early-morning tickets and arrive at opening for the liveliest enclosures.",
         tag: "¥55",
       },
@@ -24,12 +24,12 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "chengdu-jinli",
     categories: {
       "things-to-do": {
-        href: "/destinations/chengdu/what-to-do/jinli",
+        href: "/destinations/chengdu/jinli",
         hook: "Traditional shopping street with snacks, lanterns, and easy evening atmosphere beside Wuhou Shrine.",
         tag: "Free",
       },
       "where-to-stay": {
-        href: "/destinations/chengdu/where-to-stay/jinli",
+        href: "/destinations/chengdu/jinli",
         hook: "Near temples, teahouses, and a slower old-town rhythm after dark.",
         tag: "¥¥",
       },
@@ -44,7 +44,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "chengdu-wuhou-shrine",
     categories: {
       "things-to-do": {
-        href: "/destinations/chengdu/what-to-do/wuhou-shrine",
+        href: "/destinations/chengdu/wuhou-shrine",
         hook: "Chengdu's key Three Kingdoms site, combining temple halls, cypress courtyards, and Shu Han history.",
         tag: "¥50",
       },
@@ -59,7 +59,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "chengdu-dufu-cottage",
     categories: {
       "things-to-do": {
-        href: "/destinations/chengdu/what-to-do/dufu-cottage",
+        href: "/destinations/chengdu/dufu-cottage",
         hook: "Famous poet Du Fu's former residence, now a leafy museum and garden retreat.",
         tag: "¥50",
       },
@@ -74,7 +74,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "chengdu-wenshu-monastery",
     categories: {
       "things-to-do": {
-        href: "/destinations/chengdu/what-to-do/wenshu-monastery",
+        href: "/destinations/chengdu/wenshu-monastery",
         hook: "Peaceful Buddhist temple with incense courtyards, vegetarian fare, and a calmer side of central Chengdu.",
         tag: "Free",
       },
@@ -89,12 +89,12 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "chengdu-wide-narrow-alleys",
     categories: {
       "things-to-do": {
-        href: "/destinations/chengdu/what-to-do/wide-narrow-alleys",
+        href: "/destinations/chengdu/wide-narrow-alleys",
         hook: "Qing-era lanes reworked into Chengdu's best-known old-quarter stroll with courtyards, cafés, and shops.",
         tag: "Free",
       },
       "where-to-stay": {
-        href: "/destinations/chengdu/where-to-stay/wide-narrow-alleys",
+        href: "/destinations/chengdu/wide-narrow-alleys",
         hook: "Atmospheric old-town stays with boutique courtyards and easy walks to central sights.",
         tag: "¥¥¥",
       },
@@ -109,7 +109,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "chengdu-hotpot",
     categories: {
       "where-to-eat": {
-        href: "/destinations/chengdu/where-to-eat/hotpot",
+        href: "/destinations/chengdu/hotpot",
         hook: "Fiery numbing-spicy broth and a mandatory Chengdu dinner ritual. Split pots help first-timers survive.",
         tag: "¥80-150",
       },
@@ -124,7 +124,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "chengdu-mapo-tofu",
     categories: {
       "where-to-eat": {
-        href: "/destinations/chengdu/where-to-eat/mapo-tofu",
+        href: "/destinations/chengdu/mapo-tofu",
         hook: "Silken tofu in chili oil and doubanjiang, one of Sichuan cuisine's benchmark dishes.",
         tag: "¥25-40",
       },
@@ -139,7 +139,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "chengdu-kung-pao-chicken",
     categories: {
       "where-to-eat": {
-        href: "/destinations/chengdu/where-to-eat/kung-pao-chicken",
+        href: "/destinations/chengdu/kung-pao-chicken",
         hook: "The Chengdu original: sweet-spicy chicken, roasted peanuts, and better balance than most overseas versions.",
         tag: "¥30-50",
       },
@@ -154,7 +154,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "chengdu-chunxi-road-stay",
     categories: {
       "where-to-stay": {
-        href: "/destinations/chengdu/where-to-stay/chunxi-road",
+        href: "/destinations/chengdu/chunxi-road",
         hook: "Shopping, central, and extremely practical for first-time visitors using metro lines 2 and 3.",
         tag: "¥¥¥",
       },
@@ -169,7 +169,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "chengdu-wide-narrow-alleys-stay",
     categories: {
       "where-to-stay": {
-        href: "/destinations/chengdu/where-to-stay/wide-narrow-alleys",
+        href: "/destinations/chengdu/wide-narrow-alleys",
         hook: "Atmospheric courtyard stays, design hotels, and one of the strongest old-Chengdu settings.",
         tag: "¥¥¥",
       },
@@ -184,7 +184,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "chengdu-jinli-stay",
     categories: {
       "where-to-stay": {
-        href: "/destinations/chengdu/where-to-stay/jinli",
+        href: "/destinations/chengdu/jinli",
         hook: "Near shrines, old lanes, and a relaxed historic-core atmosphere.",
         tag: "¥¥",
       },

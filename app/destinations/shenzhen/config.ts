@@ -68,7 +68,7 @@ export const shenzhenConfig: CityHubConfig = {
       defaultCategory: "things-to-do",
       categories: {
         "things-to-do": {
-          href: "/destinations/shenzhen/what-to-do/huaqiangbei",
+          href: "/destinations/shenzhen/huaqiangbei",
           hook: "If it has a circuit board, Huaqiangbei sells it — this 1 km stretch has every component ever made.",
           tag: "Free",
         },
@@ -83,7 +83,7 @@ export const shenzhenConfig: CityHubConfig = {
       defaultCategory: "things-to-do",
       categories: {
         "things-to-do": {
-          href: "/destinations/shenzhen/what-to-do/ping-an-finance-centre",
+          href: "/destinations/shenzhen/ping-an-finance-centre",
           hook: "599 m tall, China's 2nd tallest building — observation deck on the 116th floor.",
           tag: "¥200",
         },
@@ -98,7 +98,7 @@ export const shenzhenConfig: CityHubConfig = {
       defaultCategory: "things-to-do",
       categories: {
         "things-to-do": {
-          href: "/destinations/shenzhen/what-to-do/dafen-oil-painting-village",
+          href: "/destinations/shenzhen/dafen-oil-painting-village",
           hook: "Dafen produces more oil paintings than anywhere on Earth — 5 million a year.",
           tag: "Free",
         },
@@ -113,7 +113,7 @@ export const shenzhenConfig: CityHubConfig = {
       defaultCategory: "things-to-do",
       categories: {
         "things-to-do": {
-          href: "/destinations/shenzhen/what-to-do/oct-loft",
+          href: "/destinations/shenzhen/oct-loft",
           hook: "Shenzhen's art district — former factory turned creative hub with galleries and cafés.",
           tag: "Free",
         },
@@ -128,7 +128,7 @@ export const shenzhenConfig: CityHubConfig = {
       defaultCategory: "things-to-do",
       categories: {
         "things-to-do": {
-          href: "/destinations/shenzhen/what-to-do/lianhuashan-park",
+          href: "/destinations/shenzhen/lianhuashan-park",
           hook: "Climb to the bronze Deng Xiaoping statue for the best free skyline view in Shenzhen.",
           tag: "Free",
         },
@@ -143,7 +143,7 @@ export const shenzhenConfig: CityHubConfig = {
       defaultCategory: "things-to-do",
       categories: {
         "things-to-do": {
-          href: "/destinations/shenzhen/what-to-do/window-of-the-world",
+          href: "/destinations/shenzhen/window-of-the-world",
           hook: "Miniature world landmarks theme park — the Eiffel Tower at 1/3 scale, and 130 more.",
           tag: "¥220",
         },
@@ -160,7 +160,7 @@ export const shenzhenConfig: CityHubConfig = {
       defaultCategory: "where-to-eat",
       categories: {
         "where-to-eat": {
-          href: "/destinations/shenzhen/where-to-eat/dim-sum",
+          href: "/destinations/shenzhen/dim-sum",
           hook: "Shenzhen's Cantonese breakfast tradition — har gow, siu mai, and char siu bao.",
           tag: "Cantonese · ¥50–100",
         },
@@ -175,7 +175,7 @@ export const shenzhenConfig: CityHubConfig = {
       defaultCategory: "where-to-eat",
       categories: {
         "where-to-eat": {
-          href: "/destinations/shenzhen/where-to-eat/seafood-coco-park",
+          href: "/destinations/shenzhen/seafood-coco-park",
           hook: "Fresh seafood streets near Coco Park — pick your fish, they cook it.",
           tag: "Seafood · ¥100–200",
         },
@@ -190,7 +190,7 @@ export const shenzhenConfig: CityHubConfig = {
       defaultCategory: "where-to-eat",
       categories: {
         "where-to-eat": {
-          href: "/destinations/shenzhen/where-to-eat/hakka-cuisine",
+          href: "/destinations/shenzhen/hakka-cuisine",
           hook: "Shenzhen's original regional food — stuffed tofu, salt-baked chicken, and pork belly.",
           tag: "Local · ¥40–80",
         },
@@ -205,7 +205,7 @@ export const shenzhenConfig: CityHubConfig = {
       defaultCategory: "where-to-eat",
       categories: {
         "where-to-eat": {
-          href: "/destinations/shenzhen/where-to-eat/chongqing-hotpot",
+          href: "/destinations/shenzhen/chongqing-hotpot",
           hook: "The mashup city does spicy — authentic Chongqing hotpot without leaving Shenzhen.",
           tag: "Spicy · ¥80–150",
         },
@@ -220,7 +220,7 @@ export const shenzhenConfig: CityHubConfig = {
       defaultCategory: "where-to-eat",
       categories: {
         "where-to-eat": {
-          href: "/destinations/shenzhen/where-to-eat/street-food-dongmen",
+          href: "/destinations/shenzhen/street-food-dongmen",
           hook: "Old street night market — stinky tofu, skewers, and bubble tea at Luohu's busiest spot.",
           tag: "Street Food · ¥10–30",
         },
@@ -237,7 +237,7 @@ export const shenzhenConfig: CityHubConfig = {
       defaultCategory: "where-to-stay",
       categories: {
         "where-to-stay": {
-          href: "/destinations/shenzhen/where-to-stay/futian-district",
+          href: "/destinations/shenzhen/futian-district",
           hook: "Central business · Coco Park · Metro hub",
           tag: "¥¥",
         },
@@ -252,7 +252,7 @@ export const shenzhenConfig: CityHubConfig = {
       defaultCategory: "where-to-stay",
       categories: {
         "where-to-stay": {
-          href: "/destinations/shenzhen/where-to-stay/nanshan-district",
+          href: "/destinations/shenzhen/nanshan-district",
           hook: "Tech district · OCT Loft · Sea World",
           tag: "¥¥¥",
         },
@@ -267,7 +267,7 @@ export const shenzhenConfig: CityHubConfig = {
       defaultCategory: "where-to-stay",
       categories: {
         "where-to-stay": {
-          href: "/destinations/shenzhen/where-to-stay/luohu-district",
+          href: "/destinations/shenzhen/luohu-district",
           hook: "Hong Kong border · Budget options",
           tag: "¥",
         },
@@ -284,7 +284,7 @@ export const shenzhenConfig: CityHubConfig = {
       defaultCategory: "day-trips",
       categories: {
         "day-trips": {
-          href: "/destinations/shenzhen/day-trips/hong-kong",
+          href: "/destinations/shenzhen/hong-kong",
           hook: "You're 15 minutes from Hong Kong — walk across the border at Futian, take the MTR to Central.",
           tag: "Full day",
         },
@@ -299,7 +299,7 @@ export const shenzhenConfig: CityHubConfig = {
       defaultCategory: "day-trips",
       categories: {
         "day-trips": {
-          href: "/destinations/shenzhen/day-trips/guangzhou",
+          href: "/destinations/shenzhen/guangzhou",
           hook: "30 minutes by bullet train — 2,200 years of history and the world's best dim sum.",
           tag: "Full day",
         },
@@ -343,7 +343,7 @@ export const shenzhenConfig: CityHubConfig = {
       items: [
         {
           name: "Huaqiangbei Electronics Market",
-          href: "/destinations/shenzhen/what-to-do/huaqiangbei",
+          href: "/destinations/shenzhen/huaqiangbei",
           time: "2–3h",
           cost: "Free",
           imageSeed: "shenzhen-huaqiangbei",
@@ -357,7 +357,7 @@ export const shenzhenConfig: CityHubConfig = {
       items: [
         {
           name: "Ping An Finance Centre",
-          href: "/destinations/shenzhen/what-to-do/ping-an-finance-centre",
+          href: "/destinations/shenzhen/ping-an-finance-centre",
           time: "1.5h",
           cost: "¥200",
           imageSeed: "shenzhen-ping-an-finance",
@@ -371,7 +371,7 @@ export const shenzhenConfig: CityHubConfig = {
       items: [
         {
           name: "Coco Park Nightlife",
-          href: "/destinations/shenzhen/where-to-eat/seafood-coco-park",
+          href: "/destinations/shenzhen/seafood-coco-park",
           time: "2–3h",
           cost: "Varies",
           imageSeed: "shenzhen-seafood-coco-park",
@@ -385,7 +385,7 @@ export const shenzhenConfig: CityHubConfig = {
       items: [
         {
           name: "Dafen Oil Painting Village",
-          href: "/destinations/shenzhen/what-to-do/dafen-oil-painting-village",
+          href: "/destinations/shenzhen/dafen-oil-painting-village",
           time: "2–3h",
           cost: "Free",
           imageSeed: "shenzhen-dafen-village",
@@ -399,7 +399,7 @@ export const shenzhenConfig: CityHubConfig = {
       items: [
         {
           name: "OCT Loft",
-          href: "/destinations/shenzhen/what-to-do/oct-loft",
+          href: "/destinations/shenzhen/oct-loft",
           time: "2–3h",
           cost: "Free",
           imageSeed: "shenzhen-oct-loft",
@@ -413,7 +413,7 @@ export const shenzhenConfig: CityHubConfig = {
       items: [
         {
           name: "Dim Sum Dinner",
-          href: "/destinations/shenzhen/where-to-eat/dim-sum",
+          href: "/destinations/shenzhen/dim-sum",
           time: "1.5h",
           cost: "¥80–120",
           imageSeed: "shenzhen-dim-sum",
@@ -427,7 +427,7 @@ export const shenzhenConfig: CityHubConfig = {
       items: [
         {
           name: "Lianhuashan Park",
-          href: "/destinations/shenzhen/what-to-do/lianhuashan-park",
+          href: "/destinations/shenzhen/lianhuashan-park",
           time: "1–2h",
           cost: "Free",
           imageSeed: "shenzhen-lianhuashan-park",
@@ -441,7 +441,7 @@ export const shenzhenConfig: CityHubConfig = {
       items: [
         {
           name: "Hong Kong Day Trip",
-          href: "/destinations/shenzhen/day-trips/hong-kong",
+          href: "/destinations/shenzhen/hong-kong",
           time: "4–6h",
           cost: "Varies",
           imageSeed: "shenzhen-hong-kong-day-trip",
@@ -455,7 +455,7 @@ export const shenzhenConfig: CityHubConfig = {
       items: [
         {
           name: "Dongmen Night Market",
-          href: "/destinations/shenzhen/where-to-eat/street-food-dongmen",
+          href: "/destinations/shenzhen/street-food-dongmen",
           time: "2h",
           cost: "¥30–50",
           imageSeed: "shenzhen-dongmen-street-food",
@@ -503,20 +503,20 @@ export const shenzhenConfig: CityHubConfig = {
     },
   ],
   allItems: [
-    { id: "huaqiangbei-attraction", markerId: "huaqiangbei", name: "Huaqiangbei", subtitle: "If it has a circuit board, Huaqiangbei sells it — this 1 km stretch has every component ever made.", tag: "Free", imageSeed: "shenzhen-huaqiangbei", href: "/destinations/shenzhen/what-to-do/huaqiangbei", type: "attraction", filters: ["free", "modern", "landmark"] },
-    { id: "ping-an-attraction", markerId: "ping-an-finance-centre", name: "Ping An Finance Centre", subtitle: "599 m tall, China's 2nd tallest building — observation deck on the 116th floor.", tag: "¥200", imageSeed: "shenzhen-ping-an-finance", href: "/destinations/shenzhen/what-to-do/ping-an-finance-centre", type: "attraction", filters: ["premium", "modern", "landmark"] },
-    { id: "dafen-attraction", markerId: "dafen-oil-painting-village", name: "Dafen Oil Painting Village", subtitle: "Dafen produces more oil paintings than anywhere on Earth — 5 million a year.", tag: "Free", imageSeed: "shenzhen-dafen-village", href: "/destinations/shenzhen/what-to-do/dafen-oil-painting-village", type: "attraction", filters: ["free", "local", "landmark"] },
-    { id: "oct-attraction", markerId: "oct-loft", name: "OCT Loft", subtitle: "Shenzhen's art district — former factory turned creative hub with galleries and cafés.", tag: "Free", imageSeed: "shenzhen-oct-loft", href: "/destinations/shenzhen/what-to-do/oct-loft", type: "attraction", filters: ["free", "modern", "local"] },
-    { id: "lianhuashan-attraction", markerId: "lianhuashan-park", name: "Lianhuashan Park", subtitle: "Climb to the bronze Deng Xiaoping statue for the best free skyline view in Shenzhen.", tag: "Free", imageSeed: "shenzhen-lianhuashan-park", href: "/destinations/shenzhen/what-to-do/lianhuashan-park", type: "attraction", filters: ["free", "family", "landmark"] },
-    { id: "window-attraction", markerId: "window-of-the-world", name: "Window of the World", subtitle: "Miniature world landmarks theme park — the Eiffel Tower at 1/3 scale, and 130 more.", tag: "¥220", imageSeed: "shenzhen-window-of-the-world", href: "/destinations/shenzhen/what-to-do/window-of-the-world", type: "attraction", filters: ["premium", "family", "landmark"] },
-    { id: "dim-sum-food", markerId: "dim-sum", name: "Dim Sum", subtitle: "Shenzhen's Cantonese breakfast tradition — har gow, siu mai, and char siu bao.", tag: "Cantonese · ¥50–100", imageSeed: "shenzhen-dim-sum", href: "/destinations/shenzhen/where-to-eat/dim-sum", type: "food", filters: ["midrange", "local", "food"] },
-    { id: "seafood-food", markerId: "seafood-coco-park", name: "Seafood at Coco Park", subtitle: "Fresh seafood streets near Coco Park — pick your fish, they cook it.", tag: "Seafood · ¥100–200", imageSeed: "shenzhen-seafood-coco-park", href: "/destinations/shenzhen/where-to-eat/seafood-coco-park", type: "food", filters: ["midrange", "food"] },
-    { id: "hakka-food", markerId: "hakka-cuisine", name: "Hakka Cuisine", subtitle: "Shenzhen's original regional food — stuffed tofu, salt-baked chicken, and pork belly.", tag: "Local · ¥40–80", imageSeed: "shenzhen-hakka-cuisine", href: "/destinations/shenzhen/where-to-eat/hakka-cuisine", type: "food", filters: ["budget", "local", "food"] },
-    { id: "hotpot-food", markerId: "chongqing-hotpot-sz", name: "Chongqing Hotpot in Shenzhen", subtitle: "The mashup city does spicy — authentic Chongqing hotpot without leaving Shenzhen.", tag: "Spicy · ¥80–150", imageSeed: "shenzhen-hotpot", href: "/destinations/shenzhen/where-to-eat/chongqing-hotpot", type: "food", filters: ["midrange", "food"] },
-    { id: "dongmen-food", markerId: "street-food-dongmen", name: "Street Food at Dongmen", subtitle: "Old street night market — stinky tofu, skewers, and bubble tea.", tag: "Street Food · ¥10–30", imageSeed: "shenzhen-dongmen-street-food", href: "/destinations/shenzhen/where-to-eat/street-food-dongmen", type: "food", filters: ["budget", "local", "food"] },
-    { id: "futian-stay", markerId: "futian-district", name: "Futian District", subtitle: "Central business · Coco Park nightlife · Best metro connections", imageSeed: "shenzhen-futian-district", href: "/destinations/shenzhen/where-to-stay/futian-district", type: "stay", filters: ["midrange", "modern", "stay"] },
-    { id: "nanshan-stay", markerId: "nanshan-district", name: "Nanshan District", subtitle: "Tech district · OCT Loft · Sea World area", imageSeed: "shenzhen-nanshan-district", href: "/destinations/shenzhen/where-to-stay/nanshan-district", type: "stay", filters: ["premium", "modern", "stay"] },
-    { id: "luohu-stay", markerId: "luohu-district", name: "Luohu District", subtitle: "Hong Kong border crossing · Budget options · Old Shenzhen", imageSeed: "shenzhen-luohu-district", href: "/destinations/shenzhen/where-to-stay/luohu-district", type: "stay", filters: ["budget", "local", "stay"] },
+    { id: "huaqiangbei-attraction", markerId: "huaqiangbei", name: "Huaqiangbei", subtitle: "If it has a circuit board, Huaqiangbei sells it — this 1 km stretch has every component ever made.", tag: "Free", imageSeed: "shenzhen-huaqiangbei", href: "/destinations/shenzhen/huaqiangbei", type: "attraction", filters: ["free", "modern", "landmark"] },
+    { id: "ping-an-attraction", markerId: "ping-an-finance-centre", name: "Ping An Finance Centre", subtitle: "599 m tall, China's 2nd tallest building — observation deck on the 116th floor.", tag: "¥200", imageSeed: "shenzhen-ping-an-finance", href: "/destinations/shenzhen/ping-an-finance-centre", type: "attraction", filters: ["premium", "modern", "landmark"] },
+    { id: "dafen-attraction", markerId: "dafen-oil-painting-village", name: "Dafen Oil Painting Village", subtitle: "Dafen produces more oil paintings than anywhere on Earth — 5 million a year.", tag: "Free", imageSeed: "shenzhen-dafen-village", href: "/destinations/shenzhen/dafen-oil-painting-village", type: "attraction", filters: ["free", "local", "landmark"] },
+    { id: "oct-attraction", markerId: "oct-loft", name: "OCT Loft", subtitle: "Shenzhen's art district — former factory turned creative hub with galleries and cafés.", tag: "Free", imageSeed: "shenzhen-oct-loft", href: "/destinations/shenzhen/oct-loft", type: "attraction", filters: ["free", "modern", "local"] },
+    { id: "lianhuashan-attraction", markerId: "lianhuashan-park", name: "Lianhuashan Park", subtitle: "Climb to the bronze Deng Xiaoping statue for the best free skyline view in Shenzhen.", tag: "Free", imageSeed: "shenzhen-lianhuashan-park", href: "/destinations/shenzhen/lianhuashan-park", type: "attraction", filters: ["free", "family", "landmark"] },
+    { id: "window-attraction", markerId: "window-of-the-world", name: "Window of the World", subtitle: "Miniature world landmarks theme park — the Eiffel Tower at 1/3 scale, and 130 more.", tag: "¥220", imageSeed: "shenzhen-window-of-the-world", href: "/destinations/shenzhen/window-of-the-world", type: "attraction", filters: ["premium", "family", "landmark"] },
+    { id: "dim-sum-food", markerId: "dim-sum", name: "Dim Sum", subtitle: "Shenzhen's Cantonese breakfast tradition — har gow, siu mai, and char siu bao.", tag: "Cantonese · ¥50–100", imageSeed: "shenzhen-dim-sum", href: "/destinations/shenzhen/dim-sum", type: "food", filters: ["midrange", "local", "food"] },
+    { id: "seafood-food", markerId: "seafood-coco-park", name: "Seafood at Coco Park", subtitle: "Fresh seafood streets near Coco Park — pick your fish, they cook it.", tag: "Seafood · ¥100–200", imageSeed: "shenzhen-seafood-coco-park", href: "/destinations/shenzhen/seafood-coco-park", type: "food", filters: ["midrange", "food"] },
+    { id: "hakka-food", markerId: "hakka-cuisine", name: "Hakka Cuisine", subtitle: "Shenzhen's original regional food — stuffed tofu, salt-baked chicken, and pork belly.", tag: "Local · ¥40–80", imageSeed: "shenzhen-hakka-cuisine", href: "/destinations/shenzhen/hakka-cuisine", type: "food", filters: ["budget", "local", "food"] },
+    { id: "hotpot-food", markerId: "chongqing-hotpot-sz", name: "Chongqing Hotpot in Shenzhen", subtitle: "The mashup city does spicy — authentic Chongqing hotpot without leaving Shenzhen.", tag: "Spicy · ¥80–150", imageSeed: "shenzhen-hotpot", href: "/destinations/shenzhen/chongqing-hotpot", type: "food", filters: ["midrange", "food"] },
+    { id: "dongmen-food", markerId: "street-food-dongmen", name: "Street Food at Dongmen", subtitle: "Old street night market — stinky tofu, skewers, and bubble tea.", tag: "Street Food · ¥10–30", imageSeed: "shenzhen-dongmen-street-food", href: "/destinations/shenzhen/street-food-dongmen", type: "food", filters: ["budget", "local", "food"] },
+    { id: "futian-stay", markerId: "futian-district", name: "Futian District", subtitle: "Central business · Coco Park nightlife · Best metro connections", imageSeed: "shenzhen-futian-district", href: "/destinations/shenzhen/futian-district", type: "stay", filters: ["midrange", "modern", "stay"] },
+    { id: "nanshan-stay", markerId: "nanshan-district", name: "Nanshan District", subtitle: "Tech district · OCT Loft · Sea World area", imageSeed: "shenzhen-nanshan-district", href: "/destinations/shenzhen/nanshan-district", type: "stay", filters: ["premium", "modern", "stay"] },
+    { id: "luohu-stay", markerId: "luohu-district", name: "Luohu District", subtitle: "Hong Kong border crossing · Budget options · Old Shenzhen", imageSeed: "shenzhen-luohu-district", href: "/destinations/shenzhen/luohu-district", type: "stay", filters: ["budget", "local", "stay"] },
     { id: "info-internet", name: "Internet", subtitle: "eSIM/Airalo works great. Shenzhen has China's fastest 5G.", imageSeed: "", href: "/china-basics/how-to-get-internet", type: "info", icon: Wifi, filters: ["practical"] },
     { id: "info-payment", name: "Payment", subtitle: "Alipay & WeChat Pay accepted everywhere.", imageSeed: "", href: "/china-basics/what-apps-to-use/payment", type: "info", icon: CreditCard, filters: ["practical"] },
     { id: "info-transport", name: "Transport", subtitle: "Metro + DiDi. Fastest 5G in China.", imageSeed: "", href: "/china-basics/how-to-get-around", type: "info", icon: TrainFront, filters: ["practical"] },
@@ -527,8 +527,8 @@ export const shenzhenConfig: CityHubConfig = {
     { id: "tip-huaqiangbei", name: "Huaqiangbei Tips", subtitle: "Bargain hard. If it seems too cheap, it's probably fake.", imageSeed: "", href: "/destinations/shenzhen/local-tips", type: "tip", icon: Lightbulb, filters: ["practical"] },
     { id: "tip-typhoon", name: "Typhoon Season", subtitle: "July–September. Trains and flights can cancel with little notice.", imageSeed: "", href: "/destinations/shenzhen/local-tips", type: "tip", icon: CloudRain, filters: ["practical"] },
     { id: "tip-metro", name: "Metro vs DiDi", subtitle: "Metro is faster at rush hour. DiDi for late night and rain.", imageSeed: "", href: "/destinations/shenzhen/local-tips", type: "tip", icon: Car, filters: ["practical"] },
-    { id: "hk-day-trip", name: "Hong Kong Day Trip", subtitle: "15 min from Futian border — walk across, MTR to Central, Victoria Peak.", tag: "Full day", imageSeed: "shenzhen-hong-kong-day-trip", href: "/destinations/shenzhen/day-trips/hong-kong", type: "attraction", filters: ["modern", "family", "landmark"] },
-    { id: "gz-day-trip", name: "Guangzhou Day Trip", subtitle: "30 min by bullet train — 2,200 years of history and the world's best dim sum.", tag: "Full day", imageSeed: "shenzhen-guangzhou-day-trip", href: "/destinations/shenzhen/day-trips/guangzhou", type: "attraction", filters: ["historic", "food", "landmark"] },
+    { id: "hk-day-trip", name: "Hong Kong Day Trip", subtitle: "15 min from Futian border — walk across, MTR to Central, Victoria Peak.", tag: "Full day", imageSeed: "shenzhen-hong-kong-day-trip", href: "/destinations/shenzhen/hong-kong", type: "attraction", filters: ["modern", "family", "landmark"] },
+    { id: "gz-day-trip", name: "Guangzhou Day Trip", subtitle: "30 min by bullet train — 2,200 years of history and the world's best dim sum.", tag: "Full day", imageSeed: "shenzhen-guangzhou-day-trip", href: "/destinations/shenzhen/guangzhou", type: "attraction", filters: ["historic", "food", "landmark"] },
   ],
   footerTitle: "Ready to Explore Shenzhen?",
   footerSubtitle:

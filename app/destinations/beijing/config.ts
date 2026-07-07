@@ -71,7 +71,7 @@ export const beijingConfig: CityHubConfig = {
       defaultCategory: "things-to-do",
       categories: {
         "things-to-do": {
-          href: "/destinations/beijing/what-to-do/forbidden-city",
+          href: "/destinations/beijing/forbidden-city",
           hook: "The world's largest palace complex — 600 years of imperial history in 980 buildings.",
           tag: "¥60",
         },
@@ -86,7 +86,7 @@ export const beijingConfig: CityHubConfig = {
       defaultCategory: "things-to-do",
       categories: {
         "things-to-do": {
-          href: "/destinations/beijing/what-to-do/great-wall",
+          href: "/destinations/beijing/great-wall",
           hook: "The best-preserved section near Beijing. Less crowded than Badaling, stunning mountain scenery.",
           tag: "¥40",
         },
@@ -101,7 +101,7 @@ export const beijingConfig: CityHubConfig = {
       defaultCategory: "things-to-do",
       categories: {
         "things-to-do": {
-          href: "/destinations/beijing/what-to-do/temple-of-heaven",
+          href: "/destinations/beijing/temple-of-heaven",
           hook: "Where emperors prayed for harvests. The circular Hall of Prayer is iconic.",
           tag: "¥15",
         },
@@ -116,7 +116,7 @@ export const beijingConfig: CityHubConfig = {
       defaultCategory: "things-to-do",
       categories: {
         "things-to-do": {
-          href: "/destinations/beijing/what-to-do/summer-palace",
+          href: "/destinations/beijing/summer-palace",
           hook: "Imperial garden with Kunming Lake, Long Corridor, and hilltop temples.",
           tag: "¥30",
         },
@@ -131,7 +131,7 @@ export const beijingConfig: CityHubConfig = {
       defaultCategory: "things-to-do",
       categories: {
         "things-to-do": {
-          href: "/destinations/beijing/what-to-do/hutong",
+          href: "/destinations/beijing/hutong",
           hook: "Beijing's ancient alleyway neighborhoods — courtyard homes, local life, hidden cafés.",
           tag: "Free",
         },
@@ -146,7 +146,7 @@ export const beijingConfig: CityHubConfig = {
       defaultCategory: "things-to-do",
       categories: {
         "things-to-do": {
-          href: "/destinations/beijing/what-to-do/lama-temple",
+          href: "/destinations/beijing/lama-temple",
           hook: "Tibetan Buddhist temple with a 26m carved sandalwood Maitreya Buddha.",
           tag: "¥25",
         },
@@ -163,7 +163,7 @@ export const beijingConfig: CityHubConfig = {
       defaultCategory: "where-to-eat",
       categories: {
         "where-to-eat": {
-          href: "/destinations/beijing/where-to-eat/peking-duck",
+          href: "/destinations/beijing/peking-duck",
           hook: "Beijing's signature roast duck",
           tag: "Premium · ¥150+",
         },
@@ -178,7 +178,7 @@ export const beijingConfig: CityHubConfig = {
       defaultCategory: "where-to-eat",
       categories: {
         "where-to-eat": {
-          href: "/destinations/beijing/where-to-eat/jianbing",
+          href: "/destinations/beijing/jianbing",
           hook: "Savory breakfast crepe",
           tag: "Street Food · ¥8",
         },
@@ -193,7 +193,7 @@ export const beijingConfig: CityHubConfig = {
       defaultCategory: "where-to-eat",
       categories: {
         "where-to-eat": {
-          href: "/destinations/beijing/where-to-eat/zhajiangmian",
+          href: "/destinations/beijing/zhajiangmian",
           hook: "Noodles with fermented bean sauce",
           tag: "Restaurant · ¥25",
         },
@@ -208,7 +208,7 @@ export const beijingConfig: CityHubConfig = {
       defaultCategory: "where-to-eat",
       categories: {
         "where-to-eat": {
-          href: "/destinations/beijing/where-to-eat/lamb-skewers",
+          href: "/destinations/beijing/lamb-skewers",
           hook: "Cumin-spiced street BBQ",
           tag: "Street Food · ¥15",
         },
@@ -225,7 +225,7 @@ export const beijingConfig: CityHubConfig = {
       defaultCategory: "where-to-stay",
       categories: {
         "where-to-stay": {
-          href: "/destinations/beijing/where-to-stay/dongcheng-hutong",
+          href: "/destinations/beijing/dongcheng-hutong",
           hook: "Old Beijing · Courtyard stays",
           tag: "",
         },
@@ -240,7 +240,7 @@ export const beijingConfig: CityHubConfig = {
       defaultCategory: "where-to-stay",
       categories: {
         "where-to-stay": {
-          href: "/destinations/beijing/where-to-stay/wangfujing",
+          href: "/destinations/beijing/wangfujing",
           hook: "Shopping · Central",
           tag: "",
         },
@@ -255,7 +255,7 @@ export const beijingConfig: CityHubConfig = {
       defaultCategory: "where-to-stay",
       categories: {
         "where-to-stay": {
-          href: "/destinations/beijing/where-to-stay/sanlitun",
+          href: "/destinations/beijing/sanlitun",
           hook: "Nightlife · Expat hub",
           tag: "",
         },
@@ -270,7 +270,7 @@ export const beijingConfig: CityHubConfig = {
       defaultCategory: "where-to-stay",
       categories: {
         "where-to-stay": {
-          href: "/destinations/beijing/where-to-stay/haidian",
+          href: "/destinations/beijing/haidian",
           hook: "University · Tech",
           tag: "",
         },
@@ -287,7 +287,7 @@ export const beijingConfig: CityHubConfig = {
       defaultCategory: "day-trips",
       categories: {
         "day-trips": {
-          href: "/destinations/beijing/day-trips/mutianyu-great-wall",
+          href: "/destinations/beijing/mutianyu-great-wall",
           hook: "90 min from Beijing — the wall section with cable car, toboggan, and zero crowds.",
           tag: "Full day",
         },
@@ -302,7 +302,7 @@ export const beijingConfig: CityHubConfig = {
       defaultCategory: "day-trips",
       categories: {
         "day-trips": {
-          href: "/destinations/beijing/day-trips/chengde",
+          href: "/destinations/beijing/chengde",
           hook: "1h bullet train — Qing summer capital with imperial gardens and a Little Potala Palace.",
           tag: "Full day",
         },
@@ -317,7 +317,7 @@ export const beijingConfig: CityHubConfig = {
       defaultCategory: "day-trips",
       categories: {
         "day-trips": {
-          href: "/destinations/beijing/day-trips/ming-tombs",
+          href: "/destinations/beijing/ming-tombs",
           hook: "40 min from Beijing — 13 imperial tombs, underground palace, and the Sacred Way.",
           tag: "Half day",
         },
@@ -332,7 +332,7 @@ export const beijingConfig: CityHubConfig = {
       defaultCategory: "day-trips",
       categories: {
         "day-trips": {
-          href: "/destinations/beijing/day-trips/gubei-water-town",
+          href: "/destinations/beijing/gubei-water-town",
           hook: "2h from Beijing — canal village by day, the only Great Wall you can walk at night.",
           tag: "Full day",
         },
@@ -376,7 +376,7 @@ export const beijingConfig: CityHubConfig = {
       items: [
         {
           name: "Forbidden City",
-          href: "/destinations/beijing/what-to-do/forbidden-city",
+          href: "/destinations/beijing/forbidden-city",
           time: "2–3h",
           cost: "¥60",
           imageSeed: "beijing-forbidden-city",
@@ -390,7 +390,7 @@ export const beijingConfig: CityHubConfig = {
       items: [
         {
           name: "Temple of Heaven",
-          href: "/destinations/beijing/what-to-do/temple-of-heaven",
+          href: "/destinations/beijing/temple-of-heaven",
           time: "1.5h",
           cost: "¥15",
           imageSeed: "beijing-temple-of-heaven",
@@ -418,7 +418,7 @@ export const beijingConfig: CityHubConfig = {
       items: [
         {
           name: "Mutianyu Great Wall",
-          href: "/destinations/beijing/what-to-do/great-wall",
+          href: "/destinations/beijing/great-wall",
           time: "4–5h",
           cost: "¥40",
           imageSeed: "beijing-great-wall",
@@ -432,7 +432,7 @@ export const beijingConfig: CityHubConfig = {
       items: [
         {
           name: "Return + Rest",
-          href: "/destinations/beijing/what-to-do/great-wall",
+          href: "/destinations/beijing/great-wall",
           time: "2–3h",
           cost: "Free",
           imageSeed: "beijing-great-wall",
@@ -460,7 +460,7 @@ export const beijingConfig: CityHubConfig = {
       items: [
         {
           name: "Hutong Walking Tour",
-          href: "/destinations/beijing/what-to-do/hutong",
+          href: "/destinations/beijing/hutong",
           time: "2–3h",
           cost: "Free",
           imageSeed: "beijing-hutong",
@@ -474,7 +474,7 @@ export const beijingConfig: CityHubConfig = {
       items: [
         {
           name: "Summer Palace",
-          href: "/destinations/beijing/what-to-do/summer-palace",
+          href: "/destinations/beijing/summer-palace",
           time: "2–3h",
           cost: "¥30",
           imageSeed: "beijing-summer-palace",
@@ -488,7 +488,7 @@ export const beijingConfig: CityHubConfig = {
       items: [
         {
           name: "Peking Duck Dinner",
-          href: "/destinations/beijing/where-to-eat/peking-duck",
+          href: "/destinations/beijing/peking-duck",
           time: "2h",
           cost: "¥150+",
           imageSeed: "beijing-peking-duck",
@@ -536,20 +536,20 @@ export const beijingConfig: CityHubConfig = {
     },
   ],
   allItems: [
-    { id: "forbidden-city-attraction", markerId: "forbidden-city", name: "Forbidden City", subtitle: "The world's largest palace complex — 600 years of imperial history in 980 buildings.", tag: "¥60", imageSeed: "beijing-forbidden-city", href: "/destinations/beijing/what-to-do/forbidden-city", type: "attraction", filters: ["midrange", "historic", "family", "landmark"] },
-    { id: "great-wall-attraction", markerId: "great-wall", name: "Great Wall (Mutianyu)", subtitle: "The best-preserved section near Beijing. Less crowded than Badaling, stunning mountain scenery.", tag: "¥40", imageSeed: "beijing-great-wall", href: "/destinations/beijing/what-to-do/great-wall", type: "attraction", filters: ["budget", "historic", "family", "landmark"] },
-    { id: "temple-of-heaven-attraction", markerId: "temple-of-heaven", name: "Temple of Heaven", subtitle: "Where emperors prayed for harvests. The circular Hall of Prayer is iconic.", tag: "¥15", imageSeed: "beijing-temple-of-heaven", href: "/destinations/beijing/what-to-do/temple-of-heaven", type: "attraction", filters: ["budget", "historic", "landmark"] },
-    { id: "summer-palace-attraction", markerId: "summer-palace", name: "Summer Palace", subtitle: "Imperial garden with Kunming Lake, Long Corridor, and hilltop temples.", tag: "¥30", imageSeed: "beijing-summer-palace", href: "/destinations/beijing/what-to-do/summer-palace", type: "attraction", filters: ["budget", "historic", "family", "landmark"] },
-    { id: "hutong-attraction", markerId: "hutong", name: "Hutong Alleys", subtitle: "Beijing's ancient alleyway neighborhoods — courtyard homes, local life, hidden cafés.", tag: "Free", imageSeed: "beijing-hutong", href: "/destinations/beijing/what-to-do/hutong", type: "attraction", filters: ["free", "local", "historic"] },
-    { id: "lama-temple-attraction", markerId: "lama-temple", name: "Lama Temple", subtitle: "Tibetan Buddhist temple with a 26m carved sandalwood Maitreya Buddha.", tag: "¥25", imageSeed: "beijing-lama-temple", href: "/destinations/beijing/what-to-do/lama-temple", type: "attraction", filters: ["budget", "historic", "landmark"] },
-    { id: "peking-duck-food", markerId: "peking-duck", name: "Peking Duck", subtitle: "Beijing's signature roast duck", tag: "Premium · ¥150+", imageSeed: "beijing-peking-duck", href: "/destinations/beijing/where-to-eat/peking-duck", type: "food", filters: ["premium", "food"] },
-    { id: "jianbing-food", markerId: "jianbing", name: "Jianbing", subtitle: "Savory breakfast crepe", tag: "Street Food · ¥8", imageSeed: "beijing-jianbing", href: "/destinations/beijing/where-to-eat/jianbing", type: "food", filters: ["budget", "local", "food"] },
-    { id: "zhajiangmian-food", markerId: "zhajiangmian", name: "Zhajiangmian", subtitle: "Noodles with fermented bean sauce", tag: "Restaurant · ¥25", imageSeed: "beijing-zhajiangmian", href: "/destinations/beijing/where-to-eat/zhajiangmian", type: "food", filters: ["budget", "local", "food"] },
-    { id: "lamb-skewers-food", markerId: "lamb-skewers", name: "Lamb Skewers", subtitle: "Cumin-spiced street BBQ", tag: "Street Food · ¥15", imageSeed: "beijing-lamb-skewers", href: "/destinations/beijing/where-to-eat/lamb-skewers", type: "food", filters: ["budget", "local", "food"] },
-    { id: "dongcheng-hutong-stay", markerId: "dongcheng-hutong", name: "Dongcheng Hutong", subtitle: "Old Beijing · Courtyard stays · Near Forbidden City", imageSeed: "beijing-dongcheng-hutong", href: "/destinations/beijing/where-to-stay/dongcheng-hutong", type: "stay", filters: ["midrange", "local", "historic", "stay"] },
-    { id: "wangfujing-stay", markerId: "wangfujing", name: "Wangfujing", subtitle: "Shopping · Central · Walking distance to major sights", imageSeed: "beijing-wangfujing", href: "/destinations/beijing/where-to-stay/wangfujing", type: "stay", filters: ["midrange", "modern", "stay"] },
-    { id: "sanlitun-stay", markerId: "sanlitun", name: "Sanlitun", subtitle: "Nightlife · Expat hub · Modern bars and dining", imageSeed: "beijing-sanlitun", href: "/destinations/beijing/where-to-stay/sanlitun", type: "stay", filters: ["premium", "modern", "nightlife", "stay"] },
-    { id: "haidian-stay", markerId: "haidian", name: "Haidian", subtitle: "University · Tech · Quieter and affordable", imageSeed: "beijing-haidian", href: "/destinations/beijing/where-to-stay/haidian", type: "stay", filters: ["budget", "local", "stay"] },
+    { id: "forbidden-city-attraction", markerId: "forbidden-city", name: "Forbidden City", subtitle: "The world's largest palace complex — 600 years of imperial history in 980 buildings.", tag: "¥60", imageSeed: "beijing-forbidden-city", href: "/destinations/beijing/forbidden-city", type: "attraction", filters: ["midrange", "historic", "family", "landmark"] },
+    { id: "great-wall-attraction", markerId: "great-wall", name: "Great Wall (Mutianyu)", subtitle: "The best-preserved section near Beijing. Less crowded than Badaling, stunning mountain scenery.", tag: "¥40", imageSeed: "beijing-great-wall", href: "/destinations/beijing/great-wall", type: "attraction", filters: ["budget", "historic", "family", "landmark"] },
+    { id: "temple-of-heaven-attraction", markerId: "temple-of-heaven", name: "Temple of Heaven", subtitle: "Where emperors prayed for harvests. The circular Hall of Prayer is iconic.", tag: "¥15", imageSeed: "beijing-temple-of-heaven", href: "/destinations/beijing/temple-of-heaven", type: "attraction", filters: ["budget", "historic", "landmark"] },
+    { id: "summer-palace-attraction", markerId: "summer-palace", name: "Summer Palace", subtitle: "Imperial garden with Kunming Lake, Long Corridor, and hilltop temples.", tag: "¥30", imageSeed: "beijing-summer-palace", href: "/destinations/beijing/summer-palace", type: "attraction", filters: ["budget", "historic", "family", "landmark"] },
+    { id: "hutong-attraction", markerId: "hutong", name: "Hutong Alleys", subtitle: "Beijing's ancient alleyway neighborhoods — courtyard homes, local life, hidden cafés.", tag: "Free", imageSeed: "beijing-hutong", href: "/destinations/beijing/hutong", type: "attraction", filters: ["free", "local", "historic"] },
+    { id: "lama-temple-attraction", markerId: "lama-temple", name: "Lama Temple", subtitle: "Tibetan Buddhist temple with a 26m carved sandalwood Maitreya Buddha.", tag: "¥25", imageSeed: "beijing-lama-temple", href: "/destinations/beijing/lama-temple", type: "attraction", filters: ["budget", "historic", "landmark"] },
+    { id: "peking-duck-food", markerId: "peking-duck", name: "Peking Duck", subtitle: "Beijing's signature roast duck", tag: "Premium · ¥150+", imageSeed: "beijing-peking-duck", href: "/destinations/beijing/peking-duck", type: "food", filters: ["premium", "food"] },
+    { id: "jianbing-food", markerId: "jianbing", name: "Jianbing", subtitle: "Savory breakfast crepe", tag: "Street Food · ¥8", imageSeed: "beijing-jianbing", href: "/destinations/beijing/jianbing", type: "food", filters: ["budget", "local", "food"] },
+    { id: "zhajiangmian-food", markerId: "zhajiangmian", name: "Zhajiangmian", subtitle: "Noodles with fermented bean sauce", tag: "Restaurant · ¥25", imageSeed: "beijing-zhajiangmian", href: "/destinations/beijing/zhajiangmian", type: "food", filters: ["budget", "local", "food"] },
+    { id: "lamb-skewers-food", markerId: "lamb-skewers", name: "Lamb Skewers", subtitle: "Cumin-spiced street BBQ", tag: "Street Food · ¥15", imageSeed: "beijing-lamb-skewers", href: "/destinations/beijing/lamb-skewers", type: "food", filters: ["budget", "local", "food"] },
+    { id: "dongcheng-hutong-stay", markerId: "dongcheng-hutong", name: "Dongcheng Hutong", subtitle: "Old Beijing · Courtyard stays · Near Forbidden City", imageSeed: "beijing-dongcheng-hutong", href: "/destinations/beijing/dongcheng-hutong", type: "stay", filters: ["midrange", "local", "historic", "stay"] },
+    { id: "wangfujing-stay", markerId: "wangfujing", name: "Wangfujing", subtitle: "Shopping · Central · Walking distance to major sights", imageSeed: "beijing-wangfujing", href: "/destinations/beijing/wangfujing", type: "stay", filters: ["midrange", "modern", "stay"] },
+    { id: "sanlitun-stay", markerId: "sanlitun", name: "Sanlitun", subtitle: "Nightlife · Expat hub · Modern bars and dining", imageSeed: "beijing-sanlitun", href: "/destinations/beijing/sanlitun", type: "stay", filters: ["premium", "modern", "nightlife", "stay"] },
+    { id: "haidian-stay", markerId: "haidian", name: "Haidian", subtitle: "University · Tech · Quieter and affordable", imageSeed: "beijing-haidian", href: "/destinations/beijing/haidian", type: "stay", filters: ["budget", "local", "stay"] },
     { id: "info-internet", name: "Internet", subtitle: "VPNs required. Download before landing.", imageSeed: "", href: "/china-basics/how-to-get-internet", type: "info", icon: Wifi, filters: ["practical"] },
     { id: "info-payment", name: "Payment", subtitle: "Alipay & WeChat Pay everywhere.", imageSeed: "", href: "/china-basics/what-apps-to-use/payment", type: "info", icon: CreditCard, filters: ["practical"] },
     { id: "info-transport", name: "Transport", subtitle: "Metro + DiDi. Avoid rush hour.", imageSeed: "", href: "/china-basics/how-to-get-around", type: "info", icon: TrainFront, filters: ["practical"] },
@@ -560,10 +560,10 @@ export const beijingConfig: CityHubConfig = {
     { id: "tip-great-wall", name: "Great Wall Timing", subtitle: "Mutianyu is less crowded. Go early — buses fill up by 9 AM.", imageSeed: "", href: "/destinations/beijing/local-tips", type: "tip", icon: Sunrise, filters: ["practical"] },
     { id: "tip-sandstorm", name: "Sandstorm Season", subtitle: "Spring sandstorms (March–May) can turn the sky orange. Bring a mask.", imageSeed: "", href: "/destinations/beijing/local-tips", type: "tip", icon: CloudRain, filters: ["practical"] },
     { id: "tip-didi", name: "Taxi vs DiDi", subtitle: "Taxi drivers rarely speak English. DiDi with English UI is safer.", imageSeed: "", href: "/destinations/beijing/local-tips", type: "tip", icon: Car, filters: ["practical"] },
-    { id: "mutianyu-day-trip", name: "Mutianyu Great Wall (Day Trip)", subtitle: "90 min from Beijing — cable car, toboggan, zero crowds.", tag: "Full day", imageSeed: "mutianyu-great-wall-day-trip", href: "/destinations/beijing/day-trips/mutianyu-great-wall", type: "attraction", filters: ["historic", "family", "landmark"] },
-    { id: "chengde-day-trip", name: "Chengde Mountain Resort (Day Trip)", subtitle: "1h bullet train — Qing summer capital with imperial gardens.", tag: "Full day", imageSeed: "chengde-mountain-resort-day-trip", href: "/destinations/beijing/day-trips/chengde", type: "attraction", filters: ["historic", "landmark"] },
-    { id: "ming-tombs-day-trip", name: "Ming Tombs (Day Trip)", subtitle: "40 min from Beijing — underground palace and Sacred Way.", tag: "Half day", imageSeed: "ming-tombs-day-trip", href: "/destinations/beijing/day-trips/ming-tombs", type: "attraction", filters: ["historic", "landmark"] },
-    { id: "gubei-day-trip", name: "Gubei Water Town & Simatai (Day Trip)", subtitle: "2h from Beijing — canal village by day, night wall walk.", tag: "Full day", imageSeed: "gubei-water-town-day-trip", href: "/destinations/beijing/day-trips/gubei-water-town", type: "attraction", filters: ["historic", "family", "landmark"] },
+    { id: "mutianyu-day-trip", name: "Mutianyu Great Wall (Day Trip)", subtitle: "90 min from Beijing — cable car, toboggan, zero crowds.", tag: "Full day", imageSeed: "mutianyu-great-wall-day-trip", href: "/destinations/beijing/mutianyu-great-wall", type: "attraction", filters: ["historic", "family", "landmark"] },
+    { id: "chengde-day-trip", name: "Chengde Mountain Resort (Day Trip)", subtitle: "1h bullet train — Qing summer capital with imperial gardens.", tag: "Full day", imageSeed: "chengde-mountain-resort-day-trip", href: "/destinations/beijing/chengde", type: "attraction", filters: ["historic", "landmark"] },
+    { id: "ming-tombs-day-trip", name: "Ming Tombs (Day Trip)", subtitle: "40 min from Beijing — underground palace and Sacred Way.", tag: "Half day", imageSeed: "ming-tombs-day-trip", href: "/destinations/beijing/ming-tombs", type: "attraction", filters: ["historic", "landmark"] },
+    { id: "gubei-day-trip", name: "Gubei Water Town & Simatai (Day Trip)", subtitle: "2h from Beijing — canal village by day, night wall walk.", tag: "Full day", imageSeed: "gubei-water-town-day-trip", href: "/destinations/beijing/gubei-water-town", type: "attraction", filters: ["historic", "family", "landmark"] },
     { id: "beijing-how-many-days", name: "How Many Days in Beijing?", subtitle: "3-5 day guide: 3 for highlights, 4 comfortable, 5 with day trips.", imageSeed: "", href: "/destinations/beijing/how-many-days", type: "info", icon: Clock, filters: ["practical"] },
     { id: "beijing-common-mistakes", name: "Common Mistakes in Beijing", subtitle: "7 mistakes tourists make — Badaling, missing tickets, tourist food.", imageSeed: "", href: "/destinations/beijing/common-mistakes", type: "info", icon: Compass, filters: ["practical"] },
     { id: "beijing-for-first-timers", name: "Beijing for First-Timers", subtitle: "#1 recommended first city — English metro, iconic sights.", imageSeed: "", href: "/destinations/beijing/for-first-timers", type: "info", icon: Lightbulb, filters: ["practical"] },

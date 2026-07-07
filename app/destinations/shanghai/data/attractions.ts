@@ -10,12 +10,12 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "shanghai-bund",
     categories: {
       "things-to-do": {
-        href: "/destinations/shanghai/what-to-do/bund",
+        href: "/destinations/shanghai/bund",
         hook: "Shanghai's most iconic waterfront promenade with skyline views.",
         tag: "Free",
       },
       "where-to-stay": {
-        href: "/destinations/shanghai/where-to-stay/bund-area",
+        href: "/destinations/shanghai/bund-area",
         hook: "Iconic skyline · Historic architecture · Perfect for first-timers",
         tag: "¥¥",
       },
@@ -30,7 +30,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "shanghai-yugarden",
     categories: {
       "things-to-do": {
-        href: "/destinations/shanghai/what-to-do/yu-garden",
+        href: "/destinations/shanghai/yu-garden",
         hook: "A 400-year-old classical garden surrounded by a lively bazaar. The area is free; the walled garden interior costs ¥40.",
         tag: "Free",
       },
@@ -45,12 +45,12 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "shanghai-frenchconcession",
     categories: {
       "things-to-do": {
-        href: "/destinations/shanghai/what-to-do/french-concession",
+        href: "/destinations/shanghai/french-concession",
         hook: "Tree-lined avenues, Art Deco villas, and charming cafés.",
         tag: "Free",
       },
       "where-to-stay": {
-        href: "/destinations/shanghai/where-to-stay/french-concession",
+        href: "/destinations/shanghai/french-concession",
         hook: "Cafés & boutiques · Tree-lined streets · Most walkable",
         tag: "¥¥",
       },
@@ -65,7 +65,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "shanghai-tower",
     categories: {
       "things-to-do": {
-        href: "/destinations/shanghai/what-to-do/shanghai-tower",
+        href: "/destinations/shanghai/shanghai-tower",
         hook: "The world's second-tallest building with a jaw-dropping observation deck.",
         tag: "¥180",
       },
@@ -80,7 +80,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "shanghai-tianzifang",
     categories: {
       "things-to-do": {
-        href: "/destinations/shanghai/what-to-do/tianzifang",
+        href: "/destinations/shanghai/tianzifang",
         hook: "Winding alleyways packed with studios, galleries, and craft shops.",
         tag: "Free",
       },
@@ -95,7 +95,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "shanghai-jadebuddha",
     categories: {
       "things-to-do": {
-        href: "/destinations/shanghai/what-to-do/jade-buddha-temple",
+        href: "/destinations/shanghai/jade-buddha-temple",
         hook: "Serene Buddhist temple housing two stunning white jade Buddhas.",
         tag: "¥20",
       },
@@ -111,7 +111,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "xiaolongbao",
     categories: {
       "where-to-eat": {
-        href: "/destinations/shanghai/where-to-eat/xiaolongbao",
+        href: "/destinations/shanghai/xiaolongbao",
         hook: "Shanghai's iconic soup dumplings — a must-try.",
         tag: "¥30",
       },
@@ -126,7 +126,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "shengjianbao",
     categories: {
       "where-to-eat": {
-        href: "/destinations/shanghai/where-to-eat/shengjianbao",
+        href: "/destinations/shanghai/shengjianbao",
         hook: "Pan-fried buns with a crispy bottom — street food at its best.",
         tag: "¥15",
       },
@@ -141,7 +141,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "hairy-crab",
     categories: {
       "where-to-eat": {
-        href: "/destinations/shanghai/where-to-eat/hairy-crab",
+        href: "/destinations/shanghai/hairy-crab",
         hook: "Autumn delicacy from nearby Yangcheng Lake.",
         tag: "¥200+",
       },
@@ -156,7 +156,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "scallion-noodles",
     categories: {
       "where-to-eat": {
-        href: "/destinations/shanghai/where-to-eat/scallion-oil-noodles",
+        href: "/destinations/shanghai/scallion-oil-noodles",
         hook: "Simple, fragrant, and deeply comforting.",
         tag: "¥25–40",
       },
@@ -172,7 +172,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "shanghai-jingan",
     categories: {
       "where-to-stay": {
-        href: "/destinations/shanghai/where-to-stay/jingan",
+        href: "/destinations/shanghai/jingan",
         hook: "Local life · Metro hub · Central base with top transport connections.",
         tag: "¥",
       },
@@ -187,7 +187,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "shanghai-xintiandi",
     categories: {
       "where-to-stay": {
-        href: "/destinations/shanghai/where-to-stay/xintiandi",
+        href: "/destinations/shanghai/xintiandi",
         hook: "Modern luxury · Nightlife · Sleek dining in restored shikumen houses.",
         tag: "¥¥¥",
       },

@@ -35,24 +35,15 @@ const nextConfig = {
         // Skip sacred pages and payment pages
         if (sacredPages.has(url)) continue;
         if (url.includes('/pay/') || url.includes('/payment/') || url.includes('alipay') || url.includes('wechat-pay')) continue;
-        redirectMap.set(url, redirectTarget);
+
+        // Flatten destination redirects: anything under /destinations/[city]/[subhub] → /destinations/[city]
+        let dest = redirectTarget;
+        const destMatch = dest.match(/^\/destinations\/([^\/]+)\/(.+)$/);
+        if (destMatch) {
+          dest = `/destinations/${destMatch[1]}`;
+        }
+        redirectMap.set(url, dest);
       }
-    }
-
-    // Known duplicate/alias pairs (keep existing)
-    const aliasRedirects = [
-      { source: '/destinations/chengdu/what-to-do/jinli', destination: '/destinations/chengdu/what-to-do/jinli-ancient-street' },
-      { source: '/destinations/chengdu/what-to-do/kuanzhai-alley', destination: '/destinations/chengdu/what-to-do/wide-narrow-alleys' },
-      { source: '/destinations/chengdu/what-to-do/panda-base', destination: '/destinations/chengdu/what-to-do/giant-panda-base' },
-      { source: '/destinations/chengdu/where-to-eat/hotpot', destination: '/destinations/chengdu/where-to-eat/sichuan-hotpot' },
-      { source: '/destinations/chengdu/where-to-stay/jinli', destination: '/destinations/chengdu/where-to-stay/jinli-area' },
-      { source: '/destinations/chengdu/where-to-stay/wide-narrow-alley', destination: '/destinations/chengdu/where-to-stay/wide-narrow-alleys' },
-      { source: '/destinations/xian/what-to-do/bell-tower', destination: '/destinations/xian/what-to-do/bell-drum-tower' },
-      { source: '/destinations/xian/where-to-eat/yangroupaomo', destination: '/destinations/xian/where-to-eat/yangrou-paomo' },
-    ];
-
-    for (const alias of aliasRedirects) {
-      redirectMap.set(alias.source, alias.destination);
     }
 
     // Convert Map to Next.js redirect entries

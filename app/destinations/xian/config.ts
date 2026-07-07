@@ -78,7 +78,7 @@ export const xianConfig: CityHubConfig = {
       defaultCategory: "day-trips",
       categories: {
         "day-trips": {
-          href: "/destinations/xian/day-trips/huashan",
+          href: "/destinations/xian/huashan",
           hook: "30 min by high-speed train — China's most dangerous mountain, plank walks, and sunrise from 2,154m.",
           tag: "Full day",
         },
@@ -93,7 +93,7 @@ export const xianConfig: CityHubConfig = {
       defaultCategory: "day-trips",
       categories: {
         "day-trips": {
-          href: "/destinations/xian/day-trips/famen-temple",
+          href: "/destinations/xian/famen-temple",
           hook: "2h from Xi'an — a 1,113-year-old crypt, the Buddha's finger bone, and Tang dynasty gold.",
           tag: "Full day",
         },
@@ -108,7 +108,7 @@ export const xianConfig: CityHubConfig = {
       defaultCategory: "day-trips",
       categories: {
         "day-trips": {
-          href: "/destinations/xian/day-trips/huaqing-palace",
+          href: "/destinations/xian/huaqing-palace",
           hook: "45 min from Xi'an — Tang dynasty hot springs and the Xi'an Incident site. Combine with Terracotta Warriors.",
           tag: "Half day",
         },
@@ -152,7 +152,7 @@ export const xianConfig: CityHubConfig = {
       items: [
         {
           name: "Bell Tower",
-          href: "/destinations/xian/what-to-do/bell-tower",
+          href: "/destinations/xian/bell-tower",
           time: "45min",
           cost: "¥30",
           imageSeed: "xian-bell-tower",
@@ -160,7 +160,7 @@ export const xianConfig: CityHubConfig = {
         },
         {
           name: "Xi'an City Wall",
-          href: "/destinations/xian/what-to-do/city-wall",
+          href: "/destinations/xian/city-wall",
           time: "2h",
           cost: "¥54",
           imageSeed: "xian-city-wall",
@@ -174,7 +174,7 @@ export const xianConfig: CityHubConfig = {
       items: [
         {
           name: "Roujiamo Lunch",
-          href: "/destinations/xian/where-to-eat/roujiamo",
+          href: "/destinations/xian/roujiamo",
           time: "1h",
           cost: "¥15-30",
           imageSeed: "xian-roujiamo",
@@ -182,7 +182,7 @@ export const xianConfig: CityHubConfig = {
         },
         {
           name: "Muslim Quarter",
-          href: "/destinations/xian/what-to-do/muslim-quarter",
+          href: "/destinations/xian/muslim-quarter",
           time: "2-3h",
           cost: "Free",
           imageSeed: "xian-muslim-quarter",
@@ -196,7 +196,7 @@ export const xianConfig: CityHubConfig = {
       items: [
         {
           name: "Yangrou Paomo Dinner",
-          href: "/destinations/xian/where-to-eat/yangrou-paomo",
+          href: "/destinations/xian/yangrou-paomo",
           time: "1.5h",
           cost: "¥40+",
           imageSeed: "xian-yangrou-paomo",
@@ -210,7 +210,7 @@ export const xianConfig: CityHubConfig = {
       items: [
         {
           name: "Terracotta Warriors",
-          href: "/destinations/xian/what-to-do/terracotta-warriors",
+          href: "/destinations/xian/terracotta-warriors",
           time: "3-4h",
           cost: "¥120",
           imageSeed: "xian-terracotta-warriors",
@@ -224,7 +224,7 @@ export const xianConfig: CityHubConfig = {
       items: [
         {
           name: "Return to City + Rest",
-          href: "/destinations/xian/what-to-do/terracotta-warriors",
+          href: "/destinations/xian/terracotta-warriors",
           time: "2-3h",
           cost: "Varies",
           imageSeed: "xian-terracotta-warriors",
@@ -238,7 +238,7 @@ export const xianConfig: CityHubConfig = {
       items: [
         {
           name: "Big Wild Goose Pagoda",
-          href: "/destinations/xian/what-to-do/big-wild-goose-pagoda",
+          href: "/destinations/xian/big-wild-goose-pagoda",
           time: "1.5-2h",
           cost: "¥40",
           imageSeed: "xian-big-wild-goose-pagoda",
@@ -252,7 +252,7 @@ export const xianConfig: CityHubConfig = {
       items: [
         {
           name: "Shaanxi History Museum",
-          href: "/destinations/xian/what-to-do/shaanxi-history-museum",
+          href: "/destinations/xian/shaanxi-history-museum",
           time: "2-3h",
           cost: "Free",
           imageSeed: "xian-shaanxi-history-museum",
@@ -266,7 +266,7 @@ export const xianConfig: CityHubConfig = {
       items: [
         {
           name: "Biangbiang Noodles Lunch",
-          href: "/destinations/xian/where-to-eat/biangbiang-noodles",
+          href: "/destinations/xian/biangbiang-noodles",
           time: "1h",
           cost: "¥20-30",
           imageSeed: "xian-biangbiang-noodles",
@@ -274,7 +274,7 @@ export const xianConfig: CityHubConfig = {
         },
         {
           name: "Dayan Pagoda Area",
-          href: "/destinations/xian/where-to-stay/dayan-pagoda",
+          href: "/destinations/xian/dayan-pagoda",
           time: "2h",
           cost: "Free",
           imageSeed: "xian-dayan-pagoda-stay",
@@ -288,7 +288,7 @@ export const xianConfig: CityHubConfig = {
       items: [
         {
           name: "Bell Tower Area Night Walk",
-          href: "/destinations/xian/where-to-stay/bell-tower",
+          href: "/destinations/xian/bell-tower",
           time: "2h",
           cost: "Free",
           imageSeed: "xian-bell-tower-stay",
@@ -336,18 +336,18 @@ export const xianConfig: CityHubConfig = {
     },
   ],
   allItems: [
-    { id: "terracotta-warriors-attraction", markerId: "terracotta-warriors", name: "Terracotta Warriors", subtitle: "The iconic clay army of Emperor Qin Shi Huang. A major half-day trip from the city.", tag: "¥120", imageSeed: "xian-terracotta-warriors", href: "/destinations/xian/what-to-do/terracotta-warriors", type: "attraction", filters: ["premium", "historic", "family", "landmark"] },
-    { id: "city-wall-attraction", markerId: "city-wall", name: "Xi'an City Wall", subtitle: "Best-preserved ancient city wall with a full bikeable loop on top.", tag: "¥54", imageSeed: "xian-city-wall", href: "/destinations/xian/what-to-do/city-wall", type: "attraction", filters: ["midrange", "historic", "family", "landmark"] },
-    { id: "muslim-quarter-attraction", markerId: "muslim-quarter", name: "Muslim Quarter", subtitle: "Vibrant street food market and cultural hub in Xi'an's old city.", tag: "Free", imageSeed: "xian-muslim-quarter", href: "/destinations/xian/what-to-do/muslim-quarter", type: "attraction", filters: ["free", "local", "historic", "food"] },
-    { id: "big-wild-goose-pagoda-attraction", markerId: "big-wild-goose-pagoda", name: "Big Wild Goose Pagoda", subtitle: "Iconic Tang Dynasty pagoda with a popular night light show.", tag: "¥40", imageSeed: "xian-big-wild-goose-pagoda", href: "/destinations/xian/what-to-do/big-wild-goose-pagoda", type: "attraction", filters: ["budget", "historic", "family", "landmark"] },
-    { id: "shaanxi-history-museum-attraction", markerId: "shaanxi-history-museum", name: "Shaanxi History Museum", subtitle: "World-class museum packed with dynastic artifacts. Free, but booking ahead is essential.", tag: "Free", imageSeed: "xian-shaanxi-history-museum", href: "/destinations/xian/what-to-do/shaanxi-history-museum", type: "attraction", filters: ["free", "historic", "family", "landmark"] },
-    { id: "bell-tower-attraction", markerId: "bell-tower", name: "Bell Tower", subtitle: "Ming Dynasty tower at Xi'an's central crossroads.", tag: "¥30", imageSeed: "xian-bell-tower", href: "/destinations/xian/what-to-do/bell-tower", type: "attraction", filters: ["budget", "historic", "landmark"] },
-    { id: "roujiamo-food", markerId: "roujiamo", name: "Roujiamo", subtitle: "Chinese hamburger with chopped spiced meat", tag: "Street Food · ¥15", imageSeed: "xian-roujiamo", href: "/destinations/xian/where-to-eat/roujiamo", type: "food", filters: ["budget", "local", "food"] },
-    { id: "biangbiang-noodles-food", markerId: "biangbiang-noodles", name: "Biangbiang Noodles", subtitle: "Wide hand-pulled noodles with chili oil and garlic", tag: "Restaurant · ¥20-30", imageSeed: "xian-biangbiang-noodles", href: "/destinations/xian/where-to-eat/biangbiang-noodles", type: "food", filters: ["budget", "local", "food"] },
-    { id: "yangrou-paomo-food", markerId: "yangrou-paomo", name: "Yangrou Paomo", subtitle: "Mutton soup with hand-torn bread, rich and deeply traditional", tag: "Local Classic · ¥40+", imageSeed: "xian-yangrou-paomo", href: "/destinations/xian/where-to-eat/yangrou-paomo", type: "food", filters: ["midrange", "local", "food"] },
-    { id: "muslim-quarter-stay", markerId: "muslim-quarter", name: "Muslim Quarter Area", subtitle: "Food heaven · Walk to Bell Tower · Best for atmosphere after dark", imageSeed: "xian-muslim-quarter-stay", href: "/destinations/xian/where-to-stay/muslim-quarter", type: "stay", filters: ["midrange", "local", "nightlife", "stay"] },
-    { id: "bell-tower-area-stay", markerId: "bell-tower", name: "Bell Tower Area", subtitle: "Central · Practical · Best-connected base for first-timers", imageSeed: "xian-bell-tower-stay", href: "/destinations/xian/where-to-stay/bell-tower", type: "stay", filters: ["midrange", "modern", "stay"] },
-    { id: "dayan-pagoda-area-stay", markerId: "big-wild-goose-pagoda", name: "Dayan Pagoda Area", subtitle: "Modern · Quiet · Family-friendly with newer hotels", imageSeed: "xian-dayan-pagoda-stay", href: "/destinations/xian/where-to-stay/dayan-pagoda", type: "stay", filters: ["midrange", "family", "modern", "stay"] },
+    { id: "terracotta-warriors-attraction", markerId: "terracotta-warriors", name: "Terracotta Warriors", subtitle: "The iconic clay army of Emperor Qin Shi Huang. A major half-day trip from the city.", tag: "¥120", imageSeed: "xian-terracotta-warriors", href: "/destinations/xian/terracotta-warriors", type: "attraction", filters: ["premium", "historic", "family", "landmark"] },
+    { id: "city-wall-attraction", markerId: "city-wall", name: "Xi'an City Wall", subtitle: "Best-preserved ancient city wall with a full bikeable loop on top.", tag: "¥54", imageSeed: "xian-city-wall", href: "/destinations/xian/city-wall", type: "attraction", filters: ["midrange", "historic", "family", "landmark"] },
+    { id: "muslim-quarter-attraction", markerId: "muslim-quarter", name: "Muslim Quarter", subtitle: "Vibrant street food market and cultural hub in Xi'an's old city.", tag: "Free", imageSeed: "xian-muslim-quarter", href: "/destinations/xian/muslim-quarter", type: "attraction", filters: ["free", "local", "historic", "food"] },
+    { id: "big-wild-goose-pagoda-attraction", markerId: "big-wild-goose-pagoda", name: "Big Wild Goose Pagoda", subtitle: "Iconic Tang Dynasty pagoda with a popular night light show.", tag: "¥40", imageSeed: "xian-big-wild-goose-pagoda", href: "/destinations/xian/big-wild-goose-pagoda", type: "attraction", filters: ["budget", "historic", "family", "landmark"] },
+    { id: "shaanxi-history-museum-attraction", markerId: "shaanxi-history-museum", name: "Shaanxi History Museum", subtitle: "World-class museum packed with dynastic artifacts. Free, but booking ahead is essential.", tag: "Free", imageSeed: "xian-shaanxi-history-museum", href: "/destinations/xian/shaanxi-history-museum", type: "attraction", filters: ["free", "historic", "family", "landmark"] },
+    { id: "bell-tower-attraction", markerId: "bell-tower", name: "Bell Tower", subtitle: "Ming Dynasty tower at Xi'an's central crossroads.", tag: "¥30", imageSeed: "xian-bell-tower", href: "/destinations/xian/bell-tower", type: "attraction", filters: ["budget", "historic", "landmark"] },
+    { id: "roujiamo-food", markerId: "roujiamo", name: "Roujiamo", subtitle: "Chinese hamburger with chopped spiced meat", tag: "Street Food · ¥15", imageSeed: "xian-roujiamo", href: "/destinations/xian/roujiamo", type: "food", filters: ["budget", "local", "food"] },
+    { id: "biangbiang-noodles-food", markerId: "biangbiang-noodles", name: "Biangbiang Noodles", subtitle: "Wide hand-pulled noodles with chili oil and garlic", tag: "Restaurant · ¥20-30", imageSeed: "xian-biangbiang-noodles", href: "/destinations/xian/biangbiang-noodles", type: "food", filters: ["budget", "local", "food"] },
+    { id: "yangrou-paomo-food", markerId: "yangrou-paomo", name: "Yangrou Paomo", subtitle: "Mutton soup with hand-torn bread, rich and deeply traditional", tag: "Local Classic · ¥40+", imageSeed: "xian-yangrou-paomo", href: "/destinations/xian/yangrou-paomo", type: "food", filters: ["midrange", "local", "food"] },
+    { id: "muslim-quarter-stay", markerId: "muslim-quarter", name: "Muslim Quarter Area", subtitle: "Food heaven · Walk to Bell Tower · Best for atmosphere after dark", imageSeed: "xian-muslim-quarter-stay", href: "/destinations/xian/muslim-quarter", type: "stay", filters: ["midrange", "local", "nightlife", "stay"] },
+    { id: "bell-tower-area-stay", markerId: "bell-tower", name: "Bell Tower Area", subtitle: "Central · Practical · Best-connected base for first-timers", imageSeed: "xian-bell-tower-stay", href: "/destinations/xian/bell-tower", type: "stay", filters: ["midrange", "modern", "stay"] },
+    { id: "dayan-pagoda-area-stay", markerId: "big-wild-goose-pagoda", name: "Dayan Pagoda Area", subtitle: "Modern · Quiet · Family-friendly with newer hotels", imageSeed: "xian-dayan-pagoda-stay", href: "/destinations/xian/dayan-pagoda", type: "stay", filters: ["midrange", "family", "modern", "stay"] },
     { id: "info-internet", name: "Internet", subtitle: "VPNs required. Download before landing.", imageSeed: "", href: "/china-basics/how-to-get-internet", type: "info", icon: Wifi, filters: ["practical"] },
     { id: "info-payment", name: "Payment", subtitle: "Alipay and WeChat Pay dominate. Carry a little cash for smaller stalls.", imageSeed: "", href: "/china-basics/what-apps-to-use/payment", type: "info", icon: CreditCard, filters: ["practical"] },
     { id: "info-transport", name: "Transport", subtitle: "Metro is useful, but some sights still work better with DiDi or a day-trip transfer.", imageSeed: "", href: "/china-basics/how-to-get-around", type: "info", icon: TrainFront, filters: ["practical"] },
@@ -358,9 +358,9 @@ export const xianConfig: CityHubConfig = {
     { id: "tip-muslim-quarter-food", name: "Muslim Quarter Food", subtitle: "The side streets often have shorter lines and better-value snacks than the main drag.", imageSeed: "", href: "/destinations/xian/local-tips", type: "tip", icon: Lightbulb, filters: ["local", "food", "practical"] },
     { id: "tip-city-wall-cycling", name: "City Wall Cycling", subtitle: "Bring water and start before sunset for the best ride and light.", imageSeed: "", href: "/destinations/xian/local-tips", type: "tip", icon: Map, filters: ["historic", "practical"] },
     { id: "tip-museum-booking", name: "Book the Museum", subtitle: "Shaanxi History Museum is free, but timed entry slots can disappear early.", imageSeed: "", href: "/destinations/xian/local-tips", type: "tip", icon: Calendar, filters: ["practical"] },
-    { id: "huashan-day-trip", name: "Mount Hua (Day Trip)", subtitle: "30 min by train — plank walks, sunrise, and China's most dangerous mountain.", tag: "Full day", imageSeed: "huashan-plank-walk-day-trip", href: "/destinations/xian/day-trips/huashan", type: "attraction", filters: ["historic", "family", "landmark"] },
-    { id: "famen-temple-day-trip", name: "Famen Temple (Day Trip)", subtitle: "2h from Xi'an — a 1,113-year-old crypt and the Buddha's finger bone.", tag: "Full day", imageSeed: "famen-temple-day-trip", href: "/destinations/xian/day-trips/famen-temple", type: "attraction", filters: ["historic", "landmark"] },
-    { id: "huaqing-palace-day-trip", name: "Huaqing Palace (Day Trip)", subtitle: "Tang dynasty hot springs + Xi'an Incident site. Combine with Terracotta Warriors.", tag: "Half day", imageSeed: "huaqing-palace-day-trip", href: "/destinations/xian/day-trips/huaqing-palace", type: "attraction", filters: ["historic", "family", "landmark"] },
+    { id: "huashan-day-trip", name: "Mount Hua (Day Trip)", subtitle: "30 min by train — plank walks, sunrise, and China's most dangerous mountain.", tag: "Full day", imageSeed: "huashan-plank-walk-day-trip", href: "/destinations/xian/huashan", type: "attraction", filters: ["historic", "family", "landmark"] },
+    { id: "famen-temple-day-trip", name: "Famen Temple (Day Trip)", subtitle: "2h from Xi'an — a 1,113-year-old crypt and the Buddha's finger bone.", tag: "Full day", imageSeed: "famen-temple-day-trip", href: "/destinations/xian/famen-temple", type: "attraction", filters: ["historic", "landmark"] },
+    { id: "huaqing-palace-day-trip", name: "Huaqing Palace (Day Trip)", subtitle: "Tang dynasty hot springs + Xi'an Incident site. Combine with Terracotta Warriors.", tag: "Half day", imageSeed: "huaqing-palace-day-trip", href: "/destinations/xian/huaqing-palace", type: "attraction", filters: ["historic", "family", "landmark"] },
   ],
   footerTitle: "Ready to Explore Xi'an?",
   footerSubtitle:

@@ -11,7 +11,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     defaultCategory: "what-to-do",
     categories: {
       "what-to-do": {
-        href: "/destinations/chongqing/what-to-do/hongyadong",
+        href: "/destinations/chongqing/hongyadong",
         hook: "Iconic cliffside stilt-house complex. Stunning at night.",
         tag: "Free",
       },
@@ -26,7 +26,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     defaultCategory: "what-to-do",
     categories: {
       "what-to-do": {
-        href: "/destinations/chongqing/what-to-do/ciqikou",
+        href: "/destinations/chongqing/ciqikou",
         hook: "1,000-year-old porcelain town with snacks and crafts.",
         tag: "Free",
       },
@@ -41,7 +41,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     defaultCategory: "what-to-do",
     categories: {
       "what-to-do": {
-        href: "/destinations/chongqing/what-to-do/three-gorges-museum",
+        href: "/destinations/chongqing/three-gorges-museum",
         hook: "China's best museum outside Beijing. Free.",
         tag: "Free",
       },
@@ -56,7 +56,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     defaultCategory: "what-to-do",
     categories: {
       "what-to-do": {
-        href: "/destinations/chongqing/what-to-do/eling-park",
+        href: "/destinations/chongqing/eling-park",
         hook: "Best panoramic city views over the river confluence.",
         tag: "Free",
       },
@@ -71,7 +71,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     defaultCategory: "what-to-do",
     categories: {
       "what-to-do": {
-        href: "/destinations/chongqing/what-to-do/liberation-monument",
+        href: "/destinations/chongqing/liberation-monument",
         hook: "Shopping district center and Chongqing's Times Square.",
         tag: "Free",
       },
@@ -86,7 +86,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     defaultCategory: "what-to-do",
     categories: {
       "what-to-do": {
-        href: "/destinations/chongqing/what-to-do/liziba-monorail",
+        href: "/destinations/chongqing/liziba-monorail",
         hook: "Famous monorail-through-building photo spot.",
         tag: "Free",
       },
@@ -102,7 +102,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     defaultCategory: "where-to-eat",
     categories: {
       "where-to-eat": {
-        href: "/destinations/chongqing/where-to-eat/hotpot",
+        href: "/destinations/chongqing/hotpot",
         hook: "Numbing-spicy beef tallow broth. The real deal.",
         tag: "¥80-150",
       },
@@ -117,7 +117,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     defaultCategory: "where-to-eat",
     categories: {
       "where-to-eat": {
-        href: "/destinations/chongqing/where-to-eat/xiaomian",
+        href: "/destinations/chongqing/xiaomian",
         hook: "Street-level spicy noodles. ¥10-20 breakfast staple.",
         tag: "¥10-20",
       },
@@ -132,7 +132,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     defaultCategory: "where-to-eat",
     categories: {
       "where-to-eat": {
-        href: "/destinations/chongqing/where-to-eat/jianghu-cuisine",
+        href: "/destinations/chongqing/jianghu-cuisine",
         hook: "Bold, rustic Sichuan dishes. Local favorite.",
         tag: "¥50-80",
       },
@@ -148,7 +148,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     defaultCategory: "where-to-stay",
     categories: {
       "where-to-stay": {
-        href: "/destinations/chongqing/where-to-stay/jiefangbei",
+        href: "/destinations/chongqing/jiefangbei",
         hook: "Most central, walkable, well-connected.",
         tag: "",
       },
@@ -163,7 +163,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     defaultCategory: "where-to-stay",
     categories: {
       "where-to-stay": {
-        href: "/destinations/chongqing/where-to-stay/hongyadong-area",
+        href: "/destinations/chongqing/hongyadong-area",
         hook: "Riverside, atmospheric nights.",
         tag: "",
       },
@@ -178,7 +178,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     defaultCategory: "where-to-stay",
     categories: {
       "where-to-stay": {
-        href: "/destinations/chongqing/where-to-stay/nanbin-road",
+        href: "/destinations/chongqing/nanbin-road",
         hook: "South bank views, quieter.",
         tag: "",
       },
@@ -216,7 +216,7 @@ export const dayTripCards: UnifiedLocation[] = [
     defaultCategory: "day-trips",
     categories: {
       "day-trips": {
-        href: "/destinations/chongqing/day-trips/dazu-rock-carvings",
+        href: "/destinations/chongqing/dazu-rock-carvings",
         hook: "1.5h by train — 50,000 stone carvings, 31m Reclining Buddha, almost no foreign tourists.",
         tag: "Full day",
       },
@@ -231,7 +231,7 @@ export const dayTripCards: UnifiedLocation[] = [
     defaultCategory: "day-trips",
     categories: {
       "day-trips": {
-        href: "/destinations/chongqing/day-trips/wulong-karst",
+        href: "/destinations/chongqing/wulong-karst",
         hook: "2.5h by train — limestone bridges that swallowed a river. Where Transformers filmed.",
         tag: "Full day",
       },

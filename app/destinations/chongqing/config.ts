@@ -107,7 +107,7 @@ export const chongqingConfig: CityHubConfig = {
       items: [
         {
           name: "Three Gorges Museum",
-          href: "/destinations/chongqing/what-to-do/three-gorges-museum",
+          href: "/destinations/chongqing/three-gorges-museum",
           time: "2-3h",
           cost: "Free",
           imageSeed: "chongqing-three-gorges-museum",
@@ -121,7 +121,7 @@ export const chongqingConfig: CityHubConfig = {
       items: [
         {
           name: "Liziba Monorail Station",
-          href: "/destinations/chongqing/what-to-do/liziba-monorail",
+          href: "/destinations/chongqing/liziba-monorail",
           time: "30min",
           cost: "Free",
           imageSeed: "chongqing-liziba-monorail",
@@ -129,7 +129,7 @@ export const chongqingConfig: CityHubConfig = {
         },
         {
           name: "Eling Park Lookout",
-          href: "/destinations/chongqing/what-to-do/eling-park",
+          href: "/destinations/chongqing/eling-park",
           time: "1h",
           cost: "Free",
           imageSeed: "chongqing-eling-park",
@@ -143,7 +143,7 @@ export const chongqingConfig: CityHubConfig = {
       items: [
         {
           name: "Hongyadong",
-          href: "/destinations/chongqing/what-to-do/hongyadong",
+          href: "/destinations/chongqing/hongyadong",
           time: "2h",
           cost: "Free",
           imageSeed: "chongqing-hongyadong",
@@ -157,7 +157,7 @@ export const chongqingConfig: CityHubConfig = {
       items: [
         {
           name: "Ciqikou Old Town",
-          href: "/destinations/chongqing/what-to-do/ciqikou",
+          href: "/destinations/chongqing/ciqikou",
           time: "2-3h",
           cost: "Free",
           imageSeed: "chongqing-ciqikou",
@@ -171,7 +171,7 @@ export const chongqingConfig: CityHubConfig = {
       items: [
         {
           name: "Liberation Monument",
-          href: "/destinations/chongqing/what-to-do/liberation-monument",
+          href: "/destinations/chongqing/liberation-monument",
           time: "1-2h",
           cost: "Free",
           imageSeed: "chongqing-liberation-monument",
@@ -185,7 +185,7 @@ export const chongqingConfig: CityHubConfig = {
       items: [
         {
           name: "Chongqing Hotpot Dinner",
-          href: "/destinations/chongqing/where-to-eat/hotpot",
+          href: "/destinations/chongqing/hotpot",
           time: "2h",
           cost: "¥80-150",
           imageSeed: "chongqing-hotpot",
@@ -199,7 +199,7 @@ export const chongqingConfig: CityHubConfig = {
       items: [
         {
           name: "Xiaomian Breakfast",
-          href: "/destinations/chongqing/where-to-eat/xiaomian",
+          href: "/destinations/chongqing/xiaomian",
           time: "30min",
           cost: "¥10-20",
           imageSeed: "chongqing-noodles",
@@ -207,7 +207,7 @@ export const chongqingConfig: CityHubConfig = {
         },
         {
           name: "Yangtze River Cable Car",
-          href: "/destinations/chongqing/what-to-do/yangtze-cable-car",
+          href: "/destinations/chongqing/yangtze-cable-car",
           time: "1h",
           cost: "¥20",
           imageSeed: "chongqing-yangtze-cable-car",
@@ -269,18 +269,18 @@ export const chongqingConfig: CityHubConfig = {
     },
   ],
   allItems: [
-    { id: "hongyadong-attraction", markerId: "hongyadong", name: "Hongyadong", subtitle: "Iconic cliffside stilt-house complex. Stunning at night.", tag: "Free", imageSeed: "chongqing-hongyadong", href: "/destinations/chongqing/what-to-do/hongyadong", type: "attraction", filters: ["free", "landmark", "family"] },
-    { id: "ciqikou-attraction", markerId: "ciqikou", name: "Ciqikou Old Town", subtitle: "1,000-year-old porcelain town with snacks and crafts.", tag: "Free", imageSeed: "chongqing-ciqikou", href: "/destinations/chongqing/what-to-do/ciqikou", type: "attraction", filters: ["free", "historic", "food", "landmark"] },
-    { id: "three-gorges-museum-attraction", markerId: "three-gorges-museum", name: "Three Gorges Museum", subtitle: "China's best museum outside Beijing. Free.", tag: "Free", imageSeed: "chongqing-three-gorges-museum", href: "/destinations/chongqing/what-to-do/three-gorges-museum", type: "attraction", filters: ["free", "historic", "family"] },
-    { id: "eling-park-attraction", markerId: "eling-park", name: "Eling Park & Lookout", subtitle: "Best panoramic city views over the river confluence.", tag: "Free", imageSeed: "chongqing-eling-park", href: "/destinations/chongqing/what-to-do/eling-park", type: "attraction", filters: ["free", "landmark"] },
-    { id: "liberation-monument-attraction", markerId: "liberation-monument", name: "Liberation Monument", subtitle: "Shopping district center and Chongqing's Times Square.", tag: "Free", imageSeed: "chongqing-liberation-monument", href: "/destinations/chongqing/what-to-do/liberation-monument", type: "attraction", filters: ["free", "landmark"] },
-    { id: "liziba-attraction", markerId: "liziba-monorail", name: "Liziba Monorail Station", subtitle: "Famous monorail-through-building photo spot.", tag: "Free", imageSeed: "chongqing-liziba-monorail", href: "/destinations/chongqing/what-to-do/liziba-monorail", type: "attraction", filters: ["free", "landmark", "family"] },
-    { id: "hotpot-food", markerId: "chongqing-hotpot", name: "Chongqing Hotpot", subtitle: "Numbing-spicy beef tallow broth. The real deal.", tag: "Restaurant · ¥80-150", imageSeed: "chongqing-hotpot", href: "/destinations/chongqing/where-to-eat/hotpot", type: "food", filters: ["midrange", "local", "food"] },
-    { id: "xiaomian-food", markerId: "chongqing-noodles", name: "Chongqing Noodles (Xiaomian)", subtitle: "Street-level spicy noodles. ¥10-20 breakfast staple.", tag: "Street · ¥10-20", imageSeed: "chongqing-noodles", href: "/destinations/chongqing/where-to-eat/xiaomian", type: "food", filters: ["budget", "local", "food"] },
-    { id: "jianghu-food", markerId: "jianghu-cuisine", name: "Jianghu Cuisine", subtitle: "Bold, rustic Sichuan dishes. Local favorite.", tag: "Restaurant · ¥50-80", imageSeed: "chongqing-jianghu-cuisine", href: "/destinations/chongqing/where-to-eat/jianghu-cuisine", type: "food", filters: ["midrange", "local", "food"] },
-    { id: "jiefangbei-stay", markerId: "jiefangbei-stay", name: "Jiefangbei / Central", subtitle: "Most central, walkable, well-connected.", imageSeed: "chongqing-jiefangbei-stay", href: "/destinations/chongqing/where-to-stay/jiefangbei", type: "stay", filters: ["midrange", "modern", "stay"] },
-    { id: "hongyadong-stay", markerId: "hongyadong-stay", name: "Hongyadong Area", subtitle: "Riverside, atmospheric nights.", imageSeed: "chongqing-hongyadong-stay", href: "/destinations/chongqing/where-to-stay/hongyadong-area", type: "stay", filters: ["premium", "landmark", "stay"] },
-    { id: "nanbin-road-stay", markerId: "nanbin-road-stay", name: "Nanbin Road Area", subtitle: "South bank views, quieter.", imageSeed: "chongqing-nanbin-road-stay", href: "/destinations/chongqing/where-to-stay/nanbin-road", type: "stay", filters: ["midrange", "local", "stay"] },
+    { id: "hongyadong-attraction", markerId: "hongyadong", name: "Hongyadong", subtitle: "Iconic cliffside stilt-house complex. Stunning at night.", tag: "Free", imageSeed: "chongqing-hongyadong", href: "/destinations/chongqing/hongyadong", type: "attraction", filters: ["free", "landmark", "family"] },
+    { id: "ciqikou-attraction", markerId: "ciqikou", name: "Ciqikou Old Town", subtitle: "1,000-year-old porcelain town with snacks and crafts.", tag: "Free", imageSeed: "chongqing-ciqikou", href: "/destinations/chongqing/ciqikou", type: "attraction", filters: ["free", "historic", "food", "landmark"] },
+    { id: "three-gorges-museum-attraction", markerId: "three-gorges-museum", name: "Three Gorges Museum", subtitle: "China's best museum outside Beijing. Free.", tag: "Free", imageSeed: "chongqing-three-gorges-museum", href: "/destinations/chongqing/three-gorges-museum", type: "attraction", filters: ["free", "historic", "family"] },
+    { id: "eling-park-attraction", markerId: "eling-park", name: "Eling Park & Lookout", subtitle: "Best panoramic city views over the river confluence.", tag: "Free", imageSeed: "chongqing-eling-park", href: "/destinations/chongqing/eling-park", type: "attraction", filters: ["free", "landmark"] },
+    { id: "liberation-monument-attraction", markerId: "liberation-monument", name: "Liberation Monument", subtitle: "Shopping district center and Chongqing's Times Square.", tag: "Free", imageSeed: "chongqing-liberation-monument", href: "/destinations/chongqing/liberation-monument", type: "attraction", filters: ["free", "landmark"] },
+    { id: "liziba-attraction", markerId: "liziba-monorail", name: "Liziba Monorail Station", subtitle: "Famous monorail-through-building photo spot.", tag: "Free", imageSeed: "chongqing-liziba-monorail", href: "/destinations/chongqing/liziba-monorail", type: "attraction", filters: ["free", "landmark", "family"] },
+    { id: "hotpot-food", markerId: "chongqing-hotpot", name: "Chongqing Hotpot", subtitle: "Numbing-spicy beef tallow broth. The real deal.", tag: "Restaurant · ¥80-150", imageSeed: "chongqing-hotpot", href: "/destinations/chongqing/hotpot", type: "food", filters: ["midrange", "local", "food"] },
+    { id: "xiaomian-food", markerId: "chongqing-noodles", name: "Chongqing Noodles (Xiaomian)", subtitle: "Street-level spicy noodles. ¥10-20 breakfast staple.", tag: "Street · ¥10-20", imageSeed: "chongqing-noodles", href: "/destinations/chongqing/xiaomian", type: "food", filters: ["budget", "local", "food"] },
+    { id: "jianghu-food", markerId: "jianghu-cuisine", name: "Jianghu Cuisine", subtitle: "Bold, rustic Sichuan dishes. Local favorite.", tag: "Restaurant · ¥50-80", imageSeed: "chongqing-jianghu-cuisine", href: "/destinations/chongqing/jianghu-cuisine", type: "food", filters: ["midrange", "local", "food"] },
+    { id: "jiefangbei-stay", markerId: "jiefangbei-stay", name: "Jiefangbei / Central", subtitle: "Most central, walkable, well-connected.", imageSeed: "chongqing-jiefangbei-stay", href: "/destinations/chongqing/jiefangbei", type: "stay", filters: ["midrange", "modern", "stay"] },
+    { id: "hongyadong-stay", markerId: "hongyadong-stay", name: "Hongyadong Area", subtitle: "Riverside, atmospheric nights.", imageSeed: "chongqing-hongyadong-stay", href: "/destinations/chongqing/hongyadong-area", type: "stay", filters: ["premium", "landmark", "stay"] },
+    { id: "nanbin-road-stay", markerId: "nanbin-road-stay", name: "Nanbin Road Area", subtitle: "South bank views, quieter.", imageSeed: "chongqing-nanbin-road-stay", href: "/destinations/chongqing/nanbin-road", type: "stay", filters: ["midrange", "local", "stay"] },
     { id: "info-internet", name: "Internet", subtitle: "VPNs required. Download before landing.", imageSeed: "", href: "/china-basics/how-to-get-internet", type: "info", icon: Wifi, filters: ["practical"] },
     { id: "info-payment", name: "Payment", subtitle: "Alipay and WeChat Pay dominate. Cash still works at small shops.", imageSeed: "", href: "/china-basics/what-apps-to-use/payment", type: "info", icon: CreditCard, filters: ["practical"] },
     { id: "info-transport", name: "Transport", subtitle: "Monorail Lines 2 & 3 are elevated and go through buildings.", imageSeed: "", href: "/china-basics/how-to-get-around", type: "info", icon: TrainFront, filters: ["practical"] },
@@ -291,8 +291,8 @@ export const chongqingConfig: CityHubConfig = {
     { id: "tip-monorail", name: "Monorail Goes Through Buildings", subtitle: "Liziba Station is famous, but Lines 2 & 3 are all elevated monorail.", imageSeed: "", href: "/destinations/chongqing/local-tips", type: "tip", icon: TrainFront, filters: ["practical"] },
     { id: "tip-hotpot-rules", name: "Hotpot Is Different Here", subtitle: "Beef tallow, nine-grid, no mild side. Dip in sesame oil + garlic.", imageSeed: "", href: "/destinations/chongqing/local-tips", type: "tip", icon: Lightbulb, filters: ["food", "practical"] },
     { id: "tip-directions-3d", name: "Forget 'North'", subtitle: "Directions are 'go up' or 'toward the river.' GPS puts you on wrong levels.", imageSeed: "", href: "/destinations/chongqing/local-tips", type: "tip", icon: Map, filters: ["practical"] },
-    { id: "dazu-rock-carvings-day-trip", name: "Dazu Rock Carvings (Day Trip)", subtitle: "50,000 stone carvings spanning 600 years — China's most underrated UNESCO site.", tag: "Full day", imageSeed: "dazu-rock-carvings-day-trip", href: "/destinations/chongqing/day-trips/dazu-rock-carvings", type: "attraction", filters: ["historic", "family", "landmark"] },
-    { id: "wulong-karst-day-trip", name: "Wulong Karst — Three Natural Bridges (Day Trip)", subtitle: "Limestone bridges so vast they swallowed a river — where Transformers filmed.", tag: "Full day", imageSeed: "wulong-karst-day-trip", href: "/destinations/chongqing/day-trips/wulong-karst", type: "attraction", filters: ["landmark", "family", "landmark"] },
+    { id: "dazu-rock-carvings-day-trip", name: "Dazu Rock Carvings (Day Trip)", subtitle: "50,000 stone carvings spanning 600 years — China's most underrated UNESCO site.", tag: "Full day", imageSeed: "dazu-rock-carvings-day-trip", href: "/destinations/chongqing/dazu-rock-carvings", type: "attraction", filters: ["historic", "family", "landmark"] },
+    { id: "wulong-karst-day-trip", name: "Wulong Karst — Three Natural Bridges (Day Trip)", subtitle: "Limestone bridges so vast they swallowed a river — where Transformers filmed.", tag: "Full day", imageSeed: "wulong-karst-day-trip", href: "/destinations/chongqing/wulong-karst", type: "attraction", filters: ["landmark", "family", "landmark"] },
   ],
   footerTitle: "Ready to Explore Chongqing?",
   footerSubtitle:

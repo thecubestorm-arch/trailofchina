@@ -78,7 +78,7 @@ export const chengduConfig: CityHubConfig = {
       defaultCategory: "day-trips",
       categories: {
         "day-trips": {
-          href: "/destinations/chengdu/day-trips/leshan-giant-buddha",
+          href: "/destinations/chengdu/leshan-giant-buddha",
           hook: "1h by train — the world\u2019s largest stone Buddha, seen from the river cruise.",
           tag: "Full day",
         },
@@ -93,7 +93,7 @@ export const chengduConfig: CityHubConfig = {
       defaultCategory: "day-trips",
       categories: {
         "day-trips": {
-          href: "/destinations/chengdu/day-trips/mount-qingcheng",
+          href: "/destinations/chengdu/mount-qingcheng",
           hook: "30 min by train — misty forests, Taoist temples, and the birthplace of Taoism.",
           tag: "Half or full day",
         },
@@ -108,7 +108,7 @@ export const chengduConfig: CityHubConfig = {
       defaultCategory: "day-trips",
       categories: {
         "day-trips": {
-          href: "/destinations/chengdu/day-trips/dujiangyan-panda-valley",
+          href: "/destinations/chengdu/dujiangyan-panda-valley",
           hook: "30 min by train — pandas without the crowds, plus a 2,200-year-old UNESCO irrigation system.",
           tag: "Full day",
         },
@@ -152,7 +152,7 @@ export const chengduConfig: CityHubConfig = {
       items: [
         {
           name: "Giant Panda Breeding Research Base",
-          href: "/destinations/chengdu/what-to-do/giant-panda-base",
+          href: "/destinations/chengdu/giant-panda-base",
           time: "3-4h",
           cost: "¥55",
           imageSeed: "chengdu-pandas",
@@ -166,7 +166,7 @@ export const chengduConfig: CityHubConfig = {
       items: [
         {
           name: "Wenshu Monastery",
-          href: "/destinations/chengdu/what-to-do/wenshu-monastery",
+          href: "/destinations/chengdu/wenshu-monastery",
           time: "1.5h",
           cost: "Free",
           imageSeed: "chengdu-wenshu-monastery",
@@ -174,7 +174,7 @@ export const chengduConfig: CityHubConfig = {
         },
         {
           name: "Mapo Tofu Lunch",
-          href: "/destinations/chengdu/where-to-eat/mapo-tofu",
+          href: "/destinations/chengdu/mapo-tofu",
           time: "1h",
           cost: "¥25-40",
           imageSeed: "chengdu-mapo-tofu",
@@ -188,7 +188,7 @@ export const chengduConfig: CityHubConfig = {
       items: [
         {
           name: "Jinli Ancient Street",
-          href: "/destinations/chengdu/what-to-do/jinli",
+          href: "/destinations/chengdu/jinli",
           time: "2h",
           cost: "Free",
           imageSeed: "chengdu-jinli",
@@ -202,7 +202,7 @@ export const chengduConfig: CityHubConfig = {
       items: [
         {
           name: "Wuhou Shrine",
-          href: "/destinations/chengdu/what-to-do/wuhou-shrine",
+          href: "/destinations/chengdu/wuhou-shrine",
           time: "1.5-2h",
           cost: "¥50",
           imageSeed: "chengdu-wuhou-shrine",
@@ -210,7 +210,7 @@ export const chengduConfig: CityHubConfig = {
         },
         {
           name: "Du Fu Thatched Cottage",
-          href: "/destinations/chengdu/what-to-do/dufu-cottage",
+          href: "/destinations/chengdu/dufu-cottage",
           time: "1.5-2h",
           cost: "¥50",
           imageSeed: "chengdu-dufu-cottage",
@@ -224,7 +224,7 @@ export const chengduConfig: CityHubConfig = {
       items: [
         {
           name: "Wide and Narrow Alleys",
-          href: "/destinations/chengdu/what-to-do/wide-narrow-alleys",
+          href: "/destinations/chengdu/wide-narrow-alleys",
           time: "2h",
           cost: "Free",
           imageSeed: "chengdu-wide-narrow-alleys",
@@ -238,7 +238,7 @@ export const chengduConfig: CityHubConfig = {
       items: [
         {
           name: "Sichuan Hotpot Dinner",
-          href: "/destinations/chengdu/where-to-eat/hotpot",
+          href: "/destinations/chengdu/hotpot",
           time: "2h",
           cost: "¥80-150",
           imageSeed: "chengdu-hotpot",
@@ -252,7 +252,7 @@ export const chengduConfig: CityHubConfig = {
       items: [
         {
           name: "Chunxi Road / Taikoo Li",
-          href: "/destinations/chengdu/where-to-stay/chunxi-road",
+          href: "/destinations/chengdu/chunxi-road",
           time: "2h",
           cost: "Free",
           imageSeed: "chengdu-chunxi-road-stay",
@@ -266,7 +266,7 @@ export const chengduConfig: CityHubConfig = {
       items: [
         {
           name: "Kung Pao Chicken Lunch",
-          href: "/destinations/chengdu/where-to-eat/kung-pao-chicken",
+          href: "/destinations/chengdu/kung-pao-chicken",
           time: "1h",
           cost: "¥30-50",
           imageSeed: "chengdu-kung-pao-chicken",
@@ -288,7 +288,7 @@ export const chengduConfig: CityHubConfig = {
       items: [
         {
           name: "Final Old-Town Stay or Night Walk",
-          href: "/destinations/chengdu/where-to-stay/jinli",
+          href: "/destinations/chengdu/jinli",
           time: "2h",
           cost: "Free",
           imageSeed: "chengdu-jinli-stay",
@@ -336,18 +336,18 @@ export const chengduConfig: CityHubConfig = {
     },
   ],
   allItems: [
-    { id: "giant-panda-base-attraction", markerId: "giant-panda-base", name: "Giant Panda Base", subtitle: "See giant pandas up close. Book early-morning tickets and arrive at opening.", tag: "¥55", imageSeed: "chengdu-pandas", href: "/destinations/chengdu/what-to-do/giant-panda-base", type: "attraction", filters: ["premium", "family", "landmark"] },
-    { id: "jinli-attraction", markerId: "jinli-ancient-street", name: "Jinli Ancient Street", subtitle: "Traditional shopping street with snacks, lanterns, and classic evening atmosphere.", tag: "Free", imageSeed: "chengdu-jinli", href: "/destinations/chengdu/what-to-do/jinli", type: "attraction", filters: ["free", "historic", "food", "landmark"] },
-    { id: "wuhou-shrine-attraction", markerId: "wuhou-shrine", name: "Wuhou Shrine", subtitle: "Three Kingdoms-era temple complex and Chengdu's key Shu Han history stop.", tag: "¥50", imageSeed: "chengdu-wuhou-shrine", href: "/destinations/chengdu/what-to-do/wuhou-shrine", type: "attraction", filters: ["budget", "historic", "landmark"] },
-    { id: "dufu-cottage-attraction", markerId: "dufu-cottage", name: "Du Fu Thatched Cottage", subtitle: "Leafy former residence of China's most famous realist poet.", tag: "¥50", imageSeed: "chengdu-dufu-cottage", href: "/destinations/chengdu/what-to-do/dufu-cottage", type: "attraction", filters: ["budget", "historic", "family"] },
-    { id: "wenshu-attraction", markerId: "wenshu-monastery", name: "Wenshu Monastery", subtitle: "Peaceful Buddhist temple with tea, incense courtyards, and a slower side of central Chengdu.", tag: "Free", imageSeed: "chengdu-wenshu-monastery", href: "/destinations/chengdu/what-to-do/wenshu-monastery", type: "attraction", filters: ["free", "historic", "local"] },
-    { id: "wide-narrow-attraction", markerId: "wide-narrow-alleys", name: "Wide and Narrow Alleys", subtitle: "Qing Dynasty lanes with trendy shops, courtyards, and polished old-town vibes.", tag: "Free", imageSeed: "chengdu-wide-narrow-alleys", href: "/destinations/chengdu/what-to-do/wide-narrow-alleys", type: "attraction", filters: ["free", "historic", "local", "landmark"] },
-    { id: "hotpot-food", markerId: "sichuan-hotpot", name: "Sichuan Hotpot", subtitle: "Fiery numbing-spicy broth and Chengdu's essential social dinner.", tag: "Restaurant · ¥80-150", imageSeed: "chengdu-hotpot", href: "/destinations/chengdu/where-to-eat/hotpot", type: "food", filters: ["midrange", "local", "food"] },
-    { id: "mapo-tofu-food", markerId: "mapo-tofu", name: "Mapo Tofu", subtitle: "Silken tofu in chili oil and doubanjiang, one of Sichuan cuisine's benchmark dishes.", tag: "Restaurant · ¥25-40", imageSeed: "chengdu-mapo-tofu", href: "/destinations/chengdu/where-to-eat/mapo-tofu", type: "food", filters: ["budget", "local", "food"] },
-    { id: "kung-pao-food", markerId: "kung-pao-chicken", name: "Kung Pao Chicken", subtitle: "Sweet-spicy peanut chicken done the Chengdu way.", tag: "Restaurant · ¥30-50", imageSeed: "chengdu-kung-pao-chicken", href: "/destinations/chengdu/where-to-eat/kung-pao-chicken", type: "food", filters: ["budget", "local", "food"] },
-    { id: "chunxi-stay", markerId: "chunxi-road", name: "Chunxi Road / Central", subtitle: "Shopping, central, well-connected, and the easiest base for first-timers.", imageSeed: "chengdu-chunxi-road-stay", href: "/destinations/chengdu/where-to-stay/chunxi-road", type: "stay", filters: ["midrange", "modern", "stay"] },
-    { id: "kuanzhai-stay", markerId: "wide-narrow-alleys", name: "Wide and Narrow Alleys Area", subtitle: "Atmospheric old-town stays with courtyard hotels and easy walks to central sights.", imageSeed: "chengdu-wide-narrow-alleys-stay", href: "/destinations/chengdu/where-to-stay/wide-narrow-alleys", type: "stay", filters: ["premium", "historic", "stay"] },
-    { id: "jinli-stay-item", markerId: "jinli-ancient-street", name: "Jinli / Wuhou Area", subtitle: "Near temples, old streets, and a more relaxed culture-first Chengdu rhythm.", imageSeed: "chengdu-jinli-stay", href: "/destinations/chengdu/where-to-stay/jinli", type: "stay", filters: ["midrange", "historic", "stay"] },
+    { id: "giant-panda-base-attraction", markerId: "giant-panda-base", name: "Giant Panda Base", subtitle: "See giant pandas up close. Book early-morning tickets and arrive at opening.", tag: "¥55", imageSeed: "chengdu-pandas", href: "/destinations/chengdu/giant-panda-base", type: "attraction", filters: ["premium", "family", "landmark"] },
+    { id: "jinli-attraction", markerId: "jinli-ancient-street", name: "Jinli Ancient Street", subtitle: "Traditional shopping street with snacks, lanterns, and classic evening atmosphere.", tag: "Free", imageSeed: "chengdu-jinli", href: "/destinations/chengdu/jinli", type: "attraction", filters: ["free", "historic", "food", "landmark"] },
+    { id: "wuhou-shrine-attraction", markerId: "wuhou-shrine", name: "Wuhou Shrine", subtitle: "Three Kingdoms-era temple complex and Chengdu's key Shu Han history stop.", tag: "¥50", imageSeed: "chengdu-wuhou-shrine", href: "/destinations/chengdu/wuhou-shrine", type: "attraction", filters: ["budget", "historic", "landmark"] },
+    { id: "dufu-cottage-attraction", markerId: "dufu-cottage", name: "Du Fu Thatched Cottage", subtitle: "Leafy former residence of China's most famous realist poet.", tag: "¥50", imageSeed: "chengdu-dufu-cottage", href: "/destinations/chengdu/dufu-cottage", type: "attraction", filters: ["budget", "historic", "family"] },
+    { id: "wenshu-attraction", markerId: "wenshu-monastery", name: "Wenshu Monastery", subtitle: "Peaceful Buddhist temple with tea, incense courtyards, and a slower side of central Chengdu.", tag: "Free", imageSeed: "chengdu-wenshu-monastery", href: "/destinations/chengdu/wenshu-monastery", type: "attraction", filters: ["free", "historic", "local"] },
+    { id: "wide-narrow-attraction", markerId: "wide-narrow-alleys", name: "Wide and Narrow Alleys", subtitle: "Qing Dynasty lanes with trendy shops, courtyards, and polished old-town vibes.", tag: "Free", imageSeed: "chengdu-wide-narrow-alleys", href: "/destinations/chengdu/wide-narrow-alleys", type: "attraction", filters: ["free", "historic", "local", "landmark"] },
+    { id: "hotpot-food", markerId: "sichuan-hotpot", name: "Sichuan Hotpot", subtitle: "Fiery numbing-spicy broth and Chengdu's essential social dinner.", tag: "Restaurant · ¥80-150", imageSeed: "chengdu-hotpot", href: "/destinations/chengdu/hotpot", type: "food", filters: ["midrange", "local", "food"] },
+    { id: "mapo-tofu-food", markerId: "mapo-tofu", name: "Mapo Tofu", subtitle: "Silken tofu in chili oil and doubanjiang, one of Sichuan cuisine's benchmark dishes.", tag: "Restaurant · ¥25-40", imageSeed: "chengdu-mapo-tofu", href: "/destinations/chengdu/mapo-tofu", type: "food", filters: ["budget", "local", "food"] },
+    { id: "kung-pao-food", markerId: "kung-pao-chicken", name: "Kung Pao Chicken", subtitle: "Sweet-spicy peanut chicken done the Chengdu way.", tag: "Restaurant · ¥30-50", imageSeed: "chengdu-kung-pao-chicken", href: "/destinations/chengdu/kung-pao-chicken", type: "food", filters: ["budget", "local", "food"] },
+    { id: "chunxi-stay", markerId: "chunxi-road", name: "Chunxi Road / Central", subtitle: "Shopping, central, well-connected, and the easiest base for first-timers.", imageSeed: "chengdu-chunxi-road-stay", href: "/destinations/chengdu/chunxi-road", type: "stay", filters: ["midrange", "modern", "stay"] },
+    { id: "kuanzhai-stay", markerId: "wide-narrow-alleys", name: "Wide and Narrow Alleys Area", subtitle: "Atmospheric old-town stays with courtyard hotels and easy walks to central sights.", imageSeed: "chengdu-wide-narrow-alleys-stay", href: "/destinations/chengdu/wide-narrow-alleys", type: "stay", filters: ["premium", "historic", "stay"] },
+    { id: "jinli-stay-item", markerId: "jinli-ancient-street", name: "Jinli / Wuhou Area", subtitle: "Near temples, old streets, and a more relaxed culture-first Chengdu rhythm.", imageSeed: "chengdu-jinli-stay", href: "/destinations/chengdu/jinli", type: "stay", filters: ["midrange", "historic", "stay"] },
     { id: "info-internet", name: "Internet", subtitle: "VPNs required. Download before landing.", imageSeed: "", href: "/china-basics/how-to-get-internet", type: "info", icon: Wifi, filters: ["practical"] },
     { id: "info-payment", name: "Payment", subtitle: "Alipay and WeChat Pay dominate. Small cash still helps at niche stalls.", imageSeed: "", href: "/china-basics/what-apps-to-use/payment", type: "info", icon: CreditCard, filters: ["practical"] },
     { id: "info-transport", name: "Transport", subtitle: "Metro covers a lot, but panda mornings and airport runs often work better with DiDi.", imageSeed: "", href: "/china-basics/how-to-get-around", type: "info", icon: TrainFront, filters: ["practical"] },
@@ -358,9 +358,9 @@ export const chengduConfig: CityHubConfig = {
     { id: "tip-pace-yourself", name: "Slow the Pace", subtitle: "Chengdu works best with fewer hard-ticket sights and more time for tea, parks, and long meals.", imageSeed: "", href: "/destinations/chengdu/local-tips", type: "tip", icon: Lightbulb, filters: ["local", "practical"] },
     { id: "tip-jinli-vs-kuanzhai", name: "Jinli vs Kuanzhai", subtitle: "Use Jinli for lantern-lit atmosphere and snacks, then Kuanzhai for architecture and cafés.", imageSeed: "", href: "/destinations/chengdu/local-tips", type: "tip", icon: Map, filters: ["historic", "food", "practical"] },
     { id: "tip-opera-booking", name: "Book Opera Early", subtitle: "Weekend and holiday performances sell out faster than many first-timers expect.", imageSeed: "", href: "/destinations/chengdu/local-tips", type: "tip", icon: Calendar, filters: ["practical"] },
-    { id: "leshan-giant-buddha-day-trip", name: "Leshan Giant Buddha (Day Trip)", subtitle: "1h by train — the world\u2019s largest stone Buddha, seen from the river cruise.", tag: "Full day", imageSeed: "leshan-giant-buddha-day-trip", href: "/destinations/chengdu/day-trips/leshan-giant-buddha", type: "attraction", filters: ["historic", "family", "landmark"] },
-    { id: "mount-qingcheng-day-trip", name: "Mount Qingcheng (Day Trip)", subtitle: "30 min by train — misty forests, Taoist temples, and the birthplace of Taoism.", tag: "Half or full day", imageSeed: "mount-qingcheng-day-trip", href: "/destinations/chengdu/day-trips/mount-qingcheng", type: "attraction", filters: ["budget", "historic", "landmark"] },
-    { id: "dujiangyan-panda-valley-day-trip", name: "Dujiangyan Panda Valley (Day Trip)", subtitle: "30 min by train — pandas without the crowds, plus a UNESCO irrigation system.", tag: "Full day", imageSeed: "dujiangyan-panda-valley-day-trip", href: "/destinations/chengdu/day-trips/dujiangyan-panda-valley", type: "attraction", filters: ["family", "landmark"] },
+    { id: "leshan-giant-buddha-day-trip", name: "Leshan Giant Buddha (Day Trip)", subtitle: "1h by train — the world\u2019s largest stone Buddha, seen from the river cruise.", tag: "Full day", imageSeed: "leshan-giant-buddha-day-trip", href: "/destinations/chengdu/leshan-giant-buddha", type: "attraction", filters: ["historic", "family", "landmark"] },
+    { id: "mount-qingcheng-day-trip", name: "Mount Qingcheng (Day Trip)", subtitle: "30 min by train — misty forests, Taoist temples, and the birthplace of Taoism.", tag: "Half or full day", imageSeed: "mount-qingcheng-day-trip", href: "/destinations/chengdu/mount-qingcheng", type: "attraction", filters: ["budget", "historic", "landmark"] },
+    { id: "dujiangyan-panda-valley-day-trip", name: "Dujiangyan Panda Valley (Day Trip)", subtitle: "30 min by train — pandas without the crowds, plus a UNESCO irrigation system.", tag: "Full day", imageSeed: "dujiangyan-panda-valley-day-trip", href: "/destinations/chengdu/dujiangyan-panda-valley", type: "attraction", filters: ["family", "landmark"] },
   ],
   footerTitle: "Ready to Explore Chengdu?",
   footerSubtitle:

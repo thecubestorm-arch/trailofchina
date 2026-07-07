@@ -9,7 +9,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "xian-terracotta-warriors",
     categories: {
       "things-to-do": {
-        href: "/destinations/xian/what-to-do/terracotta-warriors",
+        href: "/destinations/xian/terracotta-warriors",
         hook: "The iconic clay army of Emperor Qin Shi Huang. A major half-day trip about 40km from the city center.",
         tag: "¥120",
       },
@@ -24,7 +24,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "xian-city-wall",
     categories: {
       "things-to-do": {
-        href: "/destinations/xian/what-to-do/city-wall",
+        href: "/destinations/xian/city-wall",
         hook: "China's best-preserved ancient city wall with a full bikeable loop on top.",
         tag: "¥54",
       },
@@ -39,12 +39,12 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "xian-muslim-quarter",
     categories: {
       "things-to-do": {
-        href: "/destinations/xian/what-to-do/muslim-quarter",
+        href: "/destinations/xian/muslim-quarter",
         hook: "Vibrant street food market and cultural hub in Xi'an's old city.",
         tag: "Free",
       },
       "where-to-stay": {
-        href: "/destinations/xian/where-to-stay/muslim-quarter",
+        href: "/destinations/xian/muslim-quarter",
         hook: "Food heaven · Walk to Bell Tower · Best for atmosphere after dark",
         tag: "¥¥",
       },
@@ -59,12 +59,12 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "xian-big-wild-goose-pagoda",
     categories: {
       "things-to-do": {
-        href: "/destinations/xian/what-to-do/big-wild-goose-pagoda",
+        href: "/destinations/xian/big-wild-goose-pagoda",
         hook: "Iconic Tang Dynasty pagoda with broad plaza views and a popular night light show.",
         tag: "¥40",
       },
       "where-to-stay": {
-        href: "/destinations/xian/where-to-stay/dayan-pagoda",
+        href: "/destinations/xian/dayan-pagoda",
         hook: "Modern · Quiet · Family-friendly with broad avenues and newer hotels",
         tag: "¥¥",
       },
@@ -79,7 +79,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "xian-shaanxi-history-museum",
     categories: {
       "things-to-do": {
-        href: "/destinations/xian/what-to-do/shaanxi-history-museum",
+        href: "/destinations/xian/shaanxi-history-museum",
         hook: "World-class collection spanning Zhou bronzes to Tang treasures. Free, but booking ahead is essential.",
         tag: "Free",
       },
@@ -94,12 +94,12 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "xian-bell-tower",
     categories: {
       "things-to-do": {
-        href: "/destinations/xian/what-to-do/bell-tower",
+        href: "/destinations/xian/bell-tower",
         hook: "Ming Dynasty landmark at Xi'an's historic center, surrounded by major shopping and transit links.",
         tag: "¥30",
       },
       "where-to-stay": {
-        href: "/destinations/xian/where-to-stay/bell-tower",
+        href: "/destinations/xian/bell-tower",
         hook: "Central · Practical · Best-connected base for first-time visitors",
         tag: "¥¥",
       },
@@ -114,7 +114,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "xian-roujiamo",
     categories: {
       "where-to-eat": {
-        href: "/destinations/xian/where-to-eat/roujiamo",
+        href: "/destinations/xian/roujiamo",
         hook: "Xi'an's famous Chinese hamburger: chopped, spiced meat tucked into a crisp flatbread.",
         tag: "¥15",
       },
@@ -129,7 +129,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "xian-biangbiang-noodles",
     categories: {
       "where-to-eat": {
-        href: "/destinations/xian/where-to-eat/biangbiang-noodles",
+        href: "/destinations/xian/biangbiang-noodles",
         hook: "Wide hand-pulled noodles with chili oil, garlic, and that classic Shaanxi chew.",
         tag: "¥20-30",
       },
@@ -144,7 +144,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "xian-yangrou-paomo",
     categories: {
       "where-to-eat": {
-        href: "/destinations/xian/where-to-eat/yangrou-paomo",
+        href: "/destinations/xian/yangrou-paomo",
         hook: "Mutton soup with hand-torn bread, one of Xi'an's most traditional and filling meals.",
         tag: "¥40+",
       },
@@ -159,7 +159,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "xian-muslim-quarter-stay",
     categories: {
       "where-to-stay": {
-        href: "/destinations/xian/where-to-stay/muslim-quarter",
+        href: "/destinations/xian/muslim-quarter",
         hook: "Food heaven · Walk to Bell Tower · Best for late-night snacks and atmosphere",
         tag: "¥¥",
       },
@@ -174,7 +174,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "xian-bell-tower-stay",
     categories: {
       "where-to-stay": {
-        href: "/destinations/xian/where-to-stay/bell-tower",
+        href: "/destinations/xian/bell-tower",
         hook: "Central · Practical · Well-connected for metro, buses, and day-trip departures",
         tag: "¥¥",
       },
@@ -189,7 +189,7 @@ export const unifiedLocations: UnifiedLocation[] = [
     imageSeed: "xian-dayan-pagoda-stay",
     categories: {
       "where-to-stay": {
-        href: "/destinations/xian/where-to-stay/dayan-pagoda",
+        href: "/destinations/xian/dayan-pagoda",
         hook: "Modern · Quiet · Family-friendly with broad plazas and newer hotels",
         tag: "¥¥",
       },
@@ -274,7 +274,7 @@ export const attractionCards: UnifiedLocation[] = [
     defaultCategory: "things-to-do",
     categories: {
       "things-to-do": {
-        href: "/destinations/xian/what-to-do/terracotta-warriors",
+        href: "/destinations/xian/terracotta-warriors",
         hook: "The iconic clay army of Emperor Qin Shi Huang",
         tag: "¥120",
       },
@@ -289,7 +289,7 @@ export const attractionCards: UnifiedLocation[] = [
     defaultCategory: "things-to-do",
     categories: {
       "things-to-do": {
-        href: "/destinations/xian/what-to-do/city-wall",
+        href: "/destinations/xian/city-wall",
         hook: "Best-preserved ancient city wall with cycling on top",
         tag: "¥54",
       },
@@ -304,7 +304,7 @@ export const attractionCards: UnifiedLocation[] = [
     defaultCategory: "things-to-do",
     categories: {
       "things-to-do": {
-        href: "/destinations/xian/what-to-do/muslim-quarter",
+        href: "/destinations/xian/muslim-quarter",
         hook: "Street food market and cultural hub in the old city",
         tag: "Free",
       },
@@ -319,7 +319,7 @@ export const attractionCards: UnifiedLocation[] = [
     defaultCategory: "things-to-do",
     categories: {
       "things-to-do": {
-        href: "/destinations/xian/what-to-do/big-wild-goose-pagoda",
+        href: "/destinations/xian/big-wild-goose-pagoda",
         hook: "Tang Dynasty pagoda with a night light show",
         tag: "¥40",
       },
@@ -334,7 +334,7 @@ export const attractionCards: UnifiedLocation[] = [
     defaultCategory: "things-to-do",
     categories: {
       "things-to-do": {
-        href: "/destinations/xian/what-to-do/shaanxi-history-museum",
+        href: "/destinations/xian/shaanxi-history-museum",
         hook: "World-class museum packed with dynastic artifacts",
         tag: "Free",
       },
@@ -349,7 +349,7 @@ export const attractionCards: UnifiedLocation[] = [
     defaultCategory: "things-to-do",
     categories: {
       "things-to-do": {
-        href: "/destinations/xian/what-to-do/bell-tower",
+        href: "/destinations/xian/bell-tower",
         hook: "Ming Dynasty tower at Xi'an's central crossroads",
         tag: "¥30",
       },
@@ -367,7 +367,7 @@ export const foodCards: UnifiedLocation[] = [
     defaultCategory: "where-to-eat",
     categories: {
       "where-to-eat": {
-        href: "/destinations/xian/where-to-eat/roujiamo",
+        href: "/destinations/xian/roujiamo",
         hook: "Chinese hamburger with chopped spiced meat",
         tag: "Street Food · ¥15",
       },
@@ -382,7 +382,7 @@ export const foodCards: UnifiedLocation[] = [
     defaultCategory: "where-to-eat",
     categories: {
       "where-to-eat": {
-        href: "/destinations/xian/where-to-eat/biangbiang-noodles",
+        href: "/destinations/xian/biangbiang-noodles",
         hook: "Wide hand-pulled noodles with chili oil and garlic",
         tag: "Restaurant · ¥20-30",
       },
@@ -397,7 +397,7 @@ export const foodCards: UnifiedLocation[] = [
     defaultCategory: "where-to-eat",
     categories: {
       "where-to-eat": {
-        href: "/destinations/xian/where-to-eat/yangrou-paomo",
+        href: "/destinations/xian/yangrou-paomo",
         hook: "Mutton soup with hand-torn bread, rich and deeply traditional",
         tag: "Local Classic · ¥40+",
       },
@@ -415,7 +415,7 @@ export const neighborhoodCards: UnifiedLocation[] = [
     defaultCategory: "where-to-stay",
     categories: {
       "where-to-stay": {
-        href: "/destinations/xian/where-to-stay/muslim-quarter",
+        href: "/destinations/xian/muslim-quarter",
         hook: "Food heaven · Walk to Bell Tower",
         tag: "",
       },
@@ -430,7 +430,7 @@ export const neighborhoodCards: UnifiedLocation[] = [
     defaultCategory: "where-to-stay",
     categories: {
       "where-to-stay": {
-        href: "/destinations/xian/where-to-stay/bell-tower",
+        href: "/destinations/xian/bell-tower",
         hook: "Central · Practical · Well-connected",
         tag: "",
       },
@@ -445,7 +445,7 @@ export const neighborhoodCards: UnifiedLocation[] = [
     defaultCategory: "where-to-stay",
     categories: {
       "where-to-stay": {
-        href: "/destinations/xian/where-to-stay/dayan-pagoda",
+        href: "/destinations/xian/dayan-pagoda",
         hook: "Modern · Quiet · Family-friendly",
         tag: "",
       },

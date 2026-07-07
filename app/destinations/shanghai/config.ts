@@ -83,7 +83,7 @@ export const shanghaiConfig: CityHubConfig = {
       defaultCategory: "things-to-do",
       categories: {
         "things-to-do": {
-          href: "/destinations/shanghai/what-to-do/bund",
+          href: "/destinations/shanghai/bund",
           hook: "Shanghai's most iconic waterfront promenade with skyline views.",
           tag: "Free",
         },
@@ -98,7 +98,7 @@ export const shanghaiConfig: CityHubConfig = {
       defaultCategory: "things-to-do",
       categories: {
         "things-to-do": {
-          href: "/destinations/shanghai/what-to-do/yu-garden",
+          href: "/destinations/shanghai/yu-garden",
           hook: "A 400-year-old classical garden surrounded by a lively bazaar.",
           tag: "¥40",
         },
@@ -113,7 +113,7 @@ export const shanghaiConfig: CityHubConfig = {
       defaultCategory: "things-to-do",
       categories: {
         "things-to-do": {
-          href: "/destinations/shanghai/what-to-do/french-concession",
+          href: "/destinations/shanghai/french-concession",
           hook: "Tree-lined avenues, Art Deco villas, and charming cafés.",
           tag: "Free",
         },
@@ -128,7 +128,7 @@ export const shanghaiConfig: CityHubConfig = {
       defaultCategory: "things-to-do",
       categories: {
         "things-to-do": {
-          href: "/destinations/shanghai/what-to-do/shanghai-tower",
+          href: "/destinations/shanghai/shanghai-tower",
           hook: "The world's second-tallest building with a jaw-dropping observation deck.",
           tag: "¥180",
         },
@@ -175,7 +175,7 @@ export const shanghaiConfig: CityHubConfig = {
       defaultCategory: "day-trips",
       categories: {
         "day-trips": {
-          href: "/destinations/shanghai/day-trips/suzhou",
+          href: "/destinations/shanghai/suzhou",
           hook: "30 min bullet train — Ming dynasty gardens, silk workshops, and Tongli water town.",
           tag: "Full day",
         },
@@ -190,7 +190,7 @@ export const shanghaiConfig: CityHubConfig = {
       defaultCategory: "day-trips",
       categories: {
         "day-trips": {
-          href: "/destinations/shanghai/day-trips/hangzhou",
+          href: "/destinations/shanghai/hangzhou",
           hook: "1h bullet train — West Lake cycling, Lingyin Temple caves, and Longjing tea village.",
           tag: "Full day",
         },
@@ -205,7 +205,7 @@ export const shanghaiConfig: CityHubConfig = {
       defaultCategory: "day-trips",
       categories: {
         "day-trips": {
-          href: "/destinations/shanghai/day-trips/zhujiajiao",
+          href: "/destinations/shanghai/zhujiajiao",
           hook: "Line 17 to the end — 1,700-year-old water town, 36 stone bridges, best zongzi in Shanghai.",
           tag: "Half day",
         },
@@ -222,7 +222,7 @@ export const shanghaiConfig: CityHubConfig = {
       defaultCategory: "where-to-eat",
       categories: {
         "where-to-eat": {
-          href: "/destinations/shanghai/where-to-eat/xiaolongbao",
+          href: "/destinations/shanghai/xiaolongbao",
           hook: "Shanghai's iconic soup dumplings",
           tag: "Street Food · ¥30",
         },
@@ -237,7 +237,7 @@ export const shanghaiConfig: CityHubConfig = {
       defaultCategory: "where-to-eat",
       categories: {
         "where-to-eat": {
-          href: "/destinations/shanghai/where-to-eat/shengjianbao",
+          href: "/destinations/shanghai/shengjianbao",
           hook: "Pan-fried buns with a crispy bottom",
           tag: "Street Food · ¥15",
         },
@@ -252,7 +252,7 @@ export const shanghaiConfig: CityHubConfig = {
       defaultCategory: "where-to-eat",
       categories: {
         "where-to-eat": {
-          href: "/destinations/shanghai/where-to-eat/hairy-crab",
+          href: "/destinations/shanghai/hairy-crab",
           hook: "Autumn delicacy from nearby Yangcheng Lake",
           tag: "Seasonal · ¥200+",
         },
@@ -267,7 +267,7 @@ export const shanghaiConfig: CityHubConfig = {
       defaultCategory: "where-to-eat",
       categories: {
         "where-to-eat": {
-          href: "/destinations/shanghai/where-to-eat/scallion-oil-noodles",
+          href: "/destinations/shanghai/scallion-oil-noodles",
           hook: "Simple, fragrant, and deeply comforting",
           tag: "Restaurant · ¥25–40",
         },
@@ -284,7 +284,7 @@ export const shanghaiConfig: CityHubConfig = {
       defaultCategory: "where-to-stay",
       categories: {
         "where-to-stay": {
-          href: "/destinations/shanghai/where-to-stay/bund-area",
+          href: "/destinations/shanghai/bund-area",
           hook: "Iconic skyline · Historic architecture",
           tag: "",
         },
@@ -299,7 +299,7 @@ export const shanghaiConfig: CityHubConfig = {
       defaultCategory: "where-to-stay",
       categories: {
         "where-to-stay": {
-          href: "/destinations/shanghai/where-to-stay/french-concession",
+          href: "/destinations/shanghai/french-concession",
           hook: "Cafés & boutiques · Tree-lined streets",
           tag: "",
         },
@@ -314,7 +314,7 @@ export const shanghaiConfig: CityHubConfig = {
       defaultCategory: "where-to-stay",
       categories: {
         "where-to-stay": {
-          href: "/destinations/shanghai/where-to-stay/jingan",
+          href: "/destinations/shanghai/jingan",
           hook: "Local life · Metro hub",
           tag: "",
         },
@@ -329,7 +329,7 @@ export const shanghaiConfig: CityHubConfig = {
       defaultCategory: "where-to-stay",
       categories: {
         "where-to-stay": {
-          href: "/destinations/shanghai/where-to-stay/xintiandi",
+          href: "/destinations/shanghai/xintiandi",
           hook: "Modern luxury · Nightlife",
           tag: "",
         },
@@ -373,7 +373,7 @@ export const shanghaiConfig: CityHubConfig = {
       items: [
         {
           name: "The Bund",
-          href: "/destinations/shanghai/what-to-do/bund",
+          href: "/destinations/shanghai/bund",
           time: "1–2h",
           cost: "Free",
           imageSeed: "shanghai-bund",
@@ -381,7 +381,7 @@ export const shanghaiConfig: CityHubConfig = {
         },
         {
           name: "Yu Garden",
-          href: "/destinations/shanghai/what-to-do/yu-garden",
+          href: "/destinations/shanghai/yu-garden",
           time: "1–2h",
           cost: "¥40",
           imageSeed: "shanghai-yugarden",
@@ -395,7 +395,7 @@ export const shanghaiConfig: CityHubConfig = {
       items: [
         {
           name: "Xiaolongbao Lunch",
-          href: "/destinations/shanghai/where-to-eat/xiaolongbao",
+          href: "/destinations/shanghai/xiaolongbao",
           time: "1h",
           cost: "¥30–60",
           imageSeed: "xiaolongbao",
@@ -403,7 +403,7 @@ export const shanghaiConfig: CityHubConfig = {
         },
         {
           name: "French Concession",
-          href: "/destinations/shanghai/what-to-do/french-concession",
+          href: "/destinations/shanghai/french-concession",
           time: "2–3h",
           cost: "Free",
           imageSeed: "shanghai-frenchconcession",
@@ -425,7 +425,7 @@ export const shanghaiConfig: CityHubConfig = {
       items: [
         {
           name: "Bund at Night",
-          href: "/destinations/shanghai/what-to-do/bund",
+          href: "/destinations/shanghai/bund",
           time: "1h",
           cost: "Free",
           imageSeed: "shanghai-bund-night",
@@ -433,7 +433,7 @@ export const shanghaiConfig: CityHubConfig = {
         },
         {
           name: "Xintiandi Dinner",
-          href: "/destinations/shanghai/where-to-stay/xintiandi",
+          href: "/destinations/shanghai/xintiandi",
           time: "2h",
           cost: "¥150–300",
           imageSeed: "shanghai-xintiandi-dinner",
@@ -447,7 +447,7 @@ export const shanghaiConfig: CityHubConfig = {
       items: [
         {
           name: "Shanghai Tower",
-          href: "/destinations/shanghai/what-to-do/shanghai-tower",
+          href: "/destinations/shanghai/shanghai-tower",
           time: "1–2h",
           cost: "¥180",
           imageSeed: "shanghai-tower",
@@ -469,7 +469,7 @@ export const shanghaiConfig: CityHubConfig = {
       items: [
         {
           name: "Jing'an",
-          href: "/destinations/shanghai/where-to-stay/jingan",
+          href: "/destinations/shanghai/jingan",
           time: "2–3h",
           cost: "Free",
           imageSeed: "shanghai-jingan",
@@ -477,7 +477,7 @@ export const shanghaiConfig: CityHubConfig = {
         },
         {
           name: "Scallion Noodles",
-          href: "/destinations/shanghai/where-to-eat/scallion-oil-noodles",
+          href: "/destinations/shanghai/scallion-oil-noodles",
           time: "45min",
           cost: "¥25–40",
           imageSeed: "scallion-noodles",
@@ -491,7 +491,7 @@ export const shanghaiConfig: CityHubConfig = {
       items: [
         {
           name: "Bund Area Nightlife",
-          href: "/destinations/shanghai/where-to-stay/bund-area",
+          href: "/destinations/shanghai/bund-area",
           time: "2h+",
           cost: "Varies",
           imageSeed: "shanghai-bund-nightlife",
@@ -539,20 +539,20 @@ export const shanghaiConfig: CityHubConfig = {
     },
   ],
   allItems: [
-    { id: "bund-attraction", markerId: "bund", name: "The Bund", subtitle: "Shanghai's most iconic waterfront promenade with skyline views.", tag: "Free", imageSeed: "shanghai-bund", href: "/destinations/shanghai/what-to-do/bund", type: "attraction", filters: ["free", "historic", "modern", "nightlife", "landmark"] },
-    { id: "yu-garden-attraction", markerId: "yu-garden", name: "Yu Garden", subtitle: "A 400-year-old classical garden surrounded by a lively bazaar.", tag: "¥40", imageSeed: "shanghai-yugarden", href: "/destinations/shanghai/what-to-do/yu-garden", type: "attraction", filters: ["budget", "historic", "family", "landmark"] },
-    { id: "french-concession-attraction", markerId: "french-concession", name: "French Concession", subtitle: "Tree-lined avenues, Art Deco villas, and charming cafés.", tag: "Free", imageSeed: "shanghai-frenchconcession", href: "/destinations/shanghai/what-to-do/french-concession", type: "attraction", filters: ["free", "local", "historic", "landmark"] },
-    { id: "shanghai-tower-attraction", markerId: "shanghai-tower", name: "Shanghai Tower", subtitle: "The world's second-tallest building with a jaw-dropping observation deck.", tag: "¥180", imageSeed: "shanghai-tower", href: "/destinations/shanghai/what-to-do/shanghai-tower", type: "attraction", filters: ["premium", "modern", "landmark"] },
+    { id: "bund-attraction", markerId: "bund", name: "The Bund", subtitle: "Shanghai's most iconic waterfront promenade with skyline views.", tag: "Free", imageSeed: "shanghai-bund", href: "/destinations/shanghai/bund", type: "attraction", filters: ["free", "historic", "modern", "nightlife", "landmark"] },
+    { id: "yu-garden-attraction", markerId: "yu-garden", name: "Yu Garden", subtitle: "A 400-year-old classical garden surrounded by a lively bazaar.", tag: "¥40", imageSeed: "shanghai-yugarden", href: "/destinations/shanghai/yu-garden", type: "attraction", filters: ["budget", "historic", "family", "landmark"] },
+    { id: "french-concession-attraction", markerId: "french-concession", name: "French Concession", subtitle: "Tree-lined avenues, Art Deco villas, and charming cafés.", tag: "Free", imageSeed: "shanghai-frenchconcession", href: "/destinations/shanghai/french-concession", type: "attraction", filters: ["free", "local", "historic", "landmark"] },
+    { id: "shanghai-tower-attraction", markerId: "shanghai-tower", name: "Shanghai Tower", subtitle: "The world's second-tallest building with a jaw-dropping observation deck.", tag: "¥180", imageSeed: "shanghai-tower", href: "/destinations/shanghai/shanghai-tower", type: "attraction", filters: ["premium", "modern", "landmark"] },
     { id: "tianzifang-attraction", markerId: "tianzifang", name: "Tianzifang", subtitle: "Winding alleyways packed with studios, galleries, and craft shops.", tag: "Free", imageSeed: "shanghai-tianzifang", href: "/destinations/shanghai/what-to-do", type: "attraction", filters: ["free", "local", "historic"] },
     { id: "jade-buddha-attraction", markerId: "jade-buddha", name: "Jade Buddha Temple", subtitle: "Serene Buddhist temple housing two stunning white jade Buddhas.", tag: "¥20", imageSeed: "shanghai-jadebuddha", href: "/destinations/shanghai/what-to-do", type: "attraction", filters: ["budget", "historic", "landmark"] },
-    { id: "xiaolongbao-food", markerId: "xiaolongbao", name: "Xiaolongbao", subtitle: "Shanghai's iconic soup dumplings", tag: "Street Food · ¥30", imageSeed: "xiaolongbao", href: "/destinations/shanghai/where-to-eat/xiaolongbao", type: "food", filters: ["budget", "local", "food"] },
-    { id: "shengjianbao-food", markerId: "shengjianbao", name: "Shengjianbao", subtitle: "Pan-fried buns with a crispy bottom", tag: "Street Food · ¥15", imageSeed: "shengjianbao", href: "/destinations/shanghai/where-to-eat/shengjianbao", type: "food", filters: ["budget", "local", "food"] },
-    { id: "hairy-crab-food", markerId: "hairy-crab", name: "Hairy Crab", subtitle: "Autumn delicacy from nearby Yangcheng Lake", tag: "Seasonal · ¥200+", imageSeed: "hairy-crab", href: "/destinations/shanghai/where-to-eat/hairy-crab", type: "food", filters: ["premium", "food"] },
-    { id: "scallion-noodles-food", markerId: "scallion-oil-noodles", name: "Scallion Oil Noodles", subtitle: "Simple, fragrant, and deeply comforting", tag: "Restaurant · ¥25–40", imageSeed: "scallion-noodles", href: "/destinations/shanghai/where-to-eat/scallion-oil-noodles", type: "food", filters: ["budget", "local", "food"] },
-    { id: "bund-area-stay", markerId: "bund", name: "Bund Area", subtitle: "Iconic skyline · Historic architecture · Perfect for first-timers", imageSeed: "shanghai-bund-area", href: "/destinations/shanghai/where-to-stay/bund-area", type: "stay", filters: ["midrange", "historic", "nightlife", "stay"] },
-    { id: "french-concession-stay", markerId: "french-concession", name: "French Concession", subtitle: "Cafés & boutiques · Tree-lined streets · Most walkable", imageSeed: "shanghai-french-concession-stay", href: "/destinations/shanghai/where-to-stay/french-concession", type: "stay", filters: ["midrange", "local", "historic", "stay"] },
-    { id: "jingan-stay", markerId: "jingan", name: "Jing'an", subtitle: "Local life · Metro hub · Central base", imageSeed: "shanghai-jingan", href: "/destinations/shanghai/where-to-stay/jingan", type: "stay", filters: ["budget", "local", "stay"] },
-    { id: "xintiandi-stay", markerId: "xintiandi", name: "Xintiandi", subtitle: "Modern luxury · Nightlife · Sleek dining", imageSeed: "shanghai-xintiandi", href: "/destinations/shanghai/where-to-stay/xintiandi", type: "stay", filters: ["premium", "modern", "nightlife", "stay"] },
+    { id: "xiaolongbao-food", markerId: "xiaolongbao", name: "Xiaolongbao", subtitle: "Shanghai's iconic soup dumplings", tag: "Street Food · ¥30", imageSeed: "xiaolongbao", href: "/destinations/shanghai/xiaolongbao", type: "food", filters: ["budget", "local", "food"] },
+    { id: "shengjianbao-food", markerId: "shengjianbao", name: "Shengjianbao", subtitle: "Pan-fried buns with a crispy bottom", tag: "Street Food · ¥15", imageSeed: "shengjianbao", href: "/destinations/shanghai/shengjianbao", type: "food", filters: ["budget", "local", "food"] },
+    { id: "hairy-crab-food", markerId: "hairy-crab", name: "Hairy Crab", subtitle: "Autumn delicacy from nearby Yangcheng Lake", tag: "Seasonal · ¥200+", imageSeed: "hairy-crab", href: "/destinations/shanghai/hairy-crab", type: "food", filters: ["premium", "food"] },
+    { id: "scallion-noodles-food", markerId: "scallion-oil-noodles", name: "Scallion Oil Noodles", subtitle: "Simple, fragrant, and deeply comforting", tag: "Restaurant · ¥25–40", imageSeed: "scallion-noodles", href: "/destinations/shanghai/scallion-oil-noodles", type: "food", filters: ["budget", "local", "food"] },
+    { id: "bund-area-stay", markerId: "bund", name: "Bund Area", subtitle: "Iconic skyline · Historic architecture · Perfect for first-timers", imageSeed: "shanghai-bund-area", href: "/destinations/shanghai/bund-area", type: "stay", filters: ["midrange", "historic", "nightlife", "stay"] },
+    { id: "french-concession-stay", markerId: "french-concession", name: "French Concession", subtitle: "Cafés & boutiques · Tree-lined streets · Most walkable", imageSeed: "shanghai-french-concession-stay", href: "/destinations/shanghai/french-concession", type: "stay", filters: ["midrange", "local", "historic", "stay"] },
+    { id: "jingan-stay", markerId: "jingan", name: "Jing'an", subtitle: "Local life · Metro hub · Central base", imageSeed: "shanghai-jingan", href: "/destinations/shanghai/jingan", type: "stay", filters: ["budget", "local", "stay"] },
+    { id: "xintiandi-stay", markerId: "xintiandi", name: "Xintiandi", subtitle: "Modern luxury · Nightlife · Sleek dining", imageSeed: "shanghai-xintiandi", href: "/destinations/shanghai/xintiandi", type: "stay", filters: ["premium", "modern", "nightlife", "stay"] },
     { id: "info-internet", name: "Internet", subtitle: "VPNs required. Download before landing.", imageSeed: "", href: "/china-basics/how-to-get-internet", type: "info", icon: Wifi, filters: ["practical"] },
     { id: "info-payment", name: "Payment", subtitle: "Alipay & WeChat Pay dominate. Cash rarely needed.", imageSeed: "", href: "/china-basics/what-apps-to-use/payment", type: "info", icon: CreditCard, filters: ["practical"] },
     { id: "info-transport", name: "Transport", subtitle: "Metro is excellent. DiDi for taxis.", imageSeed: "", href: "/china-basics/how-to-get-around", type: "info", icon: TrainFront, filters: ["practical"] },
@@ -563,9 +563,9 @@ export const shanghaiConfig: CityHubConfig = {
     { id: "tip-taxi", name: "Taxi Pro Tip", subtitle: "Shanghai taxis are cheap, but drivers rarely speak English. Use DiDi with English interface instead.", imageSeed: "", href: "/destinations/shanghai/local-tips", type: "tip", icon: Car, filters: ["practical"] },
     { id: "tip-bund-night", name: "Bund After Dark", subtitle: "The Bund is free and best at night. Skip the overpriced tourist tunnel — walk or take the metro instead.", imageSeed: "", href: "/destinations/shanghai/local-tips", type: "tip", icon: Moon, filters: ["free", "nightlife", "practical"] },
     { id: "tip-metro-maps", name: "Metro & Maps", subtitle: "Metro stops have English signs. Google Maps works with a VPN; Amap is the best local alternative.", imageSeed: "", href: "/destinations/shanghai/local-tips", type: "tip", icon: Map, filters: ["practical"] },
-    { id: "suzhou-day-trip", name: "Suzhou — Classical Gardens (Day Trip)", subtitle: "30 min bullet train — Ming dynasty gardens, silk workshops, and Tongli water town.", tag: "Full day", imageSeed: "suzhou-humble-garden", href: "/destinations/shanghai/day-trips/suzhou", type: "attraction", filters: ["historic", "family", "landmark"] },
-    { id: "hangzhou-day-trip", name: "Hangzhou — West Lake (Day Trip)", subtitle: "1h bullet train — West Lake cycling, Lingyin Temple caves, and Longjing tea village.", tag: "Full day", imageSeed: "hangzhou-west-lake", href: "/destinations/shanghai/day-trips/hangzhou", type: "attraction", filters: ["historic", "family", "landmark"] },
-    { id: "zhujiajiao-day-trip", name: "Zhujiajiao Water Town (Day Trip)", subtitle: "Line 17 to the end — 1,700-year-old water town with stone bridges and the best zongzi.", tag: "Half day", imageSeed: "zhujiajiao-bridges", href: "/destinations/shanghai/day-trips/zhujiajiao", type: "attraction", filters: ["budget", "historic", "family"] },
+    { id: "suzhou-day-trip", name: "Suzhou — Classical Gardens (Day Trip)", subtitle: "30 min bullet train — Ming dynasty gardens, silk workshops, and Tongli water town.", tag: "Full day", imageSeed: "suzhou-humble-garden", href: "/destinations/shanghai/suzhou", type: "attraction", filters: ["historic", "family", "landmark"] },
+    { id: "hangzhou-day-trip", name: "Hangzhou — West Lake (Day Trip)", subtitle: "1h bullet train — West Lake cycling, Lingyin Temple caves, and Longjing tea village.", tag: "Full day", imageSeed: "hangzhou-west-lake", href: "/destinations/shanghai/hangzhou", type: "attraction", filters: ["historic", "family", "landmark"] },
+    { id: "zhujiajiao-day-trip", name: "Zhujiajiao Water Town (Day Trip)", subtitle: "Line 17 to the end — 1,700-year-old water town with stone bridges and the best zongzi.", tag: "Half day", imageSeed: "zhujiajiao-bridges", href: "/destinations/shanghai/zhujiajiao", type: "attraction", filters: ["budget", "historic", "family"] },
     { id: "shanghai-how-many-days", name: "How Many Days in Shanghai?", subtitle: "3-4 day guide: 3 for highlights, 4 with day trip.", imageSeed: "", href: "/destinations/shanghai/how-many-days", type: "info", icon: Clock, filters: ["practical"] },
     { id: "shanghai-common-mistakes", name: "Common Mistakes in Shanghai", subtitle: "6 mistakes tourists make — Bund at night, mobile pay, tourist food.", imageSeed: "", href: "/destinations/shanghai/common-mistakes", type: "info", icon: Compass, filters: ["practical"] },
     { id: "shanghai-for-first-timers", name: "Shanghai for First-Timers", subtitle: "Most international city in China — easiest landing.", imageSeed: "", href: "/destinations/shanghai/for-first-timers", type: "info", icon: Lightbulb, filters: ["practical"] },
