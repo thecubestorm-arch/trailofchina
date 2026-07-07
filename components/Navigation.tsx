@@ -1,102 +1,21 @@
 'use client'
 
-import { useState, useEffect, useRef, useCallback } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-
-// Detect pathname-based compact nav for hub pages
-function useCompactNavMode() {
-  const [compactNavMode, setCompactNavMode] = useState(false)
-
-  useEffect(() => {
-    // data-hide-main-nav is no longer set by any page
-    // keeping the observer for safety but it won't trigger
-    const checkCompactNav = () => {
-      setCompactNavMode(document.body.hasAttribute('data-hide-main-nav'))
-    }
-
-    checkCompactNav()
-
-    const observer = new MutationObserver(checkCompactNav)
-    observer.observe(document.body, { attributes: true, attributeFilter: ['data-hide-main-nav'] })
-
-    return () => observer.disconnect()
-  }, [])
-
-  return compactNavMode
-}
-
-// Hook to detect swipe from right edge to open menu
-function useSwipeToOpenMenu(onSwipeOpen: () => void, enabled: boolean) {
-  const touchStartX = useRef<number | null>(null)
-  const touchStartY = useRef<number | null>(null)
-
-  useEffect(() => {
-    if (!enabled) return
-
-    const handleTouchStart = (e: TouchEvent) => {
-      if (window.innerWidth >= 768) return
-
-      // Only detect swipes starting from the last 20px of the right edge.
-      const screenWidth = window.innerWidth
-      const touchX = e.touches[0].clientX
-      
-      if (touchX > screenWidth - 20) {
-        touchStartX.current = touchX
-        touchStartY.current = e.touches[0].clientY
-      }
-    }
-
-    const handleTouchMove = (e: TouchEvent) => {
-      if (touchStartX.current === null) return
-
-      const touchX = e.touches[0].clientX
-      const touchY = e.touches[0].clientY
-      const deltaX = touchX - touchStartX.current
-      const deltaY = touchY - (touchStartY.current || 0)
-
-      // Detect left swipe (negative deltaX) of at least 80px
-      // And ensure it's more horizontal than vertical (|deltaX| > |deltaY|)
-      if (deltaX < -80 && Math.abs(deltaX) > Math.abs(deltaY)) {
-        onSwipeOpen()
-        touchStartX.current = null
-        touchStartY.current = null
-      }
-    }
-
-    const handleTouchEnd = () => {
-      touchStartX.current = null
-      touchStartY.current = null
-    }
-
-    document.addEventListener('touchstart', handleTouchStart, { passive: true })
-    document.addEventListener('touchmove', handleTouchMove, { passive: true })
-    document.addEventListener('touchend', handleTouchEnd, { passive: true })
-
-    return () => {
-      document.removeEventListener('touchstart', handleTouchStart)
-      document.removeEventListener('touchmove', handleTouchMove)
-      document.removeEventListener('touchend', handleTouchEnd)
-    }
-  }, [onSwipeOpen, enabled])
-}
 
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/china-basics', label: 'China Basics' },
   { href: '/destinations', label: 'Destinations' },
   { href: '/plan-your-trip', label: 'Plan Your Trip' },
-
+  { href: '/blog', label: 'Blog' },
 ]
 
 export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false)
   const headerRef = useRef<HTMLElement | null>(null)
   const pathname = usePathname()
-  const compactNavMode = useCompactNavMode()
-  const shouldUseCompactNavForPath =
-    pathname === '/china-basics' || /^\/destinations\/[^/]+$/.test(pathname)
-  const useCompactNav = compactNavMode || shouldUseCompactNavForPath
 
   // Lock body scroll when menu is open
   useEffect(() => {
@@ -133,14 +52,10 @@ export default function Navigation() {
     updateNavHeight()
     window.addEventListener('resize', updateNavHeight)
     return () => window.removeEventListener('resize', updateNavHeight)
-  }, [useCompactNav])
+  }, [pathname])
 
-  const openMenu = useCallback(() => setMenuOpen(true), [])
   const closeMenu = () => setMenuOpen(false)
   const toggleMenu = () => setMenuOpen((prev) => !prev)
-
-  // Enable swipe-from-right to open menu with a narrow edge zone to avoid iOS gesture conflicts.
-  useSwipeToOpenMenu(openMenu, !menuOpen)
 
   return (
     <header
@@ -160,20 +75,28 @@ export default function Navigation() {
         {/* Desktop Nav */}
         <nav
           aria-label="Primary"
-          className={`${useCompactNav ? 'hidden' : 'hidden md:flex'} md:flex-wrap md:items-center md:justify-end md:gap-2`}
+          className="hidden md:flex md:flex-wrap md:items-center md:justify-end md:gap-2"
         >
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="shrink-0 rounded-full border border-transparent px-4 py-2 text-sm font-medium text-[var(--muted)] hover:border-[var(--line)] hover:bg-[var(--surface-strong)] hover:text-[var(--foreground)]"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href))
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                aria-current={isActive ? 'page' : undefined}
+                className={`shrink-0 rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
+                  isActive
+                    ? 'border-[var(--line)] bg-[var(--surface-strong)] text-[#af5d32]'
+                    : 'border-transparent text-[var(--muted)] hover:border-[var(--line)] hover:bg-[var(--surface-strong)] hover:text-[var(--foreground)]'
+                }`}
+              >
+                {link.label}
+              </Link>
+            )
+          })}
         </nav>
 
-        <div className={`flex items-center gap-1 ${useCompactNav ? '' : 'md:hidden'}`}>
+        <div className="flex items-center gap-1 md:hidden">
           <button
             type="button"
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
@@ -218,7 +141,7 @@ export default function Navigation() {
       {/* Mobile Overlay */}
       {menuOpen && (
         <div
-          className={`fixed inset-x-0 bottom-0 top-[var(--site-nav-height,4rem)] z-[109] bg-[#09131a]/38 backdrop-blur-sm ${useCompactNav ? '' : 'md:hidden'}`}
+          className="fixed inset-x-0 bottom-0 top-[var(--site-nav-height,4rem)] z-[109] bg-[#09131a]/38 backdrop-blur-sm md:hidden"
           onClick={closeMenu}
           aria-hidden="true"
         />
@@ -226,9 +149,7 @@ export default function Navigation() {
 
       {/* Mobile Full-Screen Menu */}
       <div
-        className={`fixed inset-x-0 bottom-0 top-[var(--site-nav-height,4rem)] z-[110] bg-[#f5f1ea] transition-all duration-300 ease-out ${
-          useCompactNav ? '' : 'md:hidden'
-        } ${
+        className={`fixed inset-x-0 bottom-0 top-[var(--site-nav-height,4rem)] z-[110] bg-[#f5f1ea] transition-all duration-300 ease-out md:hidden ${
           menuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0 pointer-events-none'
         }`}
         aria-hidden={!menuOpen}
