@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 };
 
 export default function ShanghaiPage() {
+  const breadcrumbJsonLd = breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Destinations", path: "/destinations" }, { name: "Shanghai", path: "/destinations/shanghai" }]);
   return (
     <>
       <header className="mb-8 relative">
