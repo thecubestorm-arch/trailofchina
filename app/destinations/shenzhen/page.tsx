@@ -2,11 +2,12 @@ import { Metadata } from 'next';
 import ShenzhenHubClient from './ShenzhenHubClient';
 import { makeMetadata } from '@/lib/metadata';
 import { breadcrumbSchema } from '@/lib/schema'
+import ChineseWatermark from '@/components/ChineseWatermark'
 
 export const metadata: Metadata = makeMetadata({
   title: 'Shenzhen Travel Guide',
   description:
-    "Plan a complete Shenzhen trip with this city guide covering Huaqiangbei, Ping An Finance Centre, Dafen Oil Painting Village, OCT Loft, best neighborhoods, and practical local tips for first-time visitors.",
+    "Complete Shenzhen travel guide for first-time visitors. Huaqiangbei electronics, Ping An Tower, Dafen Village, OCT Loft, neighborhoods, and practical tips.",
   path: '/destinations/shenzhen',
 });
 
@@ -23,6 +24,16 @@ export default function ShenzhenPage() {
 
   return (
     <>
+      <header className="mb-8 relative">
+        <ChineseWatermark character="深" />
+        <h1 className="relative z-10 mb-3 text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-[var(--foreground)]">
+          Shenzhen Travel Guide
+        </h1>
+        <div className="relative z-10 mt-3 flex items-center gap-2 text-[var(--muted)]">
+          <span className="text-2xl">Destinations</span>
+          <span className="text-lg">• Shenzhen</span>
+        </div>
+      </header>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(travelGuideJsonLd) }}

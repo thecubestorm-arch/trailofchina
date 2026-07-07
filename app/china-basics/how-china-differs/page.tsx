@@ -9,7 +9,7 @@ import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = makeMetadata({
   title: 'How China Differs',
-  description: 'Understanding censorship, cultural differences, safety standards, and passport rules in China.',
+  description: 'Understanding China censorship, cultural differences, safety standards, and passport rules for first-time visitors.',
 
   path: '/china-basics/how-china-differs',
 })

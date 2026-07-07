@@ -8,7 +8,7 @@ import { makeMetadata } from '@/lib/metadata'
 export const metadata: Metadata = makeMetadata({
   title: 'Trip.com Guide for China Travelers',
   description:
-    'Complete guide to Trip.com for China travel: book high-speed train tickets, hotels, domestic flights, attraction tickets, eSIMs, and airport transfers — all in English with foreign card support.',
+    'Complete Trip.com guide for China travel: book high-speed trains, hotels, and flights. Step-by-step booking tips and app features for travelers.',
   openGraph: {
     title: 'Trip.com — Your All-in-One China Travel App',
     description:

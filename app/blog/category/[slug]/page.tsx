@@ -44,11 +44,11 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const categoryName = slugToCategoryName(slug)
   return {
     title: `${categoryName} - Blog`,
-    description: `Read our ${categoryName} guides and tips for China travel`,
+    description: `Read our ${categoryName} articles, guides, and practical tips for first-time China travel. Expert advice to help you plan your trip and avoid common mistakes.`,
     alternates: { canonical: `/blog/category/${slug}` },
     openGraph: {
       title: `${categoryName} - Trail of China Blog`,
-      description: `Read our ${categoryName} guides and tips for China travel`,
+      description: `Read our ${categoryName} articles and guides for China travel`,
       images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: `${categoryName} - Trail of China Blog` }],
     },
 };

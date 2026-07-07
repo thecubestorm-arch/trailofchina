@@ -7,7 +7,7 @@ import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'Learn why Trail of China exists, who is behind it, and what expertise shapes every recommendation.',
+  description: 'Learn why Trail of China exists, who is behind it, and what expertise shapes every guide and recommendation for first-time China visitors.',
   alternates: {
     canonical: '/about',
   },

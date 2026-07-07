@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [{ url: 'https://www.trailofchina.com/og-default.jpg', width: 1200, height: 630, alt: 'Ping An Finance Centre - Trail of China' }],
   },
+    alternates: { canonical: '/destinations/shenzhen/what-to-do/ping-an-finance-centre' },
 };
 
 const faqJsonLd = faqPageSchema([

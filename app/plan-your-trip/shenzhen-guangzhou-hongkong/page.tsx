@@ -10,7 +10,7 @@ import { breadcrumbSchema, faqPageSchema } from '@/lib/schema'
 export const metadata: Metadata = makeMetadata({
   title: 'Shenzhen → Guangzhou → Hong Kong: South China Triangle (7-10 Days)',
   description:
-    'The food + tech + international route through South China. Day-by-day guide for Shenzhen, Guangzhou, and Hong Kong — with border crossing tips, budget estimates, and what to skip.',
+    'South China day-by-day guide for Shenzhen, Guangzhou, and Hong Kong. Dim sum, theme parks, markets, and border crossings for first-time visitors.',
   path: '/plan-your-trip/shenzhen-guangzhou-hongkong',
   keywords: [
     'Shenzhen Guangzhou Hong Kong itinerary',

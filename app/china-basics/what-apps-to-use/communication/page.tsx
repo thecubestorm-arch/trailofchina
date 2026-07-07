@@ -8,7 +8,7 @@ import { makeMetadata } from '@/lib/metadata'
 export const metadata: Metadata = makeMetadata({
   title: 'Communication App: WeChat',
   description:
-    'Set up WeChat for messaging, service mini-programs, and travel coordination in China.',
+    'Set up WeChat for messaging, service mini-programs, and travel coordination in China. Essential guide for first-time visitors.',
 
   path: '/china-basics/what-apps-to-use/communication',
 })

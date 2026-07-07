@@ -9,7 +9,7 @@ import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = makeMetadata({
   title: 'Taxis in China',
-  description: 'How to take traditional taxis in China. Tips for hailing, payment, and getting around.',
+  description: 'How to take traditional taxis in China. Tips for hailing, payment, and getting around major cities safely and affordably.',
 
   path: '/china-basics/how-to-get-around/taxi',
 })

@@ -1,0 +1,234 @@
+# SEO Fix Audit Report
+Total page.tsx files (non-archive): 91
+
+## Pages WITHOUT H1 in page.tsx
+Count: 16
+- `page.tsx`
+- `blog/page.tsx`
+- `blog/category/[slug]/page.tsx`
+- `plan-your-trip/page.tsx`
+- `china-basics/page.tsx`
+- `destinations/page.tsx`
+- `destinations/shenzhen/page.tsx`
+- `destinations/shenzhen/what-to-do/ping-an-finance-centre/page.tsx`
+- `destinations/guangzhou/page.tsx`
+- `destinations/chongqing/page.tsx`
+- `destinations/chengdu/page.tsx`
+- `destinations/xian/page.tsx`
+- `destinations/shanghai/page.tsx`
+- `destinations/shanghai/what-to-do/shanghai-tower/page.tsx`
+- `destinations/beijing/page.tsx`
+- `destinations/beijing/where-to-eat/jianbing/page.tsx`
+
+## Pages WITH H1 in page.tsx
+Count: 75
+- `blog/[slug]/page.tsx` (h1 count: 2)
+- `imprint/page.tsx` (h1 count: 1)
+- `cookie-policy/page.tsx` (h1 count: 1)
+- `plan-your-trip/beijing-shanghai-xian/page.tsx` (h1 count: 1)
+- `plan-your-trip/shanghai-hangzhou-suzhou/page.tsx` (h1 count: 1)
+- `plan-your-trip/chengdu-chongqing/page.tsx` (h1 count: 1)
+- `plan-your-trip/budget/page.tsx` (h1 count: 1)
+- `plan-your-trip/preplanned-trips/page.tsx` (h1 count: 1)
+- `plan-your-trip/preplanned-trips/14-day-route/page.tsx` (h1 count: 1)
+- `plan-your-trip/preplanned-trips/10-day-route/page.tsx` (h1 count: 1)
+- `plan-your-trip/preplanned-trips/7-day-route/page.tsx` (h1 count: 1)
+- `plan-your-trip/shenzhen-guangzhou-hongkong/page.tsx` (h1 count: 1)
+- `plan-your-trip/best-time-to-visit/page.tsx` (h1 count: 1)
+- `china-basics/how-to-get-internet/page.tsx` (h1 count: 1)
+- `china-basics/how-to-get-internet/physical-sim/page.tsx` (h1 count: 1)
+- `china-basics/how-to-get-internet/esim/page.tsx` (h1 count: 1)
+- `china-basics/how-to-get-internet/holafly-esim/page.tsx` (h1 count: 1)
+- `china-basics/how-to-get-internet/airalo-esim/page.tsx` (h1 count: 1)
+- `china-basics/before-you-go/page.tsx` (h1 count: 1)
+- `china-basics/before-you-go/packing-list/page.tsx` (h1 count: 1)
+- `china-basics/before-you-go/is-china-safe/page.tsx` (h1 count: 1)
+- `china-basics/what-apps-to-use/page.tsx` (h1 count: 1)
+- `china-basics/what-apps-to-use/communication/page.tsx` (h1 count: 1)
+- `china-basics/what-apps-to-use/vpn/page.tsx` (h1 count: 1)
+- `china-basics/what-apps-to-use/travel/page.tsx` (h1 count: 1)
+- `china-basics/what-apps-to-use/wechat-pay/page.tsx` (h1 count: 1)
+- `china-basics/what-apps-to-use/trip-com/page.tsx` (h1 count: 1)
+- `china-basics/what-apps-to-use/payment/page.tsx` (h1 count: 1)
+- `china-basics/what-apps-to-use/didi/page.tsx` (h1 count: 1)
+- `china-basics/what-apps-to-use/meituan/page.tsx` (h1 count: 1)
+- `china-basics/what-apps-to-use/alipay/page.tsx` (h1 count: 1)
+- `china-basics/what-apps-to-use/maps/page.tsx` (h1 count: 1)
+- `china-basics/how-to-get-around/page.tsx` (h1 count: 1)
+- `china-basics/how-to-get-around/train/page.tsx` (h1 count: 1)
+- `china-basics/how-to-get-around/taxi/page.tsx` (h1 count: 1)
+- `china-basics/how-to-get-around/didi/page.tsx` (h1 count: 1)
+- `china-basics/how-to-get-around/city-to-city/page.tsx` (h1 count: 1)
+- `china-basics/how-to-get-around/plane/page.tsx` (h1 count: 1)
+- `china-basics/how-to-get-around/metro-subway/page.tsx` (h1 count: 1)
+- `china-basics/how-china-differs/page.tsx` (h1 count: 1)
+- `china-basics/how-china-differs/visa-guide/page.tsx` (h1 count: 1)
+- `destinations/chongqing/local-tips/page.tsx` (h1 count: 1)
+- `destinations/chongqing/where-to-eat/page.tsx` (h1 count: 1)
+- `destinations/chongqing/what-to-do/page.tsx` (h1 count: 1)
+- `destinations/chongqing/day-trips/page.tsx` (h1 count: 1)
+- `destinations/chongqing/where-to-stay/page.tsx` (h1 count: 1)
+- `destinations/chongqing/local-experiences/page.tsx` (h1 count: 1)
+- `destinations/chengdu/local-tips/page.tsx` (h1 count: 1)
+- `destinations/chengdu/where-to-eat/page.tsx` (h1 count: 1)
+- `destinations/chengdu/what-to-do/page.tsx` (h1 count: 1)
+- `destinations/chengdu/day-trips/page.tsx` (h1 count: 1)
+- `destinations/chengdu/where-to-stay/page.tsx` (h1 count: 1)
+- `destinations/chengdu/local-experiences/page.tsx` (h1 count: 1)
+- `destinations/xian/local-tips/page.tsx` (h1 count: 1)
+- `destinations/xian/where-to-eat/page.tsx` (h1 count: 1)
+- `destinations/xian/what-to-do/page.tsx` (h1 count: 1)
+- `destinations/xian/day-trips/page.tsx` (h1 count: 1)
+- `destinations/xian/where-to-stay/page.tsx` (h1 count: 1)
+- `destinations/xian/local-experiences/page.tsx` (h1 count: 1)
+- `destinations/shanghai/local-tips/page.tsx` (h1 count: 1)
+- `destinations/shanghai/where-to-eat/page.tsx` (h1 count: 1)
+- `destinations/shanghai/what-to-do/page.tsx` (h1 count: 1)
+- `destinations/shanghai/day-trips/page.tsx` (h1 count: 1)
+- `destinations/shanghai/where-to-stay/page.tsx` (h1 count: 1)
+- `destinations/shanghai/transport-guide/page.tsx` (h1 count: 1)
+- `destinations/shanghai/local-experiences/page.tsx` (h1 count: 1)
+- `destinations/beijing/local-tips/page.tsx` (h1 count: 1)
+- `destinations/beijing/where-to-eat/page.tsx` (h1 count: 1)
+- `destinations/beijing/what-to-do/page.tsx` (h1 count: 1)
+- `destinations/beijing/day-trips/page.tsx` (h1 count: 1)
+- `destinations/beijing/where-to-stay/page.tsx` (h1 count: 1)
+- `destinations/beijing/transport-guide/page.tsx` (h1 count: 1)
+- `destinations/beijing/local-experiences/page.tsx` (h1 count: 1)
+- `privacy/page.tsx` (h1 count: 1)
+- `about/page.tsx` (h1 count: 1)
+
+## Description Audit
+- `page.tsx` → OK (153 chars)
+- `blog/page.tsx` → SHORT (94 chars)
+- `blog/category/[slug]/page.tsx` → MISSING (0 chars)
+- `blog/[slug]/page.tsx` → MISSING (0 chars)
+- `imprint/page.tsx` → OK (127 chars)
+- `cookie-policy/page.tsx` → OK (129 chars)
+- `plan-your-trip/page.tsx` → OK (147 chars)
+- `plan-your-trip/beijing-shanghai-xian/page.tsx` → OK (148 chars)
+- `plan-your-trip/shanghai-hangzhou-suzhou/page.tsx` → OK (153 chars)
+- `plan-your-trip/chengdu-chongqing/page.tsx` → OK (170 chars)
+- `plan-your-trip/budget/page.tsx` → OK (139 chars)
+- `plan-your-trip/preplanned-trips/page.tsx` → OK (112 chars)
+- `plan-your-trip/preplanned-trips/14-day-route/page.tsx` → OK (115 chars)
+- `plan-your-trip/preplanned-trips/10-day-route/page.tsx` → OK (125 chars)
+- `plan-your-trip/preplanned-trips/7-day-route/page.tsx` → OK (101 chars)
+- `plan-your-trip/shenzhen-guangzhou-hongkong/page.tsx` → LONG (179 chars)
+- `plan-your-trip/best-time-to-visit/page.tsx` → OK (139 chars)
+- `china-basics/page.tsx` → OK (135 chars)
+- `china-basics/how-to-get-internet/page.tsx` → OK (121 chars)
+- `china-basics/how-to-get-internet/physical-sim/page.tsx` → OK (113 chars)
+- `china-basics/how-to-get-internet/esim/page.tsx` → OK (104 chars)
+- `china-basics/how-to-get-internet/holafly-esim/page.tsx` → OK (154 chars)
+- `china-basics/how-to-get-internet/airalo-esim/page.tsx` → OK (148 chars)
+- `china-basics/before-you-go/page.tsx` → OK (119 chars)
+- `china-basics/before-you-go/packing-list/page.tsx` → OK (139 chars)
+- `china-basics/before-you-go/is-china-safe/page.tsx` → OK (164 chars)
+- `china-basics/what-apps-to-use/page.tsx` → OK (144 chars)
+- `china-basics/what-apps-to-use/communication/page.tsx` → SHORT (85 chars)
+- `china-basics/what-apps-to-use/vpn/page.tsx` → OK (127 chars)
+- `china-basics/what-apps-to-use/travel/page.tsx` → OK (115 chars)
+- `china-basics/what-apps-to-use/wechat-pay/page.tsx` → OK (142 chars)
+- `china-basics/what-apps-to-use/trip-com/page.tsx` → LONG (194 chars)
+- `china-basics/what-apps-to-use/payment/page.tsx` → OK (154 chars)
+- `china-basics/what-apps-to-use/didi/page.tsx` → OK (135 chars)
+- `china-basics/what-apps-to-use/meituan/page.tsx` → OK (148 chars)
+- `china-basics/what-apps-to-use/alipay/page.tsx` → OK (140 chars)
+- `china-basics/what-apps-to-use/maps/page.tsx` → OK (114 chars)
+- `china-basics/how-to-get-around/page.tsx` → OK (109 chars)
+- `china-basics/how-to-get-around/train/page.tsx` → OK (130 chars)
+- `china-basics/how-to-get-around/taxi/page.tsx` → SHORT (86 chars)
+- `china-basics/how-to-get-around/didi/page.tsx` → OK (120 chars)
+- `china-basics/how-to-get-around/city-to-city/page.tsx` → OK (133 chars)
+- `china-basics/how-to-get-around/plane/page.tsx` → OK (127 chars)
+- `china-basics/how-to-get-around/metro-subway/page.tsx` → OK (141 chars)
+- `china-basics/how-china-differs/page.tsx` → SHORT (94 chars)
+- `china-basics/how-china-differs/visa-guide/page.tsx` → OK (124 chars)
+- `destinations/page.tsx` → OK (141 chars)
+- `destinations/shenzhen/page.tsx` → LONG (204 chars)
+- `destinations/shenzhen/what-to-do/ping-an-finance-centre/page.tsx` → OK (146 chars)
+- `destinations/guangzhou/page.tsx` → LONG (189 chars)
+- `destinations/chongqing/page.tsx` → OK (160 chars)
+- `destinations/chongqing/local-tips/page.tsx` → OK (115 chars)
+- `destinations/chongqing/where-to-eat/page.tsx` → OK (110 chars)
+- `destinations/chongqing/what-to-do/page.tsx` → SHORT (97 chars)
+- `destinations/chongqing/day-trips/page.tsx` → LONG (180 chars)
+- `destinations/chongqing/where-to-stay/page.tsx` → OK (121 chars)
+- `destinations/chongqing/local-experiences/page.tsx` → OK (147 chars)
+- `destinations/chengdu/page.tsx` → OK (149 chars)
+- `destinations/chengdu/local-tips/page.tsx` → OK (108 chars)
+- `destinations/chengdu/where-to-eat/page.tsx` → OK (115 chars)
+- `destinations/chengdu/what-to-do/page.tsx` → OK (110 chars)
+- `destinations/chengdu/day-trips/page.tsx` → LONG (201 chars)
+- `destinations/chengdu/where-to-stay/page.tsx` → OK (112 chars)
+- `destinations/chengdu/local-experiences/page.tsx` → OK (145 chars)
+- `destinations/xian/page.tsx` → OK (161 chars)
+- `destinations/xian/local-tips/page.tsx` → OK (133 chars)
+- `destinations/xian/where-to-eat/page.tsx` → OK (137 chars)
+- `destinations/xian/what-to-do/page.tsx` → OK (168 chars)
+- `destinations/xian/day-trips/page.tsx` → LONG (178 chars)
+- `destinations/xian/where-to-stay/page.tsx` → OK (133 chars)
+- `destinations/xian/local-experiences/page.tsx` → OK (156 chars)
+- `destinations/shanghai/page.tsx` → OK (117 chars)
+- `destinations/shanghai/local-tips/page.tsx` → OK (121 chars)
+- `destinations/shanghai/where-to-eat/page.tsx` → OK (153 chars)
+- `destinations/shanghai/what-to-do/page.tsx` → SHORT (85 chars)
+- `destinations/shanghai/what-to-do/shanghai-tower/page.tsx` → OK (144 chars)
+- `destinations/shanghai/day-trips/page.tsx` → LONG (197 chars)
+- `destinations/shanghai/where-to-stay/page.tsx` → OK (136 chars)
+- `destinations/shanghai/transport-guide/page.tsx` → LONG (189 chars)
+- `destinations/shanghai/local-experiences/page.tsx` → OK (144 chars)
+- `destinations/beijing/page.tsx` → OK (169 chars)
+- `destinations/beijing/local-tips/page.tsx` → OK (116 chars)
+- `destinations/beijing/where-to-eat/page.tsx` → OK (155 chars)
+- `destinations/beijing/where-to-eat/jianbing/page.tsx` → OK (159 chars)
+- `destinations/beijing/what-to-do/page.tsx` → OK (135 chars)
+- `destinations/beijing/day-trips/page.tsx` → OK (156 chars)
+- `destinations/beijing/where-to-stay/page.tsx` → OK (161 chars)
+- `destinations/beijing/transport-guide/page.tsx` → LONG (177 chars)
+- `destinations/beijing/local-experiences/page.tsx` → OK (156 chars)
+- `privacy/page.tsx` → OK (142 chars)
+- `about/page.tsx` → SHORT (98 chars)
+
+## Pages MISSING openGraph
+- `destinations/xian/local-tips/page.tsx`
+- `destinations/xian/where-to-eat/page.tsx`
+- `destinations/xian/what-to-do/page.tsx`
+- `destinations/xian/where-to-stay/page.tsx`
+- `destinations/xian/local-experiences/page.tsx`
+
+## Pages MISSING canonical/alternates
+- `destinations/shenzhen/what-to-do/ping-an-finance-centre/page.tsx`
+- `destinations/chongqing/local-tips/page.tsx`
+- `destinations/chongqing/where-to-eat/page.tsx`
+- `destinations/chongqing/what-to-do/page.tsx`
+- `destinations/chongqing/day-trips/page.tsx`
+- `destinations/chongqing/where-to-stay/page.tsx`
+- `destinations/chongqing/local-experiences/page.tsx`
+- `destinations/chengdu/local-tips/page.tsx`
+- `destinations/chengdu/where-to-eat/page.tsx`
+- `destinations/chengdu/what-to-do/page.tsx`
+- `destinations/chengdu/day-trips/page.tsx`
+- `destinations/chengdu/where-to-stay/page.tsx`
+- `destinations/chengdu/local-experiences/page.tsx`
+- `destinations/xian/local-tips/page.tsx`
+- `destinations/xian/where-to-eat/page.tsx`
+- `destinations/xian/what-to-do/page.tsx`
+- `destinations/xian/day-trips/page.tsx`
+- `destinations/xian/where-to-stay/page.tsx`
+- `destinations/xian/local-experiences/page.tsx`
+- `destinations/shanghai/local-tips/page.tsx`
+- `destinations/shanghai/where-to-eat/page.tsx`
+- `destinations/shanghai/what-to-do/page.tsx`
+- `destinations/shanghai/what-to-do/shanghai-tower/page.tsx`
+- `destinations/shanghai/day-trips/page.tsx`
+- `destinations/shanghai/where-to-stay/page.tsx`
+- `destinations/shanghai/local-experiences/page.tsx`
+- `destinations/beijing/local-tips/page.tsx`
+- `destinations/beijing/where-to-eat/page.tsx`
+- `destinations/beijing/where-to-eat/jianbing/page.tsx`
+- `destinations/beijing/what-to-do/page.tsx`
+- `destinations/beijing/day-trips/page.tsx`
+- `destinations/beijing/where-to-stay/page.tsx`
+- `destinations/beijing/local-experiences/page.tsx`

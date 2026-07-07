@@ -6,7 +6,7 @@ import { breadcrumbSchema } from '@/lib/schema'
 export const metadata: Metadata = makeMetadata({
   title: 'China Travel Blog',
   description:
-    'Expert guides, destination insights, and practical tips for planning your first trip to China.',
+    'Expert China travel guides, destination insights, and practical tips for planning your first trip to China. Updated regularly with fresh content.',
   path: '/blog',
 })
 
