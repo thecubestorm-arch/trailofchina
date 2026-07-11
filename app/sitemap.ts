@@ -27,7 +27,6 @@ const createEntry = ({
 const staticRoutes: SitemapEntry[] = [
   { path: '/', changeFrequency: 'weekly', priority: 1.0 },
   { path: '/about', changeFrequency: 'monthly', priority: 0.7 },
-  { path: '/blog', changeFrequency: 'weekly', priority: 0.8 },
   { path: '/china-basics', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/destinations', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/plan-your-trip', changeFrequency: 'monthly', priority: 0.8 },

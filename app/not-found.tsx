@@ -27,9 +27,7 @@ export default function NotFound() {
             <Link href="/plan-your-trip" className="rounded-full border border-[#ebe4d8] px-4 py-2 text-sm font-medium text-[#1a3a4a] hover:border-[#af5d32] hover:text-[#af5d32] transition-colors">
               Plan Your Trip
             </Link>
-            <Link href="/blog" className="rounded-full border border-[#ebe4d8] px-4 py-2 text-sm font-medium text-[#1a3a4a] hover:border-[#af5d32] hover:text-[#af5d32] transition-colors">
-              Blog
-            </Link>
+
           </nav>
         </div>
       </div>

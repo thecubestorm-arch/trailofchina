@@ -3,7 +3,7 @@ export interface SearchItem {
   title: string;
   subtitle?: string;
   href: string;
-  category: "destination" | "guide" | "tip" | "blog" | "basics";
+  category: "destination" | "guide" | "tip" | "basics";
   keywords?: string[];
 }
 
@@ -106,15 +106,10 @@ export const searchIndex: SearchItem[] = [
   { id: "visa", title: "Visa Guide", subtitle: "Do you need a visa for China?", href: "/plan-your-trip/visa", category: "tip", keywords: ["passport", "entry", "requirements", "144 hours", "visa free", "transit"] },
   { id: "cheatsheet", title: "China Cheat Sheet", subtitle: "Downloadable travel guide PDF", href: "/#cheat-sheet", category: "tip", keywords: ["pdf", "download", "guide", "quick", "reference", "free"] },
 
-  // Blog Posts
-  { id: "blog-esim", title: "Best eSIM for China 2025", subtitle: "Airalo vs Holafly vs China Unicom", href: "/blog/best-esim-china", category: "blog", keywords: ["esim", "internet", "airalo", "holafly", "data"] },
-  { id: "blog-vpn", title: "Best VPN for China 2025", subtitle: "ExpressVPN vs NordVPN vs Surfshark", href: "/blog/best-vpn-china", category: "blog", keywords: ["vpn", "privacy", "firewall", "expressvpn", "nordvpn"] },
-
   // Top-level Pages
   { id: "home", title: "Home", subtitle: "Trail of China — First-trip travel guide", href: "/", category: "guide", keywords: ["home", "start", "begin", "main"] },
   { id: "destinations-hub", title: "All Destinations", subtitle: "Explore China's best cities", href: "/destinations", category: "destination", keywords: ["cities", "places", "where", "go", "all"] },
   { id: "china-basics-hub", title: "China Basics", subtitle: "Essential prep knowledge", href: "/china-basics", category: "basics", keywords: ["basics", "prep", "prepare", "essential", "start"] },
   { id: "plan-hub", title: "Plan Your Trip", subtitle: "Itineraries and planning tools", href: "/plan-your-trip", category: "guide", keywords: ["plan", "trip", "itinerary", "route", "organize"] },
-  { id: "blog-hub", title: "Blog", subtitle: "Travel tips and insights", href: "/blog", category: "blog", keywords: ["blog", "articles", "news", "tips", "stories"] },
   { id: "interactive-map", title: "Interactive Map", subtitle: "Explore destinations on a map", href: "/interactive-map", category: "guide", keywords: ["map", "interactive", "explore", "visual", "location"] },
 ];

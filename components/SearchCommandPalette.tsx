@@ -8,7 +8,6 @@ import {
   MapPin,
   BookOpen,
   Lightbulb,
-  Newspaper,
   Settings,
   ChevronRight,
   Clock,
@@ -20,7 +19,6 @@ const categoryConfig = {
   destination: { label: "Destinations", icon: MapPin, color: "#af5d32" },
   guide: { label: "Guides", icon: BookOpen, color: "#1a3a4a" },
   tip: { label: "Tips", icon: Lightbulb, color: "#f97316" },
-  blog: { label: "Blog", icon: Newspaper, color: "#64748b" },
   basics: { label: "China Basics", icon: Settings, color: "#3b82f6" },
 };
 
@@ -192,7 +190,7 @@ export default function SearchCommandPalette() {
     grouped[item.category].push(item);
   }
 
-  const categoryOrder = ["destination", "basics", "guide", "tip", "blog"];
+  const categoryOrder = ["destination", "basics", "guide", "tip"];
   const orderedCategories = categoryOrder.filter((c) => grouped[c]?.length > 0);
 
   // Flat list for keyboard indexing
@@ -262,9 +260,7 @@ export default function SearchCommandPalette() {
                           ? "/destinations"
                           : cat === "basics"
                           ? "/china-basics"
-                          : cat === "guide"
-                          ? "/plan-your-trip"
-                          : "/blog"
+                          : "/plan-your-trip"
                       }
                       onClick={closeSearch}
                       className="px-3 py-1.5 rounded-full text-xs font-medium border border-[#ebe4d8] text-[#64748b] hover:bg-[#f5f1ea] hover:text-[#1a3a4a] transition-colors"
