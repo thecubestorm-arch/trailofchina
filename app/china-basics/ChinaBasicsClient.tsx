@@ -295,7 +295,7 @@ function SectionHeader({
         </div>
         {href && (
           <Link
-            href={href}
+            href="#"
             className="text-sm font-medium text-[#af5d32] hover:underline whitespace-nowrap self-end mb-1"
           >
             {hrefLabel}
@@ -320,7 +320,7 @@ function PhotoCard({
   icon: React.ElementType;
 }) {
   return (
-    <Link href={href} className="group block h-full">
+    <Link href="#" className="group block h-full">
       <div className="rounded-xl overflow-hidden border border-[#ebe4d8] border-t-2 border-t-[#af5d32] shadow-sm hover:shadow-md transition-shadow bg-white h-full">
         <div className="aspect-[4/3] bg-[#f5f1ea] relative overflow-hidden">
           <Image
@@ -347,7 +347,7 @@ function PrepareSection({ expanded = false }: { expanded?: boolean }) {
       {expanded && (
         <SectionHeader
           title="Prepare"
-          href="/china-basics/how-to-get-internet"
+          href="#"
         />
       )}
       <div

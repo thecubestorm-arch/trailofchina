@@ -2,7 +2,6 @@
 
 import Link from 'next/link'
 import { blogPosts } from '@/lib/blog-data'
-import RelatedArticles from '@/components/RelatedArticles'
 
 export default function BlogPage() {
   const featuredPost = blogPosts[0]
@@ -45,8 +44,8 @@ export default function BlogPage() {
         {/* Featured Post */}
         {featuredPost && (
           <div className="mb-12">
-            <Link href={`/blog/${featuredPost.slug}`} className="group block">
-              <div className="relative bg-[#f5f1ea] rounded-xl overflow-hidden border border-[#ebe4d8] hover:border-[#af5d32] transition-colors duration-200">
+            <div className="group block">
+              <div className="relative bg-[#f5f1ea] rounded-xl overflow-hidden border border-[#ebe4d8]">
                 <div className="md:flex">
                   <div className="md:w-1/2 relative h-64 md:h-auto">
                     <img
@@ -58,18 +57,14 @@ export default function BlogPage() {
                   </div>
                   <div className="md:w-1/2 p-6 md:p-10 flex flex-col justify-center">
                     <div className="flex flex-wrap items-center gap-3 mb-4">
-                      <Link
-                        href={`/blog/category/${categorySlug(featuredPost.category)}`}
-                        className="text-[#af5d32] uppercase tracking-[0.2em] text-xs font-semibold hover:underline"
-                        onClick={(e) => e.stopPropagation()}
-                      >
+                      <span className="text-[#af5d32] uppercase tracking-[0.2em] text-xs font-semibold">
                         {featuredPost.category}
-                      </Link>
+                      </span>
                       <span className="text-[#5d6a73] text-sm">
                         {formatDate(featuredPost.date)} · {featuredPost.readingTime}
                       </span>
                     </div>
-                    <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#1a3a4a] mb-3 group-hover:text-[#af5d32] transition-colors duration-200">
+                    <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#1a3a4a] mb-3">
                       {featuredPost.title}
                     </h2>
                     <p className="text-[#5d6a73] mb-4 leading-relaxed">
@@ -88,7 +83,7 @@ export default function BlogPage() {
                   </div>
                 </div>
               </div>
-            </Link>
+            </div>
           </div>
         )}
 
@@ -96,30 +91,26 @@ export default function BlogPage() {
         <div className="grid md:grid-cols-2 gap-8">
           {remainingPosts.map((post) => (
             <div key={post.slug} className="group">
-              <Link href={`/blog/${post.slug}`} className="block">
-                <div className="bg-[#f5f1ea] rounded-xl overflow-hidden border border-[#ebe4d8] hover:border-[#af5d32] transition-colors duration-200 h-full flex flex-col">
+              <div className="block">
+                <div className="bg-[#f5f1ea] rounded-xl overflow-hidden border border-[#ebe4d8] h-full flex flex-col">
                   <div className="relative h-48 overflow-hidden">
                     <img
                       src={post.imageUrl}
                       alt={post.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover"
                       loading="lazy"
                     />
                   </div>
                   <div className="p-6 flex flex-col flex-1">
                     <div className="flex flex-wrap items-center gap-3 mb-3">
-                      <Link
-                        href={`/blog/category/${categorySlug(post.category)}`}
-                        className="text-[#af5d32] uppercase tracking-[0.2em] text-xs font-semibold hover:underline"
-                        onClick={(e) => e.stopPropagation()}
-                      >
+                      <span className="text-[#af5d32] uppercase tracking-[0.2em] text-xs font-semibold">
                         {post.category}
-                      </Link>
+                      </span>
                       <span className="text-[#5d6a73] text-sm">
                         {formatDate(post.date)} · {post.readingTime}
                       </span>
                     </div>
-                    <h2 className="font-serif text-xl md:text-2xl font-bold text-[#1a3a4a] mb-2 group-hover:text-[#af5d32] transition-colors duration-200">
+                    <h2 className="font-serif text-xl md:text-2xl font-bold text-[#1a3a4a] mb-2">
                       {post.title}
                     </h2>
                     <p className="text-[#5d6a73] mb-4 leading-relaxed flex-1">
@@ -142,18 +133,24 @@ export default function BlogPage() {
                     </div>
                   </div>
                 </div>
-              </Link>
+              </div>
             </div>
           ))}
         </div>
 
-        <div className="mt-12">
-          <RelatedArticles articles={[
-            { title: 'China Basics', description: 'Essential knowledge every traveler needs — visas, apps, payments, and internet', href: '/china-basics/' },
-            { title: 'Destinations', description: 'Explore Beijing, Shanghai, Chengdu, Xi\'an, Chongqing, and more', href: '/destinations/' },
-            { title: 'Plan Your Trip', description: 'Itinerary planner and pre-planned trips for every travel style', href: '/plan-your-trip/' },
-            { title: 'How China Differs', description: 'What surprises first-time visitors the most', href: '/china-basics/how-china-differs/' }
-          ]} />
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          <Link href="/china-basics/" className="block p-6 bg-[#f5f1ea] rounded-xl border border-[#ebe4d8] hover:border-[#af5d32] transition-colors">
+            <h3 className="font-bold text-[#1a3a4a] mb-1">China Basics</h3>
+            <p className="text-sm text-[#5d6a73]">Essential knowledge every traveler needs — visas, apps, payments, and internet</p>
+          </Link>
+          <Link href="/destinations/" className="block p-6 bg-[#f5f1ea] rounded-xl border border-[#ebe4d8] hover:border-[#af5d32] transition-colors">
+            <h3 className="font-bold text-[#1a3a4a] mb-1">Destinations</h3>
+            <p className="text-sm text-[#5d6a73]">Explore Beijing, Shanghai, Chengdu, Xi&apos;an, Chongqing, and more</p>
+          </Link>
+          <Link href="/plan-your-trip/" className="block p-6 bg-[#f5f1ea] rounded-xl border border-[#ebe4d8] hover:border-[#af5d32] transition-colors">
+            <h3 className="font-bold text-[#1a3a4a] mb-1">Plan Your Trip</h3>
+            <p className="text-sm text-[#5d6a73]">Itinerary planner and pre-planned trips for every travel style</p>
+          </Link>
         </div>
       </div>
     </div>

@@ -182,7 +182,7 @@ export default function PlanYourTripClient() {
                 {durationRouteCards.map((route) => (
                   <Link
                     key={route.badge}
-                    href={route.href}
+                    href="#"
                     className="group overflow-hidden rounded-xl border-l-4 border-transparent bg-white text-[#1a3a4a] shadow-[0_16px_36px_rgba(8,19,26,0.22)] transition-all duration-200 hover:-translate-y-1 hover:border-[#af5d32]"
                   >
                     <img src={route.image} alt={route.alt} className="h-32 w-full object-cover" />
@@ -199,7 +199,7 @@ export default function PlanYourTripClient() {
               </div>
 
               <Link
-                href="/plan-your-trip/travel-planner"
+                href="#"
                 className="inline-flex min-h-[44px] items-center gap-2 self-start font-semibold text-[#f0c9b1] transition-colors hover:text-white md:min-h-0"
               >
                 Or customize your own route
@@ -220,7 +220,7 @@ export default function PlanYourTripClient() {
                 {popularRouteCards.map((route) => (
                   <Link
                     key={route.badge}
-                    href={route.href}
+                    href="#"
                     className="group overflow-hidden rounded-xl border border-[#ebe4d8] bg-white text-[#1a3a4a] shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-[#af5d32] hover:shadow-md"
                   >
                     <div className="p-6">
@@ -247,7 +247,7 @@ export default function PlanYourTripClient() {
             {tools.map((tool) => (
               <Link
                 key={tool.href}
-                href={tool.href}
+                href="#"
                 className="group relative overflow-hidden rounded-xl border border-[#ebe4d8] p-6 shadow-sm transition-colors duration-200 hover:bg-[#fdf8f3]"
               >
                 <div
@@ -306,7 +306,7 @@ export default function PlanYourTripClient() {
                 <h2 className="mt-3 font-serif text-3xl font-bold">Not sure where to start?</h2>
               </div>
               <Link
-                href="/plan-your-trip/preplanned-trips"
+                href="#"
                 className="inline-flex min-h-[44px] items-center gap-2 text-base font-semibold text-[#f5f1ea] transition-colors hover:text-[#f0c9b1] md:min-h-0"
               >
                 Browse our preplanned trips

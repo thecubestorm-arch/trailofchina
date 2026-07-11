@@ -33,7 +33,6 @@ function MapReadyGuard({ children }: { children: React.ReactNode }) {
   )
 }
 import L from 'leaflet'
-import Link from 'next/link'
 import { MapPin, List, ArrowRight, Lightbulb, ShieldCheck, X, ChevronLeft, ChevronRight } from 'lucide-react'
 import 'leaflet/dist/leaflet.css'
 import FooterCTA from '@/components/FooterCTA'
@@ -873,9 +872,9 @@ export default function DestinationsMapInner() {
       <div className={`max-w-6xl mx-auto px-4 py-8 pb-28 md:pb-8 ${viewMode === 'split' ? 'md:hidden' : ''}`}>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {cities.map((city) => (
-            <Link
+            <div
               key={city.key}
-              href={city.href}
+              
               className="group rounded-xl overflow-hidden border border-[#ebe4d8] bg-white hover:shadow-lg transition-all duration-300 relative"
               onMouseEnter={() => handleCityMouseEnter(city.key)}
               onMouseLeave={handleCityMouseLeave}
@@ -944,7 +943,7 @@ export default function DestinationsMapInner() {
                   Explore <ArrowRight size={14} />
                 </span>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
 
@@ -1000,9 +999,9 @@ export default function DestinationsMapInner() {
           <div className="w-[calc(100vw-2rem)] max-w-[380px] flex-shrink-0 overflow-y-auto pr-2 sm:w-[380px]" style={{ scrollbarWidth: 'thin' }}>
             <div className="space-y-3">
               {cities.map((city) => (
-                <Link
+                <div
                   key={city.key}
-                  href={city.href}
+                  
                   className={`group flex items-start gap-3 rounded-xl p-3 border transition-all duration-200 ${
                     hoveredCity === city.key
                       ? 'border-[#af5d32] bg-[#fdf8f3] shadow-md'
@@ -1032,7 +1031,7 @@ export default function DestinationsMapInner() {
                     <p className="text-xs text-[#64748b] mt-0.5 line-clamp-1">{city.hook}</p>
                   </div>
                   <ArrowRight size={14} className="text-[#af5d32] flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity mt-2" />
-                </Link>
+                </div>
               ))}
             </div>
 
