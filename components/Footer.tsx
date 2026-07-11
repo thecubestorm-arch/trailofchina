@@ -20,10 +20,6 @@ export default function Footer() {
             <Link href="/plan-your-trip" className="inline-flex min-h-[44px] items-center rounded-md px-2 hover:bg-[var(--surface-strong)] hover:text-[#af5d32] transition-colors">
               Plan Your Trip
             </Link>
-            <span aria-hidden="true" className="hidden sm:inline">·</span>
-            <Link href="/blog" className="inline-flex min-h-[44px] items-center rounded-md px-2 hover:bg-[var(--surface-strong)] hover:text-[#af5d32] transition-colors">
-              Blog
-            </Link>
           </nav>
         </div>
 
@@ -58,10 +54,6 @@ export default function Footer() {
             <span aria-hidden="true" className="hidden sm:inline">·</span>
             <Link href="/privacy" className="inline-flex min-h-[44px] items-center rounded-md px-2 hover:bg-[var(--surface-strong)] hover:text-[#af5d32] transition-colors">
               Privacy
-            </Link>
-            <span aria-hidden="true" className="hidden sm:inline">·</span>
-            <Link href="/cookie-policy" className="inline-flex min-h-[44px] items-center rounded-md px-2 hover:bg-[var(--surface-strong)] hover:text-[#af5d32] transition-colors">
-              Cookie Policy
             </Link>
           </div>
         </div>

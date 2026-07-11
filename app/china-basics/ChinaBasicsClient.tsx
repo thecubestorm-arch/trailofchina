@@ -1,700 +1,564 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import {
-  Wifi,
-  CreditCard,
-  TrainFront,
-  Smartphone,
-  ShieldCheck,
-  Lightbulb,
-  Map,
-  Car,
-  ArrowRight,
-  Search,
-  X,
-  SlidersHorizontal,
-} from "lucide-react";
+import { Check, AlertTriangle, ExternalLink, Info } from "lucide-react";
 
-import FooterCTA from "@/components/FooterCTA";
-
-// ─── Types ────────────────────────────────────────────────────────
-
-type Tab = "overview" | "prepare" | "apps-money" | "getting-around" | "know-before";
-type FilterCategory = "all" | "prepare" | "apps-money" | "getting-around" | "know-before";
-
-interface BasicsItem {
-  name: string;
-  subtitle: string;
-  href: string;
-  icon: React.ElementType;
-  imageSeed: string;
-  category: FilterCategory;
-  topics: string[];
-}
-
-// ─── Data ───────────────────────────────────────────────────────
-
-const tabs = [
-  { id: "overview" as Tab, label: "Overview", mobileLabel: "Overview" },
-  { id: "prepare" as Tab, label: "Prepare", mobileLabel: "Prepare" },
-  { id: "apps-money" as Tab, label: "Apps & Money", mobileLabel: "Apps" },
-  { id: "getting-around" as Tab, label: "Getting Around", mobileLabel: "Transport" },
-  { id: "know-before" as Tab, label: "Know Before You Go", mobileLabel: "Tips" },
-];
-
-const quickInfoPills = [
-  { icon: Wifi, label: "", text: "VPN required" },
-  { icon: CreditCard, label: "", text: "Cashless society" },
-  { icon: ShieldCheck, label: "", text: "15–30 days visa-free" },
-  { icon: Smartphone, label: "", text: "Download apps before you go" },
-];
-
-const prepareItems: BasicsItem[] = [
-  {
-    name: "Visa Guide",
-    subtitle: "Most Western nationals: 15–30 day visa-free or e-visa.",
-    href: "/china-basics/how-china-differs/visa-guide",
-    icon: ShieldCheck,
-    imageSeed: "china-visa-passport",
-    category: "prepare",
-    topics: ["Visa", "Packing"],
-  },
-  {
-    name: "eSIM & Internet",
-    subtitle: "No internet = nothing works in China. Set up eSIM before you fly.",
-    href: "/china-basics/how-to-get-internet",
-    icon: Wifi,
-    imageSeed: "china-esim-phone",
-    category: "prepare",
-    topics: ["eSIM", "VPN"],
-  },
-  {
-    name: "VPN",
-    subtitle: "Google, WhatsApp, Instagram blocked. Install VPN before landing.",
-    href: "/china-basics/what-apps-to-use/vpn",
-    icon: Smartphone,
-    imageSeed: "china-vpn-laptop",
-    category: "prepare",
-    topics: ["VPN"],
-  },
-  {
-    name: "Airalo eSIM",
-    subtitle: "Best for short visits. Activate in 5 minutes.",
-    href: "/china-basics/how-to-get-internet/airalo-esim",
-    icon: Wifi,
-    imageSeed: "china-airalo-esim",
-    category: "prepare",
-    topics: ["eSIM"],
-  },
-  {
-    name: "Holafly eSIM",
-    subtitle: "Unlimited data plans for 7–30 days.",
-    href: "/china-basics/how-to-get-internet/holafly-esim",
-    icon: Wifi,
-    imageSeed: "china-holafly-esim",
-    category: "prepare",
-    topics: ["eSIM"],
-  },
-];
-
-const appsMoneyItems: BasicsItem[] = [
-  {
-    name: "Alipay",
-    subtitle: "Your wallet for everything. Pay, ride, order.",
-    href: "/china-basics/what-apps-to-use/alipay",
-    icon: CreditCard,
-    imageSeed: "china-alipay-payment",
-    category: "apps-money",
-    topics: ["Alipay", "WeChat Pay"],
-  },
-  {
-    name: "WeChat Pay",
-    subtitle: "The other payment app. Set up both.",
-    href: "/china-basics/what-apps-to-use/wechat-pay",
-    icon: CreditCard,
-    imageSeed: "china-wechat-qr",
-    category: "apps-money",
-    topics: ["WeChat Pay", "Alipay"],
-  },
-  {
-    name: "Payment Overview",
-    subtitle: "Cashless society: how to pay as a foreigner.",
-    href: "/china-basics/what-apps-to-use/payment",
-    icon: CreditCard,
-    imageSeed: "china-payment-cashless",
-    category: "apps-money",
-    topics: ["Alipay", "WeChat Pay"],
-  },
-  {
-    name: "Maps",
-    subtitle: "Google Maps doesn't work. Use Amap or Apple Maps.",
-    href: "/china-basics/what-apps-to-use/maps",
-    icon: Map,
-    imageSeed: "china-maps-navigation",
-    category: "apps-money",
-    topics: [],
-  },
-  {
-    name: "DiDi",
-    subtitle: "China's Uber. English interface available.",
-    href: "/china-basics/what-apps-to-use/didi",
-    icon: Car,
-    imageSeed: "china-didi-taxi",
-    category: "apps-money",
-    topics: ["DiDi", "Metro"],
-  },
-  {
-    name: "Trip.com",
-    subtitle: "Book trains, flights, hotels all in one app.",
-    href: "/china-basics/what-apps-to-use/trip-com",
-    icon: TrainFront,
-    imageSeed: "china-trip-booking",
-    category: "apps-money",
-    topics: ["12306", "High-Speed Rail"],
-  },
-  {
-    name: "WeChat",
-    subtitle: "Communication app. Everyone in China uses it.",
-    href: "/china-basics/what-apps-to-use/communication",
-    icon: Smartphone,
-    imageSeed: "china-wechat-chat",
-    category: "apps-money",
-    topics: ["WeChat Pay"],
-  },
-];
-
-const gettingAroundItems: BasicsItem[] = [
-  {
-    name: "Train Tickets (12306)",
-    subtitle: "Book bullet train tickets. The official booking platform.",
-    href: "/china-basics/12306",
-    icon: TrainFront,
-    imageSeed: "china-train-station",
-    category: "getting-around",
-    topics: ["12306", "High-Speed Rail"],
-  },
-  {
-    name: "Getting Around Overview",
-    subtitle: "Metro, taxi, DiDi, bus — how China moves.",
-    href: "/china-basics",
-    icon: TrainFront,
-    imageSeed: "china-transport-overview",
-    category: "getting-around",
-    topics: ["Metro", "DiDi", "High-Speed Rail"],
-  },
-  {
-    name: "High-Speed Rail",
-    subtitle: "300+ km/h bullet trains between cities.",
-    href: "/china-basics/train",
-    icon: TrainFront,
-    imageSeed: "china-bullet-train",
-    category: "getting-around",
-    topics: ["High-Speed Rail", "12306"],
-  },
-  {
-    name: "Flights",
-    subtitle: "Domestic flights for longer distances.",
-    href: "/china-basics/plane",
-    icon: TrainFront,
-    imageSeed: "china-airplane",
-    category: "getting-around",
-    topics: [],
-  },
-  {
-    name: "Metro",
-    subtitle: "Excellent subway systems in major cities.",
-    href: "/china-basics/metro-subway",
-    icon: TrainFront,
-    imageSeed: "china-metro-subway",
-    category: "getting-around",
-    topics: ["Metro"],
-  },
-];
-
-const knowBeforeItems: BasicsItem[] = [
-  {
-    name: "Censorship",
-    subtitle: "What's blocked and how to prepare before you go.",
-    href: "/china-basics/how-china-differs/censorship",
-    icon: ShieldCheck,
-    imageSeed: "china-great-firewall",
-    category: "know-before",
-    topics: ["VPN", "Safety"],
-  },
-  {
-    name: "Cultural Differences",
-    subtitle: "Behavior, etiquette, and habits that differ from the West.",
-    href: "/china-basics/how-china-differs/cultural-differences",
-    icon: Lightbulb,
-    imageSeed: "china-culture-tea",
-    category: "know-before",
-    topics: ["Safety"],
-  },
-  {
-    name: "Safety",
-    subtitle: "Is China safe? Short answer: very.",
-    href: "/china-basics/before-you-go/is-china-safe",
-    icon: ShieldCheck,
-    imageSeed: "china-safe-street",
-    category: "know-before",
-    topics: ["Safety"],
-  },
-  {
-    name: "Passport Rules",
-    subtitle: "Always carry your passport. Hotels and trains require it.",
-    href: "/china-basics/how-china-differs/passport-rules",
-    icon: ShieldCheck,
-    imageSeed: "china-passport-rules",
-    category: "know-before",
-    topics: ["Visa", "Safety"],
-  },
-];
-
-const allItems: BasicsItem[] = [
-  ...prepareItems,
-  ...appsMoneyItems,
-  ...gettingAroundItems,
-  ...knowBeforeItems,
-];
-
-const topicChips = [
-  "All",
-  "Alipay",
-  "WeChat Pay",
-  "VPN",
-  "eSIM",
-  "Visa",
-  "12306",
-  "High-Speed Rail",
-  "DiDi",
-  "Metro",
-  "Packing",
-  "Safety",
-];
-
-// ─── Shared Components ──────────────────────────────────────────
-
-function SectionHeader({
+function SectionCard({
+  emoji,
   title,
-  href,
-  hrefLabel = "See all →",
+  children,
 }: {
+  emoji: string;
   title: string;
-  href?: string;
-  hrefLabel?: string;
+  children: React.ReactNode;
 }) {
   return (
-    <div className="mb-4 md:mb-6">
-      <div className="flex items-center justify-between">
-        <div>
-          <div className="w-8 h-1 bg-[#af5d32] rounded-full mb-3"></div>
-          <h2 className="text-2xl md:text-3xl font-bold text-[#1a3a4a]">{title}</h2>
-        </div>
-        {href && (
-          <Link
-            href="#"
-            className="text-sm font-medium text-[#af5d32] hover:underline whitespace-nowrap self-end mb-1"
-          >
-            {hrefLabel}
-          </Link>
-        )}
+    <section className="bg-white rounded-xl border border-[#ebe4d8] shadow-sm overflow-hidden">
+      <div className="px-5 py-4 md:px-6 md:py-5 border-b border-[#ebe4d8] bg-[#faf8f4]">
+        <h2 className="text-xl md:text-2xl font-bold text-[#1a3a4a] flex items-center gap-3">
+          <span className="text-2xl md:text-3xl" aria-hidden="true">
+            {emoji}
+          </span>
+          {title}
+        </h2>
       </div>
+      <div className="px-5 py-5 md:px-6 md:py-6">{children}</div>
+    </section>
+  );
+}
+
+function TipBox({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="flex items-start gap-2.5 bg-[#fff8f0] border border-[#f0e0cc] rounded-lg px-4 py-3 text-sm text-[#1a3a4a]">
+      <Info size={16} className="text-[#af5d32] mt-0.5 flex-shrink-0" />
+      <div>{children}</div>
     </div>
   );
 }
 
-function PhotoCard({
-  href,
-  name,
-  subtitle,
-  imageSeed,
-  icon: Icon,
-}: {
-  href: string;
-  name: string;
-  subtitle: string;
-  imageSeed: string;
-  icon: React.ElementType;
-}) {
+function WarningBox({ children }: { children: React.ReactNode }) {
   return (
-    <Link href="#" className="group block h-full">
-      <div className="rounded-xl overflow-hidden border border-[#ebe4d8] border-t-2 border-t-[#af5d32] shadow-sm hover:shadow-md transition-shadow bg-white h-full">
-        <div className="aspect-[4/3] bg-[#f5f1ea] relative overflow-hidden">
-          <Image
-            src={`https://picsum.photos/seed/${imageSeed}/400/300`}
-            alt={name}
-            fill
-            className="object-cover group-hover:scale-105 transition-transform duration-300"
-          />
-        </div>
-        <div className="p-4">
-          <h3 className="font-bold text-[#1a3a4a] group-hover:text-[#af5d32] transition-colors mb-0.5">{name}</h3>
-          <p className="text-sm text-[#64748b] line-clamp-2">{subtitle}</p>
-        </div>
-      </div>
-    </Link>
+    <div className="flex items-start gap-2.5 bg-[#fff5f5] border border-[#f0d0d0] rounded-lg px-4 py-3 text-sm text-[#1a3a4a]">
+      <AlertTriangle size={16} className="text-[#c53030] mt-0.5 flex-shrink-0" />
+      <div>{children}</div>
+    </div>
   );
 }
-
-// ─── Section Components ────────────────────────────────────────
-
-function PrepareSection({ expanded = false }: { expanded?: boolean }) {
-  return (
-    <section>
-      {expanded && (
-        <SectionHeader
-          title="Prepare"
-          href="#"
-        />
-      )}
-      <div
-        className={
-          expanded
-            ? "grid grid-cols-2 sm:grid-cols-4 gap-3"
-            : "relative"
-        }
-      >
-        {!expanded && (
-          <>
-            <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 -mx-4 px-4 scrollbar-hide">
-              {prepareItems.map((item) => (
-                <div
-                  key={item.name}
-                  className="w-[calc(85vw-2rem)] max-w-[260px] flex-shrink-0 snap-start sm:max-w-[280px] md:w-[300px] md:max-w-none"
-                >
-                  <PhotoCard {...item} />
-                </div>
-              ))}
-            </div>
-            <div className="absolute right-0 top-0 bottom-4 w-16 bg-gradient-to-l from-white to-transparent pointer-events-none md:hidden" />
-          </>
-        )}
-        {expanded &&
-          prepareItems.map((item) => (
-            <PhotoCard key={item.name} {...item} />
-          ))}
-      </div>
-    </section>
-  );
-}
-
-function AppsMoneySection({ expanded = false }: { expanded?: boolean }) {
-  return (
-    <section>
-      {expanded && (
-        <SectionHeader
-          title="Apps & Money"
-          href="/china-basics"
-        />
-      )}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-        {appsMoneyItems.map((item) => (
-          <PhotoCard key={item.name} {...item} />
-        ))}
-      </div>
-    </section>
-  );
-}
-
-function GettingAroundSection({ expanded = false }: { expanded?: boolean }) {
-  return (
-    <section>
-      {expanded && (
-        <SectionHeader
-          title="Getting Around"
-          href="/china-basics"
-        />
-      )}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-        {gettingAroundItems.map((item) => (
-          <PhotoCard key={item.name} {...item} />
-        ))}
-      </div>
-    </section>
-  );
-}
-
-function KnowBeforeSection({ expanded = false }: { expanded?: boolean }) {
-  return (
-    <section>
-      {expanded && (
-        <SectionHeader
-          title="Know Before You Go"
-          href="/china-basics"
-        />
-      )}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-        {knowBeforeItems.map((item) => (
-          <PhotoCard key={item.name} {...item} />
-        ))}
-      </div>
-    </section>
-  );
-}
-
-// ─── Main Component ─────────────────────────────────────────────
 
 export default function ChinaBasicsClient() {
-  const [activeTab, setActiveTab] = useState<Tab>("overview");
-  const [searchQuery, setSearchQuery] = useState("");
-  const [activeFilter, setActiveFilter] = useState<string>("all");
-  const isFiltering = searchQuery.length > 0 || activeFilter !== "all";
-
-  // No longer hiding main nav — always show hamburger menu
-  // useEffect(() => {
-  //   document.body.setAttribute('data-hide-main-nav', 'true');
-  //   return () => {
-  //     document.body.removeAttribute('data-hide-main-nav');
-  //   };
-  // }, []);
-
-  // Filter items based on search + active filter
-  const filteredItems = allItems.filter((item) => {
-    const matchesSearch = item.name.toLowerCase().includes(searchQuery.toLowerCase()) || item.subtitle.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesFilter = activeFilter === "all" || item.topics.includes(activeFilter) || item.name.toLowerCase().includes(activeFilter.toLowerCase()) || item.subtitle.toLowerCase().includes(activeFilter.toLowerCase());
-    return matchesSearch && matchesFilter;
-  });
-
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#f5f1ea]">
       {/* ========== HERO ========== */}
-      <section className="relative w-full">
-        <div className="relative h-[380px] md:h-[500px] w-full overflow-hidden">
-          <Image
-            src="https://picsum.photos/seed/china-travel-prepare/1200/500"
-            alt="China travel preparation"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#1a3a4a]/90 via-[#1a3a4a]/40 to-transparent" />
-          <div className="absolute inset-0 flex flex-col justify-end px-4 pb-8 md:pb-12 max-w-6xl mx-auto w-full">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-2 md:mb-3 tracking-tight">
-              China Basics
-            </h1>
-            <p className="text-white/90 text-base md:text-lg max-w-xl">
-              Everything you need to know before your first trip
-            </p>
-          </div>
-        </div>
-
-        {/* Quick Info Pills */}
-        <div className="bg-[#f5f1ea] border-b border-[#ebe4d8]">
-          <div className="max-w-6xl mx-auto px-4 py-3 md:py-4">
-            <div className="flex flex-wrap gap-2 md:gap-3">
-              {quickInfoPills.map((pill) => (
-                <span
-                  key={pill.text}
-                  className="inline-flex items-center gap-1.5 text-xs md:text-sm text-[#1a3a4a] bg-white border border-[#ebe4d8] rounded-full px-3 py-1.5"
-                >
-                  <pill.icon size={14} className="text-[#1a3a4a]" />
-                  {pill.label && (
-                    <span className="font-semibold">{pill.label}</span>
-                  )}
-                  <span>{pill.text}</span>
-                </span>
-              ))}
-            </div>
-          </div>
+      <section className="bg-[#1a3a4a] text-white">
+        <div className="max-w-3xl mx-auto px-4 py-14 md:py-20 text-center">
+          <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
+            China Basics — Everything You Need to Know
+          </h1>
+          <p className="text-white/80 text-base md:text-lg max-w-xl mx-auto">
+            The complete first-timer&apos;s guide: visas, apps, money, transport, and culture.
+          </p>
         </div>
       </section>
 
-      {/* ========== STICKY TAB NAV + SEARCH/FILTER ========== */}
-      <div className="sticky top-[var(--site-nav-height,4rem)] z-[40] bg-white border-b border-[#ebe4d8] shadow-sm">
-        {/* Tab Nav */}
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="flex overflow-x-auto scrollbar-hide">
-            {tabs.map((tab) => {
-              const isActive = activeTab === tab.id;
-              return (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`
-                    px-3 md:px-4 py-2 text-sm whitespace-nowrap min-h-[44px] flex items-center transition-colors cursor-pointer
-                    ${
-                      isActive
-                        ? "text-[#1a3a4a] font-semibold bg-[#f5f1ea]/50 rounded-t-lg border-b-[3px] border-[#af5d32]"
-                        : "text-[#64748b] font-medium hover:text-[#1a3a4a] border-b-[3px] border-transparent"
-                    }
-                  `}
-                >
-                  <span className="hidden md:inline">{tab.label}</span>
-                  <span className="md:hidden">{tab.mobileLabel}</span>
-                </button>
-              );
-            })}
-          </div>
-        </div>
+      {/* ========== MAIN CONTENT ========== */}
+      <main className="max-w-3xl mx-auto px-4 py-8 md:py-12 space-y-6 md:space-y-8">
+        {/* Sektion 1: Visa & Entry */}
+        <SectionCard emoji="🛂" title="Visa & Entry">
+          <div className="space-y-4 text-[#1a3a4a]">
+            <p className="text-sm md:text-base leading-relaxed">
+              Since late 2023/2024, China offers{" "}
+              <strong>visa-free entry for 15–30 days</strong> for citizens of many
+              European countries, including Switzerland. The exact duration and eligible
+              nationalities can change, so double-check shortly before departure.
+            </p>
 
-        {/* Filter Bar */}
-        <div className="border-t border-[#ebe4d8]">
-          <div className="max-w-6xl mx-auto px-4 py-3">
-            <div className="flex items-center gap-3 mb-3">
-              <SlidersHorizontal className="text-[#64748b] flex-shrink-0" size={20} />
-              <input
-                type="text"
-                placeholder="Filter topics..."
-                className="flex-1 text-sm text-[#1a3a4a] placeholder:text-[#64748b]/60 outline-none bg-transparent min-h-[44px]"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-              {isFiltering && (
-                <button
-                  onClick={() => { setSearchQuery(""); setActiveFilter("all"); }}
-                  className="flex min-h-[44px] items-center gap-1 rounded-md px-2 text-xs font-medium text-[#af5d32] hover:bg-[#af5d32]/10 hover:underline"
-                >
-                  <X size={14} /> Clear
-                </button>
-              )}
+            <div className="bg-[#f5f1ea] rounded-lg px-4 py-3">
+              <h3 className="font-semibold text-sm mb-2 flex items-center gap-2">
+                <Check size={16} className="text-[#af5d32]" />
+                What You Need at Entry
+              </h3>
+              <ul className="space-y-1.5 text-sm">
+                <li className="flex items-start gap-2">
+                  <span className="text-[#af5d32] mt-0.5">•</span>
+                  <span>
+                    A passport valid for{" "}
+                    <strong>at least 6 months</strong> beyond your planned stay
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#af5d32] mt-0.5">•</span>
+                  <span>A confirmed return or onward flight ticket</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#af5d32] mt-0.5">•</span>
+                  <span>Proof of hotel booking or accommodation address</span>
+                </li>
+              </ul>
             </div>
-            <div className="flex overflow-x-auto gap-2 pb-2 scrollbar-hide">
-              {topicChips.map((chip) => (
-                <button
-                  key={chip}
-                  onClick={() => setActiveFilter(chip === "All" ? "all" : chip)}
-                  className={`px-4 py-2 min-h-[44px] text-xs font-medium rounded-full whitespace-nowrap transition-colors ${
-                    (chip === "All" && activeFilter === "all") || activeFilter === chip
-                      ? "bg-[#af5d32] text-white"
-                      : "bg-[#f5f1ea] text-[#1a3a4a] border border-[#ebe4d8] hover:border-[#af5d32]"
+
+            <p className="text-sm md:text-base leading-relaxed">
+              If you need a longer stay, apply for an{" "}
+              <strong>e-Visa (L-Visa)</strong> online before your trip. Processing
+              typically takes 4–7 business days.
+            </p>
+
+            <p className="text-sm md:text-base leading-relaxed">
+              At the border, you&apos;ll have your{" "}
+              <strong>fingerprints scanned</strong>. China no longer stamps passports
+              at many entry points — everything is handled electronically.
+            </p>
+
+            <WarningBox>
+              <strong>Important:</strong> Your hotel is legally required to register
+              you with the police. They will scan your passport at check-in. If you
+              stay in a private apartment (e.g., Airbnb), make sure the host handles
+              this registration — or do it yourself at the nearest police station
+              within 24 hours.
+            </WarningBox>
+          </div>
+        </SectionCard>
+
+        {/* Sektion 2: Internet & Connectivity */}
+        <SectionCard emoji="📶" title="Internet & Connectivity">
+          <div className="space-y-4 text-[#1a3a4a]">
+            <p className="text-sm md:text-base leading-relaxed">
+              China operates the{" "}
+              <strong>Great Firewall</strong> — a nationwide internet censorship
+              system. Google, Gmail, YouTube, WhatsApp, Instagram, Facebook, X/Twitter,
+              and many Western news sites are completely blocked.
+            </p>
+
+            <p className="text-sm md:text-base leading-relaxed">
+              Without preparation, you will land in China and have no access to the
+              services you rely on. Here&apos;s how to stay connected:
+            </p>
+
+            <div className="bg-[#f5f1ea] rounded-lg px-4 py-3 space-y-3">
+              <h3 className="font-semibold text-sm">Two Ways to Get Online</h3>
+
+              <div className="space-y-1">
+                <p className="text-sm font-medium">1. eSIM (Recommended)</p>
+                <p className="text-sm text-[#64748b]">
+                  Buy and activate before you fly. No physical SIM needed.
+                </p>
+                <div className="flex flex-wrap gap-2 pt-1">
+                  <a
+                    href="https://www.airalo.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-sm text-[#af5d32] hover:underline"
+                  >
+                    Airalo <ExternalLink size={12} />
+                  </a>
+                  <a
+                    href="https://www.holafly.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-sm text-[#af5d32] hover:underline"
+                  >
+                    Holafly <ExternalLink size={12} />
+                  </a>
+                </div>
+              </div>
+
+              <div className="space-y-1">
+                <p className="text-sm font-medium">2. Local Chinese SIM</p>
+                <p className="text-sm text-[#64748b]">
+                  Cheaper data, but requires passport registration at a carrier store
+                  (China Mobile, China Unicom, China Telecom).
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-[#f5f1ea] rounded-lg px-4 py-3 space-y-2">
+              <h3 className="font-semibold text-sm">VPN — Install Before You Fly</h3>
+              <p className="text-sm text-[#64748b]">
+                VPN websites are blocked in China. Download and test your VPN at home.
+                Recommended providers:
+              </p>
+              <div className="flex flex-wrap gap-3 pt-1">
+                <a
+                  href="https://www.expressvpn.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-sm text-[#af5d32] hover:underline"
+                >
+                  ExpressVPN <ExternalLink size={12} />
+                </a>
+                <a
+                  href="https://nordvpn.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-sm text-[#af5d32] hover:underline"
+                >
+                  NordVPN <ExternalLink size={12} />
+                </a>
+              </div>
+            </div>
+
+            <WarningBox>
+              <strong>Test your VPN before departure.</strong> Make sure it connects
+              reliably. Some providers get blocked — have a backup ready.
+            </WarningBox>
+
+            <div className="bg-[#f5f1ea] rounded-lg px-4 py-3 space-y-2">
+              <h3 className="font-semibold text-sm">Essential Apps to Download</h3>
+              <ul className="space-y-1.5 text-sm">
+                <li className="flex items-start gap-2">
+                  <span className="text-[#af5d32] mt-0.5">•</span>
+                  <span>
+                    <strong>WeChat</strong> — The everything app. Messaging, payments,
+                    mini-programs, train tickets, food delivery. Everyone in China uses it.
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#af5d32] mt-0.5">•</span>
+                  <span>
+                    <strong>Alipay</strong> — Your digital wallet. Pay for everything
+                    with a QR code.
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#af5d32] mt-0.5">•</span>
+                  <span>
+                    <strong>Baidu Maps</strong> — Google Maps does not work in China.
+                    Baidu Maps is accurate and reliable.
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </SectionCard>
+
+        {/* Sektion 3: Money & Payments */}
+        <SectionCard emoji="💳" title="Money & Payments">
+          <div className="space-y-4 text-[#1a3a4a]">
+            <p className="text-sm md:text-base leading-relaxed">
+              China is essentially a{" "}
+              <strong>cashless society</strong>. Almost everywhere — from street food
+              vendors to high-end malls — accepts payment via QR code. Cash is rarely
+              used and often not accepted at all.
+            </p>
+
+            <WarningBox>
+              <strong>Foreign credit cards</strong> (Visa, Mastercard) are rarely
+              accepted outside expensive hotels and some international chains. Do not
+              rely on them.
+            </WarningBox>
+
+            <div className="bg-[#f5f1ea] rounded-lg px-4 py-3 space-y-3">
+              <h3 className="font-semibold text-sm">How to Pay as a Foreigner</h3>
+
+              <div className="space-y-1">
+                <p className="text-sm font-medium">Alipay (Tourist Version)</p>
+                <p className="text-sm text-[#64748b]">
+                  The easiest option for foreigners. Download the app, sign up with your
+                  passport, and link an international credit card. You can top up your
+                  balance and pay via QR code everywhere.
+                </p>
+              </div>
+
+              <div className="space-y-1">
+                <p className="text-sm font-medium">WeChat Pay</p>
+                <p className="text-sm text-[#64748b]">
+                  More difficult to set up for foreigners, but possible if you have a
+                  friend in China who can verify you. Worth having as a backup.
+                </p>
+              </div>
+            </div>
+
+            <TipBox>
+              <strong>Pro tip:</strong> Load money onto Alipay once you&apos;re in China
+              (via international card top-up). Having both Alipay and some cash as a
+              backup is the safest approach. For cash, exchange a small amount at the
+              airport — you likely won&apos;t need it, but it&apos;s good insurance.
+            </TipBox>
+          </div>
+        </SectionCard>
+
+        {/* Sektion 4: Getting Around */}
+        <SectionCard emoji="🚄" title="Getting Around">
+          <div className="space-y-4 text-[#1a3a4a]">
+            <div className="space-y-4">
+              <div className="bg-[#f5f1ea] rounded-lg px-4 py-3">
+                <h3 className="font-semibold text-sm mb-2 flex items-center gap-2">
+                  <span className="text-lg">🚅</span> High-Speed Rail (CRH)
+                </h3>
+                <p className="text-sm text-[#64748b] leading-relaxed">
+                  China&apos;s bullet trains are fast, punctual, and affordable. Speeds
+                  exceed 300 km/h on major routes. Book tickets via{" "}
+                  <a
+                    href="https://www.trip.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#af5d32] hover:underline inline-flex items-center gap-0.5"
+                  >
+                    Trip.com <ExternalLink size={10} />
+                  </a>{" "}
+                  (English-friendly) or directly at the station with your passport.
+                  Book early for holidays — tickets sell out.
+                </p>
+              </div>
+
+              <div className="bg-[#f5f1ea] rounded-lg px-4 py-3">
+                <h3 className="font-semibold text-sm mb-2 flex items-center gap-2">
+                  <span className="text-lg">🚇</span> Metro / Subway
+                </h3>
+                <p className="text-sm text-[#64748b] leading-relaxed">
+                  Every major city has an excellent metro system. Use your{" "}
+                  <strong>Alipay QR code</strong> to scan in and out — no need to buy
+                  physical tickets. Stations have English signage in big cities
+                  (Beijing, Shanghai, Shenzhen, Guangzhou, Chengdu).
+                </p>
+              </div>
+
+              <div className="bg-[#f5f1ea] rounded-lg px-4 py-3">
+                <h3 className="font-semibold text-sm mb-2 flex items-center gap-2">
+                  <span className="text-lg">🚕</span> Taxi / DiDi
+                </h3>
+                <p className="text-sm text-[#64748b] leading-relaxed">
+                  DiDi is China&apos;s Uber. Download the app and set it up before you
+                  go. It has an English interface. Payment is automatic via the app.
+                  Very affordable and reliable.
+                </p>
+              </div>
+
+              <div className="bg-[#f5f1ea] rounded-lg px-4 py-3">
+                <h3 className="font-semibold text-sm mb-2 flex items-center gap-2">
+                  <span className="text-lg">✈️</span> Domestic Flights
+                </h3>
+                <p className="text-sm text-[#64748b] leading-relaxed">
+                  For long distances (e.g., Beijing to Chengdu), domestic flights are
+                  often cheaper and faster than trains. Book via Trip.com or the
+                  airline&apos;s official app.
+                </p>
+              </div>
+
+              <div className="bg-[#f5f1ea] rounded-lg px-4 py-3">
+                <h3 className="font-semibold text-sm mb-2 flex items-center gap-2">
+                  <span className="text-lg">🚶</span> Walking & Navigation
+                </h3>
+                <p className="text-sm text-[#64748b] leading-relaxed">
+                  Use <strong>Baidu Maps</strong> or <strong>Amap (高德地图)</strong>.
+                  Amap is more accurate but entirely in Chinese. Baidu Maps has some
+                  English support. Google Maps does not work in China.
+                </p>
+              </div>
+            </div>
+          </div>
+        </SectionCard>
+
+        {/* Sektion 5: Culture & Tips */}
+        <SectionCard emoji="🏯" title="Culture & Tips">
+          <div className="space-y-4 text-[#1a3a4a]">
+            <div className="grid gap-3">
+              <div className="flex items-start gap-3 bg-[#f5f1ea] rounded-lg px-4 py-3">
+                <span className="text-lg mt-0.5">🍜</span>
+                <div>
+                  <p className="text-sm font-medium">Eating & Dining</p>
+                  <p className="text-sm text-[#64748b]">
+                    Sharing dishes is the norm. Do not stick chopsticks upright in your
+                    rice bowl — it resembles incense at funerals. Slurping noodles is
+                    perfectly acceptable.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3 bg-[#f5f1ea] rounded-lg px-4 py-3">
+                <span className="text-lg mt-0.5">💰</span>
+                <div>
+                  <p className="text-sm font-medium">Tipping</p>
+                  <p className="text-sm text-[#64748b]">
+                    There is no tipping culture in China. Do not tip at restaurants,
+                    taxis, or hotels. It can even make people uncomfortable.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3 bg-[#f5f1ea] rounded-lg px-4 py-3">
+                <span className="text-lg mt-0.5">📸</span>
+                <div>
+                  <p className="text-sm font-medium">Photography</p>
+                  <p className="text-sm text-[#64748b]">
+                    Ask before photographing people. Never photograph military
+                    installations, government buildings, or police officers. This is
+                    taken very seriously.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3 bg-[#f5f1ea] rounded-lg px-4 py-3">
+                <span className="text-lg mt-0.5">🚽</span>
+                <div>
+                  <p className="text-sm font-medium">Toilets</p>
+                  <p className="text-sm text-[#64748b]">
+                    Squat toilets are common, especially outside major hotels. Always
+                    bring your own toilet paper and hand sanitizer. Public restrooms
+                    rarely provide paper.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3 bg-[#f5f1ea] rounded-lg px-4 py-3">
+                <span className="text-lg mt-0.5">👕</span>
+                <div>
+                  <p className="text-sm font-medium">Dress Code</p>
+                  <p className="text-sm text-[#64748b]">
+                    Dress modestly when visiting temples and rural areas. In big cities,
+                    casual Western clothing is fine. Shoulders and knees covered in
+                    religious sites.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3 bg-[#f5f1ea] rounded-lg px-4 py-3">
+                <span className="text-lg mt-0.5">🗣️</span>
+                <div>
+                  <p className="text-sm font-medium">Language</p>
+                  <p className="text-sm text-[#64748b]">
+                    Very few people speak English outside tourist hotels. A translation
+                    app (e.g., Google Translate offline packs, or Pleco for Chinese) is
+                    essential. Learn a few basic phrases — it goes a long way.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </SectionCard>
+
+        {/* Sektion 6: Safety */}
+        <SectionCard emoji="🛡️" title="Safety">
+          <div className="space-y-4 text-[#1a3a4a]">
+            <p className="text-sm md:text-base leading-relaxed">
+              China is one of the{" "}
+              <strong>safest countries for travelers</strong> in terms of violent
+              crime. Petty theft is rare, and you can walk around at night in most
+              cities without worry.
+            </p>
+
+            <p className="text-sm md:text-base leading-relaxed">
+              That said, tourists are targeted by specific scams. Be aware of these:
+            </p>
+
+            <div className="bg-[#f5f1ea] rounded-lg px-4 py-3 space-y-3">
+              <h3 className="font-semibold text-sm">Common Scams to Avoid</h3>
+
+              <div className="space-y-1">
+                <p className="text-sm font-medium">🍵 The Tea Scam</p>
+                <p className="text-sm text-[#64748b]">
+                  Friendly strangers (often English-speaking &quot;students&quot;) invite
+                  you to a traditional tea ceremony. You end up with a massively
+                  overpriced bill. Politely decline invitations from strangers.
+                </p>
+              </div>
+
+              <div className="space-y-1">
+                <p className="text-sm font-medium">🎨 The Art Student Scam</p>
+                <p className="text-sm text-[#64748b]">
+                  &quot;Art students&quot; approach you near tourist sites and pressure
+                  you into buying overpriced, low-quality paintings. Firmly say no and
+                  walk away.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-[#f5f1ea] rounded-lg px-4 py-3 space-y-2">
+              <h3 className="font-semibold text-sm">General Safety Tips</h3>
+              <ul className="space-y-1.5 text-sm">
+                <li className="flex items-start gap-2">
+                  <span className="text-[#af5d32] mt-0.5">•</span>
+                  <span>
+                    Carry a <strong>photocopy of your passport</strong> with you. Leave
+                    the original in your hotel safe.
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#af5d32] mt-0.5">•</span>
+                  <span>
+                    <strong>Do not drink tap water.</strong> Only drink boiled or
+                    bottled water. Even locals boil water before drinking.
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#af5d32] mt-0.5">•</span>
+                  <span>
+                    Air quality can be poor in some cities, especially in winter.
+                    Bring N95 masks if you are sensitive to pollution.
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </SectionCard>
+
+        {/* Sektion 7: Packing List */}
+        <SectionCard emoji="🎒" title="Packing List">
+          <div className="space-y-4 text-[#1a3a4a]">
+            <p className="text-sm md:text-base leading-relaxed">
+              Here&apos;s your essential checklist for China. Tick these off before you
+              leave:
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              {[
+                { label: "VPN installed & tested", important: true },
+                { label: "eSIM activated or roaming plan set up", important: true },
+                { label: "Alipay account set up", important: true },
+                { label: "WeChat downloaded", important: true },
+                { label: "Translation app installed (offline packs)", important: true },
+                { label: "Passport (6+ months validity)", important: true },
+                { label: "Toilet paper & hand sanitizer", important: false },
+                { label: "Power bank", important: false },
+                { label: "Universal adapter (Type A/C/I plugs)", important: false },
+                { label: "Comfortable walking shoes", important: false },
+                { label: "N95 masks (for air quality)", important: false },
+                { label: "International health insurance card", important: true },
+              ].map((item) => (
+                <div
+                  key={item.label}
+                  className={`flex items-start gap-2.5 rounded-lg px-3 py-2.5 text-sm ${
+                    item.important
+                      ? "bg-[#fff8f0] border border-[#f0e0cc]"
+                      : "bg-[#f5f1ea]"
                   }`}
                 >
-                  {chip}
-                </button>
+                  <Check
+                    size={16}
+                    className={`mt-0.5 flex-shrink-0 ${
+                      item.important ? "text-[#af5d32]" : "text-[#64748b]"
+                    }`}
+                  />
+                  <span
+                    className={item.important ? "font-medium" : "text-[#64748b]"}
+                  >
+                    {item.label}
+                  </span>
+                </div>
               ))}
             </div>
+
+            <TipBox>
+              Download offline maps and translation packs before you go. Once in China,
+              you won&apos;t be able to access Google services to set these up.
+            </TipBox>
           </div>
-        </div>
-      </div>
-
-      {/* ========== MAIN CONTENT ========== */}
-      <main className="max-w-6xl mx-auto px-4 py-8 md:py-12">
-        {isFiltering && (
-          <>
-            <div className="mb-6 text-sm text-[#64748b]">
-              Showing {filteredItems.length} of {allItems.length} items
-            </div>
-            {filteredItems.length === 0 ? (
-              <div className="text-center py-16">
-                <SlidersHorizontal className="mx-auto text-[#64748b] mb-4" size={48} />
-                <p className="text-[#1a3a4a] font-semibold mb-1">
-                  No matches found
-                </p>
-                <p className="text-sm text-[#64748b]">
-                  Try removing a filter or searching for something else
-                </p>
-                <button
-                  onClick={() => { setSearchQuery(""); setActiveFilter("all"); }}
-                  className="mt-3 inline-flex min-h-[44px] items-center rounded-md px-3 text-sm font-medium text-[#af5d32] hover:bg-[#af5d32]/10 hover:underline"
-                >
-                  Clear all filters
-                </button>
-              </div>
-            ) : (
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-10">
-                {filteredItems.map((item) => (
-                  <PhotoCard key={item.name + item.category} {...item} />
-                ))}
-              </div>
-            )}
-          </>
-        )}
-
-        {activeTab === "overview" && !isFiltering && (
-          <div className="space-y-8 md:space-y-10">
-            {/* Prepare */}
-            <PrepareSection expanded />
-
-            {/* Apps & Money — compact grid */}
-            <AppsMoneySection expanded />
-
-            {/* Getting Around */}
-            <GettingAroundSection expanded />
-
-            {/* Know Before You Go */}
-            <KnowBeforeSection expanded />
-
-            {/* Footer CTA */}
-            <FooterCTA
-              title="Ready to Explore China?"
-              subtitle="From visa tips to day-by-day itineraries — everything you need for a smooth trip."
-              quickInfo={[
-                { icon: ShieldCheck, title: "15–30 days visa-free", description: "Most Western nationals" },
-                { icon: Smartphone, title: "Set up apps before you fly", description: "Alipay, VPN, eSIM — do it at home" },
-                { icon: Lightbulb, title: "First time?", description: "Start with our", link: { href: "/china-basics/how-to-get-internet", label: "internet guide" } },
-              ]}
-              trustText="Free guides · Updated regularly · Written by China travelers"
-            />
-          </div>
-        )}
-
-        {activeTab === "prepare" && !isFiltering && (
-          <div className="space-y-8 md:space-y-10">
-            <PrepareSection expanded />
-            <FooterCTA
-              title="Ready to Explore China?"
-              subtitle="From visa tips to day-by-day itineraries — everything you need for a smooth trip."
-              quickInfo={[
-                { icon: ShieldCheck, title: "15–30 days visa-free", description: "Most Western nationals" },
-                { icon: Smartphone, title: "Set up apps before you fly", description: "Alipay, VPN, eSIM — do it at home" },
-                { icon: Lightbulb, title: "First time?", description: "Start with our", link: { href: "/china-basics/how-to-get-internet", label: "internet guide" } },
-              ]}
-              trustText="Free guides · Updated regularly · Written by China travelers"
-            />
-          </div>
-        )}
-
-        {activeTab === "apps-money" && !isFiltering && (
-          <div className="space-y-8 md:space-y-10">
-            <AppsMoneySection expanded />
-            <FooterCTA
-              title="Ready to Explore China?"
-              subtitle="From visa tips to day-by-day itineraries — everything you need for a smooth trip."
-              quickInfo={[
-                { icon: ShieldCheck, title: "15–30 days visa-free", description: "Most Western nationals" },
-                { icon: Smartphone, title: "Set up apps before you fly", description: "Alipay, VPN, eSIM — do it at home" },
-                { icon: Lightbulb, title: "First time?", description: "Start with our", link: { href: "/china-basics/how-to-get-internet", label: "internet guide" } },
-              ]}
-              trustText="Free guides · Updated regularly · Written by China travelers"
-            />
-          </div>
-        )}
-
-        {activeTab === "getting-around" && !isFiltering && (
-          <div className="space-y-8 md:space-y-10">
-            <GettingAroundSection expanded />
-            <FooterCTA
-              title="Ready to Explore China?"
-              subtitle="From visa tips to day-by-day itineraries — everything you need for a smooth trip."
-              quickInfo={[
-                { icon: ShieldCheck, title: "15–30 days visa-free", description: "Most Western nationals" },
-                { icon: Smartphone, title: "Set up apps before you fly", description: "Alipay, VPN, eSIM — do it at home" },
-                { icon: Lightbulb, title: "First time?", description: "Start with our", link: { href: "/china-basics/how-to-get-internet", label: "internet guide" } },
-              ]}
-              trustText="Free guides · Updated regularly · Written by China travelers"
-            />
-          </div>
-        )}
-
-        {activeTab === "know-before" && !isFiltering && (
-          <div className="space-y-8 md:space-y-10">
-            <KnowBeforeSection expanded />
-            <FooterCTA
-              title="Ready to Explore China?"
-              subtitle="From visa tips to day-by-day itineraries — everything you need for a smooth trip."
-              quickInfo={[
-                { icon: ShieldCheck, title: "15–30 days visa-free", description: "Most Western nationals" },
-                { icon: Smartphone, title: "Set up apps before you fly", description: "Alipay, VPN, eSIM — do it at home" },
-                { icon: Lightbulb, title: "First time?", description: "Start with our", link: { href: "/china-basics/how-to-get-internet", label: "internet guide" } },
-              ]}
-              trustText="Free guides · Updated regularly · Written by China travelers"
-            />
-          </div>
-        )}
+        </SectionCard>
       </main>
+
+      {/* ========== FOOTER CTA ========== */}
+      <section className="bg-[#1a3a4a] text-white">
+        <div className="max-w-3xl mx-auto px-4 py-10 md:py-14 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-3">
+            Ready for China?
+          </h2>
+          <p className="text-white/80 text-sm md:text-base max-w-lg mx-auto mb-6">
+            You&apos;ve got the basics. Now explore our city guides and itineraries
+            to plan your perfect trip.
+          </p>
+          <p className="text-white/50 text-xs">
+            Free guides · Updated regularly · Written by China travelers
+          </p>
+        </div>
+      </section>
     </div>
   );
 }

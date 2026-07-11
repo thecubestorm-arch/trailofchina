@@ -9,6 +9,7 @@ const navLinks = [
   { href: '/china-basics', label: 'China Basics' },
   { href: '/destinations', label: 'Destinations' },
   { href: '/plan-your-trip', label: 'Plan Your Trip' },
+  { href: '/about', label: 'About' },
 ]
 
 export default function Navigation() {
