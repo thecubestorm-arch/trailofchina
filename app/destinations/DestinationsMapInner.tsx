@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState, useRef, useCallback, type KeyboardEvent, type MouseEvent } from 'react'
+import { useEffect, useState, useRef, useCallback,  } from 'react'
 import { createPortal } from 'react-dom'
 import { MapContainer, TileLayer, Marker, Polygon, Tooltip, useMap, useMapEvent } from 'react-leaflet'
 
@@ -38,26 +38,33 @@ import 'leaflet/dist/leaflet.css'
 import FooterCTA from '@/components/FooterCTA'
 
 const cities = [
-  { key: 'beijing', name: 'Beijing', nameZh: '北京', lat: 39.90, lng: 116.41, bestFor: 'History & Culture', hook: 'The capital, the Great Wall, the hutongs', thingsToDo: 7, whereToEat: 6, featured: true, duration: '3-5 days', priceLevel: '$$', bestSeason: 'Mar-May, Sep-Nov',
+  { key: 'beijing', name: 'Beijing', nameZh: '北京', lat: 39.90, lng: 116.41, bestFor: 'History & Culture', hook: 'The capital, the Great Wall, the hutongs', featured: true, duration: '3-5 days', priceLevel: '$$', bestSeason: 'Mar-May, Sep-Nov',
     images: ['beijing-great-wall', 'beijing-forbidden-city', 'beijing-temple-of-heaven', 'beijing-hutong', 'beijing-duck'],
+    topAttractions: ['Great Wall', 'Forbidden City', 'Temple of Heaven'],
   },
-  { key: 'shanghai', name: 'Shanghai', nameZh: '上海', lat: 31.23, lng: 121.47, bestFor: 'Modern & Nightlife', hook: "Colonial elegance meets tomorrow's skyline", thingsToDo: 6, whereToEat: 5, featured: true, duration: '3-4 days', priceLevel: '$$', bestSeason: 'Mar-May, Sep-Nov',
+  { key: 'shanghai', name: 'Shanghai', nameZh: '上海', lat: 31.23, lng: 121.47, bestFor: 'Modern & Nightlife', hook: "Colonial elegance meets tomorrow's skyline", featured: true, duration: '3-4 days', priceLevel: '$$', bestSeason: 'Mar-May, Sep-Nov',
     images: ['shanghai-bund', 'shanghai-tower', 'shanghai-yu-garden', 'shanghai-nanjing-road', 'shanghai-night'],
+    topAttractions: ['The Bund', 'Yu Garden', 'Shanghai Tower'],
   },
-  { key: 'xian', name: "Xi'an", nameZh: '西安', lat: 34.26, lng: 108.94, bestFor: 'Ancient Wonders', hook: '3,000 years of Chinese history', thingsToDo: 5, whereToEat: 4, featured: false, duration: '2-3 days', priceLevel: '$', bestSeason: 'Mar-Jun, Sep-Nov',
+  { key: 'xian', name: "Xi'an", nameZh: '西安', lat: 34.26, lng: 108.94, bestFor: 'Ancient Wonders', hook: '3,000 years of Chinese history', featured: false, duration: '2-3 days', priceLevel: '$', bestSeason: 'Mar-Jun, Sep-Nov',
     images: ['xian-warriors', 'xian-wall', 'xian-muslim-quarter', 'xian-pagoda', 'xian-noodles'],
+    topAttractions: ['Terracotta Warriors', 'City Wall', 'Muslim Quarter'],
   },
-  { key: 'chengdu', name: 'Chengdu', nameZh: '成都', lat: 30.57, lng: 104.07, bestFor: 'Food & Pandas', hook: 'Pandas, hotpot, and the slow life', thingsToDo: 6, whereToEat: 4, featured: false, duration: '2-3 days', priceLevel: '$', bestSeason: 'Mar-Jun, Sep-Nov',
+  { key: 'chengdu', name: 'Chengdu', nameZh: '成都', lat: 30.57, lng: 104.07, bestFor: 'Food & Pandas', hook: 'Pandas, hotpot, and the slow life', featured: false, duration: '2-3 days', priceLevel: '$', bestSeason: 'Mar-Jun, Sep-Nov',
     images: ['chengdu-pandas', 'chengdu-hotpot', 'chengdu-alleys', 'chengdu-tea', 'chengdu-night'],
+    topAttractions: ['Panda Base', 'Jinli Street', 'Wuhou Shrine'],
   },
-  { key: 'chongqing', name: 'Chongqing', nameZh: '重庆', lat: 29.56, lng: 106.55, bestFor: 'Urban Adventure', hook: "China's cyberpunk megacity", thingsToDo: 6, whereToEat: 3, featured: false, duration: '2-3 days', priceLevel: '$', bestSeason: 'Mar-May, Oct-Nov',
+  { key: 'chongqing', name: 'Chongqing', nameZh: '重庆', lat: 29.56, lng: 106.55, bestFor: 'Urban Adventure', hook: "China's cyberpunk megacity", featured: false, duration: '2-3 days', priceLevel: '$', bestSeason: 'Mar-May, Oct-Nov',
     images: ['chongqing-hongya', 'chongqing-river', 'chongqing-bridge', 'chongqing-streets', 'chongqing-night'],
+    topAttractions: ['Hongya Cave', 'Dazu Rock Carvings', 'Yangtze Cruise'],
   },
-  { key: 'shenzhen', name: 'Shenzhen', nameZh: '深圳', lat: 22.54, lng: 114.06, bestFor: 'Tech & Innovation', hook: "China's Silicon Valley — where tomorrow gets built today", thingsToDo: 6, whereToEat: 5, featured: false, duration: '2-3 days', priceLevel: '$$', bestSeason: 'Oct-Mar',
+  { key: 'shenzhen', name: 'Shenzhen', nameZh: '深圳', lat: 22.54, lng: 114.06, bestFor: 'Tech & Innovation', hook: "China's Silicon Valley — where tomorrow gets built today", featured: false, duration: '2-3 days', priceLevel: '$$', bestSeason: 'Oct-Mar',
     images: ['shenzhen-skyline-night', 'shenzhen-huaqiangbei', 'shenzhen-ping-an-finance', 'shenzhen-dafen-village', 'shenzhen-oct-loft'],
+    topAttractions: ['Window of the World', 'Ping An Finance Centre', 'Dafen Village'],
   },
-  { key: 'guangzhou', name: 'Guangzhou', nameZh: '广州', lat: 23.13, lng: 113.26, bestFor: 'Food & History', hook: '2,200 years of history and the best food in China', thingsToDo: 6, whereToEat: 5, featured: true, duration: '3-4 days', priceLevel: '$$', bestSeason: 'Oct-Dec',
+  { key: 'guangzhou', name: 'Guangzhou', nameZh: '广州', lat: 23.13, lng: 113.26, bestFor: 'Food & History', hook: '2,200 years of history and the best food in China', featured: true, duration: '3-4 days', priceLevel: '$$', bestSeason: 'Oct-Dec',
     images: ['guangzhou-canton-tower', 'guangzhou-shamian-island', 'guangzhou-dim-sum', 'guangzhou-chen-clan-hall', 'guangzhou-beijing-road'],
+    topAttractions: ['Canton Tower', 'Shamian Island', 'Chen Clan Hall'],
   },
 ]
 
@@ -372,63 +379,6 @@ function MapPopup({
   }, [city, navigationBlockedUntil])
 
   const isNavigationBlocked = () => Date.now() < navigationBlockedUntil
-  const cityHref = city?.href ?? ''
-
-  const handlePopupCardPointerDown = (event?: {
-    preventDefault?: () => void
-    stopPropagation?: () => void
-    nativeEvent?: Event | null
-  } | null) => {
-    try {
-      safeStopReactEvent(event)
-      touchStartedAfterBlockRef.current = !isNavigationBlocked()
-    } catch {
-      touchStartedAfterBlockRef.current = false
-      schedulePopupClose()
-    }
-  }
-
-  const handlePopupCardClick = (event: MouseEvent<HTMLElement>) => {
-    try {
-      if (isNavigationBlocked() || !touchStartedAfterBlockRef.current) {
-        safeStopReactEvent(event)
-        return
-      }
-
-      safeStopReactEvent(event)
-
-      if (!cityHref || typeof window === 'undefined' || !window.location || typeof window.location.assign !== 'function') {
-        schedulePopupClose()
-        return
-      }
-
-      try {
-        window.location.assign(cityHref)
-      } catch {
-        schedulePopupClose()
-      }
-    } catch {
-      safeStopReactEvent(event)
-      schedulePopupClose()
-    }
-  }
-
-  const handlePopupCardKeyDown = (event: KeyboardEvent) => {
-    if (event.key !== 'Enter' && event.key !== ' ') return
-
-    safeStopReactEvent(event)
-
-    try {
-      if (!cityHref || typeof window === 'undefined' || !window.location || typeof window.location.assign !== 'function') {
-        schedulePopupClose()
-        return
-      }
-
-      window.location.assign(cityHref)
-    } catch {
-      schedulePopupClose()
-    }
-  }
 
   try {
     if (!city || !pos) return null
@@ -466,14 +416,7 @@ function MapPopup({
             <X size={12} className="text-[#64748b]" />
           </button>
           <div
-            role="link"
-            tabIndex={0}
-            aria-label={`Explore ${city.name}`}
-            className="block cursor-pointer"
-            onPointerDown={handlePopupCardPointerDown}
-            onTouchStart={handlePopupCardPointerDown}
-            onClick={handlePopupCardClick}
-            onKeyDown={handlePopupCardKeyDown}
+            aria-label={`${city.name} guide`} className="block"
           >
             <div className="bg-white rounded-xl shadow-lg border border-[#ebe4d8] min-w-[240px] max-w-[280px] overflow-hidden sm:min-w-[280px] sm:max-w-[320px]">
               <div className="relative group/images px-3 pt-3 pb-1">
@@ -544,9 +487,14 @@ function MapPopup({
                     🌤 {city.bestSeason}
                   </span>
                 </div>
-                <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-[#af5d32]">
-                  Explore <ArrowRight size={12} />
-                </span>
+                <div className="mt-2">
+                  <p className="text-[10px] font-semibold text-[#64748b] uppercase tracking-wider mb-1">Top Attractions</p>
+                  <div className="flex flex-wrap gap-1">
+                    {city.topAttractions?.slice(0, 3).map((attr) => (
+                      <span key={attr} className="text-[10px] text-[#1a3a4a] bg-[#f5f1ea] px-1.5 py-0.5 rounded">{attr}</span>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
             <div className="flex justify-center">
@@ -937,11 +885,9 @@ export default function DestinationsMapInner() {
                   </span>
                 </div>
                 <p className="text-xs text-[#64748b] mt-3">
-                  {city.thingsToDo} things to do · {city.whereToEat} restaurants
+                  {city.topAttractions.slice(0,3).join(" · ")}
                 </p>
-                <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-[#af5d32] group-hover:gap-2 transition-all">
-                  Explore <ArrowRight size={14} />
-                </span>
+                
               </div>
             </div>
           ))}
@@ -1026,7 +972,7 @@ export default function DestinationsMapInner() {
                       </span>
                     </div>
                     <p className="text-xs text-[#64748b] mt-1">
-                      {city.thingsToDo} things to do · {city.whereToEat} restaurants
+                      {city.topAttractions.slice(0,3).join(" · ")}
                     </p>
                     <p className="text-xs text-[#64748b] mt-0.5 line-clamp-1">{city.hook}</p>
                   </div>
