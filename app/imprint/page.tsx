@@ -82,9 +82,6 @@ export default function ImprintPage() {
               <Link href="/privacy" className="rounded-full bg-[#f5f1ea] border border-[#ebe4d8] px-4 py-2 text-sm font-semibold text-[#1a3a4a] hover:border-[#af5d32] transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/cookie-policy" className="rounded-full bg-[#f5f1ea] border border-[#ebe4d8] px-4 py-2 text-sm font-semibold text-[#1a3a4a] hover:border-[#af5d32] transition-colors">
-                Cookie Policy
-              </Link>
             </div>
           </nav>
         </article>

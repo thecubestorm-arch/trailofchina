@@ -65,16 +65,16 @@ export default function HomePage() {
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <Link
-                href="/china-basics/before-you-go/packing-list"
+                href="/china-basics"
                 className="inline-flex items-center justify-center rounded-md bg-[#af5d32] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#8f431c]"
               >
                 Read the 2026 checklist
               </Link>
               <Link
-                href="/china-basics/how-to-get-internet/airalo-esim"
+                href="/plan-your-trip"
                 className="inline-flex items-center justify-center rounded-md border border-[#1a3a4a] bg-transparent px-6 py-3 text-sm font-semibold text-[#1a3a4a] transition-colors hover:bg-[#1a3a4a] hover:text-white"
               >
-                Which eSIM?
+                Plan your trip
               </Link>
             </div>
           </div>
@@ -90,7 +90,7 @@ export default function HomePage() {
           <div className="mx-auto max-w-6xl">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
               <Link
-                href="/china-basics/what-apps-to-use/alipay"
+                href="/china-basics"
                 className="group border-b border-[#ebe4d8] py-8 px-6 transition-colors hover:bg-[#faf8f4] md:border-b-0 md:border-r"
               >
                 <p className="text-xs font-medium uppercase tracking-wider text-[#af5d32]">
@@ -101,7 +101,7 @@ export default function HomePage() {
                 </h2>
               </Link>
               <Link
-                href="/china-basics/what-apps-to-use/vpn"
+                href="/china-basics"
                 className="group border-b border-[#ebe4d8] py-8 px-6 transition-colors hover:bg-[#faf8f4] md:border-b-0 md:border-r"
               >
                 <p className="text-xs font-medium uppercase tracking-wider text-[#af5d32]">
